@@ -46,11 +46,12 @@ GitHub Pro o Team; sul piano gratuito funziona solo con repository pubblica.
 Da qui, tre strade.
 
 **1. Repository pubblica + GitHub Pages** — la via più semplice se i dati possono
-essere pubblici (i PDF di partenza sono già documenti pubblici del MIT). Basta che
-la repository sia pubblica: il workflow `.github/workflows/pages.yml` attiva Pages
-da sé alla prima esecuzione e pubblica la piattaforma, i CSV, il JSON e i PDF
-originali a ogni push su `main`. Indirizzo risultante:
-`https://mcaruso17.github.io/rete-ferrovie-italiane/`.
+essere pubblici (i PDF di partenza sono già documenti pubblici del MIT). Serve
+una volta sola *Settings → Pages → Source: GitHub Actions*: il token di GitHub
+Actions non ha il permesso di creare il sito Pages, quindi quel passaggio non è
+automatizzabile. Fatto quello, il workflow `.github/workflows/pages.yml` pubblica
+la piattaforma, i CSV, il JSON e i PDF originali a ogni push su `main`. Indirizzo
+risultante: `https://mcaruso17.github.io/rete-ferrovie-italiane/`.
 
 **2. Repository privata + host statico esterno** — Cloudflare Pages, Netlify o
 Vercel si collegano a una repository privata e pubblicano un sito visibile a
