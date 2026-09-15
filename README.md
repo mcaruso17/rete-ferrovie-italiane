@@ -124,7 +124,11 @@ solo per i capoluoghi, e si guarda solo la descrizione dell'intervento, non il
 sotto-programma. Copre 253 interventi su 336; il resto sono programmi di rete
 senza un luogo nel nome (sicurezza, tecnologie, sistemi informativi). Un'opera
 che tocca più regioni ripartisce l'importo in parti uguali, così che i totali
-regionali sommino al totale attribuito.
+regionali sommino al totale attribuito. Il **conteggio** degli interventi invece
+non si divide: un'opera su due regioni compare nel conteggio di entrambe, quindi
+la somma di quella colonna supera il numero di interventi distinti. La tabella
+accanto alla mappa mostra i due totali separati, per non lasciare l'ambiguit&agrave;
+al lettore.
 
 Confini regionali: ISTAT via [openpolis/geojson-italy](https://github.com/openpolis/geojson-italy), CC BY 4.0.
 
