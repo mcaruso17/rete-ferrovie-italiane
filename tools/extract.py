@@ -315,6 +315,7 @@ def extract_doc(path, doc_id):
                            "sottoprogramma": sotto_corr,
                            "vista": vista_corr,
                            "code": pre["code"], "cup": pre["cup"],
+                           "cups": [pre["cup"]] if pre["cup"] else [],
                            "descr": pre["descr"], "dpp": pre["dpp"],
                            "paniere_pnrr": pre["paniere_pnrr"],
                            "stato": pre["stato"], "vals": vals,
@@ -338,11 +339,16 @@ def extract_doc(path, doc_id):
                     if nv >= 3:
                         out_rows.append(cur)
                         cur = None
-                    elif nv or pre["descr"] or pre["dpp"] or pre["stato"]:
+                    elif nv or pre["descr"] or pre["dpp"] or pre["stato"] \
+                            or pre["cup"]:
                         cur["cont"].append({"descr": pre["descr"],
                                             "dpp": pre["dpp"],
                                             "stato": pre["stato"],
                                             "vals": vals})
+                        # i CUP stanno quasi sempre su righe proprie sotto
+                        # l'intervento, e un intervento puo' averne piu' d'uno
+                        if pre["cup"] and pre["cup"] not in cur["cups"]:
+                            cur["cups"].append(pre["cup"])
                         if pre["dpp"] and not cur["dpp"]:
                             cur["dpp"] = pre["dpp"]
                         if pre["stato"]:

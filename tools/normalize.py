@@ -61,6 +61,7 @@ def main():
             v = valori(r)
             rec = {"doc": doc_id, "pagina": r["page"], "tabella": r["kind"],
                    "codice": r["code"], "cup": r.get("cup"),
+                   "cups": r.get("cups") or [],
                    "descrizione": descrizione(r),
                    "classe_dpp": r.get("dpp"),
                    "paniere_pnrr": bool(r.get("paniere_pnrr")),
@@ -150,6 +151,7 @@ def main():
             "classe": last.get("classe"),
             "classe_nome": last.get("classe_nome"),
             "cup": next((s["cup"] for s in reversed(snaps) if s.get("cup")), None),
+            "cups": sorted({c for s in snaps for c in (s.get("cups") or [])}),
             "classe_dpp": last.get("classe_dpp"),
             "paniere_pnrr": any(s.get("paniere_pnrr") for s in snaps),
             "stato_attuativo": last.get("stato_attuativo") or [],
