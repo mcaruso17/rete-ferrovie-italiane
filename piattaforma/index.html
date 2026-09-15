@@ -169,6 +169,8 @@ h3{font-size:13px;font-weight:600;margin:0 0 9px;color:var(--ink-2)}
 .src{font-size:12px;color:var(--ink-3)}
 footer{border-top:1px solid var(--line);padding-block:26px 40px;
   color:var(--ink-3);font-size:12px}
+.dl-links{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0 0 18px}
+.dl-links a{font-family:var(--f-data);font-size:12px;white-space:nowrap}
 @media (max-width:860px){
   .chart-grid,.cols2{grid-template-columns:1fr}
   h1{font-size:24px}
@@ -323,6 +325,10 @@ footer{border-top:1px solid var(--line);padding-block:26px 40px;
 </div>
 
 <footer><div class="wrap">
+  <div id="scarica" hidden>
+    <h3 style="color:var(--ink);margin-bottom:8px">Scarica i dati</h3>
+    <p class="dl-links"></p>
+  </div>
   <p>Elaborazione dei Contratti di Programma MIT&ndash;RFI, parte Investimenti (2017&ndash;2021 e 2022&ndash;2026 con i relativi aggiornamenti). Tutti gli importi in milioni di euro, come nei documenti originali. Ogni riga riporta la pagina del PDF da cui è tratta.</p>
 </div></footer>
 
@@ -762,7 +768,28 @@ document.getElementById("tema").addEventListener("click", function(){
   barreSerie(); barraFonti();
 });
 
+/* ---------- dati scaricabili ----------
+   I file affiancati alla pagina esistono solo dove il sito e' ospitato
+   insieme alla cartella data/: altrove la sezione resta nascosta invece
+   di offrire link che non portano da nessuna parte. */
+function initScarica(){
+  var files = [
+    ["data/progetti.csv", "progetti.csv"],
+    ["data/serie-storica.csv", "serie-storica.csv"],
+    ["data/opere-ultimate.csv", "opere-ultimate.csv"],
+    ["data/capitoli-piani-gestionali.csv", "capitoli-piani-gestionali.csv"],
+    ["data/cdp-rfi-dataset.json", "dataset completo (JSON)"]
+  ];
+  fetch(files[0][0], {method:"HEAD"}).then(function(r){
+    if(!r.ok) return;
+    var box = document.getElementById("scarica");
+    box.querySelector(".dl-links").innerHTML = files.map(function(f){
+      return '<a href="'+f[0]+'" download>'+esc(f[1])+'</a>'; }).join("");
+    box.hidden = false;
+  }).catch(function(){});
+}
+
 function renderAll(){ renderKpi(); barreSerie(); barraFonti(); popolaFiltri(); renderTabella(); }
-renderAll(); initUlt(); initPg(); initMetodo();
+renderAll(); initUlt(); initPg(); initMetodo(); initScarica();
 })();
 </script>
