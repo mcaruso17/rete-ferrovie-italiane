@@ -1,0 +1,823 @@
+documento,pagina,riga,cup,npp,descrizione,costo_mln,data_messa_in_esercizio
+cdp2017,176,A00,,C005,Progetto Ante per Manutenzione straordinaria ed Obblighi di Legge,3.14,31/12/2016
+cdp2017,176,A00,,C020,Manutenzione straordinaria navi traghetto,0.33,31/12/2016
+cdp2017,176,A00,,C022,Programma Man. straord. ed O.L.-STAZIONI,0.26,31/12/2016
+cdp2017,176,A00,,P013,Fondo Opere ultimate,0.44,31/12/2016
+cdp2017,176,A00,,R001,Riserve riga A1001,0.02,31/12/2016
+cdp2017,176,A00,,R006,Riserve riga DD_1,1.51,31/12/2016
+cdp2017,176,A00,,1560,MAN. MEZZI DI MANOVRA TORINO,0.08,31/12/2016
+cdp2017,176,A00,,1582,Aumento Produttività su linee AV/AC - Bo,4.55,31/12/2016
+cdp2017,176,A00,J11H03000040011,0583,Miglioramenti Infrastrutturali Stazioni,1.28,31/12/2016
+cdp2017,176,A00,J11H03000040021,0590,Miglioramenti Infrastrutt. stazioni (VE),0.47,31/12/2016
+cdp2017,176,A00,J11H03000040041,0587,MIGLIORAMENTI INFRASTRUTTURALI STAZIONI,0.51,31/12/2016
+cdp2017,176,A00,J11H03000060001,1271,Miglioramento sicurezza gallerie ferroviarie - DTP Roma,2.44,31/12/2016
+cdp2017,176,A00,J11H03000060011,1272,Miglioramento sicurezza gallerie ferroviarie - DTP Genova,15.14,31/12/2016
+cdp2017,176,A00,J11H03000060021,1275,Miglioramento sicurezza gallerie ferroviarie - DTP Napoli,15.57,31/12/2016
+cdp2017,176,A00,J11H03000060031,1274,Miglioramento sicurezza gallerie ferroviarie - DTP Firenze,2.47,31/12/2016
+cdp2017,176,A00,J11H03000060041,1277,Miglioramento sicurezza gallerie ferroviarie - DTP Bologna,20.74,31/12/2016
+cdp2017,176,A00,J11H03000060071,1340,Miglioramento sicurezza gallerie ferroviarie - DTP Reggio Calabria,4.34,31/12/2016
+cdp2017,176,A00,J11H03000060081,1341,Miglioramento sicurezza gallerie ferroviarie - DTP Torino,1.81,31/12/2016
+cdp2017,176,A00,J11H03000060101,1273,Miglioramento sicurezza gallerie ferroviarie - DTP Milano,13.82,31/12/2016
+cdp2017,176,A00,J11H03000070001,1295,Manutenzione mezzi di manovra - Roma,0.6,31/12/2016
+cdp2017,176,A00,J11H03000080001,1297,Manut.Mezzi di Manovra-Palermo 2002,0.23,31/12/2016
+cdp2017,176,A00,J11J04000020001,1399,Sicurezza nelle gallerie ferroviarie,2.11,31/12/2016
+cdp2017,176,A00,J17E00000000001,0556,Fabbricati di stazione POT - PA,0.08,31/12/2016
+cdp2017,176,A00,J17E00000000011,0555,Fabbricati di Stazione-Pot-Napoli,0.93,31/12/2016
+cdp2017,176,A00,J17E00000000041,0557,Fabbricati di stazione - pot - Reggio C.,1.53,31/12/2016
+cdp2017,176,A00,J17E00000000051,0560,Fabbricati di stazione POT - TO,0.16,31/12/2016
+cdp2017,176,A00,J17E00000000091,0549,Potenziamento fabbricati di staz.-BA,1.2,31/12/2016
+cdp2017,176,A00,J17E00000000101,0548,Potenziamento fabbricati di staz.-AN,0.01,31/12/2016
+cdp2017,176,A00,J17E00000000141,0558,Fabbricati di stazione POT - RM,0.55,31/12/2016
+cdp2017,176,A00,J17E00000000151,0559,Fabbricati di stazione POT,9.86,31/12/2016
+cdp2017,176,A00,J17E00000000171,0550,Fabbricati di stazione POT -BO,0.16,31/12/2016
+cdp2017,176,A00,J17E00000010001,0566,Fabbricati di stazione M.E.-AN,2.28,31/12/2016
+cdp2017,176,A00,J17E00000010011,0567,Manutenzione Straord. stazioni (BA),4.61,31/12/2016
+cdp2017,176,A00,J17E00000010021,0572,Fabbricati di stazione M.E. NA,5.09,31/12/2016
+cdp2017,176,A00,J17E00000010031,0575,Manutenzione straordinaria stazioni,15.14,31/12/2016
+cdp2017,176,A00,J17E00000010041,0574,Fabbricati di stazione M.E. - RC,3.67,31/12/2016
+cdp2017,176,A00,J17E00000010051,0571,Manutenzione Straordinaria Stazioni (MI),6.92,31/12/2016
+cdp2017,176,A00,J17E00000010061,0734,Fabbricati di stazione M.E.-Torino,8.18,31/12/2016
+cdp2017,176,A00,J17E00000010071,0578,Fabbricati di stazione M.E. VR,1.53,31/12/2016
+cdp2017,176,A00,J17E00000010091,0570,Manutenzione straordinaria stazioni,3.77,31/12/2016
+cdp2017,176,A00,J17E00000010101,0593,Manutenzione Straordinaria Stazioni - BO,4.33,31/12/2016
+cdp2017,176,A00,J17E00000010111,0577,Manutenzione straordinaria stazioni - VE,1.94,31/12/2016
+cdp2017,176,A00,J17E00000010131,0573,Manutenzione Straordinaria Stazioni PA,3.03,31/12/2016
+cdp2017,176,A00,J17E00000010151,0568,Fabbricati di stazione M.E.,8.99,31/12/2016
+cdp2017,176,A00,J17E00000010161,0569,Fabbricati di stazione M.E. - FI,6.65,31/12/2016
+cdp2017,176,A00,J17E00000010171,0576,Manutenzione straordinaria stazioni,1.38,31/12/2016
+cdp2017,176,A00,J17E01000040001,0495,FA-Fabbricati civili e industr.-man.ord.,1.32,31/12/2016
+cdp2017,176,A00,J17E91000000001,0636,Miglioramenti infrastrutturali M.E.FI,3.92,31/12/2016
+cdp2017,176,A00,J17E91000000011,0634,Miglioramento infrastrutturale M.E.BA,45.54,31/12/2016
+cdp2017,176,A00,J17E91000000021,0645,Miglioramenti infrastrutturali M.E.-VE,3.61,31/12/2016
+cdp2017,176,A00,J17E91000000031,0638,Miglioramenti infrastrutturali M.E.NA,9.26,31/12/2016
+cdp2017,176,A00,J17E91000000051,0733,Miglioramenti infrastr. Man.Eff.- MI,21.74,31/12/2016
+cdp2017,176,A00,J17E91000000061,0637,Miglioramenti infrastrutturali M.E.GE,7.25,31/12/2016
+cdp2017,176,A00,J17E91000000071,0633,Miglioramenti infrastrutturali M.E. AN,0.84,31/12/2016
+cdp2017,176,A00,J17E91000000081,0635,Miglioramenti infrastrutturali M.E.BO,3.65,31/12/2016
+cdp2017,176,A00,J17E91000000091,0640,Miglioram. infrastrutturali M.E.- R.C.,3.85,31/12/2016
+cdp2017,176,A00,J17E91000000101,0643,Miglioramenti infrastrutturali M.E.- TO,2.19,31/12/2016
+cdp2017,176,A00,J17E91000000151,0646,Miglioramenti infrastrutturali M.E.-VR,1.29,31/12/2016
+cdp2017,176,A00,J17E91000000191,0641,Miglioramenti infrastrutturali M.E. -RM,1.48,31/12/2016
+cdp2017,176,A00,J17E92000000001,0639,Miglioramenti infrastrutturali M.E.- PA,1.13,31/12/2016
+cdp2017,176,A00,J17E99000010001,0505,Manut.Straord.Opere Dif.Infr.M.E.AN,28.41,31/12/2016
+cdp2017,176,A00,J17E99000010011,0512,Manut.Straord.Opere Dif.Infr. NA,75.58,31/12/2016
+cdp2017,176,A00,J17E99000010027,0513,Manut.Straord.Opere Dif.Infr. PA,73.14,31/12/2016
+cdp2017,176,A00,J17E99000010032,0514,Manut.Straord.Opere Dif.Infr.M.E.RC,105.86,31/12/2016
+cdp2017,176,A00,J17E99000010041,0515,Manut.Straord.Opere Dif.Infr.M.E.RM,77.23,31/12/2016
+cdp2017,176,A00,J17E99000010057,0508,Manut.Straord.Opere Dif.Infr.CA,11.98,31/12/2016
+cdp2017,176,A00,J17E99000010061,0521,Manut.Straord.Opere Dif.Infr.VE,40.68,31/12/2016
+cdp2017,176,A00,J17E99000010071,0506,Manut.Straord.Opere Dif.Infr.BA,52.86,31/12/2016
+cdp2017,177,A00,J17E99000010081,0509,Manut.Straord.Opere Dif.Infr.M.E.FI,71.15,31/12/2016
+cdp2017,177,A00,J17E99000010091,0665,Manutenzione straordinaria e Opere a difesa dell'infrastruttura Reggio Calabria,0.16,31/12/2016
+cdp2017,177,A00,J17E99000010101,0510,Manut.Straord.Opere Dif.Infr.M.E.GE,35.33,31/12/2016
+cdp2017,177,A00,J17E99000010111,0522,Manut.Straord.Opere Dif.Infr.VR,44.3,31/12/2016
+cdp2017,177,A00,J17E99000010121,0511,Manut.Straord.Opere Dif.Infr.M.E.MI,99.12,31/12/2016
+cdp2017,177,A00,J17E99000010131,0662,Manutenzione straordinaria e Opere a difesa dell'infrastruttura - Mantenimento in efficienza - Napoli,0.01,31/12/2016
+cdp2017,177,A00,J17E99000010151,0519,Manut.Straord.Opere Dif.Infr.M.E.TO,34.76,31/12/2016
+cdp2017,177,A00,J17E99000010181,0520,Manut.Straord.Opere Dif.Infr.TS,30.84,31/12/2016
+cdp2017,177,A00,J17E99000010191,0507,Manut.Straord.Opere Dif.Infr.M.E.BO,50.55,31/12/2016
+cdp2017,177,A00,J17E99000010221,0517,Man.Str.Op.Dif.Infr.SettoreArm.eOp.Civ.,5.29,31/12/2016
+cdp2017,177,A00,J17E99000010231,0537,M.Str.e Opere Dif.Infr. Sett. Tecnologie,0.14,31/12/2016
+cdp2017,177,A00,J17E99000020007,0531,Obblighi di legge - PA,2.12,31/12/2016
+cdp2017,177,A00,J17E99000020017,0532,Obblighi di legge - RC,4.9,31/12/2016
+cdp2017,177,A00,J17E99000020021,0533,Obblighi legge - RM,4.14,31/12/2016
+cdp2017,177,A00,J17E99000020031,0526,Obblighi di legge -CA,0.61,31/12/2016
+cdp2017,177,A00,J17E99000020041,0540,Obblighi di legge VE,1.61,31/12/2016
+cdp2017,177,A00,J17E99000020051,0530,Obblighi di legge - NA,3.53,31/12/2016
+cdp2017,177,A00,J17E99000020061,0523,Obbighi di legge - AN,1.48,31/12/2016
+cdp2017,177,A00,J17E99000020071,0525,Obblighi di legge - BO,1.15,31/12/2016
+cdp2017,177,A00,J17E99000020081,0527,Obblighi di legge -FI,3.33,31/12/2016
+cdp2017,177,A00,J17E99000020091,0541,Obblighi di legge -VR,2.29,31/12/2016
+cdp2017,177,A00,J17E99000020131,0529,Obblighi di legge - MI,4.15,31/12/2016
+cdp2017,177,A00,J17E99000020191,0528,Obblighi di legge - GE,0.7,31/12/2016
+cdp2017,177,A00,J17E99000020221,0538,Obblighi di legge - TO,2.34,31/12/2016
+cdp2017,177,A00,J17E99000020301,0534,"Obblighi di legge Settore ""Logistica""",0.23,31/12/2016
+cdp2017,177,A00,J17E99000020331,0524,Obbighi di legge - BA,2.43,31/12/2016
+cdp2017,177,A00,J17E99000020341,0539,Obblighi di legge - TS,1.31,31/12/2016
+cdp2017,177,A00,J17E99000020371,1300,Obblighi di legge (Tecnica),0.35,31/12/2016
+cdp2017,177,A00,J17E99000020381,1301,M.S. E OBBLIGHI DI LEGGE,0.38,31/12/2016
+cdp2017,177,A00,J27I06000070001,1495,Migl. infrastr. linee AV/AC Napoli,2.35,31/12/2016
+cdp2017,177,A00,J31B00000250001,0803,Obblighi di Legge (navi),0.49,31/12/2016
+cdp2017,177,A00,J31B00000260001,0804,Manutenzione infrastrutture portuali,0.29,31/12/2016
+cdp2017,177,A00,J31B01000330001,0761,Manutenzione straord. navi traghetto,7.68,31/12/2016
+cdp2017,177,A00,J31H00000100001,0726,Acquisti-Manutenzioni Attrezz. ufficio,0.38,31/12/2016
+cdp2017,177,A00,J31H00000100011,1287,Acq.rimp mat inv per ob.legge.prod.manut,15.92,31/12/2016
+cdp2017,177,A00,J31H00000100021,0916,"Acq. mat.inv. O.L. prod.sett.""Off.""-DG",0.5,31/12/2016
+cdp2017,177,A00,J31H00000120001,1141,Acq.Rimp.mat.inv.O.L.prod.sett.diagn.-DG,8.59,31/12/2016
+cdp2017,177,A00,J31H00000120011,1289,Acquisti a rimpiazzo Piano Sicurezza,0.81,31/12/2016
+cdp2017,177,A00,J31H00000120021,1154,Acquisti a rimpiazzo Direzione Tecnica,0.61,31/12/2016
+cdp2017,177,A00,J31H01000140001,0497,Acquisti-Manutenzioni Ist. Sp. (I),1.04,31/12/2016
+cdp2017,177,A00,J31H01000140011,0730,Acq.a rimp.mat.inv.obl.di leg.prod.-VR,0.06,31/12/2016
+cdp2017,177,A00,J31H01000140031,0498,Acquisto materiale d'eser. Dir.Sanità,0.32,31/12/2016
+cdp2017,177,A00,J31H01000170011,0865,Manutenzione Strordinaria settore TE lotto C - Napoli,0.1,31/12/2016
+cdp2017,177,A00,J31H01000170021,0867,Manutenzione Straordinaria settore TE Lotto B - Firenze,0.64,31/12/2016
+cdp2017,177,A00,J31H93000010011,0691,Soppressione P.L. - Bari,2.46,31/12/2016
+cdp2017,177,A00,J31H93000010051,0693,Soppressione P.L. - Cagliari,4.3,31/12/2016
+cdp2017,177,A00,J31H93000010081,0689,Soppressione P.L. - Alto Adige,0.17,31/12/2016
+cdp2017,177,A00,J31H93000010111,0697,Soppressione P.L. - Palermo,0.26,31/12/2016
+cdp2017,177,A00,J37I08000030001,1579,Man. Straord. Opere a difesa dell'infr l,0.4,31/12/2016
+cdp2017,177,A00,J37I08000050001,1583,Miglior. Infr. linee AV/AC - MI,0.1,31/12/2016
+cdp2017,177,A00,J37I10001070001,1594,Man.Straord.e Opere di Difesa dell'Infra,0.39,31/12/2016
+cdp2017,177,A00,J41H00000240001,0862,Manutenzione Straordinaria settore Armamento lotto B - Torino,0.16,31/12/2016
+cdp2017,177,A00,J41H00000240011,0866,Manutenzione Straordinaria settore Armamento lotto A - Firenze,0.15,31/12/2016
+cdp2017,177,A00,J41H00000240021,0863,Manutenzione straordinaria - Armamento lotto C - Ancona,0.07,31/12/2016
+cdp2017,177,A00,J47I08000030001,1577,Man. Straord. Opere a difesa dell'infr,6.72,31/12/2016
+cdp2017,177,A00,J51H00000050001,0713,Acq.a rimp.mat.inv.obl.di leg.prod.-AN,0.58,31/12/2016
+cdp2017,177,A00,J51H00000050011,0720,Acq.a rimp.mat.inv.obl.di leg.prod.-NA,0.72,31/12/2016
+cdp2017,177,A00,J51H00000050021,0727,Acq.a rimp.mat.inv.obl.di leg.prod.-TO,0.7,31/12/2016
+cdp2017,177,A00,J51H00000050031,0728,Acq.a rimp.mat.inv.obl.di leg.prod.-TS,0.53,31/12/2016
+cdp2017,177,A00,J51H00000050041,0729,Acq.a rimp.mat.inv.obl.di leg.prod.-VE,0.35,31/12/2016
+cdp2017,177,A00,J51H00000050111,0932,"Acq.mat.inv. O.L. prod.sett.""Mag""-DG",0.15,31/12/2016
+cdp2017,177,A00,J51H00000050171,0717,Acq.a rimp.mat.inv.obl.di leg.prod.-FI,0.52,31/12/2016
+cdp2017,177,A00,J51H00000050191,0718,Acq.a rimp.mat.inv.obl.di leg.prod.-GE,0.5,31/12/2016
+cdp2017,177,A00,J51H00000050231,0714,Acq.a rimp.mat.inv.obl.di leg.prod.-BA,0.38,31/12/2016
+cdp2017,177,A00,J51H00000050241,0715,Acq.a rimp.mat.inv.obl.di leg.prod.-BO,0.7,31/12/2016
+cdp2017,177,A00,J51H00000050341,0722,Acq.a rimp.mat.inv.obl.di leg.prod.-RC,1.59,31/12/2016
+cdp2017,177,A00,J51H00000050351,0721,Acq.a rimp.mat.inv.obl.di leg.prod.-PA,1.08,31/12/2016
+cdp2017,177,A00,J51H00000050401,0723,Acq.a rimp.mat.inv.obl.di leg.prod.-RM,0.88,31/12/2016
+cdp2017,178,A00,J51H03000110001,1313,Interventi per Sic. e O.L. nei TV (AN),0.15,31/12/2016
+cdp2017,178,A00,J51H03000110021,1328,Interventi per Sic. e O.L. nei TV (NV),0.19,31/12/2016
+cdp2017,178,A00,J51H03000110241,1323,Interventi per Sic. e O.L. nei TV (RM),0.42,31/12/2016
+cdp2017,178,A00,J51H03000110291,1321,Interventi per Sic. e O.L. nei TV (PA),0.15,31/12/2016
+cdp2017,178,A00,J51H03000120001,1330,Attr.tec.lin/imp.int.rete-eff.upg (AN),4.3,31/12/2016
+cdp2017,178,A00,J51H03000120011,1331,Attr.tec.lin/imp.int.rete-eff.upg (BA),1.2,31/12/2016
+cdp2017,178,A00,J51H03000120021,1337,Attrezzaggi tecnologici DTP Torino,5.64,31/12/2016
+cdp2017,178,A00,J51H03000120041,1339,Attr.tec.lin/imp.int.rete-eff.upg (VR),2.39,31/12/2016
+cdp2017,178,A00,J51H03000120051,1338,Attrezzaggi tecnologici DTP Trieste,4.89,31/12/2016
+cdp2017,178,A00,J51H03000120071,1336,Attr.tec.lin/imp.int.rete-eff.upg (RM),5.82,31/12/2016
+cdp2017,178,A00,J51H03000120151,1334,Attrezzaggi tecnologici DTP Milano,0.64,31/12/2016
+cdp2017,178,A00,J51H03000150001,1369,Acq. rimp. mat.inv. per O.L. e Prod.(AN),0.42,31/12/2016
+cdp2017,178,A00,J51H03000150011,1376,Acq. rimp. mat.inv. per O.L. e Prod.(NA),0.11,31/12/2016
+cdp2017,178,A00,J51H03000150021,1380,Acq. rimp. mat.inv. per O.L. e Prod.(TO),0.15,31/12/2016
+cdp2017,178,A00,J51H03000150031,1383,Acq. rimp. mat.inv. per O.L. e Prod.(VR),0.15,31/12/2016
+cdp2017,178,A00,J51H03000150081,1381,Acq. rimp. mat.inv. per O.L. e Prod.(TS),0.13,31/12/2016
+cdp2017,178,A00,J51H03000150091,1382,Acq. rimp. mat.inv. per O.L. e Prod.(VE),0.18,31/12/2016
+cdp2017,178,A00,J51H03000150111,1377,Acq. rimp. mat.inv. per O.L. e Prod.(PA),0.22,31/12/2016
+cdp2017,178,A00,J51H03000150151,1370,Acq. rimp. mat.inv. per O.L. e Prod.(BA),0.27,31/12/2016
+cdp2017,178,A00,J51H03000150161,1371,Acq. rimp. mat.inv. per O.L. e Prod.(BO),0.23,31/12/2016
+cdp2017,178,A00,J51H03000150171,1375,Acq. rimp. mat.inv. per O.L. e Prod.(MI),0.26,31/12/2016
+cdp2017,178,A00,J51H03000150191,1373,Acq. rimp. mat.inv. per O.L. e Prod.(FI),0.12,31/12/2016
+cdp2017,178,A00,J51H03000150241,1374,Acq. rimp. mat.inv. per O.L. e Prod.(GE),0.18,31/12/2016
+cdp2017,178,A00,J51H92000010031,0652,Aumento Produttività - Potenziamento - Napoli,0.38,31/12/2016
+cdp2017,178,A00,J51H92000010041,0651,Aumento Produttività - Potenziamento - Milano,0.01,31/12/2016
+cdp2017,178,A00,J51H92000010071,0653,Aumento Produttività - Potenziamento - Reggio Calabria,1.82,31/12/2016
+cdp2017,178,A00,J51H92000020001,0601,Aumento Produttività M.E.AN,14.84,31/12/2016
+cdp2017,178,A00,J51H92000020011,0610,Aumento Produttività M.E.NA,12.35,31/12/2016
+cdp2017,178,A00,J51H92000020021,0609,Aumento Produttività MI,26.61,31/12/2016
+cdp2017,178,A00,J51H92000020091,0618,Aumento Produttività TO,18.73,31/12/2016
+cdp2017,178,A00,J51H92000020151,0605,Aumento Produttività CA,1.51,31/12/2016
+cdp2017,178,A00,J51H92000020161,0613,Aumento Produttività M.E.RM,14.28,31/12/2016
+cdp2017,178,A00,J51H92000020231,0619,Aumento Produttività TS,9.04,31/12/2016
+cdp2017,178,A00,J51H92000020251,0620,Aumento Produttività VE,13.26,31/12/2016
+cdp2017,178,A00,J51H92000020261,0608,Aumento Produttività GE,9.87,31/12/2016
+cdp2017,178,A00,J51H92000020271,0611,Aumento Produttività PA,5.96,31/12/2016
+cdp2017,178,A00,J51H92000020281,0612,Aumento Produttività M.E.RC,10.59,31/12/2016
+cdp2017,178,A00,J51H92000020301,0621,Aumento Produttività VR,13.64,31/12/2016
+cdp2017,178,A00,J51H92000020351,0603,"Aumento Produttività Settore ""Armam.""BO",22.36,31/12/2016
+cdp2017,178,A00,J51H92000020361,0602,Aumento Produttività M.E.BA,13.51,31/12/2016
+cdp2017,178,A00,J51H92000020411,0606,"Aumento Produttività Settore ""Armam.""BO",18.24,31/12/2016
+cdp2017,178,A00,J54H14000520001,1334,Attrezzaggi tecnologici DTP Milano,2.58,31/12/2016
+cdp2017,178,A00,J57I08000020001,1571,Man. Straord - settore officine,16.2,31/12/2016
+cdp2017,178,A00,J57I08000200001,1587,Miglioramento sicurezza gallerie ferroviarie - Territorio Nazionale,0.49,31/12/2016
+cdp2017,178,A00,J57I12000090001,1574,Obblighi di Legge su linee AV/AC - Roma,0.5,31/12/2016
+cdp2017,178,A00,J67I08000020001,1585,Acquisti a Rimpiazzo materiale d'Inventa,0.33,31/12/2016
+cdp2017,178,A00,J67I08000030001,1581,Miglior. Infr. linee AV/AC - Bo,1.4,31/12/2016
+cdp2017,178,A00,J67I11000330001,1491,Manut.Straord.Opere Dif.Infr. AV/AC NA,12.69,31/12/2016
+cdp2017,178,A00,J71H00000060001,1143,Miglioramenti Infrastrutturali Stazioni-,0.7,31/12/2016
+cdp2017,178,A00,J71H00000060011,0585,Infrastrutture di servizio stazioni (NA),1.6,31/12/2016
+cdp2017,178,A00,J71H00000060021,0579,Infrastrutture di servizio stazioni (AN),7.7,31/12/2016
+cdp2017,178,A00,J71H00000060031,1144,Infrastrutture di servizio stazioni (RC),1.5,31/12/2016
+cdp2017,178,A00,J71H00000060051,0584,Infrastrutture di servizio stazioni (MI),4.9,31/12/2016
+cdp2017,178,A00,J71H00000060081,0580,Infrastrutture di servizio stazioni (BA),0.06,31/12/2016
+cdp2017,178,A00,J71H00000060091,0588,Infrastrutture di servizio stazioni (TO),2.13,31/12/2016
+cdp2017,178,A00,J71H00000060101,0589,Miglioramenti Infrastrutturali Stazioni,0.99,31/12/2016
+cdp2017,178,A00,J77I09000090001,1553,Manutenzione Mezzi di Manovra,0.1,31/12/2016
+cdp2017,178,A00,J77I10000270001,1603,Miglioramento sicurezza gallerie ferroviarie - DTP Ancona,5.14,31/12/2016
+cdp2017,178,A00,J87I08000000001,1490,Manut.Straord.Opere Dif.Infr. AV/AC Roma,0.1,31/12/2016
+cdp2017,178,A00,J87I08000010001,1493,Miglior. infrastr. su linee AV/AC Roma,1.93,31/12/2016
+cdp2017,178,A00,J87I12000230001,1644,Obblighi di Legge - Stazioni,0.79,31/12/2016
+cdp2017,178,A00,J91H92000040011,0628,Miglioramento infrastrutturale - DTP Milano,1.04,31/12/2016
+cdp2017,178,A00,J91H92000040031,0669,Miglioramenti infrastrutturali - Potenziamento - Napoli,0.22,31/12/2016
+cdp2017,178,A00,J91H92000040041,0918,Miglioramenti infrastrutturali Roma-Napoli via Cassino,0.58,31/12/2016
+cdp2017,178,A00,J91H92000040101,0622,Miglioramento infrastrutturale - DTP Ancona,1.92,31/12/2016
+cdp2017,178,A00,J91H92000040151,0632,Miglioramento infrastrutturale - DTP Torino,0.19,31/12/2016
+cdp2017,178,A00,J91H92000040161,0630,Miglioramenti infrastrutturali POT.PA,0.12,31/12/2016
+cdp2017,178,A00,J91H92000040171,0671,Miglioramenti infrastrutturali - Potenziamento - Reggio Calabria,0.47,31/12/2016
+cdp2017,179,A00,J91H92000040221,0624,Miglioramenti Infrastrutturali POT.BO,3.01,31/12/2016
+cdp2017,179,A00,J91H92000040331,0625,Miglioramenti Infrastrutturali CA,0.29,31/12/2016
+cdp2017,179,A00,J91H92000040341,0670,Miglioramento infrastrutturale - DTP Palermo,79.93,31/12/2016
+cdp2017,179,A00,J91H92000040351,0667,Miglioramenti Infrastrutturali - Verona,0.4,31/12/2016
+cdp2017,179,A00,J91H92000040371,0675,Miglioramenti infrastrutturali - Potenziamento - Verona,0.05,31/12/2016
+cdp2017,179,A00,J97I12000090001,1343,Miglioramento sicurezza gallerie ferroviarie - DTP Verona,0.29,31/12/2016
+cdp2017,179,A00,,C021,Manutenzione Incrementativa,0.07,31/12/2016
+cdp2017,179,A02,J11H01000260001,1245,Applicazioni Tecnologiche,32.09,31/12/2016
+cdp2017,179,A02,J11H92000010001,0113,Sistemazione Tecnologica Milano-Genova,0.11,31/12/2016
+cdp2017,179,A02,J11H98000000001,0065,Rilevamento Termico Boccole,0.47,31/12/2016
+cdp2017,179,A02,J11J04000050001,1420,"Sviluppo, implementazione e mantenimento in efficienza sistemi CCL-IaP",7.33,31/12/2016
+cdp2017,179,A02,J11J04000070001,1422,Sist Contr Circ Linee e Inf.Pub fase 1,1.79,31/12/2016
+cdp2017,179,A02,J11J04000070201,1432,Sist.Contr.Circ.linee e info al pubblico,3.56,31/12/2016
+cdp2017,179,A02,J11J05000020001,1426,Rilevatore squilibrio carichi,0.2,31/12/2016
+cdp2017,179,A02,J17I06000030001,1486,Attrezz. Tecnol. linee e imp. intera ret,1.54,31/12/2016
+cdp2017,179,A02,J17I08000010001,1545,Piano di sviluppo tecnologico della rete,0.17,31/12/2016
+cdp2017,179,A02,J30B04000000001,1425,Realiz. compl. ETR500 diagnost. linee AV,2.1,31/12/2016
+cdp2017,179,A02,J31H00000140001,1165,Studi e prototipi relativi ad armamento ed opere d'arte,1.2,31/12/2016
+cdp2017,179,A02,J31H01000180001,1054,1054-Rete radio GSM-R (1^ fase),0.07,31/12/2016
+cdp2017,179,A02,J31H02000090001,1168,Misuratore velocità treno,1.41,31/12/2016
+cdp2017,179,A02,J31H03000260001,1156,Rilevamento e mappatura immobili strumen,0.07,31/12/2016
+cdp2017,179,A02,J31H03000360001,1329,Migl.Sist.diagn.e gest.dati per Man.Infr,10.13,31/12/2016
+cdp2017,179,A02,J31H03000380001,1349,Sistemi Informativi Infrastruttura(SII),0.2,31/12/2016
+cdp2017,179,A02,J31H04000100001,1406,POTENZIAMENTO TECNOLOGICO CHIUSI-ROMA LL,0.42,31/12/2016
+cdp2017,179,A02,J31H98000020001,0073,Sistema di Controllo Marcia Treno (SCMT)-Ripetizione discontinua nodo di Roma,0.51,31/12/2016
+cdp2017,179,A02,J31H98000050001,0151,Informazioni al Pubblico Nodo di Roma,0.39,31/12/2016
+cdp2017,179,A02,J51H03000120081,1335,Attrezzaggi tecnologici,0.36,31/12/2016
+cdp2017,179,A02,J51H03000120141,1333,Attr.tec.lin/imp.int.rete-eff.upg (FI),0.15,31/12/2016
+cdp2017,179,A02,J57E14000010001,1658,Implem. sistemi IT area movimento e,5.1,31/12/2016
+cdp2017,179,A02,J57I09000120001,1565,Sviluppo realizz sistemi di diagnostic,9.46,31/12/2016
+cdp2017,179,A02,J57I11000570001,1528,Sviluppo tecnologico del Nodo di Milano su Milano C.Le-Malpensa,0.24,31/12/2016
+cdp2017,179,A02,J57I12000060001,1658,Implem. sistemi IT area movimento e,3.32,31/12/2016
+cdp2017,179,A02,J57I13000310001,1658,Implem. sistemi IT area movimento e,2.55,31/12/2016
+cdp2017,179,A02,J59B07000140001,1541,Sistemi Commerciali,0.3,31/12/2016
+cdp2017,179,A02,J59B08000180001,1551,Evoluzione Infrastruttura IT,5.77,31/12/2016
+cdp2017,179,A02,J59B08000200001,1566,Evoluzione Sistema Prescrizioni MOV,0.97,31/12/2016
+cdp2017,179,A02,J59B08000220001,1588,Sistemi di Rete,0.57,31/12/2016
+cdp2017,179,A02,J59B09000060001,1592,Sistemi per i processi di supporto,0.56,31/12/2016
+cdp2017,179,A02,J59B13000030001,1592,Sistemi per i processi di supporto,0.75,31/12/2016
+cdp2017,179,A02,J61H99000010001,0076,RIPETIZIONE DISCONTINUA NODO DI NAPOLI,0.54,31/12/2016
+cdp2017,179,A02,J67I08000000001,1546,Piano di sviluppo tecnologico della rete,6.37,31/12/2016
+cdp2017,179,A02,J91H97000000001,0060,Ricerca ERTMS,0.65,31/12/2016
+cdp2017,179,A03/04,,P014,Fermata passante nodo di Milano,3.13,31/12/2016
+cdp2017,179,A03/04,J11H02000080001,1267,Adeguamento Linea Storica Torino-Lione,0.16,31/12/2016
+cdp2017,179,A03/04,J11H03000050001,1178,Itinerario alternativo potenziamento Novara-Alessandria,0.11,31/12/2016
+cdp2017,179,A03/04,J11J04000070031,1440,Upgrading rete viaggiatori - DTP Milano,1.77,31/12/2016
+cdp2017,179,A03/04,J11J04000070061,1443,Interventi upgrading rete viaggiatori,1.0,31/12/2016
+cdp2017,179,A03/04,J11J04000070081,1445,Upgrading rete viaggiatori DTP Roma,2.51,31/12/2016
+cdp2017,179,A03/04,J11J04000070091,1446,Riqual.staz-Adeg.marc.staz.area romana,7.4,31/12/2016
+cdp2017,179,A03/04,J11J04000070101,1447,Interventi upgrading rete viaggiatori,3.69,31/12/2016
+cdp2017,179,A03/04,J11J04000070111,1448,Interventi upgrading rete viaggiatori,0.78,31/12/2016
+cdp2017,179,A03/04,J11J04000070121,1449,Interventi upgrading rete viaggiatori,3.14,31/12/2016
+cdp2017,179,A03/04,J11J04000070131,1462,Interventi upgrading rete viaggiatori,0.62,31/12/2016
+cdp2017,180,A03/04,J11J04000070141,1464,Upgrading rete viaggiatori DTP Ancona,1.6,31/12/2016
+cdp2017,180,A03/04,J11J04000070151,1465,Interventi upgrading rete viaggiatori,1.3,31/12/2016
+cdp2017,180,A03/04,J11J04000070171,1467,Interventi upgrading rete viaggiatori TO,0.84,31/12/2016
+cdp2017,180,A03/04,J11J04000070181,1468,Upgrading rete viaggiatori - DTP Verona,1.06,31/12/2016
+cdp2017,180,A03/04,J17E91000000221,0809,Miglioramento infrastrutturale Provincia di Bolzano,61.82,31/12/2016
+cdp2017,180,A03/04,J17E91000000281,0647,Miglioramento infrastrutturale Provincia di Trento,77.83,31/12/2016
+cdp2017,180,A03/04,J21H03000120001,1310,Potenziamento itinerari merci Tarvisio/Villa Opicina (comprende 1^ fase nodo di Udine),52.22,31/12/2016
+cdp2017,180,A03/04,J21H92000000001,0146,Adeguamento al traffico Merci Linea Domodossola-Luino-Novara-Ovada-Genova,0.45,31/12/2016
+cdp2017,180,A03/04,J31H96000010008,0017,Potenziamento tratto urbano linea Roma-Viterbo,4.51,31/12/2016
+cdp2017,180,A03/04,J31H96000030001,0019,P.R.G. e ACEI Ostiense/Trastevere,1.05,31/12/2016
+cdp2017,180,A03/04,J31H96000050008,0039,Realizzazione nuove fermate ed adeguamento stazioni per il servizio metropolitano di Roma (1^ fase),0.36,31/12/2016
+cdp2017,180,A03/04,J31J05000040001,1427,Efficientamento linea Codogno-Cremona-Mantova e raddoppio tratta Cremona-Cava Tigozzi,38.29,31/12/2016
+cdp2017,180,A03/04,J37I06000060001,1482,Interv.Riqualif.staz.connessi AV-Milano,0.29,31/12/2016
+cdp2017,180,A03/04,J37I06000080001,1484,Interventi di riqualificazione stazioni: Fiera di Roma e Roma Val d'Ala,0.73,31/12/2016
+cdp2017,180,A03/04,J51H00000040001,0205,Itinerario alternativo merci Gioia Tauro-Taranto con velocizzazione tratta Sibari-Cosenza,0.34,31/12/2016
+cdp2017,180,A03/04,J51H98000000001,0016,Potenziamento infrastrutturale e tecnologico Nodo di Verona,0.21,31/12/2016
+cdp2017,180,A03/04,J57B14000150001,1871,Riapertura Linee (DTP RM),12.0,31/12/2016
+cdp2017,180,A03/04,J77I12000120001,1467,Interventi upgrading rete viaggiatori TO,0.9,31/12/2016
+cdp2017,180,A03/04,J81H03000080001,1391,Rete Lucana: migliormento servizi Potenza - S. Nicola,3.69,31/12/2016
+cdp2017,180,A03/04,J87B14000440001,1867,Binari senza tempo - DTP AN,0.8,31/12/2016
+cdp2017,180,A03/04,J87I05000070001,1452,Interventi upgrading rete merci - Genova,0.02,31/12/2016
+cdp2017,180,A03/04,J91H00000280008,0203,Potenziamento Asse Livorno-Pisa,0.13,31/12/2016
+cdp2017,180,A03/04,J91H03000180008,0259,Sistemazione a P.R.G. Firenze SMN,0.14,31/12/2016
+cdp2017,180,A03/04,J91H92000010001,0034,Potenziamento infrastrutturale Firenze-Empoli,0.72,31/12/2016
+cdp2017,180,A03/04,J97E13000260001,1440,Upgrading rete viaggiatori - DTP Milano,11.56,31/12/2016
+cdp2017,180,A03/04,J17E99000020181,0878,"Obblighi di legge settore ""officine""-DG",2.11,31/12/2016
+cdp2017,180,A03/04,J19G01000010001,2783,Tecnologie (Potenz. OML e OMV),0.93,31/12/2016
+cdp2017,180,A03/04,J31H00000150001,1218,Potenziamento e miglioramenti infrastrutturali impianti di manutenzione rotabili - Milano,0.89,31/12/2016
+cdp2017,180,A03/04,J31H00000170001,2941,Manten. Straor. Stabilimento Milano,0.28,31/12/2016
+cdp2017,180,A03/04,J31H00000170061,2951,Manten. Straor. Stabilimento Roma,2.46,31/12/2016
+cdp2017,180,A03/04,J31H00000170071,2955,Manut. straord. Stabilimento di PA,0.26,31/12/2016
+cdp2017,180,A03/04,J31H00000170081,2952,Manut. straord. Stabilimento di BA,0.15,31/12/2016
+cdp2017,180,A03/04,J31H00000180051,2988,Interventi di potenziamento e razionalizzazione scali merci - Reggio Calabria,1.13,31/12/2016
+cdp2017,180,A03/04,J51H00000080001,0409,Nuovo terminal di Padova interporto,3.04,31/12/2016
+cdp2017,180,A03/04,J51H92000010141,0600,Aumento Produttività Officine Nazionali,0.65,31/12/2016
+cdp2017,180,A03/04,J57I06000080001,1488,Riqual.piccole-medie-grandi stazioni-RC,3.21,31/12/2016
+cdp2017,180,A03/04,J59G00000000061,2002,Ampliamento scalo merci Bari Lamasinata realizzazione di 4 binari tronchi,0.52,31/12/2016
+cdp2017,180,A03/04,J61H00000240001,0430,COSTRUZ. IDP NAPOLI SMISTAMENTO,4.2,31/12/2016
+cdp2017,180,A03/04,J67I10000140001,1613,Pot. impianti illuminaz. Grandi Stazioni,4.09,31/12/2016
+cdp2017,180,A03/04,J71H02000130001,0418,Potenziamento Impianto Intermodale Brindisi,0.9,31/12/2016
+cdp2017,180,A03/04,J81H00000180001,0406,Ravenna: Prima fase nuovo Scalo Merci Canale Candiano per merci pericolose e prolungamento dorsale FS,0.01,31/12/2016
+cdp2017,181,A03/04,J17E91000000211,0735,Progettazioni sviluppi a completamento - Napoli,0.02,31/12/2016
+cdp2017,181,A03/04,J21H03000110001,1358,Studio di fattibilità ammodernamento e velocizzazione Cagliari-Oristano e relazione Cagliari-Sassari,0.45,31/12/2016
+cdp2017,181,A03/04,J31C05000010001,1475,SdF della cintura merci Sud di Milano,0.26,31/12/2016
+cdp2017,181,A03/04,J31H00000140021,1181,Studi e prototipi ad energia e trazione,0.46,31/12/2016
+cdp2017,181,A03/04,J31H03000350001,1312,Studio di fattibilità per la riqualificazione ed il potenziamento delle linee Como-Molteno-Lecco e Monza-Molteno,0.34,31/12/2016
+cdp2017,181,A03/04,J31H03000440001,1364,Studi e sperim. su sistemi innovativi,3.29,31/12/2016
+cdp2017,181,A03/04,J31H97000010001,1284,Studi di fattibilità asse del Gottardo,0.37,31/12/2016
+cdp2017,181,A03/04,J37I08000000001,1544,Piano di sviluppo tecnologico della rete,1.9,31/12/2016
+cdp2017,181,A03/04,J49B07000000001,1505,Studi di Fattibilità: Potenziamento Nodo di Roma,0.01,31/12/2016
+cdp2017,181,A05,,1530,Acq. mat. di scorta AV/AC RM -Gricignano,4.42,31/12/2016
+cdp2017,181,A05,,1531,Acq. mat. di scorta AV/AC RM -Gricignano,2.23,31/12/2016
+cdp2017,181,A05,,1532,Acq. mat. di scorta AV/AC TO-Novara,4.75,31/12/2016
+cdp2017,181,A05,J11J04000040008,0300,Nuovo collegamento To P.ta Susa-To P.ta Nuova,3.25,31/12/2016
+cdp2017,181,A05,J97I13000330001,1693,Adeguamento alimentazione gallerie AV Bologna-Firenze,8.75,31/12/2016
+agg2021,126,E.1,,C020,Manutenzione straordinaria navi traghetto,-0.33,31/12/2020
+agg2021,126,E.1,,C021,Manutenzione Incrementativa,-0.13,31/12/2020
+agg2021,126,E.1,,R001,Riserve riga A1001,-0.65,31/12/2020
+agg2021,126,E.1,J17E00000010021,0572,Fabbricati di stazione M.E. NA - ante 2011,-0.81,31/12/2020
+agg2021,126,E.1,J17E00000010031,0575,MANUTENZIONE STRAORDINARIA STAZIONI - ante 2011,-1.85,31/12/2020
+agg2021,126,E.1,J17E00000010111,0577,Manutenzione straordinaria stazioni - VE - ante 2011,-0.12,31/12/2020
+agg2021,126,E.1,J17E00000010131,0573,Manutenzione Straordinaria Stazioni PA - ante 2011,-0.31,31/12/2020
+agg2021,126,E.1,J17E99000010001,0505,Manut.Straord.Opere Dif.Infr.M.E.AN - ante 2011,0.01,31/12/2020
+agg2021,126,E.1,J17E99000010011,0512,Manut.Straord.Opere Dif.Infr. NA - ante 2011,0.48,31/12/2020
+agg2021,126,E.1,J17E99000010027,0513,Manut.Straord.Opere Dif.Infr. PA - ante 2011,-0.06,31/12/2020
+agg2021,126,E.1,J17E99000010032,0514,Manut.Straord.Opere Dif.Infr.M.E.RC - ante 2011,-0.28,31/12/2020
+agg2021,126,E.1,J17E99000010041,0515,Manut.Straord.Opere Dif.Infr.M.E.RM - ante 2011,-4.12,31/12/2020
+agg2021,126,E.1,J17E99000010061,0521,Manut.Straord.Opere Dif.Infr.VE - ante 2011,-0.14,31/12/2020
+agg2021,126,E.1,J17E99000010071,0506,Manut.Straord.Opere Dif.Infr.BA - ante 2011,0.36,31/12/2020
+agg2021,126,E.1,J17E99000010081,0509,Manut.Straord.Opere Dif.Infr.M.E.FI - ante 2011,-0.09,31/12/2020
+agg2021,126,E.1,J17E99000010111,0522,Manut.Straord.Opere Dif.Infr.VR - ante 2011,-0.27,31/12/2020
+agg2021,126,E.1,J17E99000010121,0511,Manut.Straord.Opere Dif.Infr.M.E.MI - ante 2011,0.04,31/12/2020
+agg2021,126,E.1,J17E99000010131,0662,Manutenzione straordinaria e Opere a difesa dell'infrastruttura - Mantenimento in efficienza - Napoli,-0.02,31/12/2020
+agg2021,126,E.1,J17E99000010181,0520,Manut.Straord.Opere Dif.Infr.TS - ante 2011,0.01,31/12/2020
+agg2021,126,E.1,J17E99000010191,0507,Manut.Straord.Opere Dif.Infr.M.E.BO - ante 2011,-0.15,31/12/2020
+agg2021,126,E.1,J17E99000010231,0537,M.Str.e Opere Dif.Infr. Sett. Tecnologie - ante 2011,0.09,31/12/2020
+agg2021,126,E.1,J17E99000010291,0516,Man.Str.Op.Dif.Infr.SettoreLogistica - ante 2011,-0.83,31/12/2020
+agg2021,126,E.1,J17E99000020007,0531,Obblighi di legge - PA - ante 2011,-0.07,31/12/2020
+agg2021,126,E.1,J17E99000020021,0533,Obblighi legge - RM - ante 2011,-0.52,31/12/2020
+agg2021,126,E.1,J17E99000020031,0526,Obblighi di legge -CA - ante 2011,-0.01,31/12/2020
+agg2021,126,E.1,J17E99000020041,0540,Obblighi di legge VE - ante 2011,-0.02,31/12/2020
+agg2021,126,E.1,J17E99000020081,0527,Obblighi di legge -FI - ante 2011,-0.23,31/12/2020
+agg2021,126,E.1,J17E99000020131,0529,Obblighi di legge - MI - ante 2011,-0.04,31/12/2020
+agg2021,126,E.1,J17E99000020381,1301,M.S. E OBBLIGHI DI LEGGE - ante 2011,-0.32,31/12/2020
+agg2021,126,E.1,J17I12000000001,0620,Aumento Produttività VE - 2012,0.08,31/12/2020
+agg2021,126,E.1,J17I12000330001,0521,Manut.Straord.Opere Dif.Infr.VE - 2012,-0.07,31/12/2020
+agg2021,126,E.1,J17I12000350001,0577,Manutenzione straordinaria stazioni - VE - 2012,0.12,31/12/2020
+agg2021,126,E.1,J17I12000370001,0729,Acq.a rimp.mat.inv.obl.di leg.prod.-VE - 2012,-0.02,31/12/2020
+agg2021,126,E.1,J17I13000000001,0521,Manut.Straord.Opere Dif.Infr.VE - 2013,1.0,31/12/2020
+agg2021,126,E.1,J17I13000010001,0620,Aumento Produttività VE - 2013,0.01,31/12/2020
+agg2021,126,E.1,J21H99000020041,2784,Fabbricati civili ed industriali - Reggio Calabria,0.06,31/12/2020
+agg2021,126,E.1,J27I12000060001,0514,Manut.Straord.Opere Dif.Infr.M.E.RC - 2012,0.49,31/12/2020
+agg2021,126,E.1,J27I12000090001,0569,Fabbricati di stazione M.E. - FI - 2012,0.98,31/12/2020
+agg2021,126,E.1,J27I12000240001,1652,Obblighi di Legge - Stazioni - 2012,1.7,31/12/2020
+agg2021,126,E.1,J27I13000010001,0612,Aumento Produttività M.E.RC - 2013,-0.01,31/12/2020
+agg2021,126,E.1,J31H00000120001,1141,Acq.Rimp.mat.inv.O.L.prod.sett.diagn.-DG - ante 2011,0.16,31/12/2020
+agg2021,126,E.1,J31H01000140001,0497,Acquisti-Manutenzioni Ist. Sp. (I) - ante 2011,-0.88,31/12/2020
+agg2021,126,E.1,J31H01000170001,0864,Manutenzione Straordinaria settore TE lotto A - Milano,0.02,31/12/2020
+agg2021,126,E.1,J37I12000060001,0520,Manut.Straord.Opere Dif.Infr.TS - 2012,-0.01,31/12/2020
+agg2021,126,E.1,J37I13000020001,0619,Aumento Produttività TS - 2013,-0.09,31/12/2020
+agg2021,126,E.1,J41H00000250011,2939,Manten. Straor. Bacino Logis. Centro - ante 2011,0.05,31/12/2020
+agg2021,126,E.1,J47I12000030001,0505,Manut.Straord.Opere Dif.Infr.M.E.AN - 2012,-0.01,31/12/2020
+agg2021,126,E.1,J47I13000010001,0601,Aumento Produttività M.E.AN - 2013,0.01,31/12/2020
+agg2021,126,E.1,J50H19000000001,0497,Acquisti a rimpiazzo - Laboratori - 2019,0.2,31/12/2020
+agg2021,126,E.1,J51H00000050041,0729,Acq.a rimp.mat.inv.obl.di leg.prod.-VE - ante 2011,0.02,31/12/2020
+agg2021,126,E.1,J51H92000010081,0656,Aumento Produttività - Potenziamento - Venezia,-0.07,31/12/2020
+agg2021,126,E.1,J51H92000020011,0610,Aumento Produttività M.E.NA - ante 2011,-0.09,31/12/2020
+agg2021,126,E.1,J51H92000020031,0616,Aumento Produttività Zone I.E. - ante 2011,0.19,31/12/2020
+agg2021,126,E.1,J51H92000020041,0615,Aum. Produtt. Sett. Arm.Op.Civ.(M.E.) - ante 2011,0.02,31/12/2020
+agg2021,126,E.1,J51H92000020151,0605,Aumento Produttività CA - ante 2011,-0.02,31/12/2020
+agg2021,126,E.1,J51H92000020161,0613,Aumento Produttività M.E.RM - ante 2011,0.22,31/12/2020
+agg2021,126,E.1,J51H92000020251,0620,Aumento Produttività VE - ante 2011,-0.11,31/12/2020
+agg2021,126,E.1,J51H92000020271,0611,Aumento Produttività PA - ante 2011,-0.02,31/12/2020
+agg2021,126,E.1,J51H92000020281,0612,Aumento Produttività M.E.RC - ante 2011,0.01,31/12/2020
+agg2021,126,E.1,J51H92000020301,0621,Aumento Produttività VR - ante 2011,-0.03,31/12/2020
+agg2021,126,E.1,J51H93000000051,0686,Manutenzione straordinaria e Opere a difesa dell'infrastruttura - Potenziamento - Trieste,0.01,31/12/2020
+agg2021,126,E.1,J51H93000000151,0544,Manut.Straord.OpereDif.Infr.POT.FI - ante 2011,0.77,31/12/2020
+agg2021,126,E.1,J57I12000000001,0613,Aumento Produttività M.E.RM - 2012,-0.28,31/12/2020
+agg2021,126,E.1,J57I12000070001,0515,Manut.Straord.Opere Dif.Infr.M.E.RM - 2012,4.12,31/12/2020
+agg2021,126,E.1,J57I12000110001,0533,Obblighi legge - RM - 2012,0.52,31/12/2020
+agg2021,126,E.1,J57I12000120001,0575,MANUTENZIONE STRAORDINARIA STAZIONI - 2012,1.85,31/12/2020
+agg2021,126,E.1,J57I13000020001,0613,Aumento Produttività M.E.RM - 2013,0.06,31/12/2020
+agg2021,126,E.1,J57I13000050001,1141,Acquisto a rimpiazzo di materiale d'inve - 2013,-0.16,31/12/2020
+agg2021,126,E.1,J67I12000000001,0611,Aumento Produttività PA Anno 2012 - 2012,0.02,31/12/2020
+agg2021,126,E.1,J67I12000050001,0531,Obblighi di legge - PA - 2012,0.07,31/12/2020
+agg2021,126,E.1,J67I12000070001,0573,Manutenzione Straordinaria Stazioni PA - 2012,0.31,31/12/2020
+agg2021,126,E.1,J67I12000130001,0513,Manut.Straord.Opere Dif.Infr. PA - 2012,0.5,31/12/2020
+agg2021,126,E.1,J67I13000120001,0513,Manut.Straord.Opere Dif.Infr. PA - 2013,-0.02,31/12/2020
+agg2021,127,E.1,J71H00000060011,0585,Infrastrutture di servizio stazioni (NA) - ante 2011,-0.28,31/12/2020
+agg2021,127,E.1,J71H00000060051,0584,Infrastrutture di servizio stazioni (MI) - ante 2011,-0.2,31/12/2020
+agg2021,127,E.1,J71H00000080021,2744,Man.O.C. Arm. Attr. e Macch. Cagliari - ante 2011,0.23,31/12/2020
+agg2021,127,E.1,J80D17000050001,0497,Acquisti a rimpiazzo Laboratori - 2017,0.68,31/12/2020
+agg2021,127,E.1,J87E13000540001,1301,OBBLIGHI DI LEGGE - aree Portonaccio - 2013,0.32,31/12/2020
+agg2021,127,E.1,J87I12000050001,0509,Manut.Straord.Opere Dif.Infr.M.E.FI - 2012,0.18,31/12/2020
+agg2021,127,E.1,J87I12000100001,0506,Manut.Straord.Opere Dif.Infr.BA - 2012,-0.36,31/12/2020
+agg2021,127,E.1,J97I08000110001,1556,Manutenzione Mezzi di Manovra - ante 2011,-0.04,31/12/2020
+agg2021,127,E.1,J97I12000050001,0610,Aumento Produttività M.E.NA - 2012,-0.07,31/12/2020
+agg2021,127,E.1,J97I12000170001,0522,Manut.Straord.Opere Dif.Infr.VR - 2012,0.27,31/12/2020
+agg2021,127,E.1,J97I12000210001,0529,Obblighi di legge - MI - 2012,0.04,31/12/2020
+agg2021,127,E.1,J97I12000220001,0530,Obblighi di legge - NA - 2012,-0.19,31/12/2020
+agg2021,127,E.1,J97I12000230001,0507,Manut.Straord.Opere Dif.Infr.M.E.BO - 2012,0.15,31/12/2020
+agg2021,127,E.1,J97I12000270001,0572,Fabbricati di stazione M.E. NA - 2012,0.24,31/12/2020
+agg2021,127,E.1,J97I12000310001,0585,Infrastrutture di servizio stazioni (NA) - 2012,0.85,31/12/2020
+agg2021,127,E.1,J97I12000370001,0511,Manut.Straord.Opere Dif.Infr.M.E.MI - 2012,-0.04,31/12/2020
+agg2021,127,E.1,J97I12000390001,0715,Acq.a rimp.mat.inv.obl.di leg.prod.-BO - 2012,0.04,31/12/2020
+agg2021,127,E.1,J97I12000420001,0512,Manut.Straord.Opere Dif.Infr. NA - 2012,0.34,31/12/2020
+agg2021,127,E.1,J97I13000070001,0610,Aumento Produttività M.E.NA - 2013,-0.02,31/12/2020
+agg2021,127,E.1,J97I13000090001,0621,Aumento Produttività VR - 2013,0.03,31/12/2020
+agg2021,127,E.1,,C005,Progetto Ante per Manutenzione straordinaria ed Obblighi di Legge,-0.23,31/12/2020
+agg2021,127,E.1,,C022,Programma Man. straord. ed O.L.-STAZIONI,-0.06,31/12/2020
+agg2021,127,E.1,J11H03000040021,0590,Miglioramenti Infrastrutt. stazioni (VE) - ante 2011,-0.01,31/12/2020
+agg2021,127,E.1,J11H03000060001,1271,Miglioramento sicurezza gallerie ferroviarie - DTP Roma - ante 2011,-1.35,31/12/2020
+agg2021,127,E.1,J11H03000060071,1340,Miglioramento sicurezza gallerie ferroviarie - DTP Reggio Calabria - ante 2011,-0.04,31/12/2020
+agg2021,127,E.1,J17E91000000011,0634,Miglioramento infrastrutturale M.E.BA - ante 2011,0.01,31/12/2020
+agg2021,127,E.1,J17E91000000021,0645,Miglioramenti infrastrutturali M.E.-VE - ante 2011,-0.12,31/12/2020
+agg2021,127,E.1,J17E91000000031,0638,Miglioramenti infrastrutturali M.E.NA - ante 2011,-0.39,31/12/2020
+agg2021,127,E.1,J17E91000000051,0733,Miglioramenti infrastr. Man.Eff.- MI - ante 2011,0.32,31/12/2020
+agg2021,127,E.1,J17E91000000151,0646,Miglioramenti infrastrutturali M.E.-VR - ante 2011,-0.05,31/12/2020
+agg2021,127,E.1,J17E91000000231,0644,Miglioramenti infrastrutturali M.E.- TS - ante 2011,0.02,31/12/2020
+agg2021,127,E.1,J17E92000000001,0639,Miglioramenti infrastrutturali M.E.- PA - ante 2011,-0.16,31/12/2020
+agg2021,127,E.1,J17I13000050001,0590,Miglioramenti Infrastrutt. stazioni (VE) - 2012,0.01,31/12/2020
+agg2021,127,E.1,J27F20000070001,0514,Manut.Straord.Opere Dif.Infr.M.E.RC - anno 2020,1.14,31/12/2020
+agg2021,127,E.1,J31H93000010081,0689,Soppressione P.L. - Alto Adige,0.17,31/12/2020
+agg2021,127,E.1,J31H93000010161,0696,Soppressione P.L. - Palermo,-0.03,31/12/2020
+agg2021,127,E.1,J34H14000490001,1336,PRG di Ostiense - 2014,1.38,31/12/2020
+agg2021,127,E.1,J41H02000080001,1231,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DTP Torino,130.79,31/12/2020
+agg2021,127,E.1,J41H02000080011,1239,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DTP Napoli,109.46,31/12/2020
+agg2021,127,E.1,J41H02000080021,1237,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DTP Roma,155.55,31/12/2020
+agg2021,127,E.1,J41H02000080031,1238,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DTP Ancona,88.64,31/12/2020
+agg2021,127,E.1,J41H02000080051,1415,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DTP Bari,71.38,31/12/2020
+agg2021,127,E.1,J41H02000080071,1235,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DTP Bologna,104.36,31/12/2020
+agg2021,127,E.1,J41H02000080081,1233,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DTP Verona,82.69,31/12/2020
+agg2021,127,E.1,J41H02000080091,1413,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DTP Trieste,54.61,31/12/2020
+agg2021,127,E.1,J41H02000080141,1234,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DTP Venezia,70.04,31/12/2020
+agg2021,127,E.1,J41H02000080151,1414,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DTP Genova,86.1,31/12/2020
+agg2021,127,E.1,J41H02000080171,1477,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DTP Palermo,35.0,31/12/2020
+agg2021,127,E.1,J50H20000000001,0916,"Acq. mat.inv. O.L. prod.sett.""Off.""-DG - ante 2011 - 2020",1.18,31/12/2020
+agg2021,127,E.1,J51H03000120071,1336,Attr.tec.lin/imp.int.rete-eff.upg (RM) - ante 2011,-1.38,31/12/2020
+agg2021,127,E.1,J51H04000190001,1416,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DTP Reggio Calabria,94.0,31/12/2020
+agg2021,127,E.1,J54H14000520001,1334,Attrezzaggi tecnologici DTP Milano - PRG Rho - fase EXPO - 2014,-0.1,31/12/2020
+agg2021,127,E.1,J57B13000200001,1587,Miglioramento sicurezza gallerie ferroviarie - Territorio Nazionale - 2014,12.0,31/12/2020
+agg2021,127,E.1,J57I10000220001,1617,Impianto di controllo rotabili in uscita dai principali scali ed interporti con Sistemi di Misura Carichi Verticali (SMCV),1.52,31/12/2020
+agg2021,127,E.1,J57I12000080001,1493,Miglioramenti infrastrutturali su linee - 2012,0.24,31/12/2020
+agg2021,127,E.1,J67I10000150001,1615,Ripristino e potenziamento impianti in Abruzzo (DTP Ancona),47.16,31/12/2020
+agg2021,127,E.1,J67I10000160001,1616,Ripristino e potenziamento impianti in Abruzzo (DTP Roma),52.5,31/12/2020
+agg2021,127,E.1,J67I12000080001,0639,Miglioramenti infrastrutturali M.E.- PA - 2012,0.16,31/12/2020
+agg2021,127,E.1,J67J19000000001,0632,Miglioramenti Infrastrutturali - 2019,0.55,31/12/2020
+agg2021,127,E.1,J87B15000140001,0634,Miglioramento infrastrutturale M.E.BA - 2015,-0.01,31/12/2020
+agg2021,127,E.1,J87I08000010001,1493,Miglior. infrastr. su linee AV/AC Roma - ante 2011,-0.24,31/12/2020
+agg2021,127,E.1,J91H92000040081,0631,"Migl. Infrastr. Settore ""Tecnologie"" - ante 2011",0.33,31/12/2020
+agg2021,127,E.1,J91H92000040101,0622,Miglioramento infrastrutturale - DTP Ancona - ante 2011,-0.04,31/12/2020
+agg2021,127,E.1,J91H92000040331,0625,Miglioramenti Infrastrutturali CA - ante 2011,-0.05,31/12/2020
+agg2021,127,E.1,J91H92000040351,0667,Miglioramenti Infrastrutturali - Verona,0.05,31/12/2020
+agg2021,127,E.1,J91H92000040361,0502,Miglioramenti infrastrutturali - Potenziamento - Roma,-0.1,31/12/2020
+agg2021,127,E.1,J97I12000180001,0624,Miglioramenti Infrastrutturali POT.BO - 2012,0.2,31/12/2020
+agg2021,127,E.1,J97I12000300001,0584,Miglioramenti Infrastrutturali Stazioni - 2012,0.2,31/12/2020
+agg2021,127,E.1,J97I12000340001,0635,Miglioramenti infrastrutturali M.E.BO - 2012,-0.04,31/12/2020
+agg2021,127,E.1,J97I12000360001,0638,Miglioramenti infrastrutturali M.E.NA - 2012,0.38,31/12/2020
+agg2021,127,E.1,J97I12000380001,0646,Miglioramenti infrastrutturali M.E.-VR - 2012,0.05,31/12/2020
+agg2021,127,E.1,J97I12000450001,0733,Miglioramenti infrastr. M.E.- MI - 2012,-0.32,31/12/2020
+agg2021,128,E.5,J11C05000010001,1436,Interventi su SCC e IaP - Palermo,0.91,31/12/2020
+agg2021,128,E.5,J11H00000190011,0911,"Progetto ""HISPEEDMIX""",-0.09,31/12/2020
+agg2021,128,E.5,J11H04000110001,1410,Valutazione di sicurezza e certificazione di conformità,6.65,31/12/2020
+agg2021,128,E.5,J11J04000030001,1403,Sperimentazione diagnostica in Scc - ante 2011,0.16,31/12/2020
+agg2021,128,E.5,J31B92000010001,0075,Costruzione n. 3 mezzi veloci per collegamento Messina - Reggio Calabria,0.06,31/12/2020
+agg2021,128,E.5,J31H00000080001,0165,Innovazioni tecnologiche: treno diagnostico infrastruttura,0.02,31/12/2020
+agg2021,128,E.5,J31H00000110001,0917,Acq mezzi prototipali per speriment. - ante 2011,0.23,31/12/2020
+agg2021,128,E.5,J31H00000140011,1368,Prototipi ed interventi connessi alla sicurezza di circolazione,3.3,31/12/2020
+agg2021,128,E.5,J31H01000120001,0209,Cost.unità nav. tipo Ro/Ro,0.09,31/12/2020
+agg2021,128,E.5,J31H01000150001,0710,Inn. Tecn. Proc. Infras. per Imp. Elet - ante 2011,0.05,31/12/2020
+agg2021,128,E.5,J31H01000180001,1054,1054-Rete radio GSM-R (1^ fase),-0.07,31/12/2020
+agg2021,128,E.5,J31H01000210001,1171,Aula multimed simul giuda e cf,0.02,31/12/2020
+agg2021,128,E.5,J31H03000260001,1156,Rilevamento e mappatura immobili strumen,-0.07,31/12/2020
+agg2021,128,E.5,J31H03000300001,1286,Validazione progetti a tecnol. Innov.,0.16,31/12/2020
+agg2021,128,E.5,J31H03000360001,1329,Migl.Sist.diagn.e gest.dati per Man.Infr - ante 2011,-0.19,31/12/2020
+agg2021,128,E.5,J31H03000450001,1365,Sviluppo laboratori e sperimentazioni metodologiche e strumenti di prova,1.14,31/12/2020
+agg2021,128,E.5,J31H04000000001,1299,GSM-R Attrezzaggio Radio in Galleria,-0.01,31/12/2020
+agg2021,128,E.5,J31H92000050221,1169,Studi e sperimentazioni interdisciplinari,0.51,31/12/2020
+agg2021,128,E.5,J31H92000050231,1183,Studi e sperimentazioni relativi a sicur,0.03,31/12/2020
+agg2021,128,E.5,J41H02000080181,1437,Sistema di Controllo Marcia Treno (SCMT)-Automac Train Control (ATC): certificazione di conformità,3.0,31/12/2020
+agg2021,128,E.5,J51D18000100001,1658,Implem. sistemi IT area movimento e comm - 2018,4.15,31/12/2020
+agg2021,128,E.5,J51E16000290001,1918,Business Continuity,4.39,31/12/2020
+agg2021,128,E.5,J51E16000420001,1658,Implem. sistemi IT area movimento e comm - 2016,1.53,31/12/2020
+agg2021,128,E.5,J51E17000210001,1685,Implem Sistemi IT area AFC e PS - 2017,0.23,31/12/2020
+agg2021,128,E.5,J51E17000240001,1658,Implem. sistemi IT area movimento e comm - 2017,4.0,31/12/2020
+agg2021,128,E.5,J51E17000250001,1968,Progr integrata e servizi accessori-2 p,1.7,31/12/2020
+agg2021,128,E.5,J52F15000010001,1658,Implem. sistemi IT area movimento e comm - 2015,9.54,31/12/2020
+agg2021,128,E.5,J52F15000060001,1685,Implem Sistemi IT area AFC e PS - 2015,4.45,31/12/2020
+agg2021,128,E.5,J52F15000110001,1588,Sistemi di Rete - 2015,0.51,31/12/2020
+agg2021,128,E.5,J52F16000020001,1685,Implem Sistemi IT area AFC e PS - 2016,1.53,31/12/2020
+agg2021,128,E.5,J54B13001160001,1812,Piattaforma commerciale,3.12,31/12/2020
+agg2021,128,E.5,J54C14000080001,1685,Implem Sistemi IT area AFC e PS - 2014,3.38,31/12/2020
+agg2021,128,E.5,J54F12000010001,1685,Implem Sistemi IT area AFC e PS - 2012,0.39,31/12/2020
+agg2021,128,E.5,J57E13000040001,1685,Implem Sistemi IT area AFC e PS - 2013,4.65,31/12/2020
+agg2021,128,E.5,J57I08000170001,1569,Evoluzione Tecnologica Sistemi Distribuiti,15.18,31/12/2020
+agg2021,128,E.5,J57I12000240001,1678,Separation of Duties (Sod),0.83,31/12/2020
+agg2021,128,E.5,J57I13000060001,1329,Miglioramento dei sistemi di diagnostica - 2013,0.22,31/12/2020
+agg2021,128,E.5,J59B08000190001,1552,Strumenti di Governo IT,7.95,31/12/2020
+agg2021,128,E.5,J59B09000060001,1592,Sistemi per i processi di supporto - ante 2011,-0.15,31/12/2020
+agg2021,128,E.5,J59B09000070001,1593,Standardizzazione Servizi IaP e Sistemi di campo,18.75,31/12/2020
+agg2021,128,E.5,J59B12000050001,1683,Catasto e Banca Dati Immobiliare,2.48,31/12/2020
+agg2021,128,E.5,J59B13000030001,1592,Sistemi per i processi di supporto - 2013,-0.04,31/12/2020
+agg2021,128,E.5,J81C05000010001,1429,Interventi su SCC e IaP - Genova,0.9,31/12/2020
+agg2021,128,E.5,J81J03000000001,1395,Attrezaggi tecnologici linee ed impianti - Bologna,14.9,31/12/2020
+agg2021,128,E.5,J89B08000110001,1564,Studi e sperimentazione Dimensionamento Nodi,0.29,31/12/2020
+agg2021,128,E.2,J11H92000030008,0137,Raddoppio Palermo-Messina tratta Messina-Patti,3.96,31/12/2020
+agg2021,128,E.2,J11H96000000001,0042,Potenziamento tecnologico Nodo di Torino,-0.05,31/12/2020
+agg2021,128,E.2,J11J04000070031,1440,Upgrading rete viaggiatori - DTP Milano - ante 2011,0.32,31/12/2020
+agg2021,128,E.2,J21H98000000001,0161,Ammodernamento e velocizzazione Rete Sarda,-0.59,31/12/2020
+agg2021,128,E.2,J31C07000010001,1537,Messa in sicurezza cantieri delle opere propedeutiche e chiusura attività in corso,-0.06,31/12/2020
+agg2021,128,E.2,J31H92000040001,0116,Realiz.Nuovo Coll.Porto-Civit.,-0.12,31/12/2020
+agg2021,128,E.2,J31H98000010001,0061,Messa in sicurezza galleria di Orte,-0.02,31/12/2020
+agg2021,128,E.2,J31H98000070001,0160,Opere Inf.ne Staz.Ostiense/Nod,-0.08,31/12/2020
+agg2021,128,E.2,J31J05000040001,1427,Efficientamento linea Codogno-Cremona-Mantova e raddoppio tratta Cremona-Cava Tigozzi,-1.14,31/12/2020
+agg2021,128,E.2,J37E13000300001,1441,Upgrading rete viaggiatori - DTP Venezia - 2013,3.33,31/12/2020
+agg2021,128,E.2,J51C05000030008,0302,AV/AC Milano-Venezia: nodo di Verona (progettazione preliminare),-0.2,31/12/2020
+agg2021,128,E.2,J51H98000010001,0104,Realizz.Var.Gall. Monte Zucco,-0.03,31/12/2020
+agg2021,128,E.2,J57F19000060001,1871,Riapertura Linee (DTP RM) - 2019,0.4,31/12/2020
+agg2021,128,E.2,J59F09000000001,1549,Attività di accatastamento per obblighi di legge,9.2,31/12/2020
+agg2021,128,E.2,J69B11000160001,1635,Arbitrato Tratta AV/AC VR-PD,-1.7,31/12/2020
+agg2021,128,E.2,J71H92000010008,0069,Raddoppio Bologna-Verona,0.05,31/12/2020
+agg2021,128,E.2,J71H99000000001,0178,Nodo ferroviario di Genova,-0.03,31/12/2020
+agg2021,128,E.2,J79B08000170001,0324,Acquisto nave per il trasporto ferroviario sullo Stretto di Messina,0.13,31/12/2020
+agg2021,128,E.2,J81C06000020001,1489,Opere propedeutiche per il collegamento dello scalo di Marzaglia con la linea Milano-Bologna,-0.05,31/12/2020
+agg2021,128,E.2,J81H04000060001,1402,Linea Pontremolese: efficientamento linea attuale,-0.03,31/12/2020
+agg2021,128,E.2,J81H98000020001,0112,Potenziamento scali di Bologna per servizi accessori,-0.03,31/12/2020
+agg2021,128,E.2,J91H01000350001,1260,Interventi al Nodo di Firenze connessi con AV/AC,0.35,31/12/2020
+agg2021,128,E.2,J91H92000010001,0034,Potenziamento infrastrutturale Firenze-Empoli,-0.56,31/12/2020
+agg2021,128,E.2,J97E13000260001,1440,Upgrading rete viaggiatori - DTP Milano - 2013,-0.32,31/12/2020
+agg2021,128,E.2,,R010,Riserve riga E.2,-0.67,31/12/2020
+agg2021,128,E.3,,R011,Riserve riga E.3,-1.72,31/12/2020
+agg2021,129,E.3,J11H03000090001,1307,Movicentro Piemonte,4.84,31/12/2020
+agg2021,129,E.3,J21H02000100001,1283,Fosse da visita treno completo per manutenzione corrente rotabili - Venezia,-0.09,31/12/2020
+agg2021,129,E.3,J31H00000150001,1218,Potenziamento e miglioramenti infrastrutturali impianti di manutenzione rotabili - Milano,0.71,31/12/2020
+agg2021,129,E.3,J31H00000170041,2945,Manten. Straor. Stabilimento Venezia - ante 2011,-0.22,31/12/2020
+agg2021,129,E.3,J31H00000180021,2989,Interventi di potenziamento e razionalizzazione impianti stabilimento di Napoli,0.85,31/12/2020
+agg2021,129,E.3,J31H00000180061,2987,Realizzazione 7° binario intermodale scalo Ferruccio,1.29,31/12/2020
+agg2021,129,E.3,J31H02000100001,1249,Riqualificazione grandi stazioni,220.66,31/12/2020
+agg2021,129,E.3,J31H03000170008,0248,Potenziamento connessioni e terminali intermodali,-0.09,31/12/2020
+agg2021,129,E.3,J31H03000460001,1366,Riqualificazione Medie Stazioni,150.61,31/12/2020
+agg2021,129,E.3,J41H02000070011,1211,Manten in effic imp manut rotab -Napoli - ante 2011,0.08,31/12/2020
+agg2021,129,E.3,J41H02000070141,1207,Manten in effic imp manut rotab -Trieste - ante 2011,0.22,31/12/2020
+agg2021,129,E.3,J41H02000070171,1206,Manten in effic imp manut rotab -Venezia - ante 2011,0.02,31/12/2020
+agg2021,129,E.3,J41H02000070221,1203,Manten in effic imp manut rotab -Milano - ante 2011,0.03,31/12/2020
+agg2021,129,E.3,J51H00000070001,0402,Ampliamento Terminal Verona Quadrante Europa,0.03,31/12/2020
+agg2021,129,E.3,J51H01000080001,0419,Nuovo terminal Padova interporto (acq.in,0.09,31/12/2020
+agg2021,129,E.3,J59G00000000041,2991,Interventi di potenziamento e razionalizzazione scali merci - Milano,0.54,31/12/2020
+agg2021,129,E.3,J61H04000180001,1405,Progetto Pegasus,17.0,31/12/2020
+agg2021,129,E.4,,R013,Riserve riga E.4,-0.12,31/12/2020
+agg2021,129,E.4,J11H00000190001,0156,PROGRAMMA OPERATIVO TRASPORTI FERROVIE,-0.03,31/12/2020
+agg2021,129,E.4,J12D06000000001,1502,Studio di fattibilità potenziamento linea Foligno-Perugia-Terontola,-0.02,31/12/2020
+agg2021,129,E.4,J21H03000130001,1344,"St.modifiche,integr.e l'ottim.prog.pr.",0.07,31/12/2020
+agg2021,129,E.4,J21H03000130011,1345,Studio di fattibilità Terzo valico dei Giovi,0.04,31/12/2020
+agg2021,129,E.4,J31H03000350001,1312,Studio di fattibilità per la riqualificazione ed il potenziamento delle linee Como-Molteno-Lecco e Monza-Molteno,-0.34,31/12/2020
+agg2021,129,E.4,J31H92000050241,1182,Studi e sperimentazioni su standards di,0.21,31/12/2020
+agg2021,129,E.4,J49B07000000001,1505,Studi di Fattibilità: Potenziamento Nodo di Roma,-0.03,31/12/2020
+agg2021,129,E.4,J51H03000140001,1354,Studio di fattibilità potenziamento BATTIPAGLIA - POTENZA,0.43,31/12/2020
+agg2021,129,E.4,J61C10000020008,0338,Opere di collegamento del ponte sullo stretto di Messina con la linea Battipaglia-Reggio Calabria,0.06,31/12/2020
+agg2021,129,,J47I10000180001,0348,Interventi di completamento tratta AV/AC Bologna-Firenze,3.5,31/12/2020
+agg2021,129,,J51C91000000008,0326,Nodo AV/AC Bologna,1.36,31/12/2020
+agg2021,129,,J97I10000180001,0347,Interventi di completamento tratta AV/AC Milano-Bologna,2.4,31/12/2020
+cdp2022,138,E.1,J17E00000000041,0557,Fabbricati di stazione - pot - Reggio C. - ante 2011,-1.21,31/12/2021
+cdp2022,138,E.1,J17E99000010011,0512,Manut.Straord.Opere Dif.Infr. NA - ante 2011,-0.26,31/12/2021
+cdp2022,138,E.1,J17E99000020051,0530,Obblighi di legge - NA - ante 2011,-0.09,31/12/2021
+cdp2022,138,E.1,J17I13000000001,0521,Manut.Straord.Opere Dif.Infr.VE - 2013,-0.33,31/12/2021
+cdp2022,138,E.1,J27I06000070001,1495,Migl. infrastr. linee AV/AC Napoli - ante 2011,-0.08,31/12/2021
+cdp2022,138,E.1,J27I12000150001,1144,Infrastrutture di servizio stazioni (RC) - 2012,-0.06,31/12/2021
+cdp2022,138,E.1,J27I12000240001,1652,Obblighi di Legge - Stazioni - 2012,-0.13,31/12/2021
+cdp2022,138,E.1,J31H01000170011,0865,Manutenzione Strordinaria settore TE lotto C - Napoli,-0.1,31/12/2021
+cdp2022,138,E.1,J51H92000020281,0612,Aumento Produttività M.E.RC - ante 2011,-0.09,31/12/2021
+cdp2022,138,E.1,J57I13000060001,1329,Miglioramento dei sistemi di diagnostica - 2013,-0.14,31/12/2021
+cdp2022,138,E.1,J91H92000040021,0629,Miglioramento infrastrutturale - DOIT Napoli - ante 2011,-0.06,31/12/2021
+cdp2022,138,E.1,J91H92000040031,0669,Miglioramenti infrastrutturali - Potenziamento - Napoli,-0.16,31/12/2021
+cdp2022,138,E.1,J97F13000020001,1491,Manutenzione Straordinaria Linee AV/AC N - 2013,-0.29,31/12/2021
+cdp2022,138,E.1,J97I12000050001,0610,Aumento Produttività M.E.NA - 2012,-0.06,31/12/2021
+cdp2022,138,E.1,J97I12000100001,1491,Manut.Straord.Opere Dif.Infr. Su linee A - 2012,-0.05,31/12/2021
+cdp2022,138,E.1,J97I12000110001,1495,Miglioramenti infrastrutturali su linee - 2012,-0.07,31/12/2021
+cdp2022,138,E.1,J97I12000180001,0624,Miglioramenti Infrastrutturali POT.BO - 2012,-0.2,31/12/2021
+cdp2022,138,E.1,J97I12000220001,0530,Obblighi di legge - NA - 2012,-0.14,31/12/2021
+cdp2022,138,E.1,J97I12000360001,0638,Miglioramenti infrastrutturali M.E.NA - 2012,-0.71,31/12/2021
+cdp2022,138,E.1,J97I12000420001,0512,Manut.Straord.Opere Dif.Infr. NA - 2012,-0.42,31/12/2021
+cdp2022,138,E.1,,1558,MAN. MEZZI DI MANOVRA MI - ante 2011,0.54,31/12/2021
+cdp2022,138,E.1,,1558,MAN. MEZZI DI MANOVRA MI - ante 2011,-0.54,31/12/2021
+cdp2022,138,E.1,,2945,Manuten. Straor. Stabilimento Venezia - 2012,0.22,31/12/2021
+cdp2022,138,E.1,,C005,Progetto Ante per Manutenzione straordinaria ed Obblighi di Legge,1.76,31/12/2021
+cdp2022,138,E.1,,1615,Ripristino e potenziamento impianti in Abruzzo (DOIT Ancona),-37.32,31/12/2021
+cdp2022,138,E.1,J51H04000190001,1416,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DOIT Reggio Calabria,-0.46,31/12/2021
+cdp2022,138,E.1,J67I10000150001,1615,Ripristino e potenziamento impianti in Abruzzo (DOIT Ancona),37.32,31/12/2021
+cdp2022,138,E.1,J91H92000040231,0501,Miglioramento infrastrutturale Sibari - Cosenza,-0.13,31/12/2021
+cdp2022,138,E.1,J97I13000330001,1693,Adeguamento alimentazione gallerie AV Bologna-Firenze,9.0,31/12/2021
+cdp2022,138,E.5,J14B13000240001,1816,PRG Venezia SL e nuovo blocco con distanziamento a 4' Venezia Mestre - Venezia SL,40.0,31/12/2021
+cdp2022,138,E.5,J24G18000030001,3087,Potenziamento tecnologico linea a monte del Vesuvio,10.0,31/12/2021
+cdp2022,138,E.5,J27I05000010001,1479,Upgrading Tecnologico Venezia-Trieste - 1^ Fase,5.8,31/12/2021
+cdp2022,138,E.5,J27I10000040001,1591,Accorpamento dei Posti Centrali dei sistemi di Controllo del Traffico Centralizzato (CTC),30.08,31/12/2021
+cdp2022,138,E.5,J27J18000160001,3086,Upgrading linea Tirrenica sud - ulteriori interventi,7.0,31/12/2021
+cdp2022,138,E.5,J30B04000000001,1425,Realiz. compl. ETR500 diagnost. linee AV,-0.06,31/12/2021
+cdp2022,138,E.5,J31H02000060008,1055,Piano di attrezzaggio della rete con sistemi di telecomunicazione GSM-R,465.21,31/12/2021
+cdp2022,138,E.5,J31H96000080008,0050,Sviluppo tecnologico del nodo di Roma,9.9,31/12/2021
+cdp2022,138,E.5,J37I06000180001,1515,Riconfigurazione impianti SCMT Venezia,16.52,31/12/2021
+cdp2022,138,E.5,J37I11000040001,1621,Tecnologie nodo di Modena/Marzaglia,22.0,31/12/2021
+cdp2022,138,E.5,J47I06000130001,1508,Riconfigurazione impianti SCMT Verona,20.92,31/12/2021
+cdp2022,138,E.5,J47I06000160001,1529,Riconfigurazione impianti SCMT Bologna e Milano,48.54,31/12/2021
+cdp2022,138,E.5,J47I07000020001,0320,SCC Messina-Siracusa,56.45,31/12/2021
+cdp2022,138,E.5,J47J18000160001,3080,Upgrading Roma - Firenze (DD e LL),24.58,31/12/2021
+cdp2022,138,E.5,J51H03000120081,1335,Attrezzaggi tecnologici - ante 2011,-0.35,31/12/2021
+cdp2022,138,E.5,J54H17000740001,3035,Upgrading prestazionale corridoio Scandinavia-Mediterraneo area tirrenica (DOIT Firenze),23.1,31/12/2021
+cdp2022,138,E.5,J57I10000070001,0341,Completamento SCC Tirrenica,92.6,31/12/2021
+cdp2022,138,E.5,J67I06000090001,1504,Riconfigurazione impianti SCMT Reggio Calabria,7.2,31/12/2021
+cdp2022,138,E.5,J67I11000040001,1618,Miglioramenti tecnologici agli impianti di segnalamento della linea AV/AC TO-MI-NA,15.0,31/12/2021
+cdp2022,138,E.5,J74C14000020002,1835,Nuovo ACEI Fiumetorto,5.0,31/12/2021
+cdp2022,138,E.5,J74J17000000001,3050,Attrezzaggio tecnologico linea Palermo-Agrigento,3.5,31/12/2021
+cdp2022,138,E.5,J77I07000000001,1511,Riconfigurazione impianti SCMT Trieste,3.04,31/12/2021
+cdp2022,138,E.5,J77J18000350001,3081,Upgrading linee Bologna - Padova e Venezia-Trieste - DOIT Venezia,29.65,31/12/2021
+cdp2022,138,E.5,J81J03000000001,1395,Attrezaggi tecnologici linee ed impianti - Bologna,7.5,31/12/2021
+cdp2022,138,E.5,J87J18000250001,3084,Upgrading linea Milano - Bologna - DOIT Bologna,7.7,31/12/2021
+cdp2022,138,E.5,J89B12000120001,1681,Spostamento Posti Centrali e adeguam IaP,4.6,31/12/2021
+cdp2022,138,E.5,J91H98000000008,0103,BAB Roma-Napoli via Formia,51.76,31/12/2021
+cdp2022,138,E.5,J97F19000110001,3177,Interventi di adeguamento sicurezza della Grande Galleria dell'Appennino,14.7,31/12/2021
+cdp2022,139,E.5,J97J18000050001,3085,Upgrading corridoio Reno-Alpi - DOIT Genova,11.45,31/12/2021
+cdp2022,139,E.2,J11H96000020001,0015,Passante P.ta Susa-Lingotto e collegamento Porta Susa - bivio Porta Nuova,-0.01,31/12/2021
+cdp2022,139,E.2,J11J04000070041,1441,Upgrading rete viaggiatori - DOIT Venezia - ante 2011,6.67,31/12/2021
+cdp2022,139,E.2,J11J04000070111,1448,Interventi upgrading rete viaggiatori - ante 2011,-0.63,31/12/2021
+cdp2022,139,E.2,J14H17000180001,1951,Elettrificazione Bacino Veneto,30.0,31/12/2021
+cdp2022,139,E.2,J27I11000790001,1637,Nodo di Napoli: velocizzazione itinerari AV/AC nelle stazioni,2.7,31/12/2021
+cdp2022,139,E.2,J31C09000010001,0333,Collegamento diretto linea Chivasso-Aosta con la Torino-Milano (lunetta di Chivasso) ed altri interventi diffusi,6.86,31/12/2021
+cdp2022,139,E.2,J31H03000220008,0280,PRG Roma Tiburtina,112.3,31/12/2021
+cdp2022,139,E.2,J31H03000530001,0267,Nuovo collegamento Arcisate - Stabio,261.0,31/12/2021
+cdp2022,139,E.2,J37E13000330001,1442,Upgrading rete viaggiatori - DOIT Trieste - 2013,20.0,31/12/2021
+cdp2022,139,E.2,J37I06000090001,1485,Efficentamento Rho e Pavia,45.7,31/12/2021
+cdp2022,139,E.2,J41C10000030001,0339,"Nodo di Livorno: potenziamento dei collegamenti ferroviari tra porto di Livorno, rete ferroviaria e interporto di Guasticce",43.0,31/12/2021
+cdp2022,139,E.2,J51H00000040001,0205,Itinerario alternativo merci Gioia Tauro-Taranto con velocizzazione tratta Sibari-Cosenza,-0.04,31/12/2021
+cdp2022,139,E.2,J61H92000000008,0081,Potenziamento asse ferroviario Pontremolese,568.71,31/12/2021
+cdp2022,139,E.2,J77I07000020001,0322,SCC Bari-Taranto,30.04,31/12/2021
+cdp2022,139,E.2,J79B12000020001,1673,Completamento attrezzaggio Bari-Taranto,18.0,31/12/2021
+cdp2022,139,E.2,J81E16000690003,1912,Nuova fermata di Ronchi Aeroporto,3.29,31/12/2021
+cdp2022,139,E.2,J94H17000200001,1949,Interventi di messa in sicurezza dell'asse ferroviario Cuneo-Ventimiglia,8.8,31/12/2021
+cdp2022,139,E.2,J97E13000270001,1468,Upgrading rete viaggiatori - DOIT Verona - 2013,5.0,31/12/2021
+cdp2022,139,E.2,,I019,Rischi noti su CVI TO-MI-NA,81.31,31/12/2021
+cdp2022,139,E.2,,R010,Riserve riga E.2,0.01,31/12/2021
+cdp2022,139,E.3,J57I06000080001,1488,Riqual.piccole-medie-grandi stazioni-RC - ante 2011,-3.2,31/12/2021
+cdp2022,139,E.4,J11H03000170009,0273,Ponte sullo stretto di Messina: opere ferroviarie connesse sponda siciliana,-0.6,31/12/2021
+cdp2022,139,E.4,J12F17000050001,1965,Terminal bus in stazione AV Firenze (studio di fattibilità),0.28,31/12/2021
+cdp2022,139,E.4,J14F05000030001,0314,Velocizzazione Palermo-Trapani via Milo e via Castrelvetrano,1.73,31/12/2021
+cdp2022,139,,,1693,Adeguamento alimentazione gallerie AV Bologna-Firenze,-9.0,31/12/2021
+cdp2022,139,,J11C91000000008,0329,Tratta AV/AC RM-NA: interventi funzionali al Nodo AV/AC Napoli,13.0,31/12/2021
+cdp2022,139,,J21C91000000008,0328,Nodo AV/AC Napoli,488.09,31/12/2021
+cdp2022,139,,J51C91000000008,0326,Nodo AV/AC Bologna,8.9,31/12/2021
+cdp2022,139,,J97I10000180001,0347,Interventi di completamento tratta AV/AC Milano-Bologna,19.5,31/12/2021
+cdp2022,139,,,I019,Rischi noti su CVI TO-MI-NA,23.32,31/12/2021
+agg2023,37,E.1,,0670,Miglioramento infrastrutturale - DOIT Palermo,-200.63,31/12/2022
+agg2023,37,E.1,J11H03000070001,1295,Manutenzione mezzi di manovra - Roma - ante 2011,-0.01,31/12/2022
+agg2023,37,E.1,J17E00000000091,0549,Potenziamento fabbricati di staz.-BA - ante 2011,-0.16,31/12/2022
+agg2023,37,E.1,J17E91000000011,0634,Miglioramento infrastrutturale M.E.BA - ante 2011,0.0,31/12/2022
+agg2023,37,E.1,J17E91000000021,0645,Miglioramenti infrastrutturali M.E.-VE - ante 2011,0.01,31/12/2022
+agg2023,37,E.1,J17E91000000031,0638,Miglioramenti infrastrutturali M.E.NA - ante 2011,-0.04,31/12/2022
+agg2023,37,E.1,J17E91000000191,0641,Miglioramenti infrastrutturali M.E. -RM - ante 2011,-0.04,31/12/2022
+agg2023,37,E.1,J17E99000010001,0505,Manut.Straord.Opere Dif.Infr.M.E.AN - ante 2011,-0.02,31/12/2022
+agg2023,37,E.1,J17E99000010041,0515,Manut.Straord.Opere Dif.Infr.M.E.RM - ante 2011,-0.11,31/12/2022
+agg2023,37,E.1,J17E99000010151,0519,Manut.Straord.Opere Dif.Infr.M.E.TO - ante 2011,-0.01,31/12/2022
+agg2023,37,E.1,J17E99000010181,0520,Manut.Straord.Opere Dif.Infr.TS - ante 2011,-0.02,31/12/2022
+agg2023,37,E.1,J17E99000010221,0517,Man.Str.Op.Dif.Infr.SettoreArm.eOp.Civ. - ante 2011,-0.1,31/12/2022
+agg2023,37,E.1,J17E99000020021,0533,Obblighi legge - RM - ante 2011,-0.08,31/12/2022
+agg2023,37,E.1,J17E99000020051,0530,Obblighi di legge - NA - ante 2011,0.0,31/12/2022
+agg2023,37,E.1,J17I12000360001,0645,Miglioramenti infrastrutturali M.E.-VE - 2012,-0.01,31/12/2022
+agg2023,37,E.1,J17I13000000001,0521,Manut.Straord.Opere Dif.Infr.VE - 2013,0.15,31/12/2022
+agg2023,37,E.1,J21H99000020001,2774,Fabbricati civ. e ind.(pot.posto manut.) - ante 2011,-0.01,31/12/2022
+agg2023,37,E.1,J31H00000170111,2942,Manten. Straor. Stabilimento Torino - ante 2011,-0.01,31/12/2022
+agg2023,37,E.1,J31H01000140001,0497,Acquisti-Manutenzioni Ist. Sp. (I) - ante 2011,0.0,31/12/2022
+agg2023,37,E.1,J31H03000360001,1329,Migl.Sist.diagn.e gest.dati per Man.Infr - ante 2011,0.1,31/12/2022
+agg2023,37,E.1,J37I12000060001,0520,Manut.Straord.Opere Dif.Infr.TS - 2012,0.01,31/12/2022
+agg2023,37,E.1,J41H02000070061,1212,Manten in effic imp manut rotab -ReggioC - ante 2011,-0.05,31/12/2022
+agg2023,37,E.1,J47I12000030001,0505,Manut.Straord.Opere Dif.Infr.M.E.AN - 2012,0.02,31/12/2022
+agg2023,37,E.1,J51H92000010041,0651,Aumento Produttività - Potenziamento - Milano,-0.01,31/12/2022
+agg2023,37,E.1,J51H92000010061,0657,Aumento Produttività (Potenziamento) -VR,0.01,31/12/2022
+agg2023,37,E.1,J51H92000010131,0655,Aumento Produttività (Potenziamento) -TS,0.01,31/12/2022
+agg2023,37,E.1,J51H92000020011,0610,Aumento Produttività M.E.NA - ante 2011,-0.04,31/12/2022
+agg2023,37,E.1,J51H92000020091,0618,Aumento Produttività TO - ante 2011,-0.01,31/12/2022
+agg2023,37,E.1,J57I12000070001,0515,Manut.Straord.Opere Dif.Infr.M.E.RM - 2012,0.03,31/12/2022
+agg2023,37,E.1,J57I12000080001,1493,Miglioramenti infrastrutturali su linee - 2012,-0.01,31/12/2022
+agg2023,37,E.1,J57I12000110001,0533,Obblighi legge - RM - 2012,0.24,31/12/2022
+agg2023,37,E.1,J57I12000710001,0517,Man.Str.Op.Dif.Infr.SettoreArm.eOp.Civ. - 2012,0.1,31/12/2022
+agg2023,37,E.1,J59G00000000031,2005,Interventi di potenziamento e razionalizzazione scali merci - Palermo,-0.01,31/12/2022
+agg2023,37,E.1,J67I11000330001,1491,Manut.Straord.Opere Dif.Infr. Su linee A - ante 2011,-0.01,31/12/2022
+agg2023,37,E.1,J71H00000080031,2741,Man.O.C. Arm. Attr. e Macch. C.Nord - ante 2011,-0.01,31/12/2022
+agg2023,37,E.1,J71H00000080061,2739,Man.O.C. Arm. Attr. e Macch. N.Est - ante 2011,0.01,31/12/2022
+agg2023,37,E.1,J81H01000090001,1179,Itinerari alternativi: elettrificazion PIACENZA - CASTELVETRO,-0.01,31/12/2022
+agg2023,37,E.1,J87I08000000001,1490,Manut.Straord.Opere Dif.Infr. AV/AC Roma - ante 2011,-0.01,31/12/2022
+agg2023,37,E.1,J91H92000040021,0629,Miglioramento infrastrutturale - DOIT Napoli - ante 2011,0.06,31/12/2022
+agg2023,37,E.1,J91H92000040101,0622,Miglioramento infrastrutturale - DOIT Ancona - ante 2011,0.04,31/12/2022
+agg2023,37,E.1,J91H92000040341,0670,Miglioramento infrastrutturale - DOIT Palermo,200.63,31/12/2022
+agg2023,37,E.1,J97I12000420001,0512,Manut.Straord.Opere Dif.Infr. NA - 2012,2.53,31/12/2022
+agg2023,37,E.1,J97I13000060001,0609,Aumento Produttività MI - 2013,-0.01,31/12/2022
+agg2023,37,E.1,,C005,Progetto Ante per Manutenzione straordinaria ed Obblighi di Legge,6.35,31/12/2022
+agg2023,37,E.1,,1616,Ripristino e potenziamento impianti in Abruzzo (DOIT Roma),-49.0,31/12/2022
+agg2023,37,E.1,J31H93000010151,0690,Soppressione P.L. - Ancona,-0.01,31/12/2022
+agg2023,37,E.1,J51H03000110221,1322,Interventi per Sic. e O.L. nei TV (RC) - ante 2011,-0.02,31/12/2022
+agg2023,37,E.1,J51H03000120151,1334,Attrezzaggi tecnologici DOIT Milano - ante 2011,0.01,31/12/2022
+agg2023,37,E.1,J57I10000220001,1617,Impianto di controllo rotabili in uscita dai principali scali ed interporti con Sistemi di Misura Carichi Verticali (SMCV),-0.03,31/12/2022
+agg2023,37,E.1,J67I10000160001,1616,Ripristino e potenziamento impianti in Abruzzo (DOIT Roma),49.01,31/12/2022
+agg2023,37,E.5,J11H01000260001,1245,Applicazioni Tecnologiche,0.01,31/12/2022
+agg2023,37,E.5,J31H02000080001,1160,Rete FS in fibra ottica,-0.01,31/12/2022
+agg2023,37,E.5,J31H03000380001,1349,Sistemi Informativi Infrastruttura(SII) - ante 2011,-0.01,31/12/2022
+agg2023,37,E.5,J31H04000100001,1406,POTENZIAMENTO TECNOLOGICO CHIUSI-ROMA LL,-0.07,31/12/2022
+agg2023,37,E.5,J59B13000030001,1592,Sistemi per i processi di supporto - 2013,0.03,31/12/2022
+agg2023,37,E.5,J77J18000350001,3081,Upgrading linee Bologna - Padova e Venezia-Trieste - DOIT Venezia,0.01,31/12/2022
+agg2023,37,E.5,J81J03000000001,1395,Attrezaggi tecnologici linee ed impianti - Bologna,1.5,31/12/2022
+agg2023,38,E.2,,0280,PRG Roma Tiburtina,-37.41,31/12/2022
+agg2023,38,E.2,J11H92000030008,0137,Raddoppio Palermo-Messina tratta Messina-Patti,0.5,31/12/2022
+agg2023,38,E.2,J11H96000020001,0015,Passante P.ta Susa-Lingotto e collegamento Porta Susa - bivio Porta Nuova,0.01,31/12/2022
+agg2023,38,E.2,J14H15000600002,1888,Metropolitana Leggera Matrice-Bojano,23.15,31/12/2022
+agg2023,38,E.2,J31H03000220008,0280,PRG Roma Tiburtina,37.41,31/12/2022
+agg2023,38,E.2,J41C10000030001,0339,"Nodo di Livorno: potenziamento dei collegamenti ferroviari tra porto di Livorno, rete ferroviaria e interporto di Guasticce",-0.65,31/12/2022
+agg2023,38,E.2,J47I09000020002,1596,Velocizzazione stazioni rete sarda (comprende velocizzazione n° 6 impianti ed altri interventi minori),19.2,31/12/2022
+agg2023,38,E.2,J51H00000040001,0205,Itinerario alternativo merci Gioia Tauro-Taranto con velocizzazione tratta Sibari-Cosenza,0.04,31/12/2022
+agg2023,38,E.2,J57I05000010001,1454,Interventi upgrading rete merci - Venezia,-0.01,31/12/2022
+agg2023,38,E.2,J61H92000000008,0081,Potenziamento asse ferroviario Pontremolese,0.65,31/12/2022
+agg2023,38,E.2,J64H16000000001,1890,Upgrading linea Adriatica - impianti di sicurezza e segnalamento Bologna-Rimini,39.85,31/12/2022
+agg2023,38,E.2,J71H92000010008,0069,Raddoppio Bologna-Verona,8.42,31/12/2022
+agg2023,38,E.2,J71H92000040008,0101,Raddoppio ed elettrificazione Bari-Lecce,10.0,31/12/2022
+agg2023,38,E.2,J84H14001290001,1873,"Upgrading linea Adriatica - opere civili, armamento e trazione elettrica DOIT Bologna",70.0,31/12/2022
+agg2023,38,E.2,J84H14001300001,1874,"Upgrading linea Adriatica - opere civili, armamento e trazione elettrica DOIT Ancona",70.0,31/12/2022
+agg2023,38,E.2,J84H14001310001,1875,"Upgrading linea Adriatica - opere civili, armamento e trazione elettrica DOIT Bari",79.0,31/12/2022
+agg2023,38,E.2,J84H16000030001,1891,Upgrading linea Adriatica - impianti di sicurezza e segnalamento Rimini-Ancona,9.8,31/12/2022
+agg2023,38,E.2,J91H01000350001,1260,Interventi al Nodo di Firenze connessi con AV/AC,1.7,31/12/2022
+agg2023,38,E.2,J91H92000010001,0034,Potenziamento infrastrutturale Firenze-Empoli,-0.56,31/12/2022
+agg2023,38,E.3,J67I06000110001,1526,Attrezzaggio impianti di informazione al - ante 2011,-0.01,31/12/2022
+agg2023,38,E.3,J81H92000010001,0098,Sistemaz. Bologna S.Donato,-0.01,31/12/2022
+agg2023,38,E.3,,2906,Riduzione del rischio trasposrto merci pericolose,-1.35,31/12/2022
+agg2023,38,E.4,J31H03000520001,0266,Quadruplicamento Chiasso-Monza,3.5,31/12/2022
+agg2023,38,E.4,J31H92000050401,1303,Studi e sperim.rilascio del certificato,0.01,31/12/2022
+agg2023,38,E.4,J91H00000290001,0068,Ricerca MORANE,0.01,31/12/2022
+agg2023,38,E.4,,0162,Prog. SAVEF,0.58,31/12/2022
+agg2024,113,E.1,J11H02000090001,1269,Itinerari merci: potenziamento merci direttrice Tirren Nord,-0.01,31/12/2023
+agg2024,113,E.1,J17E00000000011,0555,Fabbricati di Stazione-Pot-Napoli - ante 2011,-0.36,31/12/2023
+agg2024,113,E.1,J17E99000010221,0517,Man.Str.Op.Dif.Infr.SettoreArm.eOp.Civ. - ante 2011,-0.19,31/12/2023
+agg2024,113,E.1,J17E99000020221,0538,Obblighi di legge - TO - ante 2011,-0.01,31/12/2023
+agg2024,113,E.1,J27F20000070001,0514,Manut.Straord.Opere Dif.Infr.M.E.RC - 2020,0.0,31/12/2023
+agg2024,113,E.1,J31H00000100011,1287,Acq.rimp mat inv per ob.legge.prod.manut - ante 2011,-0.37,31/12/2023
+agg2024,113,E.1,J31H00000120021,1154,Acquisti a rimpiazzo Direzione Tecnica - ante 2011,-0.45,31/12/2023
+agg2024,113,E.1,J31H03000360001,1329,Migl.Sist.diagn.e gest.dati per Man.Infr - ante 2011,-0.19,31/12/2023
+agg2024,113,E.1,J57I12000100001,1287,Acq.Rimp.mat.inv.per ob.legge.prod.manut - 2012,-0.04,31/12/2023
+agg2024,113,E.1,J57I12000130001,0723,Acq.a rimp.mat.inv.obl.di leg.prod.-RM - 2012,0.0,31/12/2023
+agg2024,113,E.1,J57I12000710001,0517,Man.Str.Op.Dif.Infr.SettoreArm.eOp.Civ. - 2012,-0.1,31/12/2023
+agg2024,113,E.1,J57I13000060001,1329,Miglioramento dei sistemi di diagnostica - 2013,0.14,31/12/2023
+agg2024,113,E.1,J67J19000000001,0632,Miglioramenti Infrastrutturali - 2019,-0.21,31/12/2023
+agg2024,113,E.1,J87D23000020001,0627,Miglioramenti infrastrutturali,2.91,31/12/2023
+agg2024,113,E.1,,1563,MAN. MEZZI DI MANOVRA VR - ante 2011,-0.02,31/12/2023
+agg2024,113,E.1,,1563,MAN. MEZZI DI MANOVRA VR - ante 2011,0.02,31/12/2023
+agg2024,113,E.1,,C005,Progetto Ante per Manutenzione straordinaria ed Obblighi di Legge,2.17,31/12/2023
+agg2024,113,E.1,J87I17000060001,1978,Smaltimento materiali inquinanti (DOIT Bologna) - Annualità fino al 2017,9.6,31/12/2023
+agg2024,113,E.1,J87J18000350001,1978,Smaltimento materiali inquinanti (DOIT Bologna) - 2018,3.0,31/12/2023
+agg2024,113,E.1,J97I17000110001,1982,Smaltimento materiali inquinanti (DOIT Milano) - Annualità fino al 2017,4.0,31/12/2023
+agg2024,113,E.1,J97J18000100001,1982,Smaltimento materiali inquinanti (DOIT Milano) - 2018,0.45,31/12/2023
+agg2024,113,E.5,J11H02000120001,0179,Sistema di Controllo Marcia Treno (SCMT)-Progettazione di massima Automac Train Control (ATC) 2^ fase,-0.02,31/12/2023
+agg2024,113,E.5,J11H98000000001,0065,Rilevamento Termico Boccole,-0.47,31/12/2023
+agg2024,113,E.5,J11J05000020001,1426,Rilevatore squilibrio carichi,-0.01,31/12/2023
+agg2024,113,E.5,J31H00000140011,1368,Prototipi ed interventi connessi alla sicurezza di circolazione,-0.02,31/12/2023
+agg2024,113,E.5,J31H01000230001,1240,Sistema di Controllo Marcia Treno (SCMT)-Omologazione prototipo sottosistema di bordo (SSB),92.11,31/12/2023
+agg2024,113,E.5,J47I06000120001,1506,Riconfig Impianti SCMT Palermo,16.85,31/12/2023
+agg2024,113,E.5,J51D18000210009,3152,"Sistemi informativi integrati per la gestione della circolazione (OPTIMA,…)",21.76,31/12/2023
+agg2024,113,E.5,J51E17000090001,1817,Implementazioni IT Sistemi area Acquisti - 2017,0.67,31/12/2023
+agg2024,113,E.5,J51E17000220001,1966,Evoluzione Tecnologica e Funzionale PIC,11.55,31/12/2023
+agg2024,113,E.5,J51E17000590001,3046,Sistema di SOT e diagnostica centralizzata,5.6,31/12/2023
+agg2024,113,E.5,J52F15000020001,1817,Implementazioni IT Sistemi area Acquisti - 2015,1.1,31/12/2023
+agg2024,113,E.5,J52F15000070001,1682,Implementazioni Sistemi IT Area Produzione - 2015,0.12,31/12/2023
+agg2024,113,E.5,J52F16000030001,1682,Implementazioni Sistemi IT Area Produzione - 2016,10.59,31/12/2023
+agg2024,113,E.5,J52F16000040001,1817,Implementazioni IT Sistemi area Acquisti - 2016,0.31,31/12/2023
+agg2024,113,E.5,J54B13001170001,1813,Sistema supporto alla pianificazione strategica,1.32,31/12/2023
+agg2024,113,E.5,J54B13001260001,1817,Implementazioni IT Sistemi area Acquisti - 2013,0.3,31/12/2023
+agg2024,113,E.5,J54C14000070001,1682,Implementazioni Sistemi IT Area Produzione - 2014,3.4,31/12/2023
+agg2024,113,E.5,J57E13000030001,1682,Implementazioni Sistemi IT Area Produzione - 2013,2.4,31/12/2023
+agg2024,113,E.5,J57I10000210009,1607,Tecnologie per a protezione dei cantieri e dei mezzi d'opera,8.41,31/12/2023
+agg2024,113,E.5,J57I11000190001,1627,Piano per la sicurezza della circolazione-Atto MIT (Protezione cantieri e mezzi d'opera),4.77,31/12/2023
+agg2024,113,E.5,J57I12000280001,1676,Sistemi ICT di Handling,1.0,31/12/2023
+agg2024,113,E.5,J59B08000210001,1567,"Sist. Ricerca, Svil e Contr Circol C.E.",2.2,31/12/2023
+agg2024,113,E.5,J59B12000040001,1682,Implementazioni Sistemi IT Area Produzione - 2012,1.0,31/12/2023
+agg2024,113,E.5,J64H15000810001,1337,Attrezzaggi tecnologici DOIT Torino - 2015,1.2,31/12/2023
+agg2024,113,E.2,J14F05000050001,1458,Upgrading rete merci - DOIT Firenze nuovo scalo merci Porcari,34.3,31/12/2023
+agg2024,113,E.2,J17B14000110005,1845,Liberazione Immobili - DOIT VE - 2014,4.1,31/12/2023
+agg2024,113,E.2,J17B16000160001,1845,Liberazione Immobili - DOIT VE - 2016,2.28,31/12/2023
+agg2024,113,E.2,J17F19000180001,3185,Upgrading infrastrutturale e tecnologico DOIT Venezia - 2019,11.0,31/12/2023
+agg2024,113,E.2,J34H16000360001,1914,Upgrading prestazionale linee Adriatica-Ionica - DOIT Bari,10.5,31/12/2023
+agg2024,113,E.2,J37I05000030001,1453,Upgrading rete merci - DOIT Verona,18.5,31/12/2023
+agg2024,113,E.2,J54H14000540001,1860,Velocizzazione Firenze-Pisa (fase 0),8.9,31/12/2023
+agg2024,113,E.2,J57J18000060001,3093,Upgrading BO-PD/Rovigo Monselice,18.95,31/12/2023
+agg2024,113,E.2,J67B16000260001,1922,Liberazione immobili - DOIT PA - 2016,0.13,31/12/2023
+agg2024,113,E.2,J77G05000010001,1456,Upgrading rete merci - DOIT Bologna fase 0,10.5,31/12/2023
+agg2024,113,E.2,J87B14000230001,1839,Liberazione Immobili - DOIT AN - 2014,0.17,31/12/2023
+agg2024,113,E.2,J87B14000250005,1851,Liberazione Immobili - DOIT FI - 2014,2.98,31/12/2023
+agg2024,113,E.2,J87B16000420001,1839,Liberazione Immobili - DOIT AN - 2016,0.25,31/12/2023
+agg2024,113,E.2,J87B16000430001,1921,Liberazione immobili - DOIT BO - 2016,0.9,31/12/2023
+agg2024,113,E.2,J87B16000440001,1851,Liberazione Immobili - DOIT FI - 2016,10.47,31/12/2023
+agg2024,113,E.2,J87F19000070001,1851,Liberazione Immobili - DOIT FI - 2019,4.47,31/12/2023
+agg2024,113,E.2,J97B14000150005,1846,Liberazione Immobili - DOIT VR - 2014,2.7,31/12/2023
+agg2024,113,E.3,J31H00000180011,2990,Interventi di potenziamento e razionalizzazione scali merci - Palermo,-0.06,31/12/2023
+agg2024,113,E.3,J31H97000000001,0410,PRG Pomezia Santa Palomba,13.32,31/12/2023
+agg2024,113,E.4,J31H03000440001,1364,Studi e sperim. su sistemi innovativi - ante 2011,-0.03,31/12/2023
+agg2024,113,E.4,J47I12000100001,1669,Stazione di Reggio Calabria - abbassamento piano binari ed intubamento tratto urbano,0.39,31/12/2023
+agg2024,113,E.4,J51C05000040001,1476,Galleria di base del Brennero - Spese funzionamento GEIE,0.05,31/12/2023
+agg2024,113,E.4,J61H04000210001,1411,Studio di fattibilità e progettazione preliminare raddoppio Palmanova-Udine e Nodo di Udine,1.21,31/12/2023
+agg2024,113,E.4,J64F05000030001,0310,Potenziamento Taranto-Metaponto,0.7,31/12/2023
+agg2024,113,E.4,J84F05000040001,0309,Velocizzazione Potenza - Metaponto,1.33,31/12/2023
+agg2024,113,E.4,J91H92000000011,0308,Velocizzazione Battipaglia-Potenza,1.12,31/12/2023
+agg2024,114,,F21H91000000008,0351,Tratta AV/AC Milano - Bologna,0.0,31/12/2023
+agg2024,114,,J11J04000040008,0300,Nuovo collegamento To P.ta Susa-To P.ta Nuova,-0.01,31/12/2023
+agg2024,114,,J47I04000000008,0288,Adeguamento a standard AV/AC linea DD.ma Firenze-Roma,0.0,31/12/2023
+agg2024,114,,J47I10000180001,0348,Interventi di completamento tratta AV/AC Bologna-Firenze,-8.29,31/12/2023
+agg2024,114,,J51C91000000008,0326,Nodo AV/AC Bologna,-0.64,31/12/2023
+agg2024,114,,J81C91000000008,0327,Nodo AV/AC Roma,0.0,31/12/2023
+agg2024,114,,J97I10000180001,0347,Interventi di completamento tratta AV/AC Milano-Bologna,9.29,31/12/2023
+agg2024,114,,,I019,Rischi noti su CVI TO-MI-NA,0.0,31/12/2023
+agg2025,130,E.1,J11H02000090001,1269,Manutenzione Straordinaria cicli fino al 2011,0.06,31/12/2024
+agg2025,130,E.1,J11H03000040011,0583,Manutenzione Straordinaria cicli fino al 2011,0.0,31/12/2024
+agg2025,130,E.1,J17E00000000011,0555,Manutenzione Straordinaria cicli fino al 2011,0.36,31/12/2024
+agg2025,130,E.1,J17E00000000041,0557,Manutenzione Straordinaria cicli fino al 2011,1.21,31/12/2024
+agg2025,130,E.1,J17E00000000091,0549,Manutenzione Straordinaria cicli fino al 2011,0.16,31/12/2024
+agg2025,130,E.1,J17E00000000131,0551,Manutenzione Straordinaria cicli fino al 2011,0.0,31/12/2024
+agg2025,130,E.1,J17E00000000151,0559,Manutenzione Straordinaria cicli fino al 2011,0.0,31/12/2024
+agg2025,130,E.1,J17E00000010001,0566,Manutenzione Straordinaria cicli fino al 2011,0.0,31/12/2024
+agg2025,130,E.1,J17E00000010171,0576,Manutenzione Straordinaria cicli fino al 2011,0.0,31/12/2024
+agg2025,130,E.1,J17E91000000031,0638,Manutenzione Straordinaria cicli fino al 2011,0.0,31/12/2024
+agg2025,130,E.1,J17E92000000001,0639,Manutenzione Straordinaria cicli fino al 2011,0.05,31/12/2024
+agg2025,130,E.1,J17E99000010011,0512,Manutenzione Straordinaria cicli fino al 2011,0.0,31/12/2024
+agg2025,130,E.1,J17E99000010027,0513,Manutenzione Straordinaria cicli fino al 2011,0.0,31/12/2024
+agg2025,130,E.1,J17E99000010181,0520,Manutenzione Straordinaria cicli fino al 2011,0.0,31/12/2024
