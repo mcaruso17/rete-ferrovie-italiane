@@ -175,6 +175,8 @@ footer{border-top:1px solid var(--line);padding-block:26px 40px;
   .chart-grid,.cols2{grid-template-columns:1fr}
   h1{font-size:24px}
   .kpi-v{font-size:21px}
+  /* su due colonne il quinto riquadro resterebbe spaiato */
+  .kpi:last-child{grid-column:1/-1}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
