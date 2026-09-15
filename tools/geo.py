@@ -45,6 +45,10 @@ ESCLUSI = {
     "vigna", "livo", "sale marasino", "canale", "piedimonte", "acqua",
     "massa", "novella", "moretta", "sassa", "roccella", "trasporto",
     "merci", "nuove", "dorsale", "storico", "civile", "veloce", "media",
+    # omonimie fra comuni e toponimi ferroviari: Genova Terralba non e'
+    # Terralba (OR), Trieste Campo Marzio non e' Marzio (VA), il ponte sul
+    # Brenta e' il fiume, Porta Romana e' una stazione
+    "terralba", "marzio", "castelli", "brenta", "romana", "romani",
 }
 
 # luoghi e denominazioni ferroviarie assenti dall'elenco dei comuni
@@ -62,6 +66,8 @@ MANUALI = {
     "santa maria novella": "09", "tiburtina": "12", "termini": "12",
     "fontanarossa": "19", "punta raisi": "19", "capodichino": "15",
     "marco polo": "05", "linate": "03", "caselle": "01",
+    "campo marzio": "06", "castelli romani": "12", "brignole": "07",
+    "principe": "07", "mestre": "05", "tiburtina": "12",
     # Cervaro esiste sia in Lazio sia come localita' pugliese sulla
     # Napoli-Bari: in questo corpus e' sempre la seconda
     "cervaro": "16",
