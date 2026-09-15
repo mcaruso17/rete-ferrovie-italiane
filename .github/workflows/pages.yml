@@ -1,0 +1,59 @@
+# Pubblica la piattaforma su GitHub Pages.
+#
+# Non serve toccare le impostazioni: configure-pages con enablement attiva Pages
+# da se' alla prima esecuzione. Con repository privata servirebbe un piano
+# GitHub Pro o Team; con repository pubblica funziona sul piano gratuito.
+name: Pubblica la piattaforma
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'piattaforma/**'
+      - 'data/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepara il sito
+        run: |
+          mkdir -p sito/data
+          cp piattaforma/index.html sito/
+          cp data/*.csv data/cdp-rfi-dataset.json sito/data/
+          # i PDF di partenza, cosi' ogni numero resta verificabile alla fonte
+          cp *.pdf sito/data/ 2>/dev/null || true
+          touch sito/.nojekyll
+          ls -la sito sito/data
+
+      - uses: actions/configure-pages@v5
+        with:
+          # attiva Pages alla prima esecuzione, se non lo e' gia'
+          enablement: true
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: sito
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

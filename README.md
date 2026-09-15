@@ -6,6 +6,10 @@ delle Infrastrutture e dei Trasporti e Rete Ferroviaria Italiana (2017–2021 e
 
 **Piattaforma interattiva:** https://claude.ai/artifact/Jx3AUvQopmum34mX1uxxqk
 
+La piattaforma è un unico file HTML autonomo (`piattaforma/index.html`, 410 KB):
+contiene i dati al suo interno, non chiama servizi esterni e funziona anche
+aperta da disco. Per metterla online si veda [Pubblicare il sito](#pubblicare-il-sito).
+
 ## Cosa contengono i dati
 
 | File | Contenuto |
@@ -34,6 +38,35 @@ Tavola 2, come flusso di cassa annuo aggregato sull'intero contratto: non è
 riconducibile al singolo intervento. Per impegni e stanziamenti effettivi servono
 il bilancio e il rendiconto dello Stato; per l'avanzamento delle singole opere,
 i CUP tramite OpenCUP e ReGiS.
+
+## Pubblicare il sito
+
+Questa repository è privata. GitHub Pages su repository privata richiede un piano
+GitHub Pro o Team; sul piano gratuito funziona solo con repository pubblica.
+Da qui, tre strade.
+
+**1. Repository pubblica + GitHub Pages** — la via più semplice se i dati possono
+essere pubblici (i PDF di partenza sono già documenti pubblici del MIT). Basta che
+la repository sia pubblica: il workflow `.github/workflows/pages.yml` attiva Pages
+da sé alla prima esecuzione e pubblica la piattaforma, i CSV, il JSON e i PDF
+originali a ogni push su `main`. Indirizzo risultante:
+`https://mcaruso17.github.io/rete-ferrovie-italiane/`.
+
+**2. Repository privata + host statico esterno** — Cloudflare Pages, Netlify o
+Vercel si collegano a una repository privata e pubblicano un sito visibile a
+chiunque, sul piano gratuito. Cloudflare Pages è la scelta con meno vincoli
+(nessun limite di banda, dominio personalizzato incluso). Configurazione: nessun
+comando di build, cartella di output `piattaforma`. Per servire anche i CSV,
+copiare `data/` dentro la cartella pubblicata (è quello che fa il workflow Pages).
+
+**3. Nessun hosting** — il file `piattaforma/index.html` si può inviare per email
+o mettere su una chiavetta: si apre in qualsiasi browser e resta completo. In
+questo caso la sezione «Scarica i dati» non compare, perché i CSV non sono
+affiancati alla pagina.
+
+La sezione «Scarica i dati» in fondo alla pagina appare solo dove la cartella
+`data/` è servita insieme all'HTML: altrimenti resta nascosta, invece di mostrare
+link che non portano da nessuna parte.
 
 ## Metodo di estrazione
 
