@@ -19,7 +19,8 @@ aperta da disco. Per metterla online si veda [Pubblicare il sito](#pubblicare-il
 | `data/opere-ultimate.csv` | 822 opere dichiarate ultimate, con CUP e data di messa in esercizio (Tabella C) |
 | `data/capitoli-piani-gestionali.csv` | Tavola 2: fonti e impieghi di cassa per anno, per capitolo di bilancio e piano gestionale |
 | `data/cdp-rfi-dataset.json` | Dataset completo, comprese le tavole di sintesi ufficiali |
-| `data/cdp-rfi-app.json` | Versione compatta usata dalla piattaforma |
+| `data/cdp-rfi-app.json` | Versione compatta usata dalla piattaforma, con mappa e attribuzione regionale |
+| `data/mappa-regioni.json` | Confini delle regioni italiane ridotti a tracciati SVG |
 
 Tutti gli importi sono in milioni di euro, come nei documenti originali.
 
@@ -83,6 +84,10 @@ parser in `tools/` è scritto interamente sulla libreria standard di Python.
 - `tools/extract_extra.py` — Tabella C, Tavola 1 e Tavola 2
 - `tools/schema.py` — mappatura delle colonne di ciascun contratto
 - `tools/normalize.py`, `tools/build_app.py` — dataset normalizzato e file della piattaforma
+- `tools/build_mappa.py` — confini regionali ISTAT ridotti a tracciati SVG (2,7 MB → 28 KB)
+- `tools/geo.py` — attribuzione regionale dedotta dai nomi degli interventi
+- `tools/wrap_site.py` — documento HTML completo per l'hosting statico
+- `tools/build_all.sh` — rigenera tutto, dai PDF ai file della piattaforma
 
 ### Verifiche
 
@@ -97,6 +102,19 @@ Ogni riga estratta è confrontata con le identità contabili del documento stess
 - le due viste della Tabella A (per status attuativo e per classi tipologiche)
   coincidono al centesimo; nel dataset se ne conta una sola
 
+### L'attribuzione regionale è una stima, non un dato
+
+I Contratti non hanno un campo territoriale. La regione mostrata nella mappa è
+**dedotta** dai luoghi citati nel nome dell'intervento, confrontati con i comuni
+e le province ISTAT: il nome dev'essere un nome proprio, i nomi ambigui valgono
+solo per i capoluoghi, e si guarda solo la descrizione dell'intervento, non il
+sotto-programma. Copre 253 interventi su 336; il resto sono programmi di rete
+senza un luogo nel nome (sicurezza, tecnologie, sistemi informativi). Un'opera
+che tocca più regioni ripartisce l'importo in parti uguali, così che i totali
+regionali sommino al totale attribuito.
+
+Confini regionali: ISTAT via [openpolis/geojson-italy](https://github.com/openpolis/geojson-italy), CC BY 4.0.
+
 ### Limiti noti
 
 L'aggiornamento 2023 ha una struttura di tabella diversa dagli altri cinque e non
@@ -106,6 +124,12 @@ e il font incorporato non espone né `cmap` né nomi dei glifi: è stata ricostr
 dal contesto (1241 occorrenze nel corpus) e la scelta è documentata nel codice.
 
 ## Rigenerare i dati
+
+```bash
+cd tools && ./build_all.sh
+```
+
+Oppure passo per passo:
 
 ```bash
 cd tools
@@ -120,5 +144,11 @@ for spec in "../CdP_2017-2021_Investimenti.pdf|cdp2017" \
   python3 extract_extra.py "$f" "$id" "extra/$id.json"
 done
 python3 normalize.py raw extra ../data/cdp-rfi-dataset.json
-python3 build_app.py ../data/cdp-rfi-dataset.json ../data/cdp-rfi-app.json
+python3 build_app.py ../data/cdp-rfi-dataset.json /tmp/app-base.json
+
+# geografia (richiede una copia di openpolis/geojson-italy)
+GEO=/percorso/a/geojson-italy/geojson
+python3 build_mappa.py "$GEO/limits_IT_regions.geojson" ../data/mappa-regioni.json 0.012 0.004
+python3 geo.py "$GEO/limits_IT_municipalities.geojson" "$GEO/limits_IT_provinces.geojson" \
+  /tmp/app-base.json ../data/mappa-regioni.json ../data/cdp-rfi-app.json
 ```
