@@ -24,7 +24,7 @@ for p in d["progetti"]:
         "pn": p.get("programma_num"), "pg": p.get("programma"),
         "po": p.get("programma_originale"), "sp": p.get("sottoprogramma"),
         "cl": p.get("classe"), "cln": p.get("classe_nome"),
-        "cup": p["cup"],
+        "cup": p["cup"], "cups": p.get("cups") or [],
         "dpp": p["classe_dpp"],
         "pnrr": p["paniere_pnrr"],
         "sa": p["stato_attuativo"][:2],

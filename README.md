@@ -21,6 +21,7 @@ aperta da disco. Per metterla online si veda [Pubblicare il sito](#pubblicare-il
 | `data/cdp-rfi-dataset.json` | Dataset completo, comprese le tavole di sintesi ufficiali |
 | `data/cdp-rfi-app.json` | Versione compatta usata dalla piattaforma, con mappa e attribuzione regionale |
 | `data/mappa-regioni.json` | Confini delle regioni italiane ridotti a tracciati SVG |
+| `data/cup-da-cercare.csv` | Gli 814 CUP citati nei contratti, pronti per essere cercati su OpenCUP |
 
 Tutti gli importi sono in milioni di euro, come nei documenti originali.
 
@@ -101,6 +102,18 @@ Ogni riga estratta è confrontata con le identità contabili del documento stess
   (229.401,52 mln €) a meno di quattro centesimi
 - le due viste della Tabella A (per status attuativo e per classi tipologiche)
   coincidono al centesimo; nel dataset se ne conta una sola
+
+### I CUP, e la strada per una localizzazione vera
+
+I contratti citano **814 CUP distinti**: 233 accanto agli interventi della
+Tabella A (219 interventi su 336, il 65%, pari al 62% del costo del portafoglio)
+e 612 nella tabella delle opere ultimate. Sono in `data/cup-da-cercare.csv`.
+
+Il CUP in sé non contiene il luogo: codifica il soggetto titolare, la natura e
+il settore dell'investimento. La localizzazione è un campo della banca dati
+OpenCUP. Incrociando quei codici con OpenCUP si otterrebbe comune e provincia
+esatti per la maggior parte del portafoglio, al posto della stima descritta qui
+sotto — e un aggancio diretto al monitoraggio dell'avanzamento reale.
 
 ### L'attribuzione regionale è una stima, non un dato
 
