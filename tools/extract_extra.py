@@ -19,6 +19,70 @@ PG = re.compile(r"^Pg\s?\.?\s?(\d{1,3})$", re.I)
 CAP = re.compile(r"^\d{4}$")
 
 
+CATEG = re.compile(r"^(E\.\d|A5000_\d|TOTALE)$", re.I)
+PEZZO = re.compile(r"^[-\u2010\u2013.,\d ]+$")
+
+
+def sintesi_ultimate(doc, pages, doc_id):
+    """Prospetto di sintesi della Tabella C: totali cumulati per categoria.
+
+    Sta sulla prima pagina del dettaglio, sopra l'elenco delle singole opere,
+    e non ha la colonna della data: e' l'unico punto in cui compare il totale
+    complessivo delle opere concluse, non solo quelle dell'ultimo anno.
+    """
+    out = []
+    for pi in sorted(pages):
+        lines = group_lines(extract_page(doc, pages[pi]))
+        # gli anni compaiono anche nel titolo della pagina: si prendono
+        # dalla riga d'intestazione delle colonne, in ordine crescente
+        anni = []
+        for l in lines[:12]:
+            t = norm(" ".join(c[2] for c in raw_cells(l)))
+            trovati = re.findall(r"31\.12\.(\d{4})", t)
+            if len(trovati) >= 2:
+                anni = sorted(set(trovati))
+                break
+        for l in lines:
+            cs = raw_cells(l)
+            if not cs:
+                continue
+            testa = cs[0][2].strip()
+            etichetta = testa if CATEG.match(testa) else None
+            if etichetta is None and len(cs) > 1 and CATEG.match(cs[1][2].strip()):
+                etichetta = cs[1][2].strip()
+            if etichetta is None:
+                continue
+            # le righe del dettaglio hanno la data: non sono di sintesi
+            if any(DATE.match(c[2]) for c in cs):
+                continue
+            # gli importi sono composti a pezzi ("1" + ".247,52"): i pezzi
+            # della stessa colonna distano pochi punti, le colonne circa otto
+            pezzi = [(g[0].x, g[-1].x + g[-1].w, atom_text(g))
+                     for g in atoms(l, gap=1.4, rel=0.22)]
+            pezzi = [p for p in pezzi if p[2] and PEZZO.match(p[2])]
+            colonne, cur = [], []
+            for x0, x1, tx in pezzi:
+                if cur and x0 - cur[-1][1] > 6:
+                    colonne.append(cur)
+                    cur = []
+                cur.append((x0, x1, tx))
+            if cur:
+                colonne.append(cur)
+            valori = []
+            for c in colonne:
+                v = to_float("".join(t for _a, _b, t in c).replace(" ", ""))
+                if v is not None:
+                    valori.append(v)
+            if len(valori) < 2:
+                continue
+            descr = " ".join(c[2] for c in cs
+                             if c[2].strip() != etichetta and not PEZZO.match(c[2]))
+            out.append({"doc": doc_id, "page": pi + 1,
+                        "categoria": etichetta, "voce": norm(descr),
+                        "anni": anni, "valori": valori})
+    return out
+
+
 def opere_ultimate(doc, pages, doc_id):
     out = []
     for pi in pages:
@@ -30,10 +94,14 @@ def opere_ultimate(doc, pages, doc_id):
             txt = [c[2] for c in cs]
             dt = next((t for t in txt if DATE.match(t)), None)
             cup = next((t for t in txt if CUP.match(t.replace(" ", ""))), None)
-            nums = [(c[0], c[2]) for c in cs if is_num(c[2])]
+            # non si usa is_num: nelle pagine di prosecuzione gli importi
+            # negativi sono scritti con il segno staccato dalla cifra
+            # ("-        0,02"), che il riconoscitore stretto scarterebbe
+            nums = [(c[0], to_float(c[2])) for c in cs
+                    if not DATE.match(c[2]) and to_float(c[2]) is not None]
             if dt is None or not nums:
                 continue
-            costo = to_float(nums[-1][1])
+            costo = nums[-1][1]
             descr = max((t for t in txt
                          if not is_num(t) and not DATE.match(t)
                          and not CUP.match(t.replace(" ", ""))),
@@ -169,9 +237,11 @@ def run(path, doc_id):
         k = table_kind(head_text(lines))
         if k:
             byk.setdefault(k, {})[pi] = pg
-    res = {"opere_ultimate": [], "tavola2": [], "tavola1": []}
+    res = {"opere_ultimate": [], "sintesi_ultimate": [], "tavola2": [],
+           "tavola1": []}
     if "C_DET" in byk:
         res["opere_ultimate"] = opere_ultimate(doc, byk["C_DET"], doc_id)
+        res["sintesi_ultimate"] = sintesi_ultimate(doc, byk["C_DET"], doc_id)
     if "T2" in byk:
         res["tavola2"] = tavola2(doc, byk["T2"], doc_id)
     res["tavola1"] = []
@@ -186,7 +256,8 @@ if __name__ == "__main__":
     path, doc_id, out = sys.argv[1], sys.argv[2], sys.argv[3]
     r = run(path, doc_id)
     json.dump(r, open(out, "w"), ensure_ascii=False)
-    print("%-9s opere_ultimate=%4d  Tavola2=%3d (capitoli/pg=%2d)  Tavola1=%2d"
-          % (doc_id, len(r["opere_ultimate"]), len(r["tavola2"]),
+    print("%-9s opere=%4d sintesiC=%2d Tavola2=%3d (cap/pg=%2d) Tavola1=%2d"
+          % (doc_id, len(r["opere_ultimate"]), len(r["sintesi_ultimate"]),
+             len(r["tavola2"]),
              sum(1 for x in r["tavola2"] if x["capitolo"] or x["pg"]),
              len(r["tavola1"])))
