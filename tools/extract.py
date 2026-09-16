@@ -40,6 +40,10 @@ def table_kind(h):
         return "B"
     if "TABELLADETTAGLIOOPEREULTIMATE" in hh:
         return "C_DET"
+    # il dettaglio delle opere ultimate prosegue su pagine che non ripetono il
+    # titolo: si riconoscono dall'intestazione di colonna
+    if "CODICERIGA" in hh and ("CUP" in hh or "NPP" in hh):
+        return "C_DET"
     if "TABELLACOPERE" in hh:
         return "C"
     if "TABELLADCREDI" in hh:

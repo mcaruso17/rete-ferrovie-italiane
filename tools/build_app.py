@@ -78,6 +78,7 @@ app = {
     "opere_ultimate": ult,
     "tavola2": t2,
     "tavola1": t1,
+    "sintesi_ultimate": d.get("sintesi_ultimate", []),
 }
 json.dump(app, open(out, "w"), ensure_ascii=False, separators=(",", ":"))
 print("progetti=%d  opere_ultimate=%d  tavola2=%d  tavola1=%d"

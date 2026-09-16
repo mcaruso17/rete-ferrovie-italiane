@@ -16,12 +16,13 @@ aperta da disco. Per metterla online si veda [Pubblicare il sito](#pubblicare-il
 |---|---|
 | `data/progetti.csv` | 336 interventi: costo, risorse assegnate, fabbisogno residuo, stato attuativo, programma, pagina del PDF |
 | `data/serie-storica.csv` | Lo stesso intervento visto in ciascuno dei contratti in cui compare |
-| `data/opere-ultimate.csv` | 822 opere dichiarate ultimate, con CUP e data di messa in esercizio (Tabella C) |
+| `data/opere-ultimate.csv` | 1.711 opere dichiarate ultimate, con CUP e data di messa in esercizio (Tabella C) |
+| `data/opere-ultimate-sintesi.csv` | Totali cumulati del costruito per categoria (prospetto della Tabella C) |
 | `data/capitoli-piani-gestionali.csv` | Tavola 2: fonti e impieghi di cassa per anno, per capitolo di bilancio e piano gestionale |
 | `data/cdp-rfi-dataset.json` | Dataset completo, comprese le tavole di sintesi ufficiali |
 | `data/cdp-rfi-app.json` | Versione compatta usata dalla piattaforma, con mappa e attribuzione regionale |
 | `data/mappa-regioni.json` | Confini delle regioni italiane ridotti a tracciati SVG |
-| `data/cup-da-cercare.csv` | Gli 814 CUP citati nei contratti, pronti per essere cercati su OpenCUP |
+| `data/cup-da-cercare.csv` | Gli oltre mille CUP citati nei contratti, pronti per essere cercati su OpenCUP |
 
 Tutti gli importi sono in milioni di euro, come nei documenti originali.
 
@@ -137,6 +138,21 @@ accanto alla mappa mostra i due totali separati, per non lasciare l'ambiguit&agr
 al lettore.
 
 Confini regionali: ISTAT via [openpolis/geojson-italy](https://github.com/openpolis/geojson-italy), CC BY 4.0.
+
+### Le pagine di prosecuzione delle tabelle
+
+Il dettaglio delle opere ultimate prosegue su pagine che **non ripetono il titolo
+della tabella**: nell'aggiornamento 2025 sono tredici pagine, circa 890 righe, che
+un riconoscimento basato solo sul titolo salta per intero. Ora quelle pagine si
+riconoscono dall'intestazione di colonna (`Codice Riga | CUP | NPP | …`).
+
+Nelle stesse pagine gli importi negativi sono composti con il segno staccato
+dalla cifra (`-        0,02`): il riconoscitore stretto dei numeri li scartava,
+e con essi l'intera riga.
+
+Verifica: la somma delle 903 righe dell'aggiornamento 2025 fa 4.438,88 milioni
+contro i 4.438,56 del totale stampato nella stessa tabella, uno scarto di
+trentadue centesimi su arrotondamenti al centesimo.
 
 ### Limiti noti
 

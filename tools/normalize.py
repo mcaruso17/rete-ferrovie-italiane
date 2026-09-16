@@ -43,7 +43,7 @@ def pulisci_programma(p):
 
 def main():
     docs, progetti, valid = {}, {}, []
-    ultimate, tavola2, tavola1 = [], [], []
+    ultimate, tavola2, tavola1, sintesi = [], [], [], []
     for doc_id, meta in sorted(DOCS.items(), key=lambda kv: kv[1]["ordine"]):
         praw = os.path.join(RAW, doc_id + ".json")
         if not os.path.exists(praw):
@@ -111,6 +111,7 @@ def main():
             ultimate.extend(e["opere_ultimate"])
             tavola2.extend(e["tavola2"])
             tavola1.extend(e.get("tavola1", []))
+            sintesi.extend(e.get("sintesi_ultimate", []))
 
     ordine = {k: v["ordine"] for k, v in DOCS.items()}
     for code in progetti:
@@ -198,6 +199,7 @@ def main():
         }
     res = {"documenti": docs, "progetti": out, "opere_ultimate": ultimate,
            "tavola2": tavola2, "tavola1": tavola1, "aggregati": aggregati,
+           "sintesi_ultimate": sintesi,
            "validazione": report,
            "stato_attuativo_legenda": STATO_ATTUATIVO,
            "classi": CLASSI,

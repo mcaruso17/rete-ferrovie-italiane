@@ -2,6 +2,9 @@ cup,tabella,codice_intervento,descrizione,programma,importo_mln,documento,pagina
 B31D24000040001,A/B,P129,Collegamento ferroviario aeroporto di Genova Fermate di Erzelli/Aeroporto e Cornigliano est ACC e PRG Sestri Ponente PROG PROG,"Aeroporti, accessibilità su ferro",101.1,agg2025,58
 C51B20000970006,A/B,P251,Collegamento porto di Augusta Collegamento porto di Augusta,"Porti e interporti, ultimo miglio",104.57,agg2025,56
 F21H91000000008,C,,Tratta AV/AC Milano - Bologna,,0.0,agg2024,114
+F32H23000570007,C,,Sicurezza ed Obblighi di Legge,,2.3,agg2025,135
+F37F24000020007,C,,Sicurezza ed Obblighi di Legge,,1.5,agg2025,135
+F41H91000000008,C,,Rete AV/AC Torino-Milano-Napoli: opere in esercizio,,0.0,agg2025,143
 F81H91000000008,A/B,0361,Linea AV/AC Milano - Verona: tratta Brescia - Verona,Direttrici di interesse nazionale,,agg2025,126
 F81H92000000008,A/B,0343,Tratta AV/AC Terzo valico dei Giovi,,,cdp2017,171
 F81H92000000008,A/B,P234,Nodo di Genova e Terzo valico dei Giovi Potenziamento infrastrutturale Voltri-Brignole Porto di Genova: Nuovo terminal merci i Genova Campasso Potenzi,Direttrici di interesse nazionale,10623.31,agg2025,63
@@ -14,6 +17,9 @@ J11C09000000009,A/B,P262A,Velocizzazione e potenziamento linea ferroviaria Adria
 J11C91000000008,C,,Tratta AV/AC RM-NA: interventi funzionali al Nodo AV/AC Napoli,,13.0,cdp2022,139
 J11H00000190001,C,,PROGRAMMA OPERATIVO TRASPORTI FERROVIE,,-0.03,agg2021,129
 J11H00000190011,C,,"Progetto ""HISPEEDMIX""",,-0.09,agg2021,128
+J11H00000190021,C,,Studi di fattibilità e progettazioni,,-0.0,agg2025,140
+J11H00000220001,C,,Studi di fattibilità e progettazioni,,0.0,agg2025,140
+J11H00000240001,C,,Studi di fattibilità e progettazioni,,-0.0,agg2025,140
 J11H01000260001,C,,Applicazioni Tecnologiche,,32.09,cdp2017,179
 J11H02000040008,A/B,0052,"Passante di Torino tratta Porta Susa - Stura Quadruplicamento Torino Porta Susa-Stura e progettazione fermate Dora e Zappata, Stazione AV Torino Porta",Città metropolitane,1045.03,agg2025,54
 J11H02000060001,A/B,0242,"Velocizzazione Palermo - Agrigento Velocizzazione Montemaggiore-Roccapalumba, Variante Lercara e altri interventi minori",Valorizzazione reti regionali,167.5,agg2025,50
@@ -58,14 +64,18 @@ J11H96000000001,C,,Potenziamento tecnologico Nodo di Torino,,-0.05,agg2021,128
 J11H96000020001,C,,Passante P.ta Susa-Lingotto e collegamento Porta Susa - bivio Porta Nuova,,-0.01,cdp2022,139
 J11H98000000001,C,,Rilevamento Termico Boccole,,0.47,cdp2017,179
 J11H99000000001,A/B,0810,"Velocizzazione Foligno-Perugia-Terontola PRG Perugia S. Giovanni 1^ fase, Velocizzazione Perugia Pontivegge, nuova fermata Perugia Capitini e migliora",Valorizzazione reti regionali,35.99,agg2025,50
+J11J03000010001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,141
+J11J04000010001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,141
 J11J04000020001,C,,Sicurezza nelle gallerie ferroviarie,,2.11,cdp2017,176
 J11J04000030001,C,,Sperimentazione diagnostica in Scc - ante 2011,,0.16,agg2021,128
 J11J04000040008,C,,Nuovo collegamento To P.ta Susa-To P.ta Nuova,,3.25,cdp2017,181
 J11J04000050001,C,,"Sviluppo, implementazione e mantenimento in efficienza sistemi CCL-IaP",,7.33,cdp2017,179
 J11J04000070001,C,,Sist Contr Circ Linee e Inf.Pub fase 1,,1.79,cdp2017,179
+J11J04000070011,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,141
 J11J04000070031,C,,Upgrading rete viaggiatori - DTP Milano,,1.77,cdp2017,179
 J11J04000070041,A/B,P067,Velocizzazione linee Milano-Venezia e Venezia- Trieste,Direttrici di interesse nazionale,0.0,cdp2022,61
 J11J04000070061,C,,Interventi upgrading rete viaggiatori,,1.0,cdp2017,179
+J11J04000070071,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,138
 J11J04000070081,C,,Upgrading rete viaggiatori DTP Roma,,2.51,cdp2017,179
 J11J04000070091,C,,Riqual.staz-Adeg.marc.staz.area romana,,7.4,cdp2017,179
 J11J04000070101,C,,Interventi upgrading rete viaggiatori,,3.69,cdp2017,179
@@ -74,8 +84,10 @@ J11J04000070121,C,,Interventi upgrading rete viaggiatori,,3.14,cdp2017,179
 J11J04000070131,C,,Interventi upgrading rete viaggiatori,,0.62,cdp2017,179
 J11J04000070141,C,,Upgrading rete viaggiatori DTP Ancona,,1.6,cdp2017,180
 J11J04000070151,C,,Interventi upgrading rete viaggiatori,,1.3,cdp2017,180
+J11J04000070161,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,138
 J11J04000070171,C,,Interventi upgrading rete viaggiatori TO,,0.84,cdp2017,180
 J11J04000070181,C,,Upgrading rete viaggiatori - DTP Verona,,1.06,cdp2017,180
+J11J04000070191,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,141
 J11J04000070201,C,,Sist.Contr.Circ.linee e info al pubblico,,3.56,cdp2017,179
 J11J05000020001,C,,Rilevatore squilibrio carichi,,0.2,cdp2017,179
 J11J20000100008,A/B,I135,Linea AV/AC Verona-Padova 3° lotto funzionale: Tratta Vicenza-Padova,Direttrici di interesse nazionale,,agg2025,126
@@ -91,7 +103,9 @@ J14F05000050001,C,,Upgrading rete merci - DOIT Firenze nuovo scalo merci Porcari
 J14F18000000001,A/B,P141,Elettrificazione e velocizzazione Roccaravindola-Isernia- Campobasso,Valorizzazione reti regionali,0.0,agg2024,43
 J14F18000000001,A/B,P246,Potenziamento Venafro - Campobasso - Matrice Potenziamento Venafro - Campobasso - Matrice 1^ fase Potenziamento Venafro - Campobasso - Matrice 2^ fase,Valorizzazione reti regionali,393.62,agg2025,52
 J14F18000010009,A/B,P125,Elettrificazione linee Veneto,Valorizzazione reti regionali,200.0,agg2025,51
+J14H12000030001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,130
 J14H15000600002,A/B,1888,Metropolitana Leggera Matrice-Bojano Metropolitana Leggera Matrice-Bojano,Valorizzazione reti regionali,23.15,cdp2022,50
+J14H15000750001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,1.2,agg2025,141
 J14H16000530009,A/B,I131,Ripristino linea dei bivi di Venezia Mestre Ripristino linea dei bivi di Venezia Mestre PROG PROG,Direttrici di interesse nazionale,180.0,agg2025,79
 J14H17000180001,A/B,P125,Elettrificazione linee Veneto,Valorizzazione reti regionali,200.0,agg2025,51
 J14H20000440001,A/B,0361,Linea AV/AC Milano - Verona: tratta Brescia - Verona,Direttrici di interesse nazionale,,agg2025,126
@@ -100,17 +114,27 @@ J14H20001440009,A/B,P255,Accessibilità alla nuova stazione AV di Belfiore Peopl
 J14J22000350001,A/B,I183,Raddoppio Maerne-Castelfranco Veneto Raddoppio Maerne-Castelfranco Veneto PROG PROG,Valorizzazione reti regionali,831.87,agg2025,66
 J16J16001210001,A/B,A5000_4,"Adeguamenti tecnologici, opere di completamento e contingencies rete AV Torino-Milano-Napoli",Direttrici di interesse nazionale,0.0,cdp2022,62
 J17B14000110005,C,,Liberazione Immobili - DOIT VE - 2014,,4.1,agg2024,113
+J17B14000210001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,5.54,agg2025,141
+J17B16000060001,C,,Sicurezza ed Obblighi di Legge,,10.2,agg2025,135
+J17B16000070001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,2.92,agg2025,141
 J17B16000160001,C,,Liberazione Immobili - DOIT VE - 2016,,2.28,agg2024,113
+J17B17000070001,C,,Sicurezza ed Obblighi di Legge,,45.5,agg2025,135
+J17D18000000001,C,,Sicurezza ed Obblighi di Legge,,10.0,agg2025,135
 J17E00000000001,C,,Fabbricati di stazione POT - PA,,0.08,cdp2017,176
 J17E00000000011,C,,Fabbricati di Stazione-Pot-Napoli,,0.93,cdp2017,176
+J17E00000000021,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.01,agg2025,130
+J17E00000000031,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,130
 J17E00000000041,C,,Fabbricati di stazione - pot - Reggio C.,,1.53,cdp2017,176
 J17E00000000051,C,,Fabbricati di stazione POT - TO,,0.16,cdp2017,176
+J17E00000000061,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,130
+J17E00000000081,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,130
 J17E00000000091,C,,Potenziamento fabbricati di staz.-BA,,1.2,cdp2017,176
 J17E00000000101,C,,Potenziamento fabbricati di staz.-AN,,0.01,cdp2017,176
 J17E00000000131,C,,Manutenzione Straordinaria cicli fino al 2011,,0.0,agg2025,130
 J17E00000000141,C,,Fabbricati di stazione POT - RM,,0.55,cdp2017,176
 J17E00000000151,C,,Fabbricati di stazione POT,,9.86,cdp2017,176
 J17E00000000171,C,,Fabbricati di stazione POT -BO,,0.16,cdp2017,176
+J17E00000000261,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,130
 J17E00000010001,C,,Fabbricati di stazione M.E.-AN,,2.28,cdp2017,176
 J17E00000010011,C,,Manutenzione Straord. stazioni (BA),,4.61,cdp2017,176
 J17E00000010021,C,,Fabbricati di stazione M.E. NA,,5.09,cdp2017,176
@@ -122,6 +146,7 @@ J17E00000010071,C,,Fabbricati di stazione M.E. VR,,1.53,cdp2017,176
 J17E00000010091,C,,Manutenzione straordinaria stazioni,,3.77,cdp2017,176
 J17E00000010101,C,,Manutenzione Straordinaria Stazioni - BO,,4.33,cdp2017,176
 J17E00000010111,C,,Manutenzione straordinaria stazioni - VE,,1.94,cdp2017,176
+J17E00000010121,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,130
 J17E00000010131,C,,Manutenzione Straordinaria Stazioni PA,,3.03,cdp2017,176
 J17E00000010151,C,,Fabbricati di stazione M.E.,,8.99,cdp2017,176
 J17E00000010161,C,,Fabbricati di stazione M.E. - FI,,6.65,cdp2017,176
@@ -131,12 +156,14 @@ J17E91000000001,C,,Miglioramenti infrastrutturali M.E.FI,,3.92,cdp2017,176
 J17E91000000011,C,,Miglioramento infrastrutturale M.E.BA,,45.54,cdp2017,176
 J17E91000000021,C,,Miglioramenti infrastrutturali M.E.-VE,,3.61,cdp2017,176
 J17E91000000031,C,,Miglioramenti infrastrutturali M.E.NA,,9.26,cdp2017,176
+J17E91000000041,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.08,agg2025,130
 J17E91000000051,C,,Miglioramenti infrastr. Man.Eff.- MI,,21.74,cdp2017,176
 J17E91000000061,C,,Miglioramenti infrastrutturali M.E.GE,,7.25,cdp2017,176
 J17E91000000071,C,,Miglioramenti infrastrutturali M.E. AN,,0.84,cdp2017,176
 J17E91000000081,C,,Miglioramenti infrastrutturali M.E.BO,,3.65,cdp2017,176
 J17E91000000091,C,,Miglioram. infrastrutturali M.E.- R.C.,,3.85,cdp2017,176
 J17E91000000101,C,,Miglioramenti infrastrutturali M.E.- TO,,2.19,cdp2017,176
+J17E91000000111,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,130
 J17E91000000151,C,,Miglioramenti infrastrutturali M.E.-VR,,1.29,cdp2017,176
 J17E91000000191,C,,Miglioramenti infrastrutturali M.E. -RM,,1.48,cdp2017,176
 J17E91000000211,C,,Progettazioni sviluppi a completamento - Napoli,,0.02,cdp2017,181
@@ -159,8 +186,10 @@ J17E99000010111,C,,Manut.Straord.Opere Dif.Infr.VR,,44.3,cdp2017,177
 J17E99000010121,C,,Manut.Straord.Opere Dif.Infr.M.E.MI,,99.12,cdp2017,177
 J17E99000010131,C,,Manutenzione straordinaria e Opere a difesa dell'infrastruttura - Mantenimento in efficienza - Napoli,,0.01,cdp2017,177
 J17E99000010151,C,,Manut.Straord.Opere Dif.Infr.M.E.TO,,34.76,cdp2017,177
+J17E99000010171,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,130
 J17E99000010181,C,,Manut.Straord.Opere Dif.Infr.TS,,30.84,cdp2017,177
 J17E99000010191,C,,Manut.Straord.Opere Dif.Infr.M.E.BO,,50.55,cdp2017,177
+J17E99000010211,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.02,agg2025,131
 J17E99000010221,C,,Man.Str.Op.Dif.Infr.SettoreArm.eOp.Civ.,,5.29,cdp2017,177
 J17E99000010231,C,,M.Str.e Opere Dif.Infr. Sett. Tecnologie,,0.14,cdp2017,177
 J17E99000010291,C,,Man.Str.Op.Dif.Infr.SettoreLogistica - ante 2011,,-0.83,agg2021,126
@@ -174,6 +203,7 @@ J17E99000020061,C,,Obbighi di legge - AN,,1.48,cdp2017,177
 J17E99000020071,C,,Obblighi di legge - BO,,1.15,cdp2017,177
 J17E99000020081,C,,Obblighi di legge -FI,,3.33,cdp2017,177
 J17E99000020091,C,,Obblighi di legge -VR,,2.29,cdp2017,177
+J17E99000020101,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.02,agg2025,131
 J17E99000020131,C,,Obblighi di legge - MI,,4.15,cdp2017,177
 J17E99000020181,C,,"Obblighi di legge settore ""officine""-DG",,2.11,cdp2017,180
 J17E99000020191,C,,Obblighi di legge - GE,,0.7,cdp2017,177
@@ -183,11 +213,16 @@ J17E99000020331,C,,Obbighi di legge - BA,,2.43,cdp2017,177
 J17E99000020341,C,,Obblighi di legge - TS,,1.31,cdp2017,177
 J17E99000020371,C,,Obblighi di legge (Tecnica),,0.35,cdp2017,177
 J17E99000020381,C,,M.S. E OBBLIGHI DI LEGGE,,0.38,cdp2017,177
+J17E99000020471,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,131
+J17F19000130001,C,,Sicurezza ed Obblighi di Legge,,4.6,agg2025,135
 J17F19000180001,C,,Upgrading infrastrutturale e tecnologico DOIT Venezia - 2019,,11.0,agg2024,113
+J17F20000000001,C,,Sicurezza ed Obblighi di Legge,,55.0,agg2025,135
+J17G20000010001,C,,Sicurezza ed Obblighi di Legge,,43.13,agg2025,135
 J17I06000030001,C,,Attrezz. Tecnol. linee e imp. intera ret,,1.54,cdp2017,179
 J17I08000010001,C,,Piano di sviluppo tecnologico della rete,,0.17,cdp2017,179
 J17I12000000001,C,,Aumento Produttività VE - 2012,,0.08,agg2021,126
 J17I12000330001,C,,Manut.Straord.Opere Dif.Infr.VE - 2012,,-0.07,agg2021,126
+J17I12000340001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,131
 J17I12000350001,C,,Manutenzione straordinaria stazioni - VE - 2012,,0.12,agg2021,126
 J17I12000360001,C,,Miglioramenti infrastrutturali M.E.-VE - 2012,,-0.01,agg2023,37
 J17I12000370001,C,,Acq.a rimp.mat.inv.obl.di leg.prod.-VE - 2012,,-0.02,agg2021,126
@@ -195,10 +230,13 @@ J17I12000380001,A/B,P074,"Ammodernamento e velocizzazione itinerari Palermo- Cat
 J17I13000000001,C,,Manut.Straord.Opere Dif.Infr.VE - 2013,,1.0,agg2021,126
 J17I13000010001,C,,Aumento Produttività VE - 2013,,0.01,agg2021,126
 J17I13000050001,C,,Miglioramenti Infrastrutt. stazioni (VE) - 2012,,0.01,agg2021,127
+J17J19000010001,C,,Sicurezza ed Obblighi di Legge,,33.15,agg2025,135
 J19B12000040001,A/B,1674,Linea ferroviaria Potenza - Foggia - ammodernamento Ammodernamento Potenza-Foggia Fase 1: adeguamento a standard RFI e razionalizzazione impianti Ammo,Valorizzazione reti regionali,874.57,agg2025,65
 J19G01000000001,A/B,I173,"Elettrificazione, velocizzazione e ammodernamento linee Salerno - Mercato S.S. - Avellino - Benevento e tratta",Valorizzazione reti regionali,211.68,agg2025,50
 J19G01000000001,A/B,P245,Adeguamento e velocizzazione linea ferroviaria jonica - tratta Sibari-Melito Porto Salvo e trasversale Lamezia Terme - Catanzaro Lido Elettrificazione,Direttrici di interesse nazionale,1325.97,agg2025,72
 J19G01000010001,C,,Tecnologie (Potenz. OML e OMV),,0.93,cdp2017,180
+J19G02000030011,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,141
+J19G02000030021,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,141
 J21C08000000009,A/B,0331,Raddoppio linea Roma-Viterbo: tratta Cesano-Bracciano Raddoppio Cesano-Vigna di Valle PROG ITER Raddoppio Vigna di Valle-Bracciano PROG ITER,Città metropolitane,713.12,agg2025,75
 J21C91000000008,A/B,A5000_3,Nodo AV di Napoli,Città metropolitane,0.0,cdp2022,54
 J21G22000050001,A/B,P245,Adeguamento e velocizzazione linea ferroviaria jonica - tratta Sibari-Melito Porto Salvo e trasversale Lamezia Terme - Catanzaro Lido Elettrificazione,Direttrici di interesse nazionale,1325.97,agg2025,72
@@ -207,27 +245,44 @@ J21H03000110001,C,,Studio di fattibilità ammodernamento e velocizzazione Caglia
 J21H03000120001,C,,Potenziamento itinerari merci Tarvisio/Villa Opicina (comprende 1^ fase nodo di Udine),,52.22,cdp2017,180
 J21H03000130001,C,,"St.modifiche,integr.e l'ottim.prog.pr.",,0.07,agg2021,129
 J21H03000130011,C,,Studio di fattibilità Terzo valico dei Giovi,,0.04,agg2021,129
+J21H03000140031,C,,Sicurezza ed Obblighi di Legge,,-0.0,agg2025,135
+J21H03000140051,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,141
 J21H04000220001,A/B,0291,"Nuova linea AV/AC Venezia-Trieste: tratta Venezia - Ronchi dei Legionari • NCP 1: ""Intervento sospeso""",,5701.3,cdp2017,103
 J21H04000220001,A/B,0365B,"Potenziamento Venezia-Trieste completamento Varianti Portugruaro, Latisana e Isonzo PROG ITER Variante Ronchi-Aurisina",Direttrici di interesse nazionale,1580.9,agg2025,79
 J21H92000000001,C,,Adeguamento al traffico Merci Linea Domodossola-Luino-Novara-Ovada-Genova,,0.45,cdp2017,180
 J21H98000000001,C,,Ammodernamento e velocizzazione Rete Sarda,,-0.59,agg2021,128
+J21H99000010001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,141
 J21H99000020001,C,,Fabbricati civ. e ind.(pot.posto manut.) - ante 2011,,-0.01,agg2023,37
 J21H99000020041,C,,Fabbricati civili ed industriali - Reggio Calabria,,0.06,agg2021,126
 J21J05000000001,A/B,0298,Nuovo collegamento PM228 - Castelplanio con by-pass di Albacina PM228-Castelplanio Lotto 1: nuovo collegamento PM228 - nuovo ITER Bivio Nord Albacina ,Direttrici di interesse nazionale,1680.25,agg2025,71
+J21J05000020001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,141
 J24C20000000009,A/B,P230,Stazione AV Foggia Cervaro Stazione AV Foggia Cervaro,Valorizzazione reti regionali,99.23,agg2025,66
+J24C20002580001,C,,Sviluppo infrastrutturale e upgrading,,125.34,agg2025,138
 J24D20000010001,A/B,I184,Potenziamento Padova-Castelfranco Linea Padova-Vigodarzere: raddoppio ponte sul Brenta,Valorizzazione reti regionali,48.06,agg2025,51
 J24F05000010001,A/B,0313A,Velocizzazione S. Gavino-Sassari-Olbia fasi prioritarie Variante Bauladu,Direttrici di interesse nazionale,152.7,agg2025,62
 J24F05000010001,A/B,0313B,"Velocizzazione S. Gavino-Sassari-Olbia completamento Varianti Bonorva-Torralba, Macomer I, Macomer II e Campomela- PROG PROG Sassari",Direttrici di interesse nazionale,666.8,agg2025,78
 J24G18000030001,C,,Potenziamento tecnologico linea a monte del Vesuvio,,10.0,cdp2022,138
 J24J17000020001,A/B,I173,"Elettrificazione, velocizzazione e ammodernamento linee Salerno - Mercato S.S. - Avellino - Benevento e tratta",Valorizzazione reti regionali,211.68,agg2025,50
 J24J23000040008,A/B,I182,Adeguamento nodo di Brescia e potenziamento collegamento Brescia-S.Zeno-Ghedi Adeguamento nodo di Brescia e potenziamento collegamento PROG PROG Bresc,Valorizzazione reti regionali,781.53,agg2025,66
+J27B14000190001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,13.36,agg2025,141
+J27B16000100001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,4.39,agg2025,141
+J27B16000280001,C,,Sicurezza ed Obblighi di Legge,,17.5,agg2025,135
+J27B17000060001,C,,Sicurezza ed Obblighi di Legge,,45.85,agg2025,135
+J27D18000000001,C,,Sicurezza ed Obblighi di Legge,,24.5,agg2025,135
+J27E02000010001,C,,Sicurezza ed Obblighi di Legge,,-0.0,agg2025,135
+J27F20000000001,C,,Sicurezza ed Obblighi di Legge,,25.13,agg2025,135
 J27F20000070001,C,,Manut.Straord.Opere Dif.Infr.M.E.RC - anno 2020,,1.14,agg2021,127
 J27I05000010001,C,,Upgrading Tecnologico Venezia-Trieste - 1^ Fase,,5.8,cdp2022,138
+J27I06000060001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,141
 J27I06000070001,C,,Migl. infrastr. linee AV/AC Napoli,,2.35,cdp2017,177
 J27I10000040001,C,,Accorpamento dei Posti Centrali dei sistemi di Controllo del Traffico Centralizzato (CTC),,30.08,cdp2022,138
 J27I11000790001,A/B,A5000_3,Nodo AV di Napoli,Città metropolitane,0.0,cdp2022,54
+J27I12000000001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,131
 J27I12000060001,C,,Manut.Straord.Opere Dif.Infr.M.E.RC - 2012,,0.49,agg2021,126
 J27I12000090001,C,,Fabbricati di stazione M.E. - FI - 2012,,0.98,agg2021,126
+J27I12000100001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.29,agg2025,131
+J27I12000120001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,131
+J27I12000140001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,131
 J27I12000150001,C,,Infrastrutture di servizio stazioni (RC) - 2012,,-0.06,cdp2022,138
 J27I12000160001,A/B,P072,Upgrading e potenziamento tecnologico itinerario Napoli-Bari-Lecce/Taranto,Direttrici di interesse nazionale,499.89,cdp2022,45
 J27I12000170001,A/B,P072,Upgrading e potenziamento tecnologico itinerario Napoli-Bari-Lecce/Taranto,Direttrici di interesse nazionale,499.89,cdp2022,45
@@ -236,12 +291,17 @@ J27I12000220001,A/B,P072,Upgrading e potenziamento tecnologico itinerario Napoli
 J27I12000240001,C,,Obblighi di Legge - Stazioni - 2012,,1.7,agg2021,126
 J27I13000010001,C,,Aumento Produttività M.E.RC - 2013,,-0.01,agg2021,126
 J27J18000160001,C,,Upgrading linea Tirrenica sud - ulteriori interventi,,7.0,cdp2022,138
+J27J19000060001,C,,Sicurezza ed Obblighi di Legge,,12.0,agg2025,135
+J28F15000000001,C,,Sviluppo infrastrutturale e upgrading,,6.0,agg2025,138
 J30B04000000001,C,,Realiz. compl. ETR500 diagnost. linee AV,,2.1,cdp2017,179
+J31B00000240001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,131
 J31B00000250001,C,,Obblighi di Legge (navi),,0.49,cdp2017,177
 J31B00000260001,C,,Manutenzione infrastrutture portuali,,0.29,cdp2017,177
+J31B00000270001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,131
 J31B01000330001,C,,Manutenzione straord. navi traghetto,,7.68,cdp2017,177
 J31B21002470001,A/B,P249,Collegamento ferroviario aeroporto di Olbia Collegamento ferroviario aeroporto di Olbia,"Aeroporti, accessibilità su ferro",231.04,agg2025,58
 J31B92000010001,C,,Costruzione n. 3 mezzi veloci per collegamento Messina - Reggio Calabria,,0.06,agg2021,128
+J31C04000010008,C,,Rete AV/AC Torino-Milano-Napoli: opere in esercizio,,0.0,agg2025,143
 J31C05000010001,C,,SdF della cintura merci Sud di Milano,,0.26,cdp2017,181
 J31C07000010001,C,,Messa in sicurezza cantieri delle opere propedeutiche e chiusura attività in corso,,-0.06,agg2021,128
 J31C09000010001,A/B,0333,Interventi linea Chivasso-Aosta,Valorizzazione reti regionali,0.0,cdp2022,75
@@ -254,35 +314,54 @@ J31H00000110001,C,,Acq mezzi prototipali per speriment. - ante 2011,,0.23,agg202
 J31H00000120001,C,,Acq.Rimp.mat.inv.O.L.prod.sett.diagn.-DG,,8.59,cdp2017,177
 J31H00000120011,C,,Acquisti a rimpiazzo Piano Sicurezza,,0.81,cdp2017,177
 J31H00000120021,C,,Acquisti a rimpiazzo Direzione Tecnica,,0.61,cdp2017,177
+J31H00000130001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,141
 J31H00000140001,C,,Studi e prototipi relativi ad armamento ed opere d'arte,,1.2,cdp2017,179
 J31H00000140011,C,,Prototipi ed interventi connessi alla sicurezza di circolazione,,3.3,agg2021,128
 J31H00000140021,C,,Studi e prototipi ad energia e trazione,,0.46,cdp2017,181
 J31H00000150001,C,,Potenziamento e miglioramenti infrastrutturali impianti di manutenzione rotabili - Milano,,0.89,cdp2017,180
 J31H00000170001,C,,Manten. Straor. Stabilimento Milano,,0.28,cdp2017,180
+J31H00000170021,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,131
+J31H00000170031,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.01,agg2025,131
 J31H00000170041,C,,Manten. Straor. Stabilimento Venezia - ante 2011,,-0.22,agg2021,129
+J31H00000170051,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,131
 J31H00000170061,C,,Manten. Straor. Stabilimento Roma,,2.46,cdp2017,180
 J31H00000170071,C,,Manut. straord. Stabilimento di PA,,0.26,cdp2017,180
 J31H00000170081,C,,Manut. straord. Stabilimento di BA,,0.15,cdp2017,180
+J31H00000170091,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,131
+J31H00000170101,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,131
 J31H00000170111,C,,Manten. Straor. Stabilimento Torino - ante 2011,,-0.01,agg2023,37
+J31H00000170121,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,131
+J31H00000170141,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,131
 J31H00000180011,C,,Interventi di potenziamento e razionalizzazione scali merci - Palermo,,-0.06,agg2024,113
 J31H00000180021,C,,Interventi di potenziamento e razionalizzazione impianti stabilimento di Napoli,,0.85,agg2021,129
 J31H00000180051,C,,Interventi di potenziamento e razionalizzazione scali merci - Reggio Calabria,,1.13,cdp2017,180
 J31H00000180061,C,,Realizzazione 7° binario intermodale scalo Ferruccio,,1.29,agg2021,129
+J31H00000180081,C,,Impianti industriali e terminali viaggiatori e merci,,-0.0,agg2025,139
+J31H01000080001,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,138
 J31H01000120001,C,,Cost.unità nav. tipo Ro/Ro,,0.09,agg2021,128
+J31H01000130001,C,,Impianti industriali e terminali viaggiatori e merci,,-0.0,agg2025,139
 J31H01000140001,C,,Acquisti-Manutenzioni Ist. Sp. (I),,1.04,cdp2017,177
 J31H01000140011,C,,Acq.a rimp.mat.inv.obl.di leg.prod.-VR,,0.06,cdp2017,177
+J31H01000140021,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.02,agg2025,131
 J31H01000140031,C,,Acquisto materiale d'eser. Dir.Sanità,,0.32,cdp2017,177
 J31H01000150001,C,,Inn. Tecn. Proc. Infras. per Imp. Elet - ante 2011,,0.05,agg2021,128
+J31H01000160001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.0,agg2025,132
 J31H01000170001,C,,Manutenzione Straordinaria settore TE lotto A - Milano,,0.02,agg2021,126
 J31H01000170011,C,,Manutenzione Strordinaria settore TE lotto C - Napoli,,0.1,cdp2017,177
 J31H01000170021,C,,Manutenzione Straordinaria settore TE Lotto B - Firenze,,0.64,cdp2017,177
 J31H01000180001,C,,1054-Rete radio GSM-R (1^ fase),,0.07,cdp2017,179
+J31H01000200001,C,,Sicurezza ed Obblighi di Legge,,1.03,agg2025,136
 J31H01000210001,C,,Aula multimed simul giuda e cf,,0.02,agg2021,128
 J31H01000230001,C,,Sistema di Controllo Marcia Treno (SCMT)-Omologazione prototipo sottosistema di bordo (SSB),,92.11,agg2024,113
+J31H01000250001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,141
+J31H02000050001,C,,Impianti industriali e terminali viaggiatori e merci,,-0.0,agg2025,139
 J31H02000060008,C,,Piano di attrezzaggio della rete con sistemi di telecomunicazione GSM-R,,465.21,cdp2022,138
+J31H02000070001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.06,agg2025,141
 J31H02000080001,C,,Rete FS in fibra ottica,,-0.01,agg2023,37
 J31H02000090001,C,,Misuratore velocità treno,,1.41,cdp2017,179
 J31H02000100001,A/B,A1007,Piano riqualificazione grandi e medie stazioni,Città metropolitane,0.0,agg2021,27
+J31H03000140001,C,,Sviluppo infrastrutturale e upgrading,,-0.23,agg2025,138
+J31H03000160001,C,,Studi di fattibilità e progettazioni,,-0.0,agg2025,140
 J31H03000170008,C,,Potenziamento connessioni e terminali intermodali,,-0.09,agg2021,129
 J31H03000180008,A/B,0258_A,Chiusura anello ferroviario di Roma Chiusura anello di Roma lotto 1A Raddoppio Valle Aurelia - Vigna Clara Chiusura anello di Roma lotto 1B Vigna Clar,Città metropolitane,1245.79,agg2025,68
 J31H03000180008,A/B,P106,Gronda merci di Roma - Cintura sud,Direttrici di interesse nazionale,0.0,cdp2022,79
@@ -290,52 +369,75 @@ J31H03000190001,A/B,0260,Raddoppio Lunghezza-Guidonia Raddoppio Lunghezza-Guidon
 J31H03000210008,A/B,0277,Potenziamento Seregno-Bergamo Potenziamento Seregno-Bergamo (gronda est di Milano) PROG PROG,Direttrici di interesse nazionale,1000.0,agg2025,78
 J31H03000220008,C,,PRG Roma Tiburtina,,112.3,cdp2022,139
 J31H03000260001,C,,Rilevamento e mappatura immobili strumen,,0.07,cdp2017,179
+J31H03000290001,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,138
 J31H03000300001,C,,Validazione progetti a tecnol. Innov.,,0.16,agg2021,128
 J31H03000350001,C,,Studio di fattibilità per la riqualificazione ed il potenziamento delle linee Como-Molteno-Lecco e Monza-Molteno,,0.34,cdp2017,181
 J31H03000360001,C,,Migl.Sist.diagn.e gest.dati per Man.Infr,,10.13,cdp2017,179
 J31H03000380001,C,,Sistemi Informativi Infrastruttura(SII),,0.2,cdp2017,179
+J31H03000400001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,141
 J31H03000440001,C,,Studi e sperim. su sistemi innovativi,,3.29,cdp2017,181
 J31H03000450001,C,,Sviluppo laboratori e sperimentazioni metodologiche e strumenti di prova,,1.14,agg2021,128
 J31H03000460001,A/B,A1007,Piano riqualificazione grandi e medie stazioni,Città metropolitane,0.0,agg2021,27
+J31H03000490001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,141
 J31H03000510001,A/B,0265,Accesso al Gottardo Raddoppio Laveno-Luino,Direttrici di interesse nazionale,0.0,agg2021,64
 J31H03000520001,A/B,0266,Accesso al Gottardo Quadruplicamento Chiasso- Monza Quadruplicamento tratta bivio Rosales-Seregno,Direttrici di interesse nazionale,1412.0,cdp2022,79
 J31H03000530001,A/B,0267,Nuovo collegamento Arcisate - Stabio,Valorizzazione reti regionali,0.0,cdp2022,47
 J31H04000000001,C,,GSM-R Attrezzaggio Radio in Galleria,,-0.01,agg2021,128
 J31H04000100001,C,,POTENZIAMENTO TECNOLOGICO CHIUSI-ROMA LL,,0.42,cdp2017,179
+J31H92000020001,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,138
 J31H92000040001,C,,Realiz.Nuovo Coll.Porto-Civit.,,-0.12,agg2021,128
+J31H92000050021,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,141
+J31H92000050101,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,0.0,agg2025,141
 J31H92000050221,C,,Studi e sperimentazioni interdisciplinari,,0.51,agg2021,128
 J31H92000050231,C,,Studi e sperimentazioni relativi a sicur,,0.03,agg2021,128
 J31H92000050241,C,,Studi e sperimentazioni su standards di,,0.21,agg2021,129
 J31H92000050401,C,,Studi e sperim.rilascio del certificato,,0.01,agg2023,38
+J31H92000050411,C,,Studi di fattibilità e progettazioni,,-0.0,agg2025,140
 J31H93000010011,C,,Soppressione P.L. - Bari,,2.46,cdp2017,177
+J31H93000010041,C,,Sicurezza ed Obblighi di Legge,,0.0,agg2025,136
 J31H93000010051,C,,Soppressione P.L. - Cagliari,,4.3,cdp2017,177
+J31H93000010061,C,,Sicurezza ed Obblighi di Legge,,0.0,agg2025,136
+J31H93000010071,C,,Sicurezza ed Obblighi di Legge,,0.0,agg2025,136
 J31H93000010081,C,,Soppressione P.L. - Alto Adige,,0.17,cdp2017,177
 J31H93000010111,C,,Soppressione P.L. - Palermo,,0.26,cdp2017,177
 J31H93000010151,C,,Soppressione P.L. - Ancona,,-0.01,agg2023,37
 J31H93000010161,C,,Soppressione P.L. - Palermo,,-0.03,agg2021,127
+J31H94000010001,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,138
+J31H95000020001,C,,Impianti industriali e terminali viaggiatori e merci,,0.0,agg2025,139
+J31H96000000001,C,,Impianti industriali e terminali viaggiatori e merci,,-0.01,agg2025,139
 J31H96000000011,A/B,P260,Potenziamento Capannelle-Ciampino Quadruplicamento Capannelle-Ciampino e PRG Ciampino,Città metropolitane,376.44,agg2025,68
 J31H96000000021,A/B,0307A,Roma-Pescara - ulteriore fasi Raddoppio Interporto d'Abruzzo-Chieti-Pescara PROG ITER,Direttrici di interesse nazionale,1183.47,agg2025,78
 J31H96000000021,A/B,0307B,Roma-Pescara,Direttrici di interesse nazionale,0.0,agg2021,61
 J31H96000000031,A/B,0290,Nuova linea Passo Corese-Rieti Nuova linea Passo Corese-Rieti PROG PROG,Valorizzazione reti regionali,3124.82,agg2025,74
 J31H96000010008,C,,Potenziamento tratto urbano linea Roma-Viterbo,,4.51,cdp2017,180
+J31H96000020001,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,138
 J31H96000030001,C,,P.R.G. e ACEI Ostiense/Trastevere,,1.05,cdp2017,180
 J31H96000050008,C,,Realizzazione nuove fermate ed adeguamento stazioni per il servizio metropolitano di Roma (1^ fase),,0.36,cdp2017,180
+J31H96000060008,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,141
 J31H96000070008,A/B,0049A,Raddoppio Milano-Mortara: 1^ fase Raddoppio Milano S.Cristoforo- Albairate Fermate Porta Romana e Tibaldi Riqualificazione Milano S. Cristoforo-P.ta R,Città metropolitane,564.68,agg2025,68
 J31H96000070008,A/B,0049B,Raddoppio Milano-Mortara: 2^ fase Raddoppio Abbiategrasso-Vigevano-Parona PROG PROG Raddoppio Parona-Mortara,Città metropolitane,1542.66,agg2025,75
 J31H96000080008,C,,Sviluppo tecnologico del nodo di Roma,,9.9,cdp2022,138
+J31H96000110008,C,,Impianti industriali e terminali viaggiatori e merci,,-0.0,agg2025,140
 J31H97000000001,C,,PRG Pomezia Santa Palomba,,13.32,agg2024,113
 J31H97000010001,C,,Studi di fattibilità asse del Gottardo,,0.37,cdp2017,181
+J31H97000020001,C,,Impianti industriali e terminali viaggiatori e merci,,-0.0,agg2025,140
+J31H98000000001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,141
 J31H98000010001,C,,Messa in sicurezza galleria di Orte,,-0.02,agg2021,128
 J31H98000020001,C,,Sistema di Controllo Marcia Treno (SCMT)-Ripetizione discontinua nodo di Roma,,0.51,cdp2017,179
 J31H98000030008,A/B,0083,Infrastrutturazione area stazione Tiburtina e nodo di interscambio Stazione AV stazione Tiburtina e infrastrutturazione area,Città metropolitane,322.5,agg2025,54
+J31H98000040001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.0,agg2025,132
 J31H98000050001,C,,Informazioni al Pubblico Nodo di Roma,,0.39,cdp2017,179
+J31H98000060001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,132
 J31H98000070001,C,,Opere Inf.ne Staz.Ostiense/Nod,,-0.08,agg2021,128
+J31H99000010011,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,0.0,agg2025,141
+J31H99000040001,C,,Impianti industriali e terminali viaggiatori e merci,,-0.0,agg2025,140
 J31J05000010001,A/B,0294,Potenziamento linea Gallarate-Rho Quadruplicamento Rho-Parabiago e raccordo a Y per Malpensa Quadruplicamento Rho-Parabiago e raccordo a Y per Malpens,Direttrici di interesse nazionale,1023.67,agg2025,70
 J31J05000020001,A/B,0295,Potenziamento collegamenti ferroviari da nord con aeroporto Malpensa,"Aeroporti, accessibilità su ferro",0.0,cdp2022,78
 J31J05000030001,A/B,0296,Raddoppio Orte-Falconara: tratta Foligno-Fabriano Raddoppio Foligno-Fabriano,Direttrici di interesse nazionale,1918.5,agg2025,78
 J31J05000030011,A/B,0297A,Nodo di Falconara 1^ fase Variante Falconara e bretella di collegamento tra la linea Orte- Falconara direzione nord e la variante di Falconara verso n,Direttrici di interesse nazionale,174.82,agg2025,61
 J31J05000030011,A/B,0297B,Nodo di Falconara completamento Nuova stazione Osimo ITER,Direttrici di interesse nazionale,123.29,agg2025,71
 J31J05000040001,C,,Efficientamento linea Codogno-Cremona-Mantova e raddoppio tratta Cremona-Cava Tigozzi,,38.29,cdp2017,180
+J34C20002410009,C,,Sviluppo infrastrutturale e upgrading,,0.18,agg2025,138
 J34F05000010001,A/B,0312,Ammodernamento Venafro - Termoli,Valorizzazione reti regionali,0.0,agg2021,62
 J34G18000150001,A/B,I172,Variante di Riga PRG Bressanone e altre opere propedeutiche Variante di Riga e fermata di Sciaves Fermata di Varna PROG PROG,Valorizzazione reti regionali,251.23,agg2025,50
 J34H14000490001,C,,PRG di Ostiense - 2014,,1.38,agg2021,127
@@ -352,27 +454,55 @@ J34H17000140001,A/B,A5000_4,"Adeguamenti tecnologici, opere di completamento e c
 J34H17000230001,A/B,0270,Sistemazione nodo di Catania Interramento stazione Catania c.le completamento del doppio PROG PROG binario tra Catania C.le e Catania Acquicella Inter,Direttrici di interesse nazionale,1607.82,agg2025,70
 J34H17000230001,A/B,I139,Collegamento ferroviario aeroporto di Catania Fontanarossa,"Aeroporti, accessibilità su ferro",0.0,agg2024,48
 J34J23000040001,A/B,P233,Potenziamento Carnate - Ponte S.Pietro 1^ fase Variante ponte ferroviario Paderno d'Adda PROG PROG,Valorizzazione reti regionali,674.0,agg2025,66
+J37B13000340001,C,,Sicurezza ed Obblighi di Legge,,0.34,agg2025,136
+J37B14000210005,C,,Sviluppo infrastrutturale e upgrading,,5.1,agg2025,138
+J37B14000260001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,3.5,agg2025,141
+J37B16000110001,C,,Sicurezza ed Obblighi di Legge,,16.5,agg2025,136
+J37B16000120001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,4.85,agg2025,141
+J37B16000310001,C,,Sviluppo infrastrutturale e upgrading,,1.24,agg2025,138
+J37B16000470001,C,,Sicurezza ed Obblighi di Legge,,2.0,agg2025,136
+J37B16000540001,C,,Sicurezza ed Obblighi di Legge,,21.6,agg2025,136
+J37B17000040001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,3.94,agg2025,141
+J37B17000050001,C,,Sicurezza ed Obblighi di Legge,,19.4,agg2025,136
+J37B17000200001,C,,Sviluppo infrastrutturale e upgrading,,1.9,agg2025,138
 J37E13000300001,A/B,P067,Velocizzazione linee Milano-Venezia e Venezia- Trieste,Direttrici di interesse nazionale,0.0,cdp2022,61
 J37E13000330001,A/B,P067,Velocizzazione linee Milano-Venezia e Venezia- Trieste,Direttrici di interesse nazionale,0.0,cdp2022,61
+J37F20000000001,C,,Sicurezza ed Obblighi di Legge,,46.0,agg2025,136
+J37F20000060001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,5.0,agg2025,141
+J37G20000510001,C,,Sicurezza ed Obblighi di Legge,,25.25,agg2025,136
+J37H21001140001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,2.7,agg2025,141
 J37H21005980001,A/B,P259,Linea Bari-Bitritto: upgrading infrastrutturale Linea Bari-Bitritto: upgrading infrastrutturale,Valorizzazione reti regionali,30.11,agg2025,53
+J37H21006380001,C,,Sicurezza ed Obblighi di Legge,,1.01,agg2025,136
+J37I05000010001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,141
 J37I05000030001,C,,Upgrading rete merci - DOIT Verona,,18.5,agg2024,113
+J37I06000050001,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,138
 J37I06000060001,C,,Interv.Riqualif.staz.connessi AV-Milano,,0.29,cdp2017,180
 J37I06000070001,A/B,1483,Nodo di interscambio di Pigneto Fermata Pigneto su linea FL1/FL3 e copertura parziale vallo Fermata Pigneto su linea FL4/6 e sistemazioni viarie PROG ,Città metropolitane,230.36,agg2025,68
 J37I06000080001,C,,Interventi di riqualificazione stazioni: Fiera di Roma e Roma Val d'Ala,,0.73,cdp2017,180
 J37I06000090001,C,,Efficentamento Rho e Pavia,,45.7,cdp2022,139
 J37I06000180001,C,,Riconfigurazione impianti SCMT Venezia,,16.52,cdp2022,138
 J37I08000000001,C,,Piano di sviluppo tecnologico della rete,,1.9,cdp2017,181
+J37I08000020001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,132
 J37I08000030001,C,,Man. Straord. Opere a difesa dell'infr l,,0.4,cdp2017,177
+J37I08000040001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,132
 J37I08000050001,C,,Miglior. Infr. linee AV/AC - MI,,0.1,cdp2017,177
 J37I10001070001,C,,Man.Straord.e Opere di Difesa dell'Infra,,0.39,cdp2017,177
 J37I11000040001,C,,Tecnologie nodo di Modena/Marzaglia,,22.0,cdp2022,138
+J37I12000000001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,132
 J37I12000060001,C,,Manut.Straord.Opere Dif.Infr.TS - 2012,,-0.01,agg2021,126
+J37I12000070001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.01,agg2025,132
+J37I12000080001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,132
+J37I12000090001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,132
+J37I12000100001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,132
 J37I12000110001,A/B,1659,Potenziamento collegamento Lamezia Terme - Catanzaro Lido - Dorsale jonica,Direttrici di interesse nazionale,0.0,agg2021,47
 J37I12000110001,A/B,P245,Adeguamento e velocizzazione linea ferroviaria jonica - tratta Sibari-Melito Porto Salvo e trasversale Lamezia Terme - Catanzaro Lido Elettrificazione,Direttrici di interesse nazionale,1325.97,agg2025,72
 J37I12000140001,A/B,P072,Upgrading e potenziamento tecnologico itinerario Napoli-Bari-Lecce/Taranto,Direttrici di interesse nazionale,499.89,cdp2022,45
 J37I12000150006,A/B,P174,Scalo merci Bari Lamasinata Nuova stazione di Bari Lamasinata/Ferruccio fasi PROG PROG,"Porti e interporti, ultimo miglio",245.0,agg2025,75
 J37I12000160006,A/B,P174,Scalo merci Bari Lamasinata Nuova stazione di Bari Lamasinata/Ferruccio fasi PROG PROG,"Porti e interporti, ultimo miglio",245.0,agg2025,75
 J37I13000020001,C,,Aumento Produttività TS - 2013,,-0.09,agg2021,126
+J37I18000060001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,2.5,agg2025,141
+J37J19000000001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,3.5,agg2025,141
+J37J19000010001,C,,Sicurezza ed Obblighi di Legge,,23.0,agg2025,136
 J39B12000040001,A/B,P072,Upgrading e potenziamento tecnologico itinerario Napoli-Bari-Lecce/Taranto,Direttrici di interesse nazionale,499.89,cdp2022,45
 J41C07000000001,A/B,0325,Linea AV/AC Milano-Verona: tratta Treviglio-Brescia,Direttrici di interesse nazionale,,agg2025,126
 J41C09000000005,A/B,0337,Accesso al Brennero lotto 3 - Circonvallazione di,Direttrici di interesse nazionale,1555.0,agg2021,55
@@ -382,14 +512,19 @@ J41C10000030001,A/B,0339,"Nodo di Livorno: potenziamento dei collegamenti ferrov
 J41E91000000009,A/B,0362A,Linea AV/AC Verona-Padova 1° lotto funzionale: Tratta Verona-bivio Vicenza,Direttrici di interesse nazionale,,agg2025,126
 J41E91000000009,A/B,0362B,Linea AV/AC Verona-Padova 2° lotto funzionale: Attraversamento di Vicenza,Direttrici di interesse nazionale,,agg2025,126
 J41G23000070001,A/B,P262A,Velocizzazione e potenziamento linea ferroviaria Adriatica 1^ fase,Direttrici di interesse nazionale,6074.52,agg2025,72
+J41H00000230001,C,,Impianti industriali e terminali viaggiatori e merci,,-0.0,agg2025,140
 J41H00000240001,C,,Manutenzione Straordinaria settore Armamento lotto B - Torino,,0.16,cdp2017,177
 J41H00000240011,C,,Manutenzione Straordinaria settore Armamento lotto A - Firenze,,0.15,cdp2017,177
 J41H00000240021,C,,Manutenzione straordinaria - Armamento lotto C - Ancona,,0.07,cdp2017,177
+J41H00000250001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,132
 J41H00000250011,C,,Manten. Straor. Bacino Logis. Centro - ante 2011,,0.05,agg2021,126
+J41H00000250021,C,,Manutenzione Straordinaria cicli fino al 2011,,0.0,agg2025,132
 J41H01000080008,A/B,0279A,Itinerario Napoli-Bari: Raddoppio e velocizzazione tratta Cancello-Frasso Telesino Nuovo collegamento Cancello-Frasso Telesino e progettazione prelimi,Direttrici di interesse nazionale,767.21,agg2025,61
 J41H01000080008,A/B,0279B,Itinerario Napoli-Bari: Raddoppio e velocizzazione tratta Frasso Telesino-Vitulano (Benevento) Raddoppio Frasso Telesino-Telese Raddoppio Telese-S.Lor,Direttrici di interesse nazionale,1178.09,agg2025,61
+J41H01000090001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,132
 J41H02000070011,C,,Manten in effic imp manut rotab -Napoli - ante 2011,,0.08,agg2021,129
 J41H02000070061,C,,Manten in effic imp manut rotab -ReggioC - ante 2011,,-0.05,agg2023,37
+J41H02000070121,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,132
 J41H02000070141,C,,Manten in effic imp manut rotab -Trieste - ante 2011,,0.22,agg2021,129
 J41H02000070171,C,,Manten in effic imp manut rotab -Venezia - ante 2011,,0.02,agg2021,129
 J41H02000070221,C,,Manten in effic imp manut rotab -Milano - ante 2011,,0.03,agg2021,129
@@ -397,6 +532,7 @@ J41H02000080001,C,,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottos
 J41H02000080011,C,,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DTP Napoli,,109.46,agg2021,127
 J41H02000080021,C,,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DTP Roma,,155.55,agg2021,127
 J41H02000080031,C,,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DTP Ancona,,88.64,agg2021,127
+J41H02000080041,C,,Sicurezza ed Obblighi di Legge,,236.76,agg2025,136
 J41H02000080051,C,,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DTP Bari,,71.38,agg2021,127
 J41H02000080071,C,,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DTP Bologna,,104.36,agg2021,127
 J41H02000080081,C,,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DTP Verona,,82.69,agg2021,127
@@ -405,6 +541,7 @@ J41H02000080141,C,,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottos
 J41H02000080151,C,,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DTP Genova,,86.1,agg2021,127
 J41H02000080171,C,,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DTP Palermo,,35.0,agg2021,127
 J41H02000080181,C,,Sistema di Controllo Marcia Treno (SCMT)-Automac Train Control (ATC): certificazione di conformità,,3.0,agg2021,128
+J41H03000080011,C,,Studi di fattibilità e progettazioni,,-0.0,agg2025,140
 J41H92000000008,A/B,0099A,Itinerario Napoli-Bari: Raddoppio Bovino-Cervaro Raddoppio Bovino-Cervaro,Direttrici di interesse nazionale,263.4,agg2025,59
 J41H92000000008,A/B,0099B,Itinerario Napoli-Bari: Raddoppio Orsara-Bovino Raddoppio Orsara-Bovino,Direttrici di interesse nazionale,579.26,agg2025,59
 J41H92000000008,A/B,0099C,Itinerario Napoli-Bari: Opere di completamento raddoppio Vitulano-Apice Interventi di completamento raddoppio Vitulano-Apice,Direttrici di interesse nazionale,19.95,agg2025,59
@@ -418,6 +555,9 @@ J44H14000090005,A/B,A5000_2,Upgrade tecnologico linea DD Firenze-Roma 1^ fase,Di
 J44H17000110001,A/B,P090,Upgrade tecnologico linea DD Firenze-Roma,Direttrici di interesse nazionale,0.0,cdp2022,61
 J44H17000670001,A/B,I162,Ripristino linea Palermo-Trapani via Milo Ripristino linea Palermo-Trapani via Milo,Valorizzazione reti regionali,237.0,agg2025,50
 J44H20001410001,A/B,P123,Elettrificazione Ivrea-Aosta e adeguamento linea Chivasso - Aosta Elettrificazione Ivrea-Aosta e Velocizzazione impianti e soppressione PL linea Chiva,Valorizzazione reti regionali,171.86,agg2025,51
+J47B14000020005,C,,Sviluppo infrastrutturale e upgrading,,1.75,agg2025,138
+J47D17000000001,C,,Sicurezza ed Obblighi di Legge,,26.0,agg2025,136
+J47F19000190001,C,,Sviluppo infrastrutturale e upgrading,,2.5,agg2025,138
 J47I04000000008,C,,Adeguamento a standard AV/AC linea DD.ma Firenze-Roma,,0.0,agg2024,114
 J47I06000120001,C,,Riconfig Impianti SCMT Palermo,,16.85,agg2024,113
 J47I06000130001,C,,Riconfigurazione impianti SCMT Verona,,20.92,cdp2022,138
@@ -429,21 +569,48 @@ J47I09000020002,A/B,1596,Velocizzazione impianti ferroviari rete sarda Velocizza
 J47I09000030009,A/B,0335,Quadruplicamento Pavia-Milano Rogoredo Quadruplicamento Rogoredo-Pieve Emanuele Quadruplicamento Pieve Emanuele-Pavia PROG PROG,Direttrici di interesse nazionale,987.46,agg2025,71
 J47I09000040009,A/B,0334,"Potenziamento Foligno-Perugia-Terontola 1° stralcio Consolidamento sede tratta Foligno-Assisi, velocizzazione tratta Perugia Ponte San Giovanni - Foli",Valorizzazione reti regionali,135.95,agg2025,65
 J47I10000180001,C,,Interventi di completamento tratta AV/AC Bologna-Firenze,,3.5,agg2021,129
+J47I12000000001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.02,agg2025,132
 J47I12000030001,C,,Manut.Straord.Opere Dif.Infr.M.E.AN - 2012,,-0.01,agg2021,126
+J47I12000040001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,132
+J47I12000050001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.1,agg2025,132
+J47I12000070001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,132
+J47I12000080001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,132
 J47I12000100001,A/B,1669,Asse Salerno-Reggio Calabria: stazione di Reggio Calabria - abbassamento piano binari ed intubamento tratto urbano,Città metropolitane,0.0,agg2021,63
 J47I13000010001,C,,Aumento Produttività M.E.AN - 2013,,0.01,agg2021,126
 J47J18000160001,C,,Upgrading Roma - Firenze (DD e LL),,24.58,cdp2022,138
 J49B07000000001,C,,Studi di Fattibilità: Potenziamento Nodo di Roma,,0.01,cdp2017,181
+J50B18000000001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.5,agg2025,132
+J50C18000000001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.5,agg2025,132
+J50C18000040001,C,,Sicurezza ed Obblighi di Legge,,1.5,agg2025,136
+J50D13000010001,C,,Sicurezza ed Obblighi di Legge,,2.5,agg2025,136
+J50D15000000001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.3,agg2025,132
+J50D16000000001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.6,agg2025,132
+J50D16000030001,C,,Sicurezza ed Obblighi di Legge,,1.0,agg2025,136
+J50D17000040001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.25,agg2025,132
+J50F22000000001,C,,Sicurezza ed Obblighi di Legge,,2.6,agg2025,136
+J50F23000010001,C,,Manutenzione Straordinaria cicli fino al 2011,,3.0,agg2025,132
+J50F23000020001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.5,agg2025,132
 J50H19000000001,C,,Acquisti a rimpiazzo - Laboratori - 2019,,0.2,agg2021,126
+J50H19000010001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.5,agg2025,132
+J50H19000050001,C,,Sicurezza ed Obblighi di Legge,,1.0,agg2025,136
 J50H20000000001,C,,"Acq. mat.inv. O.L. prod.sett.""Off.""-DG - ante 2011 - 2020",,1.18,agg2021,127
+J50H20000010001,C,,Manutenzione Straordinaria cicli fino al 2011,,3.7,agg2025,132
+J50H20000020001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.5,agg2025,132
+J50I21000000001,C,,Sicurezza ed Obblighi di Legge,,2.0,agg2025,136
+J50J21000030001,C,,Manutenzione Straordinaria cicli fino al 2011,,3.0,agg2025,132
 J51B21001950006,A/B,P253,Potenziamento collegamenti bacino di Augusta Bypass di Augusta,Valorizzazione reti regionali,175.71,agg2025,52
 J51C05000030008,C,,AV/AC Milano-Venezia: nodo di Verona (progettazione preliminare),,-0.2,agg2021,128
 J51C05000040001,C,,Galleria di base del Brennero - Spese funzionamento GEIE,,0.05,agg2024,113
+J51C18000050001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,3.04,agg2025,141
+J51C18000060001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,0.77,agg2025,141
 J51C91000000008,A/B,A5000_5,Nodo AV di Bologna,,2018.55,cdp2017,73
+J51D18000090001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,0.5,agg2025,141
 J51D18000100001,C,,Implem. sistemi IT area movimento e comm - 2018,,4.15,agg2021,128
 J51D18000110003,A/B,P220,"Potenziamento dei collegamenti tra il porto di Livorno, la rete ferroviaria e l'interporto Guasticce Porto di Livorno: collegamento diretto Porto-Guas","Porti e interporti, ultimo miglio",766.93,agg2025,69
+J51D18000150001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,0.82,agg2025,141
 J51D18000210009,C,,"Sistemi informativi integrati per la gestione della circolazione (OPTIMA,…)",,21.76,agg2024,113
 J51E16000290001,C,,Business Continuity,,4.39,agg2021,128
+J51E16000360001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,0.15,agg2025,141
 J51E16000420001,C,,Implem. sistemi IT area movimento e comm - 2016,,1.53,agg2021,128
 J51E17000090001,C,,Implementazioni IT Sistemi area Acquisti - 2017,,0.67,agg2024,113
 J51E17000210001,C,,Implem Sistemi IT area AFC e PS - 2017,,0.23,agg2021,128
@@ -451,6 +618,7 @@ J51E17000220001,C,,Evoluzione Tecnologica e Funzionale PIC,,11.55,agg2024,113
 J51E17000240001,C,,Implem. sistemi IT area movimento e comm - 2017,,4.0,agg2021,128
 J51E17000250001,C,,Progr integrata e servizi accessori-2 p,,1.7,agg2021,128
 J51E17000590001,C,,Sistema di SOT e diagnostica centralizzata,,5.6,agg2024,113
+J51E20000090001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,0.4,agg2025,142
 J51G24000010001,A/B,P270,Opere di collegamento al Ponte sullo stretto di Messina - sponda calabra e siciliana Opere di collegamento al Ponte sullo stretto di Messina - sponda ,Direttrici di interesse nazionale,1766.0,agg2025,73
 J51H00000040001,C,,Itinerario alternativo merci Gioia Tauro-Taranto con velocizzazione tratta Sibari-Cosenza,,0.34,cdp2017,180
 J51H00000050001,C,,Acq.a rimp.mat.inv.obl.di leg.prod.-AN,,0.58,cdp2017,177
@@ -458,22 +626,35 @@ J51H00000050011,C,,Acq.a rimp.mat.inv.obl.di leg.prod.-NA,,0.72,cdp2017,177
 J51H00000050021,C,,Acq.a rimp.mat.inv.obl.di leg.prod.-TO,,0.7,cdp2017,177
 J51H00000050031,C,,Acq.a rimp.mat.inv.obl.di leg.prod.-TS,,0.53,cdp2017,177
 J51H00000050041,C,,Acq.a rimp.mat.inv.obl.di leg.prod.-VE,,0.35,cdp2017,177
+J51H00000050051,C,,Manutenzione Straordinaria cicli fino al 2011,,0.01,agg2025,132
 J51H00000050111,C,,"Acq.mat.inv. O.L. prod.sett.""Mag""-DG",,0.15,cdp2017,177
 J51H00000050171,C,,Acq.a rimp.mat.inv.obl.di leg.prod.-FI,,0.52,cdp2017,177
+J51H00000050181,C,,Manutenzione Straordinaria cicli fino al 2011,,0.0,agg2025,132
 J51H00000050191,C,,Acq.a rimp.mat.inv.obl.di leg.prod.-GE,,0.5,cdp2017,177
 J51H00000050231,C,,Acq.a rimp.mat.inv.obl.di leg.prod.-BA,,0.38,cdp2017,177
 J51H00000050241,C,,Acq.a rimp.mat.inv.obl.di leg.prod.-BO,,0.7,cdp2017,177
 J51H00000050341,C,,Acq.a rimp.mat.inv.obl.di leg.prod.-RC,,1.59,cdp2017,177
 J51H00000050351,C,,Acq.a rimp.mat.inv.obl.di leg.prod.-PA,,1.08,cdp2017,177
 J51H00000050401,C,,Acq.a rimp.mat.inv.obl.di leg.prod.-RM,,0.88,cdp2017,177
+J51H00000050411,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,132
+J51H00000060001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,132
 J51H00000070001,C,,Ampliamento Terminal Verona Quadrante Europa,,0.03,agg2021,129
 J51H00000080001,C,,Nuovo terminal di Padova interporto,,3.04,cdp2017,180
+J51H01000060001,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,138
 J51H01000080001,C,,Nuovo terminal Padova interporto (acq.in,,0.09,agg2021,129
+J51H03000100001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,132
 J51H03000110001,C,,Interventi per Sic. e O.L. nei TV (AN),,0.15,cdp2017,178
 J51H03000110021,C,,Interventi per Sic. e O.L. nei TV (NV),,0.19,cdp2017,178
+J51H03000110031,C,,Sicurezza ed Obblighi di Legge,,-0.0,agg2025,136
+J51H03000110061,C,,Sicurezza ed Obblighi di Legge,,-0.0,agg2025,136
+J51H03000110081,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,132
+J51H03000110131,C,,Sicurezza ed Obblighi di Legge,,-0.01,agg2025,136
+J51H03000110141,C,,Sicurezza ed Obblighi di Legge,,-0.0,agg2025,136
+J51H03000110171,C,,Sicurezza ed Obblighi di Legge,,-0.0,agg2025,136
 J51H03000110221,C,,Interventi per Sic. e O.L. nei TV (RC) - ante 2011,,-0.02,agg2023,37
 J51H03000110241,C,,Interventi per Sic. e O.L. nei TV (RM),,0.42,cdp2017,178
 J51H03000110291,C,,Interventi per Sic. e O.L. nei TV (PA),,0.15,cdp2017,178
+J51H03000110301,C,,Sicurezza ed Obblighi di Legge,,-0.0,agg2025,136
 J51H03000120001,C,,Attr.tec.lin/imp.int.rete-eff.upg (AN),,4.3,cdp2017,178
 J51H03000120011,C,,Attr.tec.lin/imp.int.rete-eff.upg (BA),,1.2,cdp2017,178
 J51H03000120021,C,,Attrezzaggi tecnologici DTP Torino,,5.64,cdp2017,178
@@ -488,9 +669,12 @@ J51H03000150001,C,,Acq. rimp. mat.inv. per O.L. e Prod.(AN),,0.42,cdp2017,178
 J51H03000150011,C,,Acq. rimp. mat.inv. per O.L. e Prod.(NA),,0.11,cdp2017,178
 J51H03000150021,C,,Acq. rimp. mat.inv. per O.L. e Prod.(TO),,0.15,cdp2017,178
 J51H03000150031,C,,Acq. rimp. mat.inv. per O.L. e Prod.(VR),,0.15,cdp2017,178
+J51H03000150041,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.03,agg2025,133
+J51H03000150051,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.03,agg2025,133
 J51H03000150081,C,,Acq. rimp. mat.inv. per O.L. e Prod.(TS),,0.13,cdp2017,178
 J51H03000150091,C,,Acq. rimp. mat.inv. per O.L. e Prod.(VE),,0.18,cdp2017,178
 J51H03000150111,C,,Acq. rimp. mat.inv. per O.L. e Prod.(PA),,0.22,cdp2017,178
+J51H03000150141,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,133
 J51H03000150151,C,,Acq. rimp. mat.inv. per O.L. e Prod.(BA),,0.27,cdp2017,178
 J51H03000150161,C,,Acq. rimp. mat.inv. per O.L. e Prod.(BO),,0.23,cdp2017,178
 J51H03000150171,C,,Acq. rimp. mat.inv. per O.L. e Prod.(MI),,0.26,cdp2017,178
@@ -498,22 +682,32 @@ J51H03000150191,C,,Acq. rimp. mat.inv. per O.L. e Prod.(FI),,0.12,cdp2017,178
 J51H03000150241,C,,Acq. rimp. mat.inv. per O.L. e Prod.(GE),,0.18,cdp2017,178
 J51H03000170001,A/B,0268,Collegamento ferroviario aeroporto di Venezia Collegamento ferroviario aeroporto di Venezia,"Aeroporti, accessibilità su ferro",644.0,agg2025,58
 J51H03000180001,A/B,0269,Collegamento ferroviario aeroporto di Verona Collegamento ferroviario aeroporto di Verona,"Aeroporti, accessibilità su ferro",90.4,agg2025,76
+J51H04000000001,C,,Sviluppo infrastrutturale e upgrading,,0.7,agg2025,138
 J51H04000190001,C,,Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DTP Reggio Calabria,,94.0,agg2021,127
+J51H92000010021,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,133
 J51H92000010031,C,,Aumento Produttività - Potenziamento - Napoli,,0.38,cdp2017,178
 J51H92000010041,C,,Aumento Produttività - Potenziamento - Milano,,0.01,cdp2017,178
 J51H92000010061,C,,Aumento Produttività (Potenziamento) -VR,,0.01,agg2023,37
 J51H92000010071,C,,Aumento Produttività - Potenziamento - Reggio Calabria,,1.82,cdp2017,178
 J51H92000010081,C,,Aumento Produttività - Potenziamento - Venezia,,-0.07,agg2021,126
+J51H92000010091,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,133
 J51H92000010131,C,,Aumento Produttività (Potenziamento) -TS,,0.01,agg2023,37
 J51H92000010141,C,,Aumento Produttività Officine Nazionali,,0.65,cdp2017,180
+J51H92000010171,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,133
+J51H92000010181,C,,Manutenzione Straordinaria cicli fino al 2011,,0.0,agg2025,133
+J51H92000010191,C,,Manutenzione Straordinaria cicli fino al 2011,,0.0,agg2025,133
+J51H92000010201,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,133
 J51H92000020001,C,,Aumento Produttività M.E.AN,,14.84,cdp2017,178
 J51H92000020011,C,,Aumento Produttività M.E.NA,,12.35,cdp2017,178
 J51H92000020021,C,,Aumento Produttività MI,,26.61,cdp2017,178
 J51H92000020031,C,,Aumento Produttività Zone I.E. - ante 2011,,0.19,agg2021,126
 J51H92000020041,C,,Aum. Produtt. Sett. Arm.Op.Civ.(M.E.) - ante 2011,,0.02,agg2021,126
+J51H92000020051,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.01,agg2025,133
 J51H92000020091,C,,Aumento Produttività TO,,18.73,cdp2017,178
+J51H92000020141,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,133
 J51H92000020151,C,,Aumento Produttività CA,,1.51,cdp2017,178
 J51H92000020161,C,,Aumento Produttività M.E.RM,,14.28,cdp2017,178
+J51H92000020211,C,,Manutenzione Straordinaria cicli fino al 2011,,0.0,agg2025,133
 J51H92000020231,C,,Aumento Produttività TS,,9.04,cdp2017,178
 J51H92000020251,C,,Aumento Produttività VE,,13.26,cdp2017,178
 J51H92000020261,C,,Aumento Produttività GE,,9.87,cdp2017,178
@@ -523,14 +717,25 @@ J51H92000020301,C,,Aumento Produttività VR,,13.64,cdp2017,178
 J51H92000020351,C,,"Aumento Produttività Settore ""Armam.""BO",,22.36,cdp2017,178
 J51H92000020361,C,,Aumento Produttività M.E.BA,,13.51,cdp2017,178
 J51H92000020411,C,,"Aumento Produttività Settore ""Armam.""BO",,18.24,cdp2017,178
+J51H92000020431,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,133
+J51H93000000021,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,133
 J51H93000000051,C,,Manutenzione straordinaria e Opere a difesa dell'infrastruttura - Potenziamento - Trieste,,0.01,agg2021,126
+J51H93000000081,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,133
+J51H93000000101,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.01,agg2025,133
+J51H93000000121,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,133
+J51H93000000131,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,133
 J51H93000000151,C,,Manut.Straord.OpereDif.Infr.POT.FI - ante 2011,,0.77,agg2021,126
 J51H98000000001,C,,Potenziamento infrastrutturale e tecnologico Nodo di Verona,,0.21,cdp2017,180
 J51H98000010001,C,,Realizz.Var.Gall. Monte Zucco,,-0.03,agg2021,128
+J51I19000020001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,2.38,agg2025,142
+J51I20000000001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,3.16,agg2025,142
+J51I20000030001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,0.31,agg2025,142
+J52F14000140001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,7.15,agg2025,142
 J52F15000010001,C,,Implem. sistemi IT area movimento e comm - 2015,,9.54,agg2021,128
 J52F15000020001,C,,Implementazioni IT Sistemi area Acquisti - 2015,,1.1,agg2024,113
 J52F15000060001,C,,Implem Sistemi IT area AFC e PS - 2015,,4.45,agg2021,128
 J52F15000070001,C,,Implementazioni Sistemi IT Area Produzione - 2015,,0.12,agg2024,113
+J52F15000100001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,1.07,agg2025,142
 J52F15000110001,C,,Sistemi di Rete - 2015,,0.51,agg2021,128
 J52F16000020001,C,,Implem Sistemi IT area AFC e PS - 2016,,1.53,agg2021,128
 J52F16000030001,C,,Implementazioni Sistemi IT Area Produzione - 2016,,10.59,agg2024,113
@@ -538,14 +743,18 @@ J52F16000040001,C,,Implementazioni IT Sistemi area Acquisti - 2016,,0.31,agg2024
 J54B13001160001,C,,Piattaforma commerciale,,3.12,agg2021,128
 J54B13001170001,C,,Sistema supporto alla pianificazione strategica,,1.32,agg2024,113
 J54B13001260001,C,,Implementazioni IT Sistemi area Acquisti - 2013,,0.3,agg2024,113
+J54C14000060001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,2.42,agg2025,142
 J54C14000070001,C,,Implementazioni Sistemi IT Area Produzione - 2014,,3.4,agg2024,113
 J54C14000080001,C,,Implem Sistemi IT area AFC e PS - 2014,,3.38,agg2021,128
 J54E21004780008,A/B,P245,Adeguamento e velocizzazione linea ferroviaria jonica - tratta Sibari-Melito Porto Salvo e trasversale Lamezia Terme - Catanzaro Lido Elettrificazione,Direttrici di interesse nazionale,1325.97,agg2025,72
 J54F12000010001,C,,Implem Sistemi IT area AFC e PS - 2012,,0.39,agg2021,128
 J54F18000010009,A/B,I170,Elettrificazione e ammodernamento linea Barletta-Canosa Elettrificazione e ammodernamento linea Barletta-Canosa,Valorizzazione reti regionali,368.1,agg2025,65
 J54G18000140001,A/B,P178,Nodo intermodale di Brindisi Nodo intermodale di Brindisi,"Porti e interporti, ultimo miglio",87.46,agg2025,56
+J54H13000160001,C,,Sicurezza ed Obblighi di Legge,,0.21,agg2025,136
+J54H14000450001,C,,Sicurezza ed Obblighi di Legge,,6.67,agg2025,136
 J54H14000520001,C,,Attrezzaggi tecnologici DTP Milano,,2.58,cdp2017,178
 J54H14000540001,C,,Velocizzazione Firenze-Pisa (fase 0),,8.9,agg2024,113
+J54H15000960001,C,,Sicurezza ed Obblighi di Legge,,2.72,agg2025,136
 J54H16000780001,A/B,P140,Upgrading tecnologico e prestazionale Tirrenica sud 2^ fase,Direttrici di interesse nazionale,100.0,agg2025,49
 J54H17000130009,A/B,1940,"Nodo di Udine Revisione fascio Sacca e ACC Udine Centrale su piano ferro attuale Nuovo PM Cargnacco, PRG di Udine Centrale, PRG Udine C.le, ITER PRG/A",Direttrici di interesse nazionale,340.48,agg2025,71
 J54H17000300001,A/B,P101,Potenziamento linea Empoli-Siena Raddoppio Empoli-Granaiolo Elettrificazione linea Empoli-Siena ITER,Valorizzazione reti regionali,353.71,agg2025,51
@@ -554,15 +763,40 @@ J54H20001280009,A/B,P210A,Potenziamento della linea Terni - Rieti - L’Aquila-S
 J54J22000200001,A/B,P245,Adeguamento e velocizzazione linea ferroviaria jonica - tratta Sibari-Melito Porto Salvo e trasversale Lamezia Terme - Catanzaro Lido Elettrificazione,Direttrici di interesse nazionale,1325.97,agg2025,72
 J56C17000030001,A/B,P245,Adeguamento e velocizzazione linea ferroviaria jonica - tratta Sibari-Melito Porto Salvo e trasversale Lamezia Terme - Catanzaro Lido Elettrificazione,Direttrici di interesse nazionale,1325.97,agg2025,72
 J57B13000200001,C,,Miglioramento sicurezza gallerie ferroviarie - Territorio Nazionale - 2014,,12.0,agg2021,127
+J57B14000140001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,4.7,agg2025,142
 J57B14000150001,C,,Riapertura Linee (DTP RM),,12.0,cdp2017,180
+J57B15000000001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,10.4,agg2025,142
+J57B16000170001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,19.43,agg2025,142
+J57B16000360001,C,,Sviluppo infrastrutturale e upgrading,,3.82,agg2025,138
+J57B16000410001,C,,Sviluppo infrastrutturale e upgrading,,12.01,agg2025,138
+J57B16000420001,C,,Sicurezza ed Obblighi di Legge,,12.5,agg2025,136
+J57B17000110001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,12.11,agg2025,142
+J57B17000120001,C,,Sicurezza ed Obblighi di Legge,,65.7,agg2025,136
+J57B17000460001,C,,Sicurezza ed Obblighi di Legge,,20.95,agg2025,136
 J57D17000030001,A/B,P245,Adeguamento e velocizzazione linea ferroviaria jonica - tratta Sibari-Melito Porto Salvo e trasversale Lamezia Terme - Catanzaro Lido Elettrificazione,Direttrici di interesse nazionale,1325.97,agg2025,72
 J57D17000040001,A/B,P245,Adeguamento e velocizzazione linea ferroviaria jonica - tratta Sibari-Melito Porto Salvo e trasversale Lamezia Terme - Catanzaro Lido Elettrificazione,Direttrici di interesse nazionale,1325.97,agg2025,72
+J57D18000000001,C,,Sicurezza ed Obblighi di Legge,,47.6,agg2025,136
+J57D24000020001,C,,Manutenzione Straordinaria cicli fino al 2011,,3.41,agg2025,133
 J57E13000030001,C,,Implementazioni Sistemi IT Area Produzione - 2013,,2.4,agg2024,113
 J57E13000040001,C,,Implem Sistemi IT area AFC e PS - 2013,,4.65,agg2021,128
+J57E13000260001,C,,Sviluppo infrastrutturale e upgrading,,18.29,agg2025,138
 J57E14000010001,C,,Implem. sistemi IT area movimento e,,5.1,cdp2017,179
+J57F19000040001,C,,Sviluppo infrastrutturale e upgrading,,6.0,agg2025,138
+J57F19000050001,C,,Sicurezza ed Obblighi di Legge,,2.0,agg2025,136
 J57F19000060001,C,,Riapertura Linee (DTP RM) - 2019,,0.4,agg2021,128
+J57F20000020001,C,,Sicurezza ed Obblighi di Legge,,78.19,agg2025,136
+J57F20000080001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,12.88,agg2025,142
+J57F20000090001,C,,Sicurezza ed Obblighi di Legge,,7.06,agg2025,136
+J57F20000110001,C,,Sviluppo infrastrutturale e upgrading,,30.0,agg2025,138
+J57G20000060001,C,,Sicurezza ed Obblighi di Legge,,65.22,agg2025,136
+J57H21000810001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,24.25,agg2025,142
+J57H21000820001,C,,Sicurezza ed Obblighi di Legge,,22.76,agg2025,136
+J57H21005730001,C,,Sviluppo infrastrutturale e upgrading,,75.65,agg2025,138
 J57I05000010001,C,,Interventi upgrading rete merci - Venezia,,-0.01,agg2023,38
+J57I05000020001,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,138
 J57I06000080001,C,,Riqual.piccole-medie-grandi stazioni-RC,,3.21,cdp2017,180
+J57I06000280001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,142
+J57I06000290001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,142
 J57I08000020001,C,,Man. Straord - settore officine,,16.2,cdp2017,178
 J57I08000170001,C,,Evoluzione Tecnologica Sistemi Distribuiti,,15.18,agg2021,128
 J57I08000200001,C,,Miglioramento sicurezza gallerie ferroviarie - Territorio Nazionale,,0.49,cdp2017,178
@@ -583,13 +817,19 @@ J57I12000110001,C,,Obblighi legge - RM - 2012,,0.52,agg2021,126
 J57I12000120001,C,,MANUTENZIONE STRAORDINARIA STAZIONI - 2012,,1.85,agg2021,126
 J57I12000130001,C,,Acq.a rimp.mat.inv.obl.di leg.prod.-RM - 2012,,0.0,agg2024,113
 J57I12000240001,C,,Separation of Duties (Sod),,0.83,agg2021,128
+J57I12000260001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,0.0,agg2025,142
 J57I12000280001,C,,Sistemi ICT di Handling,,1.0,agg2024,113
+J57I12000290001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,133
 J57I12000710001,C,,Man.Str.Op.Dif.Infr.SettoreArm.eOp.Civ. - 2012,,0.1,agg2023,37
 J57I13000020001,C,,Aumento Produttività M.E.RM - 2013,,0.06,agg2021,126
 J57I13000050001,C,,Acquisto a rimpiazzo di materiale d'inve - 2013,,-0.16,agg2021,126
 J57I13000060001,C,,Miglioramento dei sistemi di diagnostica - 2013,,0.22,agg2021,128
 J57I13000310001,C,,Implem. sistemi IT area movimento e,,2.55,cdp2017,179
+J57I18000050001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,15.0,agg2025,142
 J57J18000060001,C,,Upgrading BO-PD/Rovigo Monselice,,18.95,agg2024,113
+J57J18000090001,C,,Sicurezza ed Obblighi di Legge,,1.43,agg2025,136
+J57J19000010001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,17.77,agg2025,142
+J57J19000020001,C,,Sicurezza ed Obblighi di Legge,,68.4,agg2025,136
 J59B07000140001,C,,Sistemi Commerciali,,0.3,cdp2017,179
 J59B08000180001,C,,Evoluzione Infrastruttura IT,,5.77,cdp2017,179
 J59B08000190001,C,,Strumenti di Governo IT,,7.95,agg2021,128
@@ -598,22 +838,34 @@ J59B08000210001,C,,"Sist. Ricerca, Svil e Contr Circol C.E.",,2.2,agg2024,113
 J59B08000220001,C,,Sistemi di Rete,,0.57,cdp2017,179
 J59B09000060001,C,,Sistemi per i processi di supporto,,0.56,cdp2017,179
 J59B09000070001,C,,Standardizzazione Servizi IaP e Sistemi di campo,,18.75,agg2021,128
+J59B11000150001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,0.0,agg2025,142
+J59B11000160001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,142
 J59B12000020001,A/B,P072,Upgrading e potenziamento tecnologico itinerario Napoli-Bari-Lecce/Taranto,Direttrici di interesse nazionale,499.89,cdp2022,45
 J59B12000040001,C,,Implementazioni Sistemi IT Area Produzione - 2012,,1.0,agg2024,113
 J59B12000050001,C,,Catasto e Banca Dati Immobiliare,,2.48,agg2021,128
 J59B13000030001,C,,Sistemi per i processi di supporto,,0.75,cdp2017,179
+J59B13000040001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,142
+J59B13000050001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,142
 J59F09000000001,C,,Attività di accatastamento per obblighi di legge,,9.2,agg2021,128
+J59G00000000011,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,133
 J59G00000000031,C,,Interventi di potenziamento e razionalizzazione scali merci - Palermo,,-0.01,agg2023,37
 J59G00000000041,C,,Interventi di potenziamento e razionalizzazione scali merci - Milano,,0.54,agg2021,129
+J59G00000000051,C,,Impianti industriali e terminali viaggiatori e merci,,-0.0,agg2025,140
 J59G00000000061,C,,Ampliamento scalo merci Bari Lamasinata realizzazione di 4 binari tronchi,,0.52,cdp2017,180
+J59G00000000111,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,133
 J61B21003450001,A/B,P250,Intermodalità e accessibilità Trapani Birgi Intermodalità e accessibilità aeroporto Trapani Birgi,"Aeroporti, accessibilità su ferro",47.78,agg2025,58
 J61C10000020008,C,,Opere di collegamento del ponte sullo stretto di Messina con la linea Battipaglia-Reggio Calabria,,0.06,agg2021,129
 J61G24000030001,A/B,P270,Opere di collegamento al Ponte sullo stretto di Messina - sponda calabra e siciliana Opere di collegamento al Ponte sullo stretto di Messina - sponda ,Direttrici di interesse nazionale,1766.0,agg2025,73
+J61H00000210001,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,138
+J61H00000220008,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,142
 J61H00000240001,C,,COSTRUZ. IDP NAPOLI SMISTAMENTO,,4.2,cdp2017,180
+J61H01000190001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.18,agg2025,133
 J61H02000090008,A/B,0226,Raddoppio Orte-Falconara: tratta Spoleto-Terni Raddoppio Spoleto-Terni PROG ITER,Direttrici di interesse nazionale,1618.04,agg2025,77
 J61H02000100008,A/B,0274,Quadruplicamento Salerno - Battipaglia,Direttrici di interesse nazionale,0.0,agg2021,60
 J61H02000100008,A/B,I107B,AV-AC Salerno - Reggio Calabria completamento AV Salerno-Reggio Calabria: Lotti di completamento (Collegamento linea a monte del Vesuvio - Battipaglia,Direttrici di interesse nazionale,12865.0,agg2025,79
+J61H02000110001,C,,Studi di fattibilità e progettazioni,,-0.0,agg2025,140
 J61H03000030001,A/B,0119,Potenziamento infrastrutturale Orte-Falconara,Direttrici di interesse nazionale,387.65,agg2025,59
+J61H03000080001,C,,Studi di fattibilità e progettazioni,,-0.02,agg2025,140
 J61H03000100001,A/B,0263,Adeguamento tecnologico e infrastrutturale linea Battipaglia-Reggio Calabria,Direttrici di interesse nazionale,230.0,agg2025,60
 J61H03000110001,A/B,0262,"Nuova linea AV/AC Venezia-Trieste: tratta Ronchi dei Legionari - Trieste • NCP 1: ""Intervento sospeso""",,1745.8,cdp2017,103
 J61H03000110001,A/B,0365B,"Potenziamento Venezia-Trieste completamento Varianti Portugruaro, Latisana e Isonzo PROG ITER Variante Ronchi-Aurisina",Direttrici di interesse nazionale,1580.9,agg2025,79
@@ -625,15 +877,18 @@ J61H92000000008,A/B,0081,Potenziamento asse ferroviario Pontremolese,Direttrici 
 J61H94000000001,A/B,0013A,Nuova linea a monte del Vesuvio Nuova linea a monte del Vesuvio (tratta bivio Casoria - bivio Sarno),Direttrici di interesse nazionale,358.31,agg2025,59
 J61H94000000001,A/B,0013B,Fermata Vesuvio Est Linea a monte del Vesuvio Fermata Vesuvio Est PROG PROG,Direttrici di interesse nazionale,60.9,agg2025,77
 J61H94000000011,A/B,0284,Itinerario Napoli-Bari: Interventi su linea Cancello-Napoli per integrazione con linea AV/AC Variante Napoli-Cancello,Direttrici di interesse nazionale,1044.36,agg2025,61
+J61H97000000001,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,138
 J61H99000010001,C,,RIPETIZIONE DISCONTINUA NODO DI NAPOLI,,0.54,cdp2017,179
 J64C19000300001,A/B,P211,Nodo complesso di Pompei Nodo complesso di Pompei,Valorizzazione reti regionali,40.0,agg2025,52
 J64C20002310001,A/B,P236,"Elettrificazione della tratta Cinisi-Alcamo Dir- Trapani della linea Palermo - Trapani "" via Milo"" Elettrificazione Cinisi-Alcamo Dir- Trapani",Valorizzazione reti regionali,102.25,agg2025,52
 J64E21000110008,A/B,P239,Velocizzazione tratte Orte-Falconara Tecnologie per la velocizzazione tratte prioritarie Orte-Falconara,Direttrici di interesse nazionale,36.0,agg2025,63
+J64E21000640001,C,,Sicurezza ed Obblighi di Legge,,1.66,agg2025,136
 J64E22000010001,A/B,P247,Potenziamento Palermo - Agrigento - Porto Empedocle bassa Potenziamento Palermo - Agrigento - Porto Empedocle bassa,Valorizzazione reti regionali,103.0,agg2025,66
 J64F05000030001,A/B,0310,Potenziamento Taranto-Metaponto,Direttrici di interesse nazionale,0.0,agg2021,64
 J64G18000130009,A/B,0286A,Quadruplicamento Tortona-Voghera opere prioritarie PRG e ACC Tortona,Direttrici di interesse nazionale,103.74,agg2025,61
 J64G18000140001,A/B,P232,Ripristino linea Caltagirone - Gela Ripristino linea Caltagirone - Gela,Valorizzazione reti regionali,397.2,agg2025,66
 J64H14000450001,A/B,I071,Adeguamento del tracciato e velocizzazione dell'asse ferroviario Bologna-Lecce Upgrading infrastrutturale e tecnologico Bologna-Lecce - fasi Potenziam,Direttrici di interesse nazionale,350.65,cdp2022,62
+J64H14000670001,C,,Sicurezza ed Obblighi di Legge,,0.43,agg2025,136
 J64H15000810001,C,,Attrezzaggi tecnologici DOIT Torino - 2015,,1.2,agg2024,113
 J64H16000000001,A/B,I071,Adeguamento del tracciato e velocizzazione dell'asse ferroviario Bologna-Lecce Upgrading infrastrutturale e tecnologico Bologna-Lecce - fasi Potenziam,Direttrici di interesse nazionale,350.65,cdp2022,62
 J64H17000140001,A/B,0366A,"Potenziamento linea Ponte S.Pietro-Bergamo-Montello Raddoppio Bergamo-Curno, ACC Bergamo, PRG e ACC Ponte S.Pietro Raddoppio Bergamo-Montello ITER PRG",Valorizzazione reti regionali,795.91,agg2025,65
@@ -641,43 +896,93 @@ J64H17000140001,A/B,0366B,Potenziamento linea Ponte S.Pietro-Bergamo- Montello 2
 J64H17000230001,A/B,P126,Velocizzazione direttrice Salerno-Taranto Velocizzazione impianti linea Battipaglia-Potenza,Direttrici di interesse nazionale,128.26,agg2025,63
 J64J22000340009,A/B,P142,"Porto di Ravenna Porto di Ravenna 1^ fase: Soppressione P.L. via Canale Molinetto, ITER adeguamento cavalcavia Teodorico, prolungamento del sottopassa","Porti e interporti, ultimo miglio",137.9,agg2025,69
 J64J24000610001,A/B,P262B,Velocizzazione e potenziamento linea ferroviaria Adriatica 2^ fase Velocizzazione CastelBolognese-Rimini,Direttrici di interesse nazionale,4050.0,agg2025,80
+J67B14000300001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,9.95,agg2025,142
+J67B14000310001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,4.78,agg2025,142
 J67B14000320001,A/B,P214,Valorizzazione turistica delle ferrovie minori,Valorizzazione turistica ferrovie minori,468.65,agg2025,46
+J67B16000120001,C,,Sicurezza ed Obblighi di Legge,,72.05,agg2025,136
+J67B16000140001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,19.15,agg2025,142
+J67B16000150001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,6.59,agg2025,142
 J67B16000260001,C,,Liberazione immobili - DOIT PA - 2016,,0.13,agg2024,113
+J67B16000270001,C,,Sviluppo infrastrutturale e upgrading,,0.33,agg2025,138
+J67B16000370001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.55,agg2025,133
+J67B17000110001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,16.53,agg2025,142
+J67B17000120001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,8.05,agg2025,142
+J67B17000130001,C,,Sicurezza ed Obblighi di Legge,,39.55,agg2025,136
+J67B17000140001,C,,Sicurezza ed Obblighi di Legge,,15.14,agg2025,136
+J67D17000000001,C,,Sicurezza ed Obblighi di Legge,,43.0,agg2025,136
+J67D17000010001,C,,Sviluppo infrastrutturale e upgrading,,2.1,agg2025,138
+J67D18000000001,C,,Sicurezza ed Obblighi di Legge,,39.0,agg2025,136
+J67F19000040001,C,,Sviluppo infrastrutturale e upgrading,,1.0,agg2025,138
+J67F19000060001,C,,Sicurezza ed Obblighi di Legge,,5.1,agg2025,136
+J67F19000440001,C,,Sicurezza ed Obblighi di Legge,,6.5,agg2025,136
+J67F20000000001,C,,Sicurezza ed Obblighi di Legge,,45.09,agg2025,136
+J67F20000010001,C,,Sicurezza ed Obblighi di Legge,,36.0,agg2025,137
+J67F20000020001,C,,Sicurezza ed Obblighi di Legge,,13.5,agg2025,137
+J67F20000150001,C,,Impianti industriali e terminali viaggiatori e merci,,0.15,agg2025,140
+J67G20000000001,C,,Sicurezza ed Obblighi di Legge,,47.96,agg2025,137
 J67I06000090001,C,,Riconfigurazione impianti SCMT Reggio Calabria,,7.2,cdp2022,138
+J67I06000100001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,142
 J67I06000110001,C,,Attrezzaggio impianti di informazione al - ante 2011,,-0.01,agg2023,38
 J67I08000000001,C,,Piano di sviluppo tecnologico della rete,,6.37,cdp2017,179
+J67I08000010001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,133
 J67I08000020001,C,,Acquisti a Rimpiazzo materiale d'Inventa,,0.33,cdp2017,178
 J67I08000030001,C,,Miglior. Infr. linee AV/AC - Bo,,1.4,cdp2017,178
+J67I08000040001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,133
+J67I08000050001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,142
 J67I10000140001,C,,Pot. impianti illuminaz. Grandi Stazioni,,4.09,cdp2017,180
 J67I10000150001,C,,Ripristino e potenziamento impianti in Abruzzo (DTP Ancona),,47.16,agg2021,127
 J67I10000160001,C,,Ripristino e potenziamento impianti in Abruzzo (DTP Roma),,52.5,agg2021,127
 J67I11000040001,A/B,A5000_4,"Adeguamenti tecnologici, opere di completamento e contingencies rete AV Torino-Milano-Napoli",Direttrici di interesse nazionale,0.0,cdp2022,62
 J67I11000330001,C,,Manut.Straord.Opere Dif.Infr. AV/AC NA,,12.69,cdp2017,178
 J67I12000000001,C,,Aumento Produttività PA Anno 2012 - 2012,,0.02,agg2021,126
+J67I12000010001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
+J67I12000040001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
 J67I12000050001,C,,Obblighi di legge - PA - 2012,,0.07,agg2021,126
+J67I12000060001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
 J67I12000070001,C,,Manutenzione Straordinaria Stazioni PA - 2012,,0.31,agg2021,126
 J67I12000080001,C,,Miglioramenti infrastrutturali M.E.- PA - 2012,,0.16,agg2021,127
+J67I12000090001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.0,agg2025,134
+J67I12000100001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
+J67I12000110001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
+J67I12000120001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
 J67I12000130001,C,,Manut.Straord.Opere Dif.Infr. PA - 2012,,0.5,agg2021,126
+J67I13000020001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.01,agg2025,134
+J67I13000030001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
 J67I13000120001,C,,Manut.Straord.Opere Dif.Infr. PA - 2013,,-0.02,agg2021,126
+J67I18000060001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,9.5,agg2025,142
+J67J18000190001,C,,Sicurezza ed Obblighi di Legge,,10.0,agg2025,137
+J67J18000440001,C,,Sicurezza ed Obblighi di Legge,,3.0,agg2025,137
 J67J19000000001,C,,Miglioramenti Infrastrutturali - 2019,,0.55,agg2021,127
+J67J19000020001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,10.0,agg2025,142
+J67J19000030001,C,,Sicurezza ed Obblighi di Legge,,84.45,agg2025,137
 J69B11000160001,C,,Arbitrato Tratta AV/AC VR-PD,,-1.7,agg2021,128
+J69H19000010001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
 J71C10000030007,A/B,1604A,Upgrading infrastrutturale e tecnologico linea linea Trieste- Divaca Upgrade linea storica bivio Aurisina-Confine di Stato (fase 0 Nuova linea Trieste,Direttrici di interesse nazionale,70.95,agg2025,62
 J71C10000030007,A/B,1604B,"Nuova linea Trieste-Divaca Nuova linea • NCP 1: ""Intervento sospeso""",,1040.0,cdp2017,103
 J71H00000060001,C,,Miglioramenti Infrastrutturali Stazioni-,,0.7,cdp2017,178
 J71H00000060011,C,,Infrastrutture di servizio stazioni (NA),,1.6,cdp2017,178
 J71H00000060021,C,,Infrastrutture di servizio stazioni (AN),,7.7,cdp2017,178
 J71H00000060031,C,,Infrastrutture di servizio stazioni (RC),,1.5,cdp2017,178
+J71H00000060041,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.01,agg2025,134
 J71H00000060051,C,,Infrastrutture di servizio stazioni (MI),,4.9,cdp2017,178
+J71H00000060061,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
 J71H00000060081,C,,Infrastrutture di servizio stazioni (BA),,0.06,cdp2017,178
 J71H00000060091,C,,Infrastrutture di servizio stazioni (TO),,2.13,cdp2017,178
 J71H00000060101,C,,Miglioramenti Infrastrutturali Stazioni,,0.99,cdp2017,178
+J71H00000070001,C,,Sviluppo infrastrutturale e upgrading,,0.0,agg2025,139
+J71H00000080011,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
 J71H00000080021,C,,Man.O.C. Arm. Attr. e Macch. Cagliari - ante 2011,,0.23,agg2021,127
 J71H00000080031,C,,Man.O.C. Arm. Attr. e Macch. C.Nord - ante 2011,,-0.01,agg2023,37
+J71H00000080041,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.06,agg2025,134
 J71H00000080061,C,,Man.O.C. Arm. Attr. e Macch. N.Est - ante 2011,,0.01,agg2023,37
+J71H00000080071,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
+J71H00000090001,C,,Sviluppo infrastrutturale e upgrading,,-0.03,agg2025,139
+J71H01000120001,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,139
 J71H02000110008,A/B,0240,"Potenziamento infrastrutturale Voltri-Brignole 1^ fase: Completamento variante Pegli-Voltri e PRG Voltri 1^ fase, quadruplicamento Voltri-Sampierdaren",,642.4,cdp2017,52
 J71H02000110008,A/B,P234,Nodo di Genova e Terzo valico dei Giovi Potenziamento infrastrutturale Voltri-Brignole Porto di Genova: Nuovo terminal merci i Genova Campasso Potenzi,Direttrici di interesse nazionale,10623.31,agg2025,63
 J71H02000120008,A/B,0417,Porto di Taranto - collegamento ferroviario del complesso del porto di Taranto con la rete nazionale Nuova stazione di Cagioni e collegamento con nuov,"Porti e interporti, ultimo miglio",44.95,agg2025,56
 J71H02000130001,C,,Potenziamento Impianto Intermodale Brindisi,,0.9,cdp2017,180
+J71H02000140001,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,139
 J71H92000000007,A/B,0142A,"Raddoppio Pescara-Bari 1^ fase Completamento raddoppio Ortona-Casalbordino, Vasto-Vasto S.Salvo e Lesina-San Severo (opere già in esercizio) e Raddopp",Direttrici di interesse nazionale,318.79,agg2025,60
 J71H92000000007,A/B,0142B,Completamento raddoppio Pescara-Bari (tratta Termoli- Lesina) Raddoppio Ripalta-Lesina Raddoppio Termoli-Ripalta,Direttrici di interesse nazionale,700.0,agg2025,60
 J71H92000010008,C,,Raddoppio Bologna-Verona,,0.05,agg2021,128
@@ -690,6 +995,7 @@ J71H98000000001,A/B,0149,"Sistemazione nodo di Bari Raddoppio Bari Parco Sud - B
 J71H99000000001,C,,Nodo ferroviario di Genova,,-0.03,agg2021,128
 J71J04000000008,A/B,0289,Completamento raddoppio Genova-Ventimiglia: tratta Andora-Finale Ligure Raddoppio Andora-Finale Ligure PROG ITER,Direttrici di interesse nazionale,2576.0,agg2025,78
 J71J20000110008,A/B,I107A,AV-AC Salerno - Reggio Calabria AV Salerno-Reggio Calabria: Lotto 1a Battipaglia - Romagnano e progettazione di fattibilità tecnico-economica intero i,Direttrici di interesse nazionale,17486.68,agg2025,71
+J74B01000200001,C,,Impianti industriali e terminali viaggiatori e merci,,-0.0,agg2025,140
 J74C14000020002,C,,Nuovo ACEI Fiumetorto,,5.0,cdp2022,138
 J74C19000030001,A/B,I008,Porto di Trieste Potenziamento stazione Trieste Campo Marzio Potenziamento impianti a servizio del porto di Trieste,"Porti e interporti, ultimo miglio",173.21,agg2025,69
 J74C20001660001,A/B,P235,Chiusura anello di Palermo tratta Politeama - Notarbartolo Anello di Palermo 2° stralcio: tratta Politeama-Notarbartolo,Città metropolitane,141.8,agg2025,55
@@ -707,16 +1013,33 @@ J74J17000020001,A/B,P216,Completamento fermate SFM Torino Fermata S.Paolo Fermat
 J74J18000000001,A/B,P175,Scalo Torino Orbassano ACC Torino Orbassano Scalo Torino Orbassano: interventi in fascio container,"Porti e interporti, ultimo miglio",72.25,agg2025,56
 J74J22000170001,A/B,P254A,Elettrificazione Cagliari-Oristano Elettrificazione Cagliari-Oristano,Direttrici di interesse nazionale,106.6,agg2025,64
 J74J23000740001,A/B,P249,Collegamento ferroviario aeroporto di Olbia Collegamento ferroviario aeroporto di Olbia,"Aeroporti, accessibilità su ferro",231.04,agg2025,58
+J77B14000240001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,9.34,agg2025,142
+J77B14000480001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.0,agg2025,134
+J77B16000090001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,11.5,agg2025,142
 J77B16000290001,A/B,P083,Upgrading infrastrutturale e tecnologico rete sarda 2^ fase Rete sarda: Potenziamento e interventi diffusi per la messa in,Direttrici di interesse nazionale,110.05,agg2025,62
+J77B16000300001,C,,Sicurezza ed Obblighi di Legge,,0.5,agg2025,137
+J77B17000050001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,3.3,agg2025,143
+J77B17000060001,C,,Sicurezza ed Obblighi di Legge,,17.38,agg2025,137
+J77D18000000001,C,,Sicurezza ed Obblighi di Legge,,31.5,agg2025,137
+J77F20000020001,C,,Sicurezza ed Obblighi di Legge,,5.0,agg2025,137
+J77F20000070001,C,,Sicurezza ed Obblighi di Legge,,0.2,agg2025,137
 J77G05000010001,C,,Upgrading rete merci - DOIT Bologna fase 0,,10.5,agg2024,113
+J77G05000010011,C,,Sviluppo infrastrutturale e upgrading,,12.52,agg2025,139
+J77H21001020001,C,,Sicurezza ed Obblighi di Legge,,8.42,agg2025,137
 J77I04000000009,A/B,0281,Itinerario Napoli-Bari: raddoppio tratta Apice-Orsara,Direttrici di interesse nazionale,,agg2025,127
 J77I07000000001,C,,Riconfigurazione impianti SCMT Trieste,,3.04,cdp2022,138
 J77I07000020001,C,,SCC Bari-Taranto,,30.04,cdp2022,139
 J77I09000090001,C,,Manutenzione Mezzi di Manovra,,0.1,cdp2017,178
 J77I10000270001,C,,Miglioramento sicurezza gallerie ferroviarie - DTP Ancona,,5.14,cdp2017,178
+J77I12000000001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.0,agg2025,134
 J77I12000010008,A/B,0359,Raddoppio Campoleone-Aprilia Raddoppio Campoleone-Aprilia,Città metropolitane,98.29,agg2025,55
+J77I12000070001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
+J77I12000080001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
 J77I12000120001,C,,Interventi upgrading rete viaggiatori TO,,0.9,cdp2017,180
+J77I13000010001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
+J77I18000020001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,8.0,agg2025,143
 J77J18000350001,C,,Upgrading linee Bologna - Padova e Venezia-Trieste - DOIT Venezia,,29.65,cdp2022,138
+J77J19000020001,C,,Sicurezza ed Obblighi di Legge,,24.2,agg2025,137
 J79B08000170001,C,,Acquisto nave per il trasporto ferroviario sullo Stretto di Messina,,0.13,agg2021,128
 J79B12000020001,C,,Completamento attrezzaggio Bari-Taranto,,18.0,cdp2022,139
 J79B12000030001,A/B,1670,Upgrading infrastrutturale e tecnologico rete sarda 1^ fase SCMT e istituzione rango P tratte a nord di Oristano e linee Decimomannu-Iglesias/Villamas,Direttrici di interesse nazionale,32.97,agg2025,62
@@ -728,16 +1051,27 @@ J81D19000000009,A/B,I137,Collegamento ferroviario aeroporto di Bergamo Collegame
 J81E16000690003,A/B,1912,Nuova fermata di Ronchi Aeroporto,"Aeroporti, accessibilità su ferro",0.0,cdp2022,58
 J81G23000080001,A/B,P087B,Ammodernamento e potenziamento rete ferroviaria Regione Abruzzo - Collegamento al porto di Vasto Collegamento al porto di Vasto PROG PROG,"Porti e interporti, ultimo miglio",246.5,agg2025,69
 J81H00000180001,C,,Ravenna: Prima fase nuovo Scalo Merci Canale Candiano per merci pericolose e prolungamento dorsale FS,,0.01,cdp2017,180
+J81H01000080001,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,139
 J81H01000090001,C,,Itinerari alternativi: elettrificazion PIACENZA - CASTELVETRO,,-0.01,agg2023,37
 J81H02000000001,A/B,0276A,Completamento raddoppio asse ferroviario Pontremolese - 1^ fase Raddoppio Parma-Vicofertile ITER,Direttrici di interesse nazionale,508.0,agg2025,70
 J81H02000000001,A/B,0276B,Completamento raddoppio asse ferroviario Pontremolese - 2^ fase Raddoppio Vicofertile-Fornovo(Osteriazza) e Berceto-Chiesaccia PROG PROG,Direttrici di interesse nazionale,5312.0,agg2025,77
+J81H02000020001,C,,Impianti industriali e terminali viaggiatori e merci,,-0.0,agg2025,140
+J81H02000020011,C,,Sicurezza ed Obblighi di Legge,,-0.0,agg2025,137
+J81H03000050008,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,143
+J81H03000060001,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,139
+J81H03000070001,C,,Impianti industriali e terminali viaggiatori e merci,,-0.0,agg2025,140
 J81H03000080001,C,,Rete Lucana: migliormento servizi Potenza - S. Nicola,,3.69,cdp2017,180
 J81H04000060001,C,,Linea Pontremolese: efficientamento linea attuale,,-0.03,agg2021,128
 J81H92000010001,C,,Sistemaz. Bologna S.Donato,,-0.01,agg2023,38
 J81H92000020001,A/B,0136,Nuova Linea Ferrandina-Matera La Martella,Direttrici di interesse nazionale,525.45,agg2025,59
+J81H96000010008,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,139
+J81H96000010011,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,139
 J81H98000020001,C,,Potenziamento scali di Bologna per servizi accessori,,-0.03,agg2021,128
+J81H98000030001,C,,Sviluppo infrastrutturale e upgrading,,0.0,agg2025,139
 J81J03000000001,C,,Attrezaggi tecnologici linee ed impianti - Bologna,,14.9,agg2021,128
+J81J04000010001,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,139
 J81J05000010008,A/B,1438,Nodo ferrostradale Casalecchio di Reno: interramento linea Porrettana (stralcio ferroviario) Nodo Casalecchio di Reno: interramento linea Porrettana (,Città metropolitane,140.38,agg2025,75
+J84B13000240001,C,,Sviluppo infrastrutturale e upgrading,,10.0,agg2025,139
 J84C19000370009,A/B,P256,Potenziamento infrastrutturale scalo di Brescia Potenziamento infrastrutturale scalo di Brescia,"Porti e interporti, ultimo miglio",82.19,agg2025,57
 J84E21001320008,A/B,P240A,Roma-Pescara fasi Raddoppio Tagliacozzo-Avezzano PROG PROG Raddoppio Sulmona-Pratola Peligna PROG PROG Raddoppio Scafa-Manoppello-Interporto d'Abruzzo,Direttrici di interesse nazionale,2324.3,agg2025,72
 J84E21001320008,A/B,P240B,Roma-Pescara completamento Nuova linea Roma-Mandela-Tagliacozzo,Direttrici di interesse nazionale,12753.0,agg2025,79
@@ -757,48 +1091,129 @@ J84H17001230001,A/B,P261,"Potenziamento linea Bologna-Prato Linea Bologna-Prato-
 J84J18000000001,A/B,P087,Ammodernamento e potenziamento rete ferroviaria Regione Abruzzo,Valorizzazione reti regionali,51.0,cdp2022,49
 J84J18000000001,A/B,P087A,Ammodernamento e potenziamento rete ferroviaria Regione Abruzzo - Bretella Sulmona Bretella Sulmona,Direttrici di interesse nazionale,12.71,agg2025,63
 J87B14000230001,C,,Liberazione Immobili - DOIT AN - 2014,,0.17,agg2024,113
+J87B14000240005,C,,Sviluppo infrastrutturale e upgrading,,1.5,agg2025,139
 J87B14000250005,C,,Liberazione Immobili - DOIT FI - 2014,,2.98,agg2024,113
+J87B14000390001,C,,Sicurezza ed Obblighi di Legge,,-0.0,agg2025,137
+J87B14000400001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,3.85,agg2025,143
+J87B14000410001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,6.57,agg2025,143
+J87B14000420001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,4.79,agg2025,143
+J87B14000430001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,11.65,agg2025,143
 J87B14000440001,C,,Binari senza tempo - DTP AN,,0.8,cdp2017,180
 J87B14000450001,A/B,P214,Valorizzazione turistica delle ferrovie minori,Valorizzazione turistica ferrovie minori,468.65,agg2025,46
+J87B14000480001,C,,Sicurezza ed Obblighi di Legge,,0.5,agg2025,137
 J87B15000140001,C,,Miglioramento infrastrutturale M.E.BA - 2015,,-0.01,agg2021,127
+J87B15000390001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,6.35,agg2025,143
+J87B16000240001,C,,Sicurezza ed Obblighi di Legge,,27.0,agg2025,137
+J87B16000250001,C,,Sicurezza ed Obblighi di Legge,,17.13,agg2025,137
+J87B16000260001,C,,Sicurezza ed Obblighi di Legge,,27.57,agg2025,137
+J87B16000270001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,1.6,agg2025,143
+J87B16000280001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,25.22,agg2025,143
+J87B16000290001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,8.0,agg2025,143
+J87B16000410001,C,,Sviluppo infrastrutturale e upgrading,,2.64,agg2025,139
 J87B16000420001,C,,Liberazione Immobili - DOIT AN - 2016,,0.25,agg2024,113
 J87B16000430001,C,,Liberazione immobili - DOIT BO - 2016,,0.9,agg2024,113
 J87B16000440001,C,,Liberazione Immobili - DOIT FI - 2016,,10.47,agg2024,113
+J87B16000510001,C,,Sicurezza ed Obblighi di Legge,,11.4,agg2025,137
+J87B16000630001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,4.0,agg2025,143
+J87B17000250001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,2.94,agg2025,143
+J87B17000260001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,3.75,agg2025,143
+J87B17000270001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,8.26,agg2025,143
+J87B17000280001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,7.52,agg2025,143
+J87B17000300001,C,,Sicurezza ed Obblighi di Legge,,26.3,agg2025,137
+J87B17000310001,C,,Sicurezza ed Obblighi di Legge,,24.0,agg2025,137
+J87B17000320001,C,,Sicurezza ed Obblighi di Legge,,28.53,agg2025,137
+J87B17000330001,C,,Sicurezza ed Obblighi di Legge,,25.0,agg2025,137
+J87B17000610004,C,,Manutenzione Straordinaria cicli fino al 2011,,1.67,agg2025,134
+J87D17000010001,C,,Sviluppo infrastrutturale e upgrading,,5.5,agg2025,139
+J87D17000020001,C,,Sicurezza ed Obblighi di Legge,,1.3,agg2025,137
+J87D18000000001,C,,Sicurezza ed Obblighi di Legge,,13.0,agg2025,137
+J87D18000020001,C,,Sicurezza ed Obblighi di Legge,,51.9,agg2025,137
+J87D18000030001,C,,Sicurezza ed Obblighi di Legge,,65.65,agg2025,137
 J87D23000020001,C,,Miglioramenti infrastrutturali,,2.91,agg2024,113
 J87E13000540001,C,,OBBLIGHI DI LEGGE - aree Portonaccio - 2013,,0.32,agg2021,127
+J87E13000610001,C,,Sicurezza ed Obblighi di Legge,,0.19,agg2025,137
 J87F19000070001,C,,Liberazione Immobili - DOIT FI - 2019,,4.47,agg2024,113
+J87F19000190001,C,,Sicurezza ed Obblighi di Legge,,0.35,agg2025,137
+J87F19000270001,C,,Sviluppo infrastrutturale e upgrading,,6.0,agg2025,139
+J87F19000280001,C,,Sviluppo infrastrutturale e upgrading,,0.4,agg2025,139
+J87F20000040001,C,,Sicurezza ed Obblighi di Legge,,55.0,agg2025,137
+J87F20000050001,C,,Sicurezza ed Obblighi di Legge,,33.5,agg2025,137
+J87F20000070001,C,,Sicurezza ed Obblighi di Legge,,70.0,agg2025,137
+J87F20000100001,C,,Sviluppo infrastrutturale e upgrading,,8.1,agg2025,139
+J87F20000190001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,0.3,agg2025,143
+J87F20000200001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,4.9,agg2025,143
+J87F20000220001,C,,Sicurezza ed Obblighi di Legge,,4.32,agg2025,137
+J87G20000090001,C,,Sicurezza ed Obblighi di Legge,,28.03,agg2025,137
+J87G20000100001,C,,Sicurezza ed Obblighi di Legge,,28.41,agg2025,137
+J87G20000120001,C,,Sicurezza ed Obblighi di Legge,,90.8,agg2025,137
+J87H21001160001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,11.06,agg2025,143
+J87H21008090001,C,,Sviluppo infrastrutturale e upgrading,,36.3,agg2025,139
 J87I05000070001,C,,Interventi upgrading rete merci - Genova,,0.02,cdp2017,180
 J87I08000000001,C,,Manut.Straord.Opere Dif.Infr. AV/AC Roma,,0.1,cdp2017,178
 J87I08000010001,C,,Miglior. infrastr. su linee AV/AC Roma,,1.93,cdp2017,178
+J87I12000000001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.01,agg2025,134
 J87I12000050001,C,,Manut.Straord.Opere Dif.Infr.M.E.FI - 2012,,0.18,agg2021,127
+J87I12000060001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.0,agg2025,134
+J87I12000070001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
+J87I12000080001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
+J87I12000090001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.0,agg2025,134
 J87I12000100001,C,,Manut.Straord.Opere Dif.Infr.BA - 2012,,-0.36,agg2021,127
+J87I12000110001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
+J87I12000120001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.0,agg2025,134
+J87I12000130001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.0,agg2025,134
+J87I12000140001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
+J87I12000150001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.0,agg2025,134
+J87I12000160001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
 J87I12000230001,C,,Obblighi di Legge - Stazioni,,0.79,cdp2017,178
+J87I13000000001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
+J87I13000010001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
+J87I13000120001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
 J87I17000060001,C,,Smaltimento materiali inquinanti (DOIT Bologna) - Annualità fino al 2017,,9.6,agg2024,113
+J87I18000030001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,7.0,agg2025,143
+J87I18000040001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,24.83,agg2025,143
+J87I18000050001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,11.5,agg2025,143
 J87J18000250001,C,,Upgrading linea Milano - Bologna - DOIT Bologna,,7.7,cdp2022,138
+J87J18000340001,C,,Sicurezza ed Obblighi di Legge,,1.2,agg2025,137
 J87J18000350001,C,,Smaltimento materiali inquinanti (DOIT Bologna) - 2018,,3.0,agg2024,113
+J87J18000360001,C,,Sicurezza ed Obblighi di Legge,,3.8,agg2025,137
+J87J18000680001,C,,Sicurezza ed Obblighi di Legge,,12.62,agg2025,137
 J87J18000690001,A/B,P087,Ammodernamento e potenziamento rete ferroviaria Regione Abruzzo,Valorizzazione reti regionali,51.0,cdp2022,49
+J87J19000020001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,5.1,agg2025,143
+J87J19000050001,C,,Sicurezza ed Obblighi di Legge,,31.6,agg2025,137
+J87J19000070001,C,,Sicurezza ed Obblighi di Legge,,34.5,agg2025,137
+J87J19000080001,C,,Sicurezza ed Obblighi di Legge,,59.1,agg2025,137
+J88C14000290001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.3,agg2025,134
 J89B08000110001,C,,Studi e sperimentazione Dimensionamento Nodi,,0.29,agg2021,128
 J89B12000120001,C,,Spostamento Posti Centrali e adeguam IaP,,4.6,cdp2022,138
 J91C04000000008,A/B,A5000_1,Nodo AV di Firenze Nodo AV di Firenze,Città metropolitane,2735.02,agg2025,55
 J91H00000280008,C,,Potenziamento Asse Livorno-Pisa,,0.13,cdp2017,180
 J91H00000290001,C,,Ricerca MORANE,,0.01,agg2023,38
+J91H00000300001,C,,Impianti industriali e terminali viaggiatori e merci,,-0.0,agg2025,140
 J91H01000350001,C,,Interventi al Nodo di Firenze connessi con AV/AC,,0.35,agg2021,128
+J91H02000060001,C,,Impianti industriali e terminali viaggiatori e merci,,-0.18,agg2025,140
 J91H03000180008,C,,Sistemazione a P.R.G. Firenze SMN,,0.14,cdp2017,180
 J91H03000190001,A/B,1346,Potenziamento linea Pistoia-Lucca Raddoppio Pistoia-Montecatini Upgrading Montecatini-Pescia Raddoppio Pescia-Lucca PROG ITER,Valorizzazione reti regionali,752.1,agg2025,65
+J91H89000000001,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,139
 J91H92000000011,A/B,0308,Velocizzazione Battipaglia-Potenza,Direttrici di interesse nazionale,0.0,agg2021,54
 J91H92000010001,C,,Potenziamento infrastrutturale Firenze-Empoli,,0.72,cdp2017,180
+J91H92000020008,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,143
+J91H92000030001,C,,Sviluppo infrastrutturale e upgrading,,0.0,agg2025,139
 J91H92000040011,C,,Miglioramento infrastrutturale - DTP Milano,,1.04,cdp2017,178
 J91H92000040021,C,,Miglioramento infrastrutturale - DOIT Napoli - ante 2011,,-0.06,cdp2022,138
 J91H92000040031,C,,Miglioramenti infrastrutturali - Potenziamento - Napoli,,0.22,cdp2017,178
 J91H92000040041,C,,Miglioramenti infrastrutturali Roma-Napoli via Cassino,,0.58,cdp2017,178
+J91H92000040071,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.01,agg2025,134
 J91H92000040081,C,,"Migl. Infrastr. Settore ""Tecnologie"" - ante 2011",,0.33,agg2021,127
 J91H92000040101,C,,Miglioramento infrastrutturale - DTP Ancona,,1.92,cdp2017,178
 J91H92000040111,A/B,1417,Potenziamento linee Castelli Romani Potenziamento stazione di Marino e Frascati; potenziamento infrastrutturale e tecnologico della linea Ciampino-Fra,Città metropolitane,30.6,agg2025,55
 J91H92000040151,C,,Miglioramento infrastrutturale - DTP Torino,,0.19,cdp2017,178
 J91H92000040161,C,,Miglioramenti infrastrutturali POT.PA,,0.12,cdp2017,178
 J91H92000040171,C,,Miglioramenti infrastrutturali - Potenziamento - Reggio Calabria,,0.47,cdp2017,178
+J91H92000040181,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
+J91H92000040201,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,134
 J91H92000040221,C,,Miglioramenti Infrastrutturali POT.BO,,3.01,cdp2017,179
 J91H92000040231,C,,Miglioramento infrastrutturale Sibari - Cosenza,,-0.13,cdp2022,138
+J91H92000040281,C,,Manutenzione Straordinaria cicli fino al 2011,,0.0,agg2025,134
 J91H92000040331,C,,Miglioramenti Infrastrutturali CA,,0.29,cdp2017,179
 J91H92000040341,C,,Miglioramento infrastrutturale - DTP Palermo,,79.93,cdp2017,179
 J91H92000040351,C,,Miglioramenti Infrastrutturali - Verona,,0.4,cdp2017,179
@@ -806,6 +1221,7 @@ J91H92000040361,C,,Miglioramenti infrastrutturali - Potenziamento - Roma,,-0.1,a
 J91H92000040371,C,,Miglioramenti infrastrutturali - Potenziamento - Verona,,0.05,cdp2017,179
 J91H97000000001,C,,Ricerca ERTMS,,0.65,cdp2017,179
 J91H98000000008,C,,BAB Roma-Napoli via Formia,,51.76,cdp2022,138
+J91J04000010001,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,139
 J94C19000270009,A/B,I138A,"Potenziamento collegamenti ferroviari con aeroporto di Fiumicino - opere prioritarie Ampliamento impianto Fiumicino Aeroporto, potenziamento PROG PROG","Aeroporti, accessibilità su ferro",1226.5,agg2025,76
 J94E21000070009,A/B,P238,Battipaglia - Potenza - Metaponto - Taranto Battipaglia - Potenza - Metaponto - Taranto 1^ fase Battipaglia - Potenza - Metaponto - Taranto 2^ fase,Direttrici di interesse nazionale,1835.0,agg2021,54
 J94E21000070009,A/B,P238A,Battipaglia - Potenza - Metaponto - Taranto 1^ fase Velocizzazione Grassano-Metaponto,Direttrici di interesse nazionale,416.35,agg2025,63
@@ -824,39 +1240,104 @@ J94H17000340009,A/B,P131,Velocizzazione linea Torino-Genova Velocizzazione Torin
 J94J17000040001,A/B,P136,Linea Bolzano-Merano: Galleria del Virgolo Modifica radice sud di Bolzano e inserimento terzo binario indipendente per linea Bolzano-Merano,Valorizzazione reti regionali,138.5,agg2025,52
 J94J18000000001,A/B,A5000_4,"Adeguamenti tecnologici, opere di completamento e contingencies rete AV Torino-Milano-Napoli",Direttrici di interesse nazionale,0.0,cdp2022,62
 J94J18000010001,A/B,P147,Elettrificazione Civitanova-Macerata-Albacina Elettrificazione Civitanova-Macerata-Albacina,Valorizzazione reti regionali,160.15,agg2025,52
+J97B14000130005,C,,Sviluppo infrastrutturale e upgrading,,7.98,agg2025,139
+J97B14000140005,C,,Sviluppo infrastrutturale e upgrading,,4.3,agg2025,139
 J97B14000150005,C,,Liberazione Immobili - DOIT VR - 2014,,2.7,agg2024,113
+J97B14000260001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,7.96,agg2025,143
+J97B14000270001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,4.98,agg2025,143
+J97B14000280001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,22.58,agg2025,143
+J97B14000290001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,14.74,agg2025,143
 J97B14000300001,A/B,P214,Valorizzazione turistica delle ferrovie minori,Valorizzazione turistica ferrovie minori,468.65,agg2025,46
 J97B14000310001,A/B,P214,Valorizzazione turistica delle ferrovie minori,Valorizzazione turistica ferrovie minori,468.65,agg2025,46
+J97B15000290002,C,,Manutenzione Straordinaria cicli fino al 2011,,2.42,agg2025,135
+J97B16000210001,C,,Sicurezza ed Obblighi di Legge,,13.7,agg2025,137
+J97B16000230001,C,,Sicurezza ed Obblighi di Legge,,46.0,agg2025,137
+J97B16000240001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,22.0,agg2025,143
+J97B16000260001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,12.65,agg2025,143
+J97B16000300001,C,,Sicurezza ed Obblighi di Legge,,19.22,agg2025,137
+J97B16000390001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.62,agg2025,135
 J97B16000430001,A/B,I173,"Elettrificazione, velocizzazione e ammodernamento linee Salerno - Mercato S.S. - Avellino - Benevento e tratta",Valorizzazione reti regionali,211.68,agg2025,50
+J97B16000440001,C,,Sviluppo infrastrutturale e upgrading,,-0.03,agg2025,139
+J97B16000450001,C,,Sicurezza ed Obblighi di Legge,,20.95,agg2025,137
+J97B17000260001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,4.47,agg2025,143
+J97B17000270001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,10.41,agg2025,143
+J97B17000290001,C,,Sicurezza ed Obblighi di Legge,,31.0,agg2025,137
+J97B17000300001,C,,Sicurezza ed Obblighi di Legge,,38.5,agg2025,137
+J97B17000320001,C,,Sicurezza ed Obblighi di Legge,,52.5,agg2025,137
+J97D18000000001,C,,Sicurezza ed Obblighi di Legge,,46.65,agg2025,137
+J97D18000020001,C,,Sicurezza ed Obblighi di Legge,,60.9,agg2025,137
 J97E13000260001,C,,Upgrading rete viaggiatori - DTP Milano,,11.56,cdp2017,180
 J97E13000270001,A/B,P067,Velocizzazione linee Milano-Venezia e Venezia- Trieste,Direttrici di interesse nazionale,0.0,cdp2022,61
+J97E13000470001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,-0.0,agg2025,143
 J97F13000020001,C,,Manutenzione Straordinaria Linee AV/AC N - 2013,,-0.29,cdp2022,138
+J97F19000070001,C,,Sicurezza ed Obblighi di Legge,,1.0,agg2025,137
+J97F19000100001,C,,Sviluppo infrastrutturale e upgrading,,4.0,agg2025,139
 J97F19000110001,C,,Interventi di adeguamento sicurezza della Grande Galleria dell'Appennino,,14.7,cdp2022,138
+J97F19000120001,C,,Sicurezza ed Obblighi di Legge,,1.75,agg2025,137
+J97F19000130001,C,,Sicurezza ed Obblighi di Legge,,2.0,agg2025,137
+J97F19000190001,C,,Sviluppo infrastrutturale e upgrading,,15.0,agg2025,139
+J97F20000010001,C,,Sicurezza ed Obblighi di Legge,,141.0,agg2025,137
+J97F20000030001,C,,Sicurezza ed Obblighi di Legge,,57.0,agg2025,137
+J97G20000020001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.2,agg2025,135
+J97H21000580001,C,,Sicurezza ed Obblighi di Legge,,181.75,agg2025,137
+J97H21001800001,C,,Sviluppo infrastrutturale e upgrading,,1.7,agg2025,139
+J97H21015180001,C,,Sicurezza ed Obblighi di Legge,,0.67,agg2025,137
+J97H22000230001,C,,Sviluppo infrastrutturale e upgrading,,12.76,agg2025,139
+J97I06000020001,C,,Sviluppo infrastrutturale e upgrading,,-0.0,agg2025,139
 J97I08000110001,C,,Manutenzione Mezzi di Manovra - ante 2011,,-0.04,agg2021,127
 J97I10000180001,C,,Interventi di completamento tratta AV/AC Milano-Bologna,,2.4,agg2021,129
+J97I12000000001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.0,agg2025,135
+J97I12000010001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,135
+J97I12000020001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,135
+J97I12000030001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,135
+J97I12000040001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.16,agg2025,135
 J97I12000050001,C,,Aumento Produttività M.E.NA - 2012,,-0.07,agg2021,127
+J97I12000060001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,135
 J97I12000090001,C,,Miglioramento sicurezza gallerie ferroviarie - DTP Verona,,0.29,cdp2017,179
 J97I12000100001,C,,Manut.Straord.Opere Dif.Infr. Su linee A - 2012,,-0.05,cdp2022,138
 J97I12000110001,C,,Miglioramenti infrastrutturali su linee - 2012,,-0.07,cdp2022,138
+J97I12000130001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,135
+J97I12000160001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,135
 J97I12000170001,C,,Manut.Straord.Opere Dif.Infr.VR - 2012,,0.27,agg2021,127
 J97I12000180001,C,,Miglioramenti Infrastrutturali POT.BO - 2012,,0.2,agg2021,127
+J97I12000190001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,135
+J97I12000200001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,135
 J97I12000210001,C,,Obblighi di legge - MI - 2012,,0.04,agg2021,127
 J97I12000220001,C,,Obblighi di legge - NA - 2012,,-0.19,agg2021,127
 J97I12000230001,C,,Manut.Straord.Opere Dif.Infr.M.E.BO - 2012,,0.15,agg2021,127
+J97I12000240001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.03,agg2025,135
+J97I12000260001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.03,agg2025,135
 J97I12000270001,C,,Fabbricati di stazione M.E. NA - 2012,,0.24,agg2021,127
+J97I12000280001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.0,agg2025,135
+J97I12000290001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,135
 J97I12000300001,C,,Miglioramenti Infrastrutturali Stazioni - 2012,,0.2,agg2021,127
 J97I12000310001,C,,Infrastrutture di servizio stazioni (NA) - 2012,,0.85,agg2021,127
+J97I12000330001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,135
 J97I12000340001,C,,Miglioramenti infrastrutturali M.E.BO - 2012,,-0.04,agg2021,127
 J97I12000360001,C,,Miglioramenti infrastrutturali M.E.NA - 2012,,0.38,agg2021,127
 J97I12000370001,C,,Manut.Straord.Opere Dif.Infr.M.E.MI - 2012,,-0.04,agg2021,127
 J97I12000380001,C,,Miglioramenti infrastrutturali M.E.-VR - 2012,,0.05,agg2021,127
 J97I12000390001,C,,Acq.a rimp.mat.inv.obl.di leg.prod.-BO - 2012,,0.04,agg2021,127
+J97I12000410001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,135
 J97I12000420001,C,,Manut.Straord.Opere Dif.Infr. NA - 2012,,0.34,agg2021,127
+J97I12000430001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,135
+J97I12000440001,C,,Manutenzione Straordinaria cicli fino al 2011,,0.0,agg2025,135
 J97I12000450001,C,,Miglioramenti infrastr. M.E.- MI - 2012,,-0.32,agg2021,127
+J97I13000030001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,135
+J97I13000040001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,135
+J97I13000050001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,135
 J97I13000060001,C,,Aumento Produttività MI - 2013,,-0.01,agg2023,37
 J97I13000070001,C,,Aumento Produttività M.E.NA - 2013,,-0.02,agg2021,127
 J97I13000090001,C,,Aumento Produttività VR - 2013,,0.03,agg2021,127
+J97I13000240001,C,,Manutenzione Straordinaria cicli fino al 2011,,-0.0,agg2025,135
 J97I13000330001,C,,Adeguamento alimentazione gallerie AV Bologna-Firenze,,8.75,cdp2017,181
+J97I17000100001,C,,Sicurezza ed Obblighi di Legge,,1.5,agg2025,137
 J97I17000110001,C,,Smaltimento materiali inquinanti (DOIT Milano) - Annualità fino al 2017,,4.0,agg2024,113
+J97I18000050001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,4.5,agg2025,143
+J97I18000060001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,10.5,agg2025,143
 J97J18000050001,C,,Upgrading corridoio Reno-Alpi - DOIT Genova,,11.45,cdp2022,139
 J97J18000100001,C,,Smaltimento materiali inquinanti (DOIT Milano) - 2018,,0.45,agg2024,113
+J97J19000030001,C,,"Tecnologie per la sicurezza, la circolazione e l'efficientamento",,6.0,agg2025,143
+J97J19000050001,C,,Sicurezza ed Obblighi di Legge,,16.3,agg2025,138
+J97J19000060001,C,,Sicurezza ed Obblighi di Legge,,109.0,agg2025,138
+J97J19000080001,C,,Sicurezza ed Obblighi di Legge,,70.3,agg2025,138
