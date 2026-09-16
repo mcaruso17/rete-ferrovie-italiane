@@ -17,7 +17,7 @@ aperta da disco. Per metterla online si veda [Pubblicare il sito](#pubblicare-il
 | `data/progetti.csv` | 336 interventi: costo, risorse assegnate, fabbisogno residuo, stato attuativo, programma, pagina del PDF |
 | `data/serie-storica.csv` | Lo stesso intervento visto in ciascuno dei contratti in cui compare |
 | `data/opere-ultimate.csv` | 1.711 righe di movimento sulle opere ultimate, su 1.098 CUP distinti (Tabella C) |
-| `data/opere-ultimate-sintesi.csv` | Totali cumulati del costruito per categoria (prospetto della Tabella C) |
+| `data/opere-ultimate-sintesi.csv` | Totali cumulati del costruito per categoria, da tutti e sei i documenti |
 | `data/capitoli-piani-gestionali.csv` | Tavola 2: fonti e impieghi di cassa per anno, per capitolo di bilancio e piano gestionale |
 | `data/cdp-rfi-dataset.json` | Dataset completo, comprese le tavole di sintesi ufficiali |
 | `data/cdp-rfi-app.json` | Versione compatta usata dalla piattaforma, con mappa e attribuzione regionale |
@@ -90,6 +90,7 @@ parser in `tools/` è scritto interamente sulla libreria standard di Python.
 - `tools/geo.py` — attribuzione regionale dedotta dai nomi degli interventi
 - `tools/wrap_site.py` — documento HTML completo per l'hosting statico
 - `tools/build_all.sh` — rigenera tutto, dai PDF ai file della piattaforma
+- `tools/audit.py` — cerca pagine con dati tabellari rimaste senza tabella riconosciuta
 
 ### Verifiche
 
@@ -168,6 +169,20 @@ Dentro un singolo ciclo la catena invece torna al centesimo:
 | + variazione 2024 (aggiornamento 2025) | 4.438,88 |
 | = cumulato al 31.12.2024 | **72.496,91** |
 | dichiarato dal prospetto | 72.496,58 |
+
+### Il titolo non basta a riconoscere una tabella
+
+Le intestazioni non sono uniformi, e ogni difformità fa sparire una tabella
+intera. Due casi trovati con `tools/audit.py`, che conta le righe con celle
+numeriche invece di fidarsi del titolo:
+
+- il dettaglio delle opere ultimate **prosegue senza ripetere il titolo** —
+  tredici pagine nel solo aggiornamento 2025;
+- il prospetto di sintesi si intitola `TABELLA C: OPERE ULTIMATE`, **con i due
+  punti**, mentre il confronto ne toglieva solo spazi e trattini: il prospetto
+  spariva da cinque documenti su sei.
+
+Il controllo ora passa pulito su tutte le 748 pagine dei sei PDF.
 
 ### Le pagine di prosecuzione delle tabelle
 

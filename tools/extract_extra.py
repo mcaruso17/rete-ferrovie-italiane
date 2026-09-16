@@ -19,7 +19,9 @@ PG = re.compile(r"^Pg\s?\.?\s?(\d{1,3})$", re.I)
 CAP = re.compile(r"^\d{4}$")
 
 
-CATEG = re.compile(r"^(E\.\d|A5000_\d|TOTALE)$", re.I)
+# le categorie cambiano sigla fra i cicli contrattuali: A00/A02/A03/04 nel
+# 2017-2021, E.1-E.5 nel 2022-2026, piu' la riga della rete AV/AC
+CATEG = re.compile(r"^(E\.\d|A\d{2}(/\d{2})?|A5000_\d|TOTALE)$", re.I)
 PEZZO = re.compile(r"^[-\u2010\u2013.,\d ]+$")
 
 
@@ -52,8 +54,13 @@ def sintesi_ultimate(doc, pages, doc_id):
                 etichetta = cs[1][2].strip()
             if etichetta is None:
                 continue
-            # le righe del dettaglio hanno la data: non sono di sintesi
+            # le righe del dettaglio portano data e CUP: non sono di sintesi.
+            # Nel contratto 2017-2021 le sigle di categoria (A00, A03/04)
+            # aprono anche le righe di dettaglio, quindi il titolo da solo
+            # non basta a distinguerle
             if any(DATE.match(c[2]) for c in cs):
+                continue
+            if any(CUP.match(c[2].replace(" ", "")) for c in cs):
                 continue
             # gli importi sono composti a pezzi ("1" + ".247,52"): i pezzi
             # della stessa colonna distano pochi punti, le colonne circa otto
@@ -73,10 +80,31 @@ def sintesi_ultimate(doc, pages, doc_id):
                 v = to_float("".join(t for _a, _b, t in c).replace(" ", ""))
                 if v is not None:
                     valori.append(v)
-            if len(valori) < 2:
+            # il prospetto ha due colonne di stock piu' la variazione, e la
+            # variazione e' la differenza fra le due: e' il controllo che
+            # distingue una riga di sintesi da una riga di dettaglio in cui
+            # la data e' finita fra i numeri
+            if not 2 <= len(valori) <= 3:
+                continue
+            if len(valori) == 3 and abs(valori[2] - (valori[1] - valori[0])) > 0.05:
                 continue
             descr = " ".join(c[2] for c in cs
                              if c[2].strip() != etichetta and not PEZZO.match(c[2]))
+            if etichetta.upper() == "TOTALE":
+                descr = ""
+            elif not descr.strip():
+                # nel contratto 2017-2021 la descrizione va a capo sopra la
+                # riga dei numeri: si recupera dalla riga di solo testo vicina
+                idx = lines.index(l)
+                for j in (idx - 1, idx + 1):
+                    if not 0 <= j < len(lines):
+                        continue
+                    vicina = raw_cells(lines[j])
+                    if vicina and not any(PEZZO.match(c[2]) for c in vicina):
+                        t = " ".join(c[2] for c in vicina)
+                        if 8 < len(t) < 90:
+                            descr = t
+                            break
             out.append({"doc": doc_id, "page": pi + 1,
                         "categoria": etichetta, "voce": norm(descr),
                         "anni": anni, "valori": valori})
@@ -241,7 +269,13 @@ def run(path, doc_id):
            "tavola1": []}
     if "C_DET" in byk:
         res["opere_ultimate"] = opere_ultimate(doc, byk["C_DET"], doc_id)
-        res["sintesi_ultimate"] = sintesi_ultimate(doc, byk["C_DET"], doc_id)
+    # il prospetto di sintesi sta su una pagina a se', intitolata "TABELLA C",
+    # oppure in testa al dettaglio: si cerca in entrambi i posti
+    pagine_c = {}
+    pagine_c.update(byk.get("C", {}))
+    pagine_c.update(byk.get("C_DET", {}))
+    if pagine_c:
+        res["sintesi_ultimate"] = sintesi_ultimate(doc, pagine_c, doc_id)
     if "T2" in byk:
         res["tavola2"] = tavola2(doc, byk["T2"], doc_id)
     res["tavola1"] = []
