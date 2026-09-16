@@ -147,10 +147,27 @@ dell'opera. Lo stesso CUP ricompare a distanza di anni con code di aggiustamento
 −0,56 nel 2024. Nel solo aggiornamento 2025, 433 righe su 903 valgono zero.
 
 Le 1.711 righe corrispondono a **1.098 CUP distinti**, 420 dei quali compaiono in
-più di un documento. La loro somma (11.777 milioni) non è il valore del costruito:
-quello è il cumulato del prospetto di sintesi, 72.496,58 milioni al 31.12.2024,
-che comprende anche tutto ciò che era concluso prima che questi documenti
-cominciassero a registrarlo.
+più di un documento.
+
+Le variazioni dei sei documenti **non si sommano fra loro**: ciascuna è misurata
+rispetto alla fotografia precedente della propria serie. Le date di riferimento
+sono 2016, 2020, 2021, 2022, 2023 e 2024 — mancano 2017, 2018 e 2019, perché fra
+il contratto 2017-2021 e il suo primo aggiornamento non c'è nessun documento — e
+in mezzo cambia il ciclo contrattuale, con il perimetro ridefinito. Sommarle dà
+11.777 milioni, che non è la variazione rispetto a niente.
+
+Dentro un singolo ciclo la catena invece torna al centesimo:
+
+| | milioni |
+|---|---:|
+| Cumulato al 31.12.2021 (Tavola 1 del contratto base) | 67.347,95 |
+| + variazione 2022 (aggiornamento 2023) | 344,12 |
+| + variazione 2023 (aggiornamento 2024) | 365,96 |
+| = cumulato al 31.12.2023 | **68.058,03** |
+| dichiarato dal prospetto dell'aggiornamento 2025 | 68.058,02 |
+| + variazione 2024 (aggiornamento 2025) | 4.438,88 |
+| = cumulato al 31.12.2024 | **72.496,91** |
+| dichiarato dal prospetto | 72.496,58 |
 
 ### Le pagine di prosecuzione delle tabelle
 
