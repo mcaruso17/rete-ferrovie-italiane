@@ -429,7 +429,11 @@ dialog::backdrop{background:rgba(10,14,13,.55)}
 <!-- ===================== OPERE ULTIMATE ===================== -->
 <section class="pagina" id="p-opere" aria-labelledby="h-op">
   <div class="sec-h"><h2 id="h-op">Opere concluse</h2><span class="sec-n">Tabella C &middot; dettaglio opere ultimate</span></div>
-  <p class="lede">Le opere che i contratti dichiarano ultimate, con il CUP e la data di messa in esercizio. Ogni documento elenca quelle concluse nel proprio periodo, quindi le righe dei sei documenti si sommano invece di sostituirsi.</p>
+  <p class="lede">Il valore cumulato del costruito, e sotto l'elenco riga per riga dei movimenti che lo compongono.</p>
+  <div class="nota attenzione">
+    <p><strong>Le righe dell'elenco non sono opere.</strong> Sono movimenti contabili: ogni documento registra la <em>variazione</em> del proprio periodo, non il costo dell'opera. Lo stesso CUP ricompare a distanza di anni con code di aggiustamento, spesso di pochi centesimi o pari a zero &mdash; nel solo aggiornamento 2025, quasi la met&agrave; delle righe vale zero.</p>
+    <p>Per questo la somma delle righe non fa il valore cumulato qui sopra: quel cumulato comprende anche tutto ci&ograve; che era gi&agrave; concluso prima che questi sei documenti cominciassero a registrarlo.</p>
+  </div>
   <div id="sintesi-c" hidden>
     <h3>Quanto vale il costruito, per categoria</h3>
     <p class="lede" id="sintesi-c-nota"></p>
@@ -444,7 +448,7 @@ dialog::backdrop{background:rgba(10,14,13,.55)}
     <span class="count" id="u-cnt"></span>
   </div>
   <div class="tbl-wrap"><table>
-    <thead><tr><th>CUP</th><th>Opera</th><th class="r">Importo</th><th>Messa in esercizio</th><th>Fonte</th></tr></thead>
+    <thead><tr><th>CUP</th><th>Voce</th><th class="r">Variazione</th><th>Messa in esercizio</th><th>Fonte</th></tr></thead>
     <tbody id="tb-ult"></tbody>
   </table></div>
   <div class="pager">
@@ -492,7 +496,7 @@ dialog::backdrop{background:rgba(10,14,13,.55)}
     <div><dt>Tabella B<small>lotti costruttivi</small></dt>
       <dd>Le grandi opere realizzate per lotti costruttivi non funzionali, cioè pezzi che da soli non servono a nulla finché non è finito l'insieme. Sono trattate a parte perché seguono regole di finanziamento diverse.</dd></div>
     <div><dt>Tabella C<small>opere ultimate</small></dt>
-      <dd>Le opere concluse, con la data di messa in esercizio. Alimenta la sezione <a href="#/opere">Opere concluse</a>.</dd></div>
+      <dd>Il valore cumulato di ciò che è stato concluso, per categoria, e il dettaglio dei movimenti dell'ultimo periodo. Le righe di dettaglio sono variazioni contabili, non opere: lo stesso CUP ricompare a distanza di anni con aggiustamenti di chiusura. Alimenta la sezione <a href="#/opere">Opere concluse</a>.</dd></div>
     <div><dt>Tavola 1<small>sintesi</small></dt>
       <dd>I totali ufficiali per classe e per programma. Serve da controllo: la somma delle righe deve tornare con questi numeri.</dd></div>
     <div><dt>Tavola 2<small>fonti e impieghi di cassa</small></dt>
@@ -1119,8 +1123,11 @@ function renderUlt(){
   var npag = Math.max(1, Math.ceil(rows.length/size));
   if(uPagina>npag) uPagina = npag;
   var da=(uPagina-1)*size, vista=rows.slice(da,da+size);
-  el("u-cnt").textContent = rows.length+" opere · "+
-    nf(rows.reduce(function(s,u){return s+(u.v||0);},0),1)+" mln €";
+  var cup = {};
+  rows.forEach(function(u){ if(u.cup) cup[u.cup]=1; });
+  el("u-cnt").textContent = nf(rows.length)+" righe · "+
+    nf(Object.keys(cup).length)+" CUP distinti · "+
+    nf(rows.reduce(function(s,u){return s+(u.v||0);},0),1)+" mln € di variazioni";
   el("u-pos").textContent = rows.length===0 ? "nessun risultato"
     : (da+1)+"–"+Math.min(da+size,rows.length)+" di "+rows.length;
   el("u-prec").disabled = uPagina<=1;
@@ -1130,7 +1137,7 @@ function renderUlt(){
       '<td class="nm">'+esc(u.n)+'</td><td class="r num">'+nf(u.v,2)+'</td>'+
       '<td class="num" style="font-size:12px">'+esc(u.dt)+'</td>'+
       '<td style="font-size:11.5px;color:var(--ink-3)">'+esc(BYDOC[u.d]?BYDOC[u.d].anno:u.d)+' · p. '+u.p+'</td></tr>'; }).join("") ||
-    '<tr><td colspan="5" style="padding:26px;color:var(--ink-3)">Nessuna opera con questi filtri.</td></tr>';
+    '<tr><td colspan="5" style="padding:26px;color:var(--ink-3)">Nessuna riga con questi filtri.</td></tr>';
 }
 
 /* ================= capitoli e piani gestionali ================= */
