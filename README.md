@@ -16,7 +16,7 @@ aperta da disco. Per metterla online si veda [Pubblicare il sito](#pubblicare-il
 |---|---|
 | `data/progetti.csv` | 336 interventi: costo, risorse assegnate, fabbisogno residuo, stato attuativo, programma, pagina del PDF |
 | `data/serie-storica.csv` | Lo stesso intervento visto in ciascuno dei contratti in cui compare |
-| `data/opere-ultimate.csv` | 1.711 opere dichiarate ultimate, con CUP e data di messa in esercizio (Tabella C) |
+| `data/opere-ultimate.csv` | 1.711 righe di movimento sulle opere ultimate, su 1.098 CUP distinti (Tabella C) |
 | `data/opere-ultimate-sintesi.csv` | Totali cumulati del costruito per categoria (prospetto della Tabella C) |
 | `data/capitoli-piani-gestionali.csv` | Tavola 2: fonti e impieghi di cassa per anno, per capitolo di bilancio e piano gestionale |
 | `data/cdp-rfi-dataset.json` | Dataset completo, comprese le tavole di sintesi ufficiali |
@@ -138,6 +138,19 @@ accanto alla mappa mostra i due totali separati, per non lasciare l'ambiguit&agr
 al lettore.
 
 Confini regionali: ISTAT via [openpolis/geojson-italy](https://github.com/openpolis/geojson-italy), CC BY 4.0.
+
+### Le righe della Tabella C non sono opere
+
+Il dettaglio della Tabella C registra la **variazione del periodo**, non il costo
+dell'opera. Lo stesso CUP ricompare a distanza di anni con code di aggiustamento:
+`J17E91000000011` vale 45,54 milioni nel 2016, poi 0,01 nel 2020, 0,00 nel 2022 e
+−0,56 nel 2024. Nel solo aggiornamento 2025, 433 righe su 903 valgono zero.
+
+Le 1.711 righe corrispondono a **1.098 CUP distinti**, 420 dei quali compaiono in
+più di un documento. La loro somma (11.777 milioni) non è il valore del costruito:
+quello è il cumulato del prospetto di sintesi, 72.496,58 milioni al 31.12.2024,
+che comprende anche tutto ciò che era concluso prima che questi documenti
+cominciassero a registrarlo.
 
 ### Le pagine di prosecuzione delle tabelle
 
