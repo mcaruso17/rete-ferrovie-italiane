@@ -493,7 +493,7 @@ dialog::backdrop{background:rgba(10,14,13,.55)}
   <div class="blocco"><h3>La struttura del documento</h3>
   <dl class="voci">
     <div><dt>Tabella A<small>portafoglio investimenti</small></dt>
-      <dd>Il cuore del contratto: tutte le opere in corso e programmate, riga per riga. È da qui che viene la sezione <a href="#/interventi">Interventi</a>.</dd></div>
+      <dd>Il cuore del contratto: tutte le opere <a href="#/glossario">in corso e programmatiche</a>, riga per riga. È da qui che viene la sezione <a href="#/interventi">Interventi</a>.</dd></div>
     <div><dt>Tabella B<small>lotti costruttivi</small></dt>
       <dd>Le grandi opere realizzate per lotti costruttivi non funzionali, cioè pezzi che da soli non servono a nulla finché non è finito l'insieme. Sono trattate a parte perché seguono regole di finanziamento diverse.</dd></div>
     <div><dt>Tabella C<small>opere ultimate</small></dt>
@@ -507,6 +507,20 @@ dialog::backdrop{background:rgba(10,14,13,.55)}
   <div class="blocco"><h3>Le classi: a che punto è un'opera</h3>
   <p class="lede">La Tabella A divide gli interventi in cinque classi, in ordine di maturità: dalle più concrete alle più lontane. È la risposta rapida alla domanda «questa cosa la stanno facendo o no?».</p>
   <dl class="voci" id="voci-classi"></dl></div>
+
+  <div class="blocco"><h3>«In corso e programmatici»: la distinzione che regge tutto</h3>
+  <p class="lede">È il titolo della Tabella A, e compare più di mille volte nei sei documenti. Non è un'endiadi: sono due nature diverse, e il contratto le tiene separate apposta.</p>
+  <blockquote style="margin:0 0 16px;padding:0 0 0 16px;border-left:2px solid var(--line-strong);color:var(--ink-2);font-size:13px;max-width:72ch">
+    Il piano degli investimenti in corso e programmatici è articolato in 4 sezioni ben distinte, di cui <strong>la prima composta dalle opere da realizzare dotate di integrale copertura finanziaria</strong> e <strong>le altre sezioni hanno carattere programmatico</strong>, in quanto rappresentano la pianificazione tecnico-economica di massima per un periodo temporale almeno decennale dei fabbisogni finanziari di competenza.
+    <footer style="margin-top:7px;font-size:11.5px;color:var(--ink-3)">Contratto di Programma 2022&ndash;2026, art. 1, pagina 15</footer>
+  </blockquote>
+  <dl class="voci">
+    <div><dt>In corso<small>Sezione 1</small></dt>
+      <dd>Opere con <strong>copertura finanziaria integrale</strong>: i soldi ci sono tutti, e il contratto ne risponde. Sono l'oggetto vero dell'accordo fra MIT e RFI.</dd></div>
+    <div><dt>Programmatici<small>Sezioni 2, 3 e 4</small></dt>
+      <dd>Opere di cui è stimato il costo e dichiarato il fabbisogno, <strong>senza copertura</strong>. Il contratto dice a cosa servono: essere un quadro di riferimento per decidere, in futuro, quali meritano un finanziamento. Sono pianificazione, non impegno.</dd></div>
+  </dl>
+  <p class="nota" id="quota-programmatica" style="font-size:13px"></p></div>
 
   <div class="blocco"><h3>Le sezioni: quando servono i soldi</h3>
   <dl class="voci">
@@ -1182,6 +1196,16 @@ function renderPg(){
 
 /* ================= glossario generato dai dati ================= */
 function initGlossario(){
+  var ult = DOCS[DOCS.length-1], a = D.aggregati[ult.id];
+  if(a && a.costo){
+    el("quota-programmatica").innerHTML =
+      "Nel " + esc(ult.titolo) + " il portafoglio vale <b class=\"num\">" + nf(a.costo) +
+      "</b> milioni di euro, ma solo <b class=\"num\">" + nf(a.finanziato) +
+      "</b> stanno in Sezione 1. Gli altri <b class=\"num\">" + nf(a.da_finanziare) +
+      "</b> &mdash; il <b class=\"num\">" + nf(a.da_finanziare/a.costo*100,0) +
+      "%</b> del totale &mdash; sono programmatici. Quando si legge che il Contratto " +
+      "di Programma «prevede» una certa cifra, quella cifra somma le due cose.";
+  }
   el("voci-classi").innerHTML = Object.keys(D.classi||{}).sort().map(function(k){
     return '<div><dt>Classe '+esc(k)+'<small>'+esc(D.classi[k])+'</small></dt><dd>'+
       esc(CLASSI_SPIEG[k]||"")+'</dd></div>'; }).join("");
