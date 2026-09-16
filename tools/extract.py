@@ -33,7 +33,9 @@ def head_text(lines, n=6):
 
 
 def table_kind(h):
-    hh = h.replace(" ", "").replace("-", "")
+    # via anche i due punti: il prospetto di sintesi si intitola
+    # "TABELLA C: OPERE ULTIMATE AL 31.12.XXXX", con i due punti
+    hh = re.sub(r"[ \-:;.,]", "", h)
     if "TABELLAAPORTAFOGLIO" in hh:
         return "A"
     if "TABELLABINVESTIMENTI" in hh:

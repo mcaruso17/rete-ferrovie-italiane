@@ -64,10 +64,18 @@ for r in d["tavola1"]:
                "n": r["voce"][:120], "v": [r2(x) for x in r["valori"]]})
 
 app = {
+    # DOCS elenca i documenti con una Tabella A, gli unici confrontabili per
+    # intervento; l'aggiornamento 2023 non ce l'ha ma compare comunque nelle
+    # opere ultimate e nei capitoli, e senza questo secondo elenco resterebbe
+    # senza titolo e fuori ordine
     "documenti": [{"id": k, **{x: d["documenti"][k][x] for x in
                                ("titolo", "file", "periodo", "anno", "ordine",
                                 "precedente", "avanz_al", "righe_tabella_a")}}
                   for k in DOCS],
+    "documenti_tutti": [{"id": k, "titolo": v["titolo"], "anno": v["anno"],
+                         "ordine": v["ordine"], "file": v["file"]}
+                        for k, v in sorted(d["documenti"].items(),
+                                           key=lambda kv: kv[1]["ordine"])],
     "aggregati": {k: d["aggregati"][k] for k in DOCS},
     "fonti_nomi": fonti_nomi,
     "etichette": d["etichette"],
