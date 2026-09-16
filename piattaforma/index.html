@@ -433,6 +433,7 @@ dialog::backdrop{background:rgba(10,14,13,.55)}
   <div class="nota attenzione">
     <p><strong>Le righe dell'elenco non sono opere.</strong> Sono movimenti contabili: ogni documento registra la <em>variazione</em> del proprio periodo, non il costo dell'opera. Lo stesso CUP ricompare a distanza di anni con code di aggiustamento, spesso di pochi centesimi o pari a zero &mdash; nel solo aggiornamento 2025, quasi la met&agrave; delle righe vale zero.</p>
     <p>Per questo la somma delle righe non fa il valore cumulato qui sopra: quel cumulato comprende anche tutto ci&ograve; che era gi&agrave; concluso prima che questi sei documenti cominciassero a registrarlo.</p>
+    <p>E le variazioni dei sei documenti <strong>non si sommano fra loro</strong>: ciascuna &egrave; misurata rispetto alla fotografia precedente della propria serie. Le date di riferimento sono 2016, 2020, 2021, 2022, 2023 e 2024 &mdash; mancano tre anni &mdash; e in mezzo cambia il ciclo contrattuale. Per questo il totale compare solo quando scegli un documento.</p>
   </div>
   <div id="sintesi-c" hidden>
     <h3>Quanto vale il costruito, per categoria</h3>
@@ -1125,9 +1126,16 @@ function renderUlt(){
   var da=(uPagina-1)*size, vista=rows.slice(da,da+size);
   var cup = {};
   rows.forEach(function(u){ if(u.cup) cup[u.cup]=1; });
-  el("u-cnt").textContent = nf(rows.length)+" righe · "+
-    nf(Object.keys(cup).length)+" CUP distinti · "+
-    nf(rows.reduce(function(s,u){return s+(u.v||0);},0),1)+" mln € di variazioni";
+  // la somma ha senso solo dentro un documento: ciascuno misura la variazione
+  // rispetto alla propria fotografia precedente, e le basi non coincidono
+  var testo = nf(rows.length)+" righe · "+nf(Object.keys(cup).length)+" CUP distinti";
+  if(dd){
+    testo += " · "+nf(rows.reduce(function(s,u){return s+(u.v||0);},0),1)+
+      " mln € di variazione nel periodo";
+  } else {
+    testo += " · somme non confrontabili fra documenti";
+  }
+  el("u-cnt").textContent = testo;
   el("u-pos").textContent = rows.length===0 ? "nessun risultato"
     : (da+1)+"–"+Math.min(da+size,rows.length)+" di "+rows.length;
   el("u-prec").disabled = uPagina<=1;
