@@ -17,8 +17,13 @@ Regole:
     direttrice "Brennero-Verona-Bologna" non rende veneta una galleria altoatesina;
   * i nomi che sono anche parole comuni italiane sono esclusi, perche'
     produrrebbero falsi positivi su descrizioni tecniche;
-  * un intervento che tocca piu' regioni ripartisce l'importo in parti uguali,
-    cosi' che la somma regionale resti pari al totale attribuito.
+  * un intervento che tocca piu' regioni ripartisce l'importo in proporzione a
+    quante volte ciascuna regione e' citata nella descrizione, dopo aver
+    scartato quelle sotto il 15% delle menzioni. Una divisione in parti uguali
+    darebbe meta' dell'anello ferroviario di Roma alla Toscana, per via di una
+    sola occorrenza di "Firenze" fra sei di "Roma". Resta un surrogato: il peso
+    vero sarebbe la lunghezza di tratta per regione, che i documenti non danno.
+    Le quote sommano a 1, quindi i totali regionali sommano al totale attribuito.
 """
 import json, re, sys, unicodedata, collections
 
@@ -27,6 +32,10 @@ PROV = sys.argv[2]
 APP = sys.argv[3]
 MAPPA = sys.argv[4]
 OUT = sys.argv[5]
+
+# sotto questa quota di menzioni la regione e' considerata una citazione
+# incidentale (il nome di una linea che passa di li'), non una sede dei lavori
+SOGLIA_MENZIONI = 0.15
 
 # nomi di comune che sono anche parole ricorrenti nelle descrizioni tecniche
 ESCLUSI = {
@@ -127,11 +136,11 @@ def main():
     pattern = re.compile(r"\b(" + "|".join(re.escape(n) for n in ordinati) + r")\b")
 
     app = json.load(open(APP))
-    attrib, senza = {}, 0
+    attrib, pesi, senza = {}, {}, 0
     for p in app["progetti"]:
         originale = testo_confronto(p.get("n") or "")
         testo = originale.lower()
-        trovati, usati = [], []
+        menzioni, ordine, usati = collections.Counter(), [], []
         for m in pattern.finditer(testo):
             nome = m.group(1)
             if any(a <= m.start() and m.end() <= b for a, b in usati):
@@ -141,14 +150,22 @@ def main():
                 continue
             usati.append((m.start(), m.end()))
             r = gaz[nome]
-            if r not in trovati:
-                trovati.append(r)
-        if trovati:
-            attrib[p["c"]] = trovati
-        else:
+            if r not in menzioni:
+                ordine.append(r)
+            menzioni[r] += 1
+        if not menzioni:
             senza += 1
+            continue
+        tot = sum(menzioni.values())
+        forti = [r for r in ordine if menzioni[r] / tot >= SOGLIA_MENZIONI]
+        if not forti:
+            forti = ordine
+        somma = sum(menzioni[r] for r in forti)
+        attrib[p["c"]] = forti
+        pesi[p["c"]] = {r: round(menzioni[r] / somma, 4) for r in forti}
     app["regioni"] = {r: reg_nome[r] for r in sorted(reg_nome)}
     app["attribuzione_regionale"] = attrib
+    app["pesi_regionali"] = pesi
     app["mappa"] = json.load(open(MAPPA))
     json.dump(app, open(OUT, "w"), ensure_ascii=False, separators=(",", ":"))
 

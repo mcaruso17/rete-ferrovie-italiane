@@ -122,9 +122,15 @@ I Contratti non hanno un campo territoriale. La regione mostrata nella mappa è
 e le province ISTAT: il nome dev'essere un nome proprio, i nomi ambigui valgono
 solo per i capoluoghi, e si guarda solo la descrizione dell'intervento, non il
 sotto-programma. Copre 253 interventi su 336; il resto sono programmi di rete
-senza un luogo nel nome (sicurezza, tecnologie, sistemi informativi). Un'opera
-che tocca più regioni ripartisce l'importo in parti uguali, così che i totali
-regionali sommino al totale attribuito. Il **conteggio** degli interventi invece
+senza un luogo nel nome (sicurezza, tecnologie, sistemi informativi).
+
+Un'opera che tocca più regioni ripartisce l'importo **in proporzione a quante
+volte ciascuna regione è citata** nella descrizione, dopo aver scartato quelle
+sotto il 15% delle menzioni. Una divisione in parti uguali dava metà dell'anello
+ferroviario di Roma alla Toscana, per una sola occorrenza di «Firenze» contro sei
+di «Roma». Resta un surrogato: il peso vero sarebbe la lunghezza di tratta per
+regione, che i documenti non riportano. Le quote sommano a uno, quindi i totali
+regionali sommano al totale attribuito. Il **conteggio** degli interventi invece
 non si divide: un'opera su due regioni compare nel conteggio di entrambe, quindi
 la somma di quella colonna supera il numero di interventi distinti. La tabella
 accanto alla mappa mostra i due totali separati, per non lasciare l'ambiguit&agrave;
