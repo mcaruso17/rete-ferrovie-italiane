@@ -1,0 +1,58 @@
+============================================================================================
+1. IDENTITA' CONTABILI DI TABELLA A, riga per riga
+============================================================================================
+OK risorse assegnate = somma delle fonti           1235/1235  100.0%  
+OK costo = assegnate + fabbisogni                  1235/1235  100.0%  
+
+============================================================================================
+2. SOMMA DEGLI INTERVENTI contro i totali della Tavola 1
+============================================================================================
+   agg2021   ricostruito    195536.98  dichiarato    195537.02  scarto    -0.04  ok
+   cdp2022   ricostruito    229401.48  dichiarato    229401.52  scarto    -0.04  ok
+   agg2024   ricostruito    249803.54  dichiarato    249803.55  scarto    -0.01  ok
+   agg2025   ricostruito    270541.86  dichiarato    270541.91  scarto    -0.05  ok
+OK costo di Tabella A = Tavola 1 riga A               4/4     100.0%  tolleranza 1 mln
+
+============================================================================================
+3. TABELLA C: le categorie sommano al totale stampato
+============================================================================================
+OK somma categorie = TOTALE del prospetto            12/12    100.0%  
+
+============================================================================================
+4. TABELLA C: il dettaglio somma alla variazione dichiarata
+============================================================================================
+   cdp2017    368 righe sommano   29871.83  dichiarato   29871.78  scarto   +0.05  ok
+   agg2021    246 righe sommano    1736.16  dichiarato    1736.19  scarto   -0.03  ok
+   cdp2022     88 righe sommano    2823.86  dichiarato    2823.88  scarto   -0.02  ok
+   agg2023     83 righe sommano     344.12  dichiarato     344.14  scarto   -0.02  ok
+   agg2024     79 righe sommano     365.96  dichiarato     365.94  scarto   +0.02  ok
+   agg2025    903 righe sommano    4438.88  dichiarato    4438.56  scarto   +0.32  ok
+OK dettaglio opere ultimate = variazione              6/6     100.0%  tolleranza 1 mln
+
+============================================================================================
+5. LA SERIE DEL COSTRUITO si incatena fra documenti
+============================================================================================
+   agg2021   parte da   62787.88 ma dichiara come precedente 'CdP-I agg. 2018-2019', che non e' nel corpus: anello non verificabile
+   cdp2022   inizia da   64524.07, agg2021   finiva a   64524.07  ok
+   agg2023   inizia da   67347.95, cdp2022   finiva a   67347.95  ok
+   agg2024   inizia da   67692.08, agg2023   finiva a   67692.08  ok
+   agg2025   inizia da   68058.02, agg2024   finiva a   68058.02  ok
+OK stock finale = stock iniziale del successivo       4/4     100.0%  1 anello saltato: manca l'aggiornamento intermedio
+
+============================================================================================
+6. TAVOLA 2: le righe che dichiarano la propria formula
+============================================================================================
+OK somme interne dichiarate dalla Tavola 2          160/160   100.0%  tolleranza 2,5 mln; 6 formule corrette secondo l'errata
+
+============================================================================================
+7. COERENZA INTERNA del dataset
+============================================================================================
+OK codici intervento senza duplicati                336/336   100.0%  
+OK interventi con una descrizione                   336/336   100.0%  
+OK costi non negativi                               336/336   100.0%  
+OK fabbisogno non superiore al costo                336/336   100.0%  
+OK date di messa in esercizio ben formate          1762/1762  100.0%  5 opere con data n.a. nel documento
+OK CUP nel formato a 15 caratteri                  1691/1691  100.0%  
+
+============================================================================================
+ESITO: 13 controlli, 13 passati in pieno, 0 con scarti, 0 sotto il 99%

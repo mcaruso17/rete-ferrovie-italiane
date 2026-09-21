@@ -13,7 +13,9 @@ from extract import (table_kind, head_text, norm, atoms, atom_text,
                      cluster_edges, numeric_atoms)
 
 CUP = re.compile(r"^[A-Z]\d{2}[A-Z]\d{10,12}$")
-DATE = re.compile(r"^\d{2}/\d{2}/\d{4}$")
+# il contratto 2017-2021 alterna due formati nella stessa colonna:
+# 31/12/2016 con le barre e 30.11.2014 con i punti
+DATE = re.compile(r"^\d{2}[/.]\d{2}[/.]\d{4}$")
 T2ROW = re.compile(r"^(\d{1,3})(-\d{1,3})?$")
 PG = re.compile(r"^Pg\s?\.?\s?(\d{1,3})$", re.I)
 CAP = re.compile(r"^\d{4}$")
@@ -122,12 +124,18 @@ def opere_ultimate(doc, pages, doc_id):
             txt = [c[2] for c in cs]
             dt = next((t for t in txt if DATE.match(t)), None)
             cup = next((t for t in txt if CUP.match(t.replace(" ", ""))), None)
+            npp = next((t for t in txt[1:4]
+                        if re.match(r"^[A-Z]?\d{3,4}$", t)), None)
             # non si usa is_num: nelle pagine di prosecuzione gli importi
             # negativi sono scritti con il segno staccato dalla cifra
             # ("-        0,02"), che il riconoscitore stretto scarterebbe
             nums = [(c[0], to_float(c[2])) for c in cs
                     if not DATE.match(c[2]) and to_float(c[2]) is not None]
-            if dt is None or not nums:
+            # alcune opere non hanno una data di messa in esercizio: la colonna
+            # riporta "n.a." e la riga va tenuta lo stesso. Per distinguerla da
+            # una riga di sintesi basta il CUP o il codice NPP, che il prospetto
+            # per categoria non ha
+            if not nums or not (cup or npp):
                 continue
             costo = nums[-1][1]
             descr = max((t for t in txt
@@ -135,11 +143,10 @@ def opere_ultimate(doc, pages, doc_id):
                          and not CUP.match(t.replace(" ", ""))),
                         key=len, default="")
             riga = txt[0] if txt and len(txt[0]) <= 6 else None
-            npp = next((t for t in txt[1:4]
-                        if re.match(r"^[A-Z]?\d{3,4}$", t)), None)
             out.append({"doc": doc_id, "page": pi + 1, "riga": riga,
                         "cup": cup, "npp": npp, "descr": norm(descr),
-                        "costo": costo, "data_esercizio": dt})
+                        "costo": costo,
+                        "data_esercizio": dt.replace(".", "/") if dt else None})
     return out
 
 
@@ -177,9 +184,16 @@ def tavola2(doc, pages, doc_id):
             # irregolari ("1 3.054"): si ricompongono per banda d'anno
             pezzi = [[] for _ in bande]
             labels = []
+            visto_riga = False
             for grp in atoms(l, gap=1.4, rel=0.22):
                 tx = atom_text(grp)
-                if not tx or tx == t0:
+                if not tx:
+                    continue
+                # il numero di riga si scarta una volta sola: lo stesso numero
+                # puo' ricomparire come importo in una colonna d'anno (la riga
+                # 15 del CdP 2022 vale 15 mln nel 2023)
+                if tx == t0 and not visto_riga:
+                    visto_riga = True
                     continue
                 cx = (grp[0].x + grp[-1].x + grp[-1].w) / 2.0
                 k = next((i for i, (a, b) in enumerate(bande) if a <= cx <= b), None)
@@ -191,7 +205,14 @@ def tavola2(doc, pages, doc_id):
             for p in pezzi:
                 p.sort()
                 s = "".join(t for _x, t in p).replace(" ", "")
-                nums.append(to_float(s) if s else None)
+                # nella Tavola 2 il trattino e' uno zero stampato: le righe
+                # tutte a trattini sono capitoli senza cassa in quegli anni e
+                # vanno tenute, altrimenti le somme che il prospetto dichiara
+                # restano senza i loro addendi
+                if s in ("-", "\u2010", "\u2013"):
+                    nums.append(0.0)
+                else:
+                    nums.append(to_float(s) if s else None)
             if not any(v is not None for v in nums):
                 continue
             cap = pgm = None

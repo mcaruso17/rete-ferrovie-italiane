@@ -231,6 +231,7 @@ cdp2017,179,A02,J31H98000020001,0073,Sistema di Controllo Marcia Treno (SCMT)-Ri
 cdp2017,179,A02,J31H98000050001,0151,Informazioni al Pubblico Nodo di Roma,0.39,31/12/2016
 cdp2017,179,A02,J51H03000120081,1335,Attrezzaggi tecnologici,0.36,31/12/2016
 cdp2017,179,A02,J51H03000120141,1333,Attr.tec.lin/imp.int.rete-eff.upg (FI),0.15,31/12/2016
+cdp2017,179,A02,J51H92000000008,0024,SCC Area Veneta Centrale,2.68,22/12/2006
 cdp2017,179,A02,J57E14000010001,1658,Implem. sistemi IT area movimento e,5.1,31/12/2016
 cdp2017,179,A02,J57I09000120001,1565,Sviluppo realizz sistemi di diagnostic,9.46,31/12/2016
 cdp2017,179,A02,J57I11000570001,1528,Sviluppo tecnologico del Nodo di Milano su Milano C.Le-Malpensa,0.24,31/12/2016
@@ -242,12 +243,24 @@ cdp2017,179,A02,J59B08000200001,1566,Evoluzione Sistema Prescrizioni MOV,0.97,31
 cdp2017,179,A02,J59B08000220001,1588,Sistemi di Rete,0.57,31/12/2016
 cdp2017,179,A02,J59B09000060001,1592,Sistemi per i processi di supporto,0.56,31/12/2016
 cdp2017,179,A02,J59B13000030001,1592,Sistemi per i processi di supporto,0.75,31/12/2016
+cdp2017,179,A02,J61H00000220008,0033,Potenziamento passante Villa Literno-Cancello-Caserta,3.37,28/12/2008
 cdp2017,179,A02,J61H99000010001,0076,RIPETIZIONE DISCONTINUA NODO DI NAPOLI,0.54,31/12/2016
 cdp2017,179,A02,J67I08000000001,1546,Piano di sviluppo tecnologico della rete,6.37,31/12/2016
+cdp2017,179,A02,J71H89000000008,0023,SCC Nodo di Genova,2.66,31/12/2008
+cdp2017,179,A02,J81H03000050008,0043,SCC Bologna C.le e Nodo di Bologna,18.93,15/04/2013
+cdp2017,179,A02,J81H92000000008,0066,Potenziamento tecnologico Bologna-Bari,4.29,16/12/2010
+cdp2017,179,A02,J81H98000000008,0067,Potenziamento tecnologico Bologna-Verona-Brennero,2.78,04/11/2010
+cdp2017,179,A02,J81H98000010001,0071,Interventi tecnologici Milano-Venezia,1.36,30/06/2008
 cdp2017,179,A02,J91H97000000001,0060,Ricerca ERTMS,0.65,31/12/2016
 cdp2017,179,A03/04,,P014,Fermata passante nodo di Milano,3.13,31/12/2016
+cdp2017,179,A03/04,,R003,Opere finanziate da Legge 64/99,15.61,n.a.
+cdp2017,179,A03/04,,1850,Interventi connessi a linea AV/AC Milano - Bologna,47.79,31/12/2014
+cdp2017,179,A03/04,J11H02000050001,0239,Variante di Gozzano,2.64,04/12/2011
 cdp2017,179,A03/04,J11H02000080001,1267,Adeguamento Linea Storica Torino-Lione,0.16,31/12/2016
+cdp2017,179,A03/04,J11H02000100001,1308,Metroferrovia Messina - Giampilieri,0.7,14/12/2008
 cdp2017,179,A03/04,J11H03000050001,1178,Itinerario alternativo potenziamento Novara-Alessandria,0.11,31/12/2016
+cdp2017,179,A03/04,J11H92000030008,0137,Raddoppio Palermo-Messina tratta Messina-Patti,6.68,22/11/2009
+cdp2017,179,A03/04,J11H96000020001,0015,Passante P.ta Susa-Lingotto e collegamento Porta Susa - bivio Porta Nuova,0.98,10/04/2005
 cdp2017,179,A03/04,J11J04000070031,1440,Upgrading rete viaggiatori - DTP Milano,1.77,31/12/2016
 cdp2017,179,A03/04,J11J04000070061,1443,Interventi upgrading rete viaggiatori,1.0,31/12/2016
 cdp2017,179,A03/04,J11J04000070081,1445,Upgrading rete viaggiatori DTP Roma,2.51,31/12/2016
@@ -262,23 +275,49 @@ cdp2017,180,A03/04,J11J04000070171,1467,Interventi upgrading rete viaggiatori TO
 cdp2017,180,A03/04,J11J04000070181,1468,Upgrading rete viaggiatori - DTP Verona,1.06,31/12/2016
 cdp2017,180,A03/04,J17E91000000221,0809,Miglioramento infrastrutturale Provincia di Bolzano,61.82,31/12/2016
 cdp2017,180,A03/04,J17E91000000281,0647,Miglioramento infrastrutturale Provincia di Trento,77.83,31/12/2016
+cdp2017,180,A03/04,J21H01000090001,0202,Raddoppio Decimomannu - S. Gavino,14.26,21/09/2008
 cdp2017,180,A03/04,J21H03000120001,1310,Potenziamento itinerari merci Tarvisio/Villa Opicina (comprende 1^ fase nodo di Udine),52.22,31/12/2016
 cdp2017,180,A03/04,J21H92000000001,0146,Adeguamento al traffico Merci Linea Domodossola-Luino-Novara-Ovada-Genova,0.45,31/12/2016
+cdp2017,180,A03/04,J21H98000000001,0161,Ammodernamento e velocizzazione Rete Sarda,0.59,17/07/2006
+cdp2017,180,A03/04,J31H01000080001,0222,Raddoppio della linea Bergamo - Treviglio,13.91,03/07/2005
+cdp2017,180,A03/04,J31H03000140001,0074,Messa in sicurezza galleria Cassia M.Mario,0.83,28/02/2013
+cdp2017,180,A03/04,J31H03000430001,1356,Potenziamento Linea Chivasso-Aosta-Pré St. Didier,1.21,10/12/2006
+cdp2017,180,A03/04,J31H92000010001,0006,Sistemazione P.R.G. Milano Rogoredo,1.01,06/09/2009
+cdp2017,180,A03/04,J31H93000000008,0007,Quadruplicamento Milano-Venezia nel tratto Lambrate-Treviglio,26.06,10/06/2007
+cdp2017,180,A03/04,J31H94000000001,0040,P.R.G. e ACEI Roma Termini,0.85,13/12/2009
+cdp2017,180,A03/04,J31H95000000001,0008,Passante Milanese,5.37,08/06/2008
+cdp2017,180,A03/04,J31H95000010008,0044,Potenziamento infrastrutturale Milano-Lecco,2.2,28/07/2008
 cdp2017,180,A03/04,J31H96000010008,0017,Potenziamento tratto urbano linea Roma-Viterbo,4.51,31/12/2016
 cdp2017,180,A03/04,J31H96000030001,0019,P.R.G. e ACEI Ostiense/Trastevere,1.05,31/12/2016
+cdp2017,180,A03/04,J31H96000040008,0038,Raddoppio Prenestina-Lunghezza (fermata Ponte di Nona),5.49,09/07/2007
 cdp2017,180,A03/04,J31H96000050008,0039,Realizzazione nuove fermate ed adeguamento stazioni per il servizio metropolitano di Roma (1^ fase),0.36,31/12/2016
 cdp2017,180,A03/04,J31J05000040001,1427,Efficientamento linea Codogno-Cremona-Mantova e raddoppio tratta Cremona-Cava Tigozzi,38.29,31/12/2016
 cdp2017,180,A03/04,J37I06000060001,1482,Interv.Riqualif.staz.connessi AV-Milano,0.29,31/12/2016
 cdp2017,180,A03/04,J37I06000080001,1484,Interventi di riqualificazione stazioni: Fiera di Roma e Roma Val d'Ala,0.73,31/12/2016
+cdp2017,180,A03/04,J49B11000260001,1634,Arbitrati AV/AC MI-VR e Terzo Valico,3.39,n.a.
+cdp2017,180,A03/04,J51C05000030008,0302,AV/AC Milano-Venezia: nodo di Verona (progettazione preliminare),2.45,n.a.
 cdp2017,180,A03/04,J51H00000040001,0205,Itinerario alternativo merci Gioia Tauro-Taranto con velocizzazione tratta Sibari-Cosenza,0.34,31/12/2016
+cdp2017,180,A03/04,J51H01000070001,0210,Quadruplicamento Padova-Mestre,10.22,30/12/2006
+cdp2017,180,A03/04,J51H04000000001,1280,Adeguamento sagoma gabarit C gallerie direttrice Adriatica (interventi alle gallerie Castellano e Cattolica),2.35,08/12/2014
 cdp2017,180,A03/04,J51H98000000001,0016,Potenziamento infrastrutturale e tecnologico Nodo di Verona,0.21,31/12/2016
+cdp2017,180,A03/04,J54F05000010001,1455,Itinerario Venezia-Tarvisio/Villa Opicina Potenziamento Itinerari merci,0.82,29/10/2010
 cdp2017,180,A03/04,J57B14000150001,1871,Riapertura Linee (DTP RM),12.0,31/12/2016
+cdp2017,180,A03/04,J61H00000210001,0207,Sistemazione del nodo di Venezia Mestre,1.08,05/12/2010
+cdp2017,180,A03/04,J61H98000000001,0079,Potenziamento Infrastrutturale Trieste/Cervignano - Udine e scalo Cervignano,0.89,11/12/2006
+cdp2017,180,A03/04,J69B11000160001,1635,Arbitrato Tratta AV/AC VR-PD,1.74,n.a.
+cdp2017,180,A03/04,J71H92000010008,0069,Raddoppio Bologna-Verona,5.76,14/12/2008
+cdp2017,180,A03/04,J71H92000040008,0101,Raddoppio ed elettrificazione Bari-Lecce,24.17,30/07/2006
 cdp2017,180,A03/04,J77I12000120001,1467,Interventi upgrading rete viaggiatori TO,0.9,31/12/2016
+cdp2017,180,A03/04,J81H03000060001,1161,Adeguamenti preliminari alla linea storica ed al nodo di Bologna per integrazione funzionale con AV/AC,139.8,29/12/2015
 cdp2017,180,A03/04,J81H03000080001,1391,Rete Lucana: migliormento servizi Potenza - S. Nicola,3.69,31/12/2016
+cdp2017,180,A03/04,J81H97000000001,0037,Realizzazione fermate ed adeguamento stazioni per servizio metropolitano di Bologna (1^ fase),51.0,13/12/2015
 cdp2017,180,A03/04,J87B14000440001,1867,Binari senza tempo - DTP AN,0.8,31/12/2016
 cdp2017,180,A03/04,J87I05000070001,1452,Interventi upgrading rete merci - Genova,0.02,31/12/2016
 cdp2017,180,A03/04,J91H00000280008,0203,Potenziamento Asse Livorno-Pisa,0.13,31/12/2016
+cdp2017,180,A03/04,J91H01000320008,0204,Potenziamento Infrastrutturale e Tecnologico Lamezia Terme - Catanzaro Lido,8.4,15/06/2008
+cdp2017,180,A03/04,J91H01000350001,1260,Interventi al Nodo di Firenze connessi con AV/AC,5.39,20/06/2006
 cdp2017,180,A03/04,J91H03000180008,0259,Sistemazione a P.R.G. Firenze SMN,0.14,31/12/2016
+cdp2017,180,A03/04,J91H92000000001,0114,Raddoppio Reggio Calabria - Melito Porto Salvo,3.53,15/09/2006
 cdp2017,180,A03/04,J91H92000010001,0034,Potenziamento infrastrutturale Firenze-Empoli,0.72,31/12/2016
 cdp2017,180,A03/04,J97E13000260001,1440,Upgrading rete viaggiatori - DTP Milano,11.56,31/12/2016
 cdp2017,180,A03/04,J17E99000020181,0878,"Obblighi di legge settore ""officine""-DG",2.11,31/12/2016
@@ -289,6 +328,7 @@ cdp2017,180,A03/04,J31H00000170061,2951,Manten. Straor. Stabilimento Roma,2.46,3
 cdp2017,180,A03/04,J31H00000170071,2955,Manut. straord. Stabilimento di PA,0.26,31/12/2016
 cdp2017,180,A03/04,J31H00000170081,2952,Manut. straord. Stabilimento di BA,0.15,31/12/2016
 cdp2017,180,A03/04,J31H00000180051,2988,Interventi di potenziamento e razionalizzazione scali merci - Reggio Calabria,1.13,31/12/2016
+cdp2017,180,A03/04,J31H96000100001,0423,Potenziamento Impianti manutenzione e pulizia Milano Martesana,1.26,25/11/2012
 cdp2017,180,A03/04,J51H00000080001,0409,Nuovo terminal di Padova interporto,3.04,31/12/2016
 cdp2017,180,A03/04,J51H92000010141,0600,Aumento Produttività Officine Nazionali,0.65,31/12/2016
 cdp2017,180,A03/04,J57I06000080001,1488,Riqual.piccole-medie-grandi stazioni-RC,3.21,31/12/2016
@@ -297,6 +337,8 @@ cdp2017,180,A03/04,J61H00000240001,0430,COSTRUZ. IDP NAPOLI SMISTAMENTO,4.2,31/1
 cdp2017,180,A03/04,J67I10000140001,1613,Pot. impianti illuminaz. Grandi Stazioni,4.09,31/12/2016
 cdp2017,180,A03/04,J71H02000130001,0418,Potenziamento Impianto Intermodale Brindisi,0.9,31/12/2016
 cdp2017,180,A03/04,J81H00000180001,0406,Ravenna: Prima fase nuovo Scalo Merci Canale Candiano per merci pericolose e prolungamento dorsale FS,0.01,31/12/2016
+cdp2017,181,A03/04,J81H02000020001,0243,Scalo merci di Modena Marzaglia,100.27,30/11/2014
+cdp2017,181,A03/04,J91H01000330008,0220,Centro dinamica sperimentale Osmannoro,3.18,17/09/2013
 cdp2017,181,A03/04,J17E91000000211,0735,Progettazioni sviluppi a completamento - Napoli,0.02,31/12/2016
 cdp2017,181,A03/04,J21H03000110001,1358,Studio di fattibilità ammodernamento e velocizzazione Cagliari-Oristano e relazione Cagliari-Sassari,0.45,31/12/2016
 cdp2017,181,A03/04,J31C05000010001,1475,SdF della cintura merci Sud di Milano,0.26,31/12/2016
@@ -305,11 +347,25 @@ cdp2017,181,A03/04,J31H03000350001,1312,Studio di fattibilità per la riqualific
 cdp2017,181,A03/04,J31H03000440001,1364,Studi e sperim. su sistemi innovativi,3.29,31/12/2016
 cdp2017,181,A03/04,J31H97000010001,1284,Studi di fattibilità asse del Gottardo,0.37,31/12/2016
 cdp2017,181,A03/04,J37I08000000001,1544,Piano di sviluppo tecnologico della rete,1.9,31/12/2016
+cdp2017,181,A03/04,J41J03000000001,1394,GEIE-Galleria di base del Brennero- 2° fase,5.24,n.a.
 cdp2017,181,A03/04,J49B07000000001,1505,Studi di Fattibilità: Potenziamento Nodo di Roma,0.01,31/12/2016
 cdp2017,181,A05,,1530,Acq. mat. di scorta AV/AC RM -Gricignano,4.42,31/12/2016
 cdp2017,181,A05,,1531,Acq. mat. di scorta AV/AC RM -Gricignano,2.23,31/12/2016
 cdp2017,181,A05,,1532,Acq. mat. di scorta AV/AC TO-Novara,4.75,31/12/2016
+cdp2017,181,A05,F21H91000000008,0351,Tratta AV/AC Milano - Bologna,6977.23,14/12/2008
+cdp2017,181,A05,F41H91000000008,0350,Tratta AV/AC Torino - Milano,7581.58,05/11/2009
+cdp2017,181,A05,F81H91000010008,0352,Tratta AV/AC Bologna - Firenze,5628.76,04/12/2009
+cdp2017,181,A05,F91H91000000008,0353,Tratta AV/AC Roma - Napoli,5740.13,15/12/2009
+cdp2017,181,A05,J11C91000000008,0329,Tratta AV/AC RM-NA: interventi funzionali al Nodo AV/AC Napoli,55.8,11/06/2017
 cdp2017,181,A05,J11J04000040008,0300,Nuovo collegamento To P.ta Susa-To P.ta Nuova,3.25,31/12/2016
+cdp2017,181,A05,J17I10002780001,0349,Interventi completamento tratta AV/AC Roma-Napoli,108.77,15/12/2013
+cdp2017,181,A05,J26H10000220005,0346,Interventi completamento tratta AV/AC Torino-Milano,61.92,13/10/2022
+cdp2017,181,A05,J31C04000010008,0303,Nodo AV/AC di Milano - 1° fase.,43.99,13/12/2008
+cdp2017,181,A05,J37I10001060001,0355,Tratta AV/AC MI-BO: attrezzaggio tecnologico linea rilocata Modena- Rubiera,9.0,30/11/2014
+cdp2017,181,A05,J47I04000000008,0288,Adeguamento a standard AV/AC linea DD.ma Firenze-Roma,140.34,23/12/2016
+cdp2017,181,A05,J47I10000180001,0348,Interventi di completamento tratta AV/AC Bologna-Firenze,81.78,10/06/2012
+cdp2017,181,A05,J81C91000000008,0327,Nodo AV/AC Roma,764.3,24/05/2009
+cdp2017,181,A05,J97I10000180001,0347,Interventi di completamento tratta AV/AC Milano-Bologna,56.5,10/12/2014
 cdp2017,181,A05,J97I13000330001,1693,Adeguamento alimentazione gallerie AV Bologna-Firenze,8.75,31/12/2016
 agg2021,126,E.1,,C020,Manutenzione straordinaria navi traghetto,-0.33,31/12/2020
 agg2021,126,E.1,,C021,Manutenzione Incrementativa,-0.13,31/12/2020
