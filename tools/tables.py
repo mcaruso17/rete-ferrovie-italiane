@@ -7,8 +7,13 @@ NUM_LOOSE = re.compile(r"-?\d{1,3}(?:\.\d{3})*,\d{2}")
 INT_RE = re.compile(r"^-?\d{1,3}(?:\.\d{3})*$")
 
 
+# i richiami di nota dei CdP finiscono dentro al numero e non solo ai suoi lati
+# ("5.7*79,42"): vanno tolti prima di decidere se una cella e' numerica
+MARCATORI = re.compile(r"[*^°º\s]")
+
+
 def is_num(s):
-    s = s.strip()
+    s = MARCATORI.sub("", s)
     return bool(NUM_RE.match(s)) or bool(INT_RE.match(s)) or s in ("-", "‐")
 
 
@@ -16,7 +21,7 @@ def to_float(s):
     if s is None:
         return None
     s = s.strip().replace(" ", " ")
-    s = re.sub(r"[*^°º\s]", "", s)
+    s = MARCATORI.sub("", s)
     if s in ("", "-", "‐", "–"):
         return None
     neg = s.startswith("-") or s.startswith("(")

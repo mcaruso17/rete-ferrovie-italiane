@@ -38,7 +38,7 @@ jobs:
           # la piattaforma e' scritta come frammento (l'Artifact aggiunge lui
           # l'intestazione del documento): qui va completata a mano
           python3 tools/wrap_site.py piattaforma/index.html sito/index.html
-          cp data/*.csv data/cdp-rfi-dataset.json sito/data/
+          cp data/*.csv data/cdp-rfi-dataset.json data/validazione.txt sito/data/
           # i PDF di partenza, cosi' ogni numero resta verificabile alla fonte
           cp *.pdf sito/data/ 2>/dev/null || true
           touch sito/.nojekyll

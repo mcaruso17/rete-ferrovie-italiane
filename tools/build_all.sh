@@ -14,6 +14,11 @@ for spec in \
   python3 extract_extra.py "$f" "$id" "extra/$id.json"
 done
 python3 normalize.py raw extra ../data/cdp-rfi-dataset.json
+
+# i dati devono tornare con i totali stampati nei PDF prima di finire nel sito
+python3 validate.py ../data/cdp-rfi-dataset.json | tee ../data/validazione.txt
+
+python3 export_csv.py ../data/cdp-rfi-dataset.json ../data
 python3 build_app.py ../data/cdp-rfi-dataset.json /tmp/app-base.json
 
 # geografia: confini regionali ISTAT e attribuzione dedotta dai nomi
@@ -26,4 +31,6 @@ else
   echo "confini ISTAT assenti in $GEO: mappa e attribuzione regionale non aggiornate" >&2
   cp /tmp/app-base.json ../data/cdp-rfi-app.json
 fi
+# la piattaforma e' un file unico con i dati incorporati
+python3 inject_data.py ../piattaforma/index.html ../data/cdp-rfi-app.json
 echo "fatto"
