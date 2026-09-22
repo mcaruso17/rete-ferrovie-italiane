@@ -141,6 +141,54 @@ def tracciato(geom, pro):
     return ["".join(out), round((cx - x0) * S, 1), round((cy - y0) * S, 1)]
 
 
+def lungo_asse(punti):
+    """Indici dei punti ordinati lungo la direzione in cui sono piu' distesi.
+
+    L'ordine in cui il documento cita i luoghi non e' quello del percorso:
+    "Roma-Pescara ... Roma-Mandela-Tagliacozzo" nomina prima i due capi e poi
+    le stazioni in mezzo, e una spezzata che li unisse in quell'ordine
+    tornerebbe indietro due volte. Proiettare sull'asse principale del gruppo
+    (il primo autovettore della covarianza) rimette i punti in fila.
+
+    Funziona sui corridoi, cioe' sul caso che interessa. Su un nodo con
+    diramazioni a stella un ordine giusto non esiste.
+    """
+    n = len(punti)
+    mx = sum(p[0] for p in punti) / n
+    my = sum(p[1] for p in punti) / n
+    sxx = sum((p[0] - mx) ** 2 for p in punti)
+    syy = sum((p[1] - my) ** 2 for p in punti)
+    sxy = sum((p[0] - mx) * (p[1] - my) for p in punti)
+    tr, det = sxx + syy, sxx * syy - sxy * sxy
+    lam = tr / 2.0 + math.sqrt(max(0.0, tr * tr / 4.0 - det))
+    if abs(sxy) > 1e-9:
+        vx, vy = lam - syy, sxy
+    elif sxx >= syy:
+        vx, vy = 1.0, 0.0
+    else:
+        vx, vy = 0.0, 1.0
+    k = math.hypot(vx, vy) or 1.0
+    vx, vy = vx / k, vy / k
+    return sorted(range(n),
+                  key=lambda i: (punti[i][0] - mx) * vx + (punti[i][1] - my) * vy)
+
+
+def spezzata(istat, forme):
+    """Collegamento schematico fra i comuni nominati da un intervento.
+
+    NON e' il tracciato della linea: e' una spezzata fra i punti che il
+    contratto nomina, buona solo a far vedere in che zona cade l'opera.
+    """
+    pts = [(forme[i][1], forme[i][2]) for i in istat if i in forme]
+    if len(pts) < 2:
+        return None
+    ordine = lungo_asse(pts)
+    d = ["M%.1f %.1f" % pts[ordine[0]]]
+    for i in ordine[1:]:
+        d.append("L%.1f %.1f" % pts[i])
+    return "".join(d)
+
+
 def main():
     mun = json.load(open(MUN))
     prov = json.load(open(PROV))
@@ -175,12 +223,18 @@ def main():
                      for c in sorted(usati)}
     app["comuni_intervento"] = per_intervento
     app["mappa_comuni"] = forme
+    app["tratte_schematiche"] = {}
+    for cod, istat in per_intervento.items():
+        d = spezzata(istat, forme)
+        if d:
+            app["tratte_schematiche"][cod] = d
     json.dump(app, open(OUT, "w"), ensure_ascii=False, separators=(",", ":"))
 
     tot = len(app["progetti"])
     print("interventi con almeno un comune nominato: %d su %d (%d%%)"
           % (tot - senza, tot, round(100 * (tot - senza) / tot)))
     print("comuni distinti: %d, di cui disegnabili %d" % (len(usati), len(forme)))
+    print("collegamenti schematici: %d" % len(app["tratte_schematiche"]))
     n = collections.Counter(len(v) for v in per_intervento.values())
     print("comuni per intervento:", dict(sorted(n.items())))
     print("dimensione: %.0f KB" % (os.path.getsize(OUT) / 1024))

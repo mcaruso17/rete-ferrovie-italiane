@@ -3,7 +3,7 @@
 I JSON restano la fonte completa; questi CSV servono a chi vuole aprire i dati
 in un foglio di calcolo. Uso:  python3 export_csv.py ../data/cdp-rfi-dataset.json ../data
 """
-import sys, os, csv, json
+import sys, os, re, csv, json
 
 D = json.load(open(sys.argv[1]))
 OUT = sys.argv[2]
@@ -93,18 +93,31 @@ app = os.path.join(OUT, "cdp-rfi-app.json")
 if os.path.exists(app):
     A = json.load(open(app))
     com, per = A.get("comuni", {}), A.get("comuni_intervento", {})
+    forme, tratte = A.get("mappa_comuni", {}), A.get("tratte_schematiche", {})
     byc = {x["codice"]: x for x in D["progetti"]}
     for cod in sorted(per):
         p = byc.get(cod)
-        for istat in per[cod]:
+        # la stessa sequenza della spezzata sulla mappa: i punti messi in fila
+        # lungo l'asse del gruppo, che non e' l'ordine in cui il PDF li cita
+        seq = {}
+        if cod in tratte:
+            punti = re.findall(r"[ML](-?[\d.]+) (-?[\d.]+)", tratte[cod])
+            dove = {(str(forme[i][1]), str(forme[i][2])): i
+                    for i in per[cod] if i in forme}
+            for n, xy in enumerate(punti, 1):
+                if xy in dove:
+                    seq[dove[xy]] = n
+        for n_cit, istat in enumerate(per[cod], 1):
             c = com.get(istat)
             if p and c:
                 righe.append([cod, p["descrizione"], p["programma"], istat,
-                              c[0], c[1], c[3], c[2], p["costo_totale"],
+                              c[0], c[1], c[3], c[2], n_cit,
+                              seq.get(istat, ""), p["costo_totale"],
                               p["ultimo_doc"]])
     scrivi("comuni-interventi.csv",
            ["codice_intervento", "descrizione", "programma", "com_istat_code",
             "comune", "prov_acr", "provincia", "reg_istat_code",
+            "ordine_di_citazione", "ordine_geografico",
             "costo_totale_mln", "ultimo_documento"], righe)
 else:
     print("cdp-rfi-app.json assente: comuni-interventi.csv non aggiornato")
