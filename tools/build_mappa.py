@@ -100,6 +100,9 @@ def d_attr(parti):
 mappa = {
     "viewBox": "0 0 %.0f %.0f" % (W, H),
     "fonte": "Confini regionali ISTAT via openpolis/geojson-italy (CC BY 4.0)",
+    # la trasformazione serve a chi disegna altri confini sulla stessa mappa
+    # (i comuni): senza questi numeri i due strati non si sovrappongono
+    "proiezione": {"lat0": LAT0, "x0": x0, "y0": y0, "scala": S},
     "regioni": [{"n": r["nome"], "istat": r["istat"], "iso": r["iso"],
                  "d": d_attr(r["parti"])} for r in regioni],
 }

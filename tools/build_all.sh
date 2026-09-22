@@ -18,7 +18,6 @@ python3 normalize.py raw extra ../data/cdp-rfi-dataset.json
 # i dati devono tornare con i totali stampati nei PDF prima di finire nel sito
 python3 validate.py ../data/cdp-rfi-dataset.json | tee ../data/validazione.txt
 
-python3 export_csv.py ../data/cdp-rfi-dataset.json ../data
 python3 build_app.py ../data/cdp-rfi-dataset.json /tmp/app-base.json
 
 # geografia: confini regionali ISTAT e attribuzione dedotta dai nomi
@@ -26,11 +25,17 @@ GEO=${GEO:-/home/user/openpolis/geojson-italy/geojson}
 if [ -d "$GEO" ]; then
   python3 build_mappa.py "$GEO/limits_IT_regions.geojson" ../data/mappa-regioni.json 0.012 0.004
   python3 geo.py "$GEO/limits_IT_municipalities.geojson" "$GEO/limits_IT_provinces.geojson" \
-    /tmp/app-base.json ../data/mappa-regioni.json ../data/cdp-rfi-app.json
+    /tmp/app-base.json ../data/mappa-regioni.json /tmp/app-geo.json
+  # i comuni nominati nei titoli delle opere, sulla stessa proiezione
+  python3 comuni.py "$GEO/limits_IT_municipalities.geojson" "$GEO/limits_IT_provinces.geojson" \
+    /tmp/app-geo.json ../data/mappa-regioni.json ../data/cdp-rfi-app.json
 else
-  echo "confini ISTAT assenti in $GEO: mappa e attribuzione regionale non aggiornate" >&2
+  echo "confini ISTAT assenti in $GEO: mappa, regioni e comuni non aggiornati" >&2
   cp /tmp/app-base.json ../data/cdp-rfi-app.json
 fi
+# i CSV dei comuni leggono l'app appena costruita, quindi vengono dopo
+python3 export_csv.py ../data/cdp-rfi-dataset.json ../data
+
 # la piattaforma e' un file unico con i dati incorporati
 python3 inject_data.py ../piattaforma/index.html ../data/cdp-rfi-app.json
 echo "fatto"

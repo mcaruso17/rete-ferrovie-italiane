@@ -86,6 +86,29 @@ scrivi("capitoli-piani-gestionali.csv",
        ["documento", "pagina", "riga", "sezione", "capitolo",
         "piano_gestionale", "voce", "anno", "importo_mln"], righe)
 
+# --- i comuni che il contratto nomina, uno per riga ------------------------
+# questi NON sono i comuni attraversati: sono quelli citati nel titolo
+righe = []
+app = os.path.join(OUT, "cdp-rfi-app.json")
+if os.path.exists(app):
+    A = json.load(open(app))
+    com, per = A.get("comuni", {}), A.get("comuni_intervento", {})
+    byc = {x["codice"]: x for x in D["progetti"]}
+    for cod in sorted(per):
+        p = byc.get(cod)
+        for istat in per[cod]:
+            c = com.get(istat)
+            if p and c:
+                righe.append([cod, p["descrizione"], p["programma"], istat,
+                              c[0], c[1], c[3], c[2], p["costo_totale"],
+                              p["ultimo_doc"]])
+    scrivi("comuni-interventi.csv",
+           ["codice_intervento", "descrizione", "programma", "com_istat_code",
+            "comune", "prov_acr", "provincia", "reg_istat_code",
+            "costo_totale_mln", "ultimo_documento"], righe)
+else:
+    print("cdp-rfi-app.json assente: comuni-interventi.csv non aggiornato")
+
 # --- i CUP da interrogare su OpenCUP per avere la localizzazione -----------
 righe = []
 for p in sorted(D["progetti"], key=lambda x: x["codice"]):
