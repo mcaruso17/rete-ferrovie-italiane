@@ -26,6 +26,8 @@ tools/build_mappa.py confini regionali ISTAT -> tracciati SVG (esporta la proiez
 tools/toponimi.py    regole di lettura dei nomi di luogo, condivise
 tools/geo.py         attribuzione regionale
 tools/comuni.py      attribuzione comunale e spezzate schematiche
+tools/rete_osm.py    rete ferroviaria da un estratto OSM (fuori da build_all.sh)
+tools/build_rete.py  la rete sulla proiezione della mappa, semplificata
 tools/inject_data.py incorpora i dati nel file unico della piattaforma
 tools/wrap_site.py   dal frammento al documento HTML completo
 tools/audit.py       cerca pagine con tabelle non riconosciute
@@ -44,6 +46,17 @@ git clone --depth 1 https://github.com/openpolis/geojson-italy /home/user/openpo
 
 Senza, lo script salta la geografia e lo dice: mappa, regioni e comuni non
 vengono aggiornati, il resto sì.
+
+`data/rete-ferroviaria.geojson` e' versionato come i PDF, quindi la pagina Rete
+ferroviaria si ricostruisce senza rete. Si rigenera solo per aggiornare la
+geometria, e allora serve `osmium`, unica dipendenza esterna del progetto: per
+questo il passo sta fuori da build_all.sh.
+
+```sh
+pip install osmium
+curl -O https://download.openstreetmap.fr/extracts/europe/italy-latest.osm.pbf
+python3 tools/rete_osm.py italy-latest.osm.pbf
+```
 
 Per provare la piattaforma c'è Chromium headless in
 `/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell`.
@@ -103,12 +116,20 @@ dal gateway: la policy può essere stata allargata nel frattempo.
 
 ## Cosa resta aperto
 
-1. **Il tracciato vero delle linee.** Serve la geometria da OpenStreetMap
-   (relazioni `route=railway`, oppure `railway=rail` con `usage=main|branch`).
-   Con quella, i comuni realmente attraversati diventano calcolabili per
-   intersezione con i confini ISTAT che abbiamo già in locale, e le spezzate
-   schematiche vanno sostituite. 190 interventi su 336 hanno un nome a forma di
-   tratta, quindi agganciabile per nome con verifica manuale.
+1. **Agganciare gli interventi alle linee.** La geometria ora c'è: la pagina
+   *Rete ferroviaria* disegna i tracciati veri da OpenStreetMap
+   (`data/rete-ferroviaria.geojson`, 1.773 polilinee). Quello che manca è il
+   legame fra un intervento e la linea su cui insiste. 190 interventi su 336
+   hanno un nome a forma di tratta, quindi agganciabile per nome, ma serve
+   verifica manuale: i nomi dei capi tratta nei contratti non coincidono sempre
+   con i nomi OSM, e un aggancio sbagliato produrrebbe esattamente il tipo di
+   dato falso che questo progetto evita.
+
+   Da lì si arriverebbe ai comuni realmente attraversati, per intersezione con i
+   confini ISTAT. Finché quel legame non è verificato, le due cose restano
+   separate di proposito: la pagina *Comuni* continua a mostrare i comuni
+   nominati, e la rete sta in una pagina sua senza che nessun dato ne derivi.
+   Le spezzate schematiche non sono state toccate.
 2. **La localizzazione dei CUP.** `data/cup-da-cercare.csv` ha 1.971 righe pronte
    per un export OpenCUP. Il CUP **non** contiene geografia: verificato su 130
    interventi mono-regione, 127 iniziano con la stessa lettera. Va interrogata la

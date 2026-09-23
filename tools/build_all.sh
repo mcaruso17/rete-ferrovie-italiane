@@ -28,7 +28,16 @@ if [ -d "$GEO" ]; then
     /tmp/app-base.json ../data/mappa-regioni.json /tmp/app-geo.json
   # i comuni nominati nei titoli delle opere, sulla stessa proiezione
   python3 comuni.py "$GEO/limits_IT_municipalities.geojson" "$GEO/limits_IT_provinces.geojson" \
-    /tmp/app-geo.json ../data/mappa-regioni.json ../data/cdp-rfi-app.json
+    /tmp/app-geo.json ../data/mappa-regioni.json /tmp/app-comuni.json
+  # la rete vera, sulla stessa proiezione. La geometria e' versionata: qui non
+  # si legge nessun PBF, quindi resta tutto nella libreria standard
+  if [ -f ../data/rete-ferroviaria.geojson ]; then
+    python3 build_rete.py ../data/rete-ferroviaria.geojson ../data/mappa-regioni.json \
+      /tmp/app-comuni.json ../data/cdp-rfi-app.json
+  else
+    echo "data/rete-ferroviaria.geojson assente: pagina Rete ferroviaria non aggiornata" >&2
+    cp /tmp/app-comuni.json ../data/cdp-rfi-app.json
+  fi
 else
   echo "confini ISTAT assenti in $GEO: mappa, regioni e comuni non aggiornati" >&2
   cp /tmp/app-base.json ../data/cdp-rfi-app.json
