@@ -245,6 +245,28 @@ tbody tr.clickable{cursor:pointer}
    pur sempre rete, nasconderla darebbe l'idea di una rete piu' piccola */
 .cmp-box.senza-av .rt-av path{stroke:var(--ink);stroke-opacity:.8;
   stroke-width:calc(1.05 * var(--rt-k))}
+/* ---- scheda dell'intervento ---- */
+.sk-sint{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);margin-bottom:14px}
+.sk-sint>div{background:var(--surface);padding:11px 13px}
+.sk-k{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-3)}
+.sk-sint b{font-size:21px;font-weight:600;display:inline-block;margin-top:4px}
+.sk-u{font-size:11.5px;color:var(--ink-3);margin-left:4px}
+.sk-q{font-size:11.5px;color:var(--ink-2);margin-left:7px}
+.sk-nota{font-size:12px;color:var(--ink-3);margin:0 0 16px}
+/* l'avviso sta dentro l'elenco delle linee e non nel Metodo: la scheda si
+   apre anche da un link diretto, e chi arriva cosi' il Metodo non lo legge */
+.sk-avv{font-size:12.5px;line-height:1.5;border-left:3px solid var(--accent);
+  background:var(--surface-2);padding:9px 12px;margin:0 0 11px}
+.sk-linee{list-style:none;margin:0 0 4px;padding:0}
+.sk-linee li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 9px;
+  align-items:baseline;padding:7px 0;border-bottom:1px solid var(--line)}
+.sk-conf{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;
+  padding:2px 6px;border-radius:2px;grid-row:span 2;align-self:center}
+.sk-alta{background:var(--accent);color:#fff}
+.sk-media{background:var(--surface-2);color:var(--ink-2);border:1px solid var(--line)}
+.sk-ln{font-weight:500}
+.sk-perche{font-size:12px;color:var(--ink-3);grid-column:2}
 .cmp-box .tratta-hit{fill:none;stroke:transparent;stroke-width:9;
   vector-effect:non-scaling-stroke;cursor:pointer;pointer-events:stroke}
 .cmp-box .seg{fill:var(--accent);fill-opacity:.9;stroke:var(--surface);
@@ -801,12 +823,23 @@ function cssv(n){ return getComputedStyle(document.documentElement).getPropertyV
 function el(id){ return document.getElementById(id); }
 
 /* ================= navigazione fra le pagine ================= */
+var schedaAttesa = null;
 var PAGINE = {"/":"p-home","/quadro":"p-quadro","/mappa":"p-mappa",
   "/comuni":"p-comuni","/rete":"p-rete","/interventi":"p-interventi","/opere":"p-opere",
   "/bilancio":"p-bilancio","/glossario":"p-glossario","/metodo":"p-metodo"};
 
 function vaiA(){
   var rotta = (location.hash || "#/").slice(1);
+  // #/opera/<codice> apre la scheda sopra la pagina degli interventi: serve a
+  // poter mandare a qualcuno il link di una singola opera, e a tornarci col
+  // tasto indietro invece di ripartire dalla ricerca
+  var op = rotta.match(/^\/opera\/(.+)$/);
+  if(op){
+    rotta = "/interventi";
+    schedaAttesa = decodeURIComponent(op[1]);
+  } else if(dlg && dlg.open){
+    dlg.close();
+  }
   if(!PAGINE[rotta]) rotta = "/";
   Object.keys(PAGINE).forEach(function(k){
     el(PAGINE[k]).classList.toggle("attiva", k===rotta); });
@@ -817,6 +850,7 @@ function vaiA(){
   if(rotta==="/mappa") disegnaMappa();
   if(rotta==="/comuni") disegnaComuni();
   if(rotta==="/rete") disegnaRete();
+  if(schedaAttesa){ var c = schedaAttesa; schedaAttesa = null; apriDettaglio(c, true); }
   document.title = "Binario Contabile";
   window.scrollTo(0,0);
 }
@@ -1585,15 +1619,21 @@ el("pg-ultima").addEventListener("click", function(){ pagina=1e9; renderTabella(
 /* ================= dettaglio intervento ================= */
 var dlg = el("dlg");
 el("d-close").addEventListener("click", function(){ dlg.close(); });
+// chiudere la scheda, con la X o con Esc, riporta l'indirizzo all'elenco: un
+// #/opera/... rimasto nella barra riaprirebbe la scheda al ricaricamento
+dlg.addEventListener("close", function(){
+  if(/^#\/opera\//.test(location.hash)) location.hash = "#/interventi";
+});
 el("tb-prog").addEventListener("click", function(e){
   var tr=e.target.closest("tr[data-c]"); if(tr) apriDettaglio(tr.dataset.c); });
 el("tb-prog").addEventListener("keydown", function(e){
   if(e.key!=="Enter" && e.key!==" ") return;
   var tr=e.target.closest("tr[data-c]"); if(tr){ e.preventDefault(); apriDettaglio(tr.dataset.c); } });
 
-function apriDettaglio(code){
+function apriDettaglio(code, daRotta){
   var p = D.progetti.filter(function(x){ return x.c===code; })[0];
   if(!p) return;
+  if(!daRotta) location.hash = "#/opera/" + encodeURIComponent(code);
   var cups = (p.cups && p.cups.length) ? p.cups : (p.cup ? [p.cup] : []);
   el("d-code").textContent = p.c + (cups.length ? "  ·  CUP "+cups.join("  ") : "");
   el("d-nome").textContent = p.n || "(senza descrizione nel documento)";
@@ -1618,8 +1658,63 @@ function apriDettaglio(code){
     ["Paniere PNRR", p.pnrr ? "sì" : "no"],
     ["Dicitura del programma nel PDF", p.po||"–"]
   ];
-  var h = '<dl class="kv">'+kv.map(function(x){
+  var h = "";
+
+  // Il riepilogo prima di tutto: sono le quattro domande che uno si fa
+  // guardando un'opera, e finora stavano sparse nella tabella sotto.
+  var ref = p.h[docSel] || p.h[p.ud];
+  if(ref){
+    var quota = function(v){
+      return (ref[0] && v!==null && v!==undefined)
+        ? '<span class="sk-q">'+nf(v/ref[0]*100,0)+'%</span>' : ""; };
+    h += '<div class="sk-sint">'+
+      '<div><span class="sk-k">Costo dell\u2019opera</span>'+
+        '<b class="num">'+nf(ref[0],1)+'</b><span class="sk-u">mln &euro;</span></div>'+
+      '<div><span class="sk-k">Speso a oggi</span>'+
+        '<b class="num">'+nf(ref[3],1)+'</b><span class="sk-u">mln &euro;</span>'+quota(ref[3])+'</div>'+
+      '<div><span class="sk-k">Risorse assegnate</span>'+
+        '<b class="num">'+nf(ref[1],1)+'</b><span class="sk-u">mln &euro;</span>'+quota(ref[1])+'</div>'+
+      '<div><span class="sk-k">Ancora da finanziare</span>'+
+        '<b class="num">'+nf(ref[2],1)+'</b><span class="sk-u">mln &euro;</span>'+quota(ref[2])+'</div>'+
+      '</div>';
+    h += '<p class="sk-nota">Fotografia al contratto '+esc(BYDOC[docSel] && p.h[docSel]
+      ? BYDOC[docSel].titolo : BYDOC[p.ud].titolo)+
+      '. &laquo;Speso a oggi&raquo; e\u0300 l\u2019avanzamento che il contratto dichiara, non un pagamento verificato.</p>';
+  }
+
+  h += '<dl class="kv">'+kv.map(function(x){
     return "<dt>"+esc(x[0])+"</dt><dd>"+esc(x[1])+"</dd>"; }).join("")+"</dl>";
+
+  // Su quale linea: l'unico dato del sito che i documenti non contengono.
+  // Va marcato come tale ogni volta che si mostra, non una volta sola nel
+  // Metodo, perche' la scheda si apre anche arrivandoci da un link diretto.
+  var LIN = (D.linee_intervento || {})[p.c] || [];
+  h += "<h3>Su quale linea</h3>";
+  if(!LIN.length){
+    h += '<p class="sk-nota">Nessuna linea individuata. Il nome dell\u2019intervento non '+
+      'nomina capi di linea riconoscibili e non cita comuni attraversati da una linea nota.</p>';
+  } else {
+    h += '<div class="sk-avv"><strong>Associazione dedotta, non dichiarata.</strong> '+
+      'I Contratti di Programma non dicono su quale linea insiste un intervento: '+
+      'queste corrispondenze sono ricavate confrontando il nome dell\u2019opera con i nomi '+
+      'delle linee in OpenStreetMap e verificando quali linee attraversano i comuni citati. '+
+      '<em>Sono in corso di verifica e possono essere sbagliate.</em> Nessun altro dato di '+
+      'questo sito ne deriva.</div>';
+    h += '<ul class="sk-linee">'+LIN.map(function(t){
+      var perche = [];
+      if(t.prova.indexOf("nome")>=0)
+        perche.push("l\u2019opera nomina entrambi i capi (" + t.capi.join(", ") + ")");
+      else if(t.prova.indexOf("nome-parziale")>=0)
+        perche.push("l\u2019opera nomina " + t.capi.join(", "));
+      if(t.comuni)
+        perche.push("la linea attraversa " + t.comuni +
+          (t.comuni===1 ? " comune citato" : " comuni citati"));
+      return '<li><span class="sk-conf sk-'+t.conf+'">'+t.conf+'</span>'+
+        '<span class="sk-ln">'+esc(t.nome)+'</span>'+
+        '<span class="sk-perche">'+esc(perche.join(" \u00b7 "))+'</span></li>';
+    }).join("")+'</ul>';
+  }
+
   h += "<h3>Come cambia da un contratto all'altro</h3>";
   h += '<div class="tbl-wrap" style="border:1px solid var(--line)"><table><thead><tr>'+
     '<th>Contratto</th><th class="r">Costo</th><th class="r">Assegnate</th>'+
