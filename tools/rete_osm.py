@@ -143,11 +143,61 @@ def semplifica(pts, toll):
     return [p for p, k in zip(pts, tieni) if k]
 
 
+def leggi_linee(pbf):
+    """Le linee nominate, dalle relazioni route=railway.
+
+    Le way di per se' non servono a questo scopo: il loro tag `name`, quando
+    c'e', porta numeri di binario e nomi di galleria ("2 binario", "Viadukt
+    Glinscica"). Il nome dell'infrastruttura sta sulla relazione che raccoglie
+    le way di una linea: "Treviglio-Cremona", "Savona - San Giuseppe di Cairo".
+    Sono queste che permettono di agganciare un intervento del contratto alla
+    linea su cui insiste.
+
+    Due passate sul file: la prima raccoglie le relazioni e gli identificativi
+    delle way che le compongono, la seconda le geometrie di quelle way. Non si
+    puo' fare in una sola perche' nel PBF le relazioni stanno dopo le way.
+    """
+    rel = {}
+    serve = set()
+    for r in (osmium.FileProcessor(pbf, osmium.osm.RELATION)
+              .with_filter(osmium.filter.KeyFilter("route"))):
+        t = r.tags
+        if t.get("route") != "railway":
+            continue
+        nome = t.get("name")
+        if not nome:
+            continue
+        ways = [m.ref for m in r.members if m.type == "w"]
+        if not ways:
+            continue
+        rel[r.id] = {"nome": nome, "ways": ways,
+                     "uso": t.get("usage") or t.get("service") or "",
+                     "operatore": t.get("operator") or ""}
+        serve.update(ways)
+
+    geom = {}
+    proc = (osmium.FileProcessor(pbf, osmium.osm.NODE | osmium.osm.WAY)
+            .with_locations("flex_mem")
+            .with_filter(osmium.filter.EntityFilter(osmium.osm.WAY)))
+    for w in proc:
+        if w.id not in serve:
+            continue
+        pts = []
+        for n in w.nodes:
+            if n.location.valid():
+                pts.append((round(n.lon, 6), round(n.lat, 6)))
+        if len(pts) >= 2:
+            geom[w.id] = pts
+    return rel, geom
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("pbf", help="estratto .osm.pbf che copre l'Italia")
     ap.add_argument("--out", default=os.path.join(ROOT, "data",
                                                   "rete-ferroviaria.geojson"))
+    ap.add_argument("--linee", default=os.path.join(ROOT, "data",
+                                                    "linee-ferroviarie.geojson"))
     ap.add_argument("--tolleranza", type=float, default=0.00014,
                     help="tolleranza Douglas-Peucker in gradi (predefinita "
                          "0,00014, circa 15 m alle latitudini italiane)")
@@ -184,6 +234,34 @@ def main():
     print("alta velocita   %6d polilinee" % av)
     print("scritto         %6.2f MB  %s"
           % (os.path.getsize(args.out) / 1e6, args.out))
+
+    # ------------------------------------------------- linee nominate
+    rel, geom = leggi_linee(args.pbf)
+    lfeats = []
+    for rid, r in sorted(rel.items()):
+        parti = [geom[w] for w in r["ways"] if w in geom]
+        if not parti:
+            continue
+        # le way di una relazione arrivano nell'ordine in cui il contributore
+        # le ha inserite, che non e' garantito essere quello geografico: si
+        # ricuce come per la rete, poi si semplifica
+        tratti = []
+        for catena in cuci(parti):
+            s2 = semplifica(catena, args.tolleranza)
+            if len(s2) >= 2:
+                tratti.append([list(p) for p in s2])
+        if not tratti:
+            continue
+        lfeats.append({
+            "type": "Feature",
+            "properties": {"id": rid, "nome": r["nome"], "uso": r["uso"],
+                           "operatore": r["operatore"]},
+            "geometry": {"type": "MultiLineString", "coordinates": tratti},
+        })
+    json.dump({"type": "FeatureCollection", "features": lfeats},
+              open(args.linee, "w"), ensure_ascii=False, separators=(",", ":"))
+    print("linee nominate  %6d relazioni route=railway, %6.2f MB  %s"
+          % (len(lfeats), os.path.getsize(args.linee) / 1e6, args.linee))
 
 
 if __name__ == "__main__":

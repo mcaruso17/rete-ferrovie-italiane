@@ -33,7 +33,11 @@ if [ -d "$GEO" ]; then
   # si legge nessun PBF, quindi resta tutto nella libreria standard
   if [ -f ../data/rete-ferroviaria.geojson ]; then
     python3 build_rete.py ../data/rete-ferroviaria.geojson ../data/mappa-regioni.json \
-      /tmp/app-comuni.json ../data/cdp-rfi-app.json
+      /tmp/app-comuni.json /tmp/app-rete.json
+    # l'aggancio intervento-linea: una deduzione, non un dato dei contratti.
+    # Viene dopo comuni.py perche' usa i comuni nominati come seconda prova.
+    python3 aggancio.py ../data/linee-ferroviarie.geojson ../data/mappa-regioni.json \
+      /tmp/app-rete.json ../data/cdp-rfi-app.json
   else
     echo "data/rete-ferroviaria.geojson assente: pagina Rete ferroviaria non aggiornata" >&2
     cp /tmp/app-comuni.json ../data/cdp-rfi-app.json
