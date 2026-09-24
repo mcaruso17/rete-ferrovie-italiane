@@ -31,10 +31,20 @@ for p in d["progetti"]:
         "sf": p["stato_finanziario"],
         "pag": p["pagina"],
         "ud": p["ultimo_doc"],
+        "pd": p.get("primo_doc"),
+        # il fabbisogno residuo per orizzonte: e' la risposta a "quanto
+        # servira' ancora e quando", e finora restava nel dataset
+        "fab": {k: r2(v) for k, v in (p.get("fabbisogni") or {}).items()
+                if v},
+        # pagina e stato attuativo stanno per documento, non per intervento:
+        # la scheda mostrava la stessa pagina su tutte le righe della storia,
+        # che e' proprio il numero che serve a ritrovare il dato nel PDF giusto
         "h": {k: [r2(st[k]["costo"]), r2(st[k]["finanziato"]),
                   r2(st[k]["da_finanziare"]), r2(st[k]["avanzamento"]),
                   [r2(v) for v in (st[k]["fonti"] or {}).values()]
-                  if st[k].get("fonti") else None]
+                  if st[k].get("fonti") else None,
+                  st[k].get("pagina"),
+                  (st[k].get("stato") or [])[:2]]
               for k in st if k in DOCS},
     })
 
