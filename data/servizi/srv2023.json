@@ -1,0 +1,2406 @@
+{
+ "documento": "srv2023",
+ "pagine": [
+  9,
+  10,
+  11,
+  12,
+  13
+ ],
+ "linee": [
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C001",
+   "linea": "Asti - Castagnole",
+   "treni_giorno": 0,
+   "km": 20.1,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C003",
+   "linea": "Aosta - Pre' S. Didier",
+   "treni_giorno": 0,
+   "km": 31.4,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C004",
+   "linea": "Casale Popolo - Casale Monferrato",
+   "treni_giorno": 20.0,
+   "km": 3.5,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C005",
+   "linea": "Bivio Castel Rosso - Casale Popolo",
+   "treni_giorno": 21.0,
+   "km": 41.4,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C006",
+   "linea": "Casale Monferrato - Valenza",
+   "treni_giorno": 19.0,
+   "km": 18.8,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C008",
+   "linea": "Sangone - Pinerolo",
+   "treni_giorno": 40.0,
+   "km": 30.5,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C010",
+   "linea": "Cuneo - Ventimiglia",
+   "treni_giorno": 17.0,
+   "km": 48.9,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C012",
+   "linea": "Fossano - Mondovì",
+   "treni_giorno": 36.0,
+   "km": 19.0,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C013",
+   "linea": "Mondovì - Ceva",
+   "treni_giorno": 36.0,
+   "km": 19.2,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C014",
+   "linea": "Ceva - S.Giuseppe Di C.",
+   "treni_giorno": 33.0,
+   "km": 25.4,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C015",
+   "linea": "Carmagnola - Bra",
+   "treni_giorno": 31.0,
+   "km": 20.4,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C016",
+   "linea": "Alessandria - Cantalupo",
+   "treni_giorno": 18.0,
+   "km": 7.5,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C017",
+   "linea": "Acqui Terme - Ovada",
+   "treni_giorno": 22.0,
+   "km": 14.8,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C018",
+   "linea": "Cantalupo - Acqui Terme",
+   "treni_giorno": 16.0,
+   "km": 26.4,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C019",
+   "linea": "Acqui Terme - S.Giuseppe Di C.",
+   "treni_giorno": 17.0,
+   "km": 48.0,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C020",
+   "linea": "Vercelli - Mortara",
+   "treni_giorno": 20.0,
+   "km": 25.2,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C021",
+   "linea": "Mortara - Pavia",
+   "treni_giorno": 27.0,
+   "km": 37.4,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C022",
+   "linea": "Arona - Oleggio",
+   "treni_giorno": 24.0,
+   "km": 19.2,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C023",
+   "linea": "Oleggio - Vignale",
+   "treni_giorno": 32.0,
+   "km": 13.3,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C025",
+   "linea": "Novara - Mortara",
+   "treni_giorno": 29.0,
+   "km": 24.0,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C026",
+   "linea": "Mortara - Torreberetti",
+   "treni_giorno": 25.0,
+   "km": 22.2,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C028",
+   "linea": "Cava Carbonara - Torreberetti",
+   "treni_giorno": 25.0,
+   "km": 35.6,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C029",
+   "linea": "Domodossola - Villadossola",
+   "treni_giorno": 25.0,
+   "km": 6.5,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C030",
+   "linea": "Villadossola - Vogogna Ossola",
+   "treni_giorno": 27.0,
+   "km": 8.1,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C031",
+   "linea": "Vogogna Ossola - Premosello  Chiov.",
+   "treni_giorno": 27.0,
+   "km": 2.6,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C032",
+   "linea": "Premosello Chiov. - Cuzzago",
+   "treni_giorno": 40.0,
+   "km": 3.8,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C033",
+   "linea": "Cuzzago - Borgomanero",
+   "treni_giorno": 40.0,
+   "km": 37.2,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C035",
+   "linea": "Varallo Sesia - Vignale",
+   "treni_giorno": 0,
+   "km": 50.8,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C036",
+   "linea": "Laveno Mombello - Oleggio",
+   "treni_giorno": 24.0,
+   "km": 36.2,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C037",
+   "linea": "Tirano - Sondrio",
+   "treni_giorno": 30.0,
+   "km": 26.0,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C038",
+   "linea": "Chiavenna - Colico",
+   "treni_giorno": 30.0,
+   "km": 26.3,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C041",
+   "linea": "Albate Camerlata - Molteno",
+   "treni_giorno": 18.0,
+   "km": 22.1,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C042",
+   "linea": "Monza - Molteno",
+   "treni_giorno": 35.0,
+   "km": 29.2,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C043",
+   "linea": "Molteno - Lecco",
+   "treni_giorno": 39.0,
+   "km": 14.7,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C047",
+   "linea": "Seregno - Ponte S.Pietro",
+   "treni_giorno": 24.0,
+   "km": 31.9,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C052",
+   "linea": "S. Zeno Folzano - Olmeneta",
+   "treni_giorno": 32.0,
+   "km": 33.7,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C054",
+   "linea": "Cremona - Castelvetro",
+   "treni_giorno": 28.0,
+   "km": 6.1,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C055",
+   "linea": "Castelvetro - Fidenza",
+   "treni_giorno": 27.0,
+   "km": 27.8,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C056",
+   "linea": "Piacenza - Castelvetro",
+   "treni_giorno": 3.0,
+   "km": 24.9,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C057",
+   "linea": "Treviglio - Olmeneta",
+   "treni_giorno": 35.0,
+   "km": 53.7,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C060",
+   "linea": "Pavia - Casalpusterlengo",
+   "treni_giorno": 22.0,
+   "km": 41.6,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C065",
+   "linea": "S. Zeno Folzano - Piadena",
+   "treni_giorno": 25.0,
+   "km": 45.7,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C066",
+   "linea": "Piadena - Parma",
+   "treni_giorno": 30.0,
+   "km": 39.7,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C069",
+   "linea": "Vicenza - Schio",
+   "treni_giorno": 29.0,
+   "km": 29.7,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C071",
+   "linea": "Mantova - Suzzara",
+   "treni_giorno": 36.0,
+   "km": 18.9,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C072",
+   "linea": "Suzzara - Modena",
+   "treni_giorno": 38.0,
+   "km": 49.0,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C073",
+   "linea": "Mantova - Nogara",
+   "treni_giorno": 18.0,
+   "km": 26.2,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C074",
+   "linea": "Nogara - Cerea",
+   "treni_giorno": 15.0,
+   "km": 12.3,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C075",
+   "linea": "Cerea - Legnago",
+   "treni_giorno": 36.0,
+   "km": 7.4,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C076",
+   "linea": "Calalzo Pc.Cortina - Ponte delle Alpi",
+   "treni_giorno": 10.0,
+   "km": 36.2,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C077",
+   "linea": "Ponte delle Alpi - Belluno",
+   "treni_giorno": 33.0,
+   "km": 7.6,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C078",
+   "linea": "Belluno - Montebelluna",
+   "treni_giorno": 14.0,
+   "km": 65.0,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C079",
+   "linea": "Montebelluna - Castelfranco Veneto",
+   "treni_giorno": 30.0,
+   "km": 16.3,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C083",
+   "linea": "Montebelluna - Treviso",
+   "treni_giorno": 17.0,
+   "km": 20.1,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C084",
+   "linea": "Treviso  - Portogruaro",
+   "treni_giorno": 36.0,
+   "km": 52.5,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C085",
+   "linea": "Ponte delle Alpi - Conegliano",
+   "treni_giorno": 24.0,
+   "km": 38.1,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C089",
+   "linea": "Bassano del Grappa - Cittadella",
+   "treni_giorno": 24.0,
+   "km": 14.6,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C090",
+   "linea": "Cittadella - Camposampiero",
+   "treni_giorno": 20.0,
+   "km": 14.5,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C093",
+   "linea": "S.Giuseppe Di C. - Savona",
+   "treni_giorno": 21.0,
+   "km": 23.3,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C094",
+   "linea": "Udine - Palmanova",
+   "treni_giorno": 20.0,
+   "km": 23.2,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C095",
+   "linea": "Palmanova - Cervignano",
+   "treni_giorno": 18.0,
+   "km": 15.1,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C096",
+   "linea": "S.Giuseppe Di C. - Ferrania",
+   "treni_giorno": 18.0,
+   "km": 3.6,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C097",
+   "linea": "Ferrania - Savona",
+   "treni_giorno": 18.0,
+   "km": 16.7,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C099",
+   "linea": "Ferrara - Portomaggiore",
+   "treni_giorno": 32.0,
+   "km": 23.4,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C100",
+   "linea": "Portomaggiore - Lavezzola",
+   "treni_giorno": 32.0,
+   "km": 17.2,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C101",
+   "linea": "Lavezzola - Ravenna",
+   "treni_giorno": 32.0,
+   "km": 32.0,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C102",
+   "linea": "Ravenna - Rimini",
+   "treni_giorno": 40.0,
+   "km": 49.8,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C103",
+   "linea": "Faenza - Granarolo",
+   "treni_giorno": 34.0,
+   "km": 8.9,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C104",
+   "linea": "Granarolo - Lugo",
+   "treni_giorno": 3.0,
+   "km": 7.6,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C105",
+   "linea": "Lugo - Lavezzola",
+   "treni_giorno": 4.0,
+   "km": 22.2,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C108",
+   "linea": "Russi - Ravenna",
+   "treni_giorno": 38.0,
+   "km": 32.7,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C109",
+   "linea": "Granarolo - Russi",
+   "treni_giorno": 31.0,
+   "km": 8.1,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C110",
+   "linea": "Pontassieve - Borgo S.Lorenzo",
+   "treni_giorno": 31.0,
+   "km": 32.7,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C111",
+   "linea": "Borgo S.Lorenzo - Faenza",
+   "treni_giorno": 18.0,
+   "km": 66.3,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C112",
+   "linea": "Firenze S. Marco V. - Borgo S.Lorenzo",
+   "treni_giorno": 34.0,
+   "km": 32.0,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C115",
+   "linea": "Porretta Terme - Pistoia",
+   "treni_giorno": 11.0,
+   "km": 39.8,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C119",
+   "linea": "Aulla - Lucca",
+   "treni_giorno": 23.0,
+   "km": 89.9,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C120",
+   "linea": "Campiglia M.MA - Piombino M. ma",
+   "treni_giorno": 14.0,
+   "km": 16.4,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C122",
+   "linea": "Siena - Asciano",
+   "treni_giorno": 22.0,
+   "km": 31.7,
+   "pagina": 9
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C123",
+   "linea": "Asciano - Montallese",
+   "treni_giorno": 22.0,
+   "km": 47.6,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C124",
+   "linea": "Porto D'Ascoli - Ascoli Piceno",
+   "treni_giorno": 25.0,
+   "km": 27.8,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C125",
+   "linea": "Pescara - Sulmona",
+   "treni_giorno": 37.0,
+   "km": 68.3,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C126",
+   "linea": "Civitanova - Albacina",
+   "treni_giorno": 20.0,
+   "km": 86.6,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C127",
+   "linea": "Terontola - Foligno",
+   "treni_giorno": 34.0,
+   "km": 82.2,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C129",
+   "linea": "Viterbo - Cesano",
+   "treni_giorno": 39.0,
+   "km": 60.1,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C130",
+   "linea": "Campoleone - Nettuno",
+   "treni_giorno": 38.0,
+   "km": 25.6,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C131",
+   "linea": "Sulmona - Avezzano",
+   "treni_giorno": 16.0,
+   "km": 64.9,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C132",
+   "linea": "Avezzano - Guidonia-M.-S.A.",
+   "treni_giorno": 31.0,
+   "km": 81.2,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C133",
+   "linea": "Avezzano - Roccasecca",
+   "treni_giorno": 11.0,
+   "km": 79.5,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C134",
+   "linea": "Ciampino - Albano Laziale",
+   "treni_giorno": 32.0,
+   "km": 14.5,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C136",
+   "linea": "Battipaglia - Potenza Inf.Re",
+   "treni_giorno": 21.0,
+   "km": 91.3,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C138",
+   "linea": "S.Marcellino F. - B.Gricignano",
+   "treni_giorno": 23.0,
+   "km": 25.2,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C139",
+   "linea": "Bosco Redole - Carpinone",
+   "treni_giorno": 0,
+   "km": 28.9,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C140",
+   "linea": "Carpinone - Isernia",
+   "treni_giorno": 0,
+   "km": 10.6,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C141",
+   "linea": "Isernia - Vairano",
+   "treni_giorno": 11.0,
+   "km": 45.2,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C142",
+   "linea": "Sarno - Codola",
+   "treni_giorno": 0,
+   "km": 7.8,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C143",
+   "linea": "Cancello - Sarno",
+   "treni_giorno": 32.0,
+   "km": 34.1,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C144",
+   "linea": "Sarno - Biv. S.Lucia 123",
+   "treni_giorno": 37.0,
+   "km": 6.5,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C145",
+   "linea": "Nocera Inferiore - Codola",
+   "treni_giorno": 8.0,
+   "km": 4.2,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C148",
+   "linea": "Mercato S.Severino - Salerno",
+   "treni_giorno": 25.0,
+   "km": 17.6,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C153",
+   "linea": "Cervaro - Rocchetta S.A.L.",
+   "treni_giorno": 23.0,
+   "km": 41.4,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C154",
+   "linea": "Rocchetta S.A.L. - Potenza",
+   "treni_giorno": 25.0,
+   "km": 69.0,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C155",
+   "linea": "Potenza  - Metaponto",
+   "treni_giorno": 12.0,
+   "km": 107.1,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C156",
+   "linea": "Metaponto - Taranto",
+   "treni_giorno": 21.0,
+   "km": 45.5,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C157",
+   "linea": "Taranto - Brindisi",
+   "treni_giorno": 17.0,
+   "km": 69.2,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C160",
+   "linea": "Metaponto - Sibari",
+   "treni_giorno": 12.0,
+   "km": 79.0,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C161",
+   "linea": "Sibari - Catanzaro Lido",
+   "treni_giorno": 22.0,
+   "km": 172.5,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C162",
+   "linea": "Catanzaro Lido - REGGIO C CLE",
+   "treni_giorno": 29.0,
+   "km": 177.6,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C163",
+   "linea": "Lamezia Terme - Catanzaro Lido",
+   "treni_giorno": 24.0,
+   "km": 43.2,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C165",
+   "linea": "S.Lucido Marina - Bivio Pantani",
+   "treni_giorno": 8.0,
+   "km": 4.2,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C166",
+   "linea": "B.S.Antonello - Bivio Settimo",
+   "treni_giorno": 10.0,
+   "km": 2.7,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C168",
+   "linea": "Sibari - Castiglione C.",
+   "treni_giorno": 21.0,
+   "km": 59.5,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C171",
+   "linea": "Lentini Diramazione - Siracusa",
+   "treni_giorno": 28.0,
+   "km": 60.1,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C172",
+   "linea": "Lentini Diramazione - Gela",
+   "treni_giorno": 4.0,
+   "km": 111.4,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C173",
+   "linea": "Gela - Modica",
+   "treni_giorno": 8.0,
+   "km": 89.7,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C174",
+   "linea": "Modica - Siracusa",
+   "treni_giorno": 3.0,
+   "km": 91.7,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C175",
+   "linea": "Messina - Fiumetorto",
+   "treni_giorno": 39.0,
+   "km": 199.3,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C177",
+   "linea": "Caltanissetta Xirbi - Roccapalumba-A.",
+   "treni_giorno": 22.0,
+   "km": 56.6,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C178",
+   "linea": "Bicocca - Caltanissetta Xirbi",
+   "treni_giorno": 20.0,
+   "km": 107.5,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C180",
+   "linea": "Roccapalumba-A. - Fiumetorto",
+   "treni_giorno": 34.0,
+   "km": 26.0,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C182",
+   "linea": "Roccapalumba-A. - Aragona Caldare",
+   "treni_giorno": 24.0,
+   "km": 46.7,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C183",
+   "linea": "Aragona Caldare - Agrigento",
+   "treni_giorno": 29.0,
+   "km": 12.6,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C185",
+   "linea": "Olbia - Ozieri Chilivani",
+   "treni_giorno": 16.0,
+   "km": 70.5,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C186",
+   "linea": "Sassari - Ozieri Chilivani",
+   "treni_giorno": 19.0,
+   "km": 46.6,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C187",
+   "linea": "Ozieri Chilivani - Decimomannu",
+   "treni_giorno": 24.0,
+   "km": 191.5,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C189",
+   "linea": "Villamassargia  - Decimomannu",
+   "treni_giorno": 32.0,
+   "km": 28.6,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C190",
+   "linea": "Iglesias - Villamassargia",
+   "treni_giorno": 32.0,
+   "km": 9.1,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C191",
+   "linea": "Carbonia  - Villamassargia",
+   "treni_giorno": 26.0,
+   "km": 22.4,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C192",
+   "linea": "Alcamo - Castelvetrano - Trapani",
+   "treni_giorno": 18.0,
+   "km": 116.1,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C193",
+   "linea": "Alessandria - Ovada",
+   "treni_giorno": 25.0,
+   "km": 33.0,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C194",
+   "linea": "Asciano - Monte Antico",
+   "treni_giorno": 0,
+   "km": 51.2,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C195",
+   "linea": "Asti - Nizza Monferrato -Acqui Terme",
+   "treni_giorno": 11.0,
+   "km": 45.5,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C196",
+   "linea": "Viterbo - Attigliano",
+   "treni_giorno": 13.0,
+   "km": 39.1,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C197",
+   "linea": "Avellino - Benevento",
+   "treni_giorno": 0,
+   "km": 29.8,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C198",
+   "linea": "Spinazzola - Barletta",
+   "treni_giorno": 4.0,
+   "km": 65.7,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C199",
+   "linea": "Biella - Novara",
+   "treni_giorno": 25.0,
+   "km": 50.8,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C201",
+   "linea": "Caltanissetta Xirbi - Canicattì - Aragona",
+   "treni_giorno": 10.0,
+   "km": 64.7,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C202",
+   "linea": "Campobasso - Bosco Redole - Benevento",
+   "treni_giorno": 0,
+   "km": 84.3,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C204",
+   "linea": "Carini - Alcamo Diramazione - Trapani",
+   "treni_giorno": 10.0,
+   "km": 93.5,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C205",
+   "linea": "Casarsa - San Vito - Portogruaro",
+   "treni_giorno": 17.0,
+   "km": 21.1,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C206",
+   "linea": "Cavallermaggiore - Cantalupo",
+   "treni_giorno": 8.0,
+   "km": 90.0,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C207",
+   "linea": "Cecina - Volterra Saline",
+   "treni_giorno": 0,
+   "km": 29.5,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C208",
+   "linea": "Ceva - Ormea",
+   "treni_giorno": 0,
+   "km": 35.4,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C209",
+   "linea": "Chivasso - Asti",
+   "treni_giorno": 0,
+   "km": 51.3,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C210",
+   "linea": "Canicattì  - Gela",
+   "treni_giorno": 5.0,
+   "km": 81.9,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C211",
+   "linea": "Giulianova - Teramo",
+   "treni_giorno": 35.0,
+   "km": 25.1,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C212",
+   "linea": "Isola della Scala - Cerea",
+   "treni_giorno": 21.0,
+   "km": 19.6,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C213",
+   "linea": "Legnago - Monselice",
+   "treni_giorno": 23.0,
+   "km": 37.9,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C214",
+   "linea": "Legnago - Rovigo",
+   "treni_giorno": 22.0,
+   "km": 47.1,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C215",
+   "linea": "Mercato S.Severino - Avellino",
+   "treni_giorno": 0,
+   "km": 30.0,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C216",
+   "linea": "Codola - Mercato S.Severino",
+   "treni_giorno": 8.0,
+   "km": 8.3,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C217",
+   "linea": "Mondovì - Cuneo",
+   "treni_giorno": 0,
+   "km": 26.9,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C218",
+   "linea": "Mortara - Casale Monferr. - Asti",
+   "treni_giorno": 0,
+   "km": 71.9,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C219",
+   "linea": "Pinerolo - Torre Pellice",
+   "treni_giorno": 0,
+   "km": 16.1,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C220",
+   "linea": "Agrigento Bassa - Porto Empedocle",
+   "treni_giorno": 0,
+   "km": 10.1,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C221",
+   "linea": "Primolano - Bassano del Grappa",
+   "treni_giorno": 20.0,
+   "km": 28.7,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C222",
+   "linea": "Priverno Fossanova - Terracina",
+   "treni_giorno": 0,
+   "km": 17.7,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C223",
+   "linea": "Rocchetta S.A.L. - Avellino",
+   "treni_giorno": 0,
+   "km": 118.7,
+   "pagina": 10
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C224",
+   "linea": "Rocchetta S.A.L. - Spinazzola - Gioia del Colle",
+   "treni_giorno": 5.0,
+   "km": 139.3,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C225",
+   "linea": "Rovigo - Chioggia",
+   "treni_giorno": 16.0,
+   "km": 55.8,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C226",
+   "linea": "Gemona del Friuli  - Pinzano - Sacile",
+   "treni_giorno": 13.0,
+   "km": 74.1,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C227",
+   "linea": "Santhià - Arona",
+   "treni_giorno": 0,
+   "km": 65.0,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C228",
+   "linea": "Siena - Monte Antico - Montepescali",
+   "treni_giorno": 16.0,
+   "km": 88.9,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C229",
+   "linea": "Sulmona - Carpinone",
+   "treni_giorno": 0,
+   "km": 118.1,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C230",
+   "linea": "Termoli - Campobasso",
+   "treni_giorno": 4.0,
+   "km": 87.2,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C231",
+   "linea": "Terni - Sulmona",
+   "treni_giorno": 21.0,
+   "km": 163.5,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C232",
+   "linea": "Trento - Primolano",
+   "treni_giorno": 34.0,
+   "km": 67.0,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C233",
+   "linea": "Vercelli - Casale Popolo",
+   "treni_giorno": 0,
+   "km": 19.2,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C234",
+   "linea": "Palazzolo sull'Oglio - Paratico Sarnico",
+   "treni_giorno": 0,
+   "km": 9.4,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C235",
+   "linea": "Ciampino - Frascati",
+   "treni_giorno": 28.0,
+   "km": 9.7,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C236",
+   "linea": "Foggia - Manfredonia",
+   "treni_giorno": 3.0,
+   "km": 35.7,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C237",
+   "linea": "Golfo Aranci Mar.ma - Olbia",
+   "treni_giorno": 12.0,
+   "km": 22.7,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C239",
+   "linea": "Pergola - Fabriano",
+   "treni_giorno": 0,
+   "km": 31.6,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C241",
+   "linea": "Porto Torres Pcc - Sassari",
+   "treni_giorno": 8.0,
+   "km": 19.3,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C243",
+   "linea": "Saluzzo - Cuneo",
+   "treni_giorno": 3.0,
+   "km": 33.6,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C244",
+   "linea": "Santhià - Biella S.Paolo",
+   "treni_giorno": 28.0,
+   "km": 26.7,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C245",
+   "linea": "Savigliano - Saluzzo",
+   "treni_giorno": 0,
+   "km": 14.9,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C246",
+   "linea": "Susa - Bussoleno",
+   "treni_giorno": 33.0,
+   "km": 7.5,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C247",
+   "linea": "Torre A.Centrale - Gragnano",
+   "treni_giorno": 12.0,
+   "km": 10.5,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C248",
+   "linea": "Trofarello - Chieri",
+   "treni_giorno": 37.0,
+   "km": 8.6,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "C251",
+   "linea": "Perugia P.S.G. - Sansepolcro",
+   "treni_giorno": 20.0,
+   "km": 52.2,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "E000",
+   "linea": "Vievola - Breil Sur Roya",
+   "treni_giorno": 0,
+   "km": 47.0,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "F047",
+   "linea": "PARMA / FIDENZA - PONTREMOLI - VEZZANO / SARZANA",
+   "treni_giorno": 39.0,
+   "km": 151.3,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "F059",
+   "linea": "VILLA LITERNO - POZZUOLI [NAPOLI]",
+   "treni_giorno": 36.0,
+   "km": 21.0,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con <= 40 treni/giorno",
+   "codice": "F071",
+   "linea": "CASERTA - FOGGIA",
+   "treni_giorno": 33.0,
+   "km": 159.4,
+   "pagina": 11
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C002",
+   "linea": "Chivasso - Aosta",
+   "treni_giorno": 45.0,
+   "km": 98.6,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C007",
+   "linea": "Valenza - Alessandria",
+   "treni_giorno": 52.0,
+   "km": 15.2,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C009",
+   "linea": "Fossano - Cuneo",
+   "treni_giorno": 43.0,
+   "km": 25.1,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C011",
+   "linea": "Trofarello - Fossano",
+   "treni_giorno": 91.0,
+   "km": 50.4,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C024",
+   "linea": "Vignale - Novara",
+   "treni_giorno": 71.0,
+   "km": 3.3,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C027",
+   "linea": "Torreberetti - Valenza",
+   "treni_giorno": 48.0,
+   "km": 6.2,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C034",
+   "linea": "Borgomanero - Vignale",
+   "treni_giorno": 42.0,
+   "km": 27.1,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C039",
+   "linea": "Sondrio - Colico",
+   "treni_giorno": 49.0,
+   "km": 40.5,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C040",
+   "linea": "Colico - Lecco",
+   "treni_giorno": 54.0,
+   "km": 39.0,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C044",
+   "linea": "Lecco - Ponte S.Pietro",
+   "treni_giorno": 59.0,
+   "km": 25.2,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C048",
+   "linea": "Ponte S.Pietro - Rovato",
+   "treni_giorno": 51.0,
+   "km": 39.5,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C049",
+   "linea": "Porto Ceresio - Varese - Gallarate",
+   "treni_giorno": 98.0,
+   "km": 39.3,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C050",
+   "linea": "Bivio Bergamo - Treviglio Ovest",
+   "treni_giorno": 51.0,
+   "km": 2.5,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C051",
+   "linea": "Bergamo - Treviglio Ovest - Treviglio",
+   "treni_giorno": 91.0,
+   "km": 21.9,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C053",
+   "linea": "Olmeneta - Cremona",
+   "treni_giorno": 67.0,
+   "km": 10.8,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C058",
+   "linea": "Milano P.Genova - Mortara",
+   "treni_giorno": 65.0,
+   "km": 44.4,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C061",
+   "linea": "Codogno - Cremona",
+   "treni_giorno": 45.0,
+   "km": 27.3,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C062",
+   "linea": "Cremona - Piadena",
+   "treni_giorno": 63.0,
+   "km": 28.0,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C063",
+   "linea": "Piadena - Mantova",
+   "treni_giorno": 46.0,
+   "km": 34.3,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C064",
+   "linea": "Brescia - S. Zeno Folzano",
+   "treni_giorno": 57.0,
+   "km": 7.7,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C067",
+   "linea": "Fortezza - S.Candido",
+   "treni_giorno": 55.0,
+   "km": 64.5,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C068",
+   "linea": "Bolzano - Merano",
+   "treni_giorno": 55.0,
+   "km": 31.1,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C070",
+   "linea": "Verona - Mantova",
+   "treni_giorno": 52.0,
+   "km": 35.4,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C080",
+   "linea": "Castelfranco Veneto - Camposampiero",
+   "treni_giorno": 67.0,
+   "km": 12.1,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C081",
+   "linea": "Camposampiero - Vigodarzere",
+   "treni_giorno": 86.0,
+   "km": 13.2,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C082",
+   "linea": "Vigodarzere - Padova",
+   "treni_giorno": 60.0,
+   "km": 7.4,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C086",
+   "linea": "Vicenza - Cittadella",
+   "treni_giorno": 58.0,
+   "km": 23.7,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C087",
+   "linea": "Cittadella - Castelfranco Veneto",
+   "treni_giorno": 53.0,
+   "km": 11.9,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C088",
+   "linea": "Castelfranco Veneto - Treviso",
+   "treni_giorno": 88.0,
+   "km": 24.5,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C091",
+   "linea": "Bassano del Grappa - Castelfranco Veneto",
+   "treni_giorno": 56.0,
+   "km": 19.1,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C092",
+   "linea": "Castelfranco Veneto - Maerne di Martellago",
+   "treni_giorno": 56.0,
+   "km": 24.6,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C098",
+   "linea": "Ovada - Genova Borzoli",
+   "treni_giorno": 46.0,
+   "km": 36.0,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C106",
+   "linea": "Castelbolognese - Lugo",
+   "treni_giorno": 48.0,
+   "km": 14.0,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C107",
+   "linea": "Lugo - Russi",
+   "treni_giorno": 47.0,
+   "km": 10.8,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C113",
+   "linea": "Viareggio - Lucca",
+   "treni_giorno": 45.0,
+   "km": 16.6,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C116",
+   "linea": "Lucca - Pistoia",
+   "treni_giorno": 50.0,
+   "km": 43.8,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C117",
+   "linea": "Pisa - Lucca",
+   "treni_giorno": 51.0,
+   "km": 30.6,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C118",
+   "linea": "Pistoia - Prato",
+   "treni_giorno": 96.0,
+   "km": 17.2,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C121",
+   "linea": "Empoli - Siena",
+   "treni_giorno": 56.0,
+   "km": 63.0,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C135",
+   "linea": "Ciampino - Velletri",
+   "treni_giorno": 41.0,
+   "km": 27.1,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C137",
+   "linea": "Aversa - Marcianise - Caserta",
+   "treni_giorno": 43.0,
+   "km": 14.9,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C146",
+   "linea": "Nocera Inferiore - Salerno (via CAVA T.)",
+   "treni_giorno": 73.0,
+   "km": 17.1,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C147",
+   "linea": "Salerno - Arechi",
+   "treni_giorno": 65.0,
+   "km": 5.7,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C150",
+   "linea": "Bari - Brindisi",
+   "treni_giorno": 95.0,
+   "km": 110.9,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C151",
+   "linea": "Brindisi - Lecce",
+   "treni_giorno": 75.0,
+   "km": 41.9,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C158",
+   "linea": "Bari - Gioia Del Colle",
+   "treni_giorno": 42.0,
+   "km": 52.9,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C159",
+   "linea": "Gioia Del Colle - Taranto",
+   "treni_giorno": 43.0,
+   "km": 54.3,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C164",
+   "linea": "Paola - Castiglione C.",
+   "treni_giorno": 42.0,
+   "km": 21.6,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C167",
+   "linea": "Castiglione C. - Cosenza",
+   "treni_giorno": 46.0,
+   "km": 4.3,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C169",
+   "linea": "Messina - Catania",
+   "treni_giorno": 63.0,
+   "km": 94.8,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C170",
+   "linea": "Catania  - Lentini Diramazione",
+   "treni_giorno": 41.0,
+   "km": 22.9,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C176",
+   "linea": "Fiumetorto - Palermo",
+   "treni_giorno": 99.0,
+   "km": 43.2,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C181",
+   "linea": "Palermo - Carini",
+   "treni_giorno": 66.0,
+   "km": 33.9,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C184",
+   "linea": "Palermo Centrale - Palermo Marittima",
+   "treni_giorno": 58.0,
+   "km": 7.3,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "C242",
+   "linea": "Salsomaggiore T. - Fidenza",
+   "treni_giorno": 44.0,
+   "km": 9.0,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "F001",
+   "linea": "MODANE / MODANE FX - ALPIGNANO [TORINO]",
+   "treni_giorno": 74.0,
+   "km": 91.9,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "F003",
+   "linea": "[TORINO] TROFARELLO - ARQUATA",
+   "treni_giorno": 85.0,
+   "km": 112.2,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "F007",
+   "linea": "SAVONA -  GENOVA VOLTRI [GENOVA]",
+   "treni_giorno": 99.0,
+   "km": 32.0,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "F009",
+   "linea": "VENTIMIGLIA - SAVONA",
+   "treni_giorno": 66.0,
+   "km": 100.9,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "F013",
+   "linea": "ISELLE [DOMODOSSOLA] - GALLARATE [MILANO] (compresa via Domo II)",
+   "treni_giorno": 86.0,
+   "km": 85.8,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "F015",
+   "linea": "PINO TRONZANO [LUINO] - GALLARATE",
+   "treni_giorno": 52.0,
+   "km": 45.8,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "F019",
+   "linea": "ARQUATA - MIGNANEGO / GENOVA RIVAROLO / GENOVA CAMPASSO",
+   "treni_giorno": 91.0,
+   "km": 58.2,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "F021",
+   "linea": "ALESSANDRIA - PIACENZA (compresa Broni - Bressana B.)",
+   "treni_giorno": 71.0,
+   "km": 81.7,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "F029",
+   "linea": "VERONA  - TAVERNELLE [BOLOGNA]",
+   "treni_giorno": 99.0,
+   "km": 105.6,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "F039",
+   "linea": "UDINE - MONFALCONE via GORIZIA (compresa Gorizia - Nova Gorica)",
+   "treni_giorno": 75.0,
+   "km": 63.3,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "F043",
+   "linea": "[BOLOGNA] BOLOGNA S.RUFFILLO - FIRENZE CASTELLO  [FIRENZE]",
+   "treni_giorno": 88.0,
+   "km": 96.1,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "F051",
+   "linea": "PISA  - MACCARESE [ROMA] (compresa Vada - Collesalvetti)",
+   "treni_giorno": 75.0,
+   "km": 359.9,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "F053",
+   "linea": "[FIRENZE]  FIRENZE ROVEZZANO - FARA SABINA [ROMA] (Linea Lenta)",
+   "treni_giorno": 79.0,
+   "km": 270.7,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "F061",
+   "linea": "[ROMA] CIAMPINO - ACERRA [NAPOLI] (via Cassino) (comprese linee Rocca",
+   "treni_giorno": 71.0,
+   "km": 241.8,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "F065",
+   "linea": "ANCONA - ORTE (compresa Ancona - Ancona Marittima)",
+   "treni_giorno": 43.0,
+   "km": 203.1,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "F073",
+   "linea": "[NAPOLI] PORTICI - SALERNO",
+   "treni_giorno": 95.0,
+   "km": 48.0,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "F075",
+   "linea": "SALERNO - PAOLA",
+   "treni_giorno": 82.0,
+   "km": 216.7,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linee con > 40 e < 100 treni/giorno",
+   "codice": "F077",
+   "linea": "PAOLA - REGGIO CALABRIA CENTRALE (compresa Eccellente - Rosarno)",
+   "treni_giorno": 59.0,
+   "km": 250.5,
+   "pagina": 12
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "C045",
+   "linea": "Calolziocorte O. - Carnate Usmate",
+   "treni_giorno": 105.0,
+   "km": 18.1,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "C046",
+   "linea": "Carnate Usmate - Monza",
+   "treni_giorno": 141.0,
+   "km": 11.8,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "C188",
+   "linea": "Decimomannu - Cagliari",
+   "treni_giorno": 102.0,
+   "km": 16.2,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F005",
+   "linea": "[MILANO] MILANO ROGOREDO - ARQUATA (compresa via Novi L. e via Bressana",
+   "treni_giorno": 151.0,
+   "km": 123.7,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F011",
+   "linea": "[TORINO] SETTIMO T. - RHO [MILANO] (compresa Novara Boschetto)",
+   "treni_giorno": 119.0,
+   "km": 117.8,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F017",
+   "linea": "CHIASSO - SEREGNO [MILANO] (compresa via Monteolimpino 2)",
+   "treni_giorno": 155.0,
+   "km": 40.8,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F023",
+   "linea": "[MILANO] PIOLTELLO L. - BRESCIA  VERONA",
+   "treni_giorno": 149.0,
+   "km": 147.0,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F023AV",
+   "linea": "PIOLTELLO L. - BRESCIA AVAC",
+   "treni_giorno": 240.0,
+   "km": 15.1,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F025",
+   "linea": "VERONA  - PADOVA",
+   "treni_giorno": 185.0,
+   "km": 85.0,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F027",
+   "linea": "BRENNERO - VERONA",
+   "treni_giorno": 157.0,
+   "km": 243.9,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F031",
+   "linea": "PADOVA - S.PIETRO IN CASALE [BOLOGNA]",
+   "treni_giorno": 157.0,
+   "km": 102.5,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F033",
+   "linea": "PADOVA - MIRA M. [VENEZIA]",
+   "treni_giorno": 101.0,
+   "km": 20.5,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F033AV",
+   "linea": "PADOVA - VENEZIA AVAC",
+   "treni_giorno": 215.0,
+   "km": 25.8,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F035",
+   "linea": "[VENEZIA] VENEZIA CARPENEDO - VILLA OPICINA / TRIESTE",
+   "treni_giorno": 110.0,
+   "km": 187.9,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F037",
+   "linea": "TARVISIO BOSCOVERDE  - MOGLIANO [VENEZIA]",
+   "treni_giorno": 112.0,
+   "km": 219.9,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F041",
+   "linea": "[MILANO] MILANO ROGOREDO - LAVINO [BOLOGNA]",
+   "treni_giorno": 204.0,
+   "km": 204.5,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F041AV",
+   "linea": "MILANO ROGOREDO - MELEGNANO AVAC",
+   "treni_giorno": 246.0,
+   "km": 13.9,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F045",
+   "linea": "[GENOVA] GENOVA NERVI - PISA",
+   "treni_giorno": 144.0,
+   "km": 158.5,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F049",
+   "linea": "[FIRENZE] FIRENZE CASCINE - PISA",
+   "treni_giorno": 129.0,
+   "km": 90.5,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F055",
+   "linea": "1",
+   "treni_giorno": 233.0,
+   "km": 271.2,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F057",
+   "linea": "[ROMA] TORRICOLA - FRATTAMAGGIORE [NAPOLI] (via Formia)",
+   "treni_giorno": 119.0,
+   "km": 188.0,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F063",
+   "linea": "[BOLOGNA] MIRANDOLA O. - ANCONA (compresa Ancona - Ancona Marittima)",
+   "treni_giorno": 181.0,
+   "km": 193.1,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F067",
+   "linea": "ANCONA - FOGGIA",
+   "treni_giorno": 125.0,
+   "km": 319.5,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F069",
+   "linea": "FOGGIA - BARI (compresa Enziteto Catino - Bari S.Spirito)",
+   "treni_giorno": 135.0,
+   "km": 128.5,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linea con >= 100 treni/giorno",
+   "codice": "F073AV",
+   "linea": "NAPOLI - SALERNO LMV",
+   "treni_giorno": 137.0,
+   "km": 37.5,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linee all'interno dei Nodi",
+   "codice": "N001",
+   "linea": "Torino",
+   "treni_giorno": 120.0,
+   "km": 84.0,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linee all'interno dei Nodi",
+   "codice": "N002",
+   "linea": "Milano",
+   "treni_giorno": 158.0,
+   "km": 211.4,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linee all'interno dei Nodi",
+   "codice": "N003",
+   "linea": "Venezia",
+   "treni_giorno": 116.0,
+   "km": 66.6,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linee all'interno dei Nodi",
+   "codice": "N004",
+   "linea": "Genova",
+   "treni_giorno": 106.0,
+   "km": 72.7,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linee all'interno dei Nodi",
+   "codice": "N005",
+   "linea": "Bologna",
+   "treni_giorno": 87.0,
+   "km": 169.8,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linee all'interno dei Nodi",
+   "codice": "N006",
+   "linea": "Firenze",
+   "treni_giorno": 146.0,
+   "km": 47.1,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linee all'interno dei Nodi",
+   "codice": "N007",
+   "linea": "Roma",
+   "treni_giorno": 134.0,
+   "km": 238.0,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linee all'interno dei Nodi",
+   "codice": "N008",
+   "linea": "Napoli",
+   "treni_giorno": 125.0,
+   "km": 60.3,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linee AC/AV",
+   "codice": "A001",
+   "linea": "Roma-Napoli AV/AC",
+   "treni_giorno": 164.0,
+   "km": 233.0,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linee AC/AV",
+   "codice": "A003",
+   "linea": "Torino-Milano AV/AC",
+   "treni_giorno": 78.0,
+   "km": 132.4,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linee AC/AV",
+   "codice": "A005",
+   "linea": "Milano-Bologna AV/AC",
+   "treni_giorno": 157.0,
+   "km": 224.0,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linee AC/AV",
+   "codice": "A007",
+   "linea": "Bologna - Firenze AV/AC",
+   "treni_giorno": 224.0,
+   "km": 91.3,
+   "pagina": 13
+  },
+  {
+   "gruppo": "Linee AC/AV",
+   "codice": "A009",
+   "linea": "Milano - Brescia AV/AC",
+   "treni_giorno": 58.0,
+   "km": 52.8,
+   "pagina": 13
+  }
+ ],
+ "totali_stampati": [
+  {
+   "voce": "TOTALE Linee con <= 40 treni/giorno",
+   "km": 8052.6
+  },
+  {
+   "voce": "TOTALE Linee con > 40 e < 100 treni/giorno",
+   "km": 4111.7
+  },
+  {
+   "voce": "TOTALE Linea con >= 100 treni/giorno",
+   "km": 2981.1
+  },
+  {
+   "voce": "TOTALE Linee all'interno dei Nodi",
+   "km": 950.0
+  },
+  {
+   "voce": "TOTALE Linea con >= 100 treni/giorno",
+   "km": 733.6
+  },
+  {
+   "voce": "TOTALE complessivo",
+   "km": 16828.9
+  }
+ ]
+}
