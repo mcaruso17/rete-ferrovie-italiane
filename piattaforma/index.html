@@ -66,18 +66,22 @@ nav a[aria-current="page"]{color:var(--accent);border-bottom-color:var(--accent)
 /* Il pulsante compare solo quando le voci non ci stanno piu' in riga. La
    soglia e' alta apposta: con dieci sezioni la barra scorrevole nascondeva
    meta' delle voci gia' su un portatile, non solo sul telefono */
-.hamb{display:none;width:36px;height:34px;border:1px solid var(--line);background:var(--surface);
+.hamb{display:flex;width:36px;height:34px;border:1px solid var(--line);background:var(--surface);
   border-radius:3px;cursor:pointer;padding:0;flex-direction:column;justify-content:center;
   align-items:center;gap:4px}
 .hamb span{display:block;width:17px;height:1.5px;background:var(--ink-2);transition:none}
 .hamb[aria-expanded="true"]{background:var(--surface-2)}
-@media (max-width:1100px){
-  .hamb{display:flex}
-  nav{display:none;flex-direction:column;gap:0;padding:4px 0}
-  nav.aperto{display:flex}
-  nav a{border-bottom:1px solid var(--line);border-left:2px solid transparent;padding:11px 14px}
-  nav a[aria-current="page"]{border-bottom-color:var(--line);border-left-color:var(--accent);
-    background:var(--surface-2)}
+/* Il menu sta chiuso a ogni larghezza. Con dieci sezioni la barra in riga
+   occupava un terzo dell'altezza utile su un portatile, e la voce corrente
+   resta comunque scritta accanto al pulsante. */
+nav{display:none;flex-direction:column;gap:0;padding:4px 0}
+nav.aperto{display:flex}
+nav a{border-bottom:1px solid var(--line);border-left:2px solid transparent;padding:11px 14px}
+nav a[aria-current="page"]{border-bottom-color:var(--line);border-left-color:var(--accent);
+  background:var(--surface-2)}
+.sez-ora{font-size:13px;color:var(--ink-2);margin-right:2px}
+@media (min-width:760px){
+  nav.aperto{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
 }
 .ghost{background:none;border:1px solid var(--line-strong);color:var(--ink-2);
   font:inherit;font-size:12px;padding:5px 10px;border-radius:var(--radius);cursor:pointer}
@@ -253,15 +257,24 @@ tbody tr.clickable{cursor:pointer}
    padana: la' la rete e' fittissima e regge un tratto leggero, ma in Sicilia e
    in Sardegna le linee sono poche e isolate, e sotto il pixel di spessore
    l'isola sembra semplicemente senza ferrovie */
-#rt-svg .rt-ord path{fill:none;stroke:var(--ink);stroke-opacity:.8;
-  stroke-width:calc(1.05 * var(--rt-k));stroke-linecap:round;stroke-linejoin:round}
+/* La rete intera fa da sfondo, chiara: e' contesto, non e' cliccabile perche'
+   OSM non le da' un nome. Le linee nominate stanno sopra, scure e piu' spesse:
+   cosi' si vede a colpo d'occhio dove c'e' qualcosa da cliccare, invece di
+   scoprirlo provando. */
+#rt-svg .rt-ord path{fill:none;stroke:var(--ink-3);stroke-opacity:.55;
+  stroke-width:calc(.8 * var(--rt-k));stroke-linecap:round;stroke-linejoin:round}
+#rt-svg .rt-nom path{fill:none;stroke:var(--ink);stroke-opacity:.9;
+  stroke-width:calc(1.3 * var(--rt-k));stroke-linecap:round;stroke-linejoin:round}
+#rt-svg .rt-hit path:hover{stroke:var(--accent);stroke-opacity:.35}
 #rt-svg .rt-av path{fill:none;stroke:#c0261c;
   stroke-width:calc(1.5 * var(--rt-k));stroke-linecap:round;stroke-linejoin:round}
 .cmp-box.senza-reg .rt-reg{display:none}
 /* spenta l'evidenza, l'alta velocita' resta disegnata ma come le altre: e'
    pur sempre rete, nasconderla darebbe l'idea di una rete piu' piccola */
-.cmp-box.senza-av .rt-av path{stroke:var(--ink);stroke-opacity:.8;
-  stroke-width:calc(1.05 * var(--rt-k))}
+/* l'annullamento deve ripetere #rt-svg: la regola di base e' su un id, e un
+   selettore di sole classi perde comunque, per quanto specifico sembri */
+#rt-svg.senza-av-x .rt-av path,.senza-av #rt-svg .rt-av path{
+  stroke:var(--ink);stroke-opacity:.8;stroke-width:calc(1.05 * var(--rt-k))}
 /* Cantieri e progetti: il tratteggio dice "non c'e' ancora" meglio di
    qualsiasi colore, perche' si legge anche da chi non distingue i colori.
    Il passo del tratteggio scala con lo zoom come gli spessori, altrimenti
@@ -282,7 +295,8 @@ tbody tr.clickable{cursor:pointer}
 .rt-leg{display:flex;flex-wrap:wrap;gap:4px 18px;margin:0 0 12px;font-size:12.5px;color:var(--ink-2)}
 .rt-leg span{display:inline-flex;align-items:center;gap:7px}
 .rt-leg .lg{display:inline-block;width:22px;height:0;border-top-width:2.5px;border-top-style:solid}
-.lg-ord{border-top-color:var(--ink)}
+.lg-nom{border-top-color:var(--ink);border-top-width:3px}
+.lg-ord{border-top-color:var(--ink-3);opacity:.65}
 .lg-av{border-top-color:#c0261c;border-top-width:3px}
 .lg-cost{border-top-color:#b8860b;border-top-style:dashed;border-top-width:3px}
 .lg-prog{border-top-color:var(--ink-3);border-top-style:dotted;border-top-width:3px}
@@ -402,6 +416,7 @@ dialog::backdrop{background:rgba(10,14,13,.55)}
         <span>Contratti di Programma MIT &ndash; RFI</span>
       </div>
       <div class="top-az">
+        <span class="sez-ora" id="sez-ora"></span>
         <button class="ghost" id="tema" type="button">Tema chiaro / scuro</button>
         <button class="hamb" id="hamb" type="button" aria-expanded="false"
                 aria-controls="nav" aria-label="Apri il menu delle sezioni">
@@ -917,6 +932,9 @@ function vaiA(){
   if(rotta==="/comuni") disegnaComuni();
   if(rotta==="/rete") disegnaRete();
   if(schedaAttesa){ var c = schedaAttesa; schedaAttesa = null; apriDettaglio(c, true); }
+  // col menu chiuso il titolo della sezione e' l'unico indizio di dove si e'
+  var voce = el("nav").querySelector('a[href="#'+rotta+'"]');
+  el("sez-ora").textContent = voce ? voce.textContent : "";
   document.title = "Binario Contabile";
   window.scrollTo(0,0);
 }
@@ -1196,11 +1214,16 @@ function disegnaRete(){
     return LGEO[id].d.map(function(d){
       return '<path class="rt-clic" data-linea="'+esc(id)+'" d="'+d+'"/>'; }).join("");
   }).join("");
+  // le stesse geometrie, ma visibili: sono la parte di rete che risponde
+  var nomDis = Object.keys(LGEO).map(function(id){
+    return LGEO[id].d.map(function(d){ return '<path d="'+d+'"/>'; }).join("");
+  }).join("");
 
   el("rt-svg").innerHTML = '<svg viewBox="'+vb.join(" ")+'" role="img" ' +
     'aria-label="Rete ferroviaria italiana">' +
     '<g class="rt-reg">'+sfondo+'</g>' +
     '<g class="rt-ord">'+gr(RETE.ordinarie)+'</g>' +
+    '<g class="rt-nom">'+nomDis+'</g>' +
     '<g class="rt-av">'+gr(RETE.alta_velocita)+'</g>' +
     '<g class="rt-cost">'+gr(RETE.in_costruzione)+'</g>' +
     '<g class="rt-prog">'+gr(RETE.in_progetto)+'</g>' +
@@ -1212,7 +1235,8 @@ function disegnaRete(){
     " polilinee in esercizio, " + (RETE.in_costruzione||[]).length +
     " in costruzione, " + (RETE.in_progetto||[]).length + " in progetto";
   el("rt-leg").innerHTML =
-    '<span><i class="lg lg-ord"></i>in esercizio</span>' +
+    '<span><i class="lg lg-nom"></i>linea con nome, cliccabile</span>' +
+    '<span><i class="lg lg-ord"></i>altri binari in esercizio</span>' +
     '<span><i class="lg lg-av"></i>alta velocità</span>' +
     '<span><i class="lg lg-cost"></i>in costruzione</span>' +
     '<span><i class="lg lg-prog"></i>in progetto</span>';
