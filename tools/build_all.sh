@@ -32,8 +32,8 @@ if [ -d "$GEO" ]; then
   # la rete vera, sulla stessa proiezione. La geometria e' versionata: qui non
   # si legge nessun PBF, quindi resta tutto nella libreria standard
   if [ -f ../data/rete-ferroviaria.geojson ]; then
-    python3 build_rete.py ../data/rete-ferroviaria.geojson ../data/mappa-regioni.json \
-      /tmp/app-comuni.json /tmp/app-rete.json
+    python3 build_rete.py ../data/rete-ferroviaria.geojson ../data/linee-ferroviarie.geojson \
+      ../data/mappa-regioni.json /tmp/app-comuni.json /tmp/app-rete.json
     # l'aggancio intervento-linea: una deduzione, non un dato dei contratti.
     # Viene dopo comuni.py perche' usa i comuni nominati come seconda prova.
     python3 aggancio.py ../data/linee-ferroviarie.geojson ../data/mappa-regioni.json \

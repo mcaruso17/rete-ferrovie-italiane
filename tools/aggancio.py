@@ -124,7 +124,10 @@ def main():
         chiave = tuple(sorted(set(capi)))
         L = per_nome.setdefault(chiave, {
             "id": p["id"], "nome": p["nome"], "uso": p.get("uso", ""),
-            "capi": capi, "punti": []})
+            "dal": p.get("dal", ""), "capi": capi, "punti": [], "fusi": []})
+        L["fusi"].append(p["id"])
+        if not L.get("dal") and p.get("dal"):
+            L["dal"] = p["dal"]
         # fra i nomi che si fondono vince il piu' descrittivo
         if len(p["nome"]) > len(L["nome"]):
             L["nome"] = p["nome"]
@@ -226,6 +229,33 @@ def main():
     app["linee"] = {str(L["id"]): {"n": L["nome"], "u": L["uso"]}
                     for L in linee}
     app["linee_intervento"] = per_int
+
+    # build_rete.py ha scritto una voce cliccabile per ogni relazione OSM, ma
+    # qui le relazioni si fondono sui capi: senza questa riconciliazione le
+    # linee non canoniche resterebbero cliccabili a vuoto, perche' gli agganci
+    # stanno tutti sotto l'id sopravvissuto. Si fondono anche le geometrie,
+    # cosi' cliccando un tratto si accende tutta la linea e non mezza.
+    geo = app.get("linee_geo") or {}
+    fuso = {}
+    orfani = 0
+    for L in linee:
+        capo = str(L["id"])
+        d = []
+        for rid in L["fusi"]:
+            v = geo.get(str(rid))
+            if v:
+                d.extend(v["d"])
+        if not d:
+            orfani += 1
+            continue
+        fuso[capo] = {"n": L["nome"], "d": d, "dal": L.get("dal", ""),
+                      "op": (geo.get(capo) or {}).get("op", ""),
+                      "w": (geo.get(capo) or {}).get("w", "")}
+    app["linee_geo"] = fuso
+    if orfani:
+        print("  %d linee senza geometria, non cliccabili" % orfani)
+    print("linee cliccabili riconciliate: %d (erano %d voci separate)"
+          % (len(fuso), len(geo)))
     json.dump(app, open(OUT, "w"), ensure_ascii=False, separators=(",", ":"))
 
     tot = len(app["progetti"])
