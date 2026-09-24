@@ -32,11 +32,20 @@ import osmium
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 TIENI = {"rail", "narrow_gauge"}
+# Le linee non ancora in esercizio. In OSM non sono uno stato della linea ma un
+# valore diverso di railway, quindi vanno chieste a parte: senza, la mappa
+# mostra solo cio' che esiste gia' e i cantieri sono invisibili.
+FUTURE = {"construction": "cost", "proposed": "prog"}
 SCARTA_USO = {"industrial", "military", "test", "tourism"}
 
 
 def leggi(pbf):
-    """Le linee di corsa dell'estratto, in gradi, una lista per way."""
+    """Le linee di corsa dell'estratto, in gradi, una lista per way.
+
+    Ogni voce porta lo stato: "eser" in esercizio, "cost" in costruzione,
+    "prog" in progetto. Sono tre insiemi disgiunti perche' in OSM stanno sotto
+    tre valori diversi di railway.
+    """
     fuori = []
     # i nodi vanno letti perche' la cache delle coordinate si riempia, quindi
     # il filtro che restringe alle sole way viene dopo, non prima
@@ -46,7 +55,18 @@ def leggi(pbf):
             .with_filter(osmium.filter.KeyFilter("railway")))
     for w in proc:
         t = w.tags
-        if t.get("railway") not in TIENI:
+        r = t.get("railway")
+        if r in TIENI:
+            stato = "eser"
+        elif r in FUTURE:
+            # il sottotipo dice cosa si sta costruendo: una tranvia in cantiere
+            # non e' rete ferroviaria e resta fuori come la sua versione finita
+            sotto = (t.get("construction") or t.get("proposed")
+                     or t.get("construction:railway") or "rail")
+            if sotto not in TIENI:
+                continue
+            stato = FUTURE[r]
+        else:
             continue
         if "service" in t or t.get("usage") in SCARTA_USO:
             continue
@@ -58,7 +78,8 @@ def leggi(pbf):
             if not pts or p != pts[-1]:
                 pts.append(p)
         if len(pts) >= 2:
-            fuori.append((1 if t.get("highspeed") == "yes" else 0, pts))
+            av = 1 if t.get("highspeed") == "yes" else 0
+            fuori.append((stato, av, pts))
     return fuori
 
 
@@ -172,7 +193,12 @@ def leggi_linee(pbf):
             continue
         rel[r.id] = {"nome": nome, "ways": ways,
                      "uso": t.get("usage") or t.get("service") or "",
-                     "operatore": t.get("operator") or ""}
+                     "operatore": t.get("operator") or "",
+                     # OSM ce l'ha solo su una linea su sette: si porta dietro
+                     # dove c'e' e la pagina dice che il resto non e' noto,
+                     # invece di far sparire l'informazione per tutti
+                     "dal": t.get("start_date") or t.get("opening_date") or "",
+                     "wikipedia": t.get("wikipedia") or ""}
         serve.update(ways)
 
     geom = {}
@@ -204,22 +230,25 @@ def main():
     args = ap.parse_args()
 
     linee = leggi(args.pbf)
-    print("linee di corsa  %6d tratte, %7d vertici"
-          % (len(linee), sum(len(p) for _, p in linee)))
+    conta = defaultdict(int)
+    for st, _av, pts in linee:
+        conta[st] += 1
+    print("tratte OSM      %6d totali: %s"
+          % (len(linee), ", ".join("%s %d" % kv for kv in sorted(conta.items()))))
 
     gruppi = defaultdict(list)
-    for av, pts in linee:
-        gruppi[av].append(pts)
+    for st, av, pts in linee:
+        gruppi[(st, av)].append(pts)
 
     feats = []
-    for av in sorted(gruppi):
-        for catena in cuci(gruppi[av]):
+    for (st, av) in sorted(gruppi):
+        for catena in cuci(gruppi[(st, av)]):
             s2 = semplifica(catena, args.tolleranza)
             if len(s2) < 2:
                 continue
             feats.append({
                 "type": "Feature",
-                "properties": {"av": av},
+                "properties": {"st": st, "av": av},
                 "geometry": {"type": "LineString", "coordinates":
                              [list(p) for p in s2]},
             })
@@ -228,9 +257,13 @@ def main():
     json.dump({"type": "FeatureCollection", "features": feats},
               open(args.out, "w"), separators=(",", ":"))
     pts = sum(len(f["geometry"]["coordinates"]) for f in feats)
+    per_st = defaultdict(int)
+    for f in feats:
+        per_st[f["properties"]["st"]] += 1
     av = sum(1 for f in feats if f["properties"]["av"])
     print("cucite e ridotte %5d polilinee, %7d vertici (tolleranza %.5f gradi)"
           % (len(feats), pts, args.tolleranza))
+    print("  per stato: %s" % ", ".join("%s %d" % kv for kv in sorted(per_st.items())))
     print("alta velocita   %6d polilinee" % av)
     print("scritto         %6.2f MB  %s"
           % (os.path.getsize(args.out) / 1e6, args.out))
@@ -255,7 +288,8 @@ def main():
         lfeats.append({
             "type": "Feature",
             "properties": {"id": rid, "nome": r["nome"], "uso": r["uso"],
-                           "operatore": r["operatore"]},
+                           "operatore": r["operatore"], "dal": r["dal"],
+                           "wikipedia": r["wikipedia"]},
             "geometry": {"type": "MultiLineString", "coordinates": tratti},
         })
     json.dump({"type": "FeatureCollection", "features": lfeats},

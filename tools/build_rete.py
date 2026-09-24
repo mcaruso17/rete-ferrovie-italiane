@@ -9,8 +9,8 @@ perche' i tre strati si sovrappongano; ricavarne una propria, anche identica
 nella formula, li disallineerebbe al primo cambio di parametri.
 
 Uso:
-  python3 build_rete.py rete-ferroviaria.geojson mappa-regioni.json \\
-          app-in.json app-out.json [tolleranza]
+  python3 build_rete.py rete-ferroviaria.geojson linee-ferroviarie.geojson \\
+          mappa-regioni.json app-in.json app-out.json [tolleranza]
 
 Sulla tolleranza. I path si scrivono con un decimale, quindi sotto 0,1 unita'
 SVG (circa 100 m) non c'e' niente da rappresentare: la precisione del formato
@@ -23,8 +23,8 @@ import math
 import os
 import sys
 
-SRC, MAPPA, APP, OUT = sys.argv[1:5]
-TOLL = float(sys.argv[5]) if len(sys.argv) > 5 else 0.12
+SRC, LINEE, MAPPA, APP, OUT = sys.argv[1:6]
+TOLL = float(sys.argv[6]) if len(sys.argv) > 6 else 0.12
 
 
 def semplifica(pts, toll):
@@ -87,32 +87,63 @@ def main():
     cos0 = math.cos(math.radians(pro["lat0"]))
     x0, y0, s = pro["x0"], pro["y0"], pro["scala"]
 
+    def proietta(coords):
+        return [((lon * cos0 - x0) * s, (-lat - y0) * s) for lon, lat in coords]
+
+    # --------------------------------------------------- la rete per stato
     gj = json.load(open(SRC))
-    gruppi = {0: [], 1: []}
+    gruppi = {}
     dentro = fuori = 0
     for f in gj["features"]:
-        pts = []
-        for lon, lat in f["geometry"]["coordinates"]:
-            pts.append(((lon * cos0 - x0) * s, (-lat - y0) * s))
-        s2 = semplifica(pts, TOLL)
+        pr = f["properties"]
+        s2 = semplifica(proietta(f["geometry"]["coordinates"]), TOLL)
         if len(s2) < 2:
             fuori += 1
             continue
-        gruppi[1 if f["properties"].get("av") else 0].append(path(s2))
+        # in esercizio si distingue l'alta velocita'; per cantieri e progetti
+        # non serve, quello che conta li' e' che non sono ancora rete
+        chiave = pr.get("st", "eser")
+        if chiave == "eser" and pr.get("av"):
+            chiave = "av"
+        gruppi.setdefault(chiave, []).append(path(s2))
         dentro += len(s2)
+
+    # ------------------------------------------- le linee nominate, cliccabili
+    lg = json.load(open(LINEE, encoding="utf-8"))
+    linee = {}
+    for f in lg["features"]:
+        pr = f["properties"]
+        tratti = []
+        for tratto in f["geometry"]["coordinates"]:
+            s2 = semplifica(proietta(tratto), TOLL)
+            if len(s2) >= 2:
+                tratti.append(path(s2))
+        if not tratti:
+            continue
+        # piu' relazioni OSM possono essere la stessa linea: si accumulano
+        # sotto la chiave che aggancio.py usa, cioe' il primo id incontrato
+        linee[str(pr["id"])] = {"n": pr["nome"], "d": tratti,
+                                "dal": pr.get("dal") or "",
+                                "op": pr.get("operatore") or "",
+                                "w": pr.get("wikipedia") or ""}
 
     app = json.load(open(APP))
     app["rete"] = {
         "fonte": "OpenStreetMap, contributori, ODbL",
-        "ordinarie": gruppi[0],
-        "alta_velocita": gruppi[1],
+        "ordinarie": gruppi.get("eser", []),
+        "alta_velocita": gruppi.get("av", []),
+        "in_costruzione": gruppi.get("cost", []),
+        "in_progetto": gruppi.get("prog", []),
     }
+    app["linee_geo"] = linee
     json.dump(app, open(OUT, "w"), ensure_ascii=False, separators=(",", ":"))
 
     peso = len(json.dumps(app["rete"], separators=(",", ":")))
-    print("rete: %d polilinee (%d in alta velocita), %d vertici, %d KB"
-          % (len(gruppi[0]) + len(gruppi[1]), len(gruppi[1]), dentro,
-             peso // 1024))
+    pl = len(json.dumps(app["linee_geo"], separators=(",", ":")))
+    print("rete: %d polilinee, %d vertici, %d KB  (%s)"
+          % (sum(len(v) for v in gruppi.values()), dentro, peso // 1024,
+             ", ".join("%s %d" % (k, len(v)) for k, v in sorted(gruppi.items()))))
+    print("linee nominate cliccabili: %d, %d KB" % (len(linee), pl // 1024))
     if fuori:
         print("  %d polilinee scartate: semplificate sotto i due punti" % fuori)
 
