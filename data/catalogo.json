@@ -1,0 +1,157 @@
+{
+ "dati": [
+  {
+   "file": "progetti.csv",
+   "titolo": "Interventi, uno per riga",
+   "contenuto": "Tabella A e B dei CdP Investimenti: programma, classe, CUP, stato, costi all'ultimo contratto in cui l'intervento compare.",
+   "natura": "dal documento",
+   "fonte": "CdP Investimenti 2017-2026"
+  },
+  {
+   "file": "serie-storica.csv",
+   "titolo": "Interventi, contratto per contratto",
+   "contenuto": "Costo, finanziato, da finanziare, avanzamento e stato attuativo di ogni intervento in ciascun contratto, con la pagina del PDF. Lo stato manca dove il documento non lo indica, soprattutto per i programmi pluriennali e la Tabella B, che sono programmi e non opere singole.",
+   "natura": "dal documento",
+   "fonte": "CdP Investimenti 2017-2026"
+  },
+  {
+   "file": "opere-ultimate.csv",
+   "titolo": "Opere entrate in esercizio",
+   "contenuto": "Tabella C, dettaglio: descrizione, CUP, costo, data di messa in esercizio.",
+   "natura": "dal documento",
+   "fonte": "CdP Investimenti 2017-2026"
+  },
+  {
+   "file": "opere-ultimate-sintesi.csv",
+   "titolo": "Opere entrate in esercizio, prospetto",
+   "contenuto": "Tabella C, prospetto cumulato per categoria.",
+   "natura": "dal documento",
+   "fonte": "CdP Investimenti 2017-2026"
+  },
+  {
+   "file": "capitoli-piani-gestionali.csv",
+   "titolo": "Cassa per capitolo di bilancio",
+   "contenuto": "Tavola 2: importi per capitolo e piano gestionale, anno per anno.",
+   "natura": "dal documento",
+   "fonte": "CdP Investimenti 2017-2026"
+  },
+  {
+   "file": "linee-rfi.csv",
+   "titolo": "Registro ufficiale delle linee",
+   "contenuto": "297 linee RFI con codice, denominazione, gruppo di traffico, km e treni al giorno, con documento e pagina di provenienza.",
+   "natura": "dal documento",
+   "fonte": "CdP Servizi 2022-2026, Allegato 3"
+  },
+  {
+   "file": "comuni-interventi.csv",
+   "titolo": "Comuni nominati negli interventi",
+   "contenuto": "I comuni citati nel titolo di ciascun intervento. Non sono i comuni attraversati: i contratti non contengono tracciati.",
+   "natura": "dedotto",
+   "fonte": "regole di lettura dei nomi di luogo (tools/toponimi.py)"
+  },
+  {
+   "file": "agganci-linee.csv",
+   "titolo": "Agganci intervento-linea",
+   "contenuto": "Per ogni intervento, le linee su cui probabilmente insiste, sui due registri separati, con confidenza, prova e conferma. I contratti non dichiarano la linea: e' una deduzione in corso di verifica.",
+   "natura": "dedotto",
+   "fonte": "tools/aggancio.py e tools/registro_rfi.py"
+  },
+  {
+   "file": "cup-da-cercare.csv",
+   "titolo": "CUP da interrogare",
+   "contenuto": "Tutti i CUP presenti nei contratti, pronti per un'interrogazione su OpenCUP.",
+   "natura": "dal documento",
+   "fonte": "CdP Investimenti 2017-2026"
+  },
+  {
+   "file": "rete-ferroviaria.geojson",
+   "titolo": "Tracciati della rete",
+   "contenuto": "Linee in esercizio, in costruzione e in progetto, semplificate a circa 15 m. Licenza ODbL: attribuzione a OpenStreetMap e condivisione alle stesse condizioni.",
+   "natura": "fonte esterna",
+   "fonte": "OpenStreetMap, contributori, ODbL"
+  },
+  {
+   "file": "linee-ferroviarie.geojson",
+   "titolo": "Linee con nome",
+   "contenuto": "Relazioni route=railway con nome, data di apertura dove nota e geometria. Licenza ODbL.",
+   "natura": "fonte esterna",
+   "fonte": "OpenStreetMap, contributori, ODbL"
+  },
+  {
+   "file": "cdp-rfi-dataset.json",
+   "titolo": "Dataset completo (JSON)",
+   "contenuto": "Tutto quanto letto dai CdP Investimenti, normalizzato, con storico e pagine.",
+   "natura": "dal documento",
+   "fonte": "CdP Investimenti 2017-2026"
+  },
+  {
+   "file": "validazione.txt",
+   "titolo": "Rapporto di validazione, Investimenti",
+   "contenuto": "I controlli dei dati ricostruiti contro i totali stampati nei PDF.",
+   "natura": "dal documento",
+   "fonte": "tools/validate.py"
+  },
+  {
+   "file": "validazione-servizi.txt",
+   "titolo": "Rapporto di validazione, Servizi",
+   "contenuto": "Chilometri del registro linee ricostruiti contro i totali stampati, gruppo per gruppo.",
+   "natura": "dal documento",
+   "fonte": "tools/extract_servizi.py"
+  }
+ ],
+ "documenti": [
+  {
+   "file": "CdP_2017-2021_Investimenti.pdf",
+   "titolo": "CdP 2017-2021 (contratto base)"
+  },
+  {
+   "file": "CdP_2017-2021_Investimenti_Agg2020-2021.pdf",
+   "titolo": "CdP 2017-2021 - aggiornamento 2020-2021"
+  },
+  {
+   "file": "CdP_2022-2026_Investimenti.pdf",
+   "titolo": "CdP 2022-2026 (contratto base)"
+  },
+  {
+   "file": "CdP_2022-2026_Investimenti_Agg2023.pdf",
+   "titolo": "CdP 2022-2026 - aggiornamento 2023"
+  },
+  {
+   "file": "CdP_2022-2026_Investimenti_Agg2024.pdf",
+   "titolo": "CdP 2022-2026 - aggiornamento 2024"
+  },
+  {
+   "file": "CdP_2022-2026_Investimenti_Agg_ 2025.pdf",
+   "titolo": "CdP 2022-2026 - aggiornamento 2025"
+  },
+  {
+   "file": "CdP_Servizi_2022-2026.pdf",
+   "titolo": "CdP 2022-2026 parte Servizi"
+  },
+  {
+   "file": "CdP_Servizi_2022-2026_AI1_Agg2023.pdf",
+   "titolo": "CdP Servizi, primo atto integrativo (agg. 2023)"
+  },
+  {
+   "file": "CdP_Servizi_2022-2026_AI2_Agg2024.pdf",
+   "titolo": "CdP Servizi, secondo atto integrativo (agg. 2024)"
+  },
+  {
+   "file": "CdP_Servizi_2022-2026_AI3_Agg2025.pdf",
+   "titolo": "CdP Servizi, terzo atto integrativo (agg. 2025)"
+  },
+  {
+   "file": "CdP_Servizi_2022-2026_AI4_Agg2026.pdf",
+   "titolo": "CdP Servizi, quarto atto integrativo (agg. 2026)"
+  },
+  {
+   "file": "PIR_2027_dicembre_2025_vDEF.pdf",
+   "titolo": "Prospetto Informativo della Rete 2027 (consultato, non elaborato)"
+  }
+ ],
+ "nature": {
+  "dal documento": "letto dai PDF e, dove il documento stampa un totale, verificato contro quel totale",
+  "dedotto": "prodotto da regole di questo progetto: non sta nei documenti, e puo' essere sbagliato",
+  "fonte esterna": "preso da una fonte esterna ai contratti, con la sua licenza"
+ }
+}

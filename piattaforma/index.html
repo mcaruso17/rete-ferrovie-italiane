@@ -337,6 +337,22 @@ tbody tr.clickable{cursor:pointer}
 .sk-sub{font-size:13px;font-weight:600;margin:16px 0 4px}
 .sk-sub span{font-weight:400;color:var(--ink-3);font-size:12px;margin-left:6px}
 .sk-cod{font-family:var(--f-data);font-size:12px;color:var(--ink-2)}
+/* ---- file scaricabili ---- */
+.dl-intro{font-size:12.5px;margin:0 0 10px}
+.dl-nat{font-size:12px;text-transform:uppercase;letter-spacing:.06em;margin:16px 0 6px;
+  padding-left:9px;border-left:3px solid var(--ink-3)}
+.dl-nat span{display:block;text-transform:none;letter-spacing:0;font-weight:400;
+  color:var(--ink-3);margin-top:2px}
+.dl-dal-documento{border-left-color:var(--accent)}
+.dl-dedotto{border-left-color:#b8860b}
+.dl-fonte-esterna{border-left-color:var(--ink-3)}
+.dl-lista{list-style:none;margin:0;padding:0;display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:8px 18px}
+.dl-lista li{font-size:12px;color:var(--ink-3);line-height:1.4}
+.dl-lista a{font-family:var(--f-data);font-size:12.5px;display:block;white-space:normal;overflow-wrap:anywhere}
+.dl-lista b{display:block;color:var(--ink);font-weight:500;font-size:12.5px}
+.dl-lista span{display:block}
+.dl-fonte{font-style:italic}
 .cmp-box .tratta-hit{fill:none;stroke:transparent;stroke-width:9;
   vector-effect:non-scaling-stroke;cursor:pointer;pointer-events:stroke}
 .cmp-box .seg{fill:var(--accent);fill-opacity:.9;stroke:var(--surface);
@@ -380,7 +396,9 @@ tbody tr.tot:hover td{background:var(--surface-2)}
 
 footer{border-top:1px solid var(--line);padding-block:26px 40px;
   color:var(--ink-3);font-size:12px}
-.dl-links{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0 0 18px}
+/* era una fila di link in flex; ora contiene gruppi con titolo, e in flex i
+   titoli finivano affiancati agli elenchi invece che sopra */
+.dl-links{display:block;margin:0 0 18px}
 .dl-links a{font-family:var(--f-data);font-size:12px;white-space:nowrap}
 @media (max-width:900px){
   .chart-grid,.cols2,.mappa-grid,.cmp-grid{grid-template-columns:1fr}
@@ -858,9 +876,9 @@ dialog::backdrop{background:rgba(10,14,13,.55)}
 <footer><div class="wrap">
   <div id="scarica" hidden>
     <h3 style="color:var(--ink)">Scarica i dati</h3>
-    <p class="dl-links"></p>
+    <div class="dl-links"></div>
   </div>
-  <p>Elaborazione dei Contratti di Programma MIT&ndash;RFI, parte Investimenti (2017&ndash;2021 e 2022&ndash;2026 con i relativi aggiornamenti). Tutti gli importi in milioni di euro, come nei documenti originali. Ogni riga riporta la pagina del PDF da cui è tratta. Confini regionali e comunali ISTAT via openpolis/geojson-italy, CC BY 4.0.</p>
+  <p>Elaborazione dei Contratti di Programma MIT&ndash;RFI, parte Investimenti (2017&ndash;2021 e 2022&ndash;2026 con i relativi aggiornamenti) e parte Servizi (2022&ndash;2026 con gli atti integrativi, per il registro delle linee). Tutti gli importi in milioni di euro, come nei documenti originali. Ogni riga riporta la pagina del PDF da cui è tratta. Confini regionali e comunali ISTAT via openpolis/geojson-italy, CC BY 4.0. Tracciati ferroviari &copy; contributori di OpenStreetMap, ODbL.</p>
 </div></footer>
 
 <dialog id="dlg">
@@ -2245,19 +2263,35 @@ function initMetodo(){
 
 /* ================= dati scaricabili ================= */
 function initScarica(){
-  var files = [
-    ["data/progetti.csv","progetti.csv"],
-    ["data/serie-storica.csv","serie-storica.csv"],
-    ["data/opere-ultimate.csv","opere-ultimate.csv"],
-    ["data/capitoli-piani-gestionali.csv","capitoli-piani-gestionali.csv"],
-    ["data/comuni-interventi.csv","comuni-interventi.csv"],
-    ["data/cdp-rfi-dataset.json","dataset completo (JSON)"]
-  ];
-  fetch(files[0][0], {method:"HEAD"}).then(function(r){
-    if(!r.ok) return;
+  // Il riquadro si costruisce da data/catalogo.json, lo stesso elenco da cui
+  // nasce LEGGIMI.txt: una descrizione scritta qui a mano divergerebbe dai
+  // file al primo file nuovo. Da disco il fetch fallisce e il riquadro resta
+  // nascosto, come prima: i file si scaricano solo dal sito pubblicato.
+  fetch("data/catalogo.json").then(function(r){
+    if(!r.ok) throw 0; return r.json(); }).then(function(cat){
+    var ordine = ["dal documento", "dedotto", "fonte esterna"];
+    var h = '<p class="dl-intro">Ogni file dichiara la sua natura, che conta più '+
+      'del contenuto. <a href="data/LEGGIMI.txt" download>LEGGIMI.txt</a> riassume tutto.</p>';
+    ordine.forEach(function(nat){
+      var fs = cat.dati.filter(function(x){ return x.natura === nat; });
+      if(!fs.length) return;
+      h += '<h4 class="dl-nat dl-'+nat.replace(/ /g,"-")+'">'+esc(nat)+
+        '<span>'+esc(cat.nature[nat]||"")+'</span></h4><ul class="dl-lista">'+
+        fs.map(function(x){
+          return '<li><a href="data/'+esc(x.file)+'" download>'+esc(x.file)+'</a>'+
+            '<b>'+esc(x.titolo)+'</b><span>'+esc(x.contenuto)+'</span>'+
+            '<span class="dl-fonte">fonte: '+esc(x.fonte)+'</span></li>'; }).join("")+
+        '</ul>';
+    });
+    if(cat.documenti && cat.documenti.length){
+      h += '<h4 class="dl-nat">documenti originali<span>i PDF da cui tutto il resto '+
+        'è ricavato, per verificare ogni numero alla fonte</span></h4><ul class="dl-lista">'+
+        cat.documenti.map(function(x){
+          return '<li><a href="data/'+encodeURI(x.file)+'" download>'+esc(x.file)+'</a>'+
+            '<b>'+esc(x.titolo)+'</b></li>'; }).join("")+'</ul>';
+    }
     var box = el("scarica");
-    box.querySelector(".dl-links").innerHTML = files.map(function(f){
-      return '<a href="'+f[0]+'" download>'+esc(f[1])+'</a>'; }).join("");
+    box.querySelector(".dl-links").innerHTML = h;
     box.hidden = false;
   }).catch(function(){});
 }
