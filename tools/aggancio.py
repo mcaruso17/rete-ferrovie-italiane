@@ -36,7 +36,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from toponimi import norm  # noqa: E402
+from toponimi import norm, linea_av, cita_av, declassa  # noqa: E402
 
 LINEE, MAPPA, APP, OUT = sys.argv[1:5]
 
@@ -205,6 +205,10 @@ def main():
                 conf = "media"
             else:
                 conf = "bassa"
+            # una linea AV vale solo se l'intervento dice di esserlo: vedi
+            # linea_av in toponimi.py per il caso che l'ha resa necessaria
+            if linea_av(L["nome"]) and not cita_av(pr.get("n") or ""):
+                conf = declassa(conf)
             p = []
             if len(capi) >= 2:
                 p.append("nome")

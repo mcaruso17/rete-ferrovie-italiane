@@ -28,6 +28,9 @@ tools/geo.py         attribuzione regionale
 tools/comuni.py      attribuzione comunale e spezzate schematiche
 tools/rete_osm.py    rete ferroviaria da un estratto OSM (fuori da build_all.sh)
 tools/build_rete.py  la rete sulla proiezione della mappa, semplificata
+tools/aggancio.py    intervento -> linea OSM (nome + comuni attraversati)
+tools/extract_servizi.py  CdP Servizi, Allegato 3: registro ufficiale linee
+tools/registro_rfi.py     intervento -> linea RFI (nome) e livello "confermato"
 tools/inject_data.py incorpora i dati nel file unico della piattaforma
 tools/wrap_site.py   dal frammento al documento HTML completo
 tools/audit.py       cerca pagine con tabelle non riconosciute
@@ -113,6 +116,25 @@ web, mentre overpass, geofabrik, rfi.it e dati.gov.it rispondevano 403. Se una
 fonte esterna serve e non risponde, **prima di dire che è irraggiungibile**
 controlla con `curl -sS "$HTTPS_PROXY/__agentproxy/status"` se il rifiuto viene
 dal gateway: la policy può essere stata allargata nel frattempo.
+
+## I due registri delle linee
+
+Il registro RFI (CdP Servizi, Allegato 3) e OSM descrivono la stessa rete a
+granularita' diverse e **non si fondono**: provato, solo 29 linee RFI su 296
+hanno due capi in comune con una relazione OSM. RFI e' l'autorita' su identita',
+chilometri e traffico; OSM sulla geometria. Ogni intervento si aggancia ai due
+separatamente. "Confermato" richiede alta su entrambi e un capo comune che non
+sia un nodo: con un capo qualsiasi "Raddoppio Pescara-Bari" risultava confermato
+via Bari. Le linee AV valgono solo se l'intervento cita l'alta velocita': prima
+"Potenziamento linea Bologna-Prato" (la Direttissima storica) risultava
+confermato sull'AV da entrambi i registri, che condividevano la stessa
+ambiguita' di nomi. Due fonti con lo stesso errore non sono indipendenti.
+
+Nell'estrazione dell'Allegato 3: i codici possono finire in AV (F023AV), e le
+colonne si spostano fra un'edizione e l'altra, quindi la riga si ancora al
+codice e non alla posizione. Il contratto base perde la denominazione di 14
+linee che vanno a capo; l'atto 2023 le ha tutte, e registro_rfi.py le prende da
+li'.
 
 ## Cosa resta aperto
 
