@@ -66,9 +66,9 @@
   {
    "file": "agganci-linee.csv",
    "titolo": "Agganci intervento-linea",
-   "contenuto": "Per ogni intervento, le linee su cui probabilmente insiste, sui due registri separati, con confidenza, prova e conferma. I contratti non dichiarano la linea: e' una deduzione in corso di verifica.",
+   "contenuto": "Per ogni intervento, le linee su cui insiste. Le righe del registro RFI e di OpenStreetMap sono dedotte, con confidenza, prova e conferma, e sono in corso di verifica; le righe del Piano Commerciale RFI sono dichiarate da RFI, che scrive il codice CdP accanto al progetto. La colonna natura_del_dato le distingue riga per riga.",
    "natura": "dedotto",
-   "fonte": "tools/aggancio.py e tools/registro_rfi.py"
+   "fonte": "tools/aggancio.py, tools/registro_rfi.py e tools/aggancio_pc.py"
   },
   {
    "file": "cup-da-cercare.csv",

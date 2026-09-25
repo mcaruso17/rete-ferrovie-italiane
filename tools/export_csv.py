@@ -186,6 +186,19 @@ for cod, lista in sorted((A.get("linee_intervento") or {}).items()):
                       "|".join(t["capi"]), t.get("comuni") or "",
                       "si" if str((CONF.get(cod) or {}).get("osm")) == str(t["id"]) else "no",
                       NATURA_AGGANCI])
+# il terzo registro: il Piano Commerciale di RFI, dove il legame e' scritto da
+# RFI. Si esportano i codici e i nomi, non la geometria: la licenza del
+# servizio non e' indicata
+PCD = A.get("pc") or {}
+for cod, ids in sorted((PCD.get("per_int") or {}).items()):
+    for i in ids:
+        e = PCD["el"][i]
+        righe.append([cod, (byc.get(cod) or {}).get("descrizione", ""),
+                      "RFI Piano Commerciale 2026 (%s)" % {"tr": "tratta", "lp": "localita' potenziata",
+                                                          "ln": "localita' nuova"}[e["t"]],
+                      e.get("cod", ""), e.get("den") or e.get("n", ""), "dichiarato",
+                      "codice CdP scritto da RFI", "", "", "",
+                      "fonte esterna (dichiarato da RFI)"])
 scrivi("agganci-linee.csv",
        ["codice_intervento", "descrizione", "registro", "codice_linea",
         "linea", "confidenza", "prova", "capi_nominati",
@@ -274,10 +287,12 @@ CAT = [
      "attraversati: i contratti non contengono tracciati.", DED,
      "regole di lettura dei nomi di luogo (tools/toponimi.py)"),
     ("agganci-linee.csv", "Agganci intervento-linea",
-     "Per ogni intervento, le linee su cui probabilmente insiste, sui due "
-     "registri separati, con confidenza, prova e conferma. I contratti non "
-     "dichiarano la linea: e' una deduzione in corso di verifica.", DED,
-     "tools/aggancio.py e tools/registro_rfi.py"),
+     "Per ogni intervento, le linee su cui insiste. Le righe del registro RFI "
+     "e di OpenStreetMap sono dedotte, con confidenza, prova e conferma, e sono "
+     "in corso di verifica; le righe del Piano Commerciale RFI sono dichiarate "
+     "da RFI, che scrive il codice CdP accanto al progetto. La colonna "
+     "natura_del_dato le distingue riga per riga.", DED,
+     "tools/aggancio.py, tools/registro_rfi.py e tools/aggancio_pc.py"),
     ("cup-da-cercare.csv", "CUP da interrogare",
      "Tutti i CUP presenti nei contratti, pronti per un'interrogazione su "
      "OpenCUP.", DOC, "CdP Investimenti 2017-2026"),
