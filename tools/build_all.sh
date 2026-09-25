@@ -38,6 +38,13 @@ python3 validate.py ../data/cdp-rfi-dataset.json | tee ../data/validazione.txt
 
 python3 build_app.py ../data/cdp-rfi-dataset.json /tmp/app-base.json
 
+# le schede dei progetti del Piano Commerciale RFI (PDF): titolo, anno di
+# attivazione, descrizione, benefici e il codice CdP scritto da RFI
+if [ -f ../PianoCommerciale_ed_ottobre_2025.pdf ]; then
+  python3 extract_pc.py ../PianoCommerciale_ed_ottobre_2025.pdf ../data/cdp-rfi-dataset.json \
+    ../data/piano-commerciale-schede.json
+fi
+
 # geografia: confini regionali ISTAT e attribuzione dedotta dai nomi
 GEO=${GEO:-/home/user/openpolis/geojson-italy/geojson}
 if [ -d "$GEO" ]; then
@@ -72,7 +79,7 @@ if [ -d "$GEO" ]; then
     # Il file si aggiorna con piano_commerciale.py, che richiede la rete
     if [ -f ../data/piano-commerciale-2026.json ]; then
       python3 aggancio_pc.py ../data/piano-commerciale-2026.json ../data/mappa-regioni.json \
-        /tmp/app-rfi.json ../data/cdp-rfi-app.json
+        /tmp/app-rfi.json ../data/cdp-rfi-app.json ../data/piano-commerciale-schede.json
     else
       cp /tmp/app-rfi.json ../data/cdp-rfi-app.json
     fi
