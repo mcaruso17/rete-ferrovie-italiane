@@ -15,6 +15,22 @@ for spec in \
 done
 python3 normalize.py raw extra ../data/cdp-rfi-dataset.json
 
+# CdP parte Servizi: per ora se ne legge l'Allegato 3, il registro delle linee.
+# L'estrattore confronta i chilometri con i totali stampati e lo dice a video.
+mkdir -p ../data/servizi
+# il rapporto va nel sito come quello degli investimenti: i chilometri
+# ricostruiti contro i totali stampati, documento per documento
+: > ../data/validazione-servizi.txt
+for spec in \
+  "../CdP_Servizi_2022-2026.pdf|cdps2022" \
+  "../CdP_Servizi_2022-2026_AI1_Agg2023.pdf|srv2023" \
+  "../CdP_Servizi_2022-2026_AI2_Agg2024.pdf|srv2024" \
+  "../CdP_Servizi_2022-2026_AI3_Agg2025.pdf|srv2025" \
+  "../CdP_Servizi_2022-2026_AI4_Agg2026.pdf|srv2026"; do
+  f="${spec%|*}"; id="${spec#*|}"
+  python3 extract_servizi.py "$f" "$id" "../data/servizi/$id.json" | tee -a ../data/validazione-servizi.txt
+done
+
 # i dati devono tornare con i totali stampati nei PDF prima di finire nel sito
 python3 validate.py ../data/cdp-rfi-dataset.json | tee ../data/validazione.txt
 
@@ -37,7 +53,10 @@ if [ -d "$GEO" ]; then
     # l'aggancio intervento-linea: una deduzione, non un dato dei contratti.
     # Viene dopo comuni.py perche' usa i comuni nominati come seconda prova.
     python3 aggancio.py ../data/linee-ferroviarie.geojson ../data/mappa-regioni.json \
-      /tmp/app-rete.json ../data/cdp-rfi-app.json
+      /tmp/app-rete.json /tmp/app-osm.json
+    # il registro ufficiale delle linee (CdP Servizi, Allegato 3) e il secondo
+    # aggancio, indipendente dal primo: vedi registro_rfi.py
+    python3 registro_rfi.py ../data/servizi /tmp/app-osm.json ../data/cdp-rfi-app.json
   else
     echo "data/rete-ferroviaria.geojson assente: pagina Rete ferroviaria non aggiornata" >&2
     cp /tmp/app-comuni.json ../data/cdp-rfi-app.json

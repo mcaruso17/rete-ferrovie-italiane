@@ -1,0 +1,28 @@
+CdP_Servizi_2022-2026.pdf              296 linee su 6 pagine,   16832.2 km ricostruiti
+   ATTENZIONE: 14 righe senza denominazione
+   Linea con >= 100 treni/giorno                     3227.2  stampato    3227.2  +0.0 
+   Linee all'interno dei Nodi                         949.9  stampato     950.0  -0.1 
+   Linee con <= 40 treni/giorno                      8234.2  stampato    8233.9  +0.3 
+   Linee con > 40 e < 100 treni/giorno               3687.4  stampato    3687.2  +0.2 
+   TOTALE complessivo                               16832.2  stampato   16831.8  +0.4 
+   (la fonte e' incoerente con se stessa: i suoi sottototali sommano 16831.9 contro 16831.8)
+   ESITO: 5 confronti, 5 entro 0.5 km
+CdP_Servizi_2022-2026_AI1_Agg2023.pdf  296 linee su 5 pagine,   16829.3 km ricostruiti
+   Linea con >= 100 treni/giorno                     2981.2  stampato    2981.1  +0.1 
+   Linee all'interno dei Nodi                         949.9  stampato     950.0  -0.1 
+   Linee con <= 40 treni/giorno                      8052.9  stampato    8052.6  +0.3 
+   Linee con > 40 e < 100 treni/giorno               4111.8  stampato    4111.7  +0.1 
+   TOTALE complessivo                               16829.3  stampato   16828.9  +0.4 
+   (la fonte e' incoerente con se stessa: i suoi sottototali sommano 16829.0 contro 16828.9)
+   ESITO: 5 confronti, 5 entro 0.5 km
+CdP_Servizi_2022-2026_AI2_Agg2024.pdf  297 linee su 4 pagine,   16832.3 km ricostruiti
+   ATTENZIONE: 12 righe senza denominazione
+   Linea con >= 100 treni/giorno                     3095.5  stampato    3095.5  +0.0 
+   Linee AC/AV                                        733.6  stampato     733.6  +0.0 
+   Linee all'interno dei Nodi                         949.6  stampato     949.6  +0.0 
+   Linee con <= 40 treni/giorno                      8303.9  stampato    8303.9  -0.0 
+   Linee con > 40 e < 100 treni/giorno               3749.6  stampato    3749.6  +0.0 
+   TOTALE complessivo                               16832.3  stampato   16832.3  -0.0 
+   ESITO: 6 confronti, 6 entro 0.5 km
+CdP_Servizi_2022-2026_AI3_Agg2025.pdf    0 linee su 0 pagine,       0.0 km ricostruiti
+CdP_Servizi_2022-2026_AI4_Agg2026.pdf    0 linee su 0 pagine,       0.0 km ricostruiti

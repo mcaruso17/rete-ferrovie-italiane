@@ -103,3 +103,31 @@ def trova(descrizione, pattern):
             continue
         usati.append((m.start(), m.end()))
         yield m.group(1)
+
+
+# Alta velocita' e linea storica fra le stesse citta' hanno gli stessi capi:
+# "Bologna - Firenze AV/AC" e la Direttissima, "Milano-Bologna AV/AC" e la
+# storica per Lodi e Piacenza. Ne' il nome ne' la geometria le distinguono (le
+# due corrono parallele e attraversano gli stessi comuni), e i due registri
+# sbagliavano nello stesso modo: "Potenziamento linea Bologna-Prato" risultava
+# confermato sull'AV da RFI e da OSM insieme. Due fonti che condividono la
+# stessa ambiguita' non sono indipendenti. L'unico appiglio e' il testo
+# dell'intervento: una linea AV vale solo se l'intervento dice di esserlo.
+_AV = re.compile(r"\b(av|ac|avac|av ac|alta velocita|alta capacita)\b")
+
+
+def linea_av(nome, codice=""):
+    """La linea e' una linea AV/AC: dal nome, o dal codice RFI (A001, F023AV)."""
+    if re.match(r"^A\d{3}$", codice or "") or (codice or "").endswith("AV"):
+        return True
+    return bool(_AV.search(norm(nome)))
+
+
+def cita_av(testo):
+    """La descrizione dell'intervento parla di alta velocita' o alta capacita'."""
+    return bool(_AV.search(norm(testo)))
+
+
+def declassa(conf):
+    """Un livello in meno: alta diventa media, media diventa bassa."""
+    return {"alta": "media", "media": "bassa"}.get(conf, conf)
