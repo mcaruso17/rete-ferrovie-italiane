@@ -58,7 +58,15 @@ if [ -d "$GEO" ]; then
       /tmp/app-rete.json /tmp/app-osm.json
     # il registro ufficiale delle linee (CdP Servizi, Allegato 3) e il secondo
     # aggancio, indipendente dal primo: vedi registro_rfi.py
-    python3 registro_rfi.py ../data/servizi /tmp/app-osm.json /tmp/app-rfi.json
+    # la rete RFI: da' al registro delle linee la geometria che non aveva, e
+    # serve a registro_rfi.py per la prova dei comuni attraversati
+    if [ -f ../data/rete-rfi.geojson ]; then
+      python3 rete_rfi.py ../data/rete-rfi.geojson ../data/mappa-regioni.json \
+        ../data/servizi /tmp/app-osm.json /tmp/app-rr.json
+    else
+      cp /tmp/app-osm.json /tmp/app-rr.json
+    fi
+    python3 registro_rfi.py ../data/servizi /tmp/app-rr.json /tmp/app-rfi.json
     # il legame dichiarato da RFI nel Piano Commerciale: viene dopo i due
     # registri perche' li mette alla prova e toglie le conferme smentite.
     # Il file si aggiorna con piano_commerciale.py, che richiede la rete

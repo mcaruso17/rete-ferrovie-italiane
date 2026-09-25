@@ -38,9 +38,9 @@
   {
    "file": "linee-rfi.csv",
    "titolo": "Registro ufficiale delle linee",
-   "contenuto": "299 linee RFI con codice, denominazione, gruppo di traffico, km e treni al giorno dell'edizione piu' recente, con documento e pagina di provenienza.",
+   "contenuto": "299 linee RFI con codice, denominazione, gruppo di traffico, km e treni al giorno dell'edizione piu' recente, con documento e pagina di provenienza. Le ultime colonne vengono dalla rete RFI (codice di linea commerciale, rete TEN-T, massa assiale) e, per la data di apertura, da OpenStreetMap.",
    "natura": "dal documento",
-   "fonte": "CdP Servizi 2022-2026, Allegato 3"
+   "fonte": "CdP Servizi 2022-2026, Allegato 3; rete RFI; OpenStreetMap"
   },
   {
    "file": "servizi-fonti-cassa.csv",
@@ -76,6 +76,20 @@
    "contenuto": "Tutti i CUP presenti nei contratti, pronti per un'interrogazione su OpenCUP.",
    "natura": "dal documento",
    "fonte": "CdP Investimenti 2017-2026"
+  },
+  {
+   "file": "rete-rfi.geojson",
+   "titolo": "Rete RFI",
+   "contenuto": "Le tratte della rete RFI con codice di tratta e di linea, linea commerciale (il codice del registro con la lettera cambiata), rete TEN-T, massa assiale. Comprende anche 46 tratte di progetto (codice PRJ), che il sito non disegna come rete in esercizio.",
+   "natura": "fonte esterna",
+   "fonte": "RFI, rete del Piano Commerciale 2026 (servizio ArcGIS pubblico)"
+  },
+  {
+   "file": "piano-commerciale-2026.json",
+   "titolo": "Progetti del Piano Commerciale RFI",
+   "contenuto": "Tratte e localita' di progetto con il codice dell'intervento CdP scritto da RFI, anno di attivazione e caratteristiche, e la geometria semplificata.",
+   "natura": "fonte esterna",
+   "fonte": "RFI, Piano Commerciale 2026, Scenari infrastrutturali"
   },
   {
    "file": "rete-ferroviaria.geojson",

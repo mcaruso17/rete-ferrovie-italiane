@@ -54,10 +54,24 @@ def righe_allegato3(doc, pg):
     piu' i due numeri in coda. Funziona a prescindere da dove cadano le colonne.
     """
     righe, totali = [], []
-    for ln in group_lines(extract_page(doc, pg)):
-        testi = [t for _x0, _x1, t, _i in raw_cells(ln) if t]
-        if not testi:
-            continue
+    linee = [[(x0, x1, t) for x0, x1, t, _i in raw_cells(ln) if t]
+             for ln in group_lines(extract_page(doc, pg))]
+    linee = [c for c in linee if c]
+
+    def solo_testo(i, dopo_x):
+        """La riga i, se e' un pezzo di denominazione andato a capo: solo testo,
+        tutto a destra della colonna del codice, senza numeri ne' totali."""
+        if not 0 <= i < len(linee):
+            return None
+        c = linee[i]
+        if any(CODICE.match(t) or NUMERO.match(t) for _a, _b, t in c):
+            return None
+        if TOTALE.match(c[0][2]) or c[0][0] <= dopo_x:
+            return None
+        return " ".join(t for _a, _b, t in c)
+
+    for n, celle in enumerate(linee):
+        testi = [t for _x0, _x1, t in celle]
 
         # i totali stampati servono a validare: si raccolgono qui perche' sono
         # righe della stessa tabella, non un di piu'
@@ -82,6 +96,15 @@ def righe_allegato3(doc, pg):
             treni, nome = to_float(tr), coda[:-2]
         else:
             treni, nome = None, coda[:-1]
+        # Un numero da solo al posto del nome e' il rimando a una nota: nell'atto
+        # 2023 la Direttissima (F055) risultava chiamata "1". Quando il nome
+        # manca, e' andato a capo: sta nelle righe di solo testo subito sopra
+        # e subito sotto, centrate sulla riga del codice.
+        nome = [t for t in nome if not re.match(r"^\(?\d\)?$", t)]
+        if not nome:
+            x_cod = celle[pos][1]
+            sopra, sotto = solo_testo(n - 1, x_cod), solo_testo(n + 1, x_cod)
+            nome = [t for t in (sopra, sotto) if t]
         righe.append({
             "gruppo": " ".join(testi[:pos]).strip(),
             "codice": testi[pos],

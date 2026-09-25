@@ -20,7 +20,11 @@ import collections
 import json
 import math
 import re
+import os
 import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from geometria import IndiceSegmenti, campiona  # noqa: E402
 
 PC, MAPPA, APP, OUT = sys.argv[1:5]
 
@@ -182,12 +186,58 @@ def main():
             smentiti[c] = dict(cf, quota=esito["quota"])
             del app["confermati"][c]
 
+    # ------------------------------ le linee RFI su cui corre il dichiarato
+    # Con la rete RFI il tracciato dichiarato si puo' leggere anche come
+    # "quali linee del registro tocca". Il tracciato si campiona a passo
+    # costante e ogni punto va alla sola linea piu' vicina entro un chilometro:
+    # cosi' la quota e' una quota di lunghezza. Una linea conta se porta almeno
+    # un quinto del tracciato e almeno 3 km, oppure piu' della meta': una
+    # tratta lunga (Palermo-Catania) attraversa piu' linee del registro, che
+    # RFI divide finemente, mentre i primi 2 km della Parma-Vicofertile, che
+    # esce dalla stazione di Parma affiancata alla Milano-Bologna, non fanno
+    # di quel raddoppio un intervento sulla Milano-Bologna. Un progetto che non
+    # tocca nessuna linea e' una linea nuova, non ancora rete.
+    RL = (app.get("rete_rfi") or {}).get("linee") or {}
+    ixr = IndiceSegmenti()
+    for cod, L in RL.items():
+        for d in L["d"]:
+            ixr.aggiungi(punti_da_path(d), cod)
+    linee_dich, prova_rfi, migliore_rfi = {}, collections.defaultdict(lambda: [0, 0]), [0, 0]
+    for c, ids in per_int.items():
+        PASSO = 0.3
+        pts = [q for i in ids if el[i]["t"] == "tr" for d in el[i]["d"]
+               for q in campiona(punti_da_path(d), PASSO)]
+        if not pts:
+            continue
+        cnt = collections.Counter(k for k in (ixr.piu_vicina(q, 1.0) for q in pts) if k)
+        # un'unita' di mappa e' circa un chilometro
+        dich = {cod: round(n / len(pts), 2) for cod, n in cnt.items()
+                if (n / len(pts) >= 0.2 and n * PASSO >= 3) or n / len(pts) >= 0.6}
+        if not dich:
+            continue
+        linee_dich[c] = [{"c": k, "quota": v} for k, v in sorted(dich.items(), key=lambda kv: -kv[1])]
+        lista = (app.get("linee_rfi_intervento") or {}).get(c, [])
+        for t in lista:
+            t["dich"] = t["c"] in dich
+            prova_rfi[t["conf"]][0] += t["dich"]
+            prova_rfi[t["conf"]][1] += 1
+        if lista:
+            migliore_rfi[0] += lista[0]["dich"]
+            migliore_rfi[1] += 1
+        # una conferma deve reggere anche sul lato RFI
+        cf = (app.get("confermati") or {}).get(c)
+        if cf and cf["rfi"] not in dich:
+            smentiti[c] = dict(cf, quota=0.0)
+            del app["confermati"][c]
+
     app["pc"] = {"fonte": pc["fonte"], "servizio": pc["servizio"],
                  "scaricato": pc["scaricato"], "licenza": pc["licenza"],
                  "el": el, "per_int": dict(per_int),
                  "prova": {k: v for k, v in prova.items()}, "smentiti": smentiti,
                  "migliore": [sum(1 for l in dettaglio.values() if l[0]["quota"] >= 0.5),
-                              len(dettaglio)]}
+                              len(dettaglio)],
+                 "linee_rfi": linee_dich, "prova_rfi": dict(prova_rfi),
+                 "migliore_rfi": migliore_rfi}
     json.dump(app, open(OUT, "w", encoding="utf-8"), ensure_ascii=False,
               separators=(",", ":"))
 
@@ -209,6 +259,12 @@ def main():
           % (m[0], m[1]))
     if smentiti:
         print("  conferme smentite dal tracciato RFI e tolte: %s" % ", ".join(sorted(smentiti)))
+    print("  interventi dichiarati che corrono su linee del registro RFI: %d" % len(linee_dich))
+    for k in ("alta", "media", "bassa"):
+        if k in prova_rfi:
+            a, n = prova_rfi[k]
+            print("  prova agganci registro RFI %-6s %3d concordi su %3d (%.0f%%)" % (k, a, n, 100 * a / n))
+    print("  primo aggancio al registro RFI concorde: %d su %d" % tuple(migliore_rfi))
     for k in ("confermato", "alta", "media", "bassa"):
         if k in prova:
             a, n = prova[k]
