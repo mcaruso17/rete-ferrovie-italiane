@@ -33,6 +33,8 @@ tools/extract_servizi.py  CdP Servizi, Allegato 3: registro ufficiale linee
 tools/extract_servizi_fin.py  CdP Servizi, Allegati 4a, 4b, 4c e 12 (tabelle finanziarie)
 tools/build_servizi.py    le viste Servizi della piattaforma (app["servizi"])
 tools/registro_rfi.py     intervento -> linea RFI (nome) e livello "confermato"
+tools/piano_commerciale.py  scarica i progetti del Piano Commerciale RFI (fuori da build_all.sh)
+tools/aggancio_pc.py      intervento -> tracciato dichiarato da RFI, e prova degli agganci dedotti
 tools/inject_data.py incorpora i dati nel file unico della piattaforma
 tools/wrap_site.py   dal frammento al documento HTML completo
 tools/audit.py       cerca pagine con tabelle non riconosciute
@@ -137,6 +139,22 @@ colonne si spostano fra un'edizione e l'altra, quindi la riga si ancora al
 codice e non alla posizione. Il contratto base perde la denominazione di 14
 linee che vanno a capo; l'atto 2023 le ha tutte, e registro_rfi.py le prende da
 li'.
+
+## La terza fonte: il Piano Commerciale RFI
+
+RFI pubblica il Piano Commerciale anche come servizi ArcGIS pubblici
+(`services3.arcgis.com/GS5pg5GvYXCMCEen`, organizzazione RFI). Nei layer
+"Scenari infrastrutturali" tratte e localita' di progetto hanno il campo
+"Riferimento CdP-I" con i codici intervento: il legame e' dichiarato, non
+dedotto. `data/piano-commerciale-2026.json` e' un estratto versionato (solo i
+campi mostrati e la geometria semplificata): la scheda del servizio **non indica
+una licenza**, quindi non si ripubblica la geometria come file scaricabile.
+
+Lo stesso dato mette alla prova gli agganci dedotti. Primo esito (settembre
+2026): le associazioni OSM "alta" coincidono col tracciato RFI in 31 casi su 35,
+le "media" in 40 su 241. Le conferme smentite si tolgono (P247). La rete RFI
+completa (`TrattePC2026`, 2.414 tratte) e il PDF del Piano Commerciale (847
+pagine) non sono ancora usati.
 
 ## Le due parti nella piattaforma
 

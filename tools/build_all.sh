@@ -58,7 +58,16 @@ if [ -d "$GEO" ]; then
       /tmp/app-rete.json /tmp/app-osm.json
     # il registro ufficiale delle linee (CdP Servizi, Allegato 3) e il secondo
     # aggancio, indipendente dal primo: vedi registro_rfi.py
-    python3 registro_rfi.py ../data/servizi /tmp/app-osm.json ../data/cdp-rfi-app.json
+    python3 registro_rfi.py ../data/servizi /tmp/app-osm.json /tmp/app-rfi.json
+    # il legame dichiarato da RFI nel Piano Commerciale: viene dopo i due
+    # registri perche' li mette alla prova e toglie le conferme smentite.
+    # Il file si aggiorna con piano_commerciale.py, che richiede la rete
+    if [ -f ../data/piano-commerciale-2026.json ]; then
+      python3 aggancio_pc.py ../data/piano-commerciale-2026.json ../data/mappa-regioni.json \
+        /tmp/app-rfi.json ../data/cdp-rfi-app.json
+    else
+      cp /tmp/app-rfi.json ../data/cdp-rfi-app.json
+    fi
   else
     echo "data/rete-ferroviaria.geojson assente: pagina Rete ferroviaria non aggiornata" >&2
     cp /tmp/app-comuni.json ../data/cdp-rfi-app.json
