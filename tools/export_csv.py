@@ -244,6 +244,20 @@ scrivi("servizi-assegnazioni-cup.csv",
         "totale_riga", "sede_doit_nominata", "regioni_nominate", "edizione",
         "pagina"], righe)
 
+# --- le schede del Piano Commerciale RFI (PDF) -----------------------------
+PC = A.get("pc") or {}
+righe = []
+for x in PC.get("schede", []):
+    for c in x["cod"]:
+        righe.append([c, (byc.get(c) or {}).get("descrizione", ""), x["t"], x["anno"],
+                      x["pnrr"], "|".join(x["reg"]), "|".join(str(p) for p in x["pag"]),
+                      "|".join(b["k"] for b in x["ben"] if b["k"]), x["rif"],
+                      "fonte esterna (dichiarato da RFI)"])
+scrivi("piano-commerciale-schede.csv",
+       ["codice_intervento", "descrizione_cdp", "progetto_rfi", "attivazione_prevista",
+        "pnrr", "regioni", "pagine_pdf", "tipi_di_beneficio", "riferimento_cdp_rfi",
+        "natura_del_dato"], righe)
+
 # --- catalogo dei file ------------------------------------------------------
 # Un solo elenco, da cui escono sia il riquadro dei download in pagina sia il
 # LEGGIMI.txt: due descrizioni scritte a mano divergerebbero al primo file
@@ -316,6 +330,14 @@ CAT = [
      "da RFI, anno di attivazione e caratteristiche, e la geometria "
      "semplificata.", EST,
      "RFI, Piano Commerciale 2026, Scenari infrastrutturali"),
+    ("piano-commerciale-schede.csv", "Schede progetto del Piano Commerciale RFI",
+     "Una riga per coppia intervento-progetto: il progetto come lo chiama RFI, "
+     "l'anno di attivazione previsto, la misura PNRR, le regioni, i tipi di "
+     "beneficio e le pagine del PDF. Il codice CdP e' scritto da RFI nella "
+     "scheda.", EST, "RFI, Il Piano Commerciale, edizione ottobre 2025"),
+    ("piano-commerciale-schede.json", "Schede progetto del Piano Commerciale RFI (completo)",
+     "Le stesse schede con descrizione, benefici per esteso e numeri del "
+     "progetto.", EST, "RFI, Il Piano Commerciale, edizione ottobre 2025"),
     ("rete-ferroviaria.geojson", "Tracciati della rete",
      "Linee in esercizio, in costruzione e in progetto, semplificate a circa "
      "15 m. Licenza ODbL: attribuzione a OpenStreetMap e condivisione alle "
@@ -342,6 +364,7 @@ TIT_PDF.update({
     "CdP_Servizi_2022-2026_AI3_Agg2025.pdf": "CdP Servizi, terzo atto integrativo (agg. 2025)",
     "CdP_Servizi_2022-2026_AI4_Agg2026.pdf": "CdP Servizi, quarto atto integrativo (agg. 2026)",
     "PIR_2027_dicembre_2025_vDEF.pdf": "Prospetto Informativo della Rete 2027 (consultato, non elaborato)",
+    "PianoCommerciale_ed_ottobre_2025.pdf": "RFI, Il Piano Commerciale, edizione ottobre 2025",
 })
 radice = os.path.dirname(os.path.abspath(OUT))
 pdf = sorted(f for f in os.listdir(radice) if f.lower().endswith(".pdf"))

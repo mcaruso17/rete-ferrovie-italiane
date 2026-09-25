@@ -27,6 +27,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from geometria import IndiceSegmenti, campiona  # noqa: E402
 
 PC, MAPPA, APP, OUT = sys.argv[1:5]
+# facoltativo: le schede estratte dal PDF del Piano Commerciale (extract_pc.py)
+SCHEDE = sys.argv[5] if len(sys.argv) > 5 else None
 
 TIPO = {"tratte": "tr", "localita_potenziate": "lp", "localita_nuove": "ln"}
 # le caratteristiche dell'intervento, come le marca RFI con 0/1
@@ -230,6 +232,25 @@ def main():
             smentiti[c] = dict(cf, quota=0.0)
             del app["confermati"][c]
 
+    # ------------------------------------------- le schede del PDF
+    # Stesso legame (il codice CdP scritto da RFI) ma altra edizione e altro
+    # formato: il PDF e' l'edizione di ottobre 2025, la mappa quella del 2026.
+    # Si tengono entrambi, e si dice quanti interventi ciascuno copre.
+    schede, schede_int = [], collections.defaultdict(list)
+    if SCHEDE and os.path.exists(SCHEDE):
+        sd = json.load(open(SCHEDE, encoding="utf-8"))
+        for s in sd["schede"]:
+            noti = [c for c in s["codici"] if c in codici]
+            if not noti:
+                continue
+            k = len(schede)
+            schede.append({"t": s["titolo"], "anno": s["anno"], "pnrr": s["pnrr"],
+                           "rif": s["rif"], "cod": noti, "desc": s["descrizione"],
+                           "note": s["note"], "ben": s["benefici"], "num": s["numeri"],
+                           "reg": s["regioni"], "pag": s["pagine"]})
+            for c in noti:
+                schede_int[c].append(k)
+
     app["pc"] = {"fonte": pc["fonte"], "servizio": pc["servizio"],
                  "scaricato": pc["scaricato"], "licenza": pc["licenza"],
                  "el": el, "per_int": dict(per_int),
@@ -237,7 +258,10 @@ def main():
                  "migliore": [sum(1 for l in dettaglio.values() if l[0]["quota"] >= 0.5),
                               len(dettaglio)],
                  "linee_rfi": linee_dich, "prova_rfi": dict(prova_rfi),
-                 "migliore_rfi": migliore_rfi}
+                 "migliore_rfi": migliore_rfi,
+                 "schede": schede, "schede_int": dict(schede_int),
+                 "pdf": "PianoCommerciale_ed_ottobre_2025.pdf",
+                 "pdf_titolo": "RFI, Il Piano Commerciale, edizione ottobre 2025"}
     json.dump(app, open(OUT, "w", encoding="utf-8"), ensure_ascii=False,
               separators=(",", ":"))
 
@@ -260,6 +284,12 @@ def main():
     if smentiti:
         print("  conferme smentite dal tracciato RFI e tolte: %s" % ", ".join(sorted(smentiti)))
     print("  interventi dichiarati che corrono su linee del registro RFI: %d" % len(linee_dich))
+    if schede:
+        tutti = set(per_int) | set(schede_int)
+        print("  schede del PDF: %d progetti, %d interventi; con la mappa: %d interventi "
+              "(%d in entrambi, %d solo nel PDF, %d solo nella mappa)"
+              % (len(schede), len(schede_int), len(tutti), len(set(per_int) & set(schede_int)),
+                 len(set(schede_int) - set(per_int)), len(set(per_int) - set(schede_int))))
     for k in ("alta", "media", "bassa"):
         if k in prova_rfi:
             a, n = prova_rfi[k]
