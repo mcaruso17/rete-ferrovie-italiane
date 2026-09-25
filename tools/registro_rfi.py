@@ -94,6 +94,9 @@ def registro():
             # i dati quantitativi si aggiornano: vale l'edizione piu' recente
             r.update({"g": l["gruppo"], "km": l["km"], "tr": l["treni_giorno"],
                       "doc": doc, "pag": l["pagina"]})
+            # la serie per edizione: chilometri e treni cambiano da un orario
+            # all'altro, e la vista Servizi della rete li mette in fila
+            r.setdefault("st", {})[doc] = [l["km"], l["treni_giorno"]]
     return reg
 
 
@@ -162,7 +165,7 @@ def main():
                 break
 
     app["registro_rfi"] = {c: {k: r[k] for k in ("n", "g", "km", "tr", "doc",
-                                                  "pag", "doc_n", "pag_n")}
+                                                  "pag", "doc_n", "pag_n", "st")}
                            for c, r in reg.items()}
     app["registro_rfi_fonti"] = TITOLI
     app["linee_rfi_intervento"] = per_int

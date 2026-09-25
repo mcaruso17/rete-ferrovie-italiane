@@ -15,8 +15,9 @@ for spec in \
 done
 python3 normalize.py raw extra ../data/cdp-rfi-dataset.json
 
-# CdP parte Servizi: per ora se ne legge l'Allegato 3, il registro delle linee.
-# L'estrattore confronta i chilometri con i totali stampati e lo dice a video.
+# CdP parte Servizi: l'Allegato 3 (registro delle linee) e le tabelle
+# finanziarie 4a, 4b, 4c e 12. Entrambi gli estrattori confrontano quello che
+# leggono con i totali stampati e lo dicono a video.
 mkdir -p ../data/servizi
 # il rapporto va nel sito come quello degli investimenti: i chilometri
 # ricostruiti contro i totali stampati, documento per documento
@@ -29,6 +30,7 @@ for spec in \
   "../CdP_Servizi_2022-2026_AI4_Agg2026.pdf|srv2026"; do
   f="${spec%|*}"; id="${spec#*|}"
   python3 extract_servizi.py "$f" "$id" "../data/servizi/$id.json" | tee -a ../data/validazione-servizi.txt
+  python3 extract_servizi_fin.py "$f" "$id" "../data/servizi/fin-$id.json" | tee -a ../data/validazione-servizi.txt
 done
 
 # i dati devono tornare con i totali stampati nei PDF prima di finire nel sito
@@ -65,6 +67,9 @@ else
   echo "confini ISTAT assenti in $GEO: mappa, regioni e comuni non aggiornati" >&2
   cp /tmp/app-base.json ../data/cdp-rfi-app.json
 fi
+# le viste Servizi: fonti, impieghi, assegnazioni per CUP, PNRR. Non dipende
+# dalla geografia, quindi gira in tutti i rami sopra
+python3 build_servizi.py ../data/servizi ../data/cdp-rfi-app.json
 # i CSV dei comuni leggono l'app appena costruita, quindi vengono dopo
 python3 export_csv.py ../data/cdp-rfi-dataset.json ../data
 

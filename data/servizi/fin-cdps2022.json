@@ -1,0 +1,336 @@
+{
+ "documento": "cdps2022",
+ "impieghi": [
+  {
+   "rigo": "1",
+   "sezione": "Quadro delle proiezioni programmatorie degli impieghi per competenza",
+   "voce": "Attività di Gestione della Rete (Manutenzione Ordinaria, Circolazione, Safety, Security, (*) Navigazione, PRM e Sgombero dell’infrastruttura) (c/esercizio)",
+   "capitolo": null,
+   "valori": {
+    "2022": 1161.24,
+    "2023": 1155.56,
+    "2024": 1155.56,
+    "2025": 1155.56,
+    "2026": 1155.56,
+    "tot": 5783.46
+   },
+   "pagina": 34
+  },
+  {
+   "rigo": "2",
+   "sezione": "Quadro delle proiezioni programmatorie degli impieghi per competenza",
+   "voce": "Manutenzione Straordinaria (c/impianti)",
+   "capitolo": null,
+   "valori": {
+    "2022": 2200.0,
+    "2023": 2200.0,
+    "2024": 2200.0,
+    "2025": 2200.0,
+    "2026": 2200.0,
+    "tot": 11000.0
+   },
+   "pagina": 34
+  },
+  {
+   "rigo": "3",
+   "sezione": "Quadro delle proiezioni programmatorie degli impieghi per competenza",
+   "voce": "Totale proiezioni degli impieghi per competenza",
+   "capitolo": null,
+   "valori": {
+    "2022": 3361.24,
+    "2023": 3355.56,
+    "2024": 3355.56,
+    "2025": 3355.56,
+    "2026": 3355.56,
+    "tot": 16783.46
+   },
+   "pagina": 34
+  }
+ ],
+ "fonti": [
+  {
+   "rigo": "1a",
+   "sezione": "Conto esercizio",
+   "voce": "Legge 234/2021 - Legge di Bilancio 2022 e Leggi di Bilancio seguenti",
+   "capitolo": "1541",
+   "valori": {
+    "2022": 1155.56,
+    "2023": 1055.56,
+    "2024": 965.56,
+    "2025": 965.56,
+    "2026": 965.56,
+    "tot": 5107.78,
+    "compl": 5107.78
+   },
+   "pagina": 35
+  },
+  {
+   "rigo": "1b",
+   "sezione": "Conto esercizio",
+   "voce": "Legge 178/2020 - Legge di Bilancio 2021 (risorse per servizio navigazione ME-RC)",
+   "capitolo": "7255",
+   "valori": {
+    "2022": 5.68,
+    "tot": 5.68,
+    "compl": 5.68
+   },
+   "pagina": 35
+  },
+  {
+   "rigo": "1",
+   "sezione": "Conto esercizio",
+   "voce": "Totale Fonti c/Esercizio",
+   "capitolo": null,
+   "valori": {
+    "2022": 1161.24,
+    "2023": 1055.56,
+    "2024": 965.56,
+    "2025": 965.56,
+    "2026": 965.56,
+    "tot": 5113.46,
+    "oltre": 0.0,
+    "compl": 5113.46
+   },
+   "pagina": 35
+  },
+  {
+   "rigo": "2a",
+   "sezione": "Conto impianti",
+   "voce": "Legge 234/2021 - Legge di Bilancio 2022 (Cap 7122/PG5) (*)",
+   "capitolo": "7122",
+   "valori": {
+    "2022": 500.0,
+    "2023": 1000.0,
+    "2024": 1000.0,
+    "2025": 1000.0,
+    "2026": 1000.0,
+    "tot": 4500.0,
+    "oltre": 600.0,
+    "compl": 5100.0
+   },
+   "pagina": 35
+  },
+  {
+   "rigo": "2",
+   "sezione": "Conto impianti",
+   "voce": "Totale Fonti c/Impianti (*)",
+   "capitolo": null,
+   "valori": {
+    "2022": 500.0,
+    "2023": 1000.0,
+    "2024": 1000.0,
+    "2025": 1000.0,
+    "2026": 1000.0,
+    "tot": 4500.0,
+    "oltre": 600.0,
+    "compl": 5100.0
+   },
+   "pagina": 35
+  },
+  {
+   "rigo": "3",
+   "sezione": "Conto impianti",
+   "voce": "Totale fonti",
+   "capitolo": null,
+   "valori": {
+    "2022": 1661.24,
+    "2023": 2055.56,
+    "2024": 1965.56,
+    "2025": 1965.56,
+    "2026": 1965.56,
+    "tot": 9613.46,
+    "oltre": 600.0,
+    "compl": 10213.46
+   },
+   "pagina": 35
+  },
+  {
+   "rigo": "4",
+   "sezione": "Quadro delle proiezioni di spesa (c/impianti)",
+   "voce": "Manutenzione Straordinaria (Residuo CdP-S 2016-2021 e CdP 2012-2014)",
+   "capitolo": null,
+   "valori": {
+    "pm": 7024.51,
+    "2022": 358.38,
+    "tot": 358.38,
+    "compl": 7382.89
+   },
+   "pagina": 35
+  },
+  {
+   "rigo": "5a",
+   "sezione": "Conto impianti",
+   "voce": "Delibera CIPE n. 33 del 23.03.2012 (valore iniziale 300 mln€)",
+   "capitolo": "7514",
+   "valori": {
+    "pm": 271.44,
+    "tot": 0.0,
+    "compl": 271.44
+   },
+   "pagina": 35
+  },
+  {
+   "rigo": "5b",
+   "sezione": "Conto impianti",
+   "voce": "Art. 1, c. 175, della l. n. 228/2012 (Legge di Stabilità 2013)",
+   "capitolo": "7122",
+   "valori": {
+    "pm": 300.0,
+    "tot": 0.0,
+    "compl": 300.0
+   },
+   "pagina": 35
+  },
+  {
+   "rigo": "5c",
+   "sezione": "Conto impianti",
+   "voce": "Delibera CIPE 22 del 18.03.2013 - risorse a valere su art. 1, c. 176, della Legge n. 228/2012 (legge di stabilità 2013)",
+   "capitolo": "7122",
+   "valori": {
+    "pm": 338.0,
+    "tot": 0.0,
+    "compl": 338.0
+   },
+   "pagina": 35
+  },
+  {
+   "rigo": "5d",
+   "sezione": "Conto impianti",
+   "voce": "Delibera CIPE 22 del 18.03.2013 - risorse a valere su art. 32, c. 1, del D.L. 98/2011",
+   "capitolo": "7518",
+   "valori": {
+    "pm": 240.0,
+    "tot": 0.0,
+    "compl": 240.0
+   },
+   "pagina": 35
+  },
+  {
+   "rigo": "5e",
+   "sezione": "Conto impianti",
+   "voce": "Bilancio di previsione dello Stato (ridestinate da Legge n. 71 24.06.2013, art. 7-ter)",
+   "capitolo": "1541",
+   "valori": {
+    "pm": 262.89,
+    "tot": 0.0,
+    "compl": 262.89
+   },
+   "pagina": 35
+  },
+  {
+   "rigo": "5f",
+   "sezione": "Conto impianti",
+   "voce": "Art 1, c‐ 73 della Legge 147 del 27.12.2013 (Legge Stabilità 2014)",
+   "capitolo": "7122",
+   "valori": {
+    "pm": 500.0,
+    "tot": 0.0,
+    "compl": 500.0
+   },
+   "pagina": 35
+  },
+  {
+   "rigo": "5g",
+   "sezione": "Conto impianti",
+   "voce": "Legge 147 del 27.12.2013 - Legge Stabilità 2014 (Tab E, cap 7122 Pg2) - Resi operativi da Decreto-Legge 133/14 \"Sblocca Italia\" convertito in Legge 164 del 11.11.2014",
+   "capitolo": "7122",
+   "valori": {
+    "pm": 220.0,
+    "tot": 0.0,
+    "compl": 220.0
+   },
+   "pagina": 35
+  },
+  {
+   "rigo": "5h",
+   "sezione": "Conto impianti",
+   "voce": "Legge 190/14 del 23.12.2014 (Legge di Stabilità 2015) - PG5",
+   "capitolo": "7122",
+   "valori": {
+    "pm": 4198.35,
+    "2022": 51.65,
+    "tot": 51.65,
+    "compl": 4250.0
+   },
+   "pagina": 35
+  },
+  {
+   "rigo": "5i",
+   "sezione": "Conto impianti",
+   "voce": "Legge 208/2015 - Legge di Stabilità 2016 - PG2",
+   "capitolo": "7122",
+   "valori": {
+    "pm": 0.0,
+    "2022": 222.03,
+    "tot": 222.03,
+    "compl": 222.03
+   },
+   "pagina": 35
+  },
+  {
+   "rigo": "5l",
+   "sezione": "Conto impianti",
+   "voce": "Piano Operativo Nazionale 2007-2013 (PON 07-13)",
+   "capitolo": "n.a.",
+   "valori": {
+    "pm": 7.5,
+    "2022": 19.03,
+    "tot": 19.03,
+    "compl": 26.53
+   },
+   "pagina": 35
+  },
+  {
+   "rigo": "5m",
+   "sezione": "Conto impianti",
+   "voce": "Legge 178/2020 - Legge di Bilancio 2021 (Cap 7122/PG5)",
+   "capitolo": "7122",
+   "valori": {
+    "pm": 0.0,
+    "2022": 52.0,
+    "2023": 50.0,
+    "2024": 50.0,
+    "2025": 50.0,
+    "2026": 50.0,
+    "tot": 252.0,
+    "oltre": 500.0,
+    "compl": 752.0
+   },
+   "pagina": 35
+  },
+  {
+   "rigo": "5",
+   "sezione": "Conto impianti",
+   "voce": "Totale Fonti c/Impianti",
+   "capitolo": null,
+   "valori": {
+    "pm": 6338.18,
+    "2022": 344.71,
+    "2023": 50.0,
+    "2024": 50.0,
+    "2025": 50.0,
+    "2026": 50.0,
+    "tot": 544.71,
+    "oltre": 500.0,
+    "compl": 7382.89
+   },
+   "pagina": 35
+  }
+ ],
+ "assegnazioni": [],
+ "pnrr": [],
+ "pagine": {
+  "4a": [
+   34
+  ],
+  "4b": [
+   35
+  ]
+ },
+ "note": [],
+ "controlli": {
+  "fatti": 80,
+  "tornano": 80
+ },
+ "pagine_senza_testo": 1
+}
