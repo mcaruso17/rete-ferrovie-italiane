@@ -16,28 +16,9 @@
   --f-body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
   --f-data:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;
 }
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --ground:#0e1211; --surface:#161c1b; --surface-2:#1d2423; --sunk:#111716;
-    --ink:#eef1ed; --ink-2:#a6b1ac; --ink-3:#78837e;
-    --line:#26302e; --line-strong:#35413e;
-    --accent:#4fb4c2; --accent-soft:#12343a; --accent-ink:#8ad3dd;
-    --via-libera:#4aa96b; --avviso:#d39a3c; --impedita:#e0736b; --neutro:#7e8a85;
-    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181;
-    --mappa-0:#1b2221; --mappa-5:#e0564a; --mappa-vuoto:#222a29;
-    --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 16px rgba(0,0,0,.3);
-  }
-}
-:root[data-theme="dark"]{
-  --ground:#0e1211; --surface:#161c1b; --surface-2:#1d2423; --sunk:#111716;
-  --ink:#eef1ed; --ink-2:#a6b1ac; --ink-3:#78837e;
-  --line:#26302e; --line-strong:#35413e;
-  --accent:#4fb4c2; --accent-soft:#12343a; --accent-ink:#8ad3dd;
-  --via-libera:#4aa96b; --avviso:#d39a3c; --impedita:#e0736b; --neutro:#7e8a85;
-  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181;
-  --mappa-0:#1b2221; --mappa-5:#e0564a; --mappa-vuoto:#222a29;
-  --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 16px rgba(0,0,0,.3);
-}
+/* Solo tema chiaro: il tema scuro e' stato tolto per scelta. Il browser non
+   deve ripiegare su controlli di sistema scuri (select, barre di scorrimento). */
+:root{color-scheme:light}
 *{box-sizing:border-box}
 body{margin:0;background:var(--ground);color:var(--ink);
   font-family:var(--f-body);font-size:14px;line-height:1.55;
@@ -494,9 +475,9 @@ tr.dett:hover{background:inherit}
 .ass-lista li{margin:0 0 7px}
 .ass-lista span{color:var(--ink-2)}
 /* sul telefono la testata deve stare in due righe: il nome della sezione
-   c'e' gia' come titolo della pagina, e il tema si accorcia */
+   c'e' gia' come titolo della pagina */
 @media (max-width:560px){
-  .sez-ora,.lungo{display:none}
+  .sez-ora{display:none}
   .parte-sw button{padding:5px 9px}
 }
 </style>
@@ -514,7 +495,6 @@ tr.dett:hover{background:inherit}
           <button type="button" id="parte-inv" aria-pressed="true">Investimenti</button>
           <button type="button" id="parte-srv" aria-pressed="false">Servizi</button>
         </div>
-        <button class="ghost" id="tema" type="button">Tema<span class="lungo"> chiaro / scuro</span></button>
         <button class="hamb" id="hamb" type="button" aria-expanded="false"
                 aria-controls="nav" aria-label="Apri il menu delle sezioni">
           <span></span><span></span><span></span>
@@ -3346,16 +3326,6 @@ function initServizi(){
   quota.innerHTML = "Questi "+SCUPL.length+" CUP valgono <b class=\"num\">"+nf(tot,2)+
     "</b> milioni di euro, lo <b class=\"num\">"+nf(ut?tot/ut*100:0,1)+"%</b> del totale complessivo dell'ultima edizione ("+nf(ut)+" milioni).";
 }
-
-/* ================= tema ================= */
-el("tema").addEventListener("click", function(){
-  var r = document.documentElement;
-  var scuro = r.getAttribute("data-theme")==="dark" ||
-    (!r.getAttribute("data-theme") && matchMedia("(prefers-color-scheme: dark)").matches);
-  r.setAttribute("data-theme", scuro ? "light" : "dark");
-  barreSerie(); barraFonti(); disegnaMappa();
-  sBarre(); sAnni(); if(PARTE==="srv" && rottaOra==="/mappa") sMappa();
-});
 
 /* ================= avvio ================= */
 ["f-doc","m-doc","cmp-doc"].forEach(function(id){
