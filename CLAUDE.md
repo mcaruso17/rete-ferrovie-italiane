@@ -35,6 +35,8 @@ tools/build_servizi.py    le viste Servizi della piattaforma (app["servizi"])
 tools/registro_rfi.py     intervento -> linea RFI (nome) e livello "confermato"
 tools/piano_commerciale.py  scarica i progetti del Piano Commerciale RFI (fuori da build_all.sh)
 tools/aggancio_pc.py      intervento -> tracciato dichiarato da RFI, e prova degli agganci dedotti
+tools/rete_rfi.py         la rete RFI sulla mappa, agganciata al registro delle linee per codice
+tools/geometria.py        funzioni geometriche condivise (proiezione, semplificazione, prossimita')
 tools/inject_data.py incorpora i dati nel file unico della piattaforma
 tools/wrap_site.py   dal frammento al documento HTML completo
 tools/audit.py       cerca pagine con tabelle non riconosciute
@@ -121,24 +123,34 @@ fonte esterna serve e non risponde, **prima di dire che è irraggiungibile**
 controlla con `curl -sS "$HTTPS_PROXY/__agentproxy/status"` se il rifiuto viene
 dal gateway: la policy può essere stata allargata nel frattempo.
 
-## I due registri delle linee
+## Il registro delle linee e la sua geometria
 
-Il registro RFI (CdP Servizi, Allegato 3) e OSM descrivono la stessa rete a
-granularita' diverse e **non si fondono**: provato, solo 29 linee RFI su 296
-hanno due capi in comune con una relazione OSM. RFI e' l'autorita' su identita',
-chilometri e traffico; OSM sulla geometria. Ogni intervento si aggancia ai due
-separatamente. "Confermato" richiede alta su entrambi e un capo comune che non
-sia un nodo: con un capo qualsiasi "Raddoppio Pescara-Bari" risultava confermato
-via Bari. Le linee AV valgono solo se l'intervento cita l'alta velocita': prima
-"Potenziamento linea Bologna-Prato" (la Direttissima storica) risultava
-confermato sull'AV da entrambi i registri, che condividevano la stessa
-ambiguita' di nomi. Due fonti con lo stesso errore non sono indipendenti.
+Il registro ufficiale e' l'Allegato 3 dei CdP Servizi (codice, nome, km,
+treni/giorno). La rete RFI del Piano Commerciale (`data/rete-rfi.geojson`,
+scaricata da `piano_commerciale.py`) usa lo stesso codice con la lettera
+cambiata: **C->K, F->J, N->R, A->A** (C001 = K001). Non e' documentato da RFI:
+si accetta solo se anche il nome ha una parola significativa in comune.
+290 linee su 299 hanno cosi' il tracciato; mancano le 4 sezioni AV affiancate
+(F023AV...), 3 linee subentrate dalle Regioni, Bari-Bitritto e Vievola-Breil.
 
-Nell'estrazione dell'Allegato 3: i codici possono finire in AV (F023AV), e le
-colonne si spostano fra un'edizione e l'altra, quindi la riga si ancora al
-codice e non alla posizione. Il contratto base perde la denominazione di 14
-linee che vanno a capo; l'atto 2023 le ha tutte, e registro_rfi.py le prende da
-li'.
+Da qui in poi **la rete di riferimento e' RFI**, non OSM: la mappa disegna la
+rete RFI, le linee cliccabili sono quelle del registro, e registro_rfi.py
+aggancia gli interventi con due prove (nome dei capi, comuni attraversati
+dalla linea RFI). OSM resta come strato facoltativo (ferrovie non RFI,
+cantieri), come fonte della data di apertura quando una linea OSM ricopre
+quasi tutto il tracciato RFI, e come indizio aggiuntivo nella scheda.
+"Confermato" richiede ancora alta su entrambi e un capo comune non nodo, e si
+toglie quando il tracciato dichiarato da RFI lo smentisce.
+
+Le quote di sovrapposizione si misurano sulla lunghezza (punti a passo
+costante, ognuno alla linea piu' vicina), non sui vertici: su tratte corte due
+vertici in stazione pesavano un terzo. Una linea "porta" un tracciato
+dichiarato se ne ha almeno il 20% e 3 km, oppure il 60%.
+
+Nell'estrazione dell'Allegato 3: i codici possono finire in AV (F023AV), le
+colonne si spostano fra un'edizione e l'altra (la riga si ancora al codice), i
+nomi lunghi vanno a capo sopra e sotto la riga del codice, e un numero da solo
+al posto del nome e' un rimando a nota (F055 risultava chiamata "1").
 
 ## La terza fonte: il Piano Commerciale RFI
 

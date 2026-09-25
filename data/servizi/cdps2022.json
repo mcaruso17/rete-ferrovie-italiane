@@ -1956,7 +1956,7 @@
   {
    "gruppo": "Linee con > 40 e < 100 treni/giorno",
    "codice": "F013",
-   "linea": "",
+   "linea": "ISELLE [DOMODOSSOLA] - GALLARATE [MILANO] (compresa via Domo II)",
    "treni_giorno": 82.0,
    "km": 85.8,
    "pagina": 32
@@ -1972,7 +1972,7 @@
   {
    "gruppo": "Linee con > 40 e < 100 treni/giorno",
    "codice": "F019",
-   "linea": "",
+   "linea": "ARQUATA - MIGNANEGO / GENOVA RIVAROLO / GENOVA CAMPASSO [GENOVA] (compresa via Isola del Cantone)",
    "treni_giorno": 87.0,
    "km": 59.9,
    "pagina": 32
@@ -1988,7 +1988,7 @@
   {
    "gruppo": "Linee con > 40 e < 100 treni/giorno",
    "codice": "F039",
-   "linea": "",
+   "linea": "UDINE - MONFALCONE via GORIZIA (compresa Gorizia - Nova Gorica)",
    "treni_giorno": 77.0,
    "km": 63.3,
    "pagina": 32
@@ -2012,7 +2012,7 @@
   {
    "gruppo": "Linee con > 40 e < 100 treni/giorno",
    "codice": "F053",
-   "linea": "",
+   "linea": "[FIRENZE]  FIRENZE ROVEZZANO - FARA SABINA [ROMA] (Linea Lenta)",
    "treni_giorno": 91.0,
    "km": 270.8,
    "pagina": 32
@@ -2020,7 +2020,7 @@
   {
    "gruppo": "Linee con > 40 e < 100 treni/giorno",
    "codice": "F061",
-   "linea": "",
+   "linea": "(comprese linee Rocca d'Evandro - Venafro/Vairano e Santa Maria C.V. - Maddaloni M. S.to e linee Bivio Maddaloni /",
    "treni_giorno": 72.0,
    "km": 241.8,
    "pagina": 32
@@ -2044,7 +2044,7 @@
   {
    "gruppo": "Linee con > 40 e < 100 treni/giorno",
    "codice": "F077",
-   "linea": "",
+   "linea": "PAOLA - REGGIO CALABRIA CENTRALE (compresa Eccellente - Rosarno)",
    "treni_giorno": 57.0,
    "km": 250.5,
    "pagina": 32
@@ -2084,7 +2084,7 @@
   {
    "gruppo": "Linea con >= 100 treni/giorno",
    "codice": "F005",
-   "linea": "",
+   "linea": "[MILANO] MILANO ROGOREDO - ARQUATA (compresa via Novi L. e via Bressana B. - Arena Po)",
    "treni_giorno": 146.0,
    "km": 123.7,
    "pagina": 33
@@ -2092,7 +2092,7 @@
   {
    "gruppo": "Linea con >= 100 treni/giorno",
    "codice": "F011",
-   "linea": "",
+   "linea": "[TORINO] SETTIMO T. - RHO [MILANO] (compresa Novara Boschetto)",
    "treni_giorno": 115.0,
    "km": 117.8,
    "pagina": 33
@@ -2100,7 +2100,7 @@
   {
    "gruppo": "Linea con >= 100 treni/giorno",
    "codice": "F017",
-   "linea": "",
+   "linea": "CHIASSO - SEREGNO [MILANO] (compresa via Monteolimpino 2)",
    "treni_giorno": 140.0,
    "km": 40.8,
    "pagina": 33
@@ -2172,7 +2172,7 @@
   {
    "gruppo": "Linea con >= 100 treni/giorno",
    "codice": "F035",
-   "linea": "",
+   "linea": "[VENEZIA] VENEZIA CARPENEDO - VILLA OPICINA / TRIESTE",
    "treni_giorno": 109.0,
    "km": 187.9,
    "pagina": 33
@@ -2204,7 +2204,7 @@
   {
    "gruppo": "Linea con >= 100 treni/giorno",
    "codice": "F043",
-   "linea": "",
+   "linea": "[BOLOGNA] BOLOGNA S.RUFFILLO - FIRENZE CASTELLO [FIRENZE]",
    "treni_giorno": 115.0,
    "km": 96.1,
    "pagina": 33
@@ -2228,7 +2228,7 @@
   {
    "gruppo": "Linea con >= 100 treni/giorno",
    "codice": "F055",
-   "linea": "",
+   "linea": "[FIRENZE] FIRENZE ROVEZZANO - SETTE BAGNI [ROMA] (Linea Direttissima)",
    "treni_giorno": 235.0,
    "km": 272.3,
    "pagina": 33
@@ -2236,7 +2236,7 @@
   {
    "gruppo": "Linea con >= 100 treni/giorno",
    "codice": "F057",
-   "linea": "",
+   "linea": "[ROMA] TORRICOLA - FRATTAMAGGIORE [NAPOLI] (via Formia)",
    "treni_giorno": 119.0,
    "km": 188.0,
    "pagina": 33
@@ -2244,7 +2244,7 @@
   {
    "gruppo": "Linea con >= 100 treni/giorno",
    "codice": "F063",
-   "linea": "",
+   "linea": "[BOLOGNA] MIRANDOLA O. - ANCONA (compresa Ancona - Ancona Marittima)",
    "treni_giorno": 171.0,
    "km": 193.1,
    "pagina": 33

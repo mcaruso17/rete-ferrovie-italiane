@@ -1,300 +1,300 @@
-codice_linea,denominazione,gruppo_traffico,km,treni_giorno_programmati,fonte_dati,pagina_dati,fonte_denominazione,pagina_denominazione
-A001,Roma-Napoli AV/AC,Linee AC/AV,233.0,163.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33
-A003,Torino-Milano AV/AC,Linee AC/AV,132.4,76.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33
-A005,Milano-Bologna AV/AC,Linee AC/AV,224.0,163.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33
-A007,Bologna - Firenze AV/AC,Linee AC/AV,91.3,244.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33
-A009,Milano - Brescia AV/AC,Linee AC/AV,52.8,66.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33
-C001,Asti - Castagnole,Linee con <= 40 treni/giorno,20.1,8.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C002,Chivasso - Aosta,Linee con > 40 e < 100 treni/giorno,98.6,50.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C003,Aosta - Pre' S. Didier,Linee con <= 40 treni/giorno,31.4,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C004,Casale Popolo - Casale Monferrato,Linee con <= 40 treni/giorno,2.0,20.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C005,Bivio Castel Rosso - Casale Popolo,Linee con <= 40 treni/giorno,41.4,21.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C006,Casale Monferrato - Valenza,Linee con <= 40 treni/giorno,18.8,20.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C007,Valenza - Alessandria,Linee con > 40 e < 100 treni/giorno,15.2,69.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C008,Sangone - Pinerolo,Linee con <= 40 treni/giorno,30.5,39.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C009,Fossano - Cuneo,Linee con > 40 e < 100 treni/giorno,25.1,42.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C010,Cuneo - Ventimiglia,Linee con <= 40 treni/giorno,48.9,17.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C011,Trofarello - Fossano,Linee con > 40 e < 100 treni/giorno,50.4,92.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C012,Fossano - Mondovì,Linee con <= 40 treni/giorno,19.0,36.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C013,Mondovì - Ceva,Linee con <= 40 treni/giorno,19.2,36.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C014,Ceva - S.Giuseppe Di C.,Linee con <= 40 treni/giorno,25.4,33.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C015,Carmagnola - Bra,Linee con <= 40 treni/giorno,20.4,31.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C016,Alessandria - Cantalupo,Linee con <= 40 treni/giorno,7.5,16.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C017,Acqui Terme - Ovada,Linee con <= 40 treni/giorno,14.8,25.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C018,Cantalupo - Acqui Terme,Linee con <= 40 treni/giorno,26.4,15.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C019,Acqui Terme - S.Giuseppe Di C.,Linee con <= 40 treni/giorno,48.0,17.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C020,Vercelli - Mortara,Linee con <= 40 treni/giorno,25.2,24.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C021,Mortara - Pavia,Linee con <= 40 treni/giorno,37.4,31.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C022,Arona - Oleggio,Linee con <= 40 treni/giorno,19.2,20.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C023,Oleggio - Vignale,Linee con <= 40 treni/giorno,13.3,31.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C024,Vignale - Novara,Linee con > 40 e < 100 treni/giorno,3.3,49.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C025,Novara - Mortara,Linee con <= 40 treni/giorno,24.0,25.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C026,Mortara - Torreberetti,Linee con <= 40 treni/giorno,22.2,26.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C027,Torreberetti - Valenza,Linee con > 40 e < 100 treni/giorno,6.2,54.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C028,Cava Carbonara - Torreberetti,Linee con <= 40 treni/giorno,35.6,28.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C029,Domodossola - Villadossola,Linee con <= 40 treni/giorno,6.5,13.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C030,Villadossola - Vogogna Ossola,Linee con <= 40 treni/giorno,8.1,15.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C031,Vogogna Ossola - Premosello  Chiov.,Linee con <= 40 treni/giorno,2.6,15.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C032,Premosello Chiov. - Cuzzago,Linee con <= 40 treni/giorno,3.8,19.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,31
-C033,Cuzzago - Borgomanero,Linee con <= 40 treni/giorno,37.2,19.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,31
-C034,Borgomanero - Vignale,Linee con <= 40 treni/giorno,27.1,21.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,31
-C035,Varallo Sesia - Vignale,Linee con <= 40 treni/giorno,50.8,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C036,Laveno Mombello - Oleggio,Linee con <= 40 treni/giorno,36.2,23.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C037,Tirano - Sondrio,Linee con <= 40 treni/giorno,26.0,35.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C038,Chiavenna - Colico,Linee con <= 40 treni/giorno,26.3,32.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C039,Sondrio - Colico,Linee con > 40 e < 100 treni/giorno,40.5,56.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C040,Colico - Lecco,Linee con > 40 e < 100 treni/giorno,39.0,62.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C041,Albate Camerlata - Molteno,Linee con <= 40 treni/giorno,22.1,18.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C042,Monza - Molteno,Linee con <= 40 treni/giorno,29.2,35.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C043,Molteno - Lecco,Linee con <= 40 treni/giorno,14.7,38.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C044,Lecco - Ponte S.Pietro,Linee con > 40 e < 100 treni/giorno,25.2,62.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C045,Calolziocorte O. - Carnate Usmate,Linea con >= 100 treni/giorno,18.1,116.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33
-C046,Carnate Usmate - Monza,Linea con >= 100 treni/giorno,11.8,157.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33
-C047,Seregno - Ponte S.Pietro,Linee con <= 40 treni/giorno,31.9,23.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C048,Ponte S.Pietro - Rovato,Linee con <= 40 treni/giorno,39.5,39.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,31
-C049,Porto Ceresio - Varese - Gallarate,Linea con >= 100 treni/giorno,39.3,105.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,31
-C050,Bivio Bergamo - Treviglio Ovest,Linee con > 40 e < 100 treni/giorno,2.5,50.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C051,Bergamo - Treviglio Ovest - Treviglio,Linee con > 40 e < 100 treni/giorno,21.9,81.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C052,S. Zeno Folzano - Olmeneta,Linee con <= 40 treni/giorno,33.7,34.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C053,Olmeneta - Cremona,Linee con > 40 e < 100 treni/giorno,10.8,68.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C054,Cremona - Castelvetro,Linee con > 40 e < 100 treni/giorno,6.1,45.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,28
-C055,Castelvetro - Fidenza,Linee con > 40 e < 100 treni/giorno,27.8,45.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,28
-C056,Piacenza - Castelvetro,Linee con <= 40 treni/giorno,24.9,1.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C057,Treviglio - Olmeneta,Linee con <= 40 treni/giorno,53.7,35.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C058,Milano P.Genova - Mortara,Linee con > 40 e < 100 treni/giorno,44.4,84.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C060,Pavia - Casalpusterlengo,Linee con <= 40 treni/giorno,41.6,27.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C061,Codogno - Cremona,Linee con > 40 e < 100 treni/giorno,27.3,51.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,28
-C062,Cremona - Piadena,Linee con <= 40 treni/giorno,28.0,39.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,31
-C063,Piadena - Mantova,Linee con <= 40 treni/giorno,34.3,27.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,31
-C064,Brescia - S. Zeno Folzano,Linee con > 40 e < 100 treni/giorno,7.7,55.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C065,S. Zeno Folzano - Piadena,Linee con <= 40 treni/giorno,45.7,30.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C066,Piadena - Parma,Linee con <= 40 treni/giorno,39.7,32.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C067,Fortezza - S.Candido,Linee con > 40 e < 100 treni/giorno,64.5,58.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C068,Bolzano - Merano,Linee con > 40 e < 100 treni/giorno,31.1,58.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C069,Vicenza - Schio,Linee con <= 40 treni/giorno,29.7,29.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C070,Verona - Mantova,Linee con <= 40 treni/giorno,35.4,29.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,31
-C071,Mantova - Suzzara,Linee con <= 40 treni/giorno,18.9,35.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C072,Suzzara - Modena,Linee con <= 40 treni/giorno,49.0,37.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C073,Mantova - Nogara,Linee con <= 40 treni/giorno,26.2,18.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C074,Nogara - Cerea,Linee con <= 40 treni/giorno,12.3,16.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C075,Cerea - Legnago,Linee con <= 40 treni/giorno,7.4,36.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C076,Calalzo Pc.Cortina - Ponte delle Alpi,Linee con <= 40 treni/giorno,36.2,11.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C077,Ponte delle Alpi - Belluno,Linee con <= 40 treni/giorno,7.6,36.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C078,Belluno - Montebelluna,Linee con <= 40 treni/giorno,65.0,31.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C079,Montebelluna - Castelfranco Veneto,Linee con <= 40 treni/giorno,16.3,31.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C080,Castelfranco Veneto - Camposampiero,Linee con > 40 e < 100 treni/giorno,12.1,67.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C081,Camposampiero - Vigodarzere,Linee con > 40 e < 100 treni/giorno,13.2,86.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C082,Vigodarzere - Padova,Linee con > 40 e < 100 treni/giorno,7.4,60.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C083,Montebelluna - Treviso,Linee con <= 40 treni/giorno,20.1,23.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C084,Treviso  - Portogruaro,Linee con <= 40 treni/giorno,52.5,35.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C085,Ponte delle Alpi - Conegliano,Linee con <= 40 treni/giorno,38.1,25.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C086,Vicenza - Cittadella,Linee con > 40 e < 100 treni/giorno,23.7,51.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C087,Cittadella - Castelfranco Veneto,Linee con > 40 e < 100 treni/giorno,11.9,46.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C088,Castelfranco Veneto - Treviso,Linee con > 40 e < 100 treni/giorno,24.5,81.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C089,Bassano del Grappa - Cittadella,Linee con <= 40 treni/giorno,14.6,24.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C090,Cittadella - Camposampiero,Linee con <= 40 treni/giorno,14.5,20.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C091,Bassano del Grappa - Castelfranco Veneto,Linee con > 40 e < 100 treni/giorno,19.1,56.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C092,Castelfranco Veneto - Maerne di Martellago,Linee con > 40 e < 100 treni/giorno,24.6,56.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C093,S.Giuseppe Di C. - Savona,Linee con <= 40 treni/giorno,23.3,21.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C094,Udine - Palmanova,Linee con <= 40 treni/giorno,23.2,23.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C095,Palmanova - Cervignano,Linee con <= 40 treni/giorno,15.1,21.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C096,S.Giuseppe Di C. - Ferrania,Linee con <= 40 treni/giorno,3.6,17.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C097,Ferrania - Savona,Linee con <= 40 treni/giorno,16.7,17.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C098,Ovada - Genova Borzoli,Linee con <= 40 treni/giorno,36.0,37.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C099,Ferrara - Portomaggiore,Linee con <= 40 treni/giorno,23.4,36.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C100,Portomaggiore - Lavezzola,Linee con <= 40 treni/giorno,17.2,34.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C101,Lavezzola - Ravenna,Linee con <= 40 treni/giorno,32.0,34.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C102,Ravenna - Rimini,Linee con <= 40 treni/giorno,49.8,39.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C103,Faenza - Granarolo,Linee con <= 40 treni/giorno,8.9,26.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C104,Granarolo - Lugo,Linee con <= 40 treni/giorno,7.6,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C105,Lugo - Lavezzola,Linee con <= 40 treni/giorno,22.2,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C106,Castelbolognese - Lugo,Linee con > 40 e < 100 treni/giorno,14.0,48.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C107,Lugo - Russi,Linee con > 40 e < 100 treni/giorno,10.8,47.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C108,Russi - Ravenna,Linee con <= 40 treni/giorno,32.7,36.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C109,Granarolo - Russi,Linee con <= 40 treni/giorno,8.1,26.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C110,Pontassieve - Borgo S.Lorenzo,Linee con <= 40 treni/giorno,32.7,28.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28
-C111,Borgo S.Lorenzo - Faenza,Linee con <= 40 treni/giorno,66.3,10.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,28
-C112,Firenze S. Marco V. - Borgo S.Lorenzo,Linee con <= 40 treni/giorno,32.0,35.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,28
-C113,Viareggio - Lucca,Linee con > 40 e < 100 treni/giorno,16.6,46.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C115,Porretta Terme - Pistoia,Linee con <= 40 treni/giorno,39.8,12.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,28
-C116,Lucca - Pistoia,Linee con > 40 e < 100 treni/giorno,43.8,60.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C117,Pisa - Lucca,Linee con > 40 e < 100 treni/giorno,30.6,51.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C118,Pistoia - Prato,Linee con > 40 e < 100 treni/giorno,17.1,96.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C119,Aulla - Lucca,Linee con <= 40 treni/giorno,89.9,23.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,28
-C120,Campiglia M.MA - Piombino M. ma,Linee con <= 40 treni/giorno,16.4,14.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,28
-C121,Empoli - Siena,Linee con > 40 e < 100 treni/giorno,63.0,56.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C122,Siena - Asciano,Linee con <= 40 treni/giorno,31.7,23.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,28
-C123,Asciano - Montallese,Linee con <= 40 treni/giorno,47.6,23.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C124,Porto D'Ascoli - Ascoli Piceno,Linee con <= 40 treni/giorno,27.8,25.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C125,Pescara - Sulmona,Linee con <= 40 treni/giorno,68.7,36.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C126,Civitanova - Albacina,Linee con <= 40 treni/giorno,86.6,20.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C127,Terontola - Foligno,Linee con <= 40 treni/giorno,82.2,34.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C129,Viterbo - Cesano,Linee con <= 40 treni/giorno,60.1,40.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C130,Campoleone - Nettuno,Linee con <= 40 treni/giorno,25.6,38.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C131,Sulmona - Avezzano,Linee con <= 40 treni/giorno,64.9,17.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C132,Avezzano - Guidonia-M.-S.A.,Linee con <= 40 treni/giorno,81.2,32.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C133,Avezzano - Roccasecca,Linee con <= 40 treni/giorno,79.5,10.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C134,Ciampino - Albano Laziale,Linee con <= 40 treni/giorno,14.5,32.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C135,Ciampino - Velletri,Linee con > 40 e < 100 treni/giorno,27.1,41.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C136,Battipaglia - Potenza Inf.Re,Linee con <= 40 treni/giorno,91.3,15.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C137,Aversa - Marcianise - Caserta,Linee con > 40 e < 100 treni/giorno,14.9,51.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C138,S.Marcellino F. - B.Gricignano,Linee con <= 40 treni/giorno,23.6,24.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C139,Bosco Redole - Carpinone,Linee con <= 40 treni/giorno,28.9,20.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C140,Carpinone - Isernia,Linee con <= 40 treni/giorno,10.6,20.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C141,Isernia - Vairano,Linee con <= 40 treni/giorno,45.2,16.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C142,Sarno - Codola,Linee con <= 40 treni/giorno,7.8,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C143,Cancello - Sarno,Linee con <= 40 treni/giorno,34.1,40.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C144,Sarno - Biv. S.Lucia 123,Linee con > 40 e < 100 treni/giorno,6.5,43.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,29
-C145,Nocera Inferiore - Codola,Linee con <= 40 treni/giorno,4.2,9.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C146,Nocera Inferiore - Salerno (via CAVA T.),Linee con > 40 e < 100 treni/giorno,17.1,77.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C147,Salerno - Arechi,Linee con > 40 e < 100 treni/giorno,5.7,65.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C148,Mercato S.Severino - Salerno,Linee con <= 40 treni/giorno,17.6,26.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C150,Bari - Brindisi,Linee con > 40 e < 100 treni/giorno,110.9,97.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C151,Brindisi - Lecce,Linee con > 40 e < 100 treni/giorno,41.9,79.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31
-C152,Bari - Bitritto,Linee con <= 40 treni/giorno,9.3,29.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,"CdP Servizi, secondo atto integrativo (agg. 2024)",14
-C153,Cervaro - Rocchetta S.A.L.,Linee con <= 40 treni/giorno,41.4,8.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C154,Rocchetta S.A.L. - Potenza,Linee con <= 40 treni/giorno,69.0,15.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C155,Potenza  - Metaponto,Linee con <= 40 treni/giorno,107.1,11.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C156,Metaponto - Taranto,Linee con <= 40 treni/giorno,45.5,19.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C157,Taranto - Brindisi,Linee con <= 40 treni/giorno,69.2,19.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C158,Bari - Gioia Del Colle,Linee con > 40 e < 100 treni/giorno,53.0,44.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,29
-C159,Gioia Del Colle - Taranto,Linee con > 40 e < 100 treni/giorno,54.3,44.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,29
-C160,Metaponto - Sibari,Linee con <= 40 treni/giorno,79.0,10.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C161,Sibari - Catanzaro Lido,Linee con <= 40 treni/giorno,172.5,17.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C162,Catanzaro Lido - REGGIO C CLE,Linee con <= 40 treni/giorno,177.6,29.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C163,Lamezia Terme - Catanzaro Lido,Linee con <= 40 treni/giorno,43.2,24.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C164,Paola - Castiglione C.,Linee con > 40 e < 100 treni/giorno,21.6,48.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,31
-C165,S.Lucido Marina - Bivio Pantani,Linee con <= 40 treni/giorno,4.2,7.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C166,B.S.Antonello - Bivio Settimo,Linee con <= 40 treni/giorno,2.7,9.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C167,Castiglione C. - Cosenza,Linee con > 40 e < 100 treni/giorno,4.3,52.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,31
-C168,Sibari - Castiglione C.,Linee con <= 40 treni/giorno,59.5,20.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C169,Messina - Catania,Linee con > 40 e < 100 treni/giorno,94.8,69.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,31
-C170,Catania  - Lentini Diramazione,Linee con > 40 e < 100 treni/giorno,22.9,52.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,31
-C171,Lentini Diramazione - Siracusa,Linee con <= 40 treni/giorno,60.1,33.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C172,Lentini Diramazione - Gela,Linee con <= 40 treni/giorno,111.4,4.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C173,Gela - Modica,Linee con <= 40 treni/giorno,89.7,12.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C174,Modica - Siracusa,Linee con <= 40 treni/giorno,91.7,13.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C175,Messina - Fiumetorto,Linee con <= 40 treni/giorno,199.3,40.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C176,Fiumetorto - Palermo,Linea con >= 100 treni/giorno,43.2,111.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33
-C177,Caltanissetta Xirbi - Roccapalumba-A.,Linee con <= 40 treni/giorno,56.6,22.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C178,Bicocca - Caltanissetta Xirbi,Linee con <= 40 treni/giorno,107.4,18.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C180,Roccapalumba-A. - Fiumetorto,Linee con <= 40 treni/giorno,26.0,37.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C181,Palermo - Carini,Linee con > 40 e < 100 treni/giorno,33.9,73.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,31
-C182,Roccapalumba-A. - Aragona Caldare,Linee con <= 40 treni/giorno,46.7,25.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C183,Aragona Caldare - Agrigento,Linee con <= 40 treni/giorno,12.6,31.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C184,Palermo Centrale - Palermo Marittima,Linee con > 40 e < 100 treni/giorno,7.3,68.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,31
-C185,Olbia - Ozieri Chilivani,Linee con <= 40 treni/giorno,70.5,17.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C186,Sassari - Ozieri Chilivani,Linee con <= 40 treni/giorno,46.6,19.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C187,Ozieri Chilivani - Decimomannu,Linee con <= 40 treni/giorno,191.5,31.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C188,Decimomannu - Cagliari,Linea con >= 100 treni/giorno,16.2,121.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33
-C189,Villamassargia  - Decimomannu,Linee con <= 40 treni/giorno,28.6,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C190,Iglesias - Villamassargia,Linee con <= 40 treni/giorno,9.1,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C191,Carbonia  - Villamassargia,Linee con <= 40 treni/giorno,22.4,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C192,Alcamo - Castelvetrano - Trapani,Linee con <= 40 treni/giorno,116.1,19.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C193,Alessandria - Ovada,Linee con <= 40 treni/giorno,33.0,13.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C194,Asciano - Monte Antico,Linee con <= 40 treni/giorno,51.2,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C195,Asti - Nizza Monferrato -Acqui Terme,Linee con <= 40 treni/giorno,45.5,14.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C196,Viterbo - Attigliano,Linee con <= 40 treni/giorno,39.1,13.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C197,Avellino - Benevento,Linee con <= 40 treni/giorno,29.8,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C198,Spinazzola - Barletta,Linee con <= 40 treni/giorno,65.7,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C199,Biella - Novara,Linee con <= 40 treni/giorno,50.8,27.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C201,Caltanissetta Xirbi - Canicattì - Aragona,Linee con <= 40 treni/giorno,64.7,10.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C202,Campobasso - Bosco Redole - Benevento,Linee con <= 40 treni/giorno,84.3,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C204,Carini - Alcamo Diramazione - Trapani,Linee con <= 40 treni/giorno,93.5,10.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C205,Casarsa - San Vito - Portogruaro,Linee con <= 40 treni/giorno,21.1,17.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C206,Cavallermaggiore - Cantalupo,Linee con <= 40 treni/giorno,90.0,14.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C207,Cecina - Volterra Saline,Linee con <= 40 treni/giorno,29.5,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C208,Ceva - Ormea,Linee con <= 40 treni/giorno,35.4,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C209,Chivasso - Asti,Linee con <= 40 treni/giorno,51.3,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C210,Canicattì  - Gela,Linee con <= 40 treni/giorno,81.9,5.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C211,Giulianova - Teramo,Linee con <= 40 treni/giorno,25.1,35.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C212,Isola della Scala - Cerea,Linee con <= 40 treni/giorno,19.6,21.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C213,Legnago - Monselice,Linee con <= 40 treni/giorno,37.9,23.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C214,Legnago - Rovigo,Linee con <= 40 treni/giorno,47.1,23.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C215,Mercato S.Severino - Avellino,Linee con <= 40 treni/giorno,30.0,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29
-C216,Codola - Mercato S.Severino,Linee con <= 40 treni/giorno,8.3,9.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,29
-C217,Mondovì - Cuneo,Linee con <= 40 treni/giorno,26.9,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,29
-C218,Mortara - Casale Monferr. - Asti,Linee con <= 40 treni/giorno,73.5,11.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,29
-C219,Pinerolo - Torre Pellice,Linee con <= 40 treni/giorno,16.1,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,29
-C220,Agrigento Bassa - Porto Empedocle,Linee con <= 40 treni/giorno,10.1,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,29
-C221,Primolano - Bassano del Grappa,Linee con <= 40 treni/giorno,28.7,24.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,29
-C222,Priverno Fossanova - Terracina,Linee con <= 40 treni/giorno,17.7,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C223,Rocchetta S.A.L. - Avellino,Linee con <= 40 treni/giorno,118.7,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C224,Rocchetta S.A.L. - Spinazzola - Gioia del Colle,Linee con <= 40 treni/giorno,139.3,1.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C225,Rovigo - Chioggia,Linee con <= 40 treni/giorno,55.8,8.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C226,Gemona del Friuli  - Pinzano - Sacile,Linee con <= 40 treni/giorno,74.1,13.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C227,Santhià - Arona,Linee con <= 40 treni/giorno,65.0,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C228,Siena - Monte Antico - Montepescali,Linee con <= 40 treni/giorno,88.9,13.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C229,Sulmona - Carpinone,Linee con <= 40 treni/giorno,118.1,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C230,Termoli - Campobasso,Linee con <= 40 treni/giorno,87.2,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C231,Terni - Sulmona,Linee con <= 40 treni/giorno,163.8,20.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C232,Trento - Primolano,Linee con <= 40 treni/giorno,67.0,35.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C233,Vercelli - Casale Popolo,Linee con <= 40 treni/giorno,19.2,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C234,Palazzolo sull'Oglio - Paratico Sarnico,Linee con <= 40 treni/giorno,9.4,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C235,Ciampino - Frascati,Linee con <= 40 treni/giorno,9.7,28.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C236,Foggia - Manfredonia,Linee con <= 40 treni/giorno,35.7,2.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C237,Golfo Aranci Mar.ma - Olbia,Linee con <= 40 treni/giorno,22.7,11.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C239,Pergola - Fabriano,Linee con <= 40 treni/giorno,31.6,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C241,Porto Torres Pcc - Sassari,Linee con <= 40 treni/giorno,19.3,8.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C242,Salsomaggiore T. - Fidenza,Linee con > 40 e < 100 treni/giorno,9.0,44.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32
-C243,Saluzzo - Cuneo,Linee con <= 40 treni/giorno,33.6,13.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C244,Santhià - Biella S.Paolo,Linee con <= 40 treni/giorno,26.7,28.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C245,Savigliano - Saluzzo,Linee con <= 40 treni/giorno,14.9,17.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C246,Susa - Bussoleno,Linee con <= 40 treni/giorno,7.5,33.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C247,Torre A.Centrale - Gragnano,Linee con <= 40 treni/giorno,10.5,12.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C248,Trofarello - Chieri,Linee con > 40 e < 100 treni/giorno,8.6,48.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,30
-C251,Perugia P.S.G. - Sansepolcro,Linee con <= 40 treni/giorno,52.2,20.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-C260,Settimo T. - Rivarolo C.,Linee con > 40 e < 100 treni/giorno,22.1,43.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,"CdP Servizi, quarto atto integrativo (agg. 2026)",13
-C262,Torino Rebaudengo - Ceres,Linee con > 40 e < 100 treni/giorno,31.8,60.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,"CdP Servizi, quarto atto integrativo (agg. 2026)",13
-E000,Vievola - Breil Sur Roya,Linee con <= 40 treni/giorno,47.0,8.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-F001,MODANE / MODANE FX - ALPIGNANO [TORINO],Linee con > 40 e < 100 treni/giorno,91.9,61.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32
-F003,[TORINO] TROFARELLO - ARQUATA,Linee con > 40 e < 100 treni/giorno,112.2,91.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32
-F005,[MILANO] MILANO ROGOREDO - ARQUATA (compresa via Novi L. e via Bressana,Linea con >= 100 treni/giorno,123.5,128.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,"CdP Servizi, primo atto integrativo (agg. 2023)",13
-F007,SAVONA -  GENOVA VOLTRI [GENOVA],Linea con >= 100 treni/giorno,32.0,104.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32
-F009,VENTIMIGLIA - SAVONA,Linee con > 40 e < 100 treni/giorno,100.9,66.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32
-F011,[TORINO] SETTIMO T. - RHO [MILANO] (compresa Novara Boschetto),Linea con >= 100 treni/giorno,117.8,113.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,"CdP Servizi, primo atto integrativo (agg. 2023)",13
-F013,ISELLE [DOMODOSSOLA] - GALLARATE [MILANO] (compresa via Domo II),Linee con > 40 e < 100 treni/giorno,85.9,68.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,"CdP Servizi, primo atto integrativo (agg. 2023)",12
-F015,PINO TRONZANO [LUINO] - GALLARATE,Linee con > 40 e < 100 treni/giorno,45.8,55.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32
-F017,CHIASSO - SEREGNO [MILANO] (compresa via Monteolimpino 2),Linea con >= 100 treni/giorno,40.8,158.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,"CdP Servizi, primo atto integrativo (agg. 2023)",13
-F019,ARQUATA - MIGNANEGO / GENOVA RIVAROLO / GENOVA CAMPASSO,Linee con > 40 e < 100 treni/giorno,58.2,92.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,"CdP Servizi, primo atto integrativo (agg. 2023)",12
-F021,ALESSANDRIA - PIACENZA (compresa Broni - Bressana B.),Linee con > 40 e < 100 treni/giorno,81.7,73.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32
-F023,[MILANO] PIOLTELLO L. - BRESCIA  VERONA,Linea con >= 100 treni/giorno,147.0,147.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33
-F023AV,PIOLTELLO L. - BRESCIA AVAC,Linea con >= 100 treni/giorno,15.1,236.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33
-F025,VERONA  - PADOVA,Linea con >= 100 treni/giorno,84.9,170.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33
-F027,BRENNERO - VERONA,Linea con >= 100 treni/giorno,243.9,150.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33
-F029,VERONA  - TAVERNELLE [BOLOGNA],Linea con >= 100 treni/giorno,105.6,101.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33
-F031,PADOVA - S.PIETRO IN CASALE [BOLOGNA],Linea con >= 100 treni/giorno,102.5,181.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33
-F033,PADOVA - MIRA M. [VENEZIA],Linea con >= 100 treni/giorno,20.5,103.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33
-F033AV,PADOVA - VENEZIA AVAC,Linea con >= 100 treni/giorno,25.8,233.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33
-F035,[VENEZIA] VENEZIA CARPENEDO - VILLA OPICINA / TRIESTE,Linea con >= 100 treni/giorno,187.9,114.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,"CdP Servizi, primo atto integrativo (agg. 2023)",13
-F037,TARVISIO BOSCOVERDE  - MOGLIANO [VENEZIA],Linea con >= 100 treni/giorno,219.9,104.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33
-F039,UDINE - MONFALCONE via GORIZIA (compresa Gorizia - Nova Gorica),Linee con > 40 e < 100 treni/giorno,63.3,73.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,"CdP Servizi, primo atto integrativo (agg. 2023)",12
-F041,[MILANO] MILANO ROGOREDO - LAVINO [BOLOGNA],Linea con >= 100 treni/giorno,204.5,219.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33
-F041AV,MILANO ROGOREDO - MELEGNANO AVAC,Linea con >= 100 treni/giorno,13.9,277.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33
-F043,[BOLOGNA] BOLOGNA S.RUFFILLO - FIRENZE CASTELLO  [FIRENZE],Linea con >= 100 treni/giorno,96.1,126.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,"CdP Servizi, primo atto integrativo (agg. 2023)",12
-F045,[GENOVA] GENOVA NERVI - PISA,Linea con >= 100 treni/giorno,158.5,125.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33
-F047,PARMA / FIDENZA - PONTREMOLI - VEZZANO / SARZANA,Linee con > 40 e < 100 treni/giorno,151.3,42.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32
-F049,[FIRENZE] FIRENZE CASCINE - PISA,Linea con >= 100 treni/giorno,83.1,144.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33
-F051,PISA  - MACCARESE [ROMA] (compresa Vada - Collesalvetti),Linee con > 40 e < 100 treni/giorno,359.9,75.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32
-F053,[FIRENZE]  FIRENZE ROVEZZANO - FARA SABINA [ROMA] (Linea Lenta),Linee con > 40 e < 100 treni/giorno,270.7,94.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,"CdP Servizi, primo atto integrativo (agg. 2023)",12
-F055,1,Linea con >= 100 treni/giorno,271.2,240.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,"CdP Servizi, primo atto integrativo (agg. 2023)",13
-F057,[ROMA] TORRICOLA - FRATTAMAGGIORE [NAPOLI] (via Formia),Linea con >= 100 treni/giorno,188.0,123.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,"CdP Servizi, primo atto integrativo (agg. 2023)",13
-F059,VILLA LITERNO - POZZUOLI [NAPOLI],Linee con <= 40 treni/giorno,21.0,39.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-F061,[ROMA] CIAMPINO - ACERRA [NAPOLI] (via Cassino) (comprese linee Rocca,Linee con > 40 e < 100 treni/giorno,237.7,69.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,"CdP Servizi, primo atto integrativo (agg. 2023)",12
-F063,[BOLOGNA] MIRANDOLA O. - ANCONA (compresa Ancona - Ancona Marittima),Linea con >= 100 treni/giorno,193.1,166.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,"CdP Servizi, primo atto integrativo (agg. 2023)",13
-F065,ANCONA - ORTE (compresa Ancona - Ancona Marittima),Linee con <= 40 treni/giorno,203.1,39.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-F067,ANCONA - FOGGIA,Linea con >= 100 treni/giorno,319.5,116.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33
-F069,FOGGIA - BARI (compresa Enziteto Catino - Bari S.Spirito),Linea con >= 100 treni/giorno,128.5,129.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33
-F071,CASERTA - FOGGIA,Linee con <= 40 treni/giorno,157.8,29.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30
-F073,[NAPOLI] PORTICI - SALERNO,Linee con > 40 e < 100 treni/giorno,48.0,98.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32
-F073AV,NAPOLI - SALERNO LMV,Linea con >= 100 treni/giorno,37.5,137.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33
-F075,SALERNO - PAOLA,Linee con > 40 e < 100 treni/giorno,216.7,87.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32
-F077,PAOLA - REGGIO CALABRIA CENTRALE (compresa Eccellente - Rosarno),Linee con > 40 e < 100 treni/giorno,250.5,64.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,"CdP Servizi, primo atto integrativo (agg. 2023)",12
-N001,Torino,Linee all'interno dei Nodi,84.0,117.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33
-N002,Milano,Linee all'interno dei Nodi,211.4,168.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33
-N003,Venezia,Linee all'interno dei Nodi,66.6,119.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33
-N004,Genova,Linee all'interno dei Nodi,76.3,99.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33
-N005,Bologna,Linee all'interno dei Nodi,169.8,98.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33
-N006,Firenze,Linee all'interno dei Nodi,47.1,155.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33
-N007,Roma,Linee all'interno dei Nodi,237.7,140.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33
-N008,Napoli,Linee all'interno dei Nodi,60.3,126.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33
+codice_linea,denominazione,gruppo_traffico,km,treni_giorno_programmati,fonte_dati,pagina_dati,fonte_denominazione,pagina_denominazione,codice_rete_rfi,tracciato_rfi,rete_ten_t,massa_assiale,in_esercizio_dal_osm
+A001,Roma-Napoli AV/AC,Linee AC/AV,233.0,163.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33,A001,si,CORE_CENTRALE,D4,
+A003,Torino-Milano AV/AC,Linee AC/AV,132.4,76.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33,A003,si,CORE_CENTRALE,D4,
+A005,Milano-Bologna AV/AC,Linee AC/AV,224.0,163.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33,A005,si,CORE_CENTRALE,D4,
+A007,Bologna - Firenze AV/AC,Linee AC/AV,91.3,244.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33,A007,si,CORE_CENTRALE,D4,
+A009,Milano - Brescia AV/AC,Linee AC/AV,52.8,66.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33,A009,si,CORE_CENTRALE,D4,
+C001,Asti - Castagnole,Linee con <= 40 treni/giorno,20.1,8.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K001,si,fuori TEN-T,C3,
+C002,Chivasso - Aosta,Linee con > 40 e < 100 treni/giorno,98.6,50.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K002,si,fuori TEN-T,C3L,
+C003,Aosta - Pre' S. Didier,Linee con <= 40 treni/giorno,31.4,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K003,si,fuori TEN-T,A,
+C004,Casale Popolo - Casale Monferrato,Linee con <= 40 treni/giorno,2.0,20.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K004,si,fuori TEN-T,C3L,
+C005,Bivio Castel Rosso - Casale Popolo,Linee con <= 40 treni/giorno,41.4,21.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K005,si,fuori TEN-T,C3,
+C006,Casale Monferrato - Valenza,Linee con <= 40 treni/giorno,18.8,20.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K006,si,fuori TEN-T,C3,
+C007,Valenza - Alessandria,Linee con > 40 e < 100 treni/giorno,15.2,69.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K007,si,CORE_CENTRALE,D4L,
+C008,Sangone - Pinerolo,Linee con <= 40 treni/giorno,30.5,39.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K008,si,fuori TEN-T,D4L,
+C009,Fossano - Cuneo,Linee con > 40 e < 100 treni/giorno,25.1,42.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K009,si,fuori TEN-T,C3L,
+C010,Cuneo - Ventimiglia,Linee con <= 40 treni/giorno,48.9,17.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K010,si,fuori TEN-T,C3L,
+C011,Trofarello - Fossano,Linee con > 40 e < 100 treni/giorno,50.4,92.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K011,si,COMPREHENSIVE_GLOBALE,D4L,
+C012,Fossano - Mondovì,Linee con <= 40 treni/giorno,19.0,36.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K012,si,COMPREHENSIVE_GLOBALE,C3,
+C013,Mondovì - Ceva,Linee con <= 40 treni/giorno,19.2,36.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K013,si,COMPREHENSIVE_GLOBALE,C3,
+C014,Ceva - S.Giuseppe Di C.,Linee con <= 40 treni/giorno,25.4,33.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K014,si,COMPREHENSIVE_GLOBALE,C3,
+C015,Carmagnola - Bra,Linee con <= 40 treni/giorno,20.4,31.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K015,si,fuori TEN-T,C3L,
+C016,Alessandria - Cantalupo,Linee con <= 40 treni/giorno,7.5,16.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K016,si,fuori TEN-T,D4L,
+C017,Acqui Terme - Ovada,Linee con <= 40 treni/giorno,14.8,25.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K017,si,fuori TEN-T,C3L,
+C018,Cantalupo - Acqui Terme,Linee con <= 40 treni/giorno,26.4,15.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K018,si,fuori TEN-T,D4L,
+C019,Acqui Terme - S.Giuseppe Di C.,Linee con <= 40 treni/giorno,48.0,17.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K019,si,fuori TEN-T,C3,
+C020,Vercelli - Mortara,Linee con <= 40 treni/giorno,25.2,24.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K020,si,fuori TEN-T,C3,
+C021,Mortara - Pavia,Linee con <= 40 treni/giorno,37.4,31.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K021,si,fuori TEN-T,C3,
+C022,Arona - Oleggio,Linee con <= 40 treni/giorno,19.2,20.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K022,si,COMPREHENSIVE_GLOBALE,D4L,
+C023,Oleggio - Vignale,Linee con <= 40 treni/giorno,13.3,31.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K023,si,CORE_CENTRALE,D4L,
+C024,Vignale - Novara,Linee con > 40 e < 100 treni/giorno,3.3,49.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K024,si,CORE_CENTRALE,D4L,
+C025,Novara - Mortara,Linee con <= 40 treni/giorno,24.0,25.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K025,si,CORE_CENTRALE,D4L,
+C026,Mortara - Torreberetti,Linee con <= 40 treni/giorno,22.2,26.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K026,si,CORE_CENTRALE,D4L,
+C027,Torreberetti - Valenza,Linee con > 40 e < 100 treni/giorno,6.2,54.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K027,si,CORE_CENTRALE,D4L,
+C028,Cava Carbonara - Torreberetti,Linee con <= 40 treni/giorno,35.6,28.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K028,si,fuori TEN-T,D4L,
+C029,Domodossola - Villadossola,Linee con <= 40 treni/giorno,6.5,13.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K029,si,CORE_CENTRALE,D4L,
+C030,Villadossola - Vogogna Ossola,Linee con <= 40 treni/giorno,8.1,15.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K030,si,CORE_CENTRALE,D4L,
+C031,Vogogna Ossola - Premosello  Chiov.,Linee con <= 40 treni/giorno,2.6,15.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K031,si,CORE_CENTRALE,D4L,
+C032,Premosello Chiov. - Cuzzago,Linee con <= 40 treni/giorno,3.8,19.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,31,K032,si,COMPREHENSIVE_GLOBALE,D4L,
+C033,Cuzzago - Borgomanero,Linee con <= 40 treni/giorno,37.2,19.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,31,K033,si,COMPREHENSIVE_GLOBALE,D4L,
+C034,Borgomanero - Vignale,Linee con <= 40 treni/giorno,27.1,21.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,31,K034,si,COMPREHENSIVE_GLOBALE,D4L,
+C035,Varallo Sesia - Vignale,Linee con <= 40 treni/giorno,50.8,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K035,si,fuori TEN-T,D4L,
+C036,Laveno Mombello - Oleggio,Linee con <= 40 treni/giorno,36.2,23.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K036,si,COMPREHENSIVE_GLOBALE,D4L,
+C037,Tirano - Sondrio,Linee con <= 40 treni/giorno,26.0,35.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K037,si,fuori TEN-T,C3L,
+C038,Chiavenna - Colico,Linee con <= 40 treni/giorno,26.3,32.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K038,si,fuori TEN-T,C3L,
+C039,Sondrio - Colico,Linee con > 40 e < 100 treni/giorno,40.5,56.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K039,si,fuori TEN-T,C3L,
+C040,Colico - Lecco,Linee con > 40 e < 100 treni/giorno,39.0,62.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K040,si,fuori TEN-T,C3L,
+C041,Albate Camerlata - Molteno,Linee con <= 40 treni/giorno,22.1,18.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K041,si,fuori TEN-T,D4L,
+C042,Monza - Molteno,Linee con <= 40 treni/giorno,29.2,35.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K042,si,fuori TEN-T,C3,1911
+C043,Molteno - Lecco,Linee con <= 40 treni/giorno,14.7,38.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K043,si,fuori TEN-T,D4L,1911
+C044,Lecco - Ponte S.Pietro,Linee con > 40 e < 100 treni/giorno,25.2,62.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K044,si,fuori TEN-T,C3L,
+C045,Calolziocorte O. - Carnate Usmate,Linea con >= 100 treni/giorno,18.1,116.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,K045,si,fuori TEN-T,D4,
+C046,Carnate Usmate - Monza,Linea con >= 100 treni/giorno,11.8,157.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,K046,si,COMPREHENSIVE_GLOBALE,C3L,
+C047,Seregno - Ponte S.Pietro,Linee con <= 40 treni/giorno,31.9,23.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K047,si,COMPREHENSIVE_GLOBALE,C3L,
+C048,Ponte S.Pietro - Rovato,Linee con <= 40 treni/giorno,39.5,39.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,31,K048,si,fuori TEN-T,C3L,
+C049,Porto Ceresio - Varese - Gallarate,Linea con >= 100 treni/giorno,39.3,105.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,31,K049,si,COMPREHENSIVE_GLOBALE,C3L,
+C050,Bivio Bergamo - Treviglio Ovest,Linee con > 40 e < 100 treni/giorno,2.5,50.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K050,si,fuori TEN-T,D4L,
+C051,Bergamo - Treviglio Ovest - Treviglio,Linee con > 40 e < 100 treni/giorno,21.9,81.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K051,si,COMPREHENSIVE_GLOBALE,D4L,
+C052,S. Zeno Folzano - Olmeneta,Linee con <= 40 treni/giorno,33.7,34.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K052,si,fuori TEN-T,C3L,
+C053,Olmeneta - Cremona,Linee con > 40 e < 100 treni/giorno,10.8,68.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K053,si,COMPREHENSIVE_GLOBALE,C3L,
+C054,Cremona - Castelvetro,Linee con > 40 e < 100 treni/giorno,6.1,45.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,28,K054,si,COMPREHENSIVE_GLOBALE,D4L,
+C055,Castelvetro - Fidenza,Linee con > 40 e < 100 treni/giorno,27.8,45.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,28,K055,si,fuori TEN-T,D4L,
+C056,Piacenza - Castelvetro,Linee con <= 40 treni/giorno,24.9,1.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K056,si,COMPREHENSIVE_GLOBALE,D4L,
+C057,Treviglio - Olmeneta,Linee con <= 40 treni/giorno,53.7,35.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K057,si,COMPREHENSIVE_GLOBALE,C3L,
+C058,Milano P.Genova - Mortara,Linee con > 40 e < 100 treni/giorno,44.4,84.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K058,si,fuori TEN-T,C3L,
+C060,Pavia - Casalpusterlengo,Linee con <= 40 treni/giorno,41.6,27.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K060,si,fuori TEN-T,C3L,
+C061,Codogno - Cremona,Linee con > 40 e < 100 treni/giorno,27.3,51.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,28,K061,si,fuori TEN-T,D4L,
+C062,Cremona - Piadena,Linee con <= 40 treni/giorno,28.0,39.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,31,K062,si,COMPREHENSIVE_GLOBALE,D4L,
+C063,Piadena - Mantova,Linee con <= 40 treni/giorno,34.3,27.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,31,K063,si,COMPREHENSIVE_GLOBALE,D4,
+C064,Brescia - S. Zeno Folzano,Linee con > 40 e < 100 treni/giorno,7.7,55.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K064,si,fuori TEN-T,C3L,
+C065,S. Zeno Folzano - Piadena,Linee con <= 40 treni/giorno,45.7,30.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K065,si,fuori TEN-T,C3L,
+C066,Piadena - Parma,Linee con <= 40 treni/giorno,39.7,32.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K066,si,COMPREHENSIVE_GLOBALE,C3L,
+C067,Fortezza - S.Candido,Linee con > 40 e < 100 treni/giorno,64.5,58.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K067,si,fuori TEN-T,D4L,
+C068,Bolzano - Merano,Linee con > 40 e < 100 treni/giorno,31.1,58.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K068,si,fuori TEN-T,C3,
+C069,Vicenza - Schio,Linee con <= 40 treni/giorno,29.7,29.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K069,si,fuori TEN-T,C3L,
+C070,Verona - Mantova,Linee con <= 40 treni/giorno,35.4,29.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,31,K070,si,COMPREHENSIVE_GLOBALE,D4L,
+C071,Mantova - Suzzara,Linee con <= 40 treni/giorno,18.9,35.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K071,si,fuori TEN-T,D4L,
+C072,Suzzara - Modena,Linee con <= 40 treni/giorno,49.0,37.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K072,si,fuori TEN-T,D4L,
+C073,Mantova - Nogara,Linee con <= 40 treni/giorno,26.2,18.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K073,si,COMPREHENSIVE_GLOBALE,D4L,
+C074,Nogara - Cerea,Linee con <= 40 treni/giorno,12.3,16.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K074,si,COMPREHENSIVE_GLOBALE,D4L,
+C075,Cerea - Legnago,Linee con <= 40 treni/giorno,7.4,36.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K075,si,COMPREHENSIVE_GLOBALE,D4L,
+C076,Calalzo Pc.Cortina - Ponte delle Alpi,Linee con <= 40 treni/giorno,36.2,11.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K076,si,fuori TEN-T,C3L,
+C077,Ponte delle Alpi - Belluno,Linee con <= 40 treni/giorno,7.6,36.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K077,si,fuori TEN-T,C3L,
+C078,Belluno - Montebelluna,Linee con <= 40 treni/giorno,65.0,31.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K078,si,fuori TEN-T,C3L,
+C079,Montebelluna - Castelfranco Veneto,Linee con <= 40 treni/giorno,16.3,31.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K079,si,fuori TEN-T,C3L,
+C080,Castelfranco Veneto - Camposampiero,Linee con > 40 e < 100 treni/giorno,12.1,67.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K080,si,COMPREHENSIVE_GLOBALE,D4L,
+C081,Camposampiero - Vigodarzere,Linee con > 40 e < 100 treni/giorno,13.2,86.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K081,si,COMPREHENSIVE_GLOBALE,D4L,
+C082,Vigodarzere - Padova,Linee con > 40 e < 100 treni/giorno,7.4,60.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K082,si,COMPREHENSIVE_GLOBALE,D4,
+C083,Montebelluna - Treviso,Linee con <= 40 treni/giorno,20.1,23.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K083,si,fuori TEN-T,C3L,
+C084,Treviso  - Portogruaro,Linee con <= 40 treni/giorno,52.5,35.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K084,si,COMPREHENSIVE_GLOBALE,D4L,
+C085,Ponte delle Alpi - Conegliano,Linee con <= 40 treni/giorno,38.1,25.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K085,si,fuori TEN-T,C3L,
+C086,Vicenza - Cittadella,Linee con > 40 e < 100 treni/giorno,23.7,51.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K086,si,COMPREHENSIVE_GLOBALE,D4L,
+C087,Cittadella - Castelfranco Veneto,Linee con > 40 e < 100 treni/giorno,11.9,46.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K087,si,COMPREHENSIVE_GLOBALE,D4L,
+C088,Castelfranco Veneto - Treviso,Linee con > 40 e < 100 treni/giorno,24.5,81.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K088,si,COMPREHENSIVE_GLOBALE,D4L,
+C089,Bassano del Grappa - Cittadella,Linee con <= 40 treni/giorno,14.6,24.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K089,si,fuori TEN-T,C3L,
+C090,Cittadella - Camposampiero,Linee con <= 40 treni/giorno,14.5,20.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K090,si,fuori TEN-T,C3L,
+C091,Bassano del Grappa - Castelfranco Veneto,Linee con > 40 e < 100 treni/giorno,19.1,56.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K091,si,fuori TEN-T,C3L,
+C092,Castelfranco Veneto - Maerne di Martellago,Linee con > 40 e < 100 treni/giorno,24.6,56.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K092,si,fuori TEN-T,D4L,
+C093,S.Giuseppe Di C. - Savona,Linee con <= 40 treni/giorno,23.3,21.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K093,si,fuori TEN-T,C3L,1874
+C094,Udine - Palmanova,Linee con <= 40 treni/giorno,23.2,23.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K094,si,CORE_CENTRALE,D4L,
+C095,Palmanova - Cervignano,Linee con <= 40 treni/giorno,15.1,21.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K095,si,CORE_CENTRALE,D4L,
+C096,S.Giuseppe Di C. - Ferrania,Linee con <= 40 treni/giorno,3.6,17.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K096,si,COMPREHENSIVE_GLOBALE,C3L,1874
+C097,Ferrania - Savona,Linee con <= 40 treni/giorno,16.7,17.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K097,si,COMPREHENSIVE_GLOBALE,C3L,1874
+C098,Ovada - Genova Borzoli,Linee con <= 40 treni/giorno,36.0,37.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K098,si,CORE_CENTRALE,D4L,
+C099,Ferrara - Portomaggiore,Linee con <= 40 treni/giorno,23.4,36.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K099,si,COMPREHENSIVE_GLOBALE,D4L,
+C100,Portomaggiore - Lavezzola,Linee con <= 40 treni/giorno,17.2,34.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K100,si,COMPREHENSIVE_GLOBALE,D4L,
+C101,Lavezzola - Ravenna,Linee con <= 40 treni/giorno,32.0,34.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K101,si,COMPREHENSIVE_GLOBALE,D4L,
+C102,Ravenna - Rimini,Linee con <= 40 treni/giorno,49.8,39.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K102,si,COMPREHENSIVE_GLOBALE,D4L,
+C103,Faenza - Granarolo,Linee con <= 40 treni/giorno,8.9,26.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K103,si,CORE_CENTRALE,D4L,
+C104,Granarolo - Lugo,Linee con <= 40 treni/giorno,7.6,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K104,si,fuori TEN-T,D4L,
+C105,Lugo - Lavezzola,Linee con <= 40 treni/giorno,22.2,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K105,si,fuori TEN-T,D4L,
+C106,Castelbolognese - Lugo,Linee con > 40 e < 100 treni/giorno,14.0,48.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K106,si,CORE_CENTRALE,D4L,
+C107,Lugo - Russi,Linee con > 40 e < 100 treni/giorno,10.8,47.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K107,si,CORE_CENTRALE,D4L,
+C108,Russi - Ravenna,Linee con <= 40 treni/giorno,32.7,36.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K108,si,CORE_CENTRALE,D4L,
+C109,Granarolo - Russi,Linee con <= 40 treni/giorno,8.1,26.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K109,si,CORE_CENTRALE,D4L,
+C110,Pontassieve - Borgo S.Lorenzo,Linee con <= 40 treni/giorno,32.7,28.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",10,CdP 2022-2026 parte Servizi,28,K110,si,fuori TEN-T,B2,
+C111,Borgo S.Lorenzo - Faenza,Linee con <= 40 treni/giorno,66.3,10.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,28,K111,si,fuori TEN-T,<A,
+C112,Firenze S. Marco V. - Borgo S.Lorenzo,Linee con <= 40 treni/giorno,32.0,35.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,28,K112,si,fuori TEN-T,D4L,
+C113,Viareggio - Lucca,Linee con > 40 e < 100 treni/giorno,16.6,46.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K113,si,fuori TEN-T,D4,
+C115,Porretta Terme - Pistoia,Linee con <= 40 treni/giorno,39.8,12.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,28,K115,si,fuori TEN-T,C3L,
+C116,Lucca - Pistoia,Linee con > 40 e < 100 treni/giorno,43.8,60.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K116,si,fuori TEN-T,D4,
+C117,Pisa - Lucca,Linee con > 40 e < 100 treni/giorno,30.6,51.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K117,si,fuori TEN-T,D4L,
+C118,Pistoia - Prato,Linee con > 40 e < 100 treni/giorno,17.1,96.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K118,si,fuori TEN-T,D4,
+C119,Aulla - Lucca,Linee con <= 40 treni/giorno,89.9,23.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,28,K119,si,fuori TEN-T,C3L,
+C120,Campiglia M.MA - Piombino M. ma,Linee con <= 40 treni/giorno,16.4,14.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,28,K120,si,fuori TEN-T,D4L,
+C121,Empoli - Siena,Linee con > 40 e < 100 treni/giorno,63.0,56.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K121,si,fuori TEN-T,D4,
+C122,Siena - Asciano,Linee con <= 40 treni/giorno,31.7,23.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,28,K122,si,fuori TEN-T,D4L,
+C123,Asciano - Montallese,Linee con <= 40 treni/giorno,47.6,23.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K123,si,fuori TEN-T,D4L,
+C124,Porto D'Ascoli - Ascoli Piceno,Linee con <= 40 treni/giorno,27.8,25.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K124,si,fuori TEN-T,D4L,
+C125,Pescara - Sulmona,Linee con <= 40 treni/giorno,68.7,36.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K125,si,COMPREHENSIVE_GLOBALE,C3L,
+C126,Civitanova - Albacina,Linee con <= 40 treni/giorno,86.6,20.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K126,si,fuori TEN-T,C3L,
+C127,Terontola - Foligno,Linee con <= 40 treni/giorno,82.2,34.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K127,si,fuori TEN-T,C3L,
+C129,Viterbo - Cesano,Linee con <= 40 treni/giorno,60.1,40.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K129,si,fuori TEN-T,C3L,
+C130,Campoleone - Nettuno,Linee con <= 40 treni/giorno,25.6,38.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K130,si,fuori TEN-T,C3L,
+C131,Sulmona - Avezzano,Linee con <= 40 treni/giorno,64.9,17.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K131,si,COMPREHENSIVE_GLOBALE,C3L,
+C132,Avezzano - Guidonia-M.-S.A.,Linee con <= 40 treni/giorno,81.2,32.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K132,si,COMPREHENSIVE_GLOBALE,C3L,
+C133,Avezzano - Roccasecca,Linee con <= 40 treni/giorno,79.5,10.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K133,si,fuori TEN-T,<A,
+C134,Ciampino - Albano Laziale,Linee con <= 40 treni/giorno,14.5,32.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K134,si,fuori TEN-T,A,
+C135,Ciampino - Velletri,Linee con > 40 e < 100 treni/giorno,27.1,41.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K135,si,fuori TEN-T,C3L,
+C136,Battipaglia - Potenza Inf.Re,Linee con <= 40 treni/giorno,91.3,15.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K136,si,COMPREHENSIVE_GLOBALE,C3L,
+C137,Aversa - Marcianise - Caserta,Linee con > 40 e < 100 treni/giorno,14.9,51.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K137,si,fuori TEN-T,C3L,
+C138,S.Marcellino F. - B.Gricignano,Linee con <= 40 treni/giorno,23.6,24.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K138,si,COMPREHENSIVE_GLOBALE,C3L,
+C139,Bosco Redole - Carpinone,Linee con <= 40 treni/giorno,28.9,20.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K139,si,fuori TEN-T,C3L,
+C140,Carpinone - Isernia,Linee con <= 40 treni/giorno,10.6,20.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K140,si,fuori TEN-T,C3L,
+C141,Isernia - Vairano,Linee con <= 40 treni/giorno,45.2,16.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K141,si,fuori TEN-T,C3L,
+C142,Sarno - Codola,Linee con <= 40 treni/giorno,7.8,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K142,si,fuori TEN-T,C3L,
+C143,Cancello - Sarno,Linee con <= 40 treni/giorno,34.1,40.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K143,si,fuori TEN-T,D4L,
+C144,Sarno - Biv. S.Lucia 123,Linee con > 40 e < 100 treni/giorno,6.5,43.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,29,K144,si,fuori TEN-T,D4L,
+C145,Nocera Inferiore - Codola,Linee con <= 40 treni/giorno,4.2,9.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K145,si,fuori TEN-T,C3L,
+C146,Nocera Inferiore - Salerno (via CAVA T.),Linee con > 40 e < 100 treni/giorno,17.1,77.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K146,si,fuori TEN-T,D4,
+C147,Salerno - Arechi,Linee con > 40 e < 100 treni/giorno,5.7,65.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K147,si,fuori TEN-T,C3,
+C148,Mercato S.Severino - Salerno,Linee con <= 40 treni/giorno,17.6,26.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K148,si,fuori TEN-T,A,
+C150,Bari - Brindisi,Linee con > 40 e < 100 treni/giorno,110.9,97.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K150,si,COMPREHENSIVE_GLOBALE,D4L,
+C151,Brindisi - Lecce,Linee con > 40 e < 100 treni/giorno,41.9,79.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,31,K151,si,COMPREHENSIVE_GLOBALE,D4,
+C152,Bari - Bitritto,Linee con <= 40 treni/giorno,9.3,29.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,"CdP Servizi, secondo atto integrativo (agg. 2024)",14,,no,,,
+C153,Cervaro - Rocchetta S.A.L.,Linee con <= 40 treni/giorno,41.4,8.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K153,si,fuori TEN-T,C3L,
+C154,Rocchetta S.A.L. - Potenza,Linee con <= 40 treni/giorno,69.0,15.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K154,si,fuori TEN-T,C3L,
+C155,Potenza  - Metaponto,Linee con <= 40 treni/giorno,107.1,11.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K155,si,COMPREHENSIVE_GLOBALE,C3,
+C156,Metaponto - Taranto,Linee con <= 40 treni/giorno,45.5,19.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K156,si,COMPREHENSIVE_GLOBALE,C3L,
+C157,Taranto - Brindisi,Linee con <= 40 treni/giorno,69.2,19.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K157,si,fuori TEN-T,C3,
+C158,Bari - Gioia Del Colle,Linee con > 40 e < 100 treni/giorno,53.0,44.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,29,K158,si,CORE_CENTRALE,D4L,
+C159,Gioia Del Colle - Taranto,Linee con > 40 e < 100 treni/giorno,54.3,44.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,29,K159,si,CORE_CENTRALE,D4L,
+C160,Metaponto - Sibari,Linee con <= 40 treni/giorno,79.0,10.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K160,si,COMPREHENSIVE_GLOBALE,C3,
+C161,Sibari - Catanzaro Lido,Linee con <= 40 treni/giorno,172.5,17.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K161,si,fuori TEN-T,C3L,
+C162,Catanzaro Lido - REGGIO C CLE,Linee con <= 40 treni/giorno,177.6,29.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K162,si,fuori TEN-T,C3L,
+C163,Lamezia Terme - Catanzaro Lido,Linee con <= 40 treni/giorno,43.2,24.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K163,si,COMPREHENSIVE_GLOBALE,C3L,
+C164,Paola - Castiglione C.,Linee con > 40 e < 100 treni/giorno,21.6,48.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,31,K164,si,COMPREHENSIVE_GLOBALE,C3,
+C165,S.Lucido Marina - Bivio Pantani,Linee con <= 40 treni/giorno,4.2,7.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K165,si,COMPREHENSIVE_GLOBALE,C3,
+C166,B.S.Antonello - Bivio Settimo,Linee con <= 40 treni/giorno,2.7,9.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K166,si,COMPREHENSIVE_GLOBALE,C3,
+C167,Castiglione C. - Cosenza,Linee con > 40 e < 100 treni/giorno,4.3,52.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,31,K167,si,fuori TEN-T,C3,
+C168,Sibari - Castiglione C.,Linee con <= 40 treni/giorno,59.5,20.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K168,si,COMPREHENSIVE_GLOBALE,C3,
+C169,Messina - Catania,Linee con > 40 e < 100 treni/giorno,94.8,69.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,31,K169,si,CORE_CENTRALE,C3,
+C170,Catania  - Lentini Diramazione,Linee con > 40 e < 100 treni/giorno,22.9,52.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,31,K170,si,CORE_CENTRALE,C3,
+C171,Lentini Diramazione - Siracusa,Linee con <= 40 treni/giorno,60.1,33.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K171,si,fuori TEN-T,C3L,
+C172,Lentini Diramazione - Gela,Linee con <= 40 treni/giorno,111.4,4.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K172,si,fuori TEN-T,C3L,
+C173,Gela - Modica,Linee con <= 40 treni/giorno,89.7,12.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K173,si,fuori TEN-T,B2,
+C174,Modica - Siracusa,Linee con <= 40 treni/giorno,91.7,13.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K174,si,fuori TEN-T,B2,
+C175,Messina - Fiumetorto,Linee con <= 40 treni/giorno,199.3,40.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K175,si,COMPREHENSIVE_GLOBALE,C3,
+C176,Fiumetorto - Palermo,Linea con >= 100 treni/giorno,43.2,111.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,K176,si,CORE_CENTRALE,C3,
+C177,Caltanissetta Xirbi - Roccapalumba-A.,Linee con <= 40 treni/giorno,56.6,22.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K177,si,fuori TEN-T,C3L,
+C178,Bicocca - Caltanissetta Xirbi,Linee con <= 40 treni/giorno,107.4,18.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K178,si,fuori TEN-T,D4,
+C180,Roccapalumba-A. - Fiumetorto,Linee con <= 40 treni/giorno,26.0,37.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K180,si,fuori TEN-T,C3,
+C181,Palermo - Carini,Linee con > 40 e < 100 treni/giorno,33.9,73.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,31,K181,si,COMPREHENSIVE_GLOBALE,C3,
+C182,Roccapalumba-A. - Aragona Caldare,Linee con <= 40 treni/giorno,46.7,25.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K182,si,fuori TEN-T,C3,
+C183,Aragona Caldare - Agrigento,Linee con <= 40 treni/giorno,12.6,31.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K183,si,fuori TEN-T,C3,
+C184,Palermo Centrale - Palermo Marittima,Linee con > 40 e < 100 treni/giorno,7.3,68.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,31,K184,si,fuori TEN-T,C3L,
+C185,Olbia - Ozieri Chilivani,Linee con <= 40 treni/giorno,70.5,17.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K185,si,COMPREHENSIVE_GLOBALE,C3L,
+C186,Sassari - Ozieri Chilivani,Linee con <= 40 treni/giorno,46.6,19.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K186,si,COMPREHENSIVE_GLOBALE,C3,
+C187,Ozieri Chilivani - Decimomannu,Linee con <= 40 treni/giorno,191.5,31.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K187,si,COMPREHENSIVE_GLOBALE,C3L,
+C188,Decimomannu - Cagliari,Linea con >= 100 treni/giorno,16.2,121.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,K188,si,COMPREHENSIVE_GLOBALE,D4,
+C189,Villamassargia  - Decimomannu,Linee con <= 40 treni/giorno,28.6,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K189,si,COMPREHENSIVE_GLOBALE,D4L,
+C190,Iglesias - Villamassargia,Linee con <= 40 treni/giorno,9.1,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K190,si,COMPREHENSIVE_GLOBALE,D4L,
+C191,Carbonia  - Villamassargia,Linee con <= 40 treni/giorno,22.4,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K191,si,fuori TEN-T,D4L,
+C192,Alcamo - Castelvetrano - Trapani,Linee con <= 40 treni/giorno,116.1,19.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K192,si,fuori TEN-T,C3L,
+C193,Alessandria - Ovada,Linee con <= 40 treni/giorno,33.0,13.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K193,si,CORE_CENTRALE,D4,
+C194,Asciano - Monte Antico,Linee con <= 40 treni/giorno,51.2,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K194,si,fuori TEN-T,B2L,1865-1872
+C195,Asti - Nizza Monferrato -Acqui Terme,Linee con <= 40 treni/giorno,45.5,14.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K195,si,fuori TEN-T,C3L,
+C196,Viterbo - Attigliano,Linee con <= 40 treni/giorno,39.1,13.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K196,si,fuori TEN-T,C3L,
+C197,Avellino - Benevento,Linee con <= 40 treni/giorno,29.8,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K197,si,fuori TEN-T,C3L,
+C198,Spinazzola - Barletta,Linee con <= 40 treni/giorno,65.7,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K198,si,fuori TEN-T,C3L,
+C199,Biella - Novara,Linee con <= 40 treni/giorno,50.8,27.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K199,si,fuori TEN-T,B2L,
+C201,Caltanissetta Xirbi - Canicattì - Aragona,Linee con <= 40 treni/giorno,64.7,10.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K201,si,fuori TEN-T,C3L,
+C202,Campobasso - Bosco Redole - Benevento,Linee con <= 40 treni/giorno,84.3,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K202,si,fuori TEN-T,C3L,
+C204,Carini - Alcamo Diramazione - Trapani,Linee con <= 40 treni/giorno,93.5,10.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K204,si,COMPREHENSIVE_GLOBALE,C3L,
+C205,Casarsa - San Vito - Portogruaro,Linee con <= 40 treni/giorno,21.1,17.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K205,si,fuori TEN-T,C3L,
+C206,Cavallermaggiore - Cantalupo,Linee con <= 40 treni/giorno,90.0,14.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K206,si,fuori TEN-T,C3L,
+C207,Cecina - Volterra Saline,Linee con <= 40 treni/giorno,29.5,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K207,si,fuori TEN-T,C3L,
+C208,Ceva - Ormea,Linee con <= 40 treni/giorno,35.4,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K208,si,fuori TEN-T,B2L,1893
+C209,Chivasso - Asti,Linee con <= 40 treni/giorno,51.3,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K209,si,fuori TEN-T,C3,
+C210,Canicattì  - Gela,Linee con <= 40 treni/giorno,81.9,5.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K210,si,fuori TEN-T,C3L,
+C211,Giulianova - Teramo,Linee con <= 40 treni/giorno,25.1,35.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K211,si,fuori TEN-T,C3L,
+C212,Isola della Scala - Cerea,Linee con <= 40 treni/giorno,19.6,21.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K212,si,fuori TEN-T,D4L,
+C213,Legnago - Monselice,Linee con <= 40 treni/giorno,37.9,23.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K213,si,fuori TEN-T,D4L,
+C214,Legnago - Rovigo,Linee con <= 40 treni/giorno,47.1,23.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K214,si,COMPREHENSIVE_GLOBALE,D4L,
+C215,Mercato S.Severino - Avellino,Linee con <= 40 treni/giorno,30.0,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",11,CdP 2022-2026 parte Servizi,29,K215,si,fuori TEN-T,<A,
+C216,Codola - Mercato S.Severino,Linee con <= 40 treni/giorno,8.3,9.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,29,K216,si,fuori TEN-T,C3L,
+C217,Mondovì - Cuneo,Linee con <= 40 treni/giorno,26.9,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,29,K217,si,fuori TEN-T,A,
+C218,Mortara - Casale Monferr. - Asti,Linee con <= 40 treni/giorno,73.5,11.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,29,K218,si,fuori TEN-T,C3L,
+C219,Pinerolo - Torre Pellice,Linee con <= 40 treni/giorno,16.1,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,29,K219,si,fuori TEN-T,C3L,
+C220,Agrigento Bassa - Porto Empedocle,Linee con <= 40 treni/giorno,10.1,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,29,K220,si,fuori TEN-T,B2,1910
+C221,Primolano - Bassano del Grappa,Linee con <= 40 treni/giorno,28.7,24.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,29,K221,si,fuori TEN-T,C3L,
+C222,Priverno Fossanova - Terracina,Linee con <= 40 treni/giorno,17.7,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K222,si,fuori TEN-T,C3L,
+C223,Rocchetta S.A.L. - Avellino,Linee con <= 40 treni/giorno,118.7,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K223,si,fuori TEN-T,<A,
+C224,Rocchetta S.A.L. - Spinazzola - Gioia del Colle,Linee con <= 40 treni/giorno,139.3,1.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K224,si,fuori TEN-T,C3,
+C225,Rovigo - Chioggia,Linee con <= 40 treni/giorno,55.8,8.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K225,si,fuori TEN-T,C3,
+C226,Gemona del Friuli  - Pinzano - Sacile,Linee con <= 40 treni/giorno,74.1,13.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K226,si,fuori TEN-T,C3L,
+C227,Santhià - Arona,Linee con <= 40 treni/giorno,65.0,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K227,si,fuori TEN-T,C3L,
+C228,Siena - Monte Antico - Montepescali,Linee con <= 40 treni/giorno,88.9,13.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K228,si,fuori TEN-T,C3L,
+C229,Sulmona - Carpinone,Linee con <= 40 treni/giorno,118.1,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K229,si,fuori TEN-T,C3L,1892
+C230,Termoli - Campobasso,Linee con <= 40 treni/giorno,87.2,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K230,si,fuori TEN-T,C3L,
+C231,Terni - Sulmona,Linee con <= 40 treni/giorno,163.8,20.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K231,si,fuori TEN-T,C3L,
+C232,Trento - Primolano,Linee con <= 40 treni/giorno,67.0,35.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K232,si,fuori TEN-T,C3,
+C233,Vercelli - Casale Popolo,Linee con <= 40 treni/giorno,19.2,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K233,si,fuori TEN-T,C3,
+C234,Palazzolo sull'Oglio - Paratico Sarnico,Linee con <= 40 treni/giorno,9.4,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K234,si,fuori TEN-T,C3,
+C235,Ciampino - Frascati,Linee con <= 40 treni/giorno,9.7,28.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K235,si,fuori TEN-T,C3L,
+C236,Foggia - Manfredonia,Linee con <= 40 treni/giorno,35.7,2.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K236,si,fuori TEN-T,D4,
+C237,Golfo Aranci Mar.ma - Olbia,Linee con <= 40 treni/giorno,22.7,11.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K237,si,COMPREHENSIVE_GLOBALE,C3L,
+C239,Pergola - Fabriano,Linee con <= 40 treni/giorno,31.6,0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K239,si,fuori TEN-T,C3L,
+C241,Porto Torres Pcc - Sassari,Linee con <= 40 treni/giorno,19.3,8.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K241,si,COMPREHENSIVE_GLOBALE,C3,
+C242,Salsomaggiore T. - Fidenza,Linee con > 40 e < 100 treni/giorno,9.0,44.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32,K242,si,fuori TEN-T,C3L,
+C243,Saluzzo - Cuneo,Linee con <= 40 treni/giorno,33.6,13.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K243,si,fuori TEN-T,C3L,
+C244,Santhià - Biella S.Paolo,Linee con <= 40 treni/giorno,26.7,28.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K244,si,fuori TEN-T,C3L,
+C245,Savigliano - Saluzzo,Linee con <= 40 treni/giorno,14.9,17.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K245,si,fuori TEN-T,C3L,
+C246,Susa - Bussoleno,Linee con <= 40 treni/giorno,7.5,33.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K246,si,fuori TEN-T,C3L,
+C247,Torre A.Centrale - Gragnano,Linee con <= 40 treni/giorno,10.5,12.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,K247,si,fuori TEN-T,C3L,
+C248,Trofarello - Chieri,Linee con > 40 e < 100 treni/giorno,8.6,48.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,30,K248,si,fuori TEN-T,C3L,
+C251,Perugia P.S.G. - Sansepolcro,Linee con <= 40 treni/giorno,52.2,20.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,,no,,,
+C260,Settimo T. - Rivarolo C.,Linee con > 40 e < 100 treni/giorno,22.1,43.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,,no,,,
+C262,Torino Rebaudengo - Ceres,Linee con > 40 e < 100 treni/giorno,31.8,60.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,,no,,,
+E000,Vievola - Breil Sur Roya,Linee con <= 40 treni/giorno,47.0,8.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,,no,,,
+F001,MODANE / MODANE FX - ALPIGNANO [TORINO],Linee con > 40 e < 100 treni/giorno,91.9,61.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32,J001,si,COMPREHENSIVE_GLOBALE,D4,
+F003,[TORINO] TROFARELLO - ARQUATA,Linee con > 40 e < 100 treni/giorno,112.2,91.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32,J003,si,COMPREHENSIVE_GLOBALE,D4,
+F005,[MILANO] MILANO ROGOREDO - ARQUATA (compresa via Novi L. e via Bressana B. - Arena Po),Linea con >= 100 treni/giorno,123.5,128.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,J005,si,CORE_CENTRALE,D4L,
+F007,SAVONA -  GENOVA VOLTRI [GENOVA],Linea con >= 100 treni/giorno,32.0,104.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32,J007,si,CORE_CENTRALE,D4,
+F009,VENTIMIGLIA - SAVONA,Linee con > 40 e < 100 treni/giorno,100.9,66.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32,J009,si,CORE_CENTRALE,D4,
+F011,[TORINO] SETTIMO T. - RHO [MILANO] (compresa Novara Boschetto),Linea con >= 100 treni/giorno,117.8,113.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,J011,si,CORE_CENTRALE,D4,
+F013,ISELLE [DOMODOSSOLA] - GALLARATE [MILANO] (compresa via Domo II),Linee con > 40 e < 100 treni/giorno,85.9,68.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32,J013,si,CORE_CENTRALE,D4,
+F015,PINO TRONZANO [LUINO] - GALLARATE,Linee con > 40 e < 100 treni/giorno,45.8,55.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32,J015,si,COMPREHENSIVE_GLOBALE,D4L,
+F017,CHIASSO - SEREGNO [MILANO] (compresa via Monteolimpino 2),Linea con >= 100 treni/giorno,40.8,158.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,J017,si,CORE_CENTRALE,D4,
+F019,ARQUATA - MIGNANEGO / GENOVA RIVAROLO / GENOVA CAMPASSO [GENOVA] (compresa via Isola del Cantone),Linee con > 40 e < 100 treni/giorno,58.2,92.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32,J019,si,COMPREHENSIVE_GLOBALE,D4L,
+F021,ALESSANDRIA - PIACENZA (compresa Broni - Bressana B.),Linee con > 40 e < 100 treni/giorno,81.7,73.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32,J021,si,COMPREHENSIVE_GLOBALE,D4L,
+F023,[MILANO] PIOLTELLO L. - BRESCIA  VERONA,Linea con >= 100 treni/giorno,147.0,147.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,J023,si,CORE_CENTRALE,D4,
+F023AV,PIOLTELLO L. - BRESCIA AVAC,Linea con >= 100 treni/giorno,15.1,236.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,,no,,,
+F025,VERONA  - PADOVA,Linea con >= 100 treni/giorno,84.9,170.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,J025,si,CORE_CENTRALE,D4,
+F027,BRENNERO - VERONA,Linea con >= 100 treni/giorno,243.9,150.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,J027,si,COMPREHENSIVE_GLOBALE,D4,
+F029,VERONA  - TAVERNELLE [BOLOGNA],Linea con >= 100 treni/giorno,105.6,101.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,J029,si,CORE_CENTRALE,D4,
+F031,PADOVA - S.PIETRO IN CASALE [BOLOGNA],Linea con >= 100 treni/giorno,102.5,181.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,J031,si,CORE_CENTRALE,D4,
+F033,PADOVA - MIRA M. [VENEZIA],Linea con >= 100 treni/giorno,20.5,103.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,J033,si,CORE_CENTRALE,D4,
+F033AV,PADOVA - VENEZIA AVAC,Linea con >= 100 treni/giorno,25.8,233.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,,no,,,
+F035,[VENEZIA] VENEZIA CARPENEDO - VILLA OPICINA / TRIESTE,Linea con >= 100 treni/giorno,187.9,114.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,J035,si,CORE_CENTRALE,D4L,
+F037,TARVISIO BOSCOVERDE  - MOGLIANO [VENEZIA],Linea con >= 100 treni/giorno,219.9,104.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,J037,si,COMPREHENSIVE_GLOBALE,D4L,
+F039,UDINE - MONFALCONE via GORIZIA (compresa Gorizia - Nova Gorica),Linee con > 40 e < 100 treni/giorno,63.3,73.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32,J039,si,COMPREHENSIVE_GLOBALE,D4L,
+F041,[MILANO] MILANO ROGOREDO - LAVINO [BOLOGNA],Linea con >= 100 treni/giorno,204.5,219.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,J041,si,CORE_CENTRALE,D4,
+F041AV,MILANO ROGOREDO - MELEGNANO AVAC,Linea con >= 100 treni/giorno,13.9,277.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,,no,,,
+F043,[BOLOGNA] BOLOGNA S.RUFFILLO - FIRENZE CASTELLO [FIRENZE],Linea con >= 100 treni/giorno,96.1,126.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,J043,si,CORE_CENTRALE,D4,
+F045,[GENOVA] GENOVA NERVI - PISA,Linea con >= 100 treni/giorno,158.5,125.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,J045,si,CORE_CENTRALE,D4,
+F047,PARMA / FIDENZA - PONTREMOLI - VEZZANO / SARZANA,Linee con > 40 e < 100 treni/giorno,151.3,42.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32,J047,si,COMPREHENSIVE_GLOBALE,C3L,
+F049,[FIRENZE] FIRENZE CASCINE - PISA,Linea con >= 100 treni/giorno,83.1,144.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,J049,si,CORE_CENTRALE,D4,
+F051,PISA  - MACCARESE [ROMA] (compresa Vada - Collesalvetti),Linee con > 40 e < 100 treni/giorno,359.9,75.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32,J051,si,COMPREHENSIVE_GLOBALE,D4,
+F053,[FIRENZE]  FIRENZE ROVEZZANO - FARA SABINA [ROMA] (Linea Lenta),Linee con > 40 e < 100 treni/giorno,270.7,94.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32,J053,si,CORE_CENTRALE,D4L,
+F055,[FIRENZE] FIRENZE ROVEZZANO - SETTE BAGNI [ROMA] (Linea Direttissima),Linea con >= 100 treni/giorno,271.2,240.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,J055,si,CORE_CENTRALE,D4L,
+F057,[ROMA] TORRICOLA - FRATTAMAGGIORE [NAPOLI] (via Formia),Linea con >= 100 treni/giorno,188.0,123.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,J057,si,CORE_CENTRALE,C3,
+F059,VILLA LITERNO - POZZUOLI [NAPOLI],Linee con <= 40 treni/giorno,21.0,39.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,J059,si,CORE_CENTRALE,,
+F061,(comprese linee Rocca d'Evandro - Venafro/Vairano e Santa Maria C.V. - Maddaloni M. S.to e linee Bivio Maddaloni /,Linee con > 40 e < 100 treni/giorno,237.7,69.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32,J061,si,COMPREHENSIVE_GLOBALE,D4,
+F063,[BOLOGNA] MIRANDOLA O. - ANCONA (compresa Ancona - Ancona Marittima),Linea con >= 100 treni/giorno,193.1,166.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,J063,si,CORE_CENTRALE,D4,
+F065,ANCONA - ORTE (compresa Ancona - Ancona Marittima),Linee con <= 40 treni/giorno,203.1,39.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,J065,si,COMPREHENSIVE_GLOBALE,D4L,
+F067,ANCONA - FOGGIA,Linea con >= 100 treni/giorno,319.5,116.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,J067,si,COMPREHENSIVE_GLOBALE,D4,
+F069,FOGGIA - BARI (compresa Enziteto Catino - Bari S.Spirito),Linea con >= 100 treni/giorno,128.5,129.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,J069,si,CORE_CENTRALE,D4,
+F071,CASERTA - FOGGIA,Linee con <= 40 treni/giorno,157.8,29.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",12,CdP 2022-2026 parte Servizi,30,J071,si,CORE_CENTRALE,C3L,
+F073,[NAPOLI] PORTICI - SALERNO,Linee con > 40 e < 100 treni/giorno,48.0,98.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32,J073,si,CORE_CENTRALE,D4,
+F073AV,NAPOLI - SALERNO LMV,Linea con >= 100 treni/giorno,37.5,137.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,33,,no,,,
+F075,SALERNO - PAOLA,Linee con > 40 e < 100 treni/giorno,216.7,87.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32,J075,si,CORE_CENTRALE,D4L,
+F077,PAOLA - REGGIO CALABRIA CENTRALE (compresa Eccellente - Rosarno),Linee con > 40 e < 100 treni/giorno,250.5,64.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",13,CdP 2022-2026 parte Servizi,32,J077,si,CORE_CENTRALE,D4L,
+N001,Torino,Linee all'interno dei Nodi,84.0,117.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33,R001,si,fuori TEN-T,D4,
+N002,Milano,Linee all'interno dei Nodi,211.4,168.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33,R002,si,CORE_CENTRALE,D4,
+N003,Venezia,Linee all'interno dei Nodi,66.6,119.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33,R003,si,fuori TEN-T,D4L,
+N004,Genova,Linee all'interno dei Nodi,76.3,99.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33,R004,si,CORE_CENTRALE,D4,
+N005,Bologna,Linee all'interno dei Nodi,169.8,98.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33,R005,si,fuori TEN-T,D4,
+N006,Firenze,Linee all'interno dei Nodi,47.1,155.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33,R006,si,CORE_CENTRALE,D4,
+N007,Roma,Linee all'interno dei Nodi,237.7,140.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33,R007,si,COMPREHENSIVE_GLOBALE,C3,
+N008,Napoli,Linee all'interno dei Nodi,60.3,126.0,"CdP Servizi, quarto atto integrativo (agg. 2026)",14,CdP 2022-2026 parte Servizi,33,R008,si,CORE_CENTRALE,C3,

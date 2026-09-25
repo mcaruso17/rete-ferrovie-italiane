@@ -1,5 +1,4 @@
 CdP_Servizi_2022-2026.pdf              296 linee su 6 pagine,   16832.2 km ricostruiti
-   ATTENZIONE: 14 righe senza denominazione
    Linea con >= 100 treni/giorno                     3227.2  stampato    3227.2  +0.0 
    Linee all'interno dei Nodi                         949.9  stampato     950.0  -0.1 
    Linee con <= 40 treni/giorno                      8234.2  stampato    8233.9  +0.3 
@@ -22,7 +21,6 @@ CdP_Servizi_2022-2026_AI1_Agg2023.pdf        4a  0 righe  4b 20 righe  4c   0 CU
    totale fonti 2022-2026 10219.15, complessivo 13019.15 mln
    ESITO: 73 controlli, 73 tornano
 CdP_Servizi_2022-2026_AI2_Agg2024.pdf  297 linee su 4 pagine,   16832.3 km ricostruiti
-   ATTENZIONE: 12 righe senza denominazione
    Linea con >= 100 treni/giorno                     3095.5  stampato    3095.5  +0.0 
    Linee AC/AV                                        733.6  stampato     733.6  +0.0 
    Linee all'interno dei Nodi                         949.6  stampato     949.6  +0.0 
@@ -37,7 +35,6 @@ CdP_Servizi_2022-2026_AI3_Agg2025.pdf    0 linee su 0 pagine,       0.0 km ricos
 CdP_Servizi_2022-2026_AI3_Agg2025.pdf        4a  0 righe  4b  0 righe  4c   0 CUP  PNRR-S  0
    nessun 4b leggibile: 13 pagine senza testo (scansioni)
 CdP_Servizi_2022-2026_AI4_Agg2026.pdf  299 linee su 5 pagine,   16881.6 km ricostruiti
-   ATTENZIONE: 14 righe senza denominazione
    Linea con >= 100 treni/giorno                     3289.7  stampato    3289.8  -0.1 
    Linee all'interno dei Nodi                         953.2  stampato     953.2  +0.0 
    Linee con <= 40 treni/giorno                      8262.8  stampato    8262.2  +0.6 

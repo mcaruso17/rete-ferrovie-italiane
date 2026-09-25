@@ -2227,7 +2227,7 @@
   {
    "gruppo": "Linea con >= 100 treni/giorno",
    "codice": "F055",
-   "linea": "1",
+   "linea": "[FIRENZE] FIRENZE ROVEZZANO - SETTE BAGNI [ROMA] (Linea Direttissima)",
    "treni_giorno": 233.0,
    "km": 271.2,
    "pagina": 13

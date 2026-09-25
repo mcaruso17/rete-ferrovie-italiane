@@ -153,14 +153,21 @@ scrivi("cup-da-cercare.csv",
 A = json.load(open(app)) if os.path.exists(app) else {}
 REG = A.get("registro_rfi", {})
 FON = A.get("registro_rfi_fonti", {})
+RRL = (A.get("rete_rfi") or {}).get("linee") or {}
 righe = [[c, r["n"], r.get("g") or "", r.get("km"), r.get("tr"),
           FON.get(r.get("doc"), r.get("doc")), r.get("pag"),
-          FON.get(r.get("doc_n"), r.get("doc_n")), r.get("pag_n")]
+          FON.get(r.get("doc_n"), r.get("doc_n")), r.get("pag_n"),
+          # dalla rete RFI: il codice di linea commerciale e gli attributi
+          (RRL.get(c) or {}).get("rfi", ""), "si" if c in RRL else "no",
+          (RRL.get(c) or {}).get("ten", ""), (RRL.get(c) or {}).get("peso", ""),
+          (RRL.get(c) or {}).get("dal", "")]
          for c, r in sorted(REG.items())]
 scrivi("linee-rfi.csv",
        ["codice_linea", "denominazione", "gruppo_traffico", "km",
         "treni_giorno_programmati", "fonte_dati", "pagina_dati",
-        "fonte_denominazione", "pagina_denominazione"], righe)
+        "fonte_denominazione", "pagina_denominazione",
+        "codice_rete_rfi", "tracciato_rfi", "rete_ten_t", "massa_assiale",
+        "in_esercizio_dal_osm"], righe)
 
 # --- agganci intervento -> linea, dai due registri --------------------------
 # Una riga per coppia intervento-linea, su entrambi i registri: chi filtra per
@@ -269,8 +276,10 @@ CAT = [
     ("linee-rfi.csv", "Registro ufficiale delle linee",
      "%d linee RFI con codice, denominazione, gruppo di traffico, km e treni "
      "al giorno dell'edizione piu' recente, con documento e pagina di "
-     "provenienza." % len(REG), DOC,
-     "CdP Servizi 2022-2026, Allegato 3"),
+     "provenienza. Le ultime colonne vengono dalla rete RFI (codice di linea "
+     "commerciale, rete TEN-T, massa assiale) e, per la data di apertura, da "
+     "OpenStreetMap." % len(REG), DOC,
+     "CdP Servizi 2022-2026, Allegato 3; rete RFI; OpenStreetMap"),
     ("servizi-fonti-cassa.csv", "Servizi: fonti per cassa e impieghi",
      "Allegato 4b di ogni edizione leggibile (leggi, capitolo di bilancio, "
      "profilo annuo, oltre il 2026, residuo dei contratti precedenti) e "
@@ -296,6 +305,17 @@ CAT = [
     ("cup-da-cercare.csv", "CUP da interrogare",
      "Tutti i CUP presenti nei contratti, pronti per un'interrogazione su "
      "OpenCUP.", DOC, "CdP Investimenti 2017-2026"),
+    ("rete-rfi.geojson", "Rete RFI",
+     "Le tratte della rete RFI con codice di tratta e di linea, linea "
+     "commerciale (il codice del registro con la lettera cambiata), rete "
+     "TEN-T, massa assiale. Comprende anche 46 tratte di progetto (codice PRJ), "
+     "che il sito non disegna come rete in esercizio.", EST,
+     "RFI, rete del Piano Commerciale 2026 (servizio ArcGIS pubblico)"),
+    ("piano-commerciale-2026.json", "Progetti del Piano Commerciale RFI",
+     "Tratte e localita' di progetto con il codice dell'intervento CdP scritto "
+     "da RFI, anno di attivazione e caratteristiche, e la geometria "
+     "semplificata.", EST,
+     "RFI, Piano Commerciale 2026, Scenari infrastrutturali"),
     ("rete-ferroviaria.geojson", "Tracciati della rete",
      "Linee in esercizio, in costruzione e in progetto, semplificate a circa "
      "15 m. Licenza ODbL: attribuzione a OpenStreetMap e condivisione alle "

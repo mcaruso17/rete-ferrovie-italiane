@@ -16,8 +16,15 @@ i campi mostrati dal sito e la geometria gia' semplificata dal servizio stesso
 Come per rete_osm.py, il passo richiede la rete e sta fuori da build_all.sh:
 build_all.sh legge solo il file versionato.
 
+Con un secondo argomento scarica anche la rete RFI completa (layer
+TrattePC2026, circa 2.400 tratte), che ha il codice di linea commerciale: e'
+lo stesso codice dell'Allegato 3 dei contratti Servizi con la lettera
+cambiata (C001 -> K001, F011 -> J011, N001 -> R001), e da' finalmente una
+geometria ufficiale al registro delle linee. Vedi rete_rfi.py.
+
 Uso:
-  python3 piano_commerciale.py ../data/piano-commerciale-2026.json
+  python3 piano_commerciale.py ../data/piano-commerciale-2026.json \
+          [../data/rete-rfi.geojson]
 """
 import datetime
 import json
@@ -27,8 +34,14 @@ import urllib.request
 
 SERVIZIO = ("https://services3.arcgis.com/GS5pg5GvYXCMCEen/arcgis/rest/services/"
             "Scenari_Infrastrutturali_PC2026/FeatureServer")
+RETE = ("https://services3.arcgis.com/GS5pg5GvYXCMCEen/arcgis/rest/services/"
+        "TrattePC2026/FeatureServer")
 # gradi: circa 55 m in latitudine, ben sotto l'unita' della mappa (circa 1 km)
 SEMPLIFICA = 0.0005
+CAMPI_RETE = ["OBJECTID", "CODTRATTA_BDL", "TRATTA_BDL", "CODLINEA_BDL", "LINEA_BDL",
+              "CODLINEA_COMM", "LINEA_COMM", "LINEA_AV", "RETE_EUROPEA",
+              "TIPO_RETE_TEN_T", "TIPO_CORE_CENTRALE", "PESO_ASSIALE", "SCT",
+              "LENGTH_PIR", "EDIZIONE_PIR"]
 
 CAMPI_COMUNI = ["OBJECTID", "CODICE_PROG_LIN", "PROGETTO", "CDP",
                 "DESC_INTERVENTO_CDP", "ANNO_ATT_PC", "ANNO_COMPLETAMENTO"]
@@ -59,12 +72,12 @@ def leggi(url):
     return j
 
 
-def interroga(layer, campi):
+def interroga(layer, campi, servizio=SERVIZIO, semplifica=SEMPLIFICA):
     """Tutte le righe del layer, a pagine: il servizio ne restituisce al massimo 2000."""
     # i campi cambiano fra un layer e l'altro e fra un'edizione e l'altra
     # (DESC_INTERVENTO_CDP non c'e' nelle localita' nuove): si chiedono solo
     # quelli che il layer ha, e si dice quali mancano
-    esistenti = {c["name"] for c in leggi("%s/%d?f=json" % (SERVIZIO, layer))["fields"]}
+    esistenti = {c["name"] for c in leggi("%s/%d?f=json" % (servizio, layer))["fields"]}
     mancanti = [c for c in campi if c not in esistenti]
     if mancanti:
         print("  layer %d senza i campi %s" % (layer, ", ".join(mancanti)))
@@ -74,8 +87,8 @@ def interroga(layer, campi):
         q = urllib.parse.urlencode({
             "where": "1=1", "outFields": ",".join(campi), "outSR": 4326,
             "f": "geojson", "resultOffset": offset, "resultRecordCount": 1000,
-            "maxAllowableOffset": SEMPLIFICA, "geometryPrecision": 5})
-        fs = leggi("%s/%d/query?%s" % (SERVIZIO, layer, q)).get("features", [])
+            "maxAllowableOffset": semplifica, "geometryPrecision": 5})
+        fs = leggi("%s/%d/query?%s" % (servizio, layer, q)).get("features", [])
         out.extend(fs)
         if len(fs) < 1000:
             return out
@@ -111,6 +124,19 @@ def main():
               % (nome, len(righe), sum(1 for r in righe if r["p"]["CDP"])))
     json.dump(dati, open(dest, "w", encoding="utf-8"), ensure_ascii=False,
               separators=(",", ":"))
+
+    if len(sys.argv) > 2:
+        # la rete e' il fondo della mappa: basta una semplificazione piu' fine
+        # di quella dei progetti, perche' qui si ingrandisce fino al nodo
+        fs = interroga(0, CAMPI_RETE, RETE, 0.0002)
+        for f in fs:
+            f["properties"] = {k: pulisci(v) for k, v in f["properties"].items()}
+        gj = {"type": "FeatureCollection",
+              "fonte": "RFI, rete ferroviaria (TrattePC2026, servizio ArcGIS pubblico)",
+              "servizio": RETE, "scaricato": dati["scaricato"], "features": fs}
+        json.dump(gj, open(sys.argv[2], "w", encoding="utf-8"), ensure_ascii=False,
+                  separators=(",", ":"))
+        print("%-20s %4d tratte" % ("rete RFI", len(fs)))
 
 
 if __name__ == "__main__":

@@ -39,7 +39,6 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from toponimi import norm, linea_av, cita_av, declassa  # noqa: E402
 
-DIR, APP, OUT = sys.argv[1:4]
 
 # L'ordine conta: per chilometri e treni vale il documento piu' recente in cui
 # la linea compare, per la denominazione il primo che ce l'ha. Il contratto
@@ -79,8 +78,11 @@ def capi(nome):
     return out
 
 
-def registro():
-    """Il registro unito sui codici, con la fonte di ogni valore."""
+def registro(DIR):
+    """Il registro unito sui codici, con la fonte di ogni valore.
+
+    Si importa anche da rete_rfi.py, che gira prima di questo passo e deve
+    riconoscere le linee per nome."""
     reg = {}
     for doc in ORDINE:
         f = os.path.join(DIR, doc + ".json")
@@ -101,33 +103,49 @@ def registro():
 
 
 def main():
-    reg = registro()
+    DIR, APP, OUT = sys.argv[1:4]
+    reg = registro(DIR)
     linee = [(c, capi(r["n"])) for c, r in reg.items() if r["n"]]
     linee = [(c, cs) for c, cs in linee if cs]
     freq = collections.Counter(x for _c, cs in linee for x in set(cs))
 
     app = json.load(open(APP, encoding="utf-8"))
+    # La seconda prova, la stessa che aggancio.py usa su OSM: la linea
+    # attraversa i comuni che l'intervento nomina. Fino a quando il registro
+    # RFI non aveva geometria questa prova mancava, e "Raddoppio
+    # Bovino-Cervaro" (stazioni intermedie, non capi di linea) restava senza
+    # linea RFI. Ora la geometria viene dalla rete RFI (rete_rfi.py).
+    attraversa = collections.defaultdict(set)
+    for istat, cods in ((app.get("rete_rfi") or {}).get("tocca") or {}).items():
+        for c in cods:
+            attraversa[c].add(istat)
+    PERINT = app.get("comuni_intervento") or {}
     per_int = {}
     for pr in app["progetti"]:
         testo = norm(pr.get("n") or "")
+        comuni = set(PERINT.get(pr["c"], []))
         trovate = []
         for cod, cs in linee:
             hit = [x for x in cs if re.search(r"\b" + re.escape(x) + r"\b", testo)]
-            if not hit:
+            n_geo = len(comuni & attraversa.get(cod, set()))
+            if not hit and not n_geo:
                 continue
-            if len(set(hit)) >= 2:
+            if len(set(hit)) >= 2 or n_geo >= 2:
                 conf = "alta"
-            elif any(freq[x] <= NODO_SE_OLTRE for x in hit):
+            elif any(freq[x] <= NODO_SE_OLTRE for x in hit) or n_geo == 1:
                 conf = "media"
             else:
                 conf = "bassa"
             if linea_av(reg[cod]["n"], cod) and not cita_av(pr.get("n") or ""):
                 conf = declassa(conf)
-            trovate.append({"c": cod, "conf": conf, "capi": hit})
+            prova = (["nome"] if len(set(hit)) >= 2 else ["nome-parziale"] if hit else []) + \
+                (["comuni"] if n_geo else [])
+            trovate.append({"c": cod, "conf": conf, "capi": hit, "comuni": n_geo,
+                            "prova": prova})
         if not trovate:
             continue
         rango = {"alta": 0, "media": 1, "bassa": 2}
-        trovate.sort(key=lambda t: (rango[t["conf"]], -len(t["capi"]), t["c"]))
+        trovate.sort(key=lambda t: (rango[t["conf"]], -t["comuni"], -len(t["capi"]), t["c"]))
         per_int[pr["c"]] = trovate[:6]
 
     # ------------------------------------------------------ la conferma
