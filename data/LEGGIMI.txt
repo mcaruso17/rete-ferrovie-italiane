@@ -31,9 +31,19 @@ capitoli-piani-gestionali.csv
   fonte: CdP Investimenti 2017-2026
 
 linee-rfi.csv
-  Registro ufficiale delle linee. 297 linee RFI con codice, denominazione, gruppo di traffico, km e treni al giorno, con documento e pagina di provenienza.
+  Registro ufficiale delle linee. 299 linee RFI con codice, denominazione, gruppo di traffico, km e treni al giorno dell'edizione piu' recente, con documento e pagina di provenienza.
   natura: dal documento
   fonte: CdP Servizi 2022-2026, Allegato 3
+
+servizi-fonti-cassa.csv
+  Servizi: fonti per cassa e impieghi. Allegato 4b di ogni edizione leggibile (leggi, capitolo di bilancio, profilo annuo, oltre il 2026, residuo dei contratti precedenti) e Allegato 4a del contratto base (impieghi per competenza).
+  natura: dal documento
+  fonte: CdP Servizi 2022-2026, Allegati 4a e 4b
+
+servizi-assegnazioni-cup.csv
+  Servizi: assegnazioni per CUP. Allegato 4c (fondi straordinari, per CUP e decreto) e opere PNRR attribuite al CdP-S (Allegato 12). E' l'unico dettaglio per progetto della parte Servizi, e copre una frazione piccola del totale. Sede DOIT e regioni sono quelle scritte nella descrizione, non dedotte.
+  natura: dal documento
+  fonte: CdP Servizi 2022-2026, atto integrativo 2026, Allegati 4c e 12
 
 comuni-interventi.csv
   Comuni nominati negli interventi. I comuni citati nel titolo di ciascun intervento. Non sono i comuni attraversati: i contratti non contengono tracciati.
@@ -71,9 +81,9 @@ validazione.txt
   fonte: tools/validate.py
 
 validazione-servizi.txt
-  Rapporto di validazione, Servizi. Chilometri del registro linee ricostruiti contro i totali stampati, gruppo per gruppo.
+  Rapporto di validazione, Servizi. Chilometri del registro linee e tabelle finanziarie (4a, 4b, 4c, 12) ricostruiti contro i totali stampati.
   natura: dal documento
-  fonte: tools/extract_servizi.py
+  fonte: tools/extract_servizi.py e tools/extract_servizi_fin.py
 
 DOCUMENTI ORIGINALI
 

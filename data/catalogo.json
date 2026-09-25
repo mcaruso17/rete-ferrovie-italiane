@@ -38,9 +38,23 @@
   {
    "file": "linee-rfi.csv",
    "titolo": "Registro ufficiale delle linee",
-   "contenuto": "297 linee RFI con codice, denominazione, gruppo di traffico, km e treni al giorno, con documento e pagina di provenienza.",
+   "contenuto": "299 linee RFI con codice, denominazione, gruppo di traffico, km e treni al giorno dell'edizione piu' recente, con documento e pagina di provenienza.",
    "natura": "dal documento",
    "fonte": "CdP Servizi 2022-2026, Allegato 3"
+  },
+  {
+   "file": "servizi-fonti-cassa.csv",
+   "titolo": "Servizi: fonti per cassa e impieghi",
+   "contenuto": "Allegato 4b di ogni edizione leggibile (leggi, capitolo di bilancio, profilo annuo, oltre il 2026, residuo dei contratti precedenti) e Allegato 4a del contratto base (impieghi per competenza).",
+   "natura": "dal documento",
+   "fonte": "CdP Servizi 2022-2026, Allegati 4a e 4b"
+  },
+  {
+   "file": "servizi-assegnazioni-cup.csv",
+   "titolo": "Servizi: assegnazioni per CUP",
+   "contenuto": "Allegato 4c (fondi straordinari, per CUP e decreto) e opere PNRR attribuite al CdP-S (Allegato 12). E' l'unico dettaglio per progetto della parte Servizi, e copre una frazione piccola del totale. Sede DOIT e regioni sono quelle scritte nella descrizione, non dedotte.",
+   "natura": "dal documento",
+   "fonte": "CdP Servizi 2022-2026, atto integrativo 2026, Allegati 4c e 12"
   },
   {
    "file": "comuni-interventi.csv",
@@ -94,9 +108,9 @@
   {
    "file": "validazione-servizi.txt",
    "titolo": "Rapporto di validazione, Servizi",
-   "contenuto": "Chilometri del registro linee ricostruiti contro i totali stampati, gruppo per gruppo.",
+   "contenuto": "Chilometri del registro linee e tabelle finanziarie (4a, 4b, 4c, 12) ricostruiti contro i totali stampati.",
    "natura": "dal documento",
-   "fonte": "tools/extract_servizi.py"
+   "fonte": "tools/extract_servizi.py e tools/extract_servizi_fin.py"
   }
  ],
  "documenti": [

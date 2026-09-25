@@ -1,0 +1,886 @@
+{
+ "documento": "srv2024",
+ "impieghi": [],
+ "fonti": [
+  {
+   "rigo": "1a",
+   "sezione": "Conto esercizio",
+   "voce": "Legge 234/2021 - Legge di Bilancio 2022 e Leggi di Bilanci o seguenti",
+   "capitolo": "1541",
+   "valori": {
+    "2022": 1155.56,
+    "2023": 1055.56,
+    "2024": 965.56,
+    "2025": 965.56,
+    "2026": 965.56,
+    "tot": 5107.78,
+    "compl": 5107.78
+   },
+   "pagina": 17
+  },
+  {
+   "rigo": "1b",
+   "sezione": "Conto esercizio",
+   "voce": "Legge 129/2023 - Legge di Assestamento di Bilancio 2023",
+   "capitolo": "1541",
+   "valori": {
+    "2023": 50.0,
+    "tot": 50.0,
+    "compl": 50.0
+   },
+   "pagina": 17
+  },
+  {
+   "rigo": "1c",
+   "sezione": "Conto esercizio",
+   "voce": "Legge 178/2020 - Legge di Bilancio 2021 e Leggi di Bilanci o seguenti (risorse per servizio mezzi veloci ME-Villa S.G e ME-RC)",
+   "capitolo": "7255",
+   "valori": {
+    "2022": 7.1,
+    "2023": 4.26,
+    "tot": 11.37,
+    "compl": 11.37
+   },
+   "pagina": 17
+  },
+  {
+   "rigo": "1d",
+   "sezione": "Conto esercizio",
+   "voce": "Legge 39/2024 - DL Superbonus",
+   "capitolo": "1541",
+   "valori": {
+    "2026": 100.0,
+    "tot": 100.0,
+    "compl": 100.0
+   },
+   "pagina": 17
+  },
+  {
+   "rigo": "1",
+   "sezione": "Conto esercizio",
+   "voce": "Totale Fonti c/Esercizio",
+   "capitolo": null,
+   "valori": {
+    "2022": 1162.66,
+    "2023": 1109.82,
+    "2024": 965.56,
+    "2025": 965.56,
+    "2026": 1065.56,
+    "tot": 5269.15,
+    "oltre": 0.0,
+    "compl": 5269.15
+   },
+   "pagina": 17
+  },
+  {
+   "rigo": "2a",
+   "sezione": "Conto impianti",
+   "voce": "Legge 234/2021 - Legge di Bilancio 2022 (Cap 7122/PG5)",
+   "capitolo": "7122",
+   "valori": {
+    "2022": 500.0,
+    "2023": 1000.0,
+    "2024": 1100.0,
+    "2025": 900.0,
+    "2026": 1000.0,
+    "tot": 4500.0,
+    "oltre": 600.0,
+    "compl": 5100.0
+   },
+   "pagina": 17
+  },
+  {
+   "rigo": "2b",
+   "sezione": "Conto impianti",
+   "voce": "Legge 197/2022 - Legge di Bilancio 2023 (Cap 7122/PG5)",
+   "capitolo": "7122",
+   "valori": {
+    "2023": 0.0,
+    "2024": 200.0,
+    "2025": 200.0,
+    "2026": 200.0,
+    "tot": 600.0,
+    "oltre": 2200.0,
+    "compl": 2800.0
+   },
+   "pagina": 17
+  },
+  {
+   "rigo": "2c",
+   "sezione": "Conto impianti",
+   "voce": "Legge 145/2023 - Decreto Fiscale  (Cap 7122/PG5)",
+   "capitolo": "7122",
+   "valori": {
+    "2023": 1000.0,
+    "2024": -1000.0,
+    "tot": 0.0,
+    "compl": 0.0
+   },
+   "pagina": 17
+  },
+  {
+   "rigo": "2d",
+   "sezione": "Conto impianti",
+   "voce": "Legge 303/2023 - Legge di Bilancio 2024 (Cap 7122/PG5)",
+   "capitolo": "7122",
+   "valori": {
+    "2024": 1000.0,
+    "2026": -1000.0,
+    "tot": 0.0,
+    "compl": 0.0
+   },
+   "pagina": 17
+  },
+  {
+   "rigo": "2e",
+   "sezione": "Conto impianti",
+   "voce": "Piano nazionale ripresa e Resilienza (PNRR)",
+   "capitolo": "n.a.",
+   "valori": {
+    "2022": 30.06,
+    "2024": 116.16,
+    "2025": 44.78,
+    "2026": 109.58,
+    "tot": 300.58,
+    "compl": 300.58
+   },
+   "pagina": 17
+  },
+  {
+   "rigo": "2f",
+   "sezione": "Conto impianti",
+   "voce": "Piano Operativo Nazionali 2014-2020",
+   "capitolo": "n.a.",
+   "valori": {
+    "2024": 3.73,
+    "2026": 0.41,
+    "tot": 4.15,
+    "compl": 4.15
+   },
+   "pagina": 17
+  },
+  {
+   "rigo": "2g",
+   "sezione": "Conto impianti",
+   "voce": "Fondo per l'adeguamento dei prezzi ex DL 73/2021 art. 1-septies c o. 8 (MIT Cap 7006)",
+   "capitolo": null,
+   "valori": {
+    "2022": 14.95,
+    "tot": 14.95,
+    "compl": 14.95
+   },
+   "pagina": 17
+  },
+  {
+   "rigo": "2h",
+   "sezione": "Conto impianti",
+   "voce": "Fondo per la prosecuzione delle opere pubbliche ex DL 76/2020 art. 7 co. 1 (MIT Cap 7007)",
+   "capitolo": null,
+   "valori": {
+    "2023": 2.99,
+    "2024": 0.05,
+    "tot": 3.03,
+    "compl": 3.03
+   },
+   "pagina": 17
+  },
+  {
+   "rigo": "2i",
+   "sezione": "Conto impianti",
+   "voce": "Legge 39/2024 - DL Superbonus",
+   "capitolo": "7122",
+   "valori": {
+    "2026": 140.8,
+    "tot": 140.8,
+    "oltre": 1932.8,
+    "compl": 2073.6
+   },
+   "pagina": 17
+  },
+  {
+   "rigo": "2",
+   "sezione": "Conto impianti",
+   "voce": "Totale Fonti c/Impianti (*)",
+   "capitolo": null,
+   "valori": {
+    "2022": 545.0,
+    "2023": 2002.99,
+    "2024": 1419.94,
+    "2025": 1144.78,
+    "2026": 450.79,
+    "tot": 5563.5,
+    "oltre": 4732.8,
+    "compl": 10296.3
+   },
+   "pagina": 17
+  },
+  {
+   "rigo": "3",
+   "sezione": "Conto impianti",
+   "voce": "Totale fonti",
+   "capitolo": null,
+   "valori": {
+    "2022": 1707.66,
+    "2023": 3112.81,
+    "2024": 2385.49,
+    "2025": 2110.34,
+    "2026": 1516.35,
+    "tot": 10832.65,
+    "oltre": 4732.8,
+    "compl": 15565.45
+   },
+   "pagina": 17
+  },
+  {
+   "rigo": "4",
+   "sezione": "Quadro delle proiezioni di spesa (c/impianti)",
+   "voce": "Manutenzione Straordinaria (Residuo CdP-S 2016-2021 e CdP 2012-2014)",
+   "capitolo": null,
+   "valori": {
+    "pm": 7024.51,
+    "2022": 179.98,
+    "2023": 70.03,
+    "2024": 43.66,
+    "2025": 33.37,
+    "2026": 32.46,
+    "tot": 359.49,
+    "compl": 7384.0
+   },
+   "pagina": 18
+  },
+  {
+   "rigo": "5a",
+   "sezione": "Conto impianti",
+   "voce": "Delibera CIPE n. 33 del 23.03.2012 (valore iniziale 300 mln€)",
+   "capitolo": "7514",
+   "valori": {
+    "pm": 271.44,
+    "tot": 0.0,
+    "compl": 271.44
+   },
+   "pagina": 18
+  },
+  {
+   "rigo": "5b",
+   "sezione": "Conto impianti",
+   "voce": "Art. 1, c. 175, della l. n. 228/2012 (Legge di Stabilità 2013 )",
+   "capitolo": "7122",
+   "valori": {
+    "pm": 300.0,
+    "tot": 0.0,
+    "compl": 300.0
+   },
+   "pagina": 18
+  },
+  {
+   "rigo": "5c",
+   "sezione": "Conto impianti",
+   "voce": "Delibera CIPE 22 del 18.03.2013 - risorse a valere su art. 1, c. 1 76, della Legge n. 228/2012 (legge di stabilità 2013)",
+   "capitolo": "7122",
+   "valori": {
+    "pm": 338.0,
+    "tot": 0.0,
+    "compl": 338.0
+   },
+   "pagina": 18
+  },
+  {
+   "rigo": "5d",
+   "sezione": "Conto impianti",
+   "voce": "Delibera CIPE 22 del 18.03.2013 - risorse a valere su art. 32, c. 1, del D.L. 98/2011",
+   "capitolo": "7518",
+   "valori": {
+    "pm": 240.0,
+    "tot": 0.0,
+    "compl": 240.0
+   },
+   "pagina": 18
+  },
+  {
+   "rigo": "5e",
+   "sezione": "Conto impianti",
+   "voce": "Bilancio di previsione dello Stato (ridestinate da Legge n. 71 24.06.2013, art. 7-ter)",
+   "capitolo": "1541",
+   "valori": {
+    "pm": 262.89,
+    "tot": 0.0,
+    "compl": 262.89
+   },
+   "pagina": 18
+  },
+  {
+   "rigo": "5f",
+   "sezione": "Conto impianti",
+   "voce": "Art 1, c‐ 73 della Legge 147 del 27.12.2013 (Legge Stabilità 2 014)",
+   "capitolo": "7122",
+   "valori": {
+    "pm": 500.0,
+    "tot": 0.0,
+    "compl": 500.0
+   },
+   "pagina": 18
+  },
+  {
+   "rigo": "5g",
+   "sezione": "Conto impianti",
+   "voce": "Legge 147 del 27.12.2013 - Legge Stabilità 2014 (Tab E, cap 7 122 Pg2) - Resi operativi da Decreto-Legge 133/14 \"Sblocca Italia\" conv ertito in Legge 164 del 11.11.2014",
+   "capitolo": "7122",
+   "valori": {
+    "pm": 220.0,
+    "tot": 0.0,
+    "compl": 220.0
+   },
+   "pagina": 18
+  },
+  {
+   "rigo": "5h",
+   "sezione": "Conto impianti",
+   "voce": "Legge 190/14 del 23.12.2014 (Legge di Stabilità 2015) - PG5",
+   "capitolo": "7122",
+   "valori": {
+    "pm": 4198.35,
+    "2022": 15.65,
+    "2024": 36.0,
+    "tot": 51.65,
+    "compl": 4250.0
+   },
+   "pagina": 18
+  },
+  {
+   "rigo": "5i",
+   "sezione": "Conto impianti",
+   "voce": "Legge 208/2015 - Legge di Stabilità 2016 - PG2",
+   "capitolo": "7122",
+   "valori": {
+    "pm": 0.0,
+    "tot": 0.0,
+    "oltre": 222.03,
+    "compl": 222.03
+   },
+   "pagina": 18
+  },
+  {
+   "rigo": "5l",
+   "sezione": "Conto impianti",
+   "voce": "Piano Operativo Nazionale 2007-2013 (PON 07-13)",
+   "capitolo": "n.a.",
+   "valori": {
+    "pm": 7.5,
+    "2024": 19.03,
+    "tot": 19.03,
+    "compl": 26.53
+   },
+   "pagina": 18
+  },
+  {
+   "rigo": "5m",
+   "sezione": "Conto impianti",
+   "voce": "Legge 178/2020 - Legge di Bilancio 2021 -PG5",
+   "capitolo": "7122",
+   "valori": {
+    "pm": 0.0,
+    "2022": 52.0,
+    "2023": 50.0,
+    "2024": 50.0,
+    "2025": 50.0,
+    "2026": 50.0,
+    "tot": 252.0,
+    "oltre": 500.0,
+    "compl": 752.0
+   },
+   "pagina": 18
+  },
+  {
+   "rigo": "5n",
+   "sezione": "Conto impianti",
+   "voce": "Fondo per l'adeguamento dei prezzi ex DL 73/2021 art. 1-septies c o. 8 (MIT Cap 7006)",
+   "capitolo": null,
+   "valori": {
+    "pm": 0.0,
+    "2022": 1.1,
+    "tot": 1.1,
+    "compl": 1.1
+   },
+   "pagina": 18
+  },
+  {
+   "rigo": "5o",
+   "sezione": "Conto impianti",
+   "voce": "Fondo per la prosecuzione delle opere pubbliche ex DL 76/2020 art. 7 co. 1 (MIT Cap 7007)",
+   "capitolo": null,
+   "valori": {
+    "pm": 0.0,
+    "2022": 0.0,
+    "2024": 0.02,
+    "tot": 0.02,
+    "compl": 0.02
+   },
+   "pagina": 18
+  },
+  {
+   "rigo": "5",
+   "sezione": "Conto impianti",
+   "voce": "Totale Fonti c/Impianti",
+   "capitolo": null,
+   "valori": {
+    "pm": 6338.18,
+    "2022": 68.75,
+    "2023": 50.0,
+    "2024": 105.04,
+    "2025": 50.0,
+    "2026": 50.0,
+    "tot": 323.79,
+    "oltre": 722.03,
+    "compl": 7384.0
+   },
+   "pagina": 18
+  }
+ ],
+ "assegnazioni": [
+  {
+   "cup": "J27H22000010001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Reggio Calabria - anno 2022",
+   "prec": 0.0,
+   "corr": 0.63,
+   "totale": 0.63,
+   "pagina": 19,
+   "fonte": "Fondo per la prosecuzione delle opere pubbliche",
+   "atto": "",
+   "riferimento": "Decreto MIT n. 97 del 31 maggio 2023"
+  },
+  {
+   "cup": "J97H22000030001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Napoli - anno 2022",
+   "prec": 0.0,
+   "corr": 0.03,
+   "totale": 0.03,
+   "pagina": 19,
+   "fonte": "Fondo per la prosecuzione delle opere pubbliche",
+   "atto": "",
+   "riferimento": "Decreto MIT n. 97 del 31 maggio 2023"
+  },
+  {
+   "cup": "J47H22000030001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Bologna - anno 2022",
+   "prec": 0.0,
+   "corr": 0.09,
+   "totale": 0.09,
+   "pagina": 19,
+   "fonte": "Fondo per la prosecuzione delle opere pubbliche",
+   "atto": "",
+   "riferimento": "Decreto MIT n. 97 del 31 maggio 2023"
+  },
+  {
+   "cup": "J67D22000160001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Torino - anno 2023",
+   "prec": 0.0,
+   "corr": 0.42,
+   "totale": 0.42,
+   "pagina": 19,
+   "fonte": "Fondo per la prosecuzione delle opere pubbliche",
+   "atto": "",
+   "riferimento": "Decreto MIT n. 97 del 31 maggio 2023"
+  },
+  {
+   "cup": "J27H22000010001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Reggio Calabria - anno 2022",
+   "prec": 0.0,
+   "corr": 0.05,
+   "totale": 0.05,
+   "pagina": 19,
+   "fonte": "Fondo per la prosecuzione delle opere pubbliche",
+   "atto": "",
+   "riferimento": "Decreto MIT n. 190 del 8 settembre 2023"
+  },
+  {
+   "cup": "J47H22000040001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Firenze - anno 2022",
+   "prec": 0.0,
+   "corr": 0.14,
+   "totale": 0.14,
+   "pagina": 19,
+   "fonte": "Fondo per la prosecuzione delle opere pubbliche",
+   "atto": "",
+   "riferimento": "Decreto MIT n. 190 del 8 settembre 2023"
+  },
+  {
+   "cup": "J67H22000030001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Torino - anno 2022",
+   "prec": 0.0,
+   "corr": 0.32,
+   "totale": 0.32,
+   "pagina": 19,
+   "fonte": "Fondo per la prosecuzione delle opere pubbliche",
+   "atto": "",
+   "riferimento": "Decreto MIT n. 190 del 8 settembre 2023"
+  },
+  {
+   "cup": "J67D22000160001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Torino - anno 2023",
+   "prec": 0.0,
+   "corr": 0.48,
+   "totale": 0.48,
+   "pagina": 19,
+   "fonte": "Fondo per la prosecuzione delle opere pubbliche",
+   "atto": "",
+   "riferimento": "Decreto MIT n. 190 del 8 settembre 2023"
+  },
+  {
+   "cup": "J97D22000160001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Genova - anno 2023",
+   "prec": 0.0,
+   "corr": 0.73,
+   "totale": 0.73,
+   "pagina": 19,
+   "fonte": "Fondo per la prosecuzione delle opere pubbliche",
+   "atto": "",
+   "riferimento": "Decreto MIT n. 190 del 8 settembre 2023"
+  },
+  {
+   "cup": "J97H22000110001",
+   "descrizione": "CdP-S Infratruttura Tecnologica DOIT Napoli - anno 2022",
+   "prec": 0.0,
+   "corr": 0.09,
+   "totale": 0.09,
+   "pagina": 19,
+   "fonte": "Fondo per la prosecuzione delle opere pubbliche",
+   "atto": "",
+   "riferimento": "Decreto MIT n. 190 del 8 settembre 2023"
+  },
+  {
+   "cup": "J27J18000230001",
+   "descrizione": "Manutenzione Straordinaria Linee Reggio - 2019",
+   "prec": 0.02,
+   "corr": 0.0,
+   "totale": 0.02,
+   "pagina": 19,
+   "fonte": "Fondo per la prosecuzione delle opere pubbliche",
+   "atto": "",
+   "riferimento": "Decreto MIT n. 288 del 13 dicembre 2023"
+  },
+  {
+   "cup": "J87H22000220001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Bari - anno 2022",
+   "prec": 0.0,
+   "corr": 0.05,
+   "totale": 0.05,
+   "pagina": 19,
+   "fonte": "Fondo per la prosecuzione delle opere pubbliche",
+   "atto": "",
+   "riferimento": "Decreto MIT n. 288 del 13 dicembre 2023"
+  },
+  {
+   "cup": "J87B20002810001",
+   "descrizione": "Manutenzione Straordinaria Linee AV/AC Bologna - 2021",
+   "prec": 0.002,
+   "corr": 0.0,
+   "totale": 0.002,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 9 agosto 2023"
+  },
+  {
+   "cup": "J97H22000030001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Napoli - anno 2022",
+   "prec": 0.0,
+   "corr": 0.54,
+   "totale": 0.54,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J17H22000060001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Venezia - anno 2022",
+   "prec": 0.0,
+   "corr": 0.56,
+   "totale": 0.56,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J27J18000230001",
+   "descrizione": "Manutenzione Straordinaria Linee Reggio Calabria - 2019",
+   "prec": 0.13,
+   "corr": 0.0,
+   "totale": 0.13,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J37H22000030001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Trieste - anno 2022",
+   "prec": 0.0,
+   "corr": 3.09,
+   "totale": 3.09,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J37H22000040001",
+   "descrizione": "CdP-S Infratruttura Energetica DOIT Trieste - anno 2022",
+   "prec": 0.0,
+   "corr": 0.04,
+   "totale": 0.04,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J47H22000030001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Bologna - anno 2022",
+   "prec": 0.0,
+   "corr": 1.81,
+   "totale": 1.81,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J47H22000040001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Firenze - anno 2022",
+   "prec": 0.0,
+   "corr": 0.12,
+   "totale": 0.12,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J57H22000000001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Roma - anno 2022",
+   "prec": 0.0,
+   "corr": 2.44,
+   "totale": 2.44,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J67F19000270001",
+   "descrizione": "Manutenzione Straordinaria Linee Torino - 2020",
+   "prec": 0.01,
+   "corr": 0.0,
+   "totale": 0.01,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J67H22000020001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Palermo - anno 2022",
+   "prec": 0.0,
+   "corr": 0.15,
+   "totale": 0.15,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J67H22000030001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Torino - anno 2022",
+   "prec": 0.0,
+   "corr": 1.04,
+   "totale": 1.04,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J77B14000350001",
+   "descrizione": "Manutenzione Straordinaria Linee Cagliari - 2015",
+   "prec": 0.19,
+   "corr": 0.0,
+   "totale": 0.19,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J87B20002740001",
+   "descrizione": "Manutenzione Straordinaria Linee Bari - 2021",
+   "prec": 0.11,
+   "corr": 0.0,
+   "totale": 0.11,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J87H22000220001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Bari - anno 2022",
+   "prec": 0.0,
+   "corr": 0.21,
+   "totale": 0.21,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J97B20000480001",
+   "descrizione": "Manutenzione Straordinaria Linee Genova - 2021",
+   "prec": 0.02,
+   "corr": 0.0,
+   "totale": 0.02,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J97B20000490001",
+   "descrizione": "Manutenzione Straordinaria Linee Milano - 2021",
+   "prec": 0.34,
+   "corr": 0.0,
+   "totale": 0.34,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J97B20000500001",
+   "descrizione": "Manutenzione Straordinaria Linee Napoli - 2021",
+   "prec": 0.06,
+   "corr": 0.0,
+   "totale": 0.06,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J97B20000520001",
+   "descrizione": "Obblighi di Legge Linee Genova - 2021",
+   "prec": 0.04,
+   "corr": 0.0,
+   "totale": 0.04,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J97F19000270001",
+   "descrizione": "Manutenzione Straordinaria Linee Genova - 2020",
+   "prec": 0.0,
+   "corr": 0.0,
+   "totale": 0.0,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J97F19000290001",
+   "descrizione": "Manutenzione Straordinaria Linee Napoli - 2020",
+   "prec": 0.03,
+   "corr": 0.0,
+   "totale": 0.03,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J97F19000300001",
+   "descrizione": "Manutenzione Straordinaria Linee Verona - 2020",
+   "prec": 0.06,
+   "corr": 0.0,
+   "totale": 0.06,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J97F19000310001",
+   "descrizione": "Obblighi di Legge Linee Genova - 2020",
+   "prec": 0.08,
+   "corr": 0.0,
+   "totale": 0.08,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J97H22000010001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Genova - anno 2022",
+   "prec": 0.0,
+   "corr": 0.99,
+   "totale": 0.99,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J97H22000020001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Milano - anno 2022",
+   "prec": 0.0,
+   "corr": 3.96,
+   "totale": 3.96,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J97J18000160001",
+   "descrizione": "Manutenzione Straordinaria Linee Genova - 2019",
+   "prec": 0.03,
+   "corr": 0.0,
+   "totale": 0.03,
+   "pagina": 19,
+   "fonte": "Fondo per l'adeguamento dei prezzi di materiali da costruzione",
+   "atto": "",
+   "riferimento": "Decreto MIT del 25 settembre 2023"
+  },
+  {
+   "cup": "J27H22000010001",
+   "descrizione": "CdP-S Infratruttura Fisica DOIT Reggio Calabria - anno 2022",
+   "prec": 0.0,
+   "corr": 4.15,
+   "totale": 4.15,
+   "pagina": 19,
+   "fonte": "PON Infrastrutture e Reti 2014-2020",
+   "atto": "",
+   "riferimento": "Presa d’atto prot. n. 6502 del 23 aprile 2024"
+  }
+ ],
+ "pnrr": [],
+ "pagine": {
+  "4b": [
+   17,
+   18
+  ],
+  "4c": [
+   19
+  ]
+ },
+ "note": [],
+ "controlli": {
+  "fatti": 158,
+  "tornano": 158
+ },
+ "pagine_senza_testo": 0
+}

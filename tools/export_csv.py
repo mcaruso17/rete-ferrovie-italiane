@@ -191,6 +191,39 @@ scrivi("agganci-linee.csv",
         "linea", "confidenza", "prova", "capi_nominati",
         "comuni_citati_attraversati", "confermato", "natura_del_dato"], righe)
 
+# --- parte Servizi: fonti per cassa, impieghi, assegnazioni per CUP ---------
+S = A.get("servizi") or {}
+TIT_S = {e["id"]: e["titolo"] for e in S.get("edizioni", [])}
+SEZ_S = {"esercizio": "conto esercizio", "impianti": "conto impianti",
+         "totale": "totale fonti", "spesa_residuo": "spesa residuo contratti precedenti",
+         "residuo": "fonti residuo contratti precedenti"}
+righe = []
+for tab, chiave in (("4b fonti per cassa", "fonti"), ("4a impieghi per competenza", "impieghi")):
+    for doc, lista in (S.get(chiave) or {}).items():
+        for r in lista:
+            righe.append([TIT_S.get(doc, doc), tab, r["r"], SEZ_S.get(r["s"], r["s"]),
+                          r["v"], r["c"], r["pm"]] + list(r["a"]) +
+                         [r["t"], r["o"], r["k"], r["p"]])
+scrivi("servizi-fonti-cassa.csv",
+       ["edizione", "allegato", "rigo", "sezione", "voce", "capitolo_bilancio",
+        "cumulato_al_2021_pm", "2022", "2023", "2024", "2025", "2026",
+        "totale_2022_2026", "oltre_2026", "totale_complessivo", "pagina"], righe)
+righe = []
+for a_ in S.get("assegnazioni", []):
+    righe.append([a_["cup"], a_["d"], "Allegato 4c", a_["f"], a_["atto"], a_["rif"],
+                  a_["prec"], a_["corr"], a_["t"], a_["sede"], "",
+                  TIT_S.get(a_["doc"], a_["doc"]), a_["p"]])
+REGN = A.get("regioni", {})
+for p in S.get("pnrr", []):
+    righe.append([p["cup"], p["n"], "Allegato 12 (PNRR)", "PNRR " + p["m"], "", "",
+                  "", p["pnrr"], p["t"], "", "|".join(REGN.get(r, r) for r in p["reg"]),
+                  TIT_S.get(p["doc"], p["doc"]), p["p"]])
+scrivi("servizi-assegnazioni-cup.csv",
+       ["cup", "descrizione", "allegato", "fonte", "atto_integrativo",
+        "riferimento_normativo", "cdps_2016_2021", "cdps_2022_2026",
+        "totale_riga", "sede_doit_nominata", "regioni_nominate", "edizione",
+        "pagina"], righe)
+
 # --- catalogo dei file ------------------------------------------------------
 # Un solo elenco, da cui escono sia il riquadro dei download in pagina sia il
 # LEGGIMI.txt: due descrizioni scritte a mano divergerebbero al primo file
@@ -221,9 +254,21 @@ CAT = [
      "Tavola 2: importi per capitolo e piano gestionale, anno per anno.", DOC,
      "CdP Investimenti 2017-2026"),
     ("linee-rfi.csv", "Registro ufficiale delle linee",
-     "297 linee RFI con codice, denominazione, gruppo di traffico, km e treni "
-     "al giorno, con documento e pagina di provenienza.", DOC,
+     "%d linee RFI con codice, denominazione, gruppo di traffico, km e treni "
+     "al giorno dell'edizione piu' recente, con documento e pagina di "
+     "provenienza." % len(REG), DOC,
      "CdP Servizi 2022-2026, Allegato 3"),
+    ("servizi-fonti-cassa.csv", "Servizi: fonti per cassa e impieghi",
+     "Allegato 4b di ogni edizione leggibile (leggi, capitolo di bilancio, "
+     "profilo annuo, oltre il 2026, residuo dei contratti precedenti) e "
+     "Allegato 4a del contratto base (impieghi per competenza).", DOC,
+     "CdP Servizi 2022-2026, Allegati 4a e 4b"),
+    ("servizi-assegnazioni-cup.csv", "Servizi: assegnazioni per CUP",
+     "Allegato 4c (fondi straordinari, per CUP e decreto) e opere PNRR "
+     "attribuite al CdP-S (Allegato 12). E' l'unico dettaglio per progetto "
+     "della parte Servizi, e copre una frazione piccola del totale. Sede DOIT "
+     "e regioni sono quelle scritte nella descrizione, non dedotte.", DOC,
+     "CdP Servizi 2022-2026, atto integrativo 2026, Allegati 4c e 12"),
     ("comuni-interventi.csv", "Comuni nominati negli interventi",
      "I comuni citati nel titolo di ciascun intervento. Non sono i comuni "
      "attraversati: i contratti non contengono tracciati.", DED,
@@ -250,8 +295,9 @@ CAT = [
      "I controlli dei dati ricostruiti contro i totali stampati nei PDF.",
      DOC, "tools/validate.py"),
     ("validazione-servizi.txt", "Rapporto di validazione, Servizi",
-     "Chilometri del registro linee ricostruiti contro i totali stampati, "
-     "gruppo per gruppo.", DOC, "tools/extract_servizi.py"),
+     "Chilometri del registro linee e tabelle finanziarie (4a, 4b, 4c, 12) "
+     "ricostruiti contro i totali stampati.", DOC,
+     "tools/extract_servizi.py e tools/extract_servizi_fin.py"),
 ]
 TIT_PDF = {v["file"]: v["titolo"] for v in D["documenti"].values()}
 TIT_PDF.update({

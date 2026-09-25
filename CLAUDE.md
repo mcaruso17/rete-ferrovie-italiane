@@ -30,6 +30,8 @@ tools/rete_osm.py    rete ferroviaria da un estratto OSM (fuori da build_all.sh)
 tools/build_rete.py  la rete sulla proiezione della mappa, semplificata
 tools/aggancio.py    intervento -> linea OSM (nome + comuni attraversati)
 tools/extract_servizi.py  CdP Servizi, Allegato 3: registro ufficiale linee
+tools/extract_servizi_fin.py  CdP Servizi, Allegati 4a, 4b, 4c e 12 (tabelle finanziarie)
+tools/build_servizi.py    le viste Servizi della piattaforma (app["servizi"])
 tools/registro_rfi.py     intervento -> linea RFI (nome) e livello "confermato"
 tools/inject_data.py incorpora i dati nel file unico della piattaforma
 tools/wrap_site.py   dal frammento al documento HTML completo
@@ -135,6 +137,31 @@ colonne si spostano fra un'edizione e l'altra, quindi la riga si ancora al
 codice e non alla posizione. Il contratto base perde la denominazione di 14
 linee che vanno a capo; l'atto 2023 le ha tutte, e registro_rfi.py le prende da
 li'.
+
+## Le due parti nella piattaforma
+
+Ogni sezione ha una vista Investimenti e una vista Servizi (`.solo-inv` e
+`.solo-srv`), scelte dal selettore in testata e scritte nell'indirizzo
+(`#/servizi/quadro`), cosi' un link porta alla vista giusta. La parte Servizi non
+ha la struttura degli Investimenti e **non va forzata a imitarla**: non ci sono
+opere con costo e copertura. Le viste mostrano quello che il contratto contiene:
+
+- Quadro e Capitoli: Allegato 4b (fonti per cassa per legge e capitolo), in
+  ogni edizione leggibile; 4a (impieghi per competenza) solo nel contratto base;
+- Interventi: Allegato 4c (fondi straordinari per CUP e decreto) e Allegato 12
+  (opere PNRR del CdP-S). Valgono meno del 2% del totale, e la pagina lo dice;
+- Mappa: solo le regioni scritte nei nomi PNRR; Comuni: le sedi DOIT nominate;
+- Rete: il registro dell'Allegato 3 con i treni al giorno edizione per edizione;
+- Opere concluse: il residuo dei contratti Servizi precedenti (rigo 4 del 4b).
+
+L'atto integrativo 2025 porta gli allegati in scansione (13 pagine senza
+testo): non c'e' OCR nell'ambiente, e le sue modifiche sono riassorbite nel 4b
+dell'atto 2026. Nell'atto 2026 l'Allegato 3 ha cambiato titolo ("Elenco linee",
+non piu' "Gruppi Linee"): l'estrattore lo scartava e il registro si fermava al
+2024. I suoi km hanno un decimale invece di tre, per questo la tolleranza sui
+totali cresce con la radice del numero di righe. Il totale generale stampato del
+4c 2026 (150,83) non e' la somma dei suoi totali per fonte (147,79): incoerenza
+della fonte, segnalata e non corretta.
 
 ## Cosa resta aperto
 

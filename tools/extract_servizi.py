@@ -103,7 +103,12 @@ def main():
                              for ln in group_lines(extract_page(doc, pg))[:3])
         except Exception:
             continue
-        if "Allegato 3" not in testa or "Gruppi Linee" not in testa:
+        # il titolo cambia fra le edizioni: "Gruppi Linee: articolazione di
+        # dettaglio..." fino al 2024, "Elenco linee, comprese quelle di
+        # continuita' territoriale" nel 2026. Col solo primo titolo l'atto
+        # 2026 risultava senza allegato, ed era falso
+        if "Allegato 3" not in testa or not ("Gruppi Linee" in testa
+                                             or "Elenco linee" in testa):
             continue
         r, tot = righe_allegato3(doc, pg)
         if r:
@@ -151,16 +156,30 @@ def main():
     # dimostra il documento stesso, dove la somma dei sottototali stampati non
     # fa il totale stampato: l'incoerenza e' nella fonte. Nell'atto 2024, dove
     # la fonte e' coerente, la ricostruzione torna esatta su ogni gruppo.
-    TOLL = 0.5
+    #
+    # Nell'atto 2026 i chilometri passano da tre decimali a uno, e l'errore di
+    # arrotondamento cresce con il numero di righe: la deviazione standard di
+    # un arrotondamento al decimo e' 0,1/sqrt(12), circa 0,029 km, e sulla
+    # somma di n righe vale 0,029*sqrt(n). La soglia e' tre deviazioni, mai
+    # sotto 0,5: sul gruppo piu' numeroso (circa 150 linee) fa poco piu' di un
+    # chilometro, ancora sotto la linea piu' corta del registro, quindi una
+    # riga persa si vedrebbe comunque.
+    def toll(n):
+        return max(0.5, 3 * 0.0289 * n ** 0.5)
+    n_gruppo = {}
+    for l in linee:
+        n_gruppo[l["gruppo"]] = n_gruppo.get(l["gruppo"], 0) + 1
     esiti = []
     for g, v in sorted(per_gruppo.items()):
         cand = [t for t in sub if g[:24].lower() in t["voce"].lower()]
         if not cand:
             continue
         d = v - cand[0]["km"]
+        TOLL = toll(n_gruppo[g])
         esiti.append(abs(d) <= TOLL)
         print("   %-46s %9.1f  stampato %9.1f  %+.1f %s"
               % (g[:46], v, cand[0]["km"], d, "" if abs(d) <= TOLL else " NON TORNA"))
+    TOLL = toll(len(linee))
     if comp:
         atteso = comp[0]["km"]
         d = km - atteso
@@ -173,8 +192,8 @@ def main():
             print("   (la fonte e' incoerente con se stessa: i suoi sottototali"
                   " sommano %.1f contro %.1f)" % (sub_somma, atteso))
     if esiti:
-        print("   ESITO: %d confronti, %d entro %.1f km"
-              % (len(esiti), sum(esiti), TOLL))
+        print("   ESITO: %d confronti, %d entro la tolleranza di arrotondamento"
+              % (len(esiti), sum(esiti)))
     elif linee:
         print("   nessun totale stampato in questo documento")
 
