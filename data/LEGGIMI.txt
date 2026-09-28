@@ -70,6 +70,16 @@ piano-commerciale-2026.json
   natura: fonte esterna
   fonte: RFI, Piano Commerciale 2026, Scenari infrastrutturali
 
+piano-commerciale-schede.csv
+  Schede progetto del Piano Commerciale RFI. Una riga per coppia intervento-progetto: il progetto come lo chiama RFI, l'anno di attivazione previsto, la misura PNRR, le regioni, i tipi di beneficio e le pagine del PDF. Il codice CdP e' scritto da RFI nella scheda.
+  natura: fonte esterna
+  fonte: RFI, Il Piano Commerciale, edizione ottobre 2025
+
+piano-commerciale-schede.json
+  Schede progetto del Piano Commerciale RFI (completo). Le stesse schede con descrizione, benefici per esteso e numeri del progetto.
+  natura: fonte esterna
+  fonte: RFI, Il Piano Commerciale, edizione ottobre 2025
+
 rete-ferroviaria.geojson
   Tracciati della rete. Linee in esercizio, in costruzione e in progetto, semplificate a circa 15 m. Licenza ODbL: attribuzione a OpenStreetMap e condivisione alle stesse condizioni.
   natura: fonte esterna
@@ -121,3 +131,5 @@ CdP_Servizi_2022-2026_AI4_Agg2026.pdf
   CdP Servizi, quarto atto integrativo (agg. 2026)
 PIR_2027_dicembre_2025_vDEF.pdf
   Prospetto Informativo della Rete 2027 (consultato, non elaborato)
+PianoCommerciale_ed_ottobre_2025.pdf
+  RFI, Il Piano Commerciale, edizione ottobre 2025

@@ -37,6 +37,7 @@ tools/piano_commerciale.py  scarica i progetti del Piano Commerciale RFI (fuori 
 tools/aggancio_pc.py      intervento -> tracciato dichiarato da RFI, e prova degli agganci dedotti
 tools/rete_rfi.py         la rete RFI sulla mappa, agganciata al registro delle linee per codice
 tools/geometria.py        funzioni geometriche condivise (proiezione, semplificazione, prossimita')
+tools/extract_pc.py       schede progetto dal PDF del Piano Commerciale (codice CdP, benefici, anno)
 tools/inject_data.py incorpora i dati nel file unico della piattaforma
 tools/wrap_site.py   dal frammento al documento HTML completo
 tools/audit.py       cerca pagine con tabelle non riconosciute
@@ -166,7 +167,18 @@ Lo stesso dato mette alla prova gli agganci dedotti. Primo esito (settembre
 2026): le associazioni OSM "alta" coincidono col tracciato RFI in 31 casi su 35,
 le "media" in 40 su 241. Le conferme smentite si tolgono (P247). La rete RFI
 completa (`TrattePC2026`, 2.414 tratte) e il PDF del Piano Commerciale (847
-pagine) non sono ancora usati.
+pagine) ora sono usati: vedi sotto.
+
+Il PDF del Piano Commerciale (`PianoCommerciale_ed_ottobre_2025.pdf`, scaricato
+dall'hub ArcGIS di RFI) ha una scheda per progetto nella sezione "Progetti per
+regione" (da pagina 375), con la riga "Rif. CdP-I: <codici> - <descrizione>".
+extract_pc.py ne legge titolo, anno di attivazione, misura PNRR, descrizione,
+benefici e il riquadro dei numeri. Il testo e' su due colonne mescolate riga
+per riga: si separano per ascissa (300 punti). Le etichette dei benefici sono
+centrate sul blocco di testo, quindi si assegnano per altezza, non per riga.
+In testata a destra "Benefici commerciali a completamento del progetto" e' una
+didascalia, non l'inizio dei benefici. 181 progetti con codice, 133 interventi;
+con la mappa 2026, 140 interventi su 336 hanno un riferimento scritto da RFI.
 
 ## Le due parti nella piattaforma
 

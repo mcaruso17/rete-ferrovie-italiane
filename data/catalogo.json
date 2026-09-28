@@ -92,6 +92,20 @@
    "fonte": "RFI, Piano Commerciale 2026, Scenari infrastrutturali"
   },
   {
+   "file": "piano-commerciale-schede.csv",
+   "titolo": "Schede progetto del Piano Commerciale RFI",
+   "contenuto": "Una riga per coppia intervento-progetto: il progetto come lo chiama RFI, l'anno di attivazione previsto, la misura PNRR, le regioni, i tipi di beneficio e le pagine del PDF. Il codice CdP e' scritto da RFI nella scheda.",
+   "natura": "fonte esterna",
+   "fonte": "RFI, Il Piano Commerciale, edizione ottobre 2025"
+  },
+  {
+   "file": "piano-commerciale-schede.json",
+   "titolo": "Schede progetto del Piano Commerciale RFI (completo)",
+   "contenuto": "Le stesse schede con descrizione, benefici per esteso e numeri del progetto.",
+   "natura": "fonte esterna",
+   "fonte": "RFI, Il Piano Commerciale, edizione ottobre 2025"
+  },
+  {
    "file": "rete-ferroviaria.geojson",
    "titolo": "Tracciati della rete",
    "contenuto": "Linee in esercizio, in costruzione e in progetto, semplificate a circa 15 m. Licenza ODbL: attribuzione a OpenStreetMap e condivisione alle stesse condizioni.",
@@ -175,6 +189,10 @@
   {
    "file": "PIR_2027_dicembre_2025_vDEF.pdf",
    "titolo": "Prospetto Informativo della Rete 2027 (consultato, non elaborato)"
+  },
+  {
+   "file": "PianoCommerciale_ed_ottobre_2025.pdf",
+   "titolo": "RFI, Il Piano Commerciale, edizione ottobre 2025"
   }
  ],
  "nature": {
