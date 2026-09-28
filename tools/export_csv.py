@@ -273,6 +273,23 @@ scrivi("stazioni-rfi.csv",
        ["codice_impianto", "nome", "livello", "comune", "provincia", "linea_registro",
         "servizio_merci", "interventi_dichiarati_rfi", "interventi_che_la_citano"], righe)
 
+# --- le tratte RFI, da localita' a localita' --------------------------------
+TR = RR.get("tratte") or []
+IMPN = RR.get("imp") or {}
+PT = (A.get("pc") or {}).get("tratte") or {}
+STN = {s_[4]: s_[2] for s_ in ST}
+righe = []
+for i, t in enumerate(TR):
+    dich = sorted({c for e in PT.get(str(i), []) for c in PCE[e]["cdp"]})
+    righe.append([t[2], STN.get(t[2]) or IMPN.get(t[2], ""), t[3], STN.get(t[3]) or IMPN.get(t[3], ""),
+                  t[0], t[4], t[5], t[6], t[7], t[15], t[8], t[9], t[10], t[11], t[12], t[13],
+                  t[14], "|".join(dich)])
+scrivi("tratte-rfi.csv",
+       ["codice_impianto_iniziale", "impianto_iniziale", "codice_impianto_finale",
+        "impianto_finale", "linea_registro", "km", "binari", "trazione", "rete",
+        "regime_circolazione", "sistema_comando", "protezione_marcia", "gsm_r", "sagoma",
+        "massa_assiale", "doit", "causa_chiusura", "interventi_dichiarati_rfi"], righe)
+
 # --- catalogo dei file ------------------------------------------------------
 # Un solo elenco, da cui escono sia il riquadro dei download in pagina sia il
 # LEGGIMI.txt: due descrizioni scritte a mano divergerebbero al primo file
@@ -351,6 +368,15 @@ CAT = [
      "Commerciale (natura: fonte esterna) o che la citano per nome nel titolo "
      "(natura: dedotto, puo' indicare la citta' e non la stazione).", EST,
      "RFI, localita' di servizio (SHAPE_LOCALITA); CdP Investimenti"),
+    ("tratte-rfi.csv", "Tratte RFI, da localita' a localita'",
+     "Le 3.442 tratte della rete con binari, trazione, classe di rete, regime di "
+     "circolazione, sistema di comando, protezione della marcia, GSM-R, sagoma e "
+     "massa assiale, linea del registro, e gli interventi i cui progetti "
+     "dichiarati da RFI corrono sulla tratta.", EST,
+     "RFI, SHAPE_TRATTE (Istantanea sulla rete); Piano Commerciale 2026"),
+    ("tratte-rfi.geojson", "Tratte RFI (geometria)",
+     "Lo strato \"Istantanea sulla rete\" di rfi.it, con coordinate.", EST,
+     "RFI, SHAPE_TRATTE (servizio ArcGIS pubblico)"),
     ("stazioni-rfi.geojson", "Stazioni e fermate RFI (geometria)",
      "Lo strato delle localita' di servizio usato dalla pagina \"La rete oggi\" "
      "di rfi.it, con coordinate.", EST, "RFI, SHAPE_LOCALITA (servizio ArcGIS pubblico)"),

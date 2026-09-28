@@ -69,7 +69,8 @@ if [ -d "$GEO" ]; then
     # serve a registro_rfi.py per la prova dei comuni attraversati
     if [ -f ../data/rete-rfi.geojson ]; then
       python3 rete_rfi.py ../data/rete-rfi.geojson ../data/mappa-regioni.json \
-        ../data/servizi /tmp/app-osm.json /tmp/app-rr.json ../data/stazioni-rfi.geojson
+        ../data/servizi /tmp/app-osm.json /tmp/app-rr.json ../data/stazioni-rfi.geojson \
+        ../data/tratte-rfi.geojson
     else
       cp /tmp/app-osm.json /tmp/app-rr.json
     fi

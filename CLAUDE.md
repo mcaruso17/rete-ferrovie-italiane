@@ -193,8 +193,27 @@ decidono a quale zoom compare il nome. Si scarica con piano_commerciale.py
 - citato: il nome intero della stazione compare nel titolo dell'intervento.
   E' un indizio: "Battipaglia" in "Battipaglia-Potenza" e' il capo tratta.
 
-Lo stesso servizio RFI ha anche SHAPE_TRATTE (3.444 tratte con binari,
-trazione, sistema di distanziamento, GSM-R): non ancora usato.
+Sulla mappa i nomi si misurano in pixel dello schermo (`--rt-kt`), non in unita'
+della viewBox: con la stessa compensazione dei tratti restavano sui 9 px a ogni
+zoom, e su telefono a 4. Crescono con l'ingrandimento fino a una volta e mezza;
+il livello di dettaglio (z0..z3) dipende da quanta Italia sta in un pixel, cosi'
+su telefono i nomi arrivano piu' tardi. A zoom fermo `rtEtichette` nasconde i
+nomi che si coprono, tenendo il piu' importante. Il pannello a destra si chiude
+(`#rt-pan-btn`): la mappa prende la larghezza e l'altezza della finestra, e
+`rtAdatta` rimette la viewBox nelle proporzioni del riquadro, perche' i conti
+del puntatore (`rtPunto`) le presuppongono uguali.
+
+`data/tratte-rfi.geojson` e' SHAPE_TRATTE ("Istantanea sulla rete"): 3.444
+tratte da localita' a localita' con binari, trazione, regime, sistema, protezione,
+GSM-R, sagoma, massa assiale. Da qui viene ora la geometria della mappa
+(rete_rfi.py, settimo argomento); dalla rete del Piano Commerciale restano solo
+gli attributi di linea (TEN-T). CAUSA_CHIUSURA A e B marcano tratte senza
+servizio regolare (Aosta-Pre', Avellino-Rocchetta, Varallo): il significato
+esatto dei due codici non e' documentato, e la pagina mostra il codice.
+Una tratta "porta" un progetto dichiarato se i punti del tracciato di progetto,
+assegnati ciascuno alla sola tratta piu' vicina, ne coprono meta' della
+lunghezza: misurare la tratta contro il progetto metteva l'AV Roma-Napoli
+sulla linea storica parallela nel nodo di Napoli.
 
 ## Le due parti nella piattaforma
 

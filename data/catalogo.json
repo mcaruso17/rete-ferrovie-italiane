@@ -99,6 +99,20 @@
    "fonte": "RFI, localita' di servizio (SHAPE_LOCALITA); CdP Investimenti"
   },
   {
+   "file": "tratte-rfi.csv",
+   "titolo": "Tratte RFI, da localita' a localita'",
+   "contenuto": "Le 3.442 tratte della rete con binari, trazione, classe di rete, regime di circolazione, sistema di comando, protezione della marcia, GSM-R, sagoma e massa assiale, linea del registro, e gli interventi i cui progetti dichiarati da RFI corrono sulla tratta.",
+   "natura": "fonte esterna",
+   "fonte": "RFI, SHAPE_TRATTE (Istantanea sulla rete); Piano Commerciale 2026"
+  },
+  {
+   "file": "tratte-rfi.geojson",
+   "titolo": "Tratte RFI (geometria)",
+   "contenuto": "Lo strato \"Istantanea sulla rete\" di rfi.it, con coordinate.",
+   "natura": "fonte esterna",
+   "fonte": "RFI, SHAPE_TRATTE (servizio ArcGIS pubblico)"
+  },
+  {
    "file": "stazioni-rfi.geojson",
    "titolo": "Stazioni e fermate RFI (geometria)",
    "contenuto": "Lo strato delle localita' di servizio usato dalla pagina \"La rete oggi\" di rfi.it, con coordinate.",

@@ -263,6 +263,43 @@ def main():
             v["st"] = best
             staz[best].append(eid)
 
+    # --------------------------------- le tratte coperte da un progetto dichiarato
+    # Per la scheda di tratta: quali progetti del Piano Commerciale corrono su
+    # questa tratta. Ogni punto del tracciato di progetto va alla sola tratta
+    # piu' vicina (entro 800 m), e una tratta conta se i punti ricevuti ne
+    # coprono almeno meta' della lunghezza. La prima versione misurava invece
+    # la tratta contro il progetto, e nei nodi dove le linee corrono parallele
+    # l'upgrading dell'AV Roma-Napoli finiva sulla Casalnuovo-Doppio Bivio
+    # Cassino, che le sta accanto a poche centinaia di metri.
+    RR = app.get("rete_rfi") or {}
+    tratte_dich = {}
+    if RR.get("tratte"):
+        PASSO = 0.3
+        ixt = IndiceSegmenti()
+        lung = {}
+        for i, t in enumerate(RR["tratte"]):
+            base = RR["linee"][t[0]]["d"] if t[0] else RR["altre"]
+            idx = t[1] if isinstance(t[1], list) else [t[1]]
+            L = 0.0
+            for j in idx:
+                pts = punti_da_path(base[j])
+                ixt.aggiungi(pts, i)
+                L += sum(math.dist(p, q) for p, q in zip(pts, pts[1:]))
+            lung[i] = L
+        per_tratta = collections.defaultdict(collections.Counter)
+        for eid, v in el.items():
+            if v["t"] != "tr":
+                continue
+            for d in v["d"]:
+                for q in campiona(punti_da_path(d), PASSO):
+                    k = ixt.piu_vicina(q, 0.8)
+                    if k is not None:
+                        per_tratta[k][eid] += 1
+        for i, cnt in per_tratta.items():
+            ok = sorted(e for e, n in cnt.items() if lung[i] and n * PASSO / lung[i] >= 0.5)
+            if ok:
+                tratte_dich[str(i)] = ok
+
     # ------------------------------------------- le schede del PDF
     # Stesso legame (il codice CdP scritto da RFI) ma altra edizione e altro
     # formato: il PDF e' l'edizione di ottobre 2025, la mappa quella del 2026.
@@ -292,6 +329,7 @@ def main():
                  "migliore_rfi": migliore_rfi,
                  "schede": schede, "schede_int": dict(schede_int),
                  "staz": {str(k): v for k, v in staz.items()},
+                 "tratte": tratte_dich,
                  "pdf": "PianoCommerciale_ed_ottobre_2025.pdf",
                  "pdf_titolo": "RFI, Il Piano Commerciale, edizione ottobre 2025"}
     json.dump(app, open(OUT, "w", encoding="utf-8"), ensure_ascii=False,
@@ -316,6 +354,8 @@ def main():
     if smentiti:
         print("  conferme smentite dal tracciato RFI e tolte: %s" % ", ".join(sorted(smentiti)))
     print("  interventi dichiarati che corrono su linee del registro RFI: %d" % len(linee_dich))
+    if tratte_dich:
+        print("  tratte della rete su cui corre un progetto dichiarato: %d" % len(tratte_dich))
     loc = [v for v in el.values() if "xy" in v]
     if ST:
         print("  localita' dichiarate agganciate a una stazione RFI: %d su %d (%d stazioni)"
