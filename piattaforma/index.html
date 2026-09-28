@@ -311,15 +311,16 @@ tbody tr.clickable{cursor:pointer}
 #rt-svg .rt-staz circle.l0{r:calc(2.3 * var(--rt-k));stroke-width:calc(.8 * var(--rt-k))}
 #rt-svg .rt-staz circle.l1{r:calc(1.9 * var(--rt-k))}
 #rt-svg .rt-staz circle.pc{stroke:#5b3f9e;stroke-width:calc(.9 * var(--rt-k))}
-#rt-svg .rt-staz text{font-family:var(--f-body);font-size:calc(10.5px * var(--rt-k));fill:var(--ink);
-  paint-order:stroke;stroke:var(--surface);stroke-width:calc(2.6px * var(--rt-k));stroke-linejoin:round;
-  pointer-events:none;transform:translate(calc(3px * var(--rt-k)),calc(-2.5px * var(--rt-k)))}
-#rt-svg .rt-staz text.l0{font-weight:600;font-size:calc(12px * var(--rt-k))}
-#rt-svg .rt-staz text.l3{fill:var(--ink-2);font-size:calc(9.5px * var(--rt-k))}
+#rt-svg .rt-staz text{font-family:var(--f-body);font-size:calc(10.5px * var(--rt-kt));fill:var(--ink);
+  paint-order:stroke;stroke:var(--surface);stroke-width:calc(2.6px * var(--rt-kt));stroke-linejoin:round;
+  pointer-events:none;transform:translate(calc(4px * var(--rt-kt)),calc(-3px * var(--rt-kt)))}
+#rt-svg .rt-staz text.l0{font-weight:600;font-size:calc(12px * var(--rt-kt))}
+#rt-svg .rt-staz text.l3{fill:var(--ink-2);font-size:calc(9.5px * var(--rt-kt))}
 #rt-svg .rt-staz.z0 circle.l2,#rt-svg .rt-staz.z0 circle.l3,#rt-svg .rt-staz.z1 circle.l3{display:none}
 #rt-svg .rt-staz.z0 text.l1,#rt-svg .rt-staz.z0 text.l2,#rt-svg .rt-staz.z0 text.l3,
 #rt-svg .rt-staz.z1 text.l2,#rt-svg .rt-staz.z1 text.l3,#rt-svg .rt-staz.z2 text.l3{display:none}
 .cmp-box.senza-staz .rt-staz{display:none}
+#rt-svg .rt-staz text.cop{visibility:hidden}
 .lg-b1{border-top-color:var(--ink);border-top-width:1.5px}
 .lg-ch{border-top-color:var(--ink-3);border-top-style:dashed;border-top-width:2px}
 .tr-kv{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;font-size:12.5px;margin:6px 0 10px}
@@ -435,6 +436,13 @@ tbody tr.clickable{cursor:pointer}
   border-radius:var(--radius);cursor:pointer}
 .cmp-tools button:hover{border-color:var(--accent);color:var(--accent)}
 .cmp-pan{padding:14px;background:var(--surface);border:1px solid var(--line)}
+/* Rete: il pannello a destra si chiude per dare tutta la larghezza alla mappa.
+   A pannello chiuso l'altezza della mappa e' quella della finestra, e la
+   viewBox prende le proporzioni del riquadro (rtAdatta) */
+.cmp-grid.pan-chiuso{grid-template-columns:minmax(0,1fr)}
+.cmp-grid.pan-chiuso .cmp-pan{display:none}
+.cmp-grid.pan-chiuso #rt-svg svg{height:calc(100vh - 150px);min-height:420px}
+#rt-pan-btn{font-size:13px}
 .cmp-pan h3{margin:0 0 4px;font-size:15px}
 .cmp-pan .sub{font-size:12px;color:var(--ink-3);margin:0 0 12px}
 .cmp-lista{list-style:none;margin:0;padding:0;max-height:430px;overflow:auto}
@@ -849,9 +857,10 @@ tr.dett:hover{background:inherit}
     <div class="field" style="align-self:end"><button type="button" class="ghost" id="rt-fit">Inquadra tutto</button></div>
   </div>
   <div class="rt-leg" id="rt-leg"></div>
-  <div class="cmp-grid">
+  <div class="cmp-grid" id="rt-grid">
     <div class="cmp-box">
       <div class="cmp-tools">
+        <button type="button" id="rt-pan-btn" title="Chiudi il pannello" aria-label="Chiudi il pannello" aria-expanded="true">&#10095;</button>
         <button type="button" id="rt-in" title="Ingrandisci" aria-label="Ingrandisci">+</button>
         <button type="button" id="rt-out" title="Riduci" aria-label="Riduci">&minus;</button>
         <button type="button" id="rt-reset" title="Inquadra tutto" aria-label="Inquadra tutto">&#9634;</button>
@@ -1751,6 +1760,7 @@ function disegnaRete(){
   // all'SVG invece che al tracciato sotto il dito.
   el("rt-svg").addEventListener("click", function(){
     if(rtMosso){ rtMosso = false; return; }
+    if(rtGiu) rtMostraPan(true);
     if(rtGiu && rtGiu.dataset.st) rtApriStaz(+rtGiu.dataset.st);
     else if(rtGiu && rtGiu.dataset.tr) rtApriTratta(+rtGiu.dataset.tr);
     else if(rtGiu && rtGiu.dataset.pc) rtApriPc(rtGiu.dataset.pc);
@@ -2024,7 +2034,7 @@ function rtInquadra(bb){
   if(!bb || !rtBase) return;
   var w = Math.max(bb[2]-bb[0], 40), h = Math.max(bb[3]-bb[1], 40);
   var cx = (bb[0]+bb[2])/2, cy = (bb[1]+bb[3])/2;
-  var r = rtBase[3]/rtBase[2];
+  var r = rtVB[3]/rtVB[2];
   w = Math.max(w*1.5, h*1.5/r); h = w*r;
   rtVB = [cx-w/2, cy-h/2, w, h];
   rtApplicaVB();
@@ -2168,8 +2178,46 @@ function rtApplicaVB(){
   // ingrasserebbe: si compensa con il rapporto di scala
   var k = rtVB[2] / rtBase[2];
   svg.style.setProperty("--rt-k", k.toFixed(4));
+  // I nomi invece si misurano in pixel dello schermo: prima avevano la stessa
+  // compensazione e restavano sui 9 px a ogni zoom, e su un telefono (mappa
+  // larga 360 px) scendevano a 4. Ora partono dalla dimensione scritta nel
+  // CSS e crescono con l'ingrandimento, fino a una volta e mezza.
+  var px = svg.getBoundingClientRect().width || 800;
+  // quanta Italia sta in un pixel, rispetto alla mappa intera larga 800 px:
+  // decide quanti nomi mostrare, cosi' su un telefono i livelli compaiono
+  // piu' tardi e i nomi non si coprono a vicenda
+  var kz = rtVB[2] / px * 800 / rtBase[2];
+  var cresce = Math.min(1.5, Math.pow(Math.max(1, 1/kz), 0.3));
+  svg.style.setProperty("--rt-kt", (rtVB[2] / px * cresce).toFixed(4));
   var g = svg.querySelector(".rt-staz");
-  if(g) g.setAttribute("class", "rt-staz z" + (k > 0.55 ? 0 : k > 0.25 ? 1 : k > 0.1 ? 2 : 3));
+  if(g) g.setAttribute("class", "rt-staz z" + (kz > 0.55 ? 0 : kz > 0.25 ? 1 : kz > 0.1 ? 2 : 3));
+  clearTimeout(rtEtT); rtEtT = setTimeout(rtEtichette, 120);
+}
+// Nomi che si coprono: come su rfi.it, vince il piu' importante (capoluogo,
+// poi stazione, poi fermata) e l'altro si nasconde finche' non c'e' spazio.
+// Si fa a zoom fermo, non a ogni fotogramma del trascinamento.
+var rtEtT = null;
+function rtEtichette(){
+  var svg = el("rt-svg").querySelector("svg"), g = svg && svg.querySelector(".rt-staz");
+  if(!g || !rtVB) return;
+  var z = +g.getAttribute("class").slice(-1);
+  var x0 = rtVB[0], y0 = rtVB[1], x1 = x0 + rtVB[2], y1 = y0 + rtVB[3];
+  var testi = g.querySelectorAll("text"), presi = [], C = rtVB[2] / 12, griglia = {};
+  // nel DOM i capoluoghi stanno in fondo (disegnati sopra): si parte da li'
+  for(var i = testi.length - 1; i >= 0; i--){
+    var t = testi[i], l = +t.getAttribute("class").charAt(1);
+    var x = +t.getAttribute("x"), y = +t.getAttribute("y");
+    if(l > z || x < x0 - C || x > x1 || y < y0 || y > y1 + C){ t.classList.remove("cop"); continue; }
+    var b = t.getBBox(), a = [b.x, b.y, b.x + b.width, b.y + b.height], libero = true;
+    var gx0 = Math.floor(a[0]/C), gx1 = Math.floor(a[2]/C), gy0 = Math.floor(a[1]/C), gy1 = Math.floor(a[3]/C);
+    for(var gx = gx0; gx <= gx1 && libero; gx++) for(var gy = gy0; gy <= gy1 && libero; gy++){
+      (griglia[gx+","+gy] || []).forEach(function(o){
+        if(a[0] < o[2] && a[2] > o[0] && a[1] < o[3] && a[3] > o[1]) libero = false; });
+    }
+    t.classList.toggle("cop", !libero);
+    if(libero) for(gx = gx0; gx <= gx1; gx++) for(gy = gy0; gy <= gy1; gy++)
+      (griglia[gx+","+gy] = griglia[gx+","+gy] || []).push(a);
+  }
 }
 
 function rtStrati(){
@@ -2183,7 +2231,8 @@ function rtStrati(){
 
 function rtZoom(f, cx, cy){
   if(!rtVB) return;
-  var w = Math.min(rtBase[2], Math.max(rtBase[2]/40, rtVB[2]*f));
+  var r0 = rtVB[3] / rtVB[2];
+  var w = Math.min(Math.max(rtBase[2], rtBase[3] / r0), Math.max(rtBase[2]/40, rtVB[2]*f));
   var h = w * rtVB[3] / rtVB[2];
   if(cx===undefined){ cx = rtVB[0]+rtVB[2]/2; cy = rtVB[1]+rtVB[3]/2; }
   var tx = (cx - rtVB[0]) / rtVB[2], ty = (cy - rtVB[1]) / rtVB[3];
@@ -2195,7 +2244,42 @@ function rtPunto(e, svg){
   return [rtVB[0] + (e.clientX-r.left)/r.width*rtVB[2],
           rtVB[1] + (e.clientY-r.top)/r.height*rtVB[3]];
 }
-function rtFit(){ if(rtBase){ rtVB = rtBase.slice(); rtApplicaVB(); } }
+function rtFit(){ if(rtBase){ rtVB = rtBase.slice(); rtAdatta(); } }
+// La viewBox deve avere le proporzioni del riquadro, o i conti del puntatore
+// (rtPunto) sbagliano. A pannello aperto il riquadro segue la mappa (altezza
+// automatica, proporzioni dell'Italia); a pannello chiuso ha l'altezza della
+// finestra, e la viewBox si allarga o si stringe attorno allo stesso centro.
+function rtAdatta(){
+  var svg = el("rt-svg").querySelector("svg");
+  if(!svg || !rtVB) return;
+  var r = rtBase[3] / rtBase[2];
+  if(el("rt-grid").classList.contains("pan-chiuso")){
+    var b = svg.getBoundingClientRect();
+    if(b.width && b.height) r = b.height / b.width;
+  }
+  var cx = rtVB[0] + rtVB[2]/2, cy = rtVB[1] + rtVB[3]/2, w = rtVB[2];
+  // l'inquadratura intera: a pannello chiuso l'Italia deve starci anche in
+  // altezza, quindi la viewBox e' piu' larga di quella di partenza
+  var tutto = Math.max(rtBase[2], rtBase[3] / r);
+  if(w >= rtBase[2] - 0.5){
+    w = tutto; cx = rtBase[0] + rtBase[2]/2; cy = rtBase[1] + rtBase[3]/2;
+  }
+  w = Math.min(w, tutto);
+  rtVB = [cx - w/2, cy - w*r/2, w, w*r];
+  rtApplicaVB();
+}
+function rtMostraPan(apri){
+  var g = el("rt-grid"), b = el("rt-pan-btn");
+  if(apri === !g.classList.contains("pan-chiuso")) return;
+  g.classList.toggle("pan-chiuso", !apri);
+  b.innerHTML = apri ? "&#10095;" : "&#10094;";
+  b.title = b.ariaLabel = apri ? "Chiudi il pannello" : "Apri il pannello";
+  b.setAttribute("aria-expanded", apri ? "true" : "false");
+  rtAdatta();
+}
+el("rt-pan-btn").addEventListener("click", function(){
+  rtMostraPan(el("rt-grid").classList.contains("pan-chiuso")); });
+window.addEventListener("resize", rtAdatta);
 
 el("rt-in").addEventListener("click", function(){ rtZoom(1/1.5); });
 el("rt-out").addEventListener("click", function(){ rtZoom(1.5); });
@@ -2213,10 +2297,10 @@ el("rt-cerca").addEventListener("input", function(){
   for(var i=0; i<STZ.length; i++){ if(norm(STZ[i][2]) === q){ si = i; break; } }
   if(si < 0 && q.length >= 4) for(var j=0; j<STZ.length; j++){
     if(norm(STZ[j][2]).indexOf(q) === 0){ si = j; break; } }
-  if(si >= 0){ rtApriStaz(si, true); return; }
+  if(si >= 0){ rtMostraPan(true); rtApriStaz(si, true); return; }
   var rc = Object.keys(RRL).filter(function(k){
     return norm(k) === q || norm((REGL[k]||{}).n || RRL[k].n_rfi).indexOf(q) >= 0; })[0];
-  if(rc){ rtApriRfi(rc, true); return; }
+  if(rc){ rtMostraPan(true); rtApriRfi(rc, true); return; }
   var id = Object.keys(LGEO).filter(function(k){
     return norm(LGEO[k].n).indexOf(q) >= 0; })[0];
   if(id && el("rt-osm").checked) rtApri(id);
