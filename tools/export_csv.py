@@ -258,6 +258,21 @@ scrivi("piano-commerciale-schede.csv",
         "pnrr", "regioni", "pagine_pdf", "tipi_di_beneficio", "riferimento_cdp_rfi",
         "natura_del_dato"], righe)
 
+# --- le stazioni RFI e che cosa ne dicono i contratti -----------------------
+RR = A.get("rete_rfi") or {}
+ST, CIT = RR.get("stazioni") or [], RR.get("stazioni_cit") or {}
+DICH = (A.get("pc") or {}).get("staz") or {}
+PCE = (A.get("pc") or {}).get("el") or {}
+LIV = ["capoluogo di regione", "capoluogo di provincia", "stazione", "fermata"]
+righe = []
+for i, st in enumerate(ST):
+    dich = sorted({c for e in DICH.get(str(i), []) for c in PCE[e]["cdp"]})
+    righe.append([st[4], st[2], LIV[st[3]], st[6], st[7], st[5],
+                  "si" if st[8] else "no", "|".join(dich), "|".join(CIT.get(str(i), []))])
+scrivi("stazioni-rfi.csv",
+       ["codice_impianto", "nome", "livello", "comune", "provincia", "linea_registro",
+        "servizio_merci", "interventi_dichiarati_rfi", "interventi_che_la_citano"], righe)
+
 # --- catalogo dei file ------------------------------------------------------
 # Un solo elenco, da cui escono sia il riquadro dei download in pagina sia il
 # LEGGIMI.txt: due descrizioni scritte a mano divergerebbero al primo file
@@ -330,6 +345,15 @@ CAT = [
      "da RFI, anno di attivazione e caratteristiche, e la geometria "
      "semplificata.", EST,
      "RFI, Piano Commerciale 2026, Scenari infrastrutturali"),
+    ("stazioni-rfi.csv", "Stazioni e fermate RFI",
+     "Le localita' aperte ai viaggiatori con codice impianto, comune, linea del "
+     "registro, e gli interventi collegati: dichiarati da RFI nel Piano "
+     "Commerciale (natura: fonte esterna) o che la citano per nome nel titolo "
+     "(natura: dedotto, puo' indicare la citta' e non la stazione).", EST,
+     "RFI, localita' di servizio (SHAPE_LOCALITA); CdP Investimenti"),
+    ("stazioni-rfi.geojson", "Stazioni e fermate RFI (geometria)",
+     "Lo strato delle localita' di servizio usato dalla pagina \"La rete oggi\" "
+     "di rfi.it, con coordinate.", EST, "RFI, SHAPE_LOCALITA (servizio ArcGIS pubblico)"),
     ("piano-commerciale-schede.csv", "Schede progetto del Piano Commerciale RFI",
      "Una riga per coppia intervento-progetto: il progetto come lo chiama RFI, "
      "l'anno di attivazione previsto, la misura PNRR, le regioni, i tipi di "

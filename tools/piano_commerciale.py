@@ -22,9 +22,14 @@ lo stesso codice dell'Allegato 3 dei contratti Servizi con la lettera
 cambiata (C001 -> K001, F011 -> J011, N001 -> R001), e da' finalmente una
 geometria ufficiale al registro delle linee. Vedi rete_rfi.py.
 
+Con un terzo argomento scarica anche le localita' di servizio (layer
+SHAPE_LOCALITA): stazioni e fermate con nome, comune, codice di linea e i due
+campi "capoluogo di regione" e "capoluogo di provincia". E' lo strato che la
+pagina "La rete oggi" di rfi.it usa per le stazioni.
+
 Uso:
   python3 piano_commerciale.py ../data/piano-commerciale-2026.json \
-          [../data/rete-rfi.geojson]
+          [../data/rete-rfi.geojson [../data/stazioni-rfi.geojson]]
 """
 import datetime
 import json
@@ -38,6 +43,11 @@ RETE = ("https://services3.arcgis.com/GS5pg5GvYXCMCEen/arcgis/rest/services/"
         "TrattePC2026/FeatureServer")
 # gradi: circa 55 m in latitudine, ben sotto l'unita' della mappa (circa 1 km)
 SEMPLIFICA = 0.0005
+LOCALITA = ("https://services3.arcgis.com/GS5pg5GvYXCMCEen/arcgis/rest/services/"
+            "SHAPE_LOCALITA/FeatureServer")
+CAMPI_LOCALITA = ["OBJECTID", "CODIMP", "NOME", "IMPIANTO", "COMUNE", "PROVINCIA",
+                  "REGIONE", "CODLINEACOMM", "LINEACOMM", "DOIT", "SERVIZIO_MERCI",
+                  "SERVIZIO_VIAGGIATORI", "CAP_REG", "CAP_P", "DIRAMAZ", "CAUSA_CHIUSURA"]
 CAMPI_RETE = ["OBJECTID", "CODTRATTA_BDL", "TRATTA_BDL", "CODLINEA_BDL", "LINEA_BDL",
               "CODLINEA_COMM", "LINEA_COMM", "LINEA_AV", "RETE_EUROPEA",
               "TIPO_RETE_TEN_T", "TIPO_CORE_CENTRALE", "PESO_ASSIALE", "SCT",
@@ -137,6 +147,17 @@ def main():
         json.dump(gj, open(sys.argv[2], "w", encoding="utf-8"), ensure_ascii=False,
                   separators=(",", ":"))
         print("%-20s %4d tratte" % ("rete RFI", len(fs)))
+
+    if len(sys.argv) > 3:
+        fs = interroga(0, CAMPI_LOCALITA, LOCALITA, 0)
+        for f in fs:
+            f["properties"] = {k: pulisci(v) for k, v in f["properties"].items()}
+        gj = {"type": "FeatureCollection",
+              "fonte": "RFI, localita' di servizio (SHAPE_LOCALITA, servizio ArcGIS pubblico)",
+              "servizio": LOCALITA, "scaricato": dati["scaricato"], "features": fs}
+        json.dump(gj, open(sys.argv[3], "w", encoding="utf-8"), ensure_ascii=False,
+                  separators=(",", ":"))
+        print("%-20s %4d localita'" % ("stazioni RFI", len(fs)))
 
 
 if __name__ == "__main__":

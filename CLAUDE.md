@@ -180,6 +180,22 @@ In testata a destra "Benefici commerciali a completamento del progetto" e' una
 didascalia, non l'inizio dei benefici. 181 progetti con codice, 133 interventi;
 con la mappa 2026, 140 interventi su 336 hanno un riferimento scritto da RFI.
 
+## Le stazioni
+
+`data/stazioni-rfi.geojson` e' lo strato SHAPE_LOCALITA di RFI, lo stesso
+della mappa di rfi.it ("La rete oggi", web map 893b4ae332b14efbbe3221bb826a9383):
+2.098 localita', con CAP_REG e CAP_P (capoluogo di regione e di provincia) che
+decidono a quale zoom compare il nome. Si scarica con piano_commerciale.py
+(terzo argomento). Due legami, tenuti distinti:
+- dichiarato: una localita' del Piano Commerciale sta sulla stazione (entro
+  300 m, o nome contenuto per intero con almeno due parole: "Genova" da sola
+  portava Genova Marittima su Sampierdarena);
+- citato: il nome intero della stazione compare nel titolo dell'intervento.
+  E' un indizio: "Battipaglia" in "Battipaglia-Potenza" e' il capo tratta.
+
+Lo stesso servizio RFI ha anche SHAPE_TRATTE (3.444 tratte con binari,
+trazione, sistema di distanziamento, GSM-R): non ancora usato.
+
 ## Le due parti nella piattaforma
 
 Ogni sezione ha una vista Investimenti e una vista Servizi (`.solo-inv` e

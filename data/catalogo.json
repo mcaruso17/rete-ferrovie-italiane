@@ -92,6 +92,20 @@
    "fonte": "RFI, Piano Commerciale 2026, Scenari infrastrutturali"
   },
   {
+   "file": "stazioni-rfi.csv",
+   "titolo": "Stazioni e fermate RFI",
+   "contenuto": "Le localita' aperte ai viaggiatori con codice impianto, comune, linea del registro, e gli interventi collegati: dichiarati da RFI nel Piano Commerciale (natura: fonte esterna) o che la citano per nome nel titolo (natura: dedotto, puo' indicare la citta' e non la stazione).",
+   "natura": "fonte esterna",
+   "fonte": "RFI, localita' di servizio (SHAPE_LOCALITA); CdP Investimenti"
+  },
+  {
+   "file": "stazioni-rfi.geojson",
+   "titolo": "Stazioni e fermate RFI (geometria)",
+   "contenuto": "Lo strato delle localita' di servizio usato dalla pagina \"La rete oggi\" di rfi.it, con coordinate.",
+   "natura": "fonte esterna",
+   "fonte": "RFI, SHAPE_LOCALITA (servizio ArcGIS pubblico)"
+  },
+  {
    "file": "piano-commerciale-schede.csv",
    "titolo": "Schede progetto del Piano Commerciale RFI",
    "contenuto": "Una riga per coppia intervento-progetto: il progetto come lo chiama RFI, l'anno di attivazione previsto, la misura PNRR, le regioni, i tipi di beneficio e le pagine del PDF. Il codice CdP e' scritto da RFI nella scheda.",

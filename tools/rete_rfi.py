@@ -27,9 +27,17 @@ Che cosa si scrive nell'app:
 Le tratte di progetto (codice PRJ, senza edizione del PIR) non sono rete in
 esercizio: stanno gia' nello strato dei progetti del Piano Commerciale.
 
+Con un sesto argomento (stazioni-rfi.geojson, lo strato delle localita' che
+usa anche rfi.it) aggiunge le stazioni e le fermate, con il livello che decide
+a quale ingrandimento compare il nome: capoluoghi di regione, capoluoghi di
+provincia, altre stazioni, fermate. Per ognuna si cercano gli interventi che
+la citano per nome nel titolo: e' una citazione, non un legame dichiarato,
+perche' "Benevento" nel titolo di un'opera puo' voler dire la citta' e non
+la stazione.
+
 Uso:
   python3 rete_rfi.py rete-rfi.geojson mappa-regioni.json DIR_SERVIZI \
-          app-in.json app-out.json
+          app-in.json app-out.json [stazioni-rfi.geojson]
 """
 import collections
 import json
@@ -70,6 +78,7 @@ def prevalente(pesi):
 
 def main():
     RETE, MAPPA, DIR, APP, OUT = sys.argv[1:6]
+    STAZ = sys.argv[6] if len(sys.argv) > 6 else None
     pr = proiettore(MAPPA)
     gj = json.load(open(RETE, encoding="utf-8"))
     app = json.load(open(APP, encoding="utf-8"))
@@ -160,8 +169,41 @@ def main():
         L["ten"] = prevalente(L.pop("_ten"))
         L["peso"] = prevalente(L.pop("_peso"))
         L.pop("_km")
+    # ------------------------------------------------------ le stazioni
+    stazioni, cit = [], {}
+    if STAZ and os.path.exists(STAZ):
+        sg = json.load(open(STAZ, encoding="utf-8"))
+        # la citazione nel titolo: il nome intero della localita', a parole
+        # intere. Si escludono i nomi di una parola sola sotto le 5 lettere
+        # ("Bra", "Asti" restano solo se il titolo li scrive per intero), che
+        # altrimenti comparirebbero dentro frasi che parlano d'altro
+        titoli = [(p["c"], " " + norm(p.get("n") or "").replace("-", " ") + " ")
+                  for p in app["progetti"]]
+        for f in sg["features"]:
+            p, g = f["properties"], f.get("geometry")
+            if not g or p.get("CAUSA_CHIUSURA") or p.get("SERVIZIO_VIAGGIATORI") != "SI":
+                continue
+            x, y = pr(*g["coordinates"])
+            liv = 0 if p.get("CAP_REG") in (1, "1") else 1 if p.get("CAP_P") in (1, "1") \
+                else 2 if p.get("IMPIANTO") == "S" else 3
+            cc = p.get("CODLINEACOMM") or ""
+            cod = (LETTERA.get(cc[:1], "") + cc[1:]) if cc else ""
+            nome = p.get("NOME") or ""
+            k = len(stazioni)
+            stazioni.append([round(x, 1), round(y, 1), nome, liv, str(p.get("CODIMP") or ""),
+                             cod if cod in linee else "", p.get("COMUNE") or "",
+                             p.get("PROVINCIA") or "", 1 if p.get("SERVIZIO_MERCI") in (1, "1") else 0,
+                             p.get("IMPIANTO") or ""])
+            n = " " + norm(nome).replace("-", " ") + " "
+            if len(n.strip()) < 5 and " " not in n.strip():
+                continue
+            hit = [c for c, t in titoli if n in t]
+            if hit:
+                cit[k] = hit
+
     app["rete_rfi"] = {"fonte": gj.get("fonte", "RFI"), "scaricato": gj.get("scaricato", ""),
-                       "linee": linee, "altre": altre, "tocca": tocca}
+                       "linee": linee, "altre": altre, "tocca": tocca,
+                       "stazioni": stazioni, "stazioni_cit": cit}
     json.dump(app, open(OUT, "w", encoding="utf-8"), ensure_ascii=False,
               separators=(",", ":"))
 
@@ -171,6 +213,11 @@ def main():
           "%d tratte di progetto escluse, %d KB"
           % (len(linee), len(reg), len(altre), scartate, peso))
     print("  data di apertura da OSM per %d linee" % sum(1 for L in linee.values() if L.get("dal")))
+    if stazioni:
+        cnt = collections.Counter(s[3] for s in stazioni)
+        print("  stazioni: %d (capoluoghi di regione %d, di provincia %d, altre stazioni %d, "
+              "fermate %d); %d citate per nome nel titolo di almeno un intervento"
+              % (len(stazioni), cnt[0], cnt[1], cnt[2], cnt[3], len(cit)))
     print("  comuni attraversati da almeno una linea RFI: %d" % len(tocca))
     if senza:
         print("  linee del registro senza tracciato RFI: %s" % ", ".join(senza))

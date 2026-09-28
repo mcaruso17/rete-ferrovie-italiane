@@ -232,6 +232,37 @@ def main():
             smentiti[c] = dict(cf, quota=0.0)
             del app["confermati"][c]
 
+    # ------------------------------------ le localita' dichiarate e le stazioni
+    # Le localita' potenziate e nuove del Piano Commerciale hanno le coordinate
+    # di RFI, come le stazioni dello strato SHAPE_LOCALITA: la stessa stazione
+    # sta nello stesso punto. Si accetta la piu' vicina entro un chilometro se
+    # e' a meno di 300 metri, oppure se uno dei due nomi sta per intero
+    # nell'altro. Una parola in comune non basta: "Genova Marittima" finiva su
+    # Genova Sampierdarena per la sola parola "genova". Gli scali merci
+    # (Milano Smistamento) restano senza stazione, ed e' giusto: lo strato
+    # delle stazioni ha solo le localita' aperte ai viaggiatori.
+    ST = (app.get("rete_rfi") or {}).get("stazioni") or []
+    staz = collections.defaultdict(list)
+    def parole(t):
+        return {w for w in re.sub(r"[^a-z0-9 ]", " ", (t or "").lower()).split() if len(w) > 2}
+    for eid, v in el.items():
+        if "xy" not in v or not ST:
+            continue
+        x, y = v["xy"]
+        best, d = None, 1e9
+        for i, s_ in enumerate(ST):
+            dd = math.hypot(s_[0] - x, s_[1] - y)
+            if dd < d:
+                best, d = i, dd
+        if best is None or d > 1.0:
+            continue
+        a, b = parole(v["den"]), parole(ST[best][2])
+        # il nome contenuto deve avere almeno due parole: una sola e' quasi
+        # sempre la citta' ("Novara" dentro "Novara Boschetto", che e' uno scalo)
+        if d <= 0.3 or (a and b and ((a <= b and len(a) > 1) or (b <= a and len(b) > 1))):
+            v["st"] = best
+            staz[best].append(eid)
+
     # ------------------------------------------- le schede del PDF
     # Stesso legame (il codice CdP scritto da RFI) ma altra edizione e altro
     # formato: il PDF e' l'edizione di ottobre 2025, la mappa quella del 2026.
@@ -260,6 +291,7 @@ def main():
                  "linee_rfi": linee_dich, "prova_rfi": dict(prova_rfi),
                  "migliore_rfi": migliore_rfi,
                  "schede": schede, "schede_int": dict(schede_int),
+                 "staz": {str(k): v for k, v in staz.items()},
                  "pdf": "PianoCommerciale_ed_ottobre_2025.pdf",
                  "pdf_titolo": "RFI, Il Piano Commerciale, edizione ottobre 2025"}
     json.dump(app, open(OUT, "w", encoding="utf-8"), ensure_ascii=False,
@@ -284,6 +316,10 @@ def main():
     if smentiti:
         print("  conferme smentite dal tracciato RFI e tolte: %s" % ", ".join(sorted(smentiti)))
     print("  interventi dichiarati che corrono su linee del registro RFI: %d" % len(linee_dich))
+    loc = [v for v in el.values() if "xy" in v]
+    if ST:
+        print("  localita' dichiarate agganciate a una stazione RFI: %d su %d (%d stazioni)"
+              % (sum(1 for v in loc if "st" in v), len(loc), len(staz)))
     if schede:
         tutti = set(per_int) | set(schede_int)
         print("  schede del PDF: %d progetti, %d interventi; con la mappa: %d interventi "
