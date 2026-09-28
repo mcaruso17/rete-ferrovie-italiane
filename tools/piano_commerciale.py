@@ -29,7 +29,13 @@ pagina "La rete oggi" di rfi.it usa per le stazioni.
 
 Uso:
   python3 piano_commerciale.py ../data/piano-commerciale-2026.json \
-          [../data/rete-rfi.geojson [../data/stazioni-rfi.geojson]]
+          [../data/rete-rfi.geojson [../data/stazioni-rfi.geojson \
+          [../data/tratte-rfi.geojson]]]
+
+Il quarto argomento scarica le tratte da localita' a localita' (SHAPE_TRATTE,
+lo strato "Istantanea sulla rete" di rfi.it): binari, trazione, classe di
+rete, regime di circolazione, sistema di comando, protezione della marcia,
+GSM-R, sagoma e massa assiale, tratta per tratta.
 """
 import datetime
 import json
@@ -48,6 +54,13 @@ LOCALITA = ("https://services3.arcgis.com/GS5pg5GvYXCMCEen/arcgis/rest/services/
 CAMPI_LOCALITA = ["OBJECTID", "CODIMP", "NOME", "IMPIANTO", "COMUNE", "PROVINCIA",
                   "REGIONE", "CODLINEACOMM", "LINEACOMM", "DOIT", "SERVIZIO_MERCI",
                   "SERVIZIO_VIAGGIATORI", "CAP_REG", "CAP_P", "DIRAMAZ", "CAUSA_CHIUSURA"]
+TRATTE = ("https://services3.arcgis.com/GS5pg5GvYXCMCEen/arcgis/rest/services/"
+          "SHAPE_TRATTE/FeatureServer")
+CAMPI_TRATTE = ["OBJECTID", "CODTRATTA_PIC", "CODLINEACOMM", "LINEACOMM", "CODIMP_INIZIALE",
+                "CODIMP_FINALE", "IMP_INIZIALE", "IMP_FINALE", "TRATTA", "DOIT",
+                "LUNGHEZZA_TRATTA_PIC", "NUM_BINARI", "RETE", "LINEA_AV", "CAUSA_CHIUSURA",
+                "INFO_RETE", "TRAZIONE", "SAGOMA2", "PESOASSIALE", "REGIME", "SISTEMA",
+                "ACCM", "SISTEMA_LEGENDA", "SISTEMAPROTEZIONEMARCIATRENO", "GSM_R"]
 CAMPI_RETE = ["OBJECTID", "CODTRATTA_BDL", "TRATTA_BDL", "CODLINEA_BDL", "LINEA_BDL",
               "CODLINEA_COMM", "LINEA_COMM", "LINEA_AV", "RETE_EUROPEA",
               "TIPO_RETE_TEN_T", "TIPO_CORE_CENTRALE", "PESO_ASSIALE", "SCT",
@@ -158,6 +171,17 @@ def main():
         json.dump(gj, open(sys.argv[3], "w", encoding="utf-8"), ensure_ascii=False,
                   separators=(",", ":"))
         print("%-20s %4d localita'" % ("stazioni RFI", len(fs)))
+
+    if len(sys.argv) > 4:
+        fs = interroga(0, CAMPI_TRATTE, TRATTE, 0.0002)
+        for f in fs:
+            f["properties"] = {k: pulisci(v) for k, v in f["properties"].items()}
+        gj = {"type": "FeatureCollection",
+              "fonte": "RFI, tratte della rete (SHAPE_TRATTE, servizio ArcGIS pubblico)",
+              "servizio": TRATTE, "scaricato": dati["scaricato"], "features": fs}
+        json.dump(gj, open(sys.argv[4], "w", encoding="utf-8"), ensure_ascii=False,
+                  separators=(",", ":"))
+        print("%-20s %4d tratte" % ("tratte RFI", len(fs)))
 
 
 if __name__ == "__main__":

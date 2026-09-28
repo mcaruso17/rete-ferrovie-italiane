@@ -79,6 +79,7 @@ def prevalente(pesi):
 def main():
     RETE, MAPPA, DIR, APP, OUT = sys.argv[1:6]
     STAZ = sys.argv[6] if len(sys.argv) > 6 else None
+    TRAT = sys.argv[7] if len(sys.argv) > 7 else None
     pr = proiettore(MAPPA)
     gj = json.load(open(RETE, encoding="utf-8"))
     app = json.load(open(APP, encoding="utf-8"))
@@ -116,6 +117,56 @@ def main():
         L["_ten"][p.get("TIPO_RETE_TEN_T") or "fuori TEN-T"] += lung
         L["_peso"][p.get("PESO_ASSIALE") or ""] += lung
         L["av"] = L["av"] or p.get("LINEA_AV") == "SI"
+
+    # ------------------------------------ le tratte, da localita' a localita'
+    # Con lo strato SHAPE_TRATTE (quello di "Istantanea sulla rete" su
+    # rfi.it) la geometria si ricostruisce tratta per tratta: le linee restano
+    # le stesse, ma ogni pezzo porta binari, trazione, regime, sistema di
+    # comando, protezione, GSM-R, sagoma, massa assiale. Dalla rete del Piano
+    # Commerciale si tengono solo gli attributi di linea (rete TEN-T).
+    tratte, nomi_imp = [], {}
+    if TRAT and os.path.exists(TRAT):
+        tg = json.load(open(TRAT, encoding="utf-8"))
+        for L in linee.values():
+            L["d"], L["av"] = [], False
+        altre = []
+        for f in tg["features"]:
+            p, g = f["properties"], f.get("geometry")
+            if not g:
+                continue
+            tratti = g["coordinates"] if g["type"] == "MultiLineString" else [g["coordinates"]]
+            ds = [d for d in (path(semplifica([pr(lon, lat) for lon, lat in t], TOLL))
+                              for t in tratti) if d]
+            if not ds:
+                continue
+            cc = p.get("CODLINEACOMM") or ""
+            cod = (LETTERA.get(cc[:1], "") + cc[1:]) if cc else ""
+            ok = cod in reg and (not reg[cod]["n"] or parole(reg[cod]["n"]) & parole(p.get("LINEACOMM")))
+            if ok:
+                L = linee.setdefault(cod, {"d": [], "rfi": cc, "n_rfi": p.get("LINEACOMM") or "",
+                                           "_ten": collections.Counter(), "_peso": collections.Counter(),
+                                           "_km": 0.0, "av": False})
+                L["av"] = L["av"] or p.get("LINEA_AV") == "AV"
+                base, chiave = L["d"], cod
+            else:
+                base, chiave = altre, ""
+            idx = list(range(len(base), len(base) + len(ds)))
+            base.extend(ds)
+            # peso: i nomi delle localita' stanno una volta sola in "nomi", le
+            # tratte portano solo il codice impianto; un solo tracciato e' un
+            # numero, non una lista
+            ci, cf = str(p.get("CODIMP_INIZIALE") or ""), str(p.get("CODIMP_FINALE") or "")
+            nomi_imp[ci] = p.get("IMP_INIZIALE") or ""
+            nomi_imp[cf] = p.get("IMP_FINALE") or ""
+            tratte.append([chiave, idx[0] if len(idx) == 1 else idx, ci, cf,
+                           round(float(p.get("LUNGHEZZA_TRATTA_PIC") or 0) / 1000, 2),
+                           int(p.get("NUM_BINARI") or 0), p.get("TRAZIONE") or "", p.get("RETE") or "",
+                           p.get("SISTEMA_LEGENDA") or p.get("SISTEMA") or "",
+                           p.get("SISTEMAPROTEZIONEMARCIATRENO") or "", p.get("GSM_R") or "",
+                           p.get("SAGOMA2") or "", p.get("PESOASSIALE") or "", p.get("DOIT") or "",
+                           p.get("CAUSA_CHIUSURA") or "", p.get("REGIME") or ""])
+        for cod in [c for c, L in linee.items() if not L["d"]]:
+            del linee[cod]
 
     # --------------------------------- la data di apertura, presa da OSM
     # Il registro RFI non dice da quando una linea e' in esercizio; OSM a volte
@@ -201,8 +252,13 @@ def main():
             if hit:
                 cit[k] = hit
 
+    # i nomi degli impianti servono solo dove l'impianto non e' una stazione
+    # (bivi, posti di movimento): gli altri la pagina li prende dalle stazioni
+    cod_staz = {st[4] for st in stazioni}
+    nomi_imp = {k: v for k, v in nomi_imp.items() if k not in cod_staz}
     app["rete_rfi"] = {"fonte": gj.get("fonte", "RFI"), "scaricato": gj.get("scaricato", ""),
-                       "linee": linee, "altre": altre, "tocca": tocca,
+                       "linee": linee, "altre": altre, "tocca": tocca, "tratte": tratte,
+                       "imp": nomi_imp,
                        "stazioni": stazioni, "stazioni_cit": cit}
     json.dump(app, open(OUT, "w", encoding="utf-8"), ensure_ascii=False,
               separators=(",", ":"))
@@ -213,6 +269,9 @@ def main():
           "%d tratte di progetto escluse, %d KB"
           % (len(linee), len(reg), len(altre), scartate, peso))
     print("  data di apertura da OSM per %d linee" % sum(1 for L in linee.values() if L.get("dal")))
+    if tratte:
+        print("  tratte da localita' a localita': %d, %.0f km, %d su linee del registro"
+              % (len(tratte), sum(t[4] for t in tratte), sum(1 for t in tratte if t[0])))
     if stazioni:
         cnt = collections.Counter(s[3] for s in stazioni)
         print("  stazioni: %d (capoluoghi di regione %d, di provincia %d, altre stazioni %d, "
