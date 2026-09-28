@@ -440,6 +440,12 @@ tbody tr.clickable{cursor:pointer}
    A pannello chiuso l'altezza della mappa e' quella della finestra, e la
    viewBox prende le proporzioni del riquadro (rtAdatta) */
 .cmp-grid.pan-chiuso{grid-template-columns:minmax(0,1fr)}
+a.pdf-l{white-space:nowrap}
+a.pdf-l::after{content:" \2197";font-size:.85em}
+.sk-dove{list-style:none;margin:0 0 14px;padding:0;font-size:13px}
+.sk-dove li{padding:5px 0;border-bottom:1px solid var(--line)}
+.sk-dove li:last-child{border-bottom:0}
+.sk-dove .pp{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:2px}
 .cmp-grid.pan-chiuso .cmp-pan{display:none}
 .cmp-grid.pan-chiuso #rt-svg svg{height:calc(100vh - 150px);min-height:420px}
 #rt-pan-btn{font-size:13px}
@@ -1305,6 +1311,19 @@ tr.dett:hover{background:inherit}
 var D = JSON.parse(document.getElementById("dati").textContent);
 var DOCS = D.documenti, BYDOC = {};
 DOCS.forEach(function(d){ BYDOC[d.id] = d; });
+// Rimando al PDF del contratto: i file sono pubblicati in data/ accanto alla
+// pagina, e #page=N apre il visore del browser alla pagina giusta (Chrome,
+// Firefox, Edge; Safari su iPhone apre il documento dall'inizio). Le pagine
+// sono quelle fisiche del PDF, non la numerazione stampata.
+var FILEDOC = {};
+(D.documenti_tutti || D.documenti).forEach(function(d){ FILEDOC[d.id] = d.file; });
+((D.servizi || {}).edizioni || []).forEach(function(e){ FILEDOC[e.id] = e.file; });
+function pdfLink(doc, pag, testo){
+  var f = FILEDOC[doc];
+  if(!f || !pag) return esc(testo);
+  return '<a class="pdf-l" href="data/'+encodeURI(f)+'#page='+pag+'" target="_blank" rel="noopener" '+
+    'title="Apri '+esc(f)+' a pagina '+pag+'">'+esc(testo)+'</a>';
+}
 // l'aggiornamento 2023 non ha Tabella A e resta fuori da DOCS, ma compare
 // nelle opere ultimate e nei capitoli: serve titolo e posizione anche a lui
 var TUTTI = D.documenti_tutti || DOCS, ORDINE = {}, TITOLO = {};
@@ -1859,7 +1878,7 @@ function stzGruppo(){
   ordine.forEach(function(i){
     var s = STZ[i];
     c += '<circle class="l'+s[3]+(pcSt[i]?' pc':'')+'" data-st="'+i+'" cx="'+s[0]+'" cy="'+s[1]+'"><title>'+esc(s[2])+'</title></circle>';
-    t += '<text class="l'+s[3]+'" x="'+s[0]+'" y="'+s[1]+'">'+esc(stzNome(s[2]))+'</text>';
+    t += '<text class="l'+s[3]+'" x="'+s[0]+'" y="'+s[1]+'">'+esc(stzBreve(s[2]))+'</text>';
   });
   return '<g class="rt-staz z0">'+c+t+'</g>';
 }
@@ -1867,6 +1886,25 @@ function stzGruppo(){
 // maiuscolo pieno sulla mappa pesa troppo
 function stzNome(n){
   return (n||"").toLowerCase().replace(/(^|[\s\-.'(\/])([a-zà-ù])/g, function(m,a,b){ return a+b.toUpperCase(); });
+}
+// Il nome sulla mappa, accorciato come lo scrivono cartelli e orari
+// (Firenze SMN, Torino PN, Milano C.le). Solo l'etichetta: scheda, tooltip e
+// ricerca usano il nome intero di RFI.
+// Le sigle solo dove sono d'uso comune: "Pescara PN" o "Pavia PG" non le
+// riconoscerebbe nessuno, e restano "P.Nuova", "P.Garibaldi".
+var STZ_BREVI = [[/^Firenze Santa Maria Novella$/, "Firenze SMN"],
+  [/^(Torino|Verona) Porta Nuova$/, "$1 PN"], [/^Torino Porta Susa$/, "Torino PS"],
+  [/^Milano Porta Garibaldi$/, "Milano PG"], [/ Porta /, " P."],
+  [/ Centrale$/, " C.le"], [/ C\.Le\b/, " C.le"], [/^Santa /, "S."], [/ Santa /, " S."],
+  [/^San /, "S."], [/ San /, " S."]];
+function stzBreve(n){
+  // "PISA/BIN. PISA SAN ROSSORE": il nome utile e' dopo il "binario"
+  n = (n||"").replace(/^.*\/\s*BIN\.\s*/i, "")
+    // le precisazioni fra parentesi restano nella scheda
+    .replace(/\s*\([^)]*\)\s*$/, "");
+  n = stzNome(n);
+  STZ_BREVI.forEach(function(r){ n = n.replace(r[0], r[1]); });
+  return n;
 }
 function rtApriStaz(i, inquadra){
   var s = STZ[i]; if(!s) return;
@@ -1939,7 +1977,7 @@ function rtApriRfi(cod, inquadra){
   if(L.peso) meta.push("massa assiale "+L.peso);
   el("rt-sub").innerHTML = esc(meta.join(" · ")) + '<br><span style="color:var(--ink-3)">'+
     (L.dal ? "in esercizio dal "+esc(L.dal)+" (dato OpenStreetMap)" : "data di apertura non nota")+
-    ' · registro: '+esc(((D.registro_rfi_fonti||{})[r.doc]||r.doc||"")+(r.pag?", p. "+r.pag:""))+'</span>';
+    ' · registro: '+esc((D.registro_rfi_fonti||{})[r.doc]||r.doc||"")+(r.pag?", "+pdfLink(r.doc, r.pag, "p. "+r.pag):"")+'</span>';
 
   var ops = Object.keys(PERLINEA_R[cod]||{}).map(function(k){ return PERLINEA_R[cod][k]; });
   if(!ops.length){
@@ -2857,6 +2895,37 @@ function pcScheda(cod, ids){
   return h;
 }
 
+// Dove l'intervento compare nei documenti, pagina per pagina: la Tabella A di
+// ogni contratto Investimenti che lo contiene e, se uno dei suoi CUP ha
+// risorse nella parte Servizi, gli Allegati 4c (fondi straordinari) e 12
+// (PNRR). Il ponte fra le due parti e' il CUP, l'unico codice comune.
+function doveCitata(p, cups){
+  var inv = DOCS.filter(function(d){ return p.h[d.id]; }).map(function(d){
+    return pdfLink(d.id, p.h[d.id][5] || (d.id===p.ud ? p.pag : 0), d.anno+" · p. "+(p.h[d.id][5] || p.pag)); });
+  var srv = {};
+  var S0 = D.servizi || {};
+  (S0.assegnazioni || []).concat(S0.pnrr || []).forEach(function(a){
+    if(cups.indexOf(a.cup) < 0) return;
+    var k = a.doc+"|"+(a.m ? "12" : "4c");
+    (srv[k] = srv[k] || {doc:a.doc, all:a.m ? "12" : "4c", p:[]});
+    if(srv[k].p.indexOf(a.p) < 0) srv[k].p.push(a.p);
+  });
+  var h = '<h3>Dove &egrave; citato nei contratti</h3><ul class="sk-dove">';
+  h += '<li><b>Investimenti</b>, Tabella A<div class="pp">'+inv.join("")+'</div></li>';
+  var ks = Object.keys(srv);
+  if(ks.length) h += ks.map(function(k){
+    var x = srv[k];
+    return '<li><b>Servizi</b>, Allegato '+x.all+(x.all==="12" ? " (PNRR)" : " (fondi straordinari)")+
+      ', '+esc(STIT[x.doc] || x.doc)+'<div class="pp">'+x.p.map(function(n){
+        return pdfLink(x.doc, n, "p. "+n); }).join("")+'</div></li>'; }).join("");
+  // Nei documenti elaborati oggi le due parti non hanno nessun CUP in comune:
+  // i Servizi assegnano risorse a progetti di manutenzione con CUP propri.
+  // Il controllo resta, perche' un aggiornamento futuro potrebbe cambiarlo.
+  else h += '<li style="color:var(--ink-3)"><b>Servizi</b>: non citato. Nessuno dei suoi CUP compare '+
+    'fra le assegnazioni (Allegato 4c) o le opere PNRR (Allegato 12); nei contratti elaborati '+
+    'le due parti non hanno CUP in comune.</li>';
+  return h + '</ul>';
+}
 function apriDettaglio(code, daRotta){
   var p = D.progetti.filter(function(x){ return x.c===code; })[0];
   if(!p) return;
@@ -2909,6 +2978,7 @@ function apriDettaglio(code, daRotta){
       '. &laquo;Speso a oggi&raquo; e\u0300 l\u2019avanzamento che il contratto dichiara, non un pagamento verificato.</p>';
   }
 
+  h += doveCitata(p, cups);
   h += '<dl class="kv">'+kv.map(function(x){
     return "<dt>"+esc(x[0])+"</dt><dd>"+esc(x[1])+"</dd>"; }).join("")+"</dl>";
 
@@ -2963,14 +3033,14 @@ function apriDettaglio(code, daRotta){
         else if(t.capi.length) pz.push("l’opera nomina " + t.capi.join(", "));
         if(t.comuni) pz.push("la linea attraversa " + t.comuni + (t.comuni===1 ? " comune citato" : " comuni citati"));
         var perche = pz.join(" · ");
-        var fonte = (RFONTI[r.doc] || r.doc || "") + (r.pag ? ", p. "+r.pag : "");
+        var fonte = esc(RFONTI[r.doc] || r.doc || "") + (r.pag ? ", "+pdfLink(r.doc, r.pag, "p. "+r.pag) : "");
         return '<li><span class="sk-conf sk-'+t.conf+'">'+t.conf+'</span>'+
           '<span class="sk-ln"><span class="sk-cod">'+esc(t.c)+'</span> '+esc(r.n||"")+
           (t.dich===true ? '<span class="sk-rfi ok">coincide col tracciato dichiarato</span>' :
            t.dich===false ? '<span class="sk-rfi no">non sul tracciato dichiarato</span>' : '')+
           (RRL[t.c] ? ' <a href="#/rete" style="font-weight:400;font-size:12px" onclick="vediLinea(\''+esc(t.c)+'\');return false;">mappa</a>' : '')+'</span>'+
           '<span class="sk-perche">'+esc(dati.join(" · "))+'</span>'+
-          '<span class="sk-perche">'+esc(perche)+' · fonte: '+esc(fonte)+'</span></li>';
+          '<span class="sk-perche">'+esc(perche)+' · fonte: '+fonte+'</span></li>';
       }).join("")+'</ul>';
     }
 
@@ -3014,7 +3084,7 @@ function apriDettaglio(code, daRotta){
       '<td class="r num">'+nf(s[2],1)+'</td><td class="r num">'+nf(s[3],1)+'</td>'+
       '<td style="font-size:11.5px">'+st.map(function(x){
          return '<abbr title="'+esc(D.legenda_stato[x]||x)+'">'+esc(x)+'</abbr>'; }).join(" ")+'</td>'+
-      '<td class="num" style="font-size:12px;color:var(--ink-3)">p. '+pag+'</td></tr>';
+      '<td class="num" style="font-size:12px;color:var(--ink-3)">'+pdfLink(d.id, pag, "p. "+pag)+'</td></tr>';
   });
   h += "</tbody></table></div>";
   // quanto servira' ancora, e con che urgenza: sta nel contratto ma non era
@@ -3052,7 +3122,7 @@ function apriDettaglio(code, daRotta){
       ', che non sono fra i documenti elaborati qui: di quel periodo questo sito non sa nulla.</p>';
   }
   h += '<p style="margin-top:16px;font-size:12px;color:var(--ink-3)">Importi in milioni di euro. '+
-    'Fonte: Tabella A del Contratto di Programma, pagina '+p.pag+' del PDF '+esc(BYDOC[p.ud].file)+'.</p>';
+    'Fonte: Tabella A del Contratto di Programma, '+pdfLink(p.ud, p.pag, "pagina "+p.pag+" del PDF "+BYDOC[p.ud].file)+'.</p>';
   el("d-body").innerHTML = h;
   dlg.showModal();
 }
@@ -3158,7 +3228,7 @@ function renderUlt(){
     return '<tr><td class="code">'+esc(u.cup||"–")+'</td>'+
       '<td class="nm">'+esc(u.n)+'</td><td class="r num">'+nf(u.v,2)+'</td>'+
       '<td class="num" style="font-size:12px">'+esc(u.dt)+'</td>'+
-      '<td style="font-size:11.5px;color:var(--ink-3)">'+esc(BYDOC[u.d]?BYDOC[u.d].anno:u.d)+' · p. '+u.p+'</td></tr>'; }).join("") ||
+      '<td style="font-size:11.5px;color:var(--ink-3)">'+esc(BYDOC[u.d]?BYDOC[u.d].anno:u.d)+' · '+pdfLink(u.d, u.p, "p. "+u.p)+'</td></tr>'; }).join("") ||
     '<tr><td colspan="5" style="padding:26px;color:var(--ink-3)">Nessuna riga con questi filtri.</td></tr>';
 }
 
@@ -3439,7 +3509,7 @@ function sImpieghi(){
     return '<tr'+(r.r==="3"?' class="tot"':'')+'><td class="nm">'+esc(r.v.replace(/\s*\(\*\)/,""))+'</td>'+
       r.a.map(function(v){ return '<td class="r num">'+nf(v,2)+'</td>'; }).join("")+
       '<td class="r num">'+nf(r.t,2)+'</td><td class="num" style="font-size:11.5px;color:var(--ink-3)">'+
-      esc(STIT[doc])+', p. '+r.p+'</td></tr>'; }).join("");
+      esc(STIT[doc])+', '+pdfLink(doc, r.p, "p. "+r.p)+'</td></tr>'; }).join("");
 }
 
 /* ---- capitoli ---- */
@@ -3495,7 +3565,7 @@ function sOpere(){
       '<td class="r num">'+nf(r.pm,2)+'</td>'+
       r.a.map(function(v){ return '<td class="r num">'+(v?nf(v,2):"")+'</td>'; }).join("")+
       '<td class="r num">'+(r.o?nf(r.o,2):"")+'</td><td class="r num"><b>'+nf(r.k,2)+'</b></td>'+
-      '<td class="num" style="font-size:11.5px;color:var(--ink-3)">p. '+r.p+'</td></tr>'; }).join("");
+      '<td class="num" style="font-size:11.5px;color:var(--ink-3)">'+pdfLink(x.e.id, r.p, "p. "+r.p)+'</td></tr>'; }).join("");
   var u = righe.length ? righe[righe.length-1].r : null;
   if(!u){ el("kpis-opere-s").innerHTML = ""; return; }
   var k = [
@@ -3593,7 +3663,7 @@ function sInterventi(){
           (r.rif?' · '+esc(r.rif):'')+'<br><span>'+esc(r.d)+'</span><br>'+
           '<span class="num">'+(r.prec?"CdP-S 2016-2021 "+nf(r.prec,2)+" · ":"")+
           (r.all==="12"?"PNRR "+nf(r.corr,2)+(r.altri?" · altri finanziamenti "+nf(r.altri,2):""):"CdP-S 2022-2026 "+nf(r.corr,2))+
-          ' mln €</span> <span style="color:var(--ink-3)">· Allegato '+r.all+', '+esc(STIT[r.doc]||r.doc)+', p. '+r.p+'</span></li>'; }).join("")+
+          ' mln €</span> <span style="color:var(--ink-3)">· Allegato '+r.all+', '+esc(STIT[r.doc]||r.doc)+', '+pdfLink(r.doc, r.p, "p. "+r.p)+'</span></li>'; }).join("")+
         '</ul></td></tr>';
     }
     return h; }).join("") ||

@@ -215,6 +215,21 @@ assegnati ciascuno alla sola tratta piu' vicina, ne coprono meta' della
 lunghezza: misurare la tratta contro il progetto metteva l'AV Roma-Napoli
 sulla linea storica parallela nel nodo di Napoli.
 
+## Rimandi ai PDF
+
+Ogni numero di pagina mostrato e' un link al PDF pubblicato in `data/` con
+`#page=N` (`pdfLink(doc, pag, testo)`; i file vengono da `documenti_tutti` e da
+`servizi.edizioni`). Le pagine sono quelle fisiche del PDF, verificate a
+campione cercando codice o CUP nel testo della pagina: Tabella A, opere
+ultimate, Allegati 4c e 12, Allegato 3. La scheda di un intervento ha il blocco
+"Dove e' citato nei contratti". Il ponte verso i Servizi e' il CUP, ma nei
+documenti elaborati le due parti non ne hanno nessuno in comune (0 su 233 e 53):
+il blocco lo dice invece di tacere. Safari su iPhone ignora `#page=`.
+
+Sulla mappa i nomi delle stazioni sono accorciati (`stzBreve`: Firenze SMN,
+Torino PN, Milano C.le, precisazioni fra parentesi tolte); sigle solo dove
+sono d'uso comune. Scheda, tooltip e ricerca usano il nome intero di RFI.
+
 ## Le due parti nella piattaforma
 
 Ogni sezione ha una vista Investimenti e una vista Servizi (`.solo-inv` e
