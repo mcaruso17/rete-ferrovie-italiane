@@ -68,13 +68,19 @@ svg text{font-family:var(--corpo);fill:var(--tenue);font-size:12px}
   border-radius:14px;padding:4px 12px;cursor:pointer}
 .chip[aria-pressed=true]{color:var(--bianco);border-color:var(--verde);box-shadow:0 0 10px #3dffa244}
 .chip:disabled{opacity:.4;cursor:default}
+.chip.f-v[aria-pressed=true]{border-color:var(--verde)} .chip.f-a[aria-pressed=true]{border-color:var(--ambra);box-shadow:0 0 10px #ffc95e44}
+.chip.f-r[aria-pressed=true]{border-color:var(--rosso);box-shadow:0 0 10px #ff3b5c44}
+.chip[aria-pressed=false].f-v,.chip[aria-pressed=false].f-a,.chip[aria-pressed=false].f-r{opacity:.55}
+.filtri-g{margin:0 0 12px}
+.scelte .et{font-size:13px;color:var(--tenue);margin-right:2px}
+.pt .cod{font:600 10.5px var(--titolo);fill:#f6f3f8;paint-order:stroke;stroke:#0c0a11;stroke-width:3px;pointer-events:none}
 .legenda{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;font-size:14px;color:var(--tenue)}
 .legenda span{display:inline-flex;align-items:center;gap:6px}
 .legenda i{width:12px;height:12px;border-radius:50%;display:inline-block}
 .lista{list-style:none;margin:0;padding:0}
 .lista li{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:9px 0;border-bottom:1px solid #3a315066;cursor:pointer}
 .lista li:hover{background:#26203566}
-.lista .t{font-size:14.5px}
+.lista .t{font-size:14.5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .lista .c{font:600 12px var(--titolo);color:var(--rosso2);letter-spacing:.04em}
 .lista .v{font:700 16px var(--titolo);color:var(--rosso);text-align:right;align-self:center}
 
@@ -163,12 +169,36 @@ footer{margin-top:60px;color:var(--tenue);font-size:14px}
   <section>
     <div class="due">
       <div>
-        <h2>Dove sono le opere</h2>
-        <p class="nota">Ogni cerchio &egrave; un&rsquo;opera. In orizzontale il costo (scala logaritmica), in verticale quanto &egrave; gi&agrave; speso o assegnato. Il cerchio cresce con quello che resta da finanziare: in basso a destra e grande &egrave; un&rsquo;opera costosa, indietro e scoperta. Clicca per la scheda.</p>
-        <div class="scelte" role="group" aria-label="Asse verticale">
-          <button class="chip" type="button" data-y="speso" aria-pressed="true">Speso</button>
-          <button class="chip" type="button" data-y="ass" aria-pressed="false">Risorse assegnate</button>
+        <h2>A che punto sono le opere</h2>
+        <p class="nota">Ogni cerchio &egrave; un&rsquo;opera. In orizzontale il costo, in verticale quanto &egrave; gi&agrave; speso o assegnato; il cerchio cresce con quello che resta da finanziare. In basso a destra e grande: un&rsquo;opera costosa, indietro e scoperta. Si parte dalle pi&ugrave; costose: allarga o restringi con i filtri. Clicca un cerchio per la scheda.</p>
+        <div class="filtri-g">
+          <div class="scelte" role="group" aria-label="Asse verticale">
+            <span class="et">Asse verticale</span>
+            <button class="chip" type="button" data-y="speso" aria-pressed="true">Speso</button>
+            <button class="chip" type="button" data-y="ass" aria-pressed="false">Risorse assegnate</button>
+          </div>
+          <div class="scelte" role="group" aria-label="Quante opere">
+            <span class="et">Mostra le prime</span>
+            <button class="chip" type="button" data-n="15" aria-pressed="false">15</button>
+            <button class="chip" type="button" data-n="30" aria-pressed="true">30</button>
+            <button class="chip" type="button" data-n="60" aria-pressed="false">60</button>
+            <button class="chip" type="button" data-n="0" aria-pressed="false">tutte</button>
+            <span class="et">per</span>
+            <button class="chip" type="button" data-per="costo" aria-pressed="true">costo</button>
+            <button class="chip" type="button" data-per="dafin" aria-pressed="false">da finanziare</button>
+          </div>
+          <div class="scelte" role="group" aria-label="Finanziamento">
+            <span class="et">Finanziamento</span>
+            <button class="chip f-v" type="button" data-f="v" aria-pressed="true">integrale</button>
+            <button class="chip f-a" type="button" data-f="a" aria-pressed="true">almeno met&agrave;</button>
+            <button class="chip f-r" type="button" data-f="r" aria-pressed="true">meno di met&agrave;</button>
+          </div>
+          <div class="comandi" style="margin:4px 0 0">
+            <label class="campo">Programma<select id="gProg"></select></label>
+            <label class="campo">Regione<select id="gReg"></select></label>
+          </div>
         </div>
+        <p class="conta" id="gConta" style="margin:0 0 8px"></p>
         <div class="palco"><svg id="scatter" viewBox="0 0 640 420" role="img" aria-label="Costo contro avanzamento delle opere"></svg></div>
         <div class="legenda">
           <span><i style="background:var(--verde);box-shadow:0 0 6px var(--verde)"></i>integralmente finanziata</span>
@@ -178,7 +208,7 @@ footer{margin-top:60px;color:var(--tenue);font-size:14px}
       </div>
       <div>
         <h2>Quanto manca</h2>
-        <p class="nota">Le dieci opere con pi&ugrave; risorse ancora da trovare in questo contratto, in milioni di euro.</p>
+        <p class="nota">Le dieci opere con pi&ugrave; risorse ancora da trovare, in milioni di euro. Segue programma e regione scelti nel grafico.</p>
         <ul class="lista" id="manca"></ul>
       </div>
     </div>
@@ -285,34 +315,62 @@ function testata(){
 }
 
 /* grafico: costo contro speso o assegnato */
+let gN = 30, gPer = "costo";
+const gFin = {v: true, a: true, r: true};
+function opereGrafico(){
+  const pr = $("#gProg").value, rg = $("#gReg").value;
+  let op = opereDoc().map(o => ({o, x: num(o)})).filter(y => y.x.costo > 0 &&
+    (!pr || y.o.pn === pr) && (!rg || y.o.reg.includes(rg)) && gFin[fin(y.x)] &&
+    (asseY === "speso" ? y.x.speso : y.x.cop) !== null);
+  const tot = op.length;
+  op.sort((a, b) => (b.x[gPer] || 0) - (a.x[gPer] || 0));
+  if (gN) op = op.slice(0, gN);
+  return {op, tot};
+}
 function scatter(){
   const svg = $("#scatter"); svg.innerHTML = "";
-  const W = 640, H = 420, ml = 52, mr = 16, mt = 14, mb = 44;
-  const op = opereDoc().map(o => ({o, x: num(o)})).filter(y => y.x.costo > 0);
-  const lo = Math.log10(Math.max(1, Math.min(...op.map(y => y.x.costo)))),
-        hi = Math.log10(Math.max(...op.map(y => y.x.costo)));
+  const W = 640, H = 420, ml = 52, mr = 18, mt = 16, mb = 44;
+  const {op, tot} = opereGrafico();
+  const cs = op.reduce((t, y) => t + y.x.costo, 0), df = op.reduce((t, y) => t + (y.x.dafin || 0), 0);
+  $("#gConta").textContent = op.length ? `${op.length} opere su ${tot} con questi filtri · ${mln(cs)} di costo, ${mln(df)} da finanziare` :
+    "Nessuna opera con questi filtri.";
+  if (!op.length) return;
+  const val = y => asseY === "speso" ? y.x.speso : y.x.cop;
+  // asse orizzontale logaritmico sulle opere mostrate: con meno cerchi si allarga
+  const lo = Math.log10(Math.max(1, Math.min(...op.map(y => y.x.costo)))) - 0.08,
+        hi = Math.log10(Math.max(...op.map(y => y.x.costo))) + 0.08;
   const X = v => ml + (Math.log10(Math.max(1, v)) - lo) / (hi - lo || 1) * (W - ml - mr);
-  const Y = v => mt + (1 - Math.min(1, Math.max(0, v))) * (H - mt - mb);
+  // asse verticale a radice quadrata: lo speso e' quasi tutto sotto il 10%, e
+  // in scala lineare le opere grandi finivano schiacciate sul fondo. Il tetto
+  // e' il primo gradino sopra il valore piu' alto mostrato
+  const TACCHE = [0, .01, .05, .1, .25, .5, .75, 1];
+  const top = TACCHE.find(t => t >= Math.min(1, Math.max(...op.map(val)))) || 1;
+  const Y = v => mt + (1 - Math.sqrt(Math.min(top, Math.max(0, v)) / top)) * (H - mt - mb - 14);
   const maxDaf = Math.max(1, ...op.map(y => y.x.dafin || 0));
   let s = '<g class="asse">';
-  for (let p = 0; p <= 1.001; p += .25)
-    s += `<line x1="${ml}" x2="${W - mr}" y1="${Y(p)}" y2="${Y(p)}"/><text x="${ml - 8}" y="${Y(p) + 4}" text-anchor="end">${p * 100}%</text>`;
-  for (let e = Math.ceil(lo); e <= hi; e++){
-    const v = Math.pow(10, e);
+  TACCHE.filter(t => t <= top).forEach(p => s += `<line x1="${ml}" x2="${W - mr}" y1="${Y(p)}" y2="${Y(p)}"/>` +
+    `<text x="${ml - 8}" y="${Y(p) + 4}" text-anchor="end">${p * 100}%</text>`);
+  const passi = [1, 2, 5];
+  for (let e = Math.floor(lo); e <= Math.ceil(hi); e++) passi.forEach(m => {
+    const v = m * Math.pow(10, e), lv = Math.log10(v);
+    if (lv < lo || lv > hi || (hi - lo > 2.2 && m !== 1)) return;
     s += `<line x1="${X(v)}" x2="${X(v)}" y1="${mt}" y2="${H - mb}" stroke-dasharray="2 4"/>` +
       `<text x="${X(v)}" y="${H - mb + 18}" text-anchor="middle">${v >= 1000 ? nf(v / 1000, 0) + " mld" : nf(v, 0) + " mln"}</text>`;
-  }
-  s += `<text x="${(W + ml) / 2}" y="${H - 6}" text-anchor="middle">costo dell'opera</text></g>`;
+  });
+  s += `<text x="${(W + ml) / 2}" y="${H - 6}" text-anchor="middle">costo dell'opera (scala logaritmica)</text></g>`;
   svg.innerHTML = s;
+  const conCod = op.length <= 30;
   // i grandi sotto, cosi' i piccoli restano cliccabili
-  op.sort((a, b) => (b.x.dafin || 0) - (a.x.dafin || 0)).forEach(y => {
-    const v = asseY === "speso" ? y.x.speso : y.x.cop;
-    if (v === null) return;
-    const f = fin(y.x), r = 3 + 22 * Math.sqrt((y.x.dafin || 0) / maxDaf);
+  op.slice().sort((a, b) => (b.x.dafin || 0) - (a.x.dafin || 0)).forEach(y => {
+    const f = fin(y.x), r = 3.5 + 24 * Math.sqrt((y.x.dafin || 0) / maxDaf);
+    const cx = X(y.x.costo), cy = Y(val(y));
     const g = document.createElementNS(SVG, "g");
     g.setAttribute("class", "pt"); g.setAttribute("tabindex", "0");
-    g.innerHTML = `<circle cx="${X(y.x.costo).toFixed(1)}" cy="${Y(v).toFixed(1)}" r="${r.toFixed(1)}" ` +
-      `fill="${COLHEX[f]}" fill-opacity=".28" stroke="${COLHEX[f]}" stroke-width="1.2"/>`;
+    g.innerHTML = `<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${r.toFixed(1)}" ` +
+      `fill="${COLHEX[f]}" fill-opacity=".28" stroke="${COLHEX[f]}" stroke-width="1.2"/>` +
+      (conCod ? (cx > W - 90
+        ? `<text class="cod" text-anchor="end" x="${(cx - Math.min(r, 10) - 3).toFixed(1)}" y="${(cy + 4).toFixed(1)}">${esc(y.o.c)}</text>`
+        : `<text class="cod" x="${(cx + Math.min(r, 10) + 3).toFixed(1)}" y="${(cy + 4).toFixed(1)}">${esc(y.o.c)}</text>`) : "");
     g.addEventListener("mouseenter", e => mostra(`<b>${esc(y.o.c)}</b> ${esc(y.o.n)}<div class="t">costo ${esc(mln(y.x.costo))} · ` +
       `speso ${pct(y.x.speso)} · assegnate ${pct(y.x.cop)} · da finanziare ${esc(mln(y.x.dafin))}</div>`, e));
     g.addEventListener("mousemove", sposta);
@@ -322,6 +380,14 @@ function scatter(){
     svg.appendChild(g);
   });
 }
+function premi(sel, b){
+  document.querySelectorAll(sel).forEach(x => x.setAttribute("aria-pressed", x === b)); }
+document.querySelectorAll(".chip[data-n]").forEach(b => b.addEventListener("click", () => {
+  gN = +b.dataset.n; premi(".chip[data-n]", b); scatter(); }));
+document.querySelectorAll(".chip[data-per]").forEach(b => b.addEventListener("click", () => {
+  gPer = b.dataset.per; premi(".chip[data-per]", b); scatter(); }));
+document.querySelectorAll(".chip[data-f]").forEach(b => b.addEventListener("click", () => {
+  gFin[b.dataset.f] = !gFin[b.dataset.f]; b.setAttribute("aria-pressed", gFin[b.dataset.f]); scatter(); }));
 function scegliAsse(k, disegna = true){
   asseY = k;
   document.querySelectorAll(".chip[data-y]").forEach(b => b.setAttribute("aria-pressed", b.dataset.y === k));
@@ -330,7 +396,9 @@ function scegliAsse(k, disegna = true){
 document.querySelectorAll(".chip[data-y]").forEach(b => b.addEventListener("click", () => scegliAsse(b.dataset.y)));
 
 function manca(){
-  const op = opereDoc().map(o => ({o, x: num(o)})).filter(y => y.x.dafin > 0)
+  const pr = $("#gProg").value, rg = $("#gReg").value;
+  const op = opereDoc().map(o => ({o, x: num(o)})).filter(y => y.x.dafin > 0 &&
+      (!pr || y.o.pn === pr) && (!rg || y.o.reg.includes(rg)))
     .sort((a, b) => b.x.dafin - a.x.dafin).slice(0, 10);
   $("#manca").innerHTML = op.map(y => `<li data-c="${esc(y.o.c)}"><span><span class="c">${esc(y.o.c)}</span><br>` +
     `<span class="t">${esc(y.o.n)}</span></span><span class="v">${nf(y.x.dafin, 0)}</span></li>`).join("");
@@ -349,6 +417,8 @@ function filtri(){
     const [n, g] = k.split("|"); return `<option value="${esc(n)}">${esc(n + " · " + g)}</option>`; }).join("");
   $("#fReg").innerHTML = '<option value="">tutte</option>' + Object.keys(reg).sort().map(r =>
     `<option>${esc(r)}</option>`).join("");
+  $("#gProg").innerHTML = $("#fProg").innerHTML; $("#gReg").innerHTML = $("#fReg").innerHTML;
+  ["gProg", "gReg"].forEach(id => $("#" + id).addEventListener("input", () => { scatter(); manca(); }));
   ["fQ", "fProg", "fReg", "fFin", "fRfi"].forEach(id => $("#" + id).addEventListener("input", tabella));
 }
 function tabella(){
