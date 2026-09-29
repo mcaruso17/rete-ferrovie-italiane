@@ -215,6 +215,16 @@ assegnati ciascuno alla sola tratta piu' vicina, ne coprono meta' della
 lunghezza: misurare la tratta contro il progetto metteva l'AV Roma-Napoli
 sulla linea storica parallela nel nodo di Napoli.
 
+## Cruscotto delle opere (prototipo)
+
+`piattaforma/cruscotto.html` e' una seconda pagina, scura, con neon rosso e
+verde: si sceglie il contratto (come la run nel cruscotto ECHO) e si scende
+nelle opere. Numeri chiave, grafico costo contro speso o assegnato, le opere
+con piu' risorse da trovare, tabella ordinabile e scheda con storia nei
+contratti, mini mappa, tratte RFI (com'e' la linea oggi) e Piano Commerciale.
+I dati li incorpora `tools/cruscotto_dati.py` (in build_all.sh); il workflow
+di Pages copia la pagina cosi' com'e'.
+
 ## Rimandi ai PDF
 
 Ogni numero di pagina mostrato e' un link al PDF pubblicato in `data/` con
