@@ -45,8 +45,23 @@ def main():
     TR = []
     for t in usate:
         r = rr["tratte"][t]
+        # l'ultimo campo e' l'indice della tratta nella piattaforma, per il
+        # link alla sua scheda sulla mappa (#/rete/tratta/<n>)
         TR.append([r[0], r[1], nomi.get(r[2], r[2]), nomi.get(r[3], r[3]), r[4], r[5],
-                   r[6], r[7], r[8], r[9]])
+                   r[6], r[7], r[8], r[9], t])
+
+    # stazioni per intervento: dichiarate (una localita' del Piano Commerciale
+    # sta sulla stazione) o citate (il nome e' nel titolo dell'intervento)
+    staz = rr["stazioni"]
+    st_dich = {}
+    for si, els in pc.get("staz", {}).items():
+        for cod, els_int in pc.get("per_int", {}).items():
+            if set(els) & set(els_int):
+                st_dich.setdefault(cod, set()).add(int(si))
+    st_cit = {}
+    for si, cods in rr.get("stazioni_cit", {}).items():
+        for cod in cods:
+            st_cit.setdefault(cod, set()).add(int(si))
 
     schede = pc.get("schede", [])
     SCH = [{"t": s.get("t"), "anno": s.get("anno"), "pnrr": s.get("pnrr"),
@@ -92,6 +107,9 @@ def main():
             # stanno sulle stesse tratte perche' RFI le tratta come una cosa sola
             "pe": pc.get("per_int", {}).get(c, []),
             "lin": lin,
+            # [indice nella piattaforma, nome, x, y, legame]
+            "st": [[i, staz[i][2], staz[i][0], staz[i][1], "dichiarata"] for i in sorted(st_dich.get(c, ()))] +
+                  [[i, staz[i][2], staz[i][0], staz[i][1], "citata"] for i in sorted(st_cit.get(c, set()) - st_dich.get(c, set()))],
         })
 
     dati = {

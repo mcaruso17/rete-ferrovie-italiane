@@ -233,6 +233,13 @@ per CUP: il disegno dice l'appartenenza, non importi), opere sulle stesse
 tratte (segnando quelle che nel Piano Commerciale sono un unico progetto RFI,
 che condividono le tratte per costruzione), Piano Commerciale.
 
+Le due pagine si rimandano: la mappa della rete (tratte e stazioni con le loro
+schede) resta nella piattaforma, e si apre su una scheda precisa con
+`#/rete/tratta/<n>`, `#/rete/stazione/<n>`, `#/rete/linea/<codice>` (n e'
+l'indice in rete_rfi.tratte o rete_rfi.stazioni). Il cruscotto porta per ogni
+tratta e stazione dell'opera il link alla sua scheda; la piattaforma ha in
+testata il link al cruscotto.
+
 ## Rimandi ai PDF
 
 Ogni numero di pagina mostrato e' un link al PDF pubblicato in `data/` con

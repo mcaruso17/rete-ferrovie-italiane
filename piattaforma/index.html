@@ -521,6 +521,10 @@ dialog::backdrop{background:rgba(10,14,13,.55)}
    vista resta nel DOM con i suoi filtri e il suo stato quando si torna. */
 body[data-parte="srv"] .solo-inv{display:none}
 body:not([data-parte="srv"]) .solo-srv{display:none}
+.cr-link{font-size:12px;padding:5px 11px;border:1px solid var(--line-strong);border-radius:var(--radius);
+  color:var(--ink-2);text-decoration:none;white-space:nowrap}
+.cr-link:hover{color:var(--accent);border-color:var(--accent)}
+@media (max-width:560px){.cr-link{display:none}}
 .parte-sw{display:inline-flex;border:1px solid var(--line-strong);border-radius:var(--radius);overflow:hidden}
 .parte-sw button{background:var(--surface);border:0;font:inherit;font-size:12px;padding:5px 11px;
   color:var(--ink-2);cursor:pointer}
@@ -566,6 +570,7 @@ tr.dett:hover{background:inherit}
       </div>
       <div class="top-az">
         <span class="sez-ora" id="sez-ora"></span>
+        <a class="cr-link" href="cruscotto.html" title="Le opere in un cruscotto: costi, avanzamento, tratte">Cruscotto opere</a>
         <div class="parte-sw" role="group" aria-label="Parte del contratto">
           <button type="button" id="parte-inv" aria-pressed="true">Investimenti</button>
           <button type="button" id="parte-srv" aria-pressed="false">Servizi</button>
@@ -1374,6 +1379,11 @@ function vaiA(){
   // #/opera/<codice> apre la scheda sopra la pagina degli interventi: serve a
   // poter mandare a qualcuno il link di una singola opera, e a tornarci col
   // tasto indietro invece di ripartire dalla ricerca
+  // #/rete/tratta/<n>, #/rete/stazione/<n>, #/rete/linea/<codice>: la mappa
+  // aperta sulla scheda giusta. Li usa il cruscotto delle opere per rimandare
+  // qui, e servono a mandare a qualcuno il link di una tratta
+  var rt = rotta.match(/^\/rete\/(tratta|stazione|linea)\/(.+)$/);
+  if(rt){ rotta = "/rete"; srv = false; }
   var op = rotta.match(/^\/opera\/(.+)$/);
   if(op){
     rotta = "/interventi";
@@ -1401,11 +1411,20 @@ function vaiA(){
     if(rotta==="/rete") disegnaRete();
   }
   if(schedaAttesa){ var c = schedaAttesa; schedaAttesa = null; apriDettaglio(c, true); }
+  var aRete = false;
+  if(rt && rotta === "/rete"){
+    var k = decodeURIComponent(rt[2]);
+    if(rt[1] === "tratta") rtApriTratta(+k, true);
+    else if(rt[1] === "stazione") rtApriStaz(+k, true);
+    else rtApriRfi(k, true);
+    aRete = true;
+  }
   // col menu chiuso il titolo della sezione e' l'unico indizio di dove si e'
   var voce = el("nav").querySelector('a[data-r="'+rotta+'"]');
   el("sez-ora").textContent = voce ? voce.textContent : "";
   document.title = "Binario Contabile";
   window.scrollTo(0,0);
+  if(aRete) el("rt-svg").scrollIntoView({block: "start"});
 }
 window.addEventListener("hashchange", vaiA);
 
@@ -1819,8 +1838,19 @@ function impLink(c){
   var n = stzNome(impNome(c));
   return STZIMP[c]!==undefined ? '<a href="#/rete" onclick="rtApriStaz('+STZIMP[c]+', true);return false;">'+esc(n)+'</a>' : esc(n);
 }
-function rtApriTratta(i){
+function rtApriTratta(i, inquadra){
   var t = TRT[i]; if(!t) return;
+  if(inquadra){
+    var bb = [1e9, 1e9, -1e9, -1e9];
+    trPath(t).forEach(function(d){
+      var x = 0, y = 0, re = /([Ml])(-?[\d.]+) (-?[\d.]+)/g, m;
+      while((m = re.exec(d))){
+        if(m[1] === "M"){ x = +m[2]; y = +m[3]; } else { x += +m[2]; y += +m[3]; }
+        bb = [Math.min(bb[0], x), Math.min(bb[1], y), Math.max(bb[2], x), Math.max(bb[3], y)];
+      }
+    });
+    if(bb[0] < 1e9) rtInquadra(bb);
+  }
   rtSel = null; rtPcSel = null; rtRfiSel = null;
   el("rt-acceso").innerHTML = trPath(t).map(function(d){ return '<path d="'+d+'"/>'; }).join("");
   el("rt-tit").innerHTML = impLink(t[2]) + ' – ' + impLink(t[3]);
