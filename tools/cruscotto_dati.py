@@ -88,6 +88,9 @@ def main():
             "g": [d for e in els for d in (e.get("d") or [])],
             "anno": anni, "car": car,
             "sch": pc.get("schede_int", {}).get(c, []),
+            # i progetti RFI dell'opera: due opere con un progetto in comune
+            # stanno sulle stesse tratte perche' RFI le tratta come una cosa sola
+            "pe": pc.get("per_int", {}).get(c, []),
             "lin": lin,
         })
 

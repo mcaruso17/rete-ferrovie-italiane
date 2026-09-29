@@ -225,6 +225,14 @@ contratti, mini mappa, tratte RFI (com'e' la linea oggi) e Piano Commerciale.
 I dati li incorpora `tools/cruscotto_dati.py` (in build_all.sh); il workflow
 di Pages copia la pagina cosi' com'e'.
 
+La scheda dell'opera ha un indice fisso e si scorre con le frecce (anche da
+tastiera) nell'ordine e coi filtri della tabella. Sezioni: sintesi in una
+frase, contratti con variazioni di costo, territorio (passando su una tratta
+si accende sulla mappa), CUP e linee (il contratto da' il costo per opera, non
+per CUP: il disegno dice l'appartenenza, non importi), opere sulle stesse
+tratte (segnando quelle che nel Piano Commerciale sono un unico progetto RFI,
+che condividono le tratte per costruzione), Piano Commerciale.
+
 ## Rimandi ai PDF
 
 Ogni numero di pagina mostrato e' un link al PDF pubblicato in `data/` con
