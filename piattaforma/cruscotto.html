@@ -170,20 +170,27 @@ footer{margin-top:60px;color:var(--tenue);font-size:14px}
     <div class="due">
       <div>
         <h2>A che punto sono le opere</h2>
-        <p class="nota">Ogni cerchio &egrave; un&rsquo;opera. In orizzontale il costo, in verticale quanto &egrave; gi&agrave; speso o assegnato; il cerchio cresce con quello che resta da finanziare. In basso a destra e grande: un&rsquo;opera costosa, indietro e scoperta. Si parte dalle pi&ugrave; costose: allarga o restringi con i filtri. Clicca un cerchio per la scheda.</p>
-        <div class="filtri-g">
+        <p class="nota">Ogni cerchio &egrave; un&rsquo;opera: in orizzontale il costo, in verticale quanto &egrave; gi&agrave; stato speso. Il cerchio cresce con quello che resta da finanziare, il colore dice quanto dell&rsquo;opera &egrave; coperto da risorse assegnate. Grande e rosso in basso a destra: costosa, ferma e scoperta. Verde in basso: i soldi ci sono ma non si spendono. Clicca un cerchio per la scheda.</p>
+        <p class="conta" id="gConta" style="margin:0 0 8px"></p>
+        <div class="palco"><svg id="scatter" viewBox="0 0 640 420" role="img" aria-label="Costo contro avanzamento delle opere"></svg></div>
+        <div class="legenda">
+          <span><i style="background:var(--verde);box-shadow:0 0 6px var(--verde)"></i>integralmente finanziata</span>
+          <span><i style="background:var(--ambra)"></i>finanziata per almeno met&agrave;</span>
+          <span><i style="background:var(--rosso);box-shadow:0 0 6px var(--rosso)"></i>finanziata per meno di met&agrave;</span>
+        </div>
+        <div class="filtri-g" style="margin-top:16px">
           <div class="scelte" role="group" aria-label="Asse verticale">
-            <span class="et">Asse verticale</span>
-            <button class="chip" type="button" data-y="speso" aria-pressed="true">Speso</button>
-            <button class="chip" type="button" data-y="ass" aria-pressed="false">Risorse assegnate</button>
+            <span class="et">Speso misurato sul</span>
+            <button class="chip" type="button" data-y="speso" aria-pressed="true">costo dell&rsquo;opera</button>
+            <button class="chip" type="button" data-y="resa" aria-pressed="false">le risorse assegnate</button>
           </div>
           <div class="scelte" role="group" aria-label="Quante opere">
-            <span class="et">Mostra le prime</span>
+            <span class="et">Mostra</span>
             <button class="chip" type="button" data-n="15" aria-pressed="false">15</button>
-            <button class="chip" type="button" data-n="30" aria-pressed="true">30</button>
+            <button class="chip" type="button" data-n="30" aria-pressed="false">30</button>
             <button class="chip" type="button" data-n="60" aria-pressed="false">60</button>
-            <button class="chip" type="button" data-n="0" aria-pressed="false">tutte</button>
-            <span class="et">per</span>
+            <button class="chip" type="button" data-n="0" aria-pressed="true">tutte</button>
+            <span class="et">opere, le prime per</span>
             <button class="chip" type="button" data-per="costo" aria-pressed="true">costo</button>
             <button class="chip" type="button" data-per="dafin" aria-pressed="false">da finanziare</button>
           </div>
@@ -197,13 +204,6 @@ footer{margin-top:60px;color:var(--tenue);font-size:14px}
             <label class="campo">Programma<select id="gProg"></select></label>
             <label class="campo">Regione<select id="gReg"></select></label>
           </div>
-        </div>
-        <p class="conta" id="gConta" style="margin:0 0 8px"></p>
-        <div class="palco"><svg id="scatter" viewBox="0 0 640 420" role="img" aria-label="Costo contro avanzamento delle opere"></svg></div>
-        <div class="legenda">
-          <span><i style="background:var(--verde);box-shadow:0 0 6px var(--verde)"></i>integralmente finanziata</span>
-          <span><i style="background:var(--ambra)"></i>finanziata per almeno met&agrave;</span>
-          <span><i style="background:var(--rosso);box-shadow:0 0 6px var(--rosso)"></i>finanziata per meno di met&agrave;</span>
         </div>
       </div>
       <div>
@@ -309,19 +309,30 @@ function testata(){
   ];
   $("#gradini").innerHTML = g.map(x => `<div class="gradino ${x[3]}"><h3>${esc(x[0])}</h3>` +
     `<div class="v">${String(x[1]).includes("<small>") ? x[1] : esc(x[1])}</div><div class="n">${esc(x[2])}</div></div>`).join("");
-  document.querySelectorAll(".chip[data-y]").forEach(b => {
-    if (b.dataset.y === "speso") b.disabled = !haAvanz; });
-  if (!haAvanz && asseY === "speso") scegliAsse("ass", false);
+  haAvanzDoc = haAvanz;
+  document.querySelectorAll(".chip[data-y]").forEach(b => b.disabled = !haAvanz);
 }
 
-/* grafico: costo contro speso o assegnato */
-let gN = 30, gPer = "costo";
+/* grafico: costo contro speso */
+// Lo speso si legge in due modi: sul costo dell'opera (quanto manca alla
+// fine) o sulle risorse gia' assegnate (quanto dei soldi disponibili si
+// riesce a spendere). Il colore resta la copertura, che cosi' non ripete
+// mai l'asse verticale: con "assegnate" in verticale il colore ne era solo
+// una copia a fasce. Senza avanzamento dichiarato (contratto 2017) si
+// ripiega sulla copertura, e allora il colore non dice nulla e si spegne.
+function valY(y){
+  if (!haAvanzDoc) return y.x.cop;
+  if (asseY === "resa") return y.x.ass ? Math.min(1, (y.x.avanz || 0) / y.x.ass) : null;
+  return y.x.speso;
+}
+let haAvanzDoc = true;
+let gN = 0, gPer = "costo";
 const gFin = {v: true, a: true, r: true};
 function opereGrafico(){
   const pr = $("#gProg").value, rg = $("#gReg").value;
   let op = opereDoc().map(o => ({o, x: num(o)})).filter(y => y.x.costo > 0 &&
     (!pr || y.o.pn === pr) && (!rg || y.o.reg.includes(rg)) && gFin[fin(y.x)] &&
-    (asseY === "speso" ? y.x.speso : y.x.cop) !== null);
+    valY(y) !== null);
   const tot = op.length;
   op.sort((a, b) => (b.x[gPer] || 0) - (a.x[gPer] || 0));
   if (gN) op = op.slice(0, gN);
@@ -329,13 +340,15 @@ function opereGrafico(){
 }
 function scatter(){
   const svg = $("#scatter"); svg.innerHTML = "";
-  const W = 640, H = 420, ml = 52, mr = 18, mt = 16, mb = 44;
+  const W = 640, H = 420, ml = 64, mr = 18, mt = 16, mb = 44;
   const {op, tot} = opereGrafico();
   const cs = op.reduce((t, y) => t + y.x.costo, 0), df = op.reduce((t, y) => t + (y.x.dafin || 0), 0);
-  $("#gConta").textContent = op.length ? `${op.length} opere su ${tot} con questi filtri · ${mln(cs)} di costo, ${mln(df)} da finanziare` :
+  const cosa = !haAvanzDoc ? "Questo contratto non dichiara lo speso: in verticale le risorse assegnate. " :
+    asseY === "resa" ? "In verticale lo speso sulle risorse assegnate. " : "In verticale lo speso sul costo. ";
+  $("#gConta").textContent = op.length ? cosa + `${op.length} opere su ${tot} con questi filtri · ${mln(cs)} di costo, ${mln(df)} da finanziare` :
     "Nessuna opera con questi filtri.";
   if (!op.length) return;
-  const val = y => asseY === "speso" ? y.x.speso : y.x.cop;
+  const val = valY;
   // asse orizzontale logaritmico sulle opere mostrate: con meno cerchi si allarga
   const lo = Math.log10(Math.max(1, Math.min(...op.map(y => y.x.costo)))) - 0.08,
         hi = Math.log10(Math.max(...op.map(y => y.x.costo))) + 0.08;
@@ -357,22 +370,27 @@ function scatter(){
     s += `<line x1="${X(v)}" x2="${X(v)}" y1="${mt}" y2="${H - mb}" stroke-dasharray="2 4"/>` +
       `<text x="${X(v)}" y="${H - mb + 18}" text-anchor="middle">${v >= 1000 ? nf(v / 1000, 0) + " mld" : nf(v, 0) + " mln"}</text>`;
   });
-  s += `<text x="${(W + ml) / 2}" y="${H - 6}" text-anchor="middle">costo dell'opera (scala logaritmica)</text></g>`;
+  s += `<text x="${(W + ml) / 2}" y="${H - 6}" text-anchor="middle">costo dell'opera (scala logaritmica)</text>` +
+    `<text transform="translate(12 ${(mt + H - mb) / 2}) rotate(-90)" text-anchor="middle">${!haAvanzDoc ? "assegnate sul costo" :
+      asseY === "resa" ? "speso sulle assegnate" : "speso sul costo"}</text></g>`;
   svg.innerHTML = s;
   const conCod = op.length <= 30;
   // i grandi sotto, cosi' i piccoli restano cliccabili
   op.slice().sort((a, b) => (b.x.dafin || 0) - (a.x.dafin || 0)).forEach(y => {
     const f = fin(y.x), r = 3.5 + 24 * Math.sqrt((y.x.dafin || 0) / maxDaf);
+    const col = haAvanzDoc ? COLHEX[f] : "#aca5bf";
     const cx = X(y.x.costo), cy = Y(val(y));
     const g = document.createElementNS(SVG, "g");
     g.setAttribute("class", "pt"); g.setAttribute("tabindex", "0");
     g.innerHTML = `<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${r.toFixed(1)}" ` +
-      `fill="${COLHEX[f]}" fill-opacity=".28" stroke="${COLHEX[f]}" stroke-width="1.2"/>` +
+      `fill="${col}" fill-opacity=".28" stroke="${col}" stroke-width="1.2"/>` +
       (conCod ? (cx > W - 90
         ? `<text class="cod" text-anchor="end" x="${(cx - Math.min(r, 10) - 3).toFixed(1)}" y="${(cy + 4).toFixed(1)}">${esc(y.o.c)}</text>`
         : `<text class="cod" x="${(cx + Math.min(r, 10) + 3).toFixed(1)}" y="${(cy + 4).toFixed(1)}">${esc(y.o.c)}</text>`) : "");
     g.addEventListener("mouseenter", e => mostra(`<b>${esc(y.o.c)}</b> ${esc(y.o.n)}<div class="t">costo ${esc(mln(y.x.costo))} · ` +
-      `speso ${pct(y.x.speso)} · assegnate ${pct(y.x.cop)} · da finanziare ${esc(mln(y.x.dafin))}</div>`, e));
+      `assegnate ${pct(y.x.cop)} · speso ${pct(y.x.speso)} del costo` +
+      (y.x.ass && y.x.avanz !== null ? `, ${pct(y.x.avanz / y.x.ass)} delle assegnate` : "") +
+      ` · da finanziare ${esc(mln(y.x.dafin))}</div>`, e));
     g.addEventListener("mousemove", sposta);
     g.addEventListener("mouseleave", nascondi);
     g.addEventListener("click", () => apri(y.o.c));
