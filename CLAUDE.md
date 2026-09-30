@@ -225,30 +225,31 @@ cambiano i valori, non le regole); i colori da leggere nel JS passano da
 positivo e di selezione, il rosso (`--rosso`) quello di cio' che manca e
 dell'alta velocita', la lavanda (`--lavanda`) i progetti dichiarati da RFI.
 
-## Cruscotto delle opere (prototipo)
+## Le opere (il cruscotto)
 
-`piattaforma/cruscotto.html` e' una seconda pagina, scura, con neon rosso e
-verde: si sceglie il contratto (come la run nel cruscotto ECHO) e si scende
-nelle opere. Numeri chiave, grafico costo contro speso o assegnato, le opere
-con piu' risorse da trovare, tabella ordinabile e scheda con storia nei
-contratti, mini mappa, tratte RFI (com'e' la linea oggi) e Piano Commerciale.
-I dati li incorpora `tools/cruscotto_dati.py` (in build_all.sh); il workflow
-di Pages copia la pagina cosi' com'e'.
+La pagina Interventi (parte Investimenti) e' il cruscotto delle opere, nato come
+pagina a parte (`piattaforma/cruscotto.html`, che ora rimanda qui) e innestato
+nella piattaforma. Il suo codice sta nel modulo `CR` in fondo allo script, con
+nomi propri che non toccano quelli della piattaforma: CSS sotto `.cr`, id con
+prefisso `cr-`, dati ricavati da quelli dell'applicazione da `crDati()`.
+- testata: contratto (lo stesso `docSel` di tutta la piattaforma: cambiarlo qui
+  passa da `cambiaDoc`, che poi chiama `CR.aggiorna()`), frase di sintesi,
+  numeri chiave;
+- "A che punto sono le opere": costo (log) contro speso sul costo o sulle
+  assegnate (asse a radice quadrata), cerchio = da finanziare, colore =
+  copertura; filtri sotto la figura; "Quanto manca";
+- tabella ordinabile e filtrabile, che decide anche l'ordine delle schede.
+La mappa delle regioni porta qui con `CR.regione(nome)`.
 
-La scheda dell'opera ha un indice fisso e si scorre con le frecce (anche da
-tastiera) nell'ordine e coi filtri della tabella. Sezioni: sintesi in una
-frase, contratti con variazioni di costo, territorio (passando su una tratta
-si accende sulla mappa), CUP e linee (il contratto da' il costo per opera, non
-per CUP: il disegno dice l'appartenenza, non importi), opere sulle stesse
-tratte (segnando quelle che nel Piano Commerciale sono un unico progetto RFI,
-che condividono le tratte per costruzione), Piano Commerciale.
-
-Le due pagine si rimandano: la mappa della rete (tratte e stazioni con le loro
-schede) resta nella piattaforma, e si apre su una scheda precisa con
-`#/rete/tratta/<n>`, `#/rete/stazione/<n>`, `#/rete/linea/<codice>` (n e'
-l'indice in rete_rfi.tratte o rete_rfi.stazioni). Il cruscotto porta per ogni
-tratta e stazione dell'opera il link alla sua scheda; la piattaforma ha in
-testata il link al cruscotto.
+La scheda dell'opera (`apriDettaglio` chiama `CR.apri`) ha indice fisso, frecce
+anche da tastiera, sintesi in una frase, contratti con variazioni, fabbisogno e
+fonti, territorio (mini mappa, tratte con link `#/rete/tratta/<n>`, stazioni),
+CUP e linee (con "come sono state trovate le linee" dalla scheda storica),
+opere sulle stesse tratte (segnando lo "stesso progetto RFI", che le condivide
+per costruzione), Piano Commerciale con la scheda del PDF, dettagli del
+contratto. I pezzi della scheda storica li produce `blocchiOpera(codice)`.
+L'indirizzo e' `#/opera/<codice>`: un clic lo imposta e apre il router, le
+frecce lo cambiano senza passarci, chiudere torna a `#/interventi`.
 
 ## Rimandi ai PDF
 
