@@ -296,6 +296,7 @@ def extract_doc(path, doc_id):
         prog_corr = None
         sotto_corr = None
         cls_prec = None
+        ultima = None     # l'ultimo intervento letto, per i CUP a cavallo di pagina
         for pi in sorted(pis):
             lines = cache[pi]
             v = vista_page(lines)
@@ -312,6 +313,16 @@ def extract_doc(path, doc_id):
                 pre = parse_prefix(l, xnum0)
                 vals, ex = assign(l)
                 nv = sum(1 for v in vals if v is not None)
+                # Un CUP in cima alla pagina, prima di ogni intervento, e' la
+                # coda dell'ultimo intervento della pagina precedente: la riga
+                # e' andata a capo sul salto pagina. Nell'aggiornamento 2025 il
+                # secondo CUP di P262A (Adriatica, 1a fase) sta cosi' a p. 73, e
+                # si perdeva.
+                if cur is None and pre["cup"] and not pre["code"] and nv == 0 \
+                        and ultima is not None and ultima["page"] == pi:
+                    if pre["cup"] not in ultima["cups"]:
+                        ultima["cups"].append(pre["cup"])
+                    continue
                 if pre["code"] and nv >= 3:
                     if cur:
                         out_rows.append(cur)
@@ -326,6 +337,7 @@ def extract_doc(path, doc_id):
                            "paniere_pnrr": pre["paniere_pnrr"],
                            "stato": pre["stato"], "vals": vals,
                            "cont": [], "off": ex}
+                    ultima = cur
                 elif nv >= 3 and not pre["code"] and is_programma(pre["descr"]):
                     if cur:
                         out_rows.append(cur)

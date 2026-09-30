@@ -95,6 +95,9 @@ fi
 # le viste Servizi: fonti, impieghi, assegnazioni per CUP, PNRR. Non dipende
 # dalla geografia, quindi gira in tutti i rami sopra
 python3 build_servizi.py ../data/servizi ../data/cdp-rfi-app.json
+# il registro unico dei CUP: Investimenti in corso e conclusi, Servizi
+python3 registro_cup.py ../data/cdp-rfi-dataset.json ../data/cdp-rfi-app.json \
+  ../data/cdp-rfi-app.json ../data/cup-registro.csv
 # i CSV dei comuni leggono l'app appena costruita, quindi vengono dopo
 python3 export_csv.py ../data/cdp-rfi-dataset.json ../data
 

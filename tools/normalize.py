@@ -145,14 +145,22 @@ def main():
             stato_fin = "non finanziato"
         else:
             stato_fin = "parzialmente finanziato"
+        # I CUP sono del contratto in cui compaiono: prima si univano quelli di
+        # tutti i contratti, e l'ultimo aggiornamento risultava con CUP che non
+        # riporta piu' (13 nel 2025, da contratti fino al 2017). "cups" sono
+        # quelli dell'ultimo contratto; lo storico li tiene contratto per
+        # contratto e "cups_tutti" li raccoglie tutti.
+        cups_ult = list(dict.fromkeys(c for s in snaps if s["doc"] == last["doc"]
+                                      for c in (s.get("cups") or [])))
         out.append({
             "codice": code, "descrizione": descr, "programma": prog,
             "programma_num": prognum, "programma_originale": progorig,
             "sottoprogramma": sotto,
             "classe": last.get("classe"),
             "classe_nome": last.get("classe_nome"),
-            "cup": next((s["cup"] for s in reversed(snaps) if s.get("cup")), None),
-            "cups": sorted({c for s in snaps for c in (s.get("cups") or [])}),
+            "cup": cups_ult[0] if cups_ult else None,
+            "cups": cups_ult,
+            "cups_tutti": sorted({c for s in snaps for c in (s.get("cups") or [])}),
             "classe_dpp": last.get("classe_dpp"),
             "paniere_pnrr": any(s.get("paniere_pnrr") for s in snaps),
             "stato_attuativo": last.get("stato_attuativo") or [],
@@ -172,6 +180,7 @@ def main():
                          "da_finanziare": s.get("da_finanziare"),
                          "avanzamento": s.get("avanzamento"),
                          "stato": s.get("stato_attuativo") or [],
+                         "cups": s.get("cups") or [],
                          "fonti": s.get("fonti")}
                         for s in snaps],
         })
