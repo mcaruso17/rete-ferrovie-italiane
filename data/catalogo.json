@@ -80,7 +80,7 @@
   {
    "file": "cup-registro.csv",
    "titolo": "Registro unico dei CUP",
-   "contenuto": "Una riga per CUP: in corso (Tabelle A e B dell'ultimo aggiornamento Investimenti), concluso (dettaglio delle opere ultimate), non piu' nel contratto, o della parte Servizi (Allegati 4c e 12), con interventi, data di messa in esercizio, documento e pagina.",
+   "contenuto": "Una riga per CUP: in corso (Tabelle A e B dell'ultimo aggiornamento Investimenti e CUP dei programmi dell'Appendice 2 alla Relazione Informativa), concluso (dettaglio delle opere ultimate), non piu' nel contratto, o della parte Servizi (Allegati 4c e 12), con interventi, data di messa in esercizio, documento e pagina.",
    "natura": "dal documento",
    "fonte": "CdP Investimenti 2017-2026 e CdP Servizi 2022-2026"
   },

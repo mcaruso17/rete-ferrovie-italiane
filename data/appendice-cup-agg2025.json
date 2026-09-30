@@ -1,0 +1,7318 @@
+{
+"documento": "appendice_2_lista_cup.pdf",
+"doc": "agg2025",
+"righe": [
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J57I11000180001",
+"descr": "Adeguamento sicurezza gallerie tratta AV/AC Torino-Milano",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J37I11000360001",
+"descr": "Adeguamento sicurezza gallerie tratta AV/AC Milano-Bologna",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J97I11000200001",
+"descr": "Adeguamento sicurezza gallerie tratta AV/AC Bologna-Firenze",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J17I11000450001",
+"descr": "Adeguamento sicurezza gallerie tratta AV/AC Roma-Napoli",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J77F20000050001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Cagliari - 2020",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J57D22000140001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Roma - 2023",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J57D22000150001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Roma - 2022",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J57D24000000001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Roma - 2024",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J57H21000830001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Roma - 2021",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J97B17000550001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Genova - 2017",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J97D22000310001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Genova - 2023",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J97D22000350001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Genova - 2022",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J97F20000090001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Genova - 2020",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J97H21015150001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Genova - 2021",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J97B17000560001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Milano - 2017",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J97D22000320001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Milano - 2023",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J97D24000010001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Milano - 2024",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J87B13000070001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Firenze - 2014",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J87B17000830001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Firenze - 2017",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J87F20000140001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Firenze - 2020",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J24H14000740001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Napoli - 2014",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J97B17000570001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Napoli - 2017",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J97D22000330001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Napoli - 2023",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J97D22000360001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Napoli - 2022",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J97D24000030001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Palermo - 2024",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J97F19000080001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Napoli - 2019",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J97F20000110001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Napoli - 2020",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J97H21000640001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Napoli - 2021",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J87B17000840001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Bologna - 2017",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J87D22000450001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Bologna - 2022",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J27B17000400001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Reggio Calabria - 2017",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J27D22000050001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Reggio Calabria - 2022",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J27D23000040001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Reggio Calabria - 2023",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J27D24000020001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Reggio Calabria - 2024",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J27F19000070001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Reggio Calabria - 2019",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J27H21000720001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Reggio Calabria - 2021",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J27I12000070001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Reggio Calabria - 2012",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J67B17000620001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Torino - 2017",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J67D22000210001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Torino - 2023",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J67F19000050001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Torino - 2019",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J37D22000140001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Trieste - 2023",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J37D22000150001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Trieste - 2022",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J37D24000010001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Trieste - 2024",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J97B17000580001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Verona - 2017",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J97D22000340001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Verona - 2023",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J97D22000370001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Verona - 2022",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J97D24000040001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Verona - 2024",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J97F19000090001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Verona - 2019",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J57B16000220001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - Territorio Nazionale - 2016",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J57E13000230001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - Territorio Nazionale - 2013",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J57I08000200001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - Territorio Nazionale - ante 2011",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J57I12000140001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - Territorio Nazionale - 2012",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J87B17000850001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Ancona - 2017",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J87D22000440001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Ancona - 2024",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J87D24000050001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Ancona - 2024",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J87F19000170001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Ancona - 2019",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J87H21007930001",
+"descr": "Miglioramento sicurezza gallerie ferroviarie - DOIT Ancona - 2021",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J57B16000260001",
+"descr": "Sorveglianza delle gallerie ferroviarie",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J57D25000010001",
+"descr": "Miglioramento sicurezza in galleria OC",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004A",
+"cup": "J27D25000010001",
+"descr": "RC - Miglioramento sicurezza in galleria",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004B",
+"cup": "J31H01000190001",
+"descr": "Progettazione Piano di Risanamento Acustico",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004B",
+"cup": "J19G02000010001",
+"descr": "Realizzazione Piano di Risanamento Acustico",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004B",
+"cup": "J19G02000010001",
+"descr": "Realizzazione Piano di Risanamento Acustico",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004B",
+"cup": "J19G02000010001",
+"descr": "Realizzazione Piano di Risanamento Acustico",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004B",
+"cup": "J19G02000010001",
+"descr": "Realizzazione Piano di Risanamento Acustico",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004B",
+"cup": "J19G02000010001",
+"descr": "Realizzazione Piano di Risanamento Acustico",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004B",
+"cup": "J19G02000010001",
+"descr": "Realizzazione Piano di Risanamento Acustico",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004D",
+"cup": "J87F20000250001",
+"descr": "Smaltimento materiali inquinanti (DOIT Ancona) - 2020",
+"p": 2
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004D",
+"cup": "J87F20000080001",
+"descr": "Smaltimento materiali inquinanti (DOIT Firenze) - 2020",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004D",
+"cup": "J97H21017050001",
+"descr": "Smaltimento materiali inquinanti (DOIT Genova) - 2021",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004D",
+"cup": "J97J18000110001",
+"descr": "Smaltimento materiali inquinanti (DOIT Napoli) - 2018",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004D",
+"cup": "J67J18000180001",
+"descr": "Smaltimento materiali inquinanti (DOIT Palermo) - 2018",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004D",
+"cup": "J67D22000110001",
+"descr": "Smaltimento materiali inquinanti (DOIT Torino) - annualità 2022",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004D",
+"cup": "J67H21010160001",
+"descr": "Smaltimento materiali inquinanti (DOIT Torino) - 2021",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004D",
+"cup": "J37F20000010001",
+"descr": "Smaltimento materiali inquinanti (DOIT Trieste) - 2020",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004D",
+"cup": "J17F19000080001",
+"descr": "Smaltimento materiali inquinanti (DOIT Venezia) - 2019",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004D",
+"cup": "J17J18000630001",
+"descr": "Smaltimento materiali inquinanti (DOIT Venezia) - 2018",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004D",
+"cup": "J97F20000210001",
+"descr": "Smaltimento materiali inquinanti (DOIT Verona) - 2020",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004D",
+"cup": "J97J18000120001",
+"descr": "Smaltimento materiali inquinanti (DOIT Verona) - 2018",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004E",
+"cup": "J87D18000010001",
+"descr": "Piano sicurezza armamento DOIT Bari - 2018",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004E",
+"cup": "J87J19000060001",
+"descr": "Piano sicurezza armamento DOIT Bari - 2019",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004E",
+"cup": "J87F20000060001",
+"descr": "Piano sicurezza armamento DOIT Bologna - 2020",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004E",
+"cup": "J87G20000110001",
+"descr": "Piano sicurezza armamento DOIT Bologna - 2021",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004E",
+"cup": "J97D18000030001",
+"descr": "Piano sicurezza armamento DOIT Genova - 2018",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004E",
+"cup": "J97F20000000001",
+"descr": "Piano sicurezza armamento DOIT Genova - 2020",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004E",
+"cup": "J97G20000060001",
+"descr": "Piano sicurezza armamento DOIT Genova - 2021",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004E",
+"cup": "J97B16000220001",
+"descr": "Piano sicurezza armamento DOIT Napoli - 2016",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004E",
+"cup": "J97B17000310001",
+"descr": "Piano sicurezza armamento DOIT Napoli - 2017",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004E",
+"cup": "J97D18000010001",
+"descr": "Piano sicurezza armamento DOIT Napoli - 2018",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004E",
+"cup": "J97F20000020001",
+"descr": "Piano sicurezza armamento DOIT Napoli - 2020",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004E",
+"cup": "J97G20000070001",
+"descr": "Piano sicurezza armamento DOIT Napoli - 2021",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004E",
+"cup": "J97J19000070001",
+"descr": "Piano sicurezza armamento DOIT Napoli - 2019",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004E",
+"cup": "J27H21000680001",
+"descr": "Piano sicurezza armamento DOIT Reggio Calabria - 2021",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004E",
+"cup": "J67B16000130001",
+"descr": "Piano sicurezza armamento DOIT Torino - 2016",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004E",
+"cup": "J67D18000010001",
+"descr": "Piano sicurezza armamento DOIT Torino - 2018",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004E",
+"cup": "J67G20000010001",
+"descr": "Piano sicurezza armamento DOIT Torino - 2021",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004E",
+"cup": "J67J19000040001",
+"descr": "Piano sicurezza armamento DOIT Torino - 2019",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004E",
+"cup": "J37D18000000001",
+"descr": "Piano sicurezza armamento DOIT Trieste - 2018",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004E",
+"cup": "J97G20000080001",
+"descr": "Piano sicurezza armamento DOIT Verona - 2021",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004F",
+"cup": "J54G18000190001",
+"descr": "Adeguamento a STI opere civili - Sede centrale",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004F",
+"cup": "J84E21002850001",
+"descr": "Adeguamento a STI opere civili - DOIT Ancona",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004F",
+"cup": "J84G18000190001",
+"descr": "Adeguamento a STI opere civili - DOIT Bologna",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004F",
+"cup": "J74E21000910001",
+"descr": "Adeguamento a STI opere civili - DOIT Cagliari",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004F",
+"cup": "J84G18000200001",
+"descr": "Adeguamento a STI opere civili - DOIT Firenze",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004F",
+"cup": "J94G18000150001",
+"descr": "Adeguamento a STI opere civili - DOIT Genova",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004F",
+"cup": "J94G18000160001",
+"descr": "Adeguamento a STI opere civili - DOIT Milano",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004F",
+"cup": "J64G18000200001",
+"descr": "Adeguamento a STI opere civili - DOIT Palermo",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004F",
+"cup": "J54G18000200001",
+"descr": "Adeguamento a STI opere civili - DOIT Roma",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004F",
+"cup": "J64G18000210001",
+"descr": "Adeguamento a STI opere civili - DOIT Torino",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004F",
+"cup": "J34G18000210001",
+"descr": "Adeguamento a STI opere civili - DOIT Trieste",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004F",
+"cup": "J14G18000260001",
+"descr": "Adeguamento a STI opere civili - DOIT Venezia",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004F",
+"cup": "J94G18000170001",
+"descr": "Adeguamento a STI opere civili - DOIT Verona",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1004F",
+"cup": "J53D21001370001",
+"descr": "Rilievi opere d’arte e progettazione interventi",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1006",
+"cup": "J19G01000000001",
+"descr": "Piano Soppressione Passaggi a Livello",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1006",
+"cup": "J19G01000000001",
+"descr": "Piano Soppressione Passaggi a Livello",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1006",
+"cup": "J19G01000000001",
+"descr": "Piano Soppressione Passaggi a Livello",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1006",
+"cup": "J19G01000000001",
+"descr": "Piano Soppressione Passaggi a Livello",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1006",
+"cup": "J19G01000000001",
+"descr": "Piano Soppressione Passaggi a Livello",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1006",
+"cup": "J19G01000000001",
+"descr": "Piano Soppressione Passaggi a Livello",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1006",
+"cup": "J19G01000000001",
+"descr": "Piano Soppressione Passaggi a Livello",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1006",
+"cup": "J19G01000000001",
+"descr": "Piano Soppressione Passaggi a Livello",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1006",
+"cup": "J19G01000000001",
+"descr": "Piano Soppressione Passaggi a Livello",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1006",
+"cup": "J57D17000020001",
+"descr": "Soppressione PL privati",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1006",
+"cup": "J84H20000860001",
+"descr": "Interventi di soppressione passaggi a livello su SS38 - linea Milano-Lecco - Sondrio - Tirano",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J67D22000030001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Torino - 2022",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J67D24000010001",
+"descr": "TO - Mitigazione rischio idrogeologico",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J67F20000110001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Torino - 2020",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J67H21000790001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Torino - 2021",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J67I18000050001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Torino - 2018",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J67J19000010001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Torino - 2019",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97B17000250001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Milano - 2017",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97D22000000001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Milano - 2022",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97D23000000001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Milano - 2023",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97H21000650001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Milano - 2021",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97I18000040001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Milano - 2018",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97J19000010001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Milano - 2019",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97B16000250001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Verona - 2016",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97D22000010001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Verona - 2022",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97D23000010001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Verona - 2023",
+"p": 3
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97F20000140001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Verona - 2020",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97H21000660001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Verona - 2021",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97J19000020001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Verona - 2019",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J17B17000060001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Venezia - 2017",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J17D22000000001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Venezia - 2022",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J17D23000010001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Venezia - 2023",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J17F20000030001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Venezia - 2020",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J17H21000420001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Venezia - 2021",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J17I18000060001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Venezia - 2018",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J17J19000000001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Venezia - 2019",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J37D22000000001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Trieste - 2022",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J37D23000030001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Trieste - 2023",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87D22000030001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Bologna - 2022",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87D23000040001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Bologna - 2023",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87H21001150001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Bologna - 2021",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87I18000020001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Bologna - 2018",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87J19000010001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Bologna - 2019",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97D22000020001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Genova - 2022",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97D23000020001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Genova - 2023",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97F20000150001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Genova - 2020",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97H21000590001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Genova - 2021",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87D22000040001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Ancona - 2022",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87D23000050001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Ancona - 2023",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87D22000050001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Firenze - 2022",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87D23000060001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Firenze - 2023",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87H21001170001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Firenze - 2021",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87J19000030001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Firenze - 2019",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J57D22000010001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Roma - 2022",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J57D23000010001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Roma - 2023",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97B16000270001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Napoli - 2016",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97B17000280001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Napoli - 2017",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97D22000030001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Napoli - 2022",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97D23000030001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Napoli - 2023",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97F20000160001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Napoli - 2020",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97H21000600001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Napoli - 2021",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97I18000070001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Napoli - 2018",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97J19000040001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Napoli - 2019",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87D22000060001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Bari - 2022",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87D23000070001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Bari - 2023",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87F20000210001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Bari - 2020",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87H21001180001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Bari - 2021",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87J19000040001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Bari - 2019",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J27B17000050001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Reggio Calabria - 2017",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J27D22000000001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Reggio Calabria - 2022",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J27D23000000001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Reggio Calabria - 2023",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J27F20000040001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Reggio Calabria - 2020",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J27H21000700001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Reggio Calabria - 2021",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J27I18000010001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Reggio Calabria - 2018",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J27J19000050001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Reggio Calabria - 2019",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J67D22000010001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Palermo - 2022",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J67D24000020001",
+"descr": "PA - Mitigazione rischio idrogeologico",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J67H21000760001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Palermo - 2021",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J77D22000000001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Cagliari - 2022",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J77D23000020001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Cagliari - 2023",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J77F20000060001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Cagliari - 2020",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J77H21001030001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Cagliari - 2021",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J77J19000010001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - DOIT Cagliari - 2019",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97B15000330001",
+"descr": "Piano difesa della sede da fenomeni di dissesto idrogeologico - Territorio Nazionale",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "E71I23000320009",
+"descr": "Intervento di difesa del paraggio con opere rigide e morbide nel comune di Potenza Picena e Civitanova Marche",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87D24000230001",
+"descr": "BO - Mitigazione rischio idrogeologico",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87D24000240001",
+"descr": "FI - Mitigazione rischio idrogeologico",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87D25000030001",
+"descr": "FI - Mitigazione rischio idrogeologico",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87D24000260001",
+"descr": "Frana Fiume Latte",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97D24000110001",
+"descr": "VR - Mitigazione rischio idrogeologico",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87D25000020001",
+"descr": "DTP.BO dif.Sede da fenom.dissesto idrog",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97D24000120001",
+"descr": "Eventi eccezionali climate change",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97D25000000001",
+"descr": "UTL Interventi dissesto",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J27D24000090001",
+"descr": "AN - Mitigazione rischio idrogeologico",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87D25000000001",
+"descr": "UTL Interventi dissesto",
+"p": 4
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J57D24000110001",
+"descr": "RM - Mitigazione rischio idrogeologico",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J57D25000000001",
+"descr": "MITIGAZIONE RISCHIO IDROGEOLOGICO 2025",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97D24000130001",
+"descr": "NA - Mitigazione rischio idrogeologico",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97D25000020001",
+"descr": "MITIGAZIONE RISCHIO IDROGEOLOGICO 2025",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87D24000250001",
+"descr": "BA - Mitigazione rischio idrogeologico",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J87D25000010001",
+"descr": "Mitigazione rischio idrogeologico UT SE",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J27D24000100001",
+"descr": "Mitigazione rischio idrogeologico UT SE",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J27D25000000001",
+"descr": "Mitigazione rischio idrogeologico UT SE",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J67D25000000001",
+"descr": "Mitigazione rischio idrogeologico UT SE",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J77D25000000001",
+"descr": "NA - Mitigazione rischio idreogeologico",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97D25000010001",
+"descr": "Rischio Idrogeologico",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J97D25000030001",
+"descr": "Mitigazione rischio idrogeol. DOIT VR",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J17D25000000001",
+"descr": "DOIT VE - Mitigazione rischio idrogeolog",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013A",
+"cup": "J37D25000000001",
+"descr": "TS - Mitigazione rischio idrogeologico",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013B",
+"cup": "J57I12000690001",
+"descr": "Verifiche sismiche su opere d'arte",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013B",
+"cup": "J82J19000170001",
+"descr": "Miglioramento sismico - DOIT Ancona",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013B",
+"cup": "J82H23000710001",
+"descr": "Miglioramento sismico - DOIT Bari",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013B",
+"cup": "J81I19000000001",
+"descr": "Miglioramento sismico - DOIT Bologna",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013B",
+"cup": "J82J19000180001",
+"descr": "Miglioramento sismico - DOIT Firenze",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013B",
+"cup": "J92J19000070001",
+"descr": "Miglioramento sismico - DOIT Milano",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013B",
+"cup": "J92J19000080001",
+"descr": "Miglioramento sismico - DOIT Napoli",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013B",
+"cup": "J62J19000160001",
+"descr": "Miglioramento sismico - DOIT Palermo",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013B",
+"cup": "J22J19000060001",
+"descr": "Miglioramento sismico - DOIT Reggio Calabria",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013B",
+"cup": "J52J19000130001",
+"descr": "Miglioramento sismico - DOIT Roma",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013B",
+"cup": "J62J19000170001",
+"descr": "Miglioramento sismico - DOIT Torino",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013B",
+"cup": "J32J19000150001",
+"descr": "Miglioramento sismico - DOIT Trieste",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013B",
+"cup": "J12J19000180001",
+"descr": "Miglioramento sismico - DOIT Venezia",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013B",
+"cup": "J11G24000000001",
+"descr": "Miglioramento sismico - DOIT Verona",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013B",
+"cup": "J59F22000120001",
+"descr": "Estensione verifiche sismiche",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013B",
+"cup": "J47D22000170001",
+"descr": "Verifiche di vulnerabilità fisica fabbricati di stazione - Area Nord",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013B",
+"cup": "J87D22000320001",
+"descr": "Verifiche vulnerabilità fisica fabbricati di stazione - Area  Centro Nord",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013B",
+"cup": "J17D22000120001",
+"descr": "Verifiche vulnerabilità fisica fabbricati di stazione - Area Centro Sud",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1013B",
+"cup": "J56C22000300001",
+"descr": "Sistema attivo mitigazazione rischio sismico",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J87H21001190001",
+"descr": "Piano conservazione opere d'arte DOIT Ancona- 2021",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J87F20000230001",
+"descr": "Piano conservazione opere d'arte DOIT Bari- 2020",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J87H21001200001",
+"descr": "Piano conservazione opere d'arte DOIT Bari- 2021",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J87F20000010001",
+"descr": "Piano conservazione opere d'arte DOIT Bologna- 2020",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J87H21001210001",
+"descr": "Piano conservazione opere d'arte DOIT Bologna- 2021",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J77F19000070001",
+"descr": "Piano conservazione opere d'arte DOIT Cagliari- 2019",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J77H21001040001",
+"descr": "Piano conservazione opere d'arte DOIT Cagliari- 2021",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J87F19000210001",
+"descr": "Piano conservazione opere d'arte DOIT Firenze- 2019",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J87F20000240001",
+"descr": "Piano conservazione opere d'arte DOIT Firenze- 2020",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J87H21001220001",
+"descr": "Piano conservazione opere d'arte DOIT Firenze- 2021",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J97F20000170001",
+"descr": "Piano conservazione opere d'arte DOIT Genova- 2020",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J97H21000610001",
+"descr": "Piano conservazione opere d'arte DOIT Genova- 2021",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J97F20000180001",
+"descr": "Piano conservazione opere d'arte DOIT Milano- 2020",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J97H21000620001",
+"descr": "Piano conservazione opere d'arte DOIT Milano- 2021",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J97F20000190001",
+"descr": "Piano conservazione opere d'arte DOIT Napoli- 2020",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J97H21000630001",
+"descr": "Piano conservazione opere d'arte DOIT Napoli- 2021",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J67F20000130001",
+"descr": "Piano conservazione opere d'arte DOIT Palermo- 2020",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J67H21000770001",
+"descr": "Piano conservazione opere d'arte DOIT Palermo- 2021",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J27F20000050001",
+"descr": "Piano conservazione opere d'arte DOIT Reggio Calabria- 2020",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J27H21000710001",
+"descr": "Piano conservazione opere d'arte DOIT Reggio Calabria- 2021",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J67F19000070001",
+"descr": "Piano conservazione opere d'arte DOIT Torino- 2019",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J67F20000140001",
+"descr": "Piano conservazione opere d'arte DOIT Torino- 2020",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J67H21000780001",
+"descr": "Piano conservazione opere d'arte DOIT Torino- 2021",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J27H21003100001",
+"descr": "Piano conservazione opere d'arte DOIT Trieste- 2021",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J37F20000070001",
+"descr": "Piano conservazione opere d'arte DOIT Trieste- 2020",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J17F20000040001",
+"descr": "Piano conservazione opere d'arte DOIT Venezia- 2020",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J17H21000430001",
+"descr": "Piano conservazione opere d'arte DOIT Venezia- 2021",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J97F19000150001",
+"descr": "Piano conservazione opere d'arte DOIT Verona- 2019",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J97F20000200001",
+"descr": "Piano conservazione opere d'arte DOIT Verona- 2020",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J97H21000670001",
+"descr": "Piano conservazione opere d'arte DOIT Verona- 2021",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1014",
+"cup": "J47H20000320001",
+"descr": "Ponte fiume Dora Baltea S. Anna",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A1017",
+"cup": "J54J25000060001",
+"descr": "Monitoraggio infrastruttura",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "1",
+"codice": "A2004F",
+"cup": "J64H16000160001",
+"descr": "Mitigazione effetti venti trasversali",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A1015",
+"cup": "J54J23000580001",
+"descr": "Cyber Security per impianti CCS e TLC",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A1015",
+"cup": "J54J25000130001",
+"descr": "Protezione infrastruttura",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J47J18000310001",
+"descr": "Attrezzaggi Tecnologici Linee ed Impianti DOIT Ancona - 2018",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J54E21000750001",
+"descr": "Attrezzaggi tecnologici DOIT Milano - 2021",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J97D22000090001",
+"descr": "Attrezzaggi tecnologici DOIT Milano - 2023",
+"p": 5
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J64G18000150001",
+"descr": "Attrezzaggi tecnologici DOIT Trieste - 2018",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J21H03000140001",
+"descr": "Attrezzaggi tecnologici DOIT Ancona",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J21H03000140001",
+"descr": "Attrezzaggi tecnologici DOIT Ancona",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J21H03000140001",
+"descr": "Attrezzaggi tecnologici DOIT Ancona",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J21H03000140001",
+"descr": "Attrezzaggi tecnologici DOIT Ancona",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J21H03000140001",
+"descr": "Attrezzaggi tecnologici DOIT Ancona",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J21H03000140001",
+"descr": "Attrezzaggi tecnologici DOIT Ancona",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J21H03000140001",
+"descr": "Attrezzaggi tecnologici DOIT Ancona",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J21H03000140001",
+"descr": "Attrezzaggi tecnologici DOIT Ancona",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J21H03000140041",
+"descr": "Attrezaggi tecnologici DOIT Reggio Calabria",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J21H03000140011",
+"descr": "Attrezaggi tecnologici DOIT Roma",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J21H03000140021",
+"descr": "Attrezaggi tecnologici DOIT Torino",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J47I06000110001",
+"descr": "Riconfigurazione impianti SCMT Bari",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J67I07000010001",
+"descr": "Riconfigurazione impianti SCMT Napoli",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J27I06000050001",
+"descr": "Riconfig impianti SCMT Bologna",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J37I06000170001",
+"descr": "Riconfigurazione impianti SCMT Milano",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J17I07000000001",
+"descr": "Riconfigurazione impianti SCMT Roma",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J27I07000000001",
+"descr": "Riconfigurazione impianti SCMT Ancona",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J97B17000510001",
+"descr": "Piano di sviluppo tecnologico della rete DOIT Genova - 2017",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J97H21001500001",
+"descr": "Piano di sviluppo tecnologico della rete DOIT Genova - 2021",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J14E21001750001",
+"descr": "Piano di sviluppo tecnologico della rete - 2021",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J57I10000430001",
+"descr": "Rinnovo impianti di stazione",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J57B16000430009",
+"descr": "Upgrading e rinnovo impianti tecnologici - interventi diffusi Rinnovo/upgrade tecnologico dell'attuale sistema di distanziamento blocco conta assi (BCA) delle linee Benevento-",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J36I18000030001",
+"descr": "Avellino/Caserta, Vairano C./Rocca D'Evandro - Venafro",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J56E19000070009",
+"descr": "Tecnologie per la sicurezza",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J47H21002070001",
+"descr": "Attrezzaggi tecnologi - DOIT Bari",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J87H21004090001",
+"descr": "Attrezzaggi tecnologi - DOIT Firenze",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J97H21002300001",
+"descr": "Attrezzaggi tecnologi - DOIT Napoli",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J67H21004990001",
+"descr": "Attrezzaggi tecnologi - DOIT Palermo",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J50F22000020001",
+"descr": "Catenaria/Pantografo",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J80D16000030005",
+"descr": "Acquisto materiale d'eser. Dir.Sanità - 2016",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J54H16000770001",
+"descr": "Piano Upgrading SSE",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J84J24000100001",
+"descr": "Sottosistema strutturale energetico - DOIT Ancona",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J84J24000110001",
+"descr": "Sottosistema strutturale energetico - DOIT Bari",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J84J24000120001",
+"descr": "Sottosistema strutturale energetico - DOIT Bologna",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J84J24000130001",
+"descr": "Sottosistema strutturale energetico - DOIT Firenze",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J94J24000010001",
+"descr": "Sottosistema strutturale energetico - DOIT Genova",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J94J24000020001",
+"descr": "Sottosistema strutturale energetico - DOIT Milano",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J94J24000030001",
+"descr": "Sottosistema strutturale energetico - DOIT Napoli",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J64J24000050001",
+"descr": "Sottosistema strutturale energetico - DOIT Palermo",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J24J24000110001",
+"descr": "Sottosistema strutturale energetico - DOIT Reggio Calabria",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J54J24000080001",
+"descr": "Sottosistema strutturale energetico - DOIT Roma",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J64J24000060001",
+"descr": "Sottosistema strutturale energetico - DOIT Torino",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J34J24000020001",
+"descr": "Sottosistema strutturale energetico - DOIT Trieste",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J14J24000010001",
+"descr": "Sottosistema strutturale energetico - DOIT Venezia",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J94J24000040001",
+"descr": "Sottosistema strutturale energetico - DOIT Verona",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J14E22000000001",
+"descr": "Potenziamento impianti di trazione elettrica treni per merci pesanti",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J46G21003990001",
+"descr": "Sviluppo Posti Centrali Nord",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J86G21006210001",
+"descr": "Sviluppo Posti Centrali Centro",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J16G21003640001",
+"descr": "Sviluppo Posti Centrali Sud",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J67D24000030001",
+"descr": "Upgrading posti Centrali linea Adriatica",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J50D16000050001",
+"descr": "Rinnovo parco mezzi d'opera per manutenzione",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J50D17000020001",
+"descr": "Revamping dei mezzi d'opera e della diagnostica",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J50D17000010001",
+"descr": "Acquisto treni e locomotive di manovra per la diagnostica",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "B83D21014280004",
+"descr": "Autoproduzione di Energia Elettrica da Fonti Rinnovabili – 1° tranche",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "B83D21014280004",
+"descr": "Interventi di Miglioramento Infrastrutturale e Tecnologico - ambito BA",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J54G18000210009",
+"descr": "Water Management",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J52J19000140001",
+"descr": "Analisi operativa del processo di valori",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J51G22000180001",
+"descr": "Potenziamento IaP Intera Rete",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J57D23000030001",
+"descr": "Obblighi di legge DCI -2023",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J57D24000040001",
+"descr": "Obblighi di legge DCI -2024",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J57H21000760001",
+"descr": "Obblighi di legge DCI - 2021",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J66E19000030009",
+"descr": "Technical Academy",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J51E20000200009",
+"descr": "Technical Academy - Digital Learning",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J56J16000460001",
+"descr": "Piano nazionale Apparati Centrali Computerizzati (ACC) internalizzati",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J57D24000070001",
+"descr": "Manutenzione straordinaria e OO.LL.",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J54J25000070001",
+"descr": "Upgr. Tec. AV/AC TO - MI e Treviglio-BS",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J34J25000040001",
+"descr": "Upgrading tecnologico AV/AC MI - BO",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2001B",
+"cup": "J94J25000010001",
+"descr": "Upgrading tecnologico AV/AC BO - FI",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004A",
+"cup": "J41H02000080061",
+"descr": "Sistema di Controllo Marcia Treno (SCMT)-realizzazione sottosistema di terra (SST) - DOIT Firenze",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004A",
+"cup": "J31H03000340001",
+"descr": "Sistema di Controllo Marcia Treno (SCMT)-nuove sperimentazioni",
+"p": 6
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004A",
+"cup": "J11J05000060001",
+"descr": "Sistema di Supporto alla Condotta treno (SSC)",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004A",
+"cup": "J57I11000200001",
+"descr": "Sistema di Supporto alla Condotta treno (SSC) e diagnostica - Piano per la sicurezza della circolazione Atto MIT",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004A",
+"cup": "J57I11000210001",
+"descr": "Sistema di Controllo Marcia Treno (SCMT)-Piano per la sicurezza della circolazione Atto MIT",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004A",
+"cup": "J56C17000070001",
+"descr": "Tecnologie per la sicurezza settore IS",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004A",
+"cup": "J87D22000470001",
+"descr": "Tecnologie per la sicurezza settore IS - DOIT Bari",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004A",
+"cup": "J87D22000480001",
+"descr": "Tecnologie per la sicurezza settore IS - DOIT Bologna",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004A",
+"cup": "J77D22000090001",
+"descr": "Tecnologie per la sicurezza settore IS - DOIT Cagliari",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004A",
+"cup": "J87D22000490001",
+"descr": "Tecnologie per la sicurezza settore IS - DOIT Firenze",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004A",
+"cup": "J97D22000390001",
+"descr": "Tecnologie per la sicurezza settore IS - DOIT Genova",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004A",
+"cup": "J97D22000400001",
+"descr": "Tecnologie per la sicurezza settore IS - DOIT Milano",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004A",
+"cup": "J67D22000240001",
+"descr": "Tecnologie per la sicurezza settore IS - DOIT Palermo",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004A",
+"cup": "J27D22000140001",
+"descr": "Tecnologie per la sicurezza settore IS - DOIT Reggio Calabria",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004A",
+"cup": "J57D22000190001",
+"descr": "Tecnologie per la sicurezza settore IS - DOIT Roma",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004A",
+"cup": "J37D22000180001",
+"descr": "Tecnologie per la sicurezza settore IS - DOIT Trieste",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004A",
+"cup": "J17D22000170001",
+"descr": "Tecnologie per la sicurezza settore IS - DOIT Venezia",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004B",
+"cup": "J31H02000040001",
+"descr": "Piano sistemi di Rilevazione Termica Boccole (RTB) e Rilevazione Ruote Frenate (RRF) Piano sistemi di Rilevazione Termica Boccole (RTB) e Rilevazione Ruote Frenate (RRF)-Piano per la sicurezza della circolazione",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004B",
+"cup": "J57I11000220001",
+"descr": "Atto MIT",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004B",
+"cup": "J57I10000230001",
+"descr": "Piano Portali Multifunzionali",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004C",
+"cup": "J54B13001100001",
+"descr": "Piano interventi per sicurezza e regolarità Passaggi a Livello",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004D",
+"cup": "J51E17000360001",
+"descr": "Sviluppo e realizzazione diagnostica centralizzata enti IS",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004E",
+"cup": "J24H16000310001",
+"descr": "Dismissione dei contesti di esercizio obsoleti",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004G",
+"cup": "J54B13001090001",
+"descr": "Attrezzaggi e adeguamenti tecnologici innovativi",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2004G",
+"cup": "J54C19000270001",
+"descr": "Attrezzaggi/Adeguamenti innovativi infrastruttura",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2005",
+"cup": "J56I18000040001",
+"descr": "Potenziamento tecnologico sistemi TLC",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2005",
+"cup": "J54J23000750001",
+"descr": "Gigabit Rail & Road",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2005",
+"cup": "J56E19000260009",
+"descr": "Nuova Rete di Trasmissione Dati RFI",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2008",
+"cup": "J31H92000050421",
+"descr": "Studi e prototipi di componenti per sistemi di sicurezza",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2008",
+"cup": "J11J05000010001",
+"descr": "1° pacchetto di ricerca applicata nel settore dell' ingegneria civile",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2008",
+"cup": "J31C05000000001",
+"descr": "Realizzazione del SST-SCMT su linee afferenti tratte AV/AC",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2008",
+"cup": "J37I11000050001",
+"descr": "High Density Traffic System (H.D.T.S.) - sperimentazione su nodo di Roma",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2008",
+"cup": "J54C14000040001",
+"descr": "Sviluppi per Tecnologie IS,TE,TLC e ARM",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2008",
+"cup": "J54C14000050001",
+"descr": "Sviluppi per Tecnologie ERTMS",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2008",
+"cup": "J31H92000050311",
+"descr": "Studi, sperimentazioni e strumenti di certificazione e misura",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2008",
+"cup": "J86J17000630009",
+"descr": "Dimostratori tecnologici di Osmannoro",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2008",
+"cup": "J54J18000010001",
+"descr": "Circuito test San Donato",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2008",
+"cup": "J50H19000040001",
+"descr": "Acquisti a rimpiazzo sviluppo e innovazione - 2019",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2008",
+"cup": "J50J21000040001",
+"descr": "Acquisti a rimpiazzo sviluppo e innovazione - 2021",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2008",
+"cup": "J51J20000160001",
+"descr": "Sviluppo Sistema a radar coerenti",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2008",
+"cup": "J51E20000240001",
+"descr": "Sviluppo piattaforme di RFI. Hardware e Software",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2009",
+"cup": "J57B16000350001",
+"descr": "Miglioramento della funzionalità e del decoro delle stazioni",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2009",
+"cup": "J51E17000160001",
+"descr": "SEM e diagnostica di stazione",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2009",
+"cup": "J51E17000170001",
+"descr": "Wi Life Station",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2009",
+"cup": "J51E17000140001",
+"descr": "Smart Station - Tornelli 2.0 (interventi ICT)",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2009",
+"cup": "J54H17000260001",
+"descr": "Smart Station - Tornelli 2.0 (interventi infrastrutturali)",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2009",
+"cup": "J51B21001200001",
+"descr": "Attrezzaggio SEM",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2009",
+"cup": "J31H03000320001",
+"descr": "Piano impianti integrati di security",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2009",
+"cup": "J50D16000040001",
+"descr": "Acquisto materiali per security e Polfer - 2016",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2009",
+"cup": "J50I21000010001",
+"descr": "Acquisto materiali per security e Polfer - 2021",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2009",
+"cup": "J54D21000030001",
+"descr": "Upgrade impianti di security - 2021",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2009",
+"cup": "J57B16000280001",
+"descr": "Upgrade impianti di security - 2016",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2009",
+"cup": "J57D22000050001",
+"descr": "Upgrade impianti di security - 2022",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2009",
+"cup": "J57F19000020001",
+"descr": "Upgrade impianti di security - 2019",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2009",
+"cup": "J57I12000720001",
+"descr": "Upgrade impianti di security - 2013",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2009",
+"cup": "J57B15000010005",
+"descr": "Efficientamento Energetico - 2015",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2009",
+"cup": "J51D18000080001",
+"descr": "Sistema integrato di videosorveglianza",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2009",
+"cup": "J51G17000010001",
+"descr": "Sperimentazione e innovazione tecnologica",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J50F24000010001",
+"descr": "Acquisti a rimpiazzo Piano Sicurezza - 2024",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J59B09000080001",
+"descr": "Sistema Rilevazione Presenze e Controllo accessi",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J54F12000000001",
+"descr": "Adeguamento Tariffe RFI",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J57I12000250001",
+"descr": "Sistema geologia",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J54F12000030001",
+"descr": "Nuove architetture ICT",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J54F12000050001",
+"descr": "RFI-RINF Registro Infrastrutture Ferroviarie",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J54C14000000001",
+"descr": "Energy Management Information System",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51E17000330005",
+"descr": "Sistemi applicativi Settore Sanitario",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51E17000030001",
+"descr": "Nuovo modello contabile e di controllo",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51E17000180001",
+"descr": "Upgrade tecnologico del Sistema InRete",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51E17000150001",
+"descr": "Virtual Assistant per le persone a Ridotta Mobilità",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51E17000230001",
+"descr": "Supervisione e Regolazione",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51E17000270001",
+"descr": "Sistema Prescrizioni Movimento 2.0",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51E17000280001",
+"descr": "Implementazioni Sistemi IT Area Protezione Aziendale",
+"p": 7
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51E17000340001",
+"descr": "Operation IT",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51E17000350001",
+"descr": "Piattaforma sicurezza ferroviaria",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51E17000580001",
+"descr": "Evoluzione sistema di gestione finanziaria investimenti",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51E17000600001",
+"descr": "Sistema di gestione man sul campo I-MAN",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51B21001650001",
+"descr": "Evoluzioni sistemi e soluzioni IT area Amministrazione Finanza Controllo - 2021",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51B22000090001",
+"descr": "Evoluzioni sistemi e soluzioni IT area Amministrazione Finanza Controllo -2022",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51G23000030001",
+"descr": "Evoluzione sistemi e soluzioni IT area AFC",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51G24000160001",
+"descr": "Evoluzione sistemi e soluzioni IT area AFC",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51I19000040001",
+"descr": "evoluzione sistemi 2019",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51D18000120001",
+"descr": "Sistema Gestione Disegni Apparecchi del",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51D18000130001",
+"descr": "Rightsizing PS2-revisione della GOP",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51B21003120001",
+"descr": "Evoluzione dei sistemi IT per l'Infrastruttura RFI - 2021",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51G22000130001",
+"descr": "Evoluzione dei sistemi IT per l'Infrastruttura RFI - 2022",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J52J20000120001",
+"descr": "Evoluzione dei sistemi IT per l'Infrastruttura RFI - 2020",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51D18000140001",
+"descr": "Sistema di Analitycs per la manutenzione",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51B21003430001",
+"descr": "Evoluzione Sistemi e Soluzioni IT Area Supporto - 2021",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51D18000160001",
+"descr": "Evoluzione Sistemi e Soluzioni IT Area Supporto - 2018",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51D18000170001",
+"descr": "Interventi area tecnologica",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51D18000190001",
+"descr": "GAMOC - Gestione accentrata monitoraggio",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51I19000110001",
+"descr": "Evoluzione Sistemi - area Strategia, Pianificazione e Sostenibilità - 2019",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51I19000120001",
+"descr": "Evoluzione Sistemi - area Acquisti  - 2019",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51I19000100001",
+"descr": "Evoluzione Sistemi - area Audit  - 2019",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51B21001550001",
+"descr": "Evoluzione Sistemi - area Amministrazione e Bilancio - 2021",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51G22000100001",
+"descr": "Evoluzione Sistemi - area Amministrazione e Bilancio - 2022",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51I19000130001",
+"descr": "Evoluzione Sistemi - area Amministrazione e Bilancio - 2019",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51I19000140001",
+"descr": "Interventi IT per adeguamento compliance regolatoria",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51G23000020001",
+"descr": "Manutenzione evolutiva sistemi informativi RFI - 2023",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51G24000070001",
+"descr": "Manutenzione evolutiva sistemi informativi RFI - 2024",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51I20000050001",
+"descr": "Evoluzione applicative ICT area commerciale",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51G22000020001",
+"descr": "Implementazione sistemi e soluzioni IT Area Investimenti - 2022",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51G23000040001",
+"descr": "Implementazione sistemi e soluzioni IT Area Investimenti - 2023",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51G24000120001",
+"descr": "Implementazione sistemi e soluzioni IT Area Investimenti - 2024",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51J21000040001",
+"descr": "Implementazioni Sistemi e Soluzioni IT Area Investimenti - 2021",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51B21003600001",
+"descr": "Innovazione Digitale settore Ingegneria",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51J20000060001",
+"descr": "Servizi analitici per la circolazione",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51E20000210001",
+"descr": "Sistemi ICT Terminali Italia",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51B21002490001",
+"descr": "Evoluzione applicativi settore sicurezza circolazione",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51B21002360001",
+"descr": "Portale OdMetrics RFI",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51B21002480001",
+"descr": "Rinnovo tecnologico applicativi area commerciale",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51G22000010001",
+"descr": "Advanced Traffic Management System (ATMS)",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51G22000070001",
+"descr": "Gestione Rete Cavi a Fibre Ottiche",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51G22000120001",
+"descr": "Implementazioni Sistemi di Asset Management",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51G24000100001",
+"descr": "Evoluzione dei sistemi IT per l'Infrastruttura RFI",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51G24000220001",
+"descr": "Programma P&C - Planning & Control",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51E17000190001",
+"descr": "Modello Unico Infrastruttura Fisica (MUIF) - infrastruttura georeferenziata",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51G24000210001",
+"descr": "Gestione Informativa Digitale BIM",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51G25000040001",
+"descr": "Evol. dei sistemi IT per l'Infrastr. RFI",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51G25000010001",
+"descr": "Inn Digitale sicur prod",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51G24000290001",
+"descr": "Portale OdMetrics RFI",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51G25000030001",
+"descr": "Piattaforma Materiali da Scavo",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2010",
+"cup": "J51G25000070001",
+"descr": "Progetto EasyRailFreight",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2011",
+"cup": "J87I07000000001",
+"descr": "Adeguamento ad ERTMS nelle linee di confine",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2011",
+"cup": "J87I10000920001",
+"descr": "ERTMS Corridoio Reno-Alpi",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2011",
+"cup": "J87I09000000001",
+"descr": "ERTMS Corridoio Mediterraneo",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2011",
+"cup": "J96C17000000001",
+"descr": "ERTMS Corridoio Scandinavo-Mediterraneo tratta Brennero-Verona",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2011",
+"cup": "J56H18000100009",
+"descr": "Completamento Rete Radio GSM-R",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2011",
+"cup": "J44H14000090005",
+"descr": "Upgrading linea DDma Firenze-Roma",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2011",
+"cup": "J56E20000080009",
+"descr": "Programma nazionale ERTMS - 2020",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2011",
+"cup": "J74E21001450001",
+"descr": "Programma nazionale ERMTS-Linee Firenze",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2011",
+"cup": "J54E21003590001",
+"descr": "Programma nazionale ERTMS-Linee Roma",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2011",
+"cup": "J64E21001610001",
+"descr": "Programma nazionale ERTMS-Linee Genova-Torino",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2011",
+"cup": "J34E21001820001",
+"descr": "Programma nazionale ERTMS-Linee Nord Est",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2011",
+"cup": "J54E21003610001",
+"descr": "Programma nazionale ERTMS-Linee Reggio Calabria e Sardegna",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2011",
+"cup": "J54E21003600001",
+"descr": "Programma nazionale ERTMS-Linee Ancona-Napoli-Bari",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2011",
+"cup": "J64E21001620001",
+"descr": "ERTMS – Linee Sicilia Palermo-Catania",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2011",
+"cup": "J54E21003620001",
+"descr": "Programma nazionale ERTMS-Applicazioni Generiche",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2011",
+"cup": "J24E21001480001",
+"descr": "Programma nazionale ERTMS-Milano",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2011",
+"cup": "J24E21001490001",
+"descr": "Programma nazionale ERTMS Sicilia",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2011",
+"cup": "J17I10002790001",
+"descr": "Aggiornamento ERTMS/ETCS linea AV/AC Roma-Napoli",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2011",
+"cup": "J54J25000090001",
+"descr": "Integrazione Terra - Bordo ERTMS",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2011",
+"cup": "J54J25000080001",
+"descr": "Introduzione PK145 sui PI Linea AV/AC",
+"p": 8
+},
+{
+"tab": "A",
+"classe": "2",
+"codice": "A2012",
+"cup": "J58E22000260001",
+"descr": "Impianti fotovoltaici per l'energia",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J47D22000150001",
+"descr": "Nuovo assetto piano del ferro stazioni Area Nord",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J27D23000020001",
+"descr": "Nuovo assetto piano del ferro stazioni Area Centro Nord",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J17D22000100001",
+"descr": "Nuovo assetto piano del ferro stazioni Area Centro Sud",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J54H14000570001",
+"descr": "Easy Station - TPL upgrading alle banchine",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J54H14000580001",
+"descr": "Easy Station - TPL miglioramento sistemi di informazione al pubblico",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J26I18000030001",
+"descr": "Upgrade IaP passante di Napoli",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J34J24000320001",
+"descr": "Innalzamento/prolungamento dei marciapiedi e IAP di stazione Riqualificazione funzionale e adeguamento dell'accessibilità dei fabbricati e delle aree antistanti di stazione, deploy Wi-life e",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J17D22000080001",
+"descr": "deploy SEM - area Centro Sud",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J54H14000590001",
+"descr": "Easy Station - TPL miglioramento accessibilità ed obblighi di legge",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J54H14000550001",
+"descr": "Miglioramento delle funzionalità e del decoro delle 620 stazioni",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J57J19000030001",
+"descr": "Riqualificazione aree esterne in asset",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J64E21002290008",
+"descr": "Riqualificazione funzionale, miglioramento accessibilità e intermodalità stazioni del sud",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J64E21002290008",
+"descr": "Riqualificazione funzionale, miglioramento accessibilità e intermodalità stazioni del sud",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J64E21002290008",
+"descr": "Riqualificazione funzionale, miglioramento accessibilità e intermodalità stazioni del sud",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J47D22000090001",
+"descr": "Riqualificazione stazioni Area Nord",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J87D22000130001",
+"descr": "Riqualificazione stazioni Area Centro Nord",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J17D22000070001",
+"descr": "Riqualificazione stazioni Area Centro Sud",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J47D22000160001",
+"descr": "Innalzamento/prolungamento dei marciapiedi e IAP di stazione - area Nord",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J87D22000310001",
+"descr": "Innalzamento/prolungamento dei marciapiedi e IAP di stazione - area Centro Nord",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J17D22000110001",
+"descr": "Innalzamento/prolungamento dei marciapiedi e IAP di stazione - area Centro Sud Riqualificazione funzionale e adeguamento dell'accessibilità dei fabbricati e delle aree antistanti di stazione, deploy Wi-life e",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J47D22000100001",
+"descr": "deploy SEM - area Nord Riqualificazione funzionale e adeguamento dell'accessibilità dei fabbricati e delle aree antistanti di stazione, deploy Wi-life e",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J87D22000140001",
+"descr": "deploy SEM - area Centro Nord Riqualificazione funzionale e adeguamento dell'accessibilità dei fabbricati e delle aree antistanti di stazione, deploy Wi-life e",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J17D22000080001",
+"descr": "deploy SEM - area Centro Sud Riqualificazione funzionale e adeguamento dell'accessibilità dei fabbricati e delle aree antistanti di stazione, deploy Wi-life e",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J17D22000080001",
+"descr": "deploy SEM - area Centro Sud Riqualificazione funzionale e adeguamento dell'accessibilità dei fabbricati e delle aree antistanti di stazione, deploy Wi-life e",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J17D22000080001",
+"descr": "deploy SEM - area Centro Sud Riqualificazione funzionale e adeguamento dell'accessibilità dei fabbricati e delle aree antistanti di stazione, deploy Wi-life e",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J17D22000080001",
+"descr": "deploy SEM - area Centro Sud Riqualificazione funzionale e adeguamento dell'accessibilità dei fabbricati e delle aree antistanti di stazione, deploy Wi-life e",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J17D22000080001",
+"descr": "deploy SEM - area Centro Sud Riqualificazione funzionale e adeguamento dell'accessibilità dei fabbricati e delle aree antistanti di stazione, deploy Wi-life e",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J17D22000080001",
+"descr": "deploy SEM - area Centro Sud Riqualificazione funzionale e adeguamento dell'accessibilità dei fabbricati e delle aree antistanti di stazione, deploy Wi-life e",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J17D22000080001",
+"descr": "deploy SEM - area Centro Sud Riqualificazione funzionale e adeguamento dell'accessibilità dei fabbricati e delle aree antistanti di stazione, deploy Wi-life e",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J17D22000080001",
+"descr": "deploy SEM - area Centro Sud",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J62C21002560008",
+"descr": "Potenziamento accessibilità stazioni cratere sisma - Regione Umbria",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J62C21002550008",
+"descr": "Potenziamento accessibilità stazioni cratere sisma - Regione Marche",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J22C21002500008",
+"descr": "Potenziamento accessibilità stazioni cratere sisma - Regione Lazio",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J54J24000390001",
+"descr": "Riqualificazione elementi infrastruttura Realizzazione e ripristino dei parcheggi scambiatori in corrispondenza delle stazioni ferroviarie di Busa di Vigonza e Vigonza -",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "E41B19000650002",
+"descr": "Pianiga",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J64J25000080001",
+"descr": "nuovo accesso del piano del ferro",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J54J24000850001",
+"descr": "Riqualificaz. aree stazione deploy, SEM",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "F41I20000030007",
+"descr": "Stazione a scavalco di Sesto S. Giovanni",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P055_A",
+"cup": "J21G24000010002",
+"descr": "Mi Parco Nord-Seregno e Staz FS Seregno",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P237",
+"cup": "J91G21000010001",
+"descr": "Bari Centrale: nuovo parco urbano",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P237",
+"cup": "J31B21003960001",
+"descr": "Hub urbani e linee metropolitane",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P237",
+"cup": "B47D22000130006",
+"descr": "Stazione Milano Greco Pirelli",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P237",
+"cup": "J41G22000090001",
+"descr": "City Hub e linee metropolitane Area Nord",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P237",
+"cup": "J81G22000260001",
+"descr": "City Hub e linee metropolitane Area Centro Nord",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P237",
+"cup": "J11G22000080001",
+"descr": "City Hub e linee metropolitane Area Centro Sud",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P264",
+"cup": "J51I20000060001",
+"descr": "Piattaforma di analisi del territorio per lo sviluppo dei servizi di stazione",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "3",
+"codice": "P264",
+"cup": "J54J24000020001",
+"descr": "Innovazione Digitale settore Stazioni",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "4",
+"codice": "P214",
+"cup": "J17H21002490001",
+"descr": "Sulmona-Castel di Sangro-Carpinone Ripristino ai fini turistico-naturali della storica tratta ferroviaria Avellino – Rocchetta S. Antonio Lacedonia (1^ Fase) - studio di",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "4",
+"codice": "P214",
+"cup": "J34H17000850001",
+"descr": "fattibilità",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "4",
+"codice": "P214",
+"cup": "J14H17000890001",
+"descr": "Riapertura linea Benevento-Pietrelcina-Boscoredole",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "4",
+"codice": "P214",
+"cup": "J67H21005720001",
+"descr": "Linee turistiche della Campania-Molise-Puglia",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "4",
+"codice": "P214",
+"cup": "J87H21005340001",
+"descr": "Palazzolo-Paratico",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "4",
+"codice": "P214",
+"cup": "J67D17000020001",
+"descr": "Binari senza tempo - DOIT Torino (Ripristino Asti-Castagnole e Ceva-Ormea)",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "4",
+"codice": "P214",
+"cup": "J67H21005700001",
+"descr": "Linee turistiche del Piemonte",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "4",
+"codice": "P214",
+"cup": "J67H21005710001",
+"descr": "Linee turistiche della Sicilia",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "4",
+"codice": "P214",
+"cup": "J57H21003100001",
+"descr": "Asciano-Monte Antico",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "4",
+"codice": "P214",
+"cup": "J37H21004410001",
+"descr": "Rocchetta-Gioia del Colle",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "4",
+"codice": "P214",
+"cup": "J37D23000080001",
+"descr": "Binari senza tempo - DOIT Bari",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "4",
+"codice": "P214",
+"cup": "J87D22000270001",
+"descr": "Binari senza tempo - DOIT AN - 2023",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "4",
+"codice": "P214",
+"cup": "J87H21000910001",
+"descr": "Binari senza tempo - DOIT AN",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "4",
+"codice": "P214",
+"cup": "J67H21002920001",
+"descr": "Binari senza tempo - DOIT PA",
+"p": 9
+},
+{
+"tab": "A",
+"classe": "4",
+"codice": "P214",
+"cup": "J87D23000130001",
+"descr": "Binari senza tempo - DOIT FI - 2023",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "4",
+"codice": "P214",
+"cup": "J87H21002870001",
+"descr": "Binari senza tempo - DOIT FI - 2021",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "4",
+"codice": "P214",
+"cup": "J97H21002670001",
+"descr": "Binari senza tempo - DOIT MI",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "4",
+"codice": "P214",
+"cup": "J37B17000690001",
+"descr": "Binari senza tempo - DOIT Trieste (Riattivazione Sacile-Gemona e Trieste Campo Marzio - Villa Opicina)",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P074",
+"cup": "J17I12000380001",
+"descr": "Potenziamento e velocizzazione itinerario Palermo - Catania (e altre linee)",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P074",
+"cup": "J27I12000190001",
+"descr": "Potenziamento e velocizzazione Messina – Palermo e Messina - Siracusa",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P198",
+"cup": "J84H20000850001",
+"descr": "Upgrading Milano-Lecco-Sondrio-Tirano",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P198",
+"cup": "J84J24000020001",
+"descr": "Olimpiadi Invernali 2026 - ambito DOIT Milano",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P198",
+"cup": "J14H17000110001",
+"descr": "Fermata Bergamo ospedale",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P198",
+"cup": "J84E21002910001",
+"descr": "Elettrificazione Como - Molteno - Lecco",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P198",
+"cup": "J64C19000280001",
+"descr": "Elettrificazione Biella - Santhià",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P198",
+"cup": "J94J22000320001",
+"descr": "Potenziamento linee Acqui Terme/Alessandria-Ovada-Genova",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P198",
+"cup": "J84E21003810001",
+"descr": "Linea Pontremolese",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P198",
+"cup": "J14J22000080001",
+"descr": "Stazione di Bergamo",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P198",
+"cup": "J54J23000720001",
+"descr": "Nuove Località di Servizio Area Nord - Ovest",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P198",
+"cup": "J54J24000400001",
+"descr": "Realizzazione di nuove LdS e modifica di quelle esistenti - Area Investimenti Stazioni Ovest e Tirrenica",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P198",
+"cup": "J50F24000000001",
+"descr": "Attrezzaggi e adeguamenti tecnologici innovativi",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P198",
+"cup": "J37I12000230001",
+"descr": "Miglioramenti infrastrutturali - acquisti - Territorio Nazionale - 2012",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P198",
+"cup": "J67B14000120005",
+"descr": "Liberazione Immobili – DOIT TO - 2014",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P198",
+"cup": "J50D17000030001",
+"descr": "Miglioramenti infrastrutturali - acquisti per esercizio rete - 2016",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P198",
+"cup": "J97I17000070001",
+"descr": "DOIT MI– upgrading linee viaggiatori",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P198",
+"cup": "J67I18000040001",
+"descr": "DOIT TO – upgrading linee viaggiatori",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P198",
+"cup": "J66J17000400001",
+"descr": "Interventi diffusi di potenziamento tecnologico (DOIT Torino)",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P198",
+"cup": "J61G22000030001",
+"descr": "Soppressione PL nel Comune di Mantova",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P198",
+"cup": "J50F25000000001",
+"descr": "MOBILI E ARREDI 2025",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "J17B20000630001",
+"descr": "Interventi nella stazione di Ponte nelle Alpi",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "J17B20000640001",
+"descr": "Stazioni Olimpiche Regione Veneto",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "J57B20000230008",
+"descr": "Interventi nella stazione di Longarone",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "C97D20000080001",
+"descr": "Stazioni Olimpiche Regione Veneto-Feltre",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "J34E21001350001",
+"descr": "Pot. elettrificaz. Casarsa-Portogruaro",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "J77B20000870002",
+"descr": "Riattivazione fermata di Calliano",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "C66J20000210001",
+"descr": "Riqualificazione stazione di Trento",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "J91G23000000001",
+"descr": "Fermata S. Giacomo Laives linea Verona-Brennero",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "J44E21002870008",
+"descr": "Potenziamento Ravenna - Rimini",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "J14J23001050001",
+"descr": "Elettrificazione e potenziamento Cerea-Isola della Scala",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "J34J23000610001",
+"descr": "Nuove Località di Servizio  Area Nord - Est",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "J41G23000030001",
+"descr": "Fermata Basso Garda",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "J24H17000530001",
+"descr": "Upgrading linee Friuli Venezia Giulia",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "J14J23001040001",
+"descr": "Elettrificazione e potenziamento Vicenza-Schio",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "J27I10000020001",
+"descr": "Completamento SCC Area Veneta",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "J81J03000010001",
+"descr": "Linea Rimini - Ravenna: efficientamento itinerario",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "J37F19000030001",
+"descr": "Interventi upgr. rete viaggiatori VE",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "J37H21004420001",
+"descr": "Interventi upgr. rete viaggiatori VE",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "J86J17000450001",
+"descr": "Interventi diffusi di potenziamento tecnologico (DOIT Bologna)",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "J96J17000450001",
+"descr": "Interventi diffusi di potenziamento tecnologico (DOIT Verona)",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "J14C20001960001",
+"descr": "Interventi di upgrade tecnologico e prestazionale - DOIT Venezia",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P199",
+"cup": "J74J22000540001",
+"descr": "PRG di Peschiera del Garda",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P200",
+"cup": "J94J18000000001",
+"descr": "Riqualificazione infrastrutturale linea Faentina",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P200",
+"cup": "J84J23000230001",
+"descr": "Terzo binario Pescara C.le - Pescara P.N.",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P200",
+"cup": "J41G22000010001",
+"descr": "Nuove fermate e stazioni Area Centro Nord",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P200",
+"cup": "J87F20000030001",
+"descr": "Upgrading rete viaggiatori DOIT Ancona - ante 2011 - 2020",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P200",
+"cup": "J57D22000060001",
+"descr": "Liberazione immobili – DOIT Roma - 2022",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P200",
+"cup": "J87I17000050001",
+"descr": "DOIT FI – upgrading linee viaggiatori",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P200",
+"cup": "J57J18000030001",
+"descr": "DOIT RM – upgrading linee merci",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P200",
+"cup": "J86J17000460001",
+"descr": "Interventi diffusi di potenziamento tecnologico (DOIT Firenze)",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P200",
+"cup": "J87D24000210001",
+"descr": "Miglioramenti infrastrutturali Potenziamento – Firenze - 2024",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P200",
+"cup": "J87J18000700001",
+"descr": "Interventi diffusi di potenziamento infrastrutturale e tecnologico ambito regione Marche",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P200",
+"cup": "J34G19000000001",
+"descr": "Nuovo PRG di Spoleto",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P200",
+"cup": "J47H21000280001",
+"descr": "Upgrading linee regionali Emilia Romagna - 2021",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P200",
+"cup": "J84C20001920001",
+"descr": "Interventi di upgrade tecnologico e prestazionale - DOIT Ancona",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P200",
+"cup": "J84C20001900001",
+"descr": "Potenziamento servizi extra pacchetto minimo di accesso - DOIT Ancona",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P200",
+"cup": "J37H21000910001",
+"descr": "Interventi per l'adeguamento e lo sviluppo dei servizi II° pillar - DOIT Napoli",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P200",
+"cup": "J84J24000690005",
+"descr": "Interventi di potenziamento servizi IF",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P200",
+"cup": "J21G24000050001",
+"descr": "Nuova Stazione AV Medio Etruria",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J44H20001660009",
+"descr": "Metroferrovia di Ragusa",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J61J20000180008",
+"descr": "Nuova fermata Acireale - Bellavista",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J91G22000030001",
+"descr": "Nuove fermate e stazioni Area Centro Sud",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J74E21001680008",
+"descr": "Elettrificazione del bacino del Sulcis",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J67I07000030001",
+"descr": "SCC Fiumetorto-Messina",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J97I07000010001",
+"descr": "SCC Bari-Lecce",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J97J18000370001",
+"descr": "Miglioramento infrastrutturale - DOIT Napoli - 2018",
+"p": 10
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J91J05000030002",
+"descr": "Interventi diffusi convenzione con Regione Calabria",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J27I12000220001",
+"descr": "Ripristino itinerario merci Napoli - Bari (a Foggia)",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J27B14000100005",
+"descr": "Liberazione Immobili  - DOIT Reggio Calabria - 2014",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J27B17000160001",
+"descr": "Liberazione Immobili  - DOIT Reggio Calabria - 2017",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J87B17000440001",
+"descr": "Liberazione Immobili - DOIT BA - 2017",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J97B16000320001",
+"descr": "Liberazione Immobili - DOIT NA - 2016",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J74E21001890001",
+"descr": "DOIT CA – upgrading linee viaggiatori",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J97I17000080001",
+"descr": "DOIT NA– upgrading linee viaggiatori",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J27I17000050001",
+"descr": "Upgrading linee viaggiatori - DOIT Reggio Calabria",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J66J17000390001",
+"descr": "Interventi diffusi di potenziamento tecnologico (DOIT Palermo)",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J87J18000260001",
+"descr": "Upgrading linea Adriatica - DOIT Bari",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J87J18000690001",
+"descr": "Interventi diffusi di potenziamento regione Abruzzo",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J56E20000020001",
+"descr": "Upgrade tecnologico Vitulano-Apice",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J54E21003570001",
+"descr": "Fermata S. Maria di Settimo Paola-CS",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J74J23000650001",
+"descr": "Upgrade prestazionale rete Sarda",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J34J24000410001",
+"descr": "Miglioramento infrastrutturale - DOIT Bari",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J77I07000030001",
+"descr": "SCC Nodo di Palermo",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "5",
+"codice": "P201",
+"cup": "J74J23000740001",
+"descr": "Elettrificaz. Olbia aerop.- Golfo Aranci",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P053",
+"cup": "J77I11000000009",
+"descr": "Potenziamento tecnologico del nodo di Roma",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P053",
+"cup": "J34H14000460001",
+"descr": "Sistemi di distanziamento per incremento capacità nodo di Roma FL4/6 tratta Casilina-Ciampino",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P053",
+"cup": "J34H14000500001",
+"descr": "Interventi per lo sviluppo del nodo di Roma (tecnologie Cesano-Ostiense)",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P053",
+"cup": "J86I18000060009",
+"descr": "Potenziamento tecnologico nodo di Roma 2^ fase",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P053",
+"cup": "J31H03000150008",
+"descr": "PRG e ACC di Roma Tuscolana e Roma Casilina",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P053",
+"cup": "J31H03000150008",
+"descr": "PRG e ACC di Roma Tuscolana e Roma Casilina",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P053",
+"cup": "J31H03000150008",
+"descr": "PRG e ACC di Roma Tuscolana e Roma Casilina",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P053",
+"cup": "J31H03000150008",
+"descr": "PRG e ACC di Roma Tuscolana e Roma Casilina",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P053",
+"cup": "J31H03000150008",
+"descr": "PRG e ACC di Roma Tuscolana e Roma Casilina",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P053",
+"cup": "J31H03000150008",
+"descr": "PRG e ACC di Roma Tuscolana e Roma Casilina",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P053",
+"cup": "J31H03000150008",
+"descr": "PRG e ACC di Roma Tuscolana e Roma Casilina",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P053",
+"cup": "J31H03000150008",
+"descr": "PRG e ACC di Roma Tuscolana e Roma Casilina",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P053",
+"cup": "J31H03000150008",
+"descr": "PRG e ACC di Roma Tuscolana e Roma Casilina",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P053",
+"cup": "J31H03000150008",
+"descr": "PRG e ACC di Roma Tuscolana e Roma Casilina",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P053",
+"cup": "J31H03000150008",
+"descr": "PRG e ACC di Roma Tuscolana e Roma Casilina",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P053",
+"cup": "J84H15001310001",
+"descr": "Collegamento Ostiense - Valle Aurelia - Vigna Clara",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P053",
+"cup": "J57H22000160001",
+"descr": "Upgrading rete viaggiatori DOIT Roma - 2022",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P053",
+"cup": "J54G18000130001",
+"descr": "Attrezzaggio RED ambito DOIT RM",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P053",
+"cup": "J81B22003200005",
+"descr": "Sistemazioni superficiali Monte Mario-Monte Ciocci (Giubileo 2025)",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P054",
+"cup": "J94H14000230001",
+"descr": "Sistemi di distanziamento per incremento capacità nodo di Milano (1^ fase)",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P054",
+"cup": "J54H16001170001",
+"descr": "Potenziamento tecnologico impianto Milano P.Garibaldi e velocizzazioni",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P054",
+"cup": "J54B13001110001",
+"descr": "PRG e ACC Milano Lambrate (1^ fase)",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P054",
+"cup": "J46E19000210001",
+"descr": "ACC di Milano Certosa",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P054",
+"cup": "J24H16000490001",
+"descr": "Potenziamento tecnologico e infrastrutturale impianto Gallarate",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P054",
+"cup": "J44H20001400009",
+"descr": "Potenziamento infrastrutturale e tecnologico di Milano Centrale",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P054",
+"cup": "J87J18000280001",
+"descr": "Upgrading Carnate-Monza",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P054",
+"cup": "J84H17000440001",
+"descr": "Upgrading nodo di Milano e linee d'interesse della Regione Lombardia",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P054",
+"cup": "J84J23000100008",
+"descr": "Scavalco di PM/Bivio Adda",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P054",
+"cup": "J17F19000310001",
+"descr": "Riqualificaz.AreeEsterneStazione Mantova",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P054",
+"cup": "J84J24000840001",
+"descr": "Adeguamento fermata esistente MI Forlanini",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P054",
+"cup": "J97D22000150001",
+"descr": "Interventi upgrading rete viaggiatori - DOIT Milano anno 2022",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P054",
+"cup": "J84H17000940001",
+"descr": "Interventi di sviluppo e completamento linee di bacino area nord",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P054",
+"cup": "J24H17000570001",
+"descr": "Velocizzazione Melzo Scalo –Treviglio",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P075",
+"cup": "J14H17000600001",
+"descr": "Completamento potenziamento tecnologico Venezia Mestre – Venezia S. Lucia",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P075",
+"cup": "J74H17000180001",
+"descr": "Nuovo impianto di manutenzione rotabili di Venezia Mestre",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P075",
+"cup": "J74J24000060001",
+"descr": "Nuovo PRG stazione Venezia S. Lucia",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P076",
+"cup": "J67I11000230001",
+"descr": "Potenziamento tecnologico del nodo di Firenze",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P076",
+"cup": "J11G22000000009",
+"descr": "Nuova fermata di Firenze Guidoni",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P076",
+"cup": "J74E21001910001",
+"descr": "Nuovo PRG della stazione di Empoli",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P076",
+"cup": "J87F20000260001",
+"descr": "Potenziamento infrastrutturale e tecnologico DOIT Firenze - 2020",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P076",
+"cup": "J87H22000310001",
+"descr": "Potenziamento infrastrutturale e tecnologico DOIT Firenze - 2022",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P080",
+"cup": "J74H17000140001",
+"descr": "Potenziamento tecnologico nodo Torino e linee afferenti",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P080",
+"cup": "J77I10000290001",
+"descr": "Nodo di Torino: adeguamento linea passante interno",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P080",
+"cup": "J67F19000090001",
+"descr": "Upgrading infrastrutturale e tecnologico DOIT Torino - 2019",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P080",
+"cup": "J67F20000190001",
+"descr": "Upgrading infrastrutturale e tecnologico DOIT Torino - 2020",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P080",
+"cup": "J67H21008500001",
+"descr": "Upgrading infrastrutturale e tecnologico DOIT Torino - 2021",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P080",
+"cup": "J67H22000160001",
+"descr": "Upgrading infrastrutturale e tecnologico DOIT Torino - 2022",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P112",
+"cup": "J34H17000120001",
+"descr": "Interverventi di potenziamento da Accordo quadro Bologna",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P112",
+"cup": "J44E21000080001",
+"descr": "Upgrading infrastrutturale e tecnologico DOIT Bologna - 2021",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P112",
+"cup": "J44E22000060001",
+"descr": "Upgrading infrastrutturale e tecnologico DOIT Bologna - 2022",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P112",
+"cup": "J44J23000990001",
+"descr": "Upgrading infrastrutturale e tecnologico DOIT Bologna - 2023",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P112",
+"cup": "J84J24000790001",
+"descr": "Upgrading infrastrutturale e tecnologico DOIT Bologna - 2024",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P112",
+"cup": "J87F19000260001",
+"descr": "Upgrading infrastrutturale e tecnologico DOIT Bologna - 2019",
+"p": 11
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P112",
+"cup": "J87F20000270001",
+"descr": "Upgrading infrastrutturale e tecnologico DOIT Bologna - 2020",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P134",
+"cup": "J67I10000020001",
+"descr": "Potenziamento tecnologico del nodo di Napoli",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P134",
+"cup": "J27I12000160001",
+"descr": "Nodo di Napoli: ulteriore fase di potenziamento tecnologico",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P134",
+"cup": "J26I18000040001",
+"descr": "Adeguamento tecnologie Passante ferroviario di Napoli",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P134",
+"cup": "J94E21000060009",
+"descr": "Nuovo Posto Centrale di Napoli",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P134",
+"cup": "J27I12000170001",
+"descr": "ACC Napoli Centrale",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P134",
+"cup": "J44C19000040009",
+"descr": "Nodo complesso di Salerno Centrale",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P134",
+"cup": "J11J04000070211",
+"descr": "Interventi su SCC e IaP - Napoli",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P134",
+"cup": "J27H21000440001",
+"descr": "Interventi di upgrading rete viaggiatori DOIT Napoli - 2021",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P134",
+"cup": "J27J19000010001",
+"descr": "Interventi upgrading rete viaggiatori DOIT Napoli - 2019",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P134",
+"cup": "J97D24000000001",
+"descr": "Interventi di upgrading rete viaggiatori DOIT Napoli - 2024",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P134",
+"cup": "J97J18000410001",
+"descr": "Interventi upgrading rete viaggiatori DOIT Napoli - 2018",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P135",
+"cup": "J67I17000010001",
+"descr": "DOIT PA– upgrading linee viaggiatori",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P135",
+"cup": "J64J17000010001",
+"descr": "Upgrading tecnologico ed infrastrutturale Palermo C.le",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P192",
+"cup": "J97J18000060001",
+"descr": "DOIT GE – upgrading linee merci",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P193",
+"cup": "J97D22000040001",
+"descr": "Accessibilità Bari Torre a Mare",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P193",
+"cup": "J37I12000140001",
+"descr": "PRG ed ACC Bari Centrale",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P194",
+"cup": "J84C20001880001",
+"descr": "Interventi di upgrade tecnologico e prestazionale - DOIT Firenze",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P194",
+"cup": "J64C20002300001",
+"descr": "Interventi di upgrade tecnologico e prestazionale - DOIT Torino",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P194",
+"cup": "J31C08000010002",
+"descr": "Costruzione stazione Reggio Calabria aeroporto",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "6",
+"codice": "P194",
+"cup": "J94H15000790001",
+"descr": "Mascheramento galleria Cannitello",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J64C20000020006",
+"descr": "Potenziamento Interporto Verona Quadrante Europa",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J94J22000220001",
+"descr": "Bretella di Santa Maria Capua Vetere",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J84C20000050001",
+"descr": "Upgrading collegamenti con porti e terminali - DOIT Firenze",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J91G23000020001",
+"descr": "Hub intermodale Alessandria Smistamento",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J91G23000020001",
+"descr": "Hub intermodale Alessandria Smistamento",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J44J22000150001",
+"descr": "Upgrade collegamento Sampierdarena - Parco Fuori Muro",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J37H21006500008",
+"descr": "Infrastrutturazione porti",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J87D24000150005",
+"descr": "Upgrading Terminali Merci - Bologna",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J97D24000090005",
+"descr": "Upgrading Terminali Merci - Verona",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J67D24000100005",
+"descr": "Upgrading Terminali Merci - Torino",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J47I10000010001",
+"descr": "Upgrading Terminali Merci - Milano",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J44H16000380001",
+"descr": "Upgrading prestazionale linee di adduzione ai porti - DOIT Bologna",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J54H16000760001",
+"descr": "Upgrading prestazionale linee di adduzione ai porti - DOIT Roma",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J94G18000010001",
+"descr": "Upgrading porti e terminali - DOIT BO",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J67J18000400001",
+"descr": "Upgrading scali merci - DOIT Palermo",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J37J18000190001",
+"descr": "Upgrading scali merci- DOIT Bari",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J24G19000000001",
+"descr": "Upgrading scali merci- DOIT Trieste",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J67F19000350001",
+"descr": "Upgrading porti e terminali - DOIT TO - 2019",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J97F19000430001",
+"descr": "Upgrading collegamenti con porti e terminali - DOIT Genova - 2019",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J97F20000220001",
+"descr": "Upgrading collegamenti con porti e terminali - DOIT Genova - 2020",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J97H21001480001",
+"descr": "Upgrading porti e terminali - DOIT Genova",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J96E19000210001",
+"descr": "Upgrading porti e terminali - DOITVenezia - 2019",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J97F20000230001",
+"descr": "Upgrading collegamenti con porti e terminali - DOIT Venezia - 2020",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J94C20000010001",
+"descr": "Upgrading collegamenti con porti e terminali - DOIT Verona",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J91B21000410009",
+"descr": "Bretella merci di collegamento ad est della stazione di Padova Interporto",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J91B21000410009",
+"descr": "Bretella merci di collegamento ad est della stazione di Padova Interporto",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J97D24000080005",
+"descr": "Terminali Merci TI - MI",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "7",
+"codice": "P060",
+"cup": "J54J24000900001",
+"descr": "Raccordo Ferroviario Grisignano di Zocco",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "A1008",
+"cup": "J20B18000000001",
+"descr": "Sviluppo flotta navale",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "A1008",
+"cup": "J20B18000000001",
+"descr": "Sviluppo flotta navale",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "A1008",
+"cup": "J20B18000000001",
+"descr": "Sviluppo flotta navale",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "NA026",
+"cup": "J31H03000510001",
+"descr": "Raddoppio Laveno-Luino",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "NA026",
+"cup": "J34F05000010001",
+"descr": "Ammodernamento Venafro - Termoli Progettazione delle opere per la permeabilità della linea storica Torino - Genova, nell'ambito della realizzazione del Terzo",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "NA026",
+"cup": "J81J04000000001",
+"descr": "Valico dei Giovi",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "NA026",
+"cup": "J77I09000010002",
+"descr": "Raddoppio Torino-Pinerolo (progettazione)",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "NA026",
+"cup": "J52F14000080001",
+"descr": "Studio di fattibilità analisi trasportistiche e valutazione di capacità della rete ferroviaria",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "NA026",
+"cup": "J52J20000130001",
+"descr": "Studi di fattibilità e progettazioni",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "NA026",
+"cup": "J42F20000840001",
+"descr": "Analisi di pre - fattibilità della nuova fermata AV nel frusinate",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "NA026",
+"cup": "J52C21001910001",
+"descr": "Programma di riqualificazione e potenziamento City Hub",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "NA026",
+"cup": "J74E21001720008",
+"descr": "PRG Chilivani",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "NA026",
+"cup": "J74E21001710008",
+"descr": "PRG Golfo Aranci",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "NA026",
+"cup": "J74E21001700008",
+"descr": "Elettrificazione Oristano - Macomer",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P073",
+"cup": "J94F12000000001",
+"descr": "Direttrice Salerno - Reggio Calabria: velocizzazione principali linee (upgrading)",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P073",
+"cup": "J94F12000010001",
+"descr": "Direttrice Salerno - Reggio Calabria: Velocizzazione principali linee (upgrading)-interventi accessori",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P140",
+"cup": "J54H16000780001",
+"descr": "Ammodernamento e potenziamento della rete ferroviaria della Regione Calabria",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J87D17000030001",
+"descr": "Upgrading rete merci - DOIT Bari",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 12
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J94H14000240001",
+"descr": "Upgrading prestazionale corridoio Reno-Alpi",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J84H17000290001",
+"descr": "Risoluzione interferenze stradali valico di Luino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J67I17000020001",
+"descr": "DOIT TO – upgrading linee merci",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J84H17001080001",
+"descr": "Upgrading prestazionale corridoio Reno-Alpi (DOIT Milano)",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J94H17000420001",
+"descr": "Upgrading prestazionale corridoio Reno-Alpi (DOIT Torino)",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J34H17000720001",
+"descr": "Upgrading prestazionale corridoio Reno-Alpi (DOITGenova)",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J74F13000000001",
+"descr": "Potenziamento tecnologico linea Chiasso-Monza",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J94H14000240001",
+"descr": "Upgrading prestazionale corridoio Reno-Alpi",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J96E19000010009",
+"descr": "Upgrading Tecnologico Tortona (e)-Bivio Fegino(i)",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J34E21001960001",
+"descr": "Completamento tecnologico nodo di Genova",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J97J18000070001",
+"descr": "DOIT MI – upgrading linee merci",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J97I17000060001",
+"descr": "DOIT GE– upgrading linee viaggiatori",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P221",
+"cup": "J34J23000580001",
+"descr": "Modifica alimentazione stazione Ventimiglia",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J47I09000010001",
+"descr": "Potenziamento tecnologico Torino-Padova",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J64H17000220001",
+"descr": "Completamento tecnologico della direttrice Torino-Padova",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J14F18000020001",
+"descr": "Centralizione cabine IS di Verona",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J34J22000220001",
+"descr": "ACC di Verona Quadrante Europa",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J47I05000020001",
+"descr": "Upgrading rete merci - DOIT Torino",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J37I05000020001",
+"descr": "Upgrading rete merci - DOIT Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J34J23000140001",
+"descr": "DOIT TS – upgrading linee merci",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J94H17000560001",
+"descr": "Upgrading prestazionale corridoio Mediterraneo (DOIT Milano)",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J22H22000390001",
+"descr": "PRG di Padova C.le",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J34H15001050001",
+"descr": "Upgrading tecnologie tratta AV/AC Torino-Milano",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J34H16000350001",
+"descr": "Potenziamento tecnologico linea Genova-Ventimiglia (fase)",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J34H17000140001",
+"descr": "Adeguamento cavalcavia di Piacenza",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J17I17000050001",
+"descr": "DOIT VE – upgrading linee viaggiatori",
+"p": 13
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J96J17000460001",
+"descr": "Interventi diffusi di potenziamento tecnologico (DOIT Genova)",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J34F18000010009",
+"descr": "Potenziamento tecnologico Genova - La Spezia",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J67J18000390001",
+"descr": "Interventi diffusi di upgrading direttrice Trasversale",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J87G21000020001",
+"descr": "DOIT Milano, upgrading infrastrutturali e tecnologici diffusi - 2021",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J97F20000260001",
+"descr": "Upgrading infrastrutturale e tecnologico DOIT Milano - 2020",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J94C19000260001",
+"descr": "Fire Fighting Points linea Genova-Ventim",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P222",
+"cup": "J24J24000940002",
+"descr": "Corridoio Mediterraneo - VR",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J84H20002450001",
+"descr": "Lunetta di Gorizia",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J54H14000530001",
+"descr": "Upgrading tecnologico Bologna-Padova (1^ fase)",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J54H16001160001",
+"descr": "Potenaziamento tecnologico linea Bologna- Padova  2 fase",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J34H14000540001",
+"descr": "Upgrading prestazionale corridoi Mediterraneo e Baltico-Adriatico",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J17D22000190001",
+"descr": "DOIT VE – upgrading linee merci",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J44H17000430001",
+"descr": "Upgrading prestazionale corridoio Baltico-Adriatico (DOIT Bologna)",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J24E22000170001",
+"descr": "Adeguamento a modulo linea Adriatica",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J26G21004560001",
+"descr": "Upgr. tecn. Udine-Ronchi Legionari Nord",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J17I10000040001",
+"descr": "Completamento SCC Adriatica (PRG e ACC Ancona)",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J87I17000020001",
+"descr": "DOIT AN – Upgrading linee viaggiatori",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J87I17000030001",
+"descr": "DOIT BA – upgrading linee viaggiatori",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J37J18000080001",
+"descr": "DOIT TS – upgrading linee viaggiatori",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J87D22000560001",
+"descr": "DOIT AN – upgrading linee merci",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J74H17000600001",
+"descr": "Upgrading prestazionale corridoio Scandinavia-Mediterraneo area adriatica",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J87D17000050001",
+"descr": "Upgrading prestazionale corridoio Scan-Med- DOIT Bari",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J87J18000270001",
+"descr": "Upgrading linea Adriatica - DOIT Ancona",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J17J18000360001",
+"descr": "Potenziamento infrastrutturale e tecnologico DOIT Venezia",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J87F19000120001",
+"descr": "Interventi diffusi di upgrading infrastrutturale DOIT Ancona",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J84C20001910001",
+"descr": "Interventi di upgrade tecnologico e prestazionale - DOIT Bari",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J74H20000990001",
+"descr": "Interventi per lo sviluppo del traffico merci - DOIT Ancona",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J87J18000230001",
+"descr": "DOIT BO – upgrading linee merci",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J44C20002260001",
+"descr": "Upgrading tecnologico linea Adriatica tratta Bologna-Rimini - ulteriore fase",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J86E19000400001",
+"descr": "Velocizzazione  Adriatica e Upgrading tecnologico DOIT Ancona",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J64H14000450001",
+"descr": "Upgrading linea Adriatica - impianti di sicurezza e segnalamento Pescara-Lecce",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J46E19000130001",
+"descr": "Velocizzazione direttrice Adriatica: completamento upgrading tecnologico tratta Pescara - Lecce (Termoli - Foggia)",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J44E22002770001",
+"descr": "Velocizzazione tratta Pescara - Termoli",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J69B12000050001",
+"descr": "PRG e ACC Lecce (inclusa velocizzazione subtratta Brindisi - Lecce)",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J39B12000040001",
+"descr": "Velocizzazione Napoli-Bari",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J59B12000020001",
+"descr": "Velocizzazione Bari - Lecce",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J36I18000060001",
+"descr": "Velocizzazione Adriatica: upgrade tecnologico Foggia-Bari-Brindisi",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J34E21001360001",
+"descr": "Completamento potenziamento tecn. linea Adriatica",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P223",
+"cup": "J44E22002780009",
+"descr": "Velocizzazione Adriatica 200 km/h - DOIT Bari",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J64C19000290009",
+"descr": "Upgrade tecnologico Verona - Brennero",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J36G21015190001",
+"descr": "ACC di Bolzano",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J54H17000210001",
+"descr": "Upgrade del sistema di distanziamento linea Bologna-Verona",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J64H17000130001",
+"descr": "Potenziamento tecnologico linea Bologna- Piacenza  1 fase",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J49B12000060001",
+"descr": "Potenziamento tecnologico Roma-Napoli via Formia",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J14G18000190001",
+"descr": "Potenziamento tecnologico linea Roma-Napoli via Formia (ulteriore fase)",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J16I18000020001",
+"descr": "Adeguamento tecnologie linea Roma-Napoli via Formia tratta sud",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J84H14001280001",
+"descr": "Upgrading prestazionale corridoio Scan-Med - DOIT Bologna",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J84H14001320001",
+"descr": "Upgrading prestazionale corridoio Scan-Med - DOIT Firenze",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J54H14000440001",
+"descr": "Upgrading prestazionale corridoio Scan-Med - DOIT Roma",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J94H14000130001",
+"descr": "Upgrading prestazionale corridoio Scan-Med - DOIT Napoli",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J87J18000240001",
+"descr": "DOIT FI – upgrading linee merci",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J97D22000410001",
+"descr": "DOIT VR – upgrading linee merci",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J54H17000750001",
+"descr": "Upgrading prestazionale corridoio Scandinavia-Mediterraneo area tirrenica (DOIT Roma)",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J27J18000360001",
+"descr": "Adeguamento prestazionale linee - DOIT Reggio Calabria",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J47F19000250001",
+"descr": "Interventi di upgrading per il business merci - Linea Tirrenica e Roma-Napoli via Formia",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J54E21004790008",
+"descr": "Adeguamento prestazionale Taranto - Gioia Tauro",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J44H17000110001",
+"descr": "Adeguamento a standard AV/AC della linea DDma Roma-Firenze 2^ fase",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J16J16001210001",
+"descr": "Upgrading tecnologico linea AV/AC Roma-Napoli",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J16E20000000001",
+"descr": "ACCM/SCCM AV Roma - Napoli (fasi)",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J87I05000080001",
+"descr": "Upgrading rete merci - DOIT Roma fase 0",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J87I17000040001",
+"descr": "DOIT BO – upgrading linee viaggiatori",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J57I17000060001",
+"descr": "DOIT RM – upgrading linee viaggiatori",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J97I17000090001",
+"descr": "DOIT VR – upgrading linee viaggiatori",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J97D22000430001",
+"descr": "DOIT NA – upgrading linee merci",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J27D22000160001",
+"descr": "Upgrading linee merci - DOIT Reggio Calabria",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J54G18000040001",
+"descr": "DOIT Roma. Interventi infr e tecn diffusi",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J97J18000360001",
+"descr": "Potenziamento infrastrutturale e tecnologico DOIT Napoli",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J87J18000710001",
+"descr": "Potenziamento infrastrutturale e tecnologico DOIT Firenze",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J87D22000110001",
+"descr": "Upgrading infrastrutturale e tecnologico DOIT Ancona - 2022 (comprende Piastra Logistica Terni)",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J87F19000250001",
+"descr": "Upgrading infrastrutturale e tecnologico DOIT Ancona - 2019",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J87H21002960001",
+"descr": "Upgrading infrastrutturale e tecnologico DOIT Ancona - 2021",
+"p": 14
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J97F19000160001",
+"descr": "Eliminazione riduzioni di velocità sulla linea AV/AC Firenze - Bologna - Piacenza",
+"p": 15
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J84C20001890001",
+"descr": "Upgrading tecnologico - DOIT Ancona",
+"p": 15
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J84C20001870001",
+"descr": "Interventi di upgrading prestazionale e tecnologico ambito linee - DOIT Firenze",
+"p": 15
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J84H20002460001",
+"descr": "Modifica ACC e PRG Roma Tiburtina (binari est)",
+"p": 15
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J91B21004120001",
+"descr": "Livorno - Interporto Guasticce",
+"p": 15
+},
+{
+"tab": "A",
+"classe": "9",
+"codice": "P224",
+"cup": "J87H22000370001",
+"descr": "Interv. prestaz. upgr. tecn. ambito BA",
+"p": 15
+}
+]
+}

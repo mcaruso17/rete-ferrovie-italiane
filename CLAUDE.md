@@ -267,6 +267,20 @@ pagina precedente (extract.py): cosi' si perdeva il secondo CUP di P262A.
 Verifica: i 173 CUP in corso del 2025 coincidono con quelli che si leggono nel
 PDF alle pp. 44-127.
 
+## Allegati dell'aggiornamento 2025 (portale Trasparenza MIT)
+
+`documenti/cdpi-agg2025/` tiene le appendici alla Relazione Informativa e gli
+atti dell'aggiornamento 2025 (fonte e data in `fonti.txt`); il workflow di Pages
+le pubblica in `data/cdpi-agg2025/`. Usata oggi solo l'Appendice 2, "Dettaglio
+CUP riferiti ai programmi" (`tools/extract_appendice_cup.py`): per i programmi
+(sicurezza in galleria, tecnologie, stazioni...) elenca i CUP che le Tabelle A e
+B non scrivono, uno per oggetto. 914 righe, 819 CUP, 54 programmi; 2 CUP sono
+anche in tabella. Con questi i CUP in corso del 2025 sono 990, non 173: la
+differenza fra "i CUP del contratto" contati da chi guarda solo le tabelle e da
+chi guarda anche l'appendice. Le altre appendici (delibere CIPESS per progetto,
+schede intervento, delta costi, variazione risorse, distribuzione territoriale,
+PNRR e PNC, rimodulazioni...) sono da valutare.
+
 ## Rimandi ai PDF
 
 Ogni numero di pagina mostrato e' un link al PDF pubblicato in `data/` con

@@ -96,8 +96,12 @@ fi
 # dalla geografia, quindi gira in tutti i rami sopra
 python3 build_servizi.py ../data/servizi ../data/cdp-rfi-app.json
 # il registro unico dei CUP: Investimenti in corso e conclusi, Servizi
+# con i CUP dei programmi dall'Appendice 2 alla Relazione Informativa (MIT,
+# portale Trasparenza: documenti/cdpi-agg2025/fonti.txt)
+python3 extract_appendice_cup.py ../documenti/cdpi-agg2025/appendice_2_lista_cup.pdf agg2025 \
+  ../data/appendice-cup-agg2025.json
 python3 registro_cup.py ../data/cdp-rfi-dataset.json ../data/cdp-rfi-app.json \
-  ../data/cdp-rfi-app.json ../data/cup-registro.csv
+  ../data/cdp-rfi-app.json ../data/cup-registro.csv ../data/appendice-cup-agg2025.json
 # i CSV dei comuni leggono l'app appena costruita, quindi vengono dopo
 python3 export_csv.py ../data/cdp-rfi-dataset.json ../data
 
