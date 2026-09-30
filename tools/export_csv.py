@@ -134,12 +134,17 @@ else:
 
 # --- i CUP da interrogare su OpenCUP per avere la localizzazione -----------
 righe = []
+# un CUP per contratto in cui compare, con la pagina di quel contratto: prima
+# si attribuivano all'ultimo contratto anche i CUP dei precedenti
 for p in sorted(D["progetti"], key=lambda x: x["codice"]):
-    ultimo = next((s for s in p["storico"] if s["doc"] == p["ultimo_doc"]), None)
-    for cup in ([p["cup"]] if p["cup"] else []) + p["cups"]:
-        righe.append([cup, "A/B", p["codice"], p["descrizione"], p["programma"],
-                      p["costo_totale"], p["ultimo_doc"],
-                      ultimo["pagina"] if ultimo else ""])
+    visti = set()
+    for s in p["storico"]:
+        for cup in s.get("cups") or []:
+            if (s["doc"], cup) in visti:
+                continue
+            visti.add((s["doc"], cup))
+            righe.append([cup, "A/B", p["codice"], p["descrizione"], p["programma"],
+                          s.get("costo"), s["doc"], s["pagina"]])
 # anche le opere gia' entrate in esercizio portano un CUP interrogabile
 for u in D["opere_ultimate"]:
     if u["cup"]:
@@ -349,8 +354,14 @@ CAT = [
      "natura_del_dato le distingue riga per riga.", DED,
      "tools/aggancio.py, tools/registro_rfi.py e tools/aggancio_pc.py"),
     ("cup-da-cercare.csv", "CUP da interrogare",
-     "Tutti i CUP presenti nei contratti, pronti per un'interrogazione su "
-     "OpenCUP.", DOC, "CdP Investimenti 2017-2026"),
+     "Tutti i CUP presenti nei contratti, uno per contratto in cui compaiono "
+     "con la pagina, pronti per un'interrogazione su OpenCUP.", DOC, "CdP Investimenti 2017-2026"),
+    ("cup-registro.csv", "Registro unico dei CUP",
+     "Una riga per CUP: in corso (Tabelle A e B dell'ultimo aggiornamento "
+     "Investimenti), concluso (dettaglio delle opere ultimate), non piu' nel "
+     "contratto, o della parte Servizi (Allegati 4c e 12), con interventi, "
+     "data di messa in esercizio, documento e pagina.", DOC,
+     "CdP Investimenti 2017-2026 e CdP Servizi 2022-2026"),
     ("rete-rfi.geojson", "Rete RFI",
      "Le tratte della rete RFI con codice di tratta e di linea, linea "
      "commerciale (il codice del registro con la lettera cambiata), rete "

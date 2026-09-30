@@ -251,6 +251,22 @@ contratto. I pezzi della scheda storica li produce `blocchiOpera(codice)`.
 L'indirizzo e' `#/opera/<codice>`: un clic lo imposta e apre il router, le
 frecce lo cambiano senza passarci, chiudere torna a `#/interventi`.
 
+## Registro dei CUP
+
+`tools/registro_cup.py` (in build_all.sh, dopo build_servizi) scrive
+`data/cup-registro.csv` e `app["cup_registro"]`, una riga per CUP, e la pagina
+`#/cup` li mostra. Stato: in corso (Tabelle A e B dell'ultimo aggiornamento
+Investimenti), concluso (dettaglio delle opere ultimate di tutte le edizioni,
+tenendo l'ultima in cui il CUP compare), non piu' nel contratto (Tabelle A e B
+di contratti precedenti, non nell'ultimo e non ultimati), Servizi (Allegati 4c
+e 12). I CUP degli interventi sono per contratto (`storico[].cups`): fino al
+settembre 2026 `cups` univa quelli di tutti i contratti e l'ultimo
+aggiornamento risultava con 13 CUP che non riporta piu'. Un CUP stampato in cima
+alla pagina, prima di ogni intervento, e' la coda dell'ultimo intervento della
+pagina precedente (extract.py): cosi' si perdeva il secondo CUP di P262A.
+Verifica: i 173 CUP in corso del 2025 coincidono con quelli che si leggono nel
+PDF alle pp. 44-127.
+
 ## Rimandi ai PDF
 
 Ogni numero di pagina mostrato e' un link al PDF pubblicato in `data/` con
