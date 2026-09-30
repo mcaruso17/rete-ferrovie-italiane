@@ -100,5 +100,4 @@ python3 export_csv.py ../data/cdp-rfi-dataset.json ../data
 
 # la piattaforma e' un file unico con i dati incorporati
 python3 inject_data.py ../piattaforma/index.html ../data/cdp-rfi-app.json
-python3 cruscotto_dati.py ../data/cdp-rfi-app.json ../piattaforma/cruscotto.html
 echo "fatto"

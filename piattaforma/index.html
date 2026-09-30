@@ -575,6 +575,172 @@ tr.dett:hover{background:inherit}
   .sez-ora{display:none}
   .parte-sw button{padding:5px 9px}
 }
+/* ---- cruscotto delle opere, innestato dalla pagina prototipo ----
+   Le regole valgono solo sotto .cr (la pagina Interventi e la scheda), e i
+   colori del cruscotto sono alias dei token della piattaforma */
+.cr{--notte:var(--sunk);--fondo:var(--ground);--pannello:var(--surface);--rialzo:var(--surface-2);
+  --linea:var(--line-strong);--rosso2:var(--rosso-2);--verde:var(--accent);--verde2:var(--accent-ink);
+  --bianco:var(--ink);--tenue:var(--ink-2);--fioco:var(--ink-3);--titolo:var(--f-disp);--corpo:var(--f-body)}
+.cr h1{font:700 clamp(24px,3.2vw,38px)/1.15 var(--titolo);margin:14px 0 0;max-width:34ch;
+  text-shadow:0 0 2px #100c0f,0 0 12px #ff3b5c44}
+.cr h1 b{color:var(--verde);text-shadow:0 0 3px #001a0c,0 0 10px #3dffa275,0 0 22px #3dffa244}
+.cr h1 i{font-style:normal;color:var(--rosso);text-shadow:0 0 3px #1a0006,0 0 10px #ff3b5c75}
+.cr .cr-sez{margin-top:44px}
+.cr .cr-sez h2{font:600 22px/1.2 var(--titolo);margin:0 0 6px}
+.cr select,.cr input[type=search]{font:15px var(--corpo);color:var(--bianco);background:var(--notte);
+  border:1px solid var(--linea);border-radius:6px;padding:7px 10px;min-width:180px}
+.cr input[type=checkbox]{accent-color:var(--verde);width:16px;height:16px}
+dialog.cr section{margin-top:0}
+.cr h1{font:700 clamp(26px,3.6vw,42px)/1.15 var(--titolo);margin:0;max-width:30ch;
+  text-shadow:0 0 2px #100c0f,0 0 12px #ff3b5c44}
+.cr h1 b{color:var(--verde);text-shadow:0 0 3px #001a0c,0 0 10px #3dffa275,0 0 22px #3dffa244}
+.cr h1 i{font-style:normal;color:var(--rosso);text-shadow:0 0 3px #1a0006,0 0 10px #ff3b5c75}
+.cr .cr-meta{color:var(--tenue);margin:14px 0 0;font-size:15px;max-width:90ch}
+.cr .cr-staz{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+.cr .cr-staz a{font-size:13px;text-decoration:none;border-radius:12px;padding:2px 10px;border:1px solid var(--linea);color:var(--bianco);background:var(--rialzo)}
+.cr .cr-staz a.dich{border-color:#3dffa288;color:var(--verde2)}
+.cr .cr-staz a:hover{border-color:var(--bianco)}
+.cr .mini .st circle{stroke:#0c0a11}
+.cr .mini .st .dich{fill:var(--verde2)}
+.cr .mini .st .cit{fill:#aca5bf}
+.cr a.mappa{font-size:12.5px;white-space:nowrap}
+.cr .barra-run{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin:0 0 24px}
+.cr label.campo{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--tenue)}
+.cr .barra-run select{min-width:min(420px,80vw)}
+.cr .gradini{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:14px;margin-top:28px}
+.cr .gradino{padding:12px 14px;border-left:3px solid var(--linea);background:#1b1724aa}
+.cr .gradino h3{margin:0;font:600 13.5px/1.2 var(--titolo);color:var(--tenue)}
+.cr .gradino .v{font:700 26px/1.1 var(--titolo);margin-top:6px}
+.cr .gradino .n{font-size:13.5px;color:var(--tenue)}
+.cr .gradino.verde{border-left-color:var(--verde)}
+.cr .gradino.verde .v{color:var(--verde)}
+.cr .gradino.rosso{border-left-color:var(--rosso)}
+.cr .gradino.rosso .v{color:var(--rosso)}
+.cr .cr-nota{color:var(--tenue);margin:0 0 16px;max-width:80ch;font-size:15px}
+.cr .cr-due{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:34px;align-items:start}
+@media (max-width:1050px){.cr .cr-due{grid-template-columns:1fr}}
+.cr .palco{background:radial-gradient(ellipse at 50% 120%,#ff3b5c18,transparent 60%),#0c0a11cc;
+  border:1px solid var(--linea);border-radius:10px;padding:12px}
+.cr svg text{font-family:var(--corpo);fill:var(--tenue);font-size:12px}
+.cr .asse line{stroke:#3a3150}
+.cr .pt{cursor:pointer}
+.cr .pt circle{transition:r .15s,stroke-width .15s}
+.cr .pt:hover circle,.cr .pt:focus circle{stroke:#fff;stroke-width:2}
+.cr .scelte{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 10px}
+.cr .chip{font:600 13px var(--titolo);color:var(--tenue);background:var(--rialzo);border:1px solid var(--linea);
+  border-radius:14px;padding:4px 12px;cursor:pointer}
+.cr .chip[aria-pressed=true]{color:var(--bianco);border-color:var(--verde);box-shadow:0 0 10px #3dffa244}
+.cr .chip:disabled{opacity:.4;cursor:default}
+.cr .chip.f-v[aria-pressed=true]{border-color:var(--verde)}
+.cr .chip.f-a[aria-pressed=true]{border-color:var(--ambra);box-shadow:0 0 10px #ffc95e44}
+.cr .chip.f-r[aria-pressed=true]{border-color:var(--rosso);box-shadow:0 0 10px #ff3b5c44}
+.cr .chip[aria-pressed=false].f-v,.cr .chip[aria-pressed=false].f-a,.cr .chip[aria-pressed=false].f-r{opacity:.55}
+.cr .filtri-g{margin:0 0 12px}
+.cr .scelte .et{font-size:13px;color:var(--tenue);margin-right:2px}
+.cr .pt .cr-cod{font:600 10.5px var(--titolo);fill:#f6f3f8;paint-order:stroke;stroke:#0c0a11;stroke-width:3px;pointer-events:none}
+.cr .legenda{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;font-size:14px;color:var(--tenue)}
+.cr .legenda span{display:inline-flex;align-items:center;gap:6px}
+.cr .legenda i{width:12px;height:12px;border-radius:50%;display:inline-block}
+.cr .lista{list-style:none;margin:0;padding:0}
+.cr .lista li{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:9px 0;border-bottom:1px solid #3a315066;cursor:pointer}
+.cr .lista li:hover{background:#26203566}
+.cr .lista .t{font-size:14.5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.cr .lista .c{font:600 12px var(--titolo);color:var(--rosso2);letter-spacing:.04em}
+.cr .lista .v{font:700 16px var(--titolo);color:var(--rosso);text-align:right;align-self:center}
+.cr .comandi{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:end;margin-bottom:14px}
+.cr .comandi label.spunta{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--tenue)}
+.cr .tabellona{max-height:620px;overflow:auto;border:1px solid var(--linea);border-radius:8px}
+.cr table{border-collapse:collapse;width:100%;font-size:14.5px}
+.cr th,.cr td{padding:8px 10px;text-align:left;border-bottom:1px solid #3a315066}
+.cr th{font:600 13px/1.2 var(--titolo);color:var(--tenue);position:sticky;top:0;background:var(--pannello);z-index:1;white-space:nowrap}
+.cr th button{all:unset;cursor:pointer}
+.cr th button[aria-sort]::after{content:" \25BE";color:var(--rosso2)}
+.cr th button[aria-sort=ascending]::after{content:" \25B4"}
+.cr td.n,.cr th.n{text-align:right;white-space:nowrap}
+.cr tbody tr{cursor:pointer}
+.cr tbody tr:hover{background:#26203599}
+.cr td .sub{display:block;color:var(--fioco);font-size:12.5px}
+.cr td .nome{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;max-width:46ch}
+.cr td.anno{font-size:13px;color:var(--tenue);max-width:22ch}
+.cr .gradino .v small{font-size:15px;font-weight:600;margin-left:4px;color:var(--tenue)}
+.cr code{font:600 13px var(--titolo);letter-spacing:.03em;color:var(--rosso2)}
+.cr .barra{display:flex;align-items:center;gap:8px;min-width:120px}
+.cr .barra b{display:block;height:8px;border-radius:4px;background:#3a3150;flex:1;position:relative;overflow:hidden}
+.cr .barra b i{position:absolute;inset:0 auto 0 0;background:linear-gradient(90deg,#1e9e62,var(--verde));box-shadow:0 0 8px #3dffa266}
+.cr .barra span{font-size:13px;color:var(--tenue);min-width:3.2em;text-align:right}
+.cr .cr-tag{display:inline-block;padding:1px 8px;border-radius:10px;font-size:12.5px;background:var(--rialzo);color:var(--tenue);margin:2px 4px 2px 0}
+.cr .cr-tag.rfi{color:var(--verde);border:1px solid #3dffa255}
+.cr .cr-tag.pnrr{color:var(--ambra);border:1px solid #ffc95e55}
+.cr .conta{color:var(--tenue);font-size:14px;margin:8px 0 0}
+dialog.cr{width:min(1080px,96vw);max-height:92vh;padding:0;border:1px solid var(--rosso);border-radius:12px;
+  background:var(--pannello);color:var(--bianco);box-shadow:0 0 44px #ff3b5c44}
+dialog.cr::backdrop{background:#0c0a11d9}
+.cr .dlg-testa{padding:18px 20px 12px;border-bottom:1px solid var(--linea);background:var(--pannello);z-index:2;flex:none;position:relative}
+.cr .dlg-testa .cr-cod{font:600 13px var(--titolo);color:var(--rosso2);letter-spacing:.05em}
+.cr .dlg-testa h3{margin:4px 44px 6px 0;font:700 22px/1.2 var(--titolo)}
+.cr .chiudi{position:absolute;right:16px;top:16px;background:none;border:1px solid var(--linea);color:var(--tenue);
+  border-radius:6px;padding:4px 10px;cursor:pointer;font:15px var(--corpo)}
+.cr .chiudi:hover{border-color:var(--rosso);color:var(--bianco)}
+dialog.cr[open]{display:flex;flex-direction:column}
+/* le regole generiche dei dialog della piattaforma non valgono qui */
+dialog.cr{max-width:none;margin:auto}
+.cr .dlg-corpo table th{text-transform:none;letter-spacing:0}
+.cr .dlg-corpo{overflow:auto;flex:1;min-height:0;padding:4px 20px 26px;position:relative}
+.cr .dlg-corpo h4{font:600 18px var(--titolo);margin:24px 0 8px;color:var(--bianco)}
+.cr .dlg-corpo h4 span{font:500 13px var(--corpo);color:var(--tenue);margin-left:8px}
+.cr .dlg-corpo .gradini{margin-top:14px}
+.cr .affianco{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start}
+@media (max-width:820px){.cr .affianco{grid-template-columns:1fr}}
+.cr .mini{width:100%;height:auto;display:block;background:#0c0a11;border:1px solid var(--linea);border-radius:8px}
+.cr .mini .reg{fill:#1f1a2b;stroke:#3a3150;stroke-width:.6}
+.cr .mini .rete{fill:none;stroke:#6e6784;stroke-opacity:.55}
+.cr .mini .sua{fill:none;stroke:var(--verde);stroke-linecap:round;filter:drop-shadow(0 0 3px #3dffa2)}
+.cr .mini .pc{fill:none;stroke:var(--rosso);stroke-linecap:round;stroke-dasharray:4 3;filter:drop-shadow(0 0 3px #ff3b5c)}
+.cr .dlg-nav{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:10px}
+.cr .dlg-nav a{font:600 12.5px var(--titolo);color:var(--tenue);text-decoration:none;border:1px solid var(--linea);
+  border-radius:12px;padding:3px 10px;background:var(--rialzo)}
+.cr .dlg-nav a:hover,.cr .dlg-nav a.qui{color:var(--bianco);border-color:var(--verde);box-shadow:0 0 8px #3dffa244}
+.cr .dlg-nav .sposta{margin-left:auto;display:flex;gap:6px;align-items:center;font-size:13px;color:var(--tenue)}
+.cr .dlg-nav button{font:600 14px var(--titolo);color:var(--bianco);background:var(--rialzo);border:1px solid var(--linea);
+  border-radius:6px;padding:3px 10px;cursor:pointer}
+.cr .dlg-nav button:hover:not(:disabled){border-color:var(--rosso)}
+.cr .dlg-nav button:disabled{opacity:.35;cursor:default}
+.cr .sintesi{font-size:16px;line-height:1.55;margin:16px 0 0;max-width:92ch}
+.cr .sintesi b{color:var(--verde);font-weight:600}
+.cr .sintesi i{font-style:normal;color:var(--rosso2);font-weight:600}
+.cr .dlg-corpo section{margin-top:0;scroll-margin-top:8px}
+.cr .delta.su{color:var(--rosso2)}
+.cr .delta.giu{color:var(--verde)}
+.cr .mini g[data-t].acc path{stroke:#fff;filter:drop-shadow(0 0 5px #fff)}
+.cr tr[data-t]:hover td{background:#3dffa214}
+.cr .flusso{width:100%;height:auto;display:block}
+.cr .flusso .nodo rect{fill:#0c0a11;stroke:var(--linea);rx:6}
+.cr .flusso .nodo.op rect{stroke:var(--rosso);filter:drop-shadow(0 0 6px #ff3b5c66)}
+.cr .flusso .nodo text{fill:var(--bianco);font-size:12.5px}
+.cr .flusso a .nodo:hover rect{stroke:var(--verde)}
+.cr .flusso .nodo .sub{fill:var(--tenue);font-size:11px}
+.cr .flusso .arco{fill:none;stroke-width:2.2}
+.cr .flusso .arco.dich{stroke:var(--verde);filter:drop-shadow(0 0 3px #3dffa2)}
+.cr .flusso .arco.ded{stroke:#6e6784;stroke-dasharray:5 4}
+.cr .flusso .arco.cup{stroke:var(--rosso2);stroke-opacity:.8}
+.cr .flusso .col{font:600 12px var(--titolo);fill:var(--rosso2)}
+.cr .vicine li{grid-template-columns:auto 1fr auto}
+.cr .vicine .km{font:600 13px var(--titolo);color:var(--verde);text-align:right;align-self:center;white-space:nowrap}
+.cr .avviso{border-left:3px solid var(--ambra);background:#ffc95e12;padding:10px 12px;font-size:14px;color:var(--tenue);margin:10px 0}
+.cr .avviso b{color:var(--ambra)}
+.cr .cr-kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:14.5px;margin:0}
+.cr .cr-kv dt{color:var(--tenue)}
+.cr .cr-kv dd{margin:0}
+#cr-tip{position:fixed;z-index:20;pointer-events:none;max-width:360px;background:#0c0a11f2;
+  border:1px solid var(--rosso);border-radius:8px;padding:10px 12px;font-size:14px;line-height:1.4;
+  box-shadow:0 0 18px #ff3b5c44;opacity:0;transition:opacity .1s}
+#cr-tip b{color:var(--verde)}
+#cr-tip .t{color:var(--tenue);font-size:13px;margin-top:4px}
+@media (max-width:600px){.cr .gradino .v{font-size:22px}
+.cr .dlg-testa h3{font-size:17px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.cr .dlg-testa{padding:14px 14px 10px}
+.cr .dlg-corpo{padding:4px 14px 20px}
+.cr .sintesi{font-size:15px}}
 </style>
 
 <div class="top">
@@ -586,7 +752,6 @@ tr.dett:hover{background:inherit}
       </div>
       <div class="top-az">
         <span class="sez-ora" id="sez-ora"></span>
-        <a class="cr-link" href="cruscotto.html" title="Le opere in un cruscotto: costi, avanzamento, tratte">Cruscotto opere</a>
         <div class="parte-sw" role="group" aria-label="Parte del contratto">
           <button type="button" id="parte-inv" aria-pressed="true">Investimenti</button>
           <button type="button" id="parte-srv" aria-pressed="false">Servizi</button>
@@ -930,49 +1095,82 @@ tr.dett:hover{background:inherit}
 
 <!-- ===================== INTERVENTI ===================== -->
 <section class="pagina" id="p-interventi" aria-labelledby="h-int">
-<div class="solo-inv">
+<!-- Le opere: il cruscotto, innestato dalla pagina prototipo. Lo guida CR (script) -->
+<div class="solo-inv cr">
   <div class="sec-h"><h2 id="h-int">Gli interventi, uno per uno</h2><span class="sec-n">Tabella A &middot; portafoglio investimenti</span></div>
-  <p class="lede">Ogni riga è un intervento come compare nel contratto selezionato. Clicca una riga per vedere come costo e copertura sono cambiati da un contratto all'altro, e a che pagina del PDF trovare il dato.</p>
-  <div class="filters">
-    <div class="field"><label for="f-q">Cerca</label><input type="search" id="f-q" placeholder="nome, codice o CUP"></div>
-    <div class="field"><label for="f-doc">Contratto</label><select id="f-doc"></select></div>
-    <div class="field"><label for="f-prog">Programma</label><select id="f-prog"></select></div>
-    <div class="field"><label for="f-reg">Regione</label><select id="f-reg"></select></div>
-    <div class="field"><label for="f-cls">Classe</label><select id="f-cls"></select></div>
-    <div class="field"><label for="f-fin">Copertura</label><select id="f-fin"></select></div>
-    <div class="field"><label for="f-sa">Stato attuativo</label><select id="f-sa"></select></div>
-    <div class="field"><label for="f-pnrr">PNRR</label><select id="f-pnrr">
-      <option value="">tutti</option><option value="1">solo paniere PNRR</option>
-      <option value="0">escludi PNRR</option></select></div>
-    <span class="count" id="cnt"></span>
+<div class="barra-run">
+      <label class="campo">Contratto<select id="cr-selDoc"></select></label>
+    </div>
+    <h1 id="cr-titolo"></h1>
+    <p class="cr-meta" id="cr-meta"></p>
+    <div class="gradini" id="cr-gradini"></div>
+  
+
+  <section class="cr-sez">
+    <div class="cr-due">
+      <div>
+        <h2>A che punto sono le opere</h2>
+        <p class="cr-nota">Ogni cerchio &egrave; un&rsquo;opera: in orizzontale il costo, in verticale quanto &egrave; gi&agrave; stato speso. Il cerchio cresce con quello che resta da finanziare, il colore dice quanto dell&rsquo;opera &egrave; coperto da risorse assegnate. Grande e rosso in basso a destra: costosa, ferma e scoperta. Verde in basso: i soldi ci sono ma non si spendono. Clicca un cerchio per la scheda.</p>
+        <p class="conta" id="cr-gConta" style="margin:0 0 8px"></p>
+        <div class="palco"><svg id="cr-scatter" viewBox="0 0 640 420" role="img" aria-label="Costo contro avanzamento delle opere"></svg></div>
+        <div class="legenda">
+          <span><i style="background:var(--verde);box-shadow:0 0 6px var(--verde)"></i>integralmente finanziata</span>
+          <span><i style="background:var(--ambra)"></i>finanziata per almeno met&agrave;</span>
+          <span><i style="background:var(--rosso);box-shadow:0 0 6px var(--rosso)"></i>finanziata per meno di met&agrave;</span>
+        </div>
+        <div class="filtri-g" style="margin-top:16px">
+          <div class="scelte" role="group" aria-label="Asse verticale">
+            <span class="et">Speso misurato sul</span>
+            <button class="chip" type="button" data-y="speso" aria-pressed="true">costo dell&rsquo;opera</button>
+            <button class="chip" type="button" data-y="resa" aria-pressed="false">le risorse assegnate</button>
+          </div>
+          <div class="scelte" role="group" aria-label="Quante opere">
+            <span class="et">Mostra</span>
+            <button class="chip" type="button" data-n="15" aria-pressed="false">15</button>
+            <button class="chip" type="button" data-n="30" aria-pressed="false">30</button>
+            <button class="chip" type="button" data-n="60" aria-pressed="false">60</button>
+            <button class="chip" type="button" data-n="0" aria-pressed="true">tutte</button>
+            <span class="et">opere, le prime per</span>
+            <button class="chip" type="button" data-per="costo" aria-pressed="true">costo</button>
+            <button class="chip" type="button" data-per="dafin" aria-pressed="false">da finanziare</button>
+          </div>
+          <div class="scelte" role="group" aria-label="Finanziamento">
+            <span class="et">Finanziamento</span>
+            <button class="chip f-v" type="button" data-f="v" aria-pressed="true">integrale</button>
+            <button class="chip f-a" type="button" data-f="a" aria-pressed="true">almeno met&agrave;</button>
+            <button class="chip f-r" type="button" data-f="r" aria-pressed="true">meno di met&agrave;</button>
+          </div>
+          <div class="comandi" style="margin:4px 0 0">
+            <label class="campo">Programma<select id="cr-gProg"></select></label>
+            <label class="campo">Regione<select id="cr-gReg"></select></label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>Quanto manca</h2>
+        <p class="cr-nota">Le dieci opere con pi&ugrave; risorse ancora da trovare, in milioni di euro. Segue programma e regione scelti nel grafico.</p>
+        <ul class="lista" id="cr-manca"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cr-sez">
+    <h2>Tutte le opere</h2>
+    <p class="cr-nota">Una riga per opera del contratto scelto. &laquo;Km RFI&raquo; somma le tratte su cui RFI stessa colloca l&rsquo;opera nel Piano Commerciale; vuoto se RFI non lo dice. Clicca un&rsquo;intestazione per ordinare, una riga per la scheda.</p>
+    <div class="comandi">
+      <label class="campo">Cerca<input type="search" id="cr-fQ" placeholder="nome, codice o CUP"></label>
+      <label class="campo">Programma<select id="cr-fProg"></select></label>
+      <label class="campo">Regione<select id="cr-fReg"></select></label>
+      <label class="campo">Finanziamento<select id="cr-fFin">
+        <option value="">tutte</option><option value="v">integralmente finanziate</option>
+        <option value="a">finanziate per almeno met&agrave;</option><option value="r">finanziate per meno di met&agrave;</option></select></label>
+      <label class="spunta"><input type="checkbox" id="cr-fRfi">solo con tratte dichiarate da RFI</label>
+    </div>
+    <div class="tabellona"><table id="cr-tab"></table></div>
+    <p class="conta" id="cr-conta"></p>
+  </section>
+
   </div>
-  <div class="tbl-wrap"><table id="t-prog">
-    <thead><tr>
-      <th class="s" data-k="c">Codice</th>
-      <th class="s" data-k="n">Intervento</th>
-      <th class="s" data-k="pn">Programma</th>
-      <th class="s r" data-k="costo">Costo</th>
-      <th class="s r" data-k="fin">Assegnate</th>
-      <th class="s r" data-k="daf">Da finanziare</th>
-      <th class="s r" data-k="pct">Copertura</th>
-      <th class="s" data-k="sf">Stato</th>
-    </tr></thead>
-    <tbody id="tb-prog"></tbody>
-  </table></div>
-  <div class="pager">
-    <label for="pg-size" style="color:var(--ink-3)">Righe per pagina</label>
-    <select id="pg-size" style="min-width:86px">
-      <option>25</option><option selected>50</option><option>100</option>
-      <option value="0">tutte</option>
-    </select>
-    <span class="sp"></span>
-    <button type="button" id="pg-prima">&laquo;</button>
-    <button type="button" id="pg-prec">Precedente</button>
-    <span class="pos" id="pg-pos"></span>
-    <button type="button" id="pg-succ">Successiva</button>
-    <button type="button" id="pg-ultima">&raquo;</button>
-  </div>
-</div>
 <div class="solo-srv">
   <div class="sec-h"><h2>I progetti con un CUP</h2><span class="sec-n">Allegati 4c e 12 &middot; parte Servizi</span></div>
   <p class="lede">La parte Servizi scende al singolo progetto solo in due punti: le assegnazioni dai fondi straordinari (prosecuzione delle opere, adeguamento prezzi, PON, DL Alluvioni, enti locali), per CUP e decreto, e le opere PNRR attribuite al CdP-S. Clicca una riga per vedere ogni assegnazione con il suo atto.</p>
@@ -1316,12 +1514,22 @@ tr.dett:hover{background:inherit}
   <p>Elaborazione dei Contratti di Programma MIT&ndash;RFI, parte Investimenti (2017&ndash;2021 e 2022&ndash;2026 con i relativi aggiornamenti) e parte Servizi (2022&ndash;2026 con i quattro atti integrativi: registro delle linee, fonti per cassa, impieghi, assegnazioni per CUP e opere PNRR). Tutti gli importi in milioni di euro, come nei documenti originali. Ogni riga riporta la pagina del PDF da cui è tratta. Confini regionali e comunali ISTAT via openpolis/geojson-italy, CC BY 4.0. Tracciati ferroviari &copy; contributori di OpenStreetMap, ODbL.</p>
 </div></footer>
 
-<dialog id="dlg">
-  <div class="dlg-h">
-    <div><span class="eyebrow" id="d-code"></span><h2 id="d-nome" style="font-size:17px;margin-top:3px"></h2></div>
-    <button class="x" id="d-close" type="button" aria-label="Chiudi">&times;</button>
+<div id="cr-tip" role="tooltip"></div>
+<dialog class="cr" id="cr-dlg" aria-labelledby="cr-dNome">
+  <div class="dlg-testa">
+    <div class="cr-cod" id="cr-dCod"></div>
+    <h3 id="cr-dNome"></h3>
+    <div id="cr-dTag"></div>
+    <div class="dlg-nav" role="navigation" aria-label="Sezioni della scheda">
+      <a href="#cr-s-sintesi">Sintesi</a><a href="#cr-s-contratti">Nei contratti</a><a href="#cr-s-territorio">Sul territorio</a>
+      <a href="#cr-s-cup">CUP e linee</a><a href="#cr-s-vicine">Stesse tratte</a><a href="#cr-s-rfi">Cosa dice RFI</a><a href="#cr-s-dettagli">Dettagli</a>
+      <span class="sposta"><button type="button" id="cr-dPrec" aria-label="Opera precedente" title="Opera precedente (freccia sinistra)">&larr;</button>
+        <span id="cr-dPos"></span>
+        <button type="button" id="cr-dSucc" aria-label="Opera successiva" title="Opera successiva (freccia destra)">&rarr;</button></span>
+    </div>
+    <button class="chiudi" type="button" id="cr-dChiudi" aria-label="Chiudi">&times;</button>
   </div>
-  <div class="dlg-b" id="d-body"></div>
+  <div class="dlg-corpo" id="cr-dCorpo"></div>
 </dialog>
 <div class="tip" id="tip" role="status" aria-live="polite"></div>
 
@@ -1494,10 +1702,9 @@ function cambiaDoc(id){
   docSel = id;
   Array.prototype.forEach.call(rail.children, function(b){
     b.setAttribute("aria-pressed", b.id==="stop-"+docSel ? "true":"false"); });
-  if(el("f-doc").value!==docSel) el("f-doc").value = docSel;
   if(el("m-doc").value!==docSel) el("m-doc").value = docSel;
   if(el("cmp-doc").value!==docSel) el("cmp-doc").value = docSel;
-  renderKpi(); barreSerie(); barraFonti(); popolaFiltri(); pagina=1; renderTabella();
+  renderKpi(); barreSerie(); barraFonti(); CR.aggiorna();
   disegnaMappa();
   if(cmpPronta){ cmpSel = null; cmpRender(); }
 }
@@ -1674,9 +1881,8 @@ function disegnaMappa(){
 }
 function vaiARegione(istat){
   regioneSel = istat;
-  el("f-reg").value = istat;
   location.hash = "#/interventi";
-  pagina = 1; renderTabella();
+  CR.regione(REG[istat]);
 }
 el("mappa-svg").addEventListener("click", function(e){
   var p = e.target.closest("path[data-istat]"); if(p) vaiARegione(p.dataset.istat); });
@@ -2730,146 +2936,18 @@ function cmpFineDrag(){
 el("cmp-svg").addEventListener("pointerup", cmpFineDrag);
 el("cmp-svg").addEventListener("pointercancel", cmpFineDrag);
 
-/* ================= tabella interventi ================= */
-var sortK="costo", sortDir=-1, pagina=1;
-function righeCorrenti(){
-  return D.progetti.filter(function(p){ return p.h[docSel]; }).map(function(p){
-    var s=p.h[docSel];
-    return {p:p, costo:s[0], fin:s[1], daf:s[2], avz:s[3],
-      pct:(s[0]&&s[0]>0)?(s[1]||0)/s[0]*100:null};
-  });
-}
-function statoRiga(r){
-  if(r.costo!==null && r.costo<=0.001) return "per memoria";
-  if(r.costo===null || r.fin===null) return "non determinato";
-  if(r.daf!==null && r.daf<0.005) return "integralmente finanziato";
-  if(r.fin<0.005) return "non finanziato";
-  return "parzialmente finanziato";
-}
+/* ---- menu a tendina ---- */
 function opts(sel, vals, tutti){
   var cur = sel.value;
   sel.innerHTML = '<option value="">'+tutti+'</option>' + vals.map(function(v){
     return '<option value="'+esc(v[0])+'">'+esc(v[1])+'</option>'; }).join("");
   if(Array.prototype.some.call(sel.options,function(o){return o.value===cur;})) sel.value=cur;
 }
-function popolaFiltri(){
-  var rows = righeCorrenti();
-  var pm={}; rows.forEach(function(r){ if(r.p.pn) pm[r.p.pn]=r.p.pg; });
-  opts(el("f-prog"), Object.keys(pm).sort().map(function(k){ return [k,k+" · "+pm[k]]; }), "tutti");
-  var cm={}; rows.forEach(function(r){ if(r.p.cl) cm[r.p.cl]=r.p.cln||r.p.cl; });
-  opts(el("f-cls"), Object.keys(cm).sort().map(function(k){ return [k,k+" · "+cm[k]]; }), "tutte");
-  opts(el("f-fin"), Object.keys(STATI).map(function(k){ return [k,STATI[k].t]; }), "tutte");
-  var sm={}; rows.forEach(function(r){ (r.p.sa||[]).forEach(function(s){ sm[s]=1; }); });
-  opts(el("f-sa"), Object.keys(sm).sort().map(function(k){
-    var b=k.replace(/\(.*/,""); return [k,k+(D.legenda_stato[b]?" · "+D.legenda_stato[b]:"")]; }), "tutti");
-  var rm={}; rows.forEach(function(r){ (ATT[r.p.c]||[]).forEach(function(x){ rm[x]=1; }); });
-  opts(el("f-reg"), Object.keys(rm).sort().map(function(k){ return [k,REG[k]]; }), "tutte");
-}
-function filtra(rows){
-  var q=el("f-q").value.trim().toLowerCase();
-  var fp=el("f-prog").value, fc=el("f-cls").value, ff=el("f-fin").value;
-  var fs=el("f-sa").value, fn=el("f-pnrr").value, fr=el("f-reg").value;
-  return rows.filter(function(r){
-    var p=r.p;
-    if(fp && p.pn!==fp) return false;
-    if(fc && p.cl!==fc) return false;
-    if(ff && statoRiga(r)!==ff) return false;
-    if(fs && (p.sa||[]).indexOf(fs)<0) return false;
-    if(fn==="1" && !p.pnrr) return false;
-    if(fn==="0" && p.pnrr) return false;
-    if(fr && (ATT[p.c]||[]).indexOf(fr)<0) return false;
-    if(q){
-      var h=(p.c+" "+p.n+" "+((p.cups||[]).join(" "))+" "+(p.pg||"")+" "+(p.sp||"")).toLowerCase();
-      if(h.indexOf(q)<0) return false;
-    }
-    return true;
-  });
-}
-function ordina(rows){
-  rows.sort(function(a,b){
-    var va,vb;
-    if(sortK==="c"||sortK==="n"||sortK==="pn"){
-      va=(sortK==="c"?a.p.c:sortK==="n"?a.p.n:(a.p.pn||"zz"));
-      vb=(sortK==="c"?b.p.c:sortK==="n"?b.p.n:(b.p.pn||"zz"));
-      return String(va).localeCompare(String(vb),"it")*sortDir;
-    }
-    if(sortK==="sf") return statoRiga(a).localeCompare(statoRiga(b),"it")*sortDir;
-    va=a[sortK]; vb=b[sortK];
-    if(va===null||va===undefined) va=-1;
-    if(vb===null||vb===undefined) vb=-1;
-    return (va-vb)*sortDir;
-  });
-  return rows;
-}
-function renderTabella(){
-  var rows = ordina(filtra(righeCorrenti()));
-  var size = parseInt(el("pg-size").value,10);
-  var npag = size>0 ? Math.max(1, Math.ceil(rows.length/size)) : 1;
-  if(pagina>npag) pagina = npag;
-  var da = size>0 ? (pagina-1)*size : 0;
-  var vista = size>0 ? rows.slice(da, da+size) : rows;
-
-  el("cnt").textContent = rows.length + " interventi · " +
-    nf(rows.reduce(function(s,r){return s+(r.costo||0);},0)) + " mln € di costo · " +
-    nf(rows.reduce(function(s,r){return s+(r.daf||0);},0)) + " mln € da finanziare";
-  el("pg-pos").textContent = rows.length===0 ? "nessun risultato"
-    : (size>0 ? (da+1)+"–"+Math.min(da+size,rows.length)+" di "+rows.length
-              : "tutte le "+rows.length+" righe");
-  el("pg-prec").disabled = el("pg-prima").disabled = (pagina<=1 || size===0);
-  el("pg-succ").disabled = el("pg-ultima").disabled = (pagina>=npag || size===0);
-
-  el("tb-prog").innerHTML = vista.map(function(r){
-    var p=r.p, st=statoRiga(r), col=STATI[st].c;
-    var pct = r.pct===null ? "–" : nf(r.pct,0)+"%";
-    var w = r.pct===null ? 0 : Math.max(0, Math.min(100, r.pct));
-    var regs = (ATT[p.c]||[]).map(function(x){ return REG[x]; }).join(", ");
-    return '<tr class="clickable" tabindex="0" data-c="'+esc(p.c)+'">'+
-      '<td class="code">'+esc(p.c)+(p.pnrr?' <span class="tag pnrr">PNRR</span>':'')+
-        ((PCINT[p.c]||PCSI[p.c])?' <span class="tag rfi" title="RFI lo cita con il suo codice nel Piano Commerciale">RFI</span>':'')+'</td>'+
-      '<td class="nm"><div class="clamp">'+esc(p.n||"–")+'</div>'+
-        (regs?'<div style="font-size:11px;color:var(--ink-3);margin-top:2px">'+esc(regs)+'</div>':'')+'</td>'+
-      '<td style="font-size:12px;color:var(--ink-2);min-width:126px">'+
-        (p.pn?'<span class="tag">'+p.pn+'</span> '+esc(p.pg):"–")+'</td>'+
-      '<td class="r num">'+nf(r.costo,1)+'</td>'+
-      '<td class="r num">'+nf(r.fin,1)+'</td>'+
-      '<td class="r num">'+nf(r.daf,1)+'</td>'+
-      '<td class="r"><span class="pctn">'+pct+'</span>'+
-        '<div class="bar"><i style="width:'+w.toFixed(1)+'%;background:'+col+'"></i></div></td>'+
-      '<td><span class="pill"><i class="dot" style="background:'+col+'"></i>'+STATI[st].t+'</span>'+
-        ((p.sa&&p.sa.length)?' <span class="tag">'+esc(p.sa.join(" "))+'</span>':'')+'</td></tr>';
-  }).join("") ||
-    '<tr><td colspan="8" style="padding:26px;color:var(--ink-3)">Nessun intervento con questi filtri.</td></tr>';
-}
-Array.prototype.forEach.call(document.querySelectorAll("#t-prog thead th.s"), function(th){
-  th.addEventListener("click", function(){
-    var k=th.dataset.k;
-    if(sortK===k) sortDir=-sortDir;
-    else { sortK=k; sortDir=(k==="c"||k==="n"||k==="pn"||k==="sf")?1:-1; }
-    pagina=1; renderTabella();
-  });
-});
-["f-q","f-prog","f-cls","f-fin","f-sa","f-pnrr","f-reg"].forEach(function(id){
-  el(id).addEventListener("input", function(){ pagina=1; renderTabella(); }); });
-el("f-doc").addEventListener("input", function(){ cambiaDoc(el("f-doc").value); });
-el("pg-size").addEventListener("input", function(){ pagina=1; renderTabella(); });
-el("pg-prima").addEventListener("click", function(){ pagina=1; renderTabella(); });
-el("pg-prec").addEventListener("click", function(){ pagina=Math.max(1,pagina-1); renderTabella(); });
-el("pg-succ").addEventListener("click", function(){ pagina=pagina+1; renderTabella(); });
-el("pg-ultima").addEventListener("click", function(){ pagina=1e9; renderTabella(); });
 
 /* ================= dettaglio intervento ================= */
-var dlg = el("dlg");
-el("d-close").addEventListener("click", function(){ dlg.close(); });
-// chiudere la scheda, con la X o con Esc, riporta l'indirizzo all'elenco: un
-// #/opera/... rimasto nella barra riaprirebbe la scheda al ricaricamento
-dlg.addEventListener("close", function(){
-  if(/^#\/opera\//.test(location.hash)) location.hash = "#/interventi";
-});
-el("tb-prog").addEventListener("click", function(e){
-  var tr=e.target.closest("tr[data-c]"); if(tr) apriDettaglio(tr.dataset.c); });
-el("tb-prog").addEventListener("keydown", function(e){
-  if(e.key!=="Enter" && e.key!==" ") return;
-  var tr=e.target.closest("tr[data-c]"); if(tr){ e.preventDefault(); apriDettaglio(tr.dataset.c); } });
+// la scheda dell'opera: quella del cruscotto (chiudendola l'indirizzo torna
+// all'elenco, vedi CR)
+var dlg = el("cr-dlg");
 
 // Le schede del Piano Commerciale (PDF): che cosa RFI dice del progetto
 function pcSchedePdf(cod){
@@ -2972,13 +3050,14 @@ function doveCitata(p, cups){
     'le due parti non hanno CUP in comune.</li>';
   return h + '</ul>';
 }
-function apriDettaglio(code, daRotta){
+// I pezzi della scheda storica dell'opera che la scheda del cruscotto non ha:
+// i campi del contratto, come e' stata dedotta la linea (registro RFI e
+// OpenStreetMap), la scheda del Piano Commerciale con la descrizione, il
+// fabbisogno, le fonti del contratto scelto. La scheda li mette al loro posto.
+function blocchiOpera(code){
   var p = D.progetti.filter(function(x){ return x.c===code; })[0];
-  if(!p) return;
-  if(!daRotta) location.hash = "#/opera/" + encodeURIComponent(code);
+  if(!p) return {kv:"", linea:"", pc:"", fab:"", fonti:"", primo:"", fonte:""};
   var cups = (p.cups && p.cups.length) ? p.cups : (p.cup ? [p.cup] : []);
-  el("d-code").textContent = p.c + (cups.length ? "  ·  CUP "+cups.join("  ") : "");
-  el("d-nome").textContent = p.n || "(senza descrizione nel documento)";
   var regs = (ATT[p.c]||[]).map(function(x){ return REG[x]; }).join(", ");
   var kv = [
     ["Programma", p.pn ? p.pn+" · "+p.pg : (p.pg||"–")],
@@ -3001,33 +3080,10 @@ function apriDettaglio(code, daRotta){
     ["Dicitura del programma nel PDF", p.po||"–"]
   ];
   var h = "";
-
-  // Il riepilogo prima di tutto: sono le quattro domande che uno si fa
-  // guardando un'opera, e finora stavano sparse nella tabella sotto.
-  var ref = p.h[docSel] || p.h[p.ud];
-  if(ref){
-    var quota = function(v){
-      return (ref[0] && v!==null && v!==undefined)
-        ? '<span class="sk-q">'+nf(v/ref[0]*100,0)+'%</span>' : ""; };
-    h += '<div class="sk-sint">'+
-      '<div><span class="sk-k">Costo dell\u2019opera</span>'+
-        '<b class="num">'+nf(ref[0],1)+'</b><span class="sk-u">mln &euro;</span></div>'+
-      '<div><span class="sk-k">Speso a oggi</span>'+
-        '<b class="num">'+nf(ref[3],1)+'</b><span class="sk-u">mln &euro;</span>'+quota(ref[3])+'</div>'+
-      '<div><span class="sk-k">Risorse assegnate</span>'+
-        '<b class="num">'+nf(ref[1],1)+'</b><span class="sk-u">mln &euro;</span>'+quota(ref[1])+'</div>'+
-      '<div><span class="sk-k">Ancora da finanziare</span>'+
-        '<b class="num">'+nf(ref[2],1)+'</b><span class="sk-u">mln &euro;</span>'+quota(ref[2])+'</div>'+
-      '</div>';
-    h += '<p class="sk-nota">Fotografia al contratto '+esc(BYDOC[docSel] && p.h[docSel]
-      ? BYDOC[docSel].titolo : BYDOC[p.ud].titolo)+
-      '. &laquo;Speso a oggi&raquo; e\u0300 l\u2019avanzamento che il contratto dichiara, non un pagamento verificato.</p>';
-  }
-
-  h += doveCitata(p, cups);
   h += '<dl class="kv">'+kv.map(function(x){
     return "<dt>"+esc(x[0])+"</dt><dd>"+esc(x[1])+"</dd>"; }).join("")+"</dl>";
 
+  var kvH = h; h = "";
   // Su quale linea: l'unico dato del sito che i documenti non contengono.
   // Va marcato come tale ogni volta che si mostra, non una volta sola nel
   // Metodo, perche' la scheda si apre anche arrivandoci da un link diretto.
@@ -3039,8 +3095,6 @@ function apriDettaglio(code, daRotta){
   var RFIL = (D.linee_rfi_intervento || {})[p.c] || [];
   var RRFI = D.registro_rfi || {}, RFONTI = D.registro_rfi_fonti || {};
   var CONF = (D.confermati || {})[p.c];
-  h += pcSchedePdf(p.c);
-  h += "<h3>Su quale linea</h3>";
   var PCI = PCINT[p.c] || [];
   if(PCI.length) h += pcScheda(p.c, PCI);
   if(!LIN.length && !RFIL.length){
@@ -3110,29 +3164,7 @@ function apriDettaglio(code, daRotta){
     }
   }
 
-  h += "<h3>Come cambia da un contratto all'altro</h3>";
-  h += '<div class="tbl-wrap" style="border:1px solid var(--line)"><table><thead><tr>'+
-    '<th>Contratto</th><th class="r">Costo</th><th class="r">Assegnate</th>'+
-    '<th class="r">Da finanziare</th><th class="r">Avanzamento</th>'+
-    '<th>Stato</th><th>Pagina</th></tr></thead><tbody>';
-  DOCS.forEach(function(d){
-    var s = p.h[d.id];
-    if(!s){ h+='<tr><td>'+esc(d.anno+" \u00b7 "+d.periodo)+
-      '</td><td colspan="6" style="color:var(--ink-3);font-size:12px">non presente in questo contratto</td></tr>'; return; }
-    // pagina e stato vengono dal documento di quella riga: prima si ripeteva
-    // la pagina dell'ultimo contratto su tutte, ed era il numero sbagliato
-    // proprio per chi voleva risalire al PDF
-    var pag = s[5] || p.pag;
-    var st = (s[6] || []).map(function(x){ return x.replace(/\(.*/, ""); });
-    h+='<tr'+(d.id===docSel?' style="background:var(--accent-soft)"':'')+'>'+
-      '<td style="white-space:nowrap">'+esc(d.anno+" \u00b7 "+d.periodo)+'</td>'+
-      '<td class="r num">'+nf(s[0],1)+'</td><td class="r num">'+nf(s[1],1)+'</td>'+
-      '<td class="r num">'+nf(s[2],1)+'</td><td class="r num">'+nf(s[3],1)+'</td>'+
-      '<td style="font-size:11.5px">'+st.map(function(x){
-         return '<abbr title="'+esc(D.legenda_stato[x]||x)+'">'+esc(x)+'</abbr>'; }).join(" ")+'</td>'+
-      '<td class="num" style="font-size:12px;color:var(--ink-3)">'+pdfLink(d.id, pag, "p. "+pag)+'</td></tr>';
-  });
-  h += "</tbody></table></div>";
+  var linea = h; h = "";
   // quanto servira' ancora, e con che urgenza: sta nel contratto ma non era
   // mai arrivato in pagina
   var fab = p.fab || {};
@@ -3156,6 +3188,8 @@ function apriDettaglio(code, daRotta){
           ';margin-right:7px"></span>'+esc(FONTI_LBL[n]||n)+'</td><td class="r num">'+nf(cur[4][i],1)+'</td></tr>'; }).join("")+
       '</tbody></table></div>';
   }
+  // fabbisogno e fonti (del contratto scelto) vanno insieme, sotto i contratti
+  var fabH = h; h = "";
   // Il primo contratto in cui l'opera compare non e' la sua data di inizio:
   // prima del 2017 ci sono altri CdP che non abbiamo. Dirlo qui evita che una
   // riga "non presente" venga letta come "l'opera non esisteva ancora".
@@ -3167,11 +3201,12 @@ function apriDettaglio(code, daRotta){
       'precedenti'+(prec ? ' (il primo a monte \u00e8 il '+esc(prec)+')' : '')+
       ', che non sono fra i documenti elaborati qui: di quel periodo questo sito non sa nulla.</p>';
   }
-  h += '<p style="margin-top:16px;font-size:12px;color:var(--ink-3)">Importi in milioni di euro. '+
-    'Fonte: Tabella A del Contratto di Programma, '+pdfLink(p.ud, p.pag, "pagina "+p.pag+" del PDF "+BYDOC[p.ud].file)+'.</p>';
-  el("d-body").innerHTML = h;
-  dlg.showModal();
+  var primoH = h; h = "";
+  var fonte = 'Fonte: Tabella A del Contratto di Programma, '+pdfLink(p.ud, p.pag, "pagina "+p.pag+" del PDF "+BYDOC[p.ud].file)+'.';
+  return {kv: kvH, linea: linea, pc: pcSchedePdf(p.c), fab: fabH, fonti: "", primo: primoH, fonte: fonte};
 }
+// la scheda dell'opera e' quella del cruscotto (CR.apri, piu' sotto)
+function apriDettaglio(code, daRotta){ CR.apri(code, daRotta ? "rotta" : ""); }
 
 /* ================= opere ultimate ================= */
 var uPagina = 1;
@@ -3944,13 +3979,642 @@ function initServizi(){
     "</b> milioni di euro, lo <b class=\"num\">"+nf(ut?tot/ut*100:0,1)+"%</b> del totale complessivo dell'ultima edizione ("+nf(ut)+" milioni).";
 }
 
+/* ================= opere: il cruscotto ================= */
+// I dati del cruscotto, ricavati da quelli della piattaforma (era il lavoro di
+// tools/cruscotto_dati.py quando il cruscotto era una pagina a parte):
+// tratte e stazioni che RFI dichiara per ogni opera, linee dichiarate o
+// dedotte, progetti e schede del Piano Commerciale.
+function crDati(PD){
+  var rr = PD.rete_rfi || {}, pc = PD.pc || {}, perInt = pc.per_int || {}, el0 = pc.el || {};
+  var nomi = {};
+  (rr.stazioni || []).forEach(function(s){ nomi[s[4]] = s[2]; });
+  var imp = rr.imp || {};
+  (Array.isArray(imp) ? imp : Object.keys(imp).map(function(k){ return [k, imp[k]]; }))
+    .forEach(function(x){ if(!(x[0] in nomi)) nomi[x[0]] = x[1]; });
+  // tratta -> progetti PC, rovesciato: progetto PC -> tratte
+  var perEl = {};
+  Object.keys(pc.tratte || {}).forEach(function(ti){
+    pc.tratte[ti].forEach(function(e){ (perEl[e] = perEl[e] || []).push(+ti); }); });
+  var tratte = [];
+  function tratta(t){
+    if(!tratte[t]){
+      var r = rr.tratte[t];
+      tratte[t] = [r[0], r[1], nomi[r[2]] || r[2], nomi[r[3]] || r[3], r[4], r[5], r[6], r[7], r[8], r[9], t];
+    }
+    return t;
+  }
+  var stDich = {}, stCit = {};
+  Object.keys(pc.staz || {}).forEach(function(si){
+    var els = pc.staz[si];
+    Object.keys(perInt).forEach(function(cod){
+      if(perInt[cod].some(function(e){ return els.indexOf(e) >= 0; }))
+        (stDich[cod] = stDich[cod] || {})[si] = 1; });
+  });
+  Object.keys(rr.stazioni_cit || {}).forEach(function(si){
+    rr.stazioni_cit[si].forEach(function(cod){ (stCit[cod] = stCit[cod] || {})[si] = 1; }); });
+  var staz = rr.stazioni || [], regRfi = PD.registro_rfi || {};
+  var linDich = pc.linee_rfi || {}, linDed = PD.linee_rfi_intervento || {};
+  var ATT0 = PD.attribuzione_regionale || {}, REG0 = PD.regioni || {};
+  var opere = PD.progetti.map(function(p){
+    var c = p.c, ids = perInt[c] || [];
+    var els = ids.map(function(e){ return el0[e]; }).filter(Boolean);
+    var tr = {};
+    ids.forEach(function(e){ (perEl[e] || []).forEach(function(t){ tr[t] = 1; }); });
+    var anni = {}, car = {};
+    els.forEach(function(e){ if(e.anno) anni[e.anno] = 1; (e.car || []).forEach(function(x){ car[x] = 1; }); });
+    var lin = (linDich[c] || []).map(function(x){ var r = regRfi[x.c] || {}; return [x.c, r.n || "", r.km, "dichiarata"]; });
+    (linDed[c] || []).forEach(function(x){
+      if(lin.some(function(l){ return l[0] === x.c; })) return;
+      var r = regRfi[x.c] || {}; lin.push([x.c, r.n || "", r.km, x.conf || ""]); });
+    var dich = Object.keys(stDich[c] || {}).map(Number).sort(function(a, b){ return a - b; });
+    var cit = Object.keys(stCit[c] || {}).map(Number).filter(function(i){ return dich.indexOf(i) < 0; })
+      .sort(function(a, b){ return a - b; });
+    var h = {};
+    Object.keys(p.h).forEach(function(d){ var v = p.h[d]; h[d] = [v[0], v[1], v[2], v[3], v[5], v[6]]; });
+    return {
+      c: c, n: p.n || "", pg: p.pg || "", pn: p.pn || "", cl: p.cl || "", pnrr: !!p.pnrr,
+      reg: (ATT0[c] || []).map(function(r){ return REG0[r] || r; }),
+      cups: (p.cups && p.cups.length) ? p.cups : (p.cup ? [p.cup] : []),
+      sa: p.sa || [], h: h, ud: p.ud, pd: p.pd,
+      tr: Object.keys(tr).map(Number).sort(function(a, b){ return a - b; }).map(tratta),
+      g: els.reduce(function(a, e){ return a.concat(e.d || []); }, []),
+      anno: Object.keys(anni).sort(), car: Object.keys(car).sort(),
+      sch: (pc.schede_int || {})[c] || [], pe: ids, lin: lin,
+      st: dich.map(function(i){ return [i, staz[i][2], staz[i][0], staz[i][1], "dichiarata"]; })
+        .concat(cit.map(function(i){ return [i, staz[i][2], staz[i][0], staz[i][1], "citata"]; }))
+    };
+  });
+  var linee = {};
+  Object.keys(rr.linee || {}).forEach(function(k){ linee[k] = rr.linee[k].d; });
+  return {
+    documenti: PD.documenti.map(function(d){ return {id: d.id, titolo: d.titolo, anno: d.anno, file: d.file, avanz_al: d.avanz_al}; }),
+    classi: PD.classi || {}, legenda_stato: PD.legenda_stato || {},
+    viewBox: PD.mappa.viewBox, regioni: PD.mappa.regioni.map(function(r){ return r.d; }),
+    linee: linee, tratte: tratte,
+    schede: (pc.schede || []).map(function(s){ return {t: s.t, anno: s.anno, pnrr: s.pnrr,
+      ben: (s.benefici || []).filter(function(b){ return b.k; }).map(function(b){ return b.k; }),
+      num: s.numeri || [], pag: s.pag || []}; }),
+    opere: opere, pc_pdf: pc.pdf
+  };
+}
+
+var CR = (function(PD){
+
+"use strict";
+const D = crDati(PD);
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const nf = (v, d = 1) => v === null || v === undefined ? "–" :
+  Number(v).toLocaleString("it-IT", {minimumFractionDigits: d, maximumFractionDigits: d});
+const mln = v => v === null || v === undefined ? "–" :
+  Math.abs(v) >= 1000 ? nf(v / 1000, 2) + " mld €" : nf(v, 1) + " mln €";
+// "270,5 mld €" diviso in numero e unita', per i riquadri
+const mlnV = v => v === null || v === undefined ? "–" : Math.abs(v) >= 1000 ?
+  nf(v / 1000, 1) + "<small>mld €</small>" : nf(v, 1) + "<small>mln €</small>";
+const pct = v => v === null || v === undefined || !isFinite(v) ? "–" : nf(v * 100, 0) + "%";
+const SVG = "http://www.w3.org/2000/svg";
+
+/* tooltip */
+const tip = $("#cr-tip");
+function sposta(e){
+  const w = tip.offsetWidth, h = tip.offsetHeight;
+  let x = e.clientX + 16, y = e.clientY + 16;
+  if (x + w > innerWidth - 8) x = e.clientX - w - 16;
+  if (y + h > innerHeight - 8) y = e.clientY - h - 16;
+  tip.style.left = x + "px"; tip.style.top = y + "px";
+}
+function mostra(html, e){ tip.innerHTML = html; tip.style.opacity = 1; sposta(e); }
+const nascondi = () => tip.style.opacity = 0;
+
+/* stato del contratto scelto */
+const DOCS = D.documenti, BYDOC = {};
+DOCS.forEach(d => BYDOC[d.id] = d);
+let doc = docSel, asseY = "speso";
+let ordine = {k: "dafin", dir: -1};
+
+// i numeri dell'opera nel contratto scelto
+function num(o){
+  const h = o.h[doc]; if (!h) return null;
+  const [costo, ass, dafin, avanz] = h;
+  return {costo, ass, dafin, avanz, speso: costo && avanz !== null ? avanz / costo : null,
+          cop: costo && ass !== null ? ass / costo : null};
+}
+function fin(x){
+  if (!x || !x.costo) return "r";
+  if ((x.dafin || 0) <= 0.05) return "v";
+  return (x.cop || 0) >= 0.5 ? "a" : "r";
+}
+const COL = {v: "var(--verde)", a: "var(--ambra)", r: "var(--rosso)"};
+const COLHEX = {v: "#3dffa2", a: "#ffc95e", r: "#ff3b5c"};
+const kmOpera = o => o.tr.reduce((s, i) => s + (D.tratte[i][4] || 0), 0);
+const opereDoc = () => D.opere.filter(o => o.h[doc]);
+
+/* testata */
+function testata(){
+  const op = opereDoc().map(o => ({o, x: num(o)}));
+  const s = k => op.reduce((t, y) => t + (y.x[k] || 0), 0);
+  const costo = s("costo"), ass = s("ass"), dafin = s("dafin"), avanz = s("avanz");
+  const haAvanz = op.some(y => y.x.avanz !== null);
+  const d = BYDOC[doc];
+  const conRfi = op.filter(y => y.o.tr.length);
+  const km = conRfi.reduce((t, y) => t + kmOpera(y.o), 0);
+  $("#cr-titolo").innerHTML = `<b>${op.length} opere</b> per ${esc(mln(costo))}: ` +
+    (haAvanz ? `speso il <b>${pct(avanz / costo)}</b>, ` : "") + `mancano <i>${esc(mln(dafin))}</i>`;
+  $("#cr-meta").textContent = d.titolo + (d.avanz_al ? ". Avanzamento dichiarato al " + d.avanz_al + "." :
+    ". Questo contratto non dichiara l'avanzamento della spesa.");
+  const g = [
+    ["Opere", op.length, "nel contratto", ""],
+    ["Costo complessivo", mlnV(costo), "somma dei costi a vita intera", ""],
+    ["Risorse assegnate", pct(ass / costo), mln(ass), "verde"],
+    ["Speso", haAvanz ? pct(avanz / costo) : "–", haAvanz ? mln(avanz) : "non dichiarato", ""],
+    ["Da finanziare", mlnV(dafin), pct(dafin / costo) + " del costo", "rosso"],
+    ["Con tratte RFI", conRfi.length, nf(km, 0) + " km di linea", ""],
+  ];
+  $("#cr-gradini").innerHTML = g.map(x => `<div class="gradino ${x[3]}"><h3>${esc(x[0])}</h3>` +
+    `<div class="v">${String(x[1]).includes("<small>") ? x[1] : esc(x[1])}</div><div class="n">${esc(x[2])}</div></div>`).join("");
+  haAvanzDoc = haAvanz;
+  document.querySelectorAll(".cr .chip[data-y]").forEach(b => b.disabled = !haAvanz);
+}
+
+/* grafico: costo contro speso */
+// Lo speso si legge in due modi: sul costo dell'opera (quanto manca alla
+// fine) o sulle risorse gia' assegnate (quanto dei soldi disponibili si
+// riesce a spendere). Il colore resta la copertura, che cosi' non ripete
+// mai l'asse verticale: con "assegnate" in verticale il colore ne era solo
+// una copia a fasce. Senza avanzamento dichiarato (contratto 2017) si
+// ripiega sulla copertura, e allora il colore non dice nulla e si spegne.
+function valY(y){
+  if (!haAvanzDoc) return y.x.cop;
+  if (asseY === "resa") return y.x.ass ? Math.min(1, (y.x.avanz || 0) / y.x.ass) : null;
+  return y.x.speso;
+}
+let haAvanzDoc = true;
+let gN = 0, gPer = "costo";
+const gFin = {v: true, a: true, r: true};
+function opereGrafico(){
+  const pr = $("#cr-gProg").value, rg = $("#cr-gReg").value;
+  let op = opereDoc().map(o => ({o, x: num(o)})).filter(y => y.x.costo > 0 &&
+    (!pr || y.o.pn === pr) && (!rg || y.o.reg.includes(rg)) && gFin[fin(y.x)] &&
+    valY(y) !== null);
+  const tot = op.length;
+  op.sort((a, b) => (b.x[gPer] || 0) - (a.x[gPer] || 0));
+  if (gN) op = op.slice(0, gN);
+  return {op, tot};
+}
+function scatter(){
+  const svg = $("#cr-scatter"); svg.innerHTML = "";
+  const W = 640, H = 420, ml = 64, mr = 18, mt = 16, mb = 44;
+  const {op, tot} = opereGrafico();
+  const cs = op.reduce((t, y) => t + y.x.costo, 0), df = op.reduce((t, y) => t + (y.x.dafin || 0), 0);
+  const cosa = !haAvanzDoc ? "Questo contratto non dichiara lo speso: in verticale le risorse assegnate. " :
+    asseY === "resa" ? "In verticale lo speso sulle risorse assegnate. " : "In verticale lo speso sul costo. ";
+  $("#cr-gConta").textContent = op.length ? cosa + `${op.length} opere su ${tot} con questi filtri · ${mln(cs)} di costo, ${mln(df)} da finanziare` :
+    "Nessuna opera con questi filtri.";
+  if (!op.length) return;
+  const val = valY;
+  // asse orizzontale logaritmico sulle opere mostrate: con meno cerchi si allarga
+  const lo = Math.log10(Math.max(1, Math.min(...op.map(y => y.x.costo)))) - 0.08,
+        hi = Math.log10(Math.max(...op.map(y => y.x.costo))) + 0.08;
+  const X = v => ml + (Math.log10(Math.max(1, v)) - lo) / (hi - lo || 1) * (W - ml - mr);
+  // asse verticale a radice quadrata: lo speso e' quasi tutto sotto il 10%, e
+  // in scala lineare le opere grandi finivano schiacciate sul fondo. Il tetto
+  // e' il primo gradino sopra il valore piu' alto mostrato
+  const TACCHE = [0, .01, .05, .1, .25, .5, .75, 1];
+  const top = TACCHE.find(t => t >= Math.min(1, Math.max(...op.map(val)))) || 1;
+  const Y = v => mt + (1 - Math.sqrt(Math.min(top, Math.max(0, v)) / top)) * (H - mt - mb - 14);
+  const maxDaf = Math.max(1, ...op.map(y => y.x.dafin || 0));
+  let s = '<g class="asse">';
+  TACCHE.filter(t => t <= top).forEach(p => s += `<line x1="${ml}" x2="${W - mr}" y1="${Y(p)}" y2="${Y(p)}"/>` +
+    `<text x="${ml - 8}" y="${Y(p) + 4}" text-anchor="end">${p * 100}%</text>`);
+  const passi = [1, 2, 5];
+  for (let e = Math.floor(lo); e <= Math.ceil(hi); e++) passi.forEach(m => {
+    const v = m * Math.pow(10, e), lv = Math.log10(v);
+    if (lv < lo || lv > hi || (hi - lo > 2.2 && m !== 1)) return;
+    s += `<line x1="${X(v)}" x2="${X(v)}" y1="${mt}" y2="${H - mb}" stroke-dasharray="2 4"/>` +
+      `<text x="${X(v)}" y="${H - mb + 18}" text-anchor="middle">${v >= 1000 ? nf(v / 1000, 0) + " mld" : nf(v, 0) + " mln"}</text>`;
+  });
+  s += `<text x="${(W + ml) / 2}" y="${H - 6}" text-anchor="middle">costo dell'opera (scala logaritmica)</text>` +
+    `<text transform="translate(12 ${(mt + H - mb) / 2}) rotate(-90)" text-anchor="middle">${!haAvanzDoc ? "assegnate sul costo" :
+      asseY === "resa" ? "speso sulle assegnate" : "speso sul costo"}</text></g>`;
+  svg.innerHTML = s;
+  const conCod = op.length <= 30;
+  // i grandi sotto, cosi' i piccoli restano cliccabili
+  op.slice().sort((a, b) => (b.x.dafin || 0) - (a.x.dafin || 0)).forEach(y => {
+    const f = fin(y.x), r = 3.5 + 24 * Math.sqrt((y.x.dafin || 0) / maxDaf);
+    const col = haAvanzDoc ? COLHEX[f] : "#aca5bf";
+    const cx = X(y.x.costo), cy = Y(val(y));
+    const g = document.createElementNS(SVG, "g");
+    g.setAttribute("class", "pt"); g.setAttribute("tabindex", "0");
+    g.innerHTML = `<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${r.toFixed(1)}" ` +
+      `fill="${col}" fill-opacity=".28" stroke="${col}" stroke-width="1.2"/>` +
+      (conCod ? (cx > W - 90
+        ? `<text class="cr-cod" text-anchor="end" x="${(cx - Math.min(r, 10) - 3).toFixed(1)}" y="${(cy + 4).toFixed(1)}">${esc(y.o.c)}</text>`
+        : `<text class="cr-cod" x="${(cx + Math.min(r, 10) + 3).toFixed(1)}" y="${(cy + 4).toFixed(1)}">${esc(y.o.c)}</text>`) : "");
+    g.addEventListener("mouseenter", e => mostra(`<b>${esc(y.o.c)}</b> ${esc(y.o.n)}<div class="t">costo ${esc(mln(y.x.costo))} · ` +
+      `assegnate ${pct(y.x.cop)} · speso ${pct(y.x.speso)} del costo` +
+      (y.x.ass && y.x.avanz !== null ? `, ${pct(y.x.avanz / y.x.ass)} delle assegnate` : "") +
+      ` · da finanziare ${esc(mln(y.x.dafin))}</div>`, e));
+    g.addEventListener("mousemove", sposta);
+    g.addEventListener("mouseleave", nascondi);
+    g.addEventListener("click", () => apri(y.o.c));
+    g.addEventListener("keydown", e => { if (e.key === "Enter") apri(y.o.c); });
+    svg.appendChild(g);
+  });
+}
+function premi(sel, b){
+  document.querySelectorAll(sel).forEach(x => x.setAttribute("aria-pressed", x === b)); }
+document.querySelectorAll(".cr .chip[data-n]").forEach(b => b.addEventListener("click", () => {
+  gN = +b.dataset.n; premi(".chip[data-n]", b); scatter(); }));
+document.querySelectorAll(".cr .chip[data-per]").forEach(b => b.addEventListener("click", () => {
+  gPer = b.dataset.per; premi(".chip[data-per]", b); scatter(); }));
+document.querySelectorAll(".cr .chip[data-f]").forEach(b => b.addEventListener("click", () => {
+  gFin[b.dataset.f] = !gFin[b.dataset.f]; b.setAttribute("aria-pressed", gFin[b.dataset.f]); scatter(); }));
+function scegliAsse(k, disegna = true){
+  asseY = k;
+  document.querySelectorAll(".cr .chip[data-y]").forEach(b => b.setAttribute("aria-pressed", b.dataset.y === k));
+  if (disegna) scatter();
+}
+document.querySelectorAll(".cr .chip[data-y]").forEach(b => b.addEventListener("click", () => scegliAsse(b.dataset.y)));
+
+function manca(){
+  const pr = $("#cr-gProg").value, rg = $("#cr-gReg").value;
+  const op = opereDoc().map(o => ({o, x: num(o)})).filter(y => y.x.dafin > 0 &&
+      (!pr || y.o.pn === pr) && (!rg || y.o.reg.includes(rg)))
+    .sort((a, b) => b.x.dafin - a.x.dafin).slice(0, 10);
+  $("#cr-manca").innerHTML = op.map(y => `<li data-c="${esc(y.o.c)}"><span><span class="c">${esc(y.o.c)}</span><br>` +
+    `<span class="t">${esc(y.o.n)}</span></span><span class="v">${nf(y.x.dafin, 0)}</span></li>`).join("");
+}
+$("#cr-manca").addEventListener("click", e => { const li = e.target.closest("li"); if (li) apri(li.dataset.c); });
+
+/* tabella */
+// l'ordine e i filtri della tabella decidono anche la successione delle schede
+let ELENCO = [];
+const COLS = [
+  {k: "c", t: "Codice"}, {k: "n", t: "Opera"}, {k: "costo", t: "Costo", n: 1},
+  {k: "speso", t: "Speso"}, {k: "cop", t: "Assegnate", n: 1}, {k: "dafin", t: "Da finanziare", n: 1},
+  {k: "km", t: "Km RFI", n: 1}, {k: "anno", t: "Attivazione (RFI)"}];
+function filtri(){
+  const prog = {}, reg = {};
+  D.opere.forEach(o => { prog[o.pn + "|" + o.pg] = 1; o.reg.forEach(r => reg[r] = 1); });
+  $("#cr-fProg").innerHTML = '<option value="">tutti</option>' + Object.keys(prog).sort().map(k => {
+    const [n, g] = k.split("|"); return `<option value="${esc(n)}">${esc(n + " · " + g)}</option>`; }).join("");
+  $("#cr-fReg").innerHTML = '<option value="">tutte</option>' + Object.keys(reg).sort().map(r =>
+    `<option>${esc(r)}</option>`).join("");
+  $("#cr-gProg").innerHTML = $("#cr-fProg").innerHTML; $("#cr-gReg").innerHTML = $("#cr-fReg").innerHTML;
+  ["gProg", "gReg"].forEach(id => $("#cr-" + id).addEventListener("input", () => { scatter(); manca(); }));
+  ["fQ", "fProg", "fReg", "fFin", "fRfi"].forEach(id => $("#cr-" + id).addEventListener("input", tabella));
+}
+function tabella(){
+  const q = $("#cr-fQ").value.trim().toLowerCase(), pr = $("#cr-fProg").value, rg = $("#cr-fReg").value,
+        ff = $("#cr-fFin").value, solo = $("#cr-fRfi").checked;
+  let righe = opereDoc().map(o => {
+    const x = num(o);
+    return {o, ...x, c: o.c, n: o.n, km: o.tr.length ? kmOpera(o) : null,
+            anno: o.anno.join(", "), f: fin(x)}; })
+    .filter(r => (!q || (r.c + " " + r.n + " " + r.o.cups.join(" ")).toLowerCase().includes(q)) &&
+      (!pr || r.o.pn === pr) && (!rg || r.o.reg.includes(rg)) && (!ff || r.f === ff) && (!solo || r.o.tr.length));
+  const k = ordine.k, dir = ordine.dir;
+  righe.sort((a, b) => {
+    const va = a[k], vb = b[k];
+    if (va === null || va === undefined || va === "") return 1;
+    if (vb === null || vb === undefined || vb === "") return -1;
+    return (typeof va === "string" ? va.localeCompare(vb) : va - vb) * dir; });
+  const th = COLS.map(c => `<th class="${c.n ? "n" : ""}"><button type="button" data-k="${c.k}"` +
+    (c.k === k ? ` aria-sort="${dir > 0 ? "ascending" : "descending"}"` : "") + `>${c.t}</button></th>`).join("");
+  $("#cr-tab").innerHTML = `<thead><tr>${th}</tr></thead><tbody>` + righe.map(r =>
+    `<tr data-c="${esc(r.c)}" tabindex="0"><td><code>${esc(r.c)}</code></td>` +
+    `<td><span class="nome" title="${esc(r.n)}">${esc(r.n)}</span><span class="sub">${esc(r.o.reg.join(", "))}</span>` +
+      (r.o.tr.length ? '<span class="cr-tag rfi">RFI</span>' : "") + (r.o.pnrr ? '<span class="cr-tag pnrr">PNRR</span>' : "") + `</td>` +
+    `<td class="n">${nf(r.costo, 1)}</td>` +
+    `<td><div class="barra"><b><i style="width:${Math.min(100, (r.speso || 0) * 100)}%"></i></b><span>${pct(r.speso)}</span></div></td>` +
+    `<td class="n">${pct(r.cop)}</td>` +
+    `<td class="n" style="color:${r.dafin > 0.05 ? COL[r.f] : "var(--fioco)"}">${r.dafin > 0.05 ? nf(r.dafin, 1) : "0"}</td>` +
+    `<td class="n">${r.km !== null ? nf(r.km, 0) : ""}</td><td class="anno">${esc(r.anno)}</td></tr>`).join("") + "</tbody>";
+  ELENCO = righe.map(r => r.c);
+  $("#cr-conta").textContent = righe.length + " opere su " + opereDoc().length + " · " +
+    mln(righe.reduce((t, r) => t + (r.costo || 0), 0)) + " di costo, " +
+    mln(righe.reduce((t, r) => t + (r.dafin || 0), 0)) + " da finanziare";
+}
+$("#cr-tab").addEventListener("click", e => {
+  const b = e.target.closest("th button");
+  if (b){ ordine = {k: b.dataset.k, dir: ordine.k === b.dataset.k ? -ordine.dir : (["c", "n", "anno"].includes(b.dataset.k) ? 1 : -1)}; tabella(); return; }
+  const tr = e.target.closest("tr[data-c]"); if (tr) apri(tr.dataset.c);
+});
+$("#cr-tab").addEventListener("keydown", e => {
+  const tr = e.target.closest("tr[data-c]"); if (tr && e.key === "Enter") apri(tr.dataset.c); });
+
+/* scheda dell'opera */
+function punti(d){
+  const out = []; let x = 0, y = 0;
+  for (const m of d.matchAll(/([Ml])(-?[\d.]+) (-?[\d.]+)/g)){
+    if (m[1] === "M"){ x = +m[2]; y = +m[3]; } else { x += +m[2]; y += +m[3]; }
+    out.push([x, y]); }
+  return out;
+}
+function trattaD(t){
+  const L = D.linee[t[0]] || [];
+  return (Array.isArray(t[1]) ? t[1] : [t[1]]).map(i => L[i]).filter(Boolean);
+}
+function mappa(o){
+  const sue = o.tr.flatMap(i => trattaD(D.tratte[i]));
+  const perTratta = o.tr.map(i => `<g data-t="${i}">${trattaD(D.tratte[i]).map(d => `<path d="${d}"/>`).join("")}</g>`).join("");
+  const tutte = sue.concat(o.g);
+  if (!tutte.length && !o.st.length) return "";
+  let x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9;
+  const allarga = (x, y) => { x0 = Math.min(x0, x); y0 = Math.min(y0, y); x1 = Math.max(x1, x); y1 = Math.max(y1, y); };
+  tutte.forEach(d => punti(d).forEach(([x, y]) => allarga(x, y)));
+  // le stazioni citate allargano il riquadro solo se non c'e' altro:
+  // "Battipaglia" in un titolo non deve spostare la mappa di un'opera che RFI disegna
+  o.st.filter(st => st[4] === "dichiarata" || !tutte.length).forEach(st => allarga(st[2], st[3]));
+  // un margine, e mai meno di 60 unita' (circa 60 km): un'opera puntuale
+  // resterebbe altrimenti un punto su uno sfondo vuoto
+  const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
+  let w = Math.max(60, (x1 - x0) * 1.35), h = Math.max(60, (y1 - y0) * 1.35);
+  const r = 0.75; if (h / w > r) w = h / r; else h = w * r;
+  const k = w / 400;
+  const rete = Object.values(D.linee).flat().map(d => `<path d="${d}"/>`).join("");
+  return `<svg class="mini" viewBox="${(cx - w / 2).toFixed(1)} ${(cy - h / 2).toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)}" role="img" aria-label="Dove passa l'opera">` +
+    `<g class="reg">${D.regioni.map(d => `<path d="${d}" stroke-width="${(.6 * k).toFixed(2)}"/>`).join("")}</g>` +
+    `<g class="rete" stroke-width="${(1 * k).toFixed(2)}">${rete}</g>` +
+    `<g class="pc" stroke-width="${(2.2 * k).toFixed(2)}" style="stroke-dasharray:${4 * k} ${3 * k}">${o.g.map(d => `<path d="${d}"/>`).join("")}</g>` +
+    `<g class="sua" stroke-width="${(3 * k).toFixed(2)}">${perTratta}</g>` +
+    `<g class="st" stroke-width="${(0.8 * k).toFixed(2)}">${o.st.map(st => `<circle class="${st[4] === "dichiarata" ? "dich" : "cit"}" cx="${st[2]}" cy="${st[3]}" r="${(3.2 * k).toFixed(2)}"><title>${esc(st[1])}</title></circle>`).join("")}</g></svg>`;
+}
+function storia(o){
+  const W = 520, H = 190, ml = 50, mr = 10, mt = 12, mb = 30;
+  const vals = DOCS.map(d => o.h[d.id]);
+  const max = Math.max(1, ...vals.filter(Boolean).map(v => v[0]));
+  const bw = (W - ml - mr) / DOCS.length;
+  const Y = v => mt + (1 - v / max) * (H - mt - mb);
+  let s = `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto" role="img" aria-label="Costo e risorse nei contratti">`;
+  [0, .5, 1].forEach(p => s += `<line x1="${ml}" x2="${W - mr}" y1="${Y(max * p)}" y2="${Y(max * p)}" stroke="#3a3150"/>` +
+    `<text x="${ml - 6}" y="${Y(max * p) + 4}" text-anchor="end">${nf(max * p, 0)}</text>`);
+  const sp = [];
+  DOCS.forEach((d, i) => {
+    const v = o.h[d.id], x = ml + i * bw + bw * .2, w = bw * .6;
+    s += `<text x="${ml + i * bw + bw / 2}" y="${H - 10}" text-anchor="middle"${d.id === doc ? ' style="fill:#f6f3f8;font-weight:600"' : ""}>${d.anno}</text>`;
+    if (!v){ s += `<text x="${ml + i * bw + bw / 2}" y="${Y(max * .1)}" text-anchor="middle" style="fill:#6e6784">assente</text>`; return; }
+    s += `<rect x="${x}" y="${Y(v[0])}" width="${w}" height="${H - mb - Y(v[0])}" fill="#ff3b5c22" stroke="#ff3b5c"/>`;
+    if (v[1] !== null) s += `<rect x="${x + 3}" y="${Y(v[1])}" width="${w - 6}" height="${H - mb - Y(v[1])}" fill="#3dffa2" fill-opacity=".55"/>`;
+    if (v[3] !== null) sp.push([ml + i * bw + bw / 2, Y(v[3])]);
+  });
+  if (sp.length) s += `<polyline points="${sp.map(p => p.join(",")).join(" ")}" fill="none" stroke="#f6f3f8" stroke-width="2"/>` +
+    sp.map(p => `<circle cx="${p[0]}" cy="${p[1]}" r="3.5" fill="#f6f3f8"/>`).join("");
+  return s + "</svg>";
+}
+const pdf = (file, p, t) => file && p ? `<a href="data/${encodeURI(file)}#page=${p}" target="_blank" rel="noopener">${esc(t)}</a>` : esc(t);
+const stzNome = n => (n || "").toLowerCase().replace(/(^|[\s\-.'(\/])([a-zà-ù])/g, (m, a, b) => a + b.toUpperCase());
+const TRAZ = {TE: "elettrificata 3 kV", TE25: "elettrificata 25 kV", TD: "diesel"};
+// indici per le relazioni fra opere: chi sta sulle stesse tratte, chi sulle stesse linee
+const TR2OP = {}, LIN2OP = {};
+D.opere.forEach(o => {
+  o.tr.forEach(i => (TR2OP[i] = TR2OP[i] || []).push(o.c));
+  o.lin.forEach(l => (LIN2OP[l[0]] = LIN2OP[l[0]] || []).push([o.c, l[3]]));
+});
+const PROT = {SCMT: "SCMT", SSC: "SSC", ERTMS_L2: "ERTMS L2", ERTMS_L2_SOVR: "ERTMS L2 + SCMT",
+  ERTMS_L1_SOVR: "ERTMS L1 + SCMT", SCMTSSC: "SCMT e SSC", NO: "nessuno"};
+
+// la scheda in una frase: quello che si vorrebbe sapere prima di leggere il resto
+function frase(o, d0){
+  const v = o.h[d0], costo = v[0], ass = v[1], dafin = v[2], avanz = v[3];
+  let t = `Opera da <b>${esc(mln(costo))}</b>, `;
+  t += dafin > 0.05 ? `finanziata per il ${pct(ass / costo)}: mancano <i>${esc(mln(dafin))}</i>. ` : `<b>interamente finanziata</b>. `;
+  if (avanz !== null) t += `Spesi ${esc(mln(avanz))}, il ${pct(avanz / costo)} del costo` +
+    (ass ? ` e il ${pct(avanz / ass)} delle risorse assegnate. ` : ". ");
+  const pres = DOCS.filter(d => o.h[d.id]);
+  t += `Compare in ${pres.length} contratt${pres.length === 1 ? "o" : "i"} su ${DOCS.length}, dal ${pres[0].anno}`;
+  const c0 = o.h[pres[0].id][0], c1 = o.h[pres[pres.length - 1].id][0];
+  if (pres.length > 1 && c0 && Math.abs(c1 / c0 - 1) > 0.01)
+    t += `; il costo &egrave; passato da ${esc(mln(c0))} a ${esc(mln(c1))} (${c1 > c0 ? "+" : ""}${nf((c1 / c0 - 1) * 100, 0)}%)`;
+  t += ". ";
+  const km = kmOpera(o);
+  if (o.tr.length) t += `RFI la colloca su ${o.tr.length} tratte esistenti, <b>${nf(km, 0)} km</b> di linea. `;
+  else if (o.g.length) t += `RFI ne disegna il tracciato ma non la colloca su tratte esistenti. `;
+  else t += `RFI non dice dove si trova: le linee sono dedotte. `;
+  if (o.anno.length) t += `Attivazione prevista da RFI: ${esc(o.anno.join(", "))}.`;
+  return t;
+}
+
+// CUP -> opera -> linee. Il contratto da' il costo per opera e non per CUP:
+// il disegno dice a che cosa appartiene che cosa, non quanto passa di qui
+function flusso(o){
+  const L = o.lin.slice(0, 10), C = o.cups.slice(0, 10);
+  const n = Math.max(C.length, L.length, 1), rh = 34, H = n * rh + 40, W = 860;
+  const xc = 10, wc = 180, xo = 330, wo = 200, xl = 640, wl = 210;
+  const yo = 30 + (n * rh) / 2;
+  const yC = i => 30 + (n * rh - C.length * rh) / 2 + i * rh + rh / 2;
+  const yL = i => 30 + (n * rh - L.length * rh) / 2 + i * rh + rh / 2;
+  const arco = (x1, y1, x2, y2, cl) => `<path class="arco ${cl}" d="M${x1} ${y1}C${(x1 + x2) / 2} ${y1} ${(x1 + x2) / 2} ${y2} ${x2} ${y2}"/>`;
+  let s = `<svg class="flusso" viewBox="0 0 ${W} ${H}" role="img" aria-label="CUP, opera e linee">` +
+    `<text class="col" x="${xc}" y="16">CUP</text><text class="col" x="${xo}" y="16">OPERA</text><text class="col" x="${xl}" y="16">LINEE RFI</text>`;
+  C.forEach((c, i) => s += arco(xc + wc, yC(i), xo, yo, "cup"));
+  L.forEach((l, i) => s += arco(xo + wo, yo, xl, yL(i), l[3] === "dichiarata" ? "dich" : "ded"));
+  C.forEach((c, i) => s += `<g class="nodo"><rect x="${xc}" y="${yC(i) - 12}" width="${wc}" height="24"/>` +
+    `<text x="${xc + 10}" y="${yC(i) + 4}">${esc(c)}</text></g>`);
+  if (!C.length) s += `<text x="${xc}" y="${yo + 4}" style="fill:#6e6784">nessun CUP nel contratto</text>`;
+  s += `<g class="nodo op"><rect x="${xo}" y="${yo - 18}" width="${wo}" height="36"/>` +
+    `<text x="${xo + 10}" y="${yo - 2}">${esc(o.c)}</text><text class="sub" x="${xo + 10}" y="${yo + 12}">${esc(o.n.slice(0, 30))}${o.n.length > 30 ? "…" : ""}</text></g>`;
+  L.forEach((l, i) => s += `<a href="#/rete/linea/${encodeURIComponent(l[0])}"><g class="nodo"><title>Apri la linea sulla mappa della rete</title><rect x="${xl}" y="${yL(i) - 12}" width="${wl}" height="24"/>` +
+    `<text x="${xl + 10}" y="${yL(i) + 4}">${esc(l[0])} <tspan class="sub">${esc((l[1] || "").slice(0, 22))}</tspan></text></g></a>`);
+  if (!L.length) s += `<text x="${xl}" y="${yo + 4}" style="fill:#6e6784">nessuna linea</text>`;
+  return s + "</svg>";
+}
+
+function vicine(o){
+  // stesse tratte (dichiarate da RFI), poi stesse linee dichiarate
+  const km = {}, dove = {};
+  o.tr.forEach(i => (TR2OP[i] || []).forEach(c => { if (c !== o.c){ km[c] = (km[c] || 0) + (D.tratte[i][4] || 0); dove[c] = "tratte"; } }));
+  o.lin.filter(l => l[3] === "dichiarata").forEach(l => (LIN2OP[l[0]] || []).forEach(([c, leg]) => {
+    if (c !== o.c && !dove[c] && leg === "dichiarata"){ dove[c] = "linea " + l[0]; km[c] = 0; } }));
+  return Object.keys(dove).map(c => { const v = D.opere.find(x => x.c === c);
+    return {o: v, km: km[c], dove: dove[c], stesso: v.pe.some(e => o.pe.includes(e))}; })
+    .sort((a, b) => b.km - a.km).slice(0, 12);
+}
+
+// modo: "rotta" quando la apre il router (#/opera/<codice>), "scorri" per le
+// frecce (cambia l'indirizzo senza passare dal router), vuoto per un clic:
+// allora si cambia l'indirizzo e la apre il router, cosi' "indietro" la chiude
+function apri(c, modo){
+  const o = D.opere.find(x => x.c === c); if (!o) return;
+  if (!modo){ location.hash = "#/opera/" + encodeURIComponent(c); return; }
+  if (modo === "scorri") history.replaceState(null, "", "#/opera/" + encodeURIComponent(c));
+  apertaOra = c;
+  const d0 = o.h[doc] ? doc : o.ud;
+  $("#cr-dCod").textContent = o.c + (o.cups.length ? "  ·  CUP " + o.cups.join("  ") : "");
+  $("#cr-dNome").textContent = o.n;
+  $("#cr-dTag").innerHTML = `<span class="cr-tag">${esc(o.pn + " · " + o.pg)}</span>` +
+    (o.reg.length ? `<span class="cr-tag">${esc(o.reg.join(", "))}</span>` : "") +
+    (o.pnrr ? '<span class="cr-tag pnrr">PNRR</span>' : "") + (o.tr.length ? '<span class="cr-tag rfi">tratte dichiarate da RFI</span>' : "");
+  const pos = ELENCO.indexOf(c);
+  $("#cr-dPos").textContent = pos >= 0 ? `${pos + 1} di ${ELENCO.length}` : "";
+  $("#cr-dPrec").disabled = pos <= 0; $("#cr-dSucc").disabled = pos < 0 || pos >= ELENCO.length - 1;
+
+  const v = o.h[d0];
+  const B0 = blocchiOpera(o.c);
+  const xx = {costo: v[0], ass: v[1], dafin: v[2], avanz: v[3]};
+  let h = `<section id="cr-s-sintesi"><p class="sintesi">${frase(o, d0)}</p><div class="gradini">` +
+    `<div class="gradino"><h3>Costo</h3><div class="v">${mlnV(xx.costo)}</div><div class="n">${esc(BYDOC[d0].titolo)}</div></div>` +
+    `<div class="gradino"><h3>Speso</h3><div class="v">${xx.avanz !== null ? pct(xx.avanz / xx.costo) : "–"}</div><div class="n">${xx.avanz !== null ? esc(mln(xx.avanz)) + " · " + pct(xx.ass ? xx.avanz / xx.ass : null) + " delle assegnate" : "non dichiarato"}</div></div>` +
+    `<div class="gradino verde"><h3>Risorse assegnate</h3><div class="v">${pct(xx.ass / xx.costo)}</div><div class="n">${esc(mln(xx.ass))}</div></div>` +
+    `<div class="gradino rosso"><h3>Da finanziare</h3><div class="v">${mlnV(xx.dafin)}</div><div class="n">${pct(xx.dafin / xx.costo)} del costo</div></div>` +
+    `<div class="gradino"><h3>Km RFI</h3><div class="v">${o.tr.length ? nf(kmOpera(o), 0) : "–"}</div><div class="n">${o.tr.length ? o.tr.length + " tratte dichiarate" : "nessuna tratta dichiarata"}</div></div></div>`;
+  if (!o.h[doc]) h += `<p class="avviso"><b>Non presente nel contratto scelto.</b> I numeri sono quelli dell'ultimo contratto in cui compare.</p>`;
+  h += `</section>`;
+
+  // nei contratti, con le variazioni rispetto al contratto precedente
+  let prec = null;
+  const righe = DOCS.map(d => { const w = o.h[d.id];
+    if (!w){ return `<tr><td>${esc(d.anno)}</td><td colspan="5" style="color:var(--fioco)">non presente</td></tr>`; }
+    const dc = prec ? w[0] - prec[0] : null; prec = w;
+    const delta = dc === null || Math.abs(dc) < 0.05 ? "" :
+      `<span class="delta ${dc > 0 ? "su" : "giu"}">${dc > 0 ? "+" : ""}${nf(dc, 1)}</span>`;
+    return `<tr${d.id === doc ? ' style="background:#3dffa20d"' : ""}><td>${esc(d.anno)}</td><td class="n">${nf(w[0], 1)}</td><td class="n">${delta}</td>` +
+      `<td class="n">${w[1] !== null ? nf(w[1], 1) : "–"}</td><td class="n">${w[3] !== null ? nf(w[3], 1) : "–"}</td>` +
+      `<td>${pdf(d.file, w[4], "p. " + w[4])}</td></tr>`; }).join("");
+  h += `<section id="cr-s-contratti"><h4>Nei contratti<span>rosso il costo, verde le risorse assegnate, bianco lo speso</span></h4><div class="affianco"><div>${storia(o)}</div>` +
+    `<div><table><thead><tr><th>Contratto</th><th class="n">Costo</th><th class="n">Variazione</th><th class="n">Assegnate</th><th class="n">Speso</th><th>PDF</th></tr></thead><tbody>` +
+    righe + `</tbody></table></div></div>${B0.fab}${B0.fonti}</section>`;
+
+  // sul territorio
+  const tr = o.tr.map(i => [i, D.tratte[i]]).sort((a, b) => a[1][0].localeCompare(b[1][0]));
+  const km = tr.reduce((t, r) => t + (r[1][4] || 0), 0);
+  h += `<section id="cr-s-territorio"><h4>Sul territorio<span>${tr.length ? tr.length + " tratte RFI, " + nf(km, 1) + " km di linea" : "nessuna tratta dichiarata da RFI"}</span></h4>`;
+  const mp = mappa(o);
+  if (tr.length || o.g.length){
+    const quota = f => pct(tr.filter(([, r]) => f(r)).reduce((t, [, r]) => t + r[4], 0) / km);
+    h += `<div class="affianco"><div>${mp}<div class="legenda"><span><i style="background:var(--verde)"></i>tratte esistenti su cui RFI colloca l'opera</span>` +
+      (o.g.length ? `<span><i style="background:var(--rosso)"></i>tracciato del progetto RFI</span>` : "") + `</div></div><div>` +
+      (tr.length ? `<p style="margin:0 0 8px;font-size:13.5px;color:var(--tenue)">Com'&egrave; la linea oggi, prima dell'intervento. Passa su una tratta per vederla sulla mappa.</p>` +
+        `<dl class="cr-kv"><dt>Doppio binario</dt><dd>${quota(r => r[5] === 2)} dei km</dd><dt>Elettrificata</dt><dd>${quota(r => r[6] && r[6] !== "TD")} dei km</dd>` +
+        `<dt>Con ERTMS</dt><dd>${quota(r => /ERTMS/.test(r[9] || ""))} dei km</dd></dl>` +
+        `<div class="tabellona" style="max-height:320px;margin-top:10px"><table><thead><tr><th>Tratta</th><th class="n">Km</th><th>Binari</th><th>Trazione</th><th>Protezione</th><th></th></tr></thead><tbody>` +
+        // i raccordi di pochi metri (bivi, PES) contano nei km ma nell'elenco sono rumore
+        tr.filter(([, r]) => r[4] >= 0.1).map(([i, r]) => `<tr data-t="${i}"><td><code>${esc(r[0])}</code> ${esc(r[2])} &ndash; ${esc(r[3])}</td><td class="n">${nf(r[4], 1)}</td>` +
+          `<td>${r[5] === 2 ? "doppio" : r[5] === 1 ? "semplice" : "–"}</td><td>${esc(TRAZ[r[6]] || r[6] || "–")}</td>` +
+          `<td>${esc(PROT[r[9]] || r[9] || "–")}</td><td><a class="mappa" href="#/rete/tratta/${r[10]}" title="Apri la scheda della tratta sulla mappa della rete">mappa &#8599;</a></td></tr>`).join("") + `</tbody></table></div>`
+       : `<p class="avviso"><b>Solo il tracciato del progetto.</b> RFI disegna l'opera ma non la colloca su tratte esistenti: di solito &egrave; una linea nuova.</p>`) +
+      `</div></div>`;
+  } else {
+    const avv = `<p class="avviso"><b>Nessun dato RFI sul luogo.</b> N&eacute; le tratte n&eacute; il tracciato: sotto, le linee ricavate dal nome dell'opera.</p>`;
+    h += mp ? `<div class="affianco"><div>${mp}<div class="legenda"><span><i style="background:#aca5bf"></i>stazioni citate nel nome</span></div></div><div>${avv}</div></div>` : avv;
+  }
+  if (o.st.length){
+    const nd = o.st.filter(x => x[4] === "dichiarata").length;
+    h += `<p style="margin:16px 0 0;font-size:14px"><b>Stazioni</b> <span style="color:var(--tenue)">&middot; ` +
+      (nd ? `${nd} dichiarate da RFI (in verde)` : "") + (nd && nd < o.st.length ? ", " : "") +
+      (nd < o.st.length ? `${o.st.length - nd} citate nel nome dell'opera, un indizio e non un legame` : "") +
+      `. Clicca per la scheda della stazione sulla mappa.</span></p><div class="cr-staz">` +
+      o.st.map(x => `<a class="${x[4] === "dichiarata" ? "dich" : ""}" href="#/rete/stazione/${x[0]}">${esc(stzNome(x[1]))}</a>`).join("") + `</div>`;
+  }
+  h += `</section>`;
+
+  // CUP e linee
+  h += `<section id="cr-s-cup"><h4>CUP e linee<span>a che cosa appartiene che cosa</span></h4>${flusso(o)}` +
+    `<div class="legenda"><span><i style="background:var(--verde)"></i>linea dichiarata da RFI</span><span><i style="background:#6e6784"></i>linea dedotta dal nome o dai comuni</span></div>`;
+  if (o.lin.length > 10 || o.cups.length > 10) h += `<p class="conta">Il disegno mostra i primi dieci per parte.</p>`;
+  if (o.lin.some(l => l[3] !== "dichiarata"))
+    h += `<p class="avviso"><b>Legami dedotti.</b> I contratti non dicono su quale linea sta un'opera: dove RFI non lo dichiara, la linea &egrave; ricavata dai nomi e dai comuni citati e pu&ograve; essere sbagliata. Il contratto d&agrave; il costo per opera, non per CUP.</p>`;
+  h += `</section>`;
+
+  // i pezzi della scheda storica: come e' stata dedotta la linea
+  if (B0.linea) h = h.replace(/<\/section>$/, `<details class="cr-come"><summary>Come sono state trovate le linee</summary>${B0.linea}</details></section>`);
+  // stesse tratte
+  const vic = vicine(o);
+  h += `<section id="cr-s-vicine"><h4>Stesse tratte<span>altre opere che RFI colloca dove sta questa</span></h4>` +
+    (vic.length ? `<ul class="lista vicine">` + vic.map(y => { const w = y.o.h[doc] || y.o.h[y.o.ud];
+      const info = !y.o.h[doc] ? "non nel contratto scelto" : w && w[0] ? `${mln(w[0])} · ${pct(w[1] / w[0])} finanziata` : "importi non indicati";
+      return `<li data-c="${esc(y.o.c)}"><span class="c">${esc(y.o.c)}</span><span class="t">${esc(y.o.n)}<span style="display:block;color:var(--fioco);font-size:12.5px">${esc(info)}` +
+        (y.stesso ? ` · <span style="color:var(--ambra)">stesso progetto RFI</span>` : "") + `</span></span>` +
+        `<span class="km">${y.km ? nf(y.km, 0) + " km in comune" : esc(y.dove)}</span></li>`; }).join("") + `</ul>` +
+      (vic.some(y => y.stesso) ? `<p class="conta">&laquo;Stesso progetto RFI&raquo;: nel Piano Commerciale le due opere sono un unico progetto, quindi hanno le stesse tratte per costruzione. Le altre condividono le tratte pur essendo progetti distinti.</p>` : "")
+     : `<p class="conta">Nessuna altra opera sulle stesse tratte o linee dichiarate da RFI.</p>`) + `</section>`;
+
+  // cosa dice RFI
+  const sch = o.sch.map(i => D.schede[i]).filter(Boolean);
+  h += `<section id="cr-s-rfi"><h4>Cosa dice RFI<span>Piano Commerciale</span></h4>`;
+  if (o.anno.length || o.car.length || sch.length){
+    h += `<dl class="cr-kv">` +
+      (o.anno.length ? `<dt>Attivazione prevista</dt><dd>${esc(o.anno.join(", "))}</dd>` : "") +
+      (o.car.length ? `<dt>Tipo di intervento</dt><dd>${esc(o.car.join(", "))}</dd>` : "") + `</dl>` +
+      // la scheda del PDF, con descrizione e benefici, e' quella della piattaforma
+      (B0.pc ? `<div class="cr-pdf">${B0.pc}</div>` : "");
+  } else h += `<p class="conta">Il Piano Commerciale non cita questa opera.</p>`;
+  h += `</section>`;
+  // dettagli: i campi del contratto e le stime di questo sito
+  h += `<section id="cr-s-dettagli"><h4>Dettagli<span>i campi del contratto e le stime di questo sito</span></h4>${B0.kv}${B0.primo}` +
+    `<p style="margin-top:18px;font-size:13px;color:var(--tenue)">Importi in milioni di euro. ${B0.fonte}</p></section>`;
+  $("#cr-dCorpo").innerHTML = h;
+  $("#cr-dCorpo").scrollTop = 0;
+  scelta = null;
+  evidenzia();
+  if (!$("#cr-dlg").open) $("#cr-dlg").showModal();
+}
+let apertaOra = null;
+function vai(passo){
+  const i = ELENCO.indexOf(apertaOra);
+  if (i >= 0 && ELENCO[i + passo]) apri(ELENCO[i + passo], "scorri");
+}
+$("#cr-dPrec").addEventListener("click", () => vai(-1));
+$("#cr-dSucc").addEventListener("click", () => vai(1));
+document.addEventListener("keydown", e => {
+  if (!$("#cr-dlg").open || /INPUT|SELECT|TEXTAREA/.test(e.target.tagName)) return;
+  if (e.key === "ArrowLeft") vai(-1); else if (e.key === "ArrowRight") vai(1);
+});
+// indice: scorre il corpo della scheda e segna la sezione in vista
+$(".dlg-nav").addEventListener("click", e => {
+  const a = e.target.closest("a[href^='#cr-s-']"); if (!a) return;
+  e.preventDefault();
+  const t = $("#cr-dCorpo").querySelector(a.getAttribute("href"));
+  scelta = a.getAttribute("href").slice(1);
+  if (t) $("#cr-dCorpo").scrollTo({top: t.offsetTop - 4, behavior: "smooth"});
+  evidenzia();   // se la scheda e' gia' in fondo non scorre, e l'evento non arriva
+});
+// in fondo alla scheda le ultime sezioni non arrivano mai in cima: li' vale
+// quella scelta dall'indice
+let scelta = null;
+function evidenzia(){
+  const c = $("#cr-dCorpo"), top = c.scrollTop;
+  let qui = "cr-s-sintesi";
+  c.querySelectorAll("section[id]").forEach(x => { if (x.offsetTop - 40 <= top) qui = x.id; });
+  if (scelta && top + c.clientHeight >= c.scrollHeight - 4) qui = scelta;
+  document.querySelectorAll(".cr .dlg-nav a").forEach(a => a.classList.toggle("qui", a.getAttribute("href") === "#" + qui));
+}
+$("#cr-dCorpo").addEventListener("scroll", evidenzia);
+// tratta sotto il puntatore: accesa sulla mappa
+$("#cr-dCorpo").addEventListener("mouseover", e => {
+  const r = e.target.closest("tr[data-t]");
+  $("#cr-dCorpo").querySelectorAll(".mini g.acc").forEach(g => g.classList.remove("acc"));
+  if (r){ const g = $("#cr-dCorpo").querySelector(`.mini g[data-t="${r.dataset.t}"]`); if (g) g.classList.add("acc"); }
+});
+$("#cr-dCorpo").addEventListener("click", e => {
+  const li = e.target.closest(".vicine li[data-c]"); if (li) apri(li.dataset.c);
+});
+$("#cr-dChiudi").addEventListener("click", () => $("#cr-dlg").close());
+$("#cr-dlg").addEventListener("close", () => { if (/^#\/opera\//.test(location.hash)) location.hash = "#/interventi"; });
+$("#cr-dlg").addEventListener("click", e => { if (e.target === $("#cr-dlg")) $("#cr-dlg").close(); });
+
+/* avvio */
+$("#cr-selDoc").innerHTML = DOCS.map(d => `<option value="${d.id}">${esc(d.anno + " · " + d.titolo)}</option>`).join("");
+// il contratto e' quello di tutta la piattaforma: cambiarlo qui lo cambia ovunque
+$("#cr-selDoc").addEventListener("change", e => cambiaDoc(e.target.value));
+function tutto(){ doc = docSel; $("#cr-selDoc").value = doc; testata(); scatter(); manca(); tabella(); }
+filtri();
+// la mappa delle regioni porta qui filtrando una regione
+function regione(nome){
+  ["#cr-gReg", "#cr-fReg"].forEach(id => { $(id).value = nome || ""; });
+  scatter(); manca(); tabella();
+}
+return {aggiorna: tutto, apri: apri, regione: regione};
+
+})(D);
+
 /* ================= avvio ================= */
-["f-doc","m-doc","cmp-doc"].forEach(function(id){
+["m-doc","cmp-doc"].forEach(function(id){
   el(id).innerHTML = DOCS.map(function(d){
     return '<option value="'+d.id+'">'+esc(d.anno+" · "+d.titolo)+'</option>'; }).join("");
   el(id).value = docSel;
 });
-renderKpi(); barreSerie(); barraFonti(); popolaFiltri(); renderTabella();
+renderKpi(); barreSerie(); barraFonti(); CR.aggiorna();
 initUlt(); initPg(); initGlossario(); initMetodo(); initMetodoPc(); initScarica();
 initServizi();
 vaiA();

@@ -38,7 +38,7 @@ jobs:
           # la piattaforma e' scritta come frammento (l'Artifact aggiunge lui
           # l'intestazione del documento): qui va completata a mano
           python3 tools/wrap_site.py piattaforma/index.html sito/index.html
-          # il cruscotto delle opere (prototipo) e' gia' una pagina completa
+          # vecchio indirizzo del cruscotto, ora dentro la piattaforma: rimanda li'
           cp piattaforma/cruscotto.html sito/cruscotto.html
           cp data/*.csv data/*.geojson data/cdp-rfi-dataset.json data/piano-commerciale-2026.json data/piano-commerciale-schede.json data/validazione.txt \
             data/validazione-servizi.txt data/catalogo.json data/LEGGIMI.txt sito/data/
