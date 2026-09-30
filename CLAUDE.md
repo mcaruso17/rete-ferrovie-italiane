@@ -277,9 +277,25 @@ CUP riferiti ai programmi" (`tools/extract_appendice_cup.py`): per i programmi
 B non scrivono, uno per oggetto. 914 righe, 819 CUP, 54 programmi; 2 CUP sono
 anche in tabella. Con questi i CUP in corso del 2025 sono 990, non 173: la
 differenza fra "i CUP del contratto" contati da chi guarda solo le tabelle e da
-chi guarda anche l'appendice. Le altre appendici (delibere CIPESS per progetto,
-schede intervento, delta costi, variazione risorse, distribuzione territoriale,
-PNRR e PNC, rimodulazioni...) sono da valutare.
+chi guarda anche l'appendice.
+
+L'Appendice 7, "Distribuzione territoriale degli investimenti in corso"
+(`tools/extract_appendice7.py`, poi `tools/territorio_ufficiale.py`), da' la
+regione ufficiale: a p. 2 il riepilogo per regione (valore normalizzato, con i
+pluriregionali ripartiti sul perimetro e i programmi diffusi sui km di linea;
+risorse, nuove risorse, definanziamenti, rimodulazioni), poi gli interventi
+elencati regione per regione (importi di riga = intervento intero, non quota) e
+i programmi pluriennali diffusi. Finisce in `app["territorio_ufficiale"]`:
+- la mappa ha la tendina Fonte: ufficiale (solo per agg2025, cambiare contratto
+  torna alla stima) o stima;
+- le opere prendono le regioni dell'appendice dove ci sono, altrimenti la stima
+  (marcata "(stima)"); i diffusi stanno sotto "Intera rete";
+- la scheda ha la riga "Regioni (Appendice 7)" col rimando alla pagina.
+Confronto con la stima: 140 uguali, 27 in parte, 3 diverse (0119, 0297A,
+P239), 19 senza stima; P111 e P197 non sono nell'appendice. La stima resta per
+gli altri contratti. Le altre appendici (delibere CIPESS per progetto, schede
+intervento, delta costi, variazione risorse, PNRR e PNC, rimodulazioni...) sono
+da valutare.
 
 ## Rimandi ai PDF
 

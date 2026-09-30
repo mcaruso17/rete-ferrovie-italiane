@@ -363,6 +363,17 @@ CAT = [
      "contratto, o della parte Servizi (Allegati 4c e 12), con interventi, "
      "data di messa in esercizio, documento e pagina.", DOC,
      "CdP Investimenti 2017-2026 e CdP Servizi 2022-2026"),
+    ("distribuzione-territoriale-agg2025.csv", "Distribuzione territoriale ufficiale, aggiornamento 2025",
+     "Il riepilogo per regione dell'Appendice 7 alla Relazione Informativa: "
+     "valore normalizzato (pluriregionali ripartiti sul perimetro, programmi "
+     "diffusi sui km di linea), risorse, nuove risorse, definanziamenti, "
+     "rimodulazioni e incidenza delle nuove risorse, in milioni di euro.", DOC,
+     "CdP Investimenti, aggiornamento 2025, Appendice 7"),
+    ("interventi-regioni-agg2025.csv", "Regioni degli interventi: ufficiali e stimate",
+     "Per ogni intervento dell'aggiornamento 2025 le regioni in cui lo colloca "
+     "l'Appendice 7, se e' pluriregionale o un programma diffuso, le regioni "
+     "che la piattaforma stimava dai luoghi nel nome e l'esito del confronto.", DOC,
+     "CdP Investimenti, aggiornamento 2025, Appendice 7"),
     ("rete-rfi.geojson", "Rete RFI",
      "Le tratte della rete RFI con codice di tratta e di linea, linea "
      "commerciale (il codice del registro con la lettera cambiata), rete "
