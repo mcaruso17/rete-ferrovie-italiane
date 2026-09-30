@@ -44,6 +44,8 @@ jobs:
             data/validazione-servizi.txt data/catalogo.json data/LEGGIMI.txt sito/data/
           # i PDF di partenza, cosi' ogni numero resta verificabile alla fonte
           cp *.pdf sito/data/ 2>/dev/null || true
+          # gli allegati degli aggiornamenti (portale Trasparenza MIT), per cartella
+          for d in documenti/*/; do n=$(basename "$d"); mkdir -p "sito/data/$n"; cp "$d"*.pdf "sito/data/$n/" 2>/dev/null || true; done
           touch sito/.nojekyll
           ls -la sito sito/data
 

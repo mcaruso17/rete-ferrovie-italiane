@@ -358,7 +358,8 @@ CAT = [
      "con la pagina, pronti per un'interrogazione su OpenCUP.", DOC, "CdP Investimenti 2017-2026"),
     ("cup-registro.csv", "Registro unico dei CUP",
      "Una riga per CUP: in corso (Tabelle A e B dell'ultimo aggiornamento "
-     "Investimenti), concluso (dettaglio delle opere ultimate), non piu' nel "
+     "Investimenti e CUP dei programmi dell'Appendice 2 alla Relazione "
+     "Informativa), concluso (dettaglio delle opere ultimate), non piu' nel "
      "contratto, o della parte Servizi (Allegati 4c e 12), con interventi, "
      "data di messa in esercizio, documento e pagina.", DOC,
      "CdP Investimenti 2017-2026 e CdP Servizi 2022-2026"),

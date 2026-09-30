@@ -15,14 +15,20 @@ Le fonti, tutte lette dai PDF dei contratti:
   opere ultimate;
 - Servizi: assegnazioni per CUP dell'Allegato 4c e opere PNRR dell'Allegato 12
   dell'ultima edizione Servizi. Il contratto Servizi non dice se l'opera e'
-  conclusa.
+  conclusa;
+- in corso, dai programmi: l'Appendice 2 alla Relazione Informativa
+  dell'ultimo aggiornamento ("Dettaglio CUP riferiti ai programmi"), che per i
+  programmi (sicurezza in galleria, tecnologie...) elenca i CUP che le tabelle
+  non scrivono, uno per oggetto, con la descrizione. Facoltativa: quinto
+  argomento, il JSON di extract_appendice_cup.py.
 
 Uno stesso CUP puo' stare in piu' fonti (un intervento in corso con lotti gia'
 ultimati): lo stato segue la fonte piu' "viva" (in corso, poi concluso), e le
 altre restano segnate.
 
 Uso:
-  python3 registro_cup.py ../data/cdp-rfi-dataset.json app-in.json app-out.json ../data/cup-registro.csv
+  python3 registro_cup.py ../data/cdp-rfi-dataset.json app-in.json app-out.json ../data/cup-registro.csv \
+          [../data/appendice-cup-agg2025.json]
 """
 import csv
 import json
@@ -44,7 +50,7 @@ def main():
     R = {}
 
     def voce(cup):
-        return R.setdefault(cup, {"cup": cup, "inv": [], "ult": None, "prec": [], "srv": []})
+        return R.setdefault(cup, {"cup": cup, "inv": [], "app": [], "ult": None, "prec": [], "srv": []})
 
     for p in D["progetti"]:
         for s in p["storico"]:
@@ -64,6 +70,20 @@ def main():
         if v["ult"] is None or ORDINE.get(u["doc"], 0) >= ORDINE.get(v["ult"]["doc"], 0):
             v["ult"] = {"doc": u["doc"], "p": u["page"], "npp": u.get("npp"), "voce": u.get("riga"),
                         "n": u.get("descr"), "data": u.get("data_esercizio"), "costo": u.get("costo")}
+    # l'Appendice 2: i CUP dei programmi, con il file per il rimando al PDF
+    extra = []
+    if len(sys.argv) > 5:
+        AP = json.load(open(sys.argv[5], encoding="utf-8"))
+        did = "app2-" + AP["doc"]
+        extra.append({"id": did, "titolo": "Appendice 2 alla Relazione Informativa, "
+                      + ((D["documenti"].get(AP["doc"]) or {}).get("titolo") or AP["doc"]),
+                      "file": "cdpi-" + AP["doc"] + "/" + AP["documento"],
+                      "anno": (D["documenti"].get(AP["doc"]) or {}).get("anno")})
+        ORDINE[did] = ORDINE.get(AP["doc"], 0)
+        for r in AP["righe"]:
+            v = voce(r["cup"])
+            if not any(y["c"] == r["codice"] and y["n"] == r["descr"] for y in v["app"]):
+                v["app"].append({"c": r["codice"], "n": r["descr"], "tab": r["tab"], "doc": did, "p": r["p"]})
     S = A.get("servizi") or {}
     for a in S.get("assegnazioni") or []:
         voce(a["cup"])["srv"].append({"all": "4c", "n": a.get("d"), "f": a.get("f"), "t": a.get("t"),
@@ -74,7 +94,7 @@ def main():
 
     righe, app = [], []
     for cup, v in sorted(R.items()):
-        if v["inv"]:
+        if v["inv"] or v["app"]:
             stato = "in corso"
         elif v["ult"]:
             stato = "concluso"
@@ -82,11 +102,14 @@ def main():
             stato = "servizi"
         else:
             stato = "non piu' nel contratto"
-        parti = ([ "Investimenti"] if (v["inv"] or v["ult"] or v["prec"]) else []) + (["Servizi"] if v["srv"] else [])
+        parti = (["Investimenti"] if (v["inv"] or v["app"] or v["ult"] or v["prec"]) else []) + (["Servizi"] if v["srv"] else [])
         # la fonte principale: quella che decide lo stato
         if v["inv"]:
             f0 = v["inv"][0]; descr = f0["n"]; doc, pag = f0["doc"], f0["p"]
             fonte = "Tabella A/B"
+        elif v["app"]:
+            f0 = v["app"][0]; descr = f0["n"]; doc, pag = f0["doc"], f0["p"]
+            fonte = "Appendice 2 (CUP dei programmi)"
         elif v["ult"]:
             f0 = v["ult"]; descr = f0["n"]; doc, pag = f0["doc"], f0["p"]
             fonte = "Opere ultimate (Tabella C)"
@@ -100,30 +123,38 @@ def main():
         righe.append([
             cup, stato, "+".join(parti), fonte, descr or "",
             "|".join(y["c"] for y in v["inv"]),
+            "|".join(dict.fromkeys(y["c"] for y in v["app"])),
+            " | ".join(dict.fromkeys(y["n"] for y in v["app"])),
             "|".join(sorted({y["c"] for y in v["prec"]} - {y["c"] for y in v["inv"]})),
             v["ult"]["doc"] if v["ult"] else "", v["ult"]["data"] if v["ult"] else "",
             (v["ult"]["voce"] or "") if v["ult"] else "", (v["ult"]["npp"] or "") if v["ult"] else "",
             "|".join(sorted({"Allegato " + y["all"] for y in v["srv"]})),
             round(sum(y["t"] or 0 for y in v["srv"]), 2) if v["srv"] else "",
             doc, pag])
-        app.append({"cup": cup, "st": stato, "inv": v["inv"], "ult": v["ult"], "prec": v["prec"], "srv": v["srv"]})
+        app.append({"cup": cup, "st": stato, "inv": v["inv"], "app": v["app"], "ult": v["ult"],
+                    "prec": v["prec"], "srv": v["srv"]})
 
     with open(dest_csv, "w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
         w.writerow(["cup", "stato", "parte", "fonte_principale", "descrizione",
-                    "interventi_ultimo_contratto", "interventi_contratti_precedenti",
+                    "interventi_ultimo_contratto", "programmi_appendice_2", "oggetto_appendice_2",
+                    "interventi_contratti_precedenti",
                     "opere_ultimate_edizione", "data_messa_in_esercizio", "opere_ultimate_voce",
                     "opere_ultimate_npp", "servizi_allegati", "servizi_importo_mln",
                     "documento", "pagina"])
         w.writerows(righe)
-    A["cup_registro"] = {"ultimo": ultimo, "righe": app}
+    A["cup_registro"] = {"ultimo": ultimo, "righe": app, "documenti": extra}
     json.dump(A, open(uscita, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
     from collections import Counter
     c = Counter(r[1] for r in righe)
     print("registro dei CUP: %d CUP distinti; %s" % (len(righe), ", ".join("%s %d" % kv for kv in sorted(c.items()))))
-    print("  in corso e anche fra le opere ultimate: %d; Investimenti e Servizi: %d"
-          % (sum(1 for x in app if x["inv"] and x["ult"]), sum(1 for x in app if (x["inv"] or x["ult"] or x["prec"]) and x["srv"])))
+    print("  in corso: %d dalle Tabelle A e B, %d dall'Appendice 2, %d in entrambe; "
+          "in corso e anche fra le opere ultimate: %d; Investimenti e Servizi: %d"
+          % (sum(1 for x in app if x["inv"]), sum(1 for x in app if x["app"]),
+             sum(1 for x in app if x["inv"] and x["app"]),
+             sum(1 for x in app if (x["inv"] or x["app"]) and x["ult"]),
+             sum(1 for x in app if (x["inv"] or x["app"] or x["ult"] or x["prec"]) and x["srv"])))
 
 
 if __name__ == "__main__":
