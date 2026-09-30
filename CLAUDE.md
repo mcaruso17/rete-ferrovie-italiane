@@ -215,6 +215,16 @@ assegnati ciascuno alla sola tratta piu' vicina, ne coprono meta' della
 lunghezza: misurare la tratta contro il progetto metteva l'AV Roma-Napoli
 sulla linea storica parallela nel nodo di Napoli.
 
+## Stile
+
+Tutta la piattaforma usa lo stile del cruscotto: fondo scuro, neon rosso e
+verde (i colori di RFI), Chakra Petch per i titoli e Barlow per il testo. I
+colori stanno nei token di `:root` (i nomi sono quelli del vecchio tema chiaro:
+cambiano i valori, non le regole); i colori da leggere nel JS passano da
+`cssv("--nome")`, non si scrivono a mano. Il verde (`--accent`) e' il colore
+positivo e di selezione, il rosso (`--rosso`) quello di cio' che manca e
+dell'alta velocita', la lavanda (`--lavanda`) i progetti dichiarati da RFI.
+
 ## Cruscotto delle opere (prototipo)
 
 `piattaforma/cruscotto.html` e' una seconda pagina, scura, con neon rosso e

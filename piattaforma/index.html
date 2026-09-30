@@ -1,27 +1,32 @@
 <title>Binario Contabile</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
 <style>
 :root{
-  --ground:#f3f5f1; --surface:#ffffff; --surface-2:#eceee8; --sunk:#e5e8e1;
-  --ink:#131a18; --ink-2:#4e5a56; --ink-3:#7c8783;
-  --line:#dadfd6; --line-strong:#c3cabf;
-  --accent:#0f5f6b; --accent-soft:#d9eaec; --accent-ink:#0b464f;
-  --via-libera:#1f7a3d; --avviso:#a96a13; --impedita:#ad322d; --neutro:#8d9a95;
-  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4;
-  --mappa-0:#f7f2ee; --mappa-5:#8c1d13; --mappa-vuoto:#e3e6df;
-  --radius:3px;
-  --shadow:0 1px 2px rgba(19,26,24,.06),0 4px 14px rgba(19,26,24,.05);
-  --f-disp:"IBM Plex Sans Condensed","Helvetica Neue",Arial,sans-serif;
-  --f-body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
-  --f-data:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;
+  /* Lo stile del cruscotto delle opere, esteso a tutta la piattaforma: fondo
+     scuro, neon rosso e verde (i colori di RFI) al posto del rosa e ciano del
+     synthwave. I nomi dei token restano quelli di prima, cosi' le regole che
+     li usano non cambiano: cambiano solo i valori. */
+  --ground:#14111b; --surface:#1b1724; --surface-2:#262035; --sunk:#0c0a11;
+  --ink:#f6f3f8; --ink-2:#bdb6cf; --ink-3:#8b84a0;
+  --line:#2c2540; --line-strong:#3a3150;
+  --accent:#3dffa2; --accent-soft:#16352a; --accent-ink:#a4ffd4;
+  --rosso:#ff3b5c; --rosso-2:#ff6b83; --ambra:#ffc95e; --lavanda:#b99cff;
+  --via-libera:#3dffa2; --avviso:#ffc95e; --impedita:#ff3b5c; --neutro:#6e6784;
+  --s1:#3dffa2; --s2:#ff3b5c; --s3:#5ec8ff; --s4:#ffc95e; --s5:#b99cff;
+  --mappa-0:#2a2138; --mappa-5:#ff3b5c; --mappa-vuoto:#211b2d;
+  --radius:6px;
+  --shadow:0 1px 2px rgba(0,0,0,.35),0 6px 18px rgba(0,0,0,.35);
+  --f-disp:"Chakra Petch","Segoe UI",system-ui,sans-serif;
+  --f-body:"Barlow","Segoe UI",system-ui,-apple-system,sans-serif;
+  --f-data:"Barlow","Segoe UI",system-ui,sans-serif;
 }
-/* Solo tema chiaro: il tema scuro e' stato tolto per scelta. Il browser non
-   deve ripiegare su controlli di sistema scuri (select, barre di scorrimento). */
-:root{color-scheme:light}
+/* Solo tema scuro: controlli di sistema (select, barre di scorrimento) scuri */
+:root{color-scheme:dark}
 *{box-sizing:border-box}
-body{margin:0;background:var(--ground);color:var(--ink);
-  font-family:var(--f-body);font-size:14px;line-height:1.55;
+body{margin:0;color:var(--ink);
+  background:radial-gradient(ellipse 90% 40% at 50% 0,#2a1a2c 0,transparent 70%) no-repeat,var(--ground);
+  font-family:var(--f-body);font-size:15px;line-height:1.55;font-variant-numeric:tabular-nums;
   -webkit-font-smoothing:antialiased}
 h1,h2,h3,h4{font-family:var(--f-disp);text-wrap:balance;margin:0;letter-spacing:-.005em}
 a{color:var(--accent);text-underline-offset:2px}
@@ -95,7 +100,18 @@ nav a[aria-current="page"]{border-bottom-color:var(--line);border-left-color:var
   font-variant-numeric:tabular-nums;line-height:1.15;display:block;margin-top:5px}
 .kpi-u{font-size:12px;color:var(--ink-3);font-family:var(--f-body)}
 .kpi-d{font-size:11.5px;color:var(--ink-3);margin-top:3px;font-family:var(--f-data)}
-.kpi.hl .kpi-v{color:var(--accent)}
+.kpi.hl .kpi-v{color:var(--accent);text-shadow:0 0 10px #3dffa255}
+.kpi.hl-rosso .kpi-v{color:var(--rosso);text-shadow:0 0 10px #ff3b5c66}
+.kpi.hl{box-shadow:inset 3px 0 0 var(--accent)} .kpi.hl-rosso{box-shadow:inset 3px 0 0 var(--rosso)}
+/* il tocco neon del cruscotto: riga sfumata rosso-bianco-verde sotto la
+   testata, titoli con un alone appena accennato */
+.top{border-bottom:0}
+.top::after{content:"";display:block;height:2px;
+  background:linear-gradient(90deg,var(--rosso),var(--rosso-2) 30%,var(--ink) 50%,var(--accent-ink) 70%,var(--accent));
+  box-shadow:0 0 14px #ff3b5c55,0 0 14px #3dffa233}
+.brand b{text-shadow:0 0 12px #ff3b5c55}
+.sec-h h2,.prosa h2{text-shadow:0 0 2px #100c0f,0 0 14px #ff3b5c40}
+select,input[type=search],input[type=text]{background:var(--sunk);color:var(--ink);border-color:var(--line-strong)}
 
 /* ---- pagine e sezioni ---- */
 .pagina{display:none;padding-block:30px 46px}
@@ -247,7 +263,7 @@ tbody tr.clickable{cursor:pointer}
 #rt-svg .rt-nom path{fill:none;stroke:var(--ink);stroke-opacity:.9;
   stroke-width:calc(1.3 * var(--rt-k));stroke-linecap:round;stroke-linejoin:round}
 #rt-svg .rt-hit path:hover{stroke:var(--accent);stroke-opacity:.35}
-#rt-svg .rt-av path{fill:none;stroke:#c0261c;
+#rt-svg .rt-av path{fill:none;stroke:var(--rosso);
   stroke-width:calc(1.5 * var(--rt-k));stroke-linecap:round;stroke-linejoin:round}
 .cmp-box.senza-reg .rt-reg{display:none}
 /* spenta l'evidenza, l'alta velocita' resta disegnata ma come le altre: e'
@@ -260,7 +276,7 @@ tbody tr.clickable{cursor:pointer}
    qualsiasi colore, perche' si legge anche da chi non distingue i colori.
    Il passo del tratteggio scala con lo zoom come gli spessori, altrimenti
    ingrandendo diventa una linea continua. */
-#rt-svg .rt-cost path{fill:none;stroke:#b8860b;stroke-width:calc(1.5 * var(--rt-k));
+#rt-svg .rt-cost path{fill:none;stroke:var(--ambra);stroke-width:calc(1.5 * var(--rt-k));
   stroke-dasharray:calc(4 * var(--rt-k)) calc(2.6 * var(--rt-k));
   stroke-linecap:butt}
 #rt-svg .rt-prog path{fill:none;stroke:var(--ink-3);stroke-width:calc(1.2 * var(--rt-k));
@@ -278,8 +294,8 @@ tbody tr.clickable{cursor:pointer}
 .rt-leg .lg{display:inline-block;width:22px;height:0;border-top-width:2.5px;border-top-style:solid}
 .lg-nom{border-top-color:var(--ink);border-top-width:3px}
 .lg-ord{border-top-color:var(--ink-3);opacity:.65}
-.lg-av{border-top-color:#c0261c;border-top-width:3px}
-.lg-cost{border-top-color:#b8860b;border-top-style:dashed;border-top-width:3px}
+.lg-av{border-top-color:var(--rosso);border-top-width:3px}
+.lg-cost{border-top-color:var(--ambra);border-top-style:dashed;border-top-width:3px}
 .lg-prog{border-top-color:var(--ink-3);border-top-style:dotted;border-top-width:3px}
 /* La rete RFI e' il fondo e la parte cliccabile insieme: ogni linea del
    registro ufficiale ha un tracciato. Le tratte senza codice di linea (bivi,
@@ -293,7 +309,7 @@ tbody tr.clickable{cursor:pointer}
 #rt-svg .rt-rfi-linee path.b1{stroke-width:calc(.85 * var(--rt-k))}
 #rt-svg .rt-rfi-linee path.ch,#rt-svg .rt-rfi-altre path.ch{stroke:var(--ink-3);stroke-opacity:.8;
   stroke-dasharray:calc(2.5 * var(--rt-k)) calc(2 * var(--rt-k))}
-#rt-svg .rt-rfi-linee path.av{stroke:#c0261c;stroke-opacity:1;stroke-width:calc(1.6 * var(--rt-k))}
+#rt-svg .rt-rfi-linee path.av{stroke:var(--rosso);stroke-opacity:1;stroke-width:calc(1.6 * var(--rt-k))}
 .senza-av #rt-svg .rt-rfi-linee path.av{stroke:var(--ink);stroke-opacity:.85;stroke-width:calc(1.25 * var(--rt-k))}
 #rt-svg .rt-rfi-hit path{fill:none;stroke:transparent;stroke-width:calc(5 * var(--rt-k));
   cursor:pointer;pointer-events:stroke}
@@ -310,7 +326,7 @@ tbody tr.clickable{cursor:pointer}
   r:calc(1.5 * var(--rt-k));cursor:pointer}
 #rt-svg .rt-staz circle.l0{r:calc(2.3 * var(--rt-k));stroke-width:calc(.8 * var(--rt-k))}
 #rt-svg .rt-staz circle.l1{r:calc(1.9 * var(--rt-k))}
-#rt-svg .rt-staz circle.pc{stroke:#5b3f9e;stroke-width:calc(.9 * var(--rt-k))}
+#rt-svg .rt-staz circle.pc{stroke:var(--lavanda);stroke-width:calc(.9 * var(--rt-k))}
 #rt-svg .rt-staz text{font-family:var(--f-body);font-size:calc(10.5px * var(--rt-kt));fill:var(--ink);
   paint-order:stroke;stroke:var(--surface);stroke-width:calc(2.6px * var(--rt-kt));stroke-linejoin:round;
   pointer-events:none;transform:translate(calc(4px * var(--rt-kt)),calc(-3px * var(--rt-kt)))}
@@ -330,21 +346,21 @@ tbody tr.clickable{cursor:pointer}
 /* I progetti del Piano Commerciale hanno un colore loro: non devono leggersi
    ne' come alta velocita' (rosso) ne' come i cantieri di OSM (ocra), perche'
    sono un'altra fonte e dicono un'altra cosa: il legame dichiarato da RFI */
-#rt-svg .rt-pc path{fill:none;stroke:#5b3f9e;stroke-width:calc(2.3 * var(--rt-k));
+#rt-svg .rt-pc path{fill:none;stroke:var(--lavanda);stroke-width:calc(2.3 * var(--rt-k));
   stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
 #rt-svg .rt-pc path.pc-hit{stroke:transparent;stroke-width:calc(6 * var(--rt-k));
   pointer-events:stroke;cursor:pointer}
-#rt-svg .rt-pc path.pc-hit:hover{stroke:#5b3f9e;stroke-opacity:.3}
-#rt-svg .rt-pc circle{fill:#5b3f9e;stroke:#fff;stroke-width:calc(.6 * var(--rt-k));
+#rt-svg .rt-pc path.pc-hit:hover{stroke:var(--lavanda);stroke-opacity:.3}
+#rt-svg .rt-pc circle{fill:var(--lavanda);stroke:var(--sunk);stroke-width:calc(.6 * var(--rt-k));
   r:calc(2.3 * var(--rt-k));cursor:pointer}
-#rt-svg .rt-pc circle.ln{fill:#fff;stroke:#5b3f9e;stroke-width:calc(1.1 * var(--rt-k))}
-#rt-svg .rt-acceso circle{fill:var(--accent);stroke:#fff;stroke-width:calc(.8 * var(--rt-k));
+#rt-svg .rt-pc circle.ln{fill:var(--sunk);stroke:var(--lavanda);stroke-width:calc(1.1 * var(--rt-k))}
+#rt-svg .rt-acceso circle{fill:var(--accent);stroke:var(--sunk);stroke-width:calc(.8 * var(--rt-k));
   r:calc(3.6 * var(--rt-k));pointer-events:none}
 .cmp-box.senza-pc .rt-pc{display:none}
-.lg-pc{border-top-color:#5b3f9e;border-top-width:4px}
-.lg-pt{display:inline-block;width:9px;height:9px;border-radius:50%;background:#5b3f9e}
-.sk-dichiarato{background:#5b3f9e;color:#fff}
-.sk-dich{border:1px solid #5b3f9e;padding:10px 12px 12px;margin:0 0 14px;border-radius:2px;
+.lg-pc{border-top-color:var(--lavanda);border-top-width:4px}
+.lg-pt{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--lavanda)}
+.sk-dichiarato{background:var(--lavanda);color:var(--sunk)}
+.sk-dich{border:1px solid var(--lavanda);padding:10px 12px 12px;margin:0 0 14px;border-radius:2px;
   font-size:12.5px;line-height:1.5}
 .sk-dich p{margin:6px 0}
 .sk-mini{margin:8px 0;border:1px solid var(--line);background:var(--surface-2)}
@@ -353,11 +369,11 @@ tbody tr.clickable{cursor:pointer}
 .sk-el li{padding:6px 0;border-top:1px solid var(--line)}
 .sk-el small{color:var(--ink-3)}
 .sk-rfi{font-size:10.5px;padding:1px 5px;border-radius:2px;margin-left:6px;white-space:nowrap}
-.sk-rfi.ok{border:1px solid #5b3f9e;color:#5b3f9e}
+.sk-rfi.ok{border:1px solid var(--lavanda);color:var(--lavanda)}
 .sk-rfi.no{border:1px dashed var(--impedita);color:var(--impedita)}
-.tag.rfi{border-color:#5b3f9e;color:#5b3f9e}
+.tag.rfi{border-color:var(--lavanda);color:var(--lavanda)}
 /* la scheda del Piano Commerciale: quello che RFI dice del progetto */
-.sk-pc{border-left:3px solid #5b3f9e;background:var(--surface-2);padding:10px 13px;margin:0 0 14px;font-size:13px}
+.sk-pc{border-left:3px solid var(--lavanda);background:var(--surface-2);padding:10px 13px;margin:0 0 14px;font-size:13px}
 .sk-pc h4{margin:0 0 4px;font-size:14px}
 .sk-pc .meta{font-size:12px;color:var(--ink-3);margin:0 0 8px}
 .sk-pc details{margin:6px 0}
@@ -365,7 +381,7 @@ tbody tr.clickable{cursor:pointer}
 .sk-pc .desc{white-space:pre-line;font-size:12.5px;line-height:1.5;margin:6px 0 0}
 .sk-ben{list-style:none;margin:6px 0 0;padding:0}
 .sk-ben li{display:grid;grid-template-columns:130px minmax(0,1fr);gap:8px;padding:4px 0;border-top:1px solid var(--line);font-size:12.5px}
-.sk-ben b{font-size:10.5px;letter-spacing:.05em;color:#5b3f9e}
+.sk-ben b{font-size:10.5px;letter-spacing:.05em;color:var(--lavanda)}
 .sk-num{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;margin:8px 0 0}
 .sk-num span b{font-family:var(--f-data);font-weight:500}
 @media (max-width:560px){.sk-ben li{grid-template-columns:1fr}}
@@ -393,15 +409,15 @@ tbody tr.clickable{cursor:pointer}
   align-items:baseline;padding:7px 0;border-bottom:1px solid var(--line)}
 .sk-conf{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;
   padding:2px 6px;border-radius:2px;grid-row:span 2;align-self:center}
-.sk-alta{background:var(--accent);color:#fff}
+.sk-alta{background:var(--accent);color:var(--sunk)}
 .sk-media{background:var(--surface-2);color:var(--ink-2);border:1px solid var(--line)}
 .sk-ln{font-weight:500}
 .sk-perche{font-size:12px;color:var(--ink-3);grid-column:2}
 .sk-bassa{background:transparent;color:var(--ink-3);border:1px dashed var(--line)}
 /* la conferma ha un colore suo e non riusa quello di "alta": deve leggersi come
    un gradino sopra, non come un'altra alta */
-.sk-confermato{background:#2e6b3a;color:#fff}
-.sk-conferma{font-size:12.5px;line-height:1.5;border:1px solid #2e6b3a;
+.sk-confermato{background:var(--accent);color:var(--sunk)}
+.sk-conferma{font-size:12.5px;line-height:1.5;border:1px solid var(--accent);
   padding:9px 12px;margin:0 0 11px;border-radius:2px}
 .sk-sub{font-size:13px;font-weight:600;margin:16px 0 4px}
 .sk-sub span{font-weight:400;color:var(--ink-3);font-size:12px;margin-left:6px}
@@ -413,7 +429,7 @@ tbody tr.clickable{cursor:pointer}
 .dl-nat span{display:block;text-transform:none;letter-spacing:0;font-weight:400;
   color:var(--ink-3);margin-top:2px}
 .dl-dal-documento{border-left-color:var(--accent)}
-.dl-dedotto{border-left-color:#b8860b}
+.dl-dedotto{border-left-color:var(--ambra)}
 .dl-fonte-esterna{border-left-color:var(--ink-3)}
 .dl-lista{list-style:none;margin:0;padding:0;display:grid;
   grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:8px 18px}
@@ -504,7 +520,7 @@ footer{border-top:1px solid var(--line);padding-block:26px 40px;
 dialog{border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);
   padding:0;max-width:720px;width:calc(100% - 32px);border-radius:var(--radius);
   box-shadow:var(--shadow)}
-dialog::backdrop{background:rgba(10,14,13,.55)}
+dialog::backdrop{background:rgba(12,10,17,.85)}
 .dlg-h{padding:18px 20px 14px;border-bottom:1px solid var(--line);
   display:flex;gap:14px;justify-content:space-between;align-items:flex-start}
 .dlg-b{padding:18px 20px 22px;max-height:66vh;overflow:auto}
@@ -1500,12 +1516,12 @@ function renderKpi(){
   var k = [
     ["Costo del portafoglio", nf(a.costo), "mln €", delta(a.costo, prev&&prev.costo), false],
     ["Risorse assegnate dal contratto", nf(a.finanziato), "mln €", delta(a.finanziato, prev&&prev.finanziato), false],
-    ["Ancora da finanziare", nf(a.da_finanziare), "mln €", delta(a.da_finanziare, prev&&prev.da_finanziare), true],
+    ["Ancora da finanziare", nf(a.da_finanziare), "mln €", delta(a.da_finanziare, prev&&prev.da_finanziare), "rosso"],
     ["Quota del costo coperta", nf(cop,1), "%", "", false],
     ["Interventi con fabbisogno scoperto", nf(scoperti), "su "+righe.length, "", false]
   ];
   el("kpis").innerHTML = k.map(function(x){
-    return '<div class="kpi'+(x[4]?" hl":"")+'"><span class="kpi-l">'+x[0]+
+    return '<div class="kpi'+(x[4]==="rosso"?" hl-rosso":x[4]?" hl":"")+'"><span class="kpi-l">'+x[0]+
       '</span><span class="kpi-v">'+x[1]+' <span class="kpi-u">'+x[2]+
       '</span></span>'+(x[3]||"")+'</div>'; }).join("");
   el("cap-serie").textContent =
@@ -2899,10 +2915,10 @@ function pcScheda(cod, ids){
       '<g fill="'+cssv("--mappa-vuoto")+'" stroke="'+cssv("--surface")+'" stroke-width="'+(k*1.2).toFixed(2)+'">'+
         D.mappa.regioni.map(function(r){ return '<path d="'+r.d+'"/>'; }).join("")+'</g>'+
       '<g fill="none" stroke="'+cssv("--ink-3")+'" stroke-opacity=".6" stroke-width="'+(k*0.9).toFixed(2)+'">'+ret+'</g>'+
-      '<g fill="#5b3f9e" stroke="#5b3f9e" stroke-width="'+(k*3).toFixed(2)+'" stroke-linecap="round">'+
+      '<g fill="'+cssv("--lavanda")+'" stroke="'+cssv("--lavanda")+'" stroke-width="'+(k*3).toFixed(2)+'" stroke-linecap="round">'+
         ids.map(function(id){ var e = PCEL[id];
           return e.d ? e.d.map(function(d){ return '<path fill="none" d="'+d+'"/>'; }).join("")
-            : '<circle cx="'+e.xy[0]+'" cy="'+e.xy[1]+'" r="'+(k*4).toFixed(2)+'" stroke="#fff" stroke-width="'+(k*1.2).toFixed(2)+'"/>'; }).join("")+
+            : '<circle cx="'+e.xy[0]+'" cy="'+e.xy[1]+'" r="'+(k*4).toFixed(2)+'" stroke="'+cssv("--sunk")+'" stroke-width="'+(k*1.2).toFixed(2)+'"/>'; }).join("")+
       '</g></svg></div>';
   }
   h += '<ul class="sk-el">'+ids.map(function(id){
@@ -3827,8 +3843,9 @@ function initReteS(){
 }
 // il registro sulla mappa: colore per gruppo di traffico, dal piu' chiaro
 // (poche corse) al piu' scuro, con nodi e alta velocita' a parte
-var GRUPPO_COL = {"Linee con <= 40 treni/giorno":"#86ab9e", "Linee con > 40 e < 100 treni/giorno":"#3f8f7a",
-  "Linea con >= 100 treni/giorno":"#0b464f", "Linee all'interno dei Nodi":"#6b5b95", "Linee AC/AV":"#c0261c"};
+// dal meno al piu' trafficato, verde sempre piu' acceso; nodi lavanda, AV rosso
+var GRUPPO_COL = {"Linee con <= 40 treni/giorno":"#3f6b5c", "Linee con > 40 e < 100 treni/giorno":"#2bb97a",
+  "Linea con >= 100 treni/giorno":"#3dffa2", "Linee all'interno dei Nodi":"#b99cff", "Linee AC/AV":"#ff3b5c"};
 function sMappaRete(){
   var RL = (D.rete_rfi||{}).linee || {};
   if(!D.mappa || !Object.keys(RL).length){ el("rs-mappa").innerHTML = ""; return; }
@@ -3836,7 +3853,7 @@ function sMappaRete(){
   Object.keys(RL).forEach(function(c){
     var g = (RRS[c]||{}).g || ""; n[g] = (n[g]||0) + 1;
     sp[c] = RL[c].d.map(function(d){
-      return '<path class="l" data-lin="'+esc(c)+'" stroke="'+(GRUPPO_COL[g]||"#7c8783")+'" stroke-width="'+
+      return '<path class="l" data-lin="'+esc(c)+'" stroke="'+(GRUPPO_COL[g]||"#8b84a0")+'" stroke-width="'+
         ({"Linee con <= 40 treni/giorno":1.8,"Linee con > 40 e < 100 treni/giorno":2.4}[g] || 3.2)+'" d="'+d+'"><title>'+esc(c+" · "+((RRS[c]||{}).n||""))+'</title></path>'; }).join(""); });
   el("rs-mappa").innerHTML = '<svg viewBox="'+D.mappa.viewBox+'" role="img" aria-label="Linee del registro RFI per gruppo di traffico">'+
     '<g fill="'+cssv("--mappa-vuoto")+'" stroke="'+cssv("--surface")+'" stroke-width="1.2">'+
