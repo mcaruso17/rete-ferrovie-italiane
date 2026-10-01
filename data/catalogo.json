@@ -108,9 +108,9 @@
   {
    "file": "confronto-rfi.csv",
    "titolo": "Confronto con la lista di CUP ricevuta",
-   "contenuto": "Per ogni CUP della lista ricevuta (CUP in BDAP con stato e parte del contratto 2025 e 2026) e del registro dei CUP: che cosa dice il file, che cosa dicono i documenti (stato, fonte e pagina, o le pagine dei PDF in cui il CUP e' comunque scritto) e l'esito del confronto.",
+   "contenuto": "Per ogni CUP della lista ricevuta da RFI (CUP in BDAP con lo stato) e del registro dei CUP: se e' nella lista e con che stato, che cosa dicono i documenti (stato, fonte e pagina, o le pagine dei PDF in cui il CUP e' comunque scritto) e l'esito del confronto.",
    "natura": "dal documento",
-   "fonte": "File Excel ricevuto e CdP Investimenti e Servizi"
+   "fonte": "Lista di CUP ricevuta da RFI e CdP Investimenti e Servizi"
   },
   {
    "file": "rete-rfi.geojson",

@@ -382,11 +382,11 @@ CAT = [
      "RFI e la pagina del dossier ex ante dove c'e'.", DOC,
      "CdP Investimenti, aggiornamento 2025, Appendice 4"),
     ("confronto-rfi.csv", "Confronto con la lista di CUP ricevuta",
-     "Per ogni CUP della lista ricevuta (CUP in BDAP con stato e parte del "
-     "contratto 2025 e 2026) e del registro dei CUP: che cosa dice il file, "
+     "Per ogni CUP della lista ricevuta da RFI (CUP in BDAP con lo stato) e "
+     "del registro dei CUP: se e' nella lista e con che stato, "
      "che cosa dicono i documenti (stato, fonte e pagina, o le pagine dei PDF in "
      "cui il CUP e' comunque scritto) e l'esito del confronto.", DOC,
-     "File Excel ricevuto e CdP Investimenti e Servizi"),
+     "Lista di CUP ricevuta da RFI e CdP Investimenti e Servizi"),
     ("rete-rfi.geojson", "Rete RFI",
      "Le tratte della rete RFI con codice di tratta e di linea, linea "
      "commerciale (il codice del registro con la lettera cambiata), rete "
