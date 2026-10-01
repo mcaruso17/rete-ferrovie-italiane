@@ -107,6 +107,12 @@ python3 extract_appendice7.py ../documenti/cdpi-agg2025/appendice_7_distribuzion
   agg2025 ../data/mappa-regioni.json ../data/appendice7-agg2025.json
 python3 territorio_ufficiale.py ../data/cdp-rfi-app.json ../data/cdp-rfi-app.json \
   ../data/appendice7-agg2025.json ../data
+# le variazioni di costo rispetto all'aggiornamento precedente (Appendice 4)
+# e i dossier ex ante dei progetti con gli aumenti piu' rilevanti
+python3 extract_appendice4.py ../documenti/cdpi-agg2025/appendice_4delta_costi.pdf \
+  ../documenti/cdpi-agg2025/appendice_4dossier_delta_costo.pdf agg2025 ../data/appendice4-agg2025.json
+python3 variazioni_costo.py ../data/cdp-rfi-app.json ../data/cdp-rfi-app.json \
+  ../data/appendice4-agg2025.json ../data
 # i CSV dei comuni leggono l'app appena costruita, quindi vengono dopo
 python3 export_csv.py ../data/cdp-rfi-dataset.json ../data
 

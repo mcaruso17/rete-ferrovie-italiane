@@ -293,9 +293,23 @@ i programmi pluriennali diffusi. Finisce in `app["territorio_ufficiale"]`:
 - la scheda ha la riga "Regioni (Appendice 7)" col rimando alla pagina.
 Confronto con la stima: 140 uguali, 27 in parte, 3 diverse (0119, 0297A,
 P239), 19 senza stima; P111 e P197 non sono nell'appendice. La stima resta per
-gli altri contratti. Le altre appendici (delibere CIPESS per progetto, schede
-intervento, delta costi, variazione risorse, PNRR e PNC, rimodulazioni...) sono
-da valutare.
+gli altri contratti.
+
+L'Appendice 4, "Evoluzione del portafoglio rispetto a precedente aggiornamento"
+(`tools/extract_appendice4.py`, poi `tools/variazioni_costo.py`), scompone per
+ogni intervento delle Tabelle A e B la differenza di costo a vita intera fra
+2024 e 2025: ultimati, riclassifiche, variazioni di costo/perimetro, nuove
+esigenze, adeguamenti tariffari, con la motivazione di RFI. Le colonne si
+riconoscono per posizione (codice, descrizione < 240 pt, numeri, motivazione
+>= 677 pt). Controlli dell'estrattore: componenti che sommano al costo, somme
+per programma uguali ai totali; i costi coincidono con le Tabelle A 2024 e 2025
+(le 7 righe di Tabella B non hanno costo per edizione nel dataset). "Crescita
+netta" = variazioni di costo + nuove esigenze: 27.228 mln su 271.019. Il
+dossier ex ante (PDF a parte, 7 progetti) e' agganciato ai codici dal
+frontespizio e dalla prima "riga ..." della premessa (Venafro per nome: P264).
+Pagina `#/costi` (modulo `CST`) e blocco "Perche' e' cambiato il costo" nella
+scheda (`deltaCosto`). Le altre appendici (delibere CIPESS per progetto, schede
+intervento, variazione risorse, PNRR e PNC, rimodulazioni...) sono da valutare.
 
 ## Rimandi ai PDF
 

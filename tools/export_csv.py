@@ -374,6 +374,13 @@ CAT = [
      "l'Appendice 7, se e' pluriregionale o un programma diffuso, le regioni "
      "che la piattaforma stimava dai luoghi nel nome e l'esito del confronto.", DOC,
      "CdP Investimenti, aggiornamento 2025, Appendice 7"),
+    ("variazioni-costo-agg2025.csv", "Variazioni di costo, aggiornamento 2025",
+     "Per ogni intervento delle Tabelle A e B, dall'Appendice 4 alla Relazione "
+     "Informativa: costo a vita intera nell'aggiornamento 2024 e nel 2025 e la "
+     "differenza scomposta in ultimati, riclassifiche, variazioni di costo o "
+     "perimetro, nuove esigenze e adeguamenti tariffari, con la motivazione di "
+     "RFI e la pagina del dossier ex ante dove c'e'.", DOC,
+     "CdP Investimenti, aggiornamento 2025, Appendice 4"),
     ("rete-rfi.geojson", "Rete RFI",
      "Le tratte della rete RFI con codice di tratta e di linea, linea "
      "commerciale (il codice del registro con la lettera cambiata), rete "
