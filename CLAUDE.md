@@ -311,6 +311,21 @@ Pagina `#/costi` (modulo `CST`) e blocco "Perche' e' cambiato il costo" nella
 scheda (`deltaCosto`). Le altre appendici (delibere CIPESS per progetto, schede
 intervento, variazione risorse, PNRR e PNC, rimodulazioni...) sono da valutare.
 
+## Confronto RFI (lista di CUP ricevuta)
+
+`documenti/rfi/lista-cup-bdap.csv`: solo CUP e stato BDAP della lista ricevuta.
+Per scelta dell'utente il resto del file originale (parte del contratto
+CdP-I/CdP-S, nome del file, autore) non si pubblica: non rimetterlo nel repo
+ne' sul sito. `tools/confronto_rfi.py` la incrocia col registro dei CUP e con
+`data/cup-nel-testo.json` (`tools/cup_nel_testo.py`: ogni CUP scritto nel testo
+di tutti i PDF, con pagina; lento, la build lo rifa' solo se manca). Un esito
+per CUP, dal piu' da chiarire: chiuso in BDAP ma in corso, in corso ma assente
+dalla lista, nella lista ma in nessun documento, solo nel testo, ultimato con
+CUP attivo, in entrambe, ultimato assente, altro. Pagina `#/confronto` (modulo
+`CFR`), CSV `data/confronto-rfi.csv`. Limite: il contratto Servizi scrive CUP
+solo negli Allegati 4c e 12, quindi buona parte dei CUP "non nei documenti"
+non si possono verificare sui documenti pubblici.
+
 ## Rimandi ai PDF
 
 Ogni numero di pagina mostrato e' un link al PDF pubblicato in `data/` con
