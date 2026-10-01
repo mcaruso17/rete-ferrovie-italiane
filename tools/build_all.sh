@@ -113,6 +113,12 @@ python3 extract_appendice4.py ../documenti/cdpi-agg2025/appendice_4delta_costi.p
   ../documenti/cdpi-agg2025/appendice_4dossier_delta_costo.pdf agg2025 ../data/appendice4-agg2025.json
 python3 variazioni_costo.py ../data/cdp-rfi-app.json ../data/cdp-rfi-app.json \
   ../data/appendice4-agg2025.json ../data
+# il confronto con la lista di CUP ricevuta (file Excel alla radice del repo):
+# il registro dei CUP piu' la ricerca di ogni CUP nel testo di tutti i PDF,
+# lenta, rifatta solo se manca (cancellare il JSON dopo aver aggiunto PDF)
+[ -f ../data/cup-nel-testo.json ] || python3 cup_nel_testo.py ../data/cup-nel-testo.json
+python3 confronto_rfi.py ../data/cdp-rfi-app.json ../data/cdp-rfi-app.json \
+  "../ANALISI MEF LISTA CUP-CDP da inviare al MIT.xlsx" ../data/cup-nel-testo.json ../data
 # i CSV dei comuni leggono l'app appena costruita, quindi vengono dopo
 python3 export_csv.py ../data/cdp-rfi-dataset.json ../data
 

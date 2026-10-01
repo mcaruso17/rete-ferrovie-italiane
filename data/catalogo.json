@@ -106,6 +106,13 @@
    "fonte": "CdP Investimenti, aggiornamento 2025, Appendice 4"
   },
   {
+   "file": "confronto-rfi.csv",
+   "titolo": "Confronto con la lista di CUP ricevuta",
+   "contenuto": "Per ogni CUP della lista ricevuta (CUP in BDAP con stato e parte del contratto 2025 e 2026) e del registro dei CUP: che cosa dice il file, che cosa dicono i documenti (stato, fonte e pagina, o le pagine dei PDF in cui il CUP e' comunque scritto) e l'esito del confronto.",
+   "natura": "dal documento",
+   "fonte": "File Excel ricevuto e CdP Investimenti e Servizi"
+  },
+  {
    "file": "rete-rfi.geojson",
    "titolo": "Rete RFI",
    "contenuto": "Le tratte della rete RFI con codice di tratta e di linea, linea commerciale (il codice del registro con la lettera cambiata), rete TEN-T, massa assiale. Comprende anche 46 tratte di progetto (codice PRJ), che il sito non disegna come rete in esercizio.",

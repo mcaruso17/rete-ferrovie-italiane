@@ -311,6 +311,22 @@ Pagina `#/costi` (modulo `CST`) e blocco "Perche' e' cambiato il costo" nella
 scheda (`deltaCosto`). Le altre appendici (delibere CIPESS per progetto, schede
 intervento, variazione risorse, PNRR e PNC, rimodulazioni...) sono da valutare.
 
+## Confronto RFI (lista di CUP ricevuta)
+
+`ANALISI MEF LISTA CUP-CDP da inviare al MIT.xlsx` (radice del repo, un foglio:
+CUP in BDAP, stato del CUP, parte CDP-I/CDP-S nell'aggiornamento 2025 e nel
+2026 WIP) e' confrontato coi documenti da `tools/confronto_rfi.py` (legge
+l'xlsx con zipfile, niente openpyxl). Da noi: il registro dei CUP piu'
+`data/cup-nel-testo.json` (`tools/cup_nel_testo.py`: ogni CUP scritto nel testo
+di tutti i PDF, con pagina; lento, la build lo rifa' solo se manca). Un esito
+per CUP, dal piu' da chiarire: chiuso in BDAP ma in corso, parte diversa, non
+nei documenti, in corso ma assente dal file, solo nel testo, ultimato con CUP
+attivo, concorda, ultimato assente dal file, altro. Pagina `#/confronto`
+(modulo `CFR`), CSV `data/confronto-rfi.csv`. Limite: il contratto Servizi
+scrive CUP solo negli Allegati 4c e 12, quindi i CUP CDP-S del file per lo piu'
+non si possono verificare sui documenti pubblici. Il repo e' pubblico: il file
+e la pagina lo sono.
+
 ## Rimandi ai PDF
 
 Ogni numero di pagina mostrato e' un link al PDF pubblicato in `data/` con
