@@ -381,6 +381,12 @@ CAT = [
      "perimetro, nuove esigenze e adeguamenti tariffari, con la motivazione di "
      "RFI e la pagina del dossier ex ante dove c'e'.", DOC,
      "CdP Investimenti, aggiornamento 2025, Appendice 4"),
+    ("confronto-rfi.csv", "Confronto con la lista di CUP ricevuta",
+     "Per ogni CUP della lista ricevuta da RFI (CUP in BDAP con lo stato) e "
+     "del registro dei CUP: se e' nella lista e con che stato, "
+     "che cosa dicono i documenti (stato, fonte e pagina, o le pagine dei PDF in "
+     "cui il CUP e' comunque scritto) e l'esito del confronto.", DOC,
+     "Lista di CUP ricevuta da RFI e CdP Investimenti e Servizi"),
     ("rete-rfi.geojson", "Rete RFI",
      "Le tratte della rete RFI con codice di tratta e di linea, linea "
      "commerciale (il codice del registro con la lettera cambiata), rete "
