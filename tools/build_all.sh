@@ -102,6 +102,11 @@ python3 extract_appendice_cup.py ../documenti/cdpi-agg2025/appendice_2_lista_cup
   ../data/appendice-cup-agg2025.json
 python3 registro_cup.py ../data/cdp-rfi-dataset.json ../data/cdp-rfi-app.json \
   ../data/cdp-rfi-app.json ../data/cup-registro.csv ../data/appendice-cup-agg2025.json
+# la distribuzione territoriale ufficiale (Appendice 7) accanto alla stima
+python3 extract_appendice7.py ../documenti/cdpi-agg2025/appendice_7_distribuzione_territoriale.pdf \
+  agg2025 ../data/mappa-regioni.json ../data/appendice7-agg2025.json
+python3 territorio_ufficiale.py ../data/cdp-rfi-app.json ../data/cdp-rfi-app.json \
+  ../data/appendice7-agg2025.json ../data
 # i CSV dei comuni leggono l'app appena costruita, quindi vengono dopo
 python3 export_csv.py ../data/cdp-rfi-dataset.json ../data
 
