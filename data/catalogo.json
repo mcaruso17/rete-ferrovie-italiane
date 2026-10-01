@@ -99,6 +99,13 @@
    "fonte": "CdP Investimenti, aggiornamento 2025, Appendice 7"
   },
   {
+   "file": "variazioni-costo-agg2025.csv",
+   "titolo": "Variazioni di costo, aggiornamento 2025",
+   "contenuto": "Per ogni intervento delle Tabelle A e B, dall'Appendice 4 alla Relazione Informativa: costo a vita intera nell'aggiornamento 2024 e nel 2025 e la differenza scomposta in ultimati, riclassifiche, variazioni di costo o perimetro, nuove esigenze e adeguamenti tariffari, con la motivazione di RFI e la pagina del dossier ex ante dove c'e'.",
+   "natura": "dal documento",
+   "fonte": "CdP Investimenti, aggiornamento 2025, Appendice 4"
+  },
+  {
    "file": "rete-rfi.geojson",
    "titolo": "Rete RFI",
    "contenuto": "Le tratte della rete RFI con codice di tratta e di linea, linea commerciale (il codice del registro con la lettera cambiata), rete TEN-T, massa assiale. Comprende anche 46 tratte di progetto (codice PRJ), che il sito non disegna come rete in esercizio.",
