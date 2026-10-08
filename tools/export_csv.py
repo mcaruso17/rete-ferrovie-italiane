@@ -4,6 +4,8 @@ I JSON restano la fonte completa; questi CSV servono a chi vuole aprire i dati
 in un foglio di calcolo. Uso:  python3 export_csv.py ../data/cdp-rfi-dataset.json ../data
 """
 import sys, os, re, csv, json
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from schema import CLASSI as CLASSI_N
 
 D = json.load(open(sys.argv[1]))
 OUT = sys.argv[2]
@@ -56,10 +58,12 @@ for p in sorted(D["progetti"], key=lambda x: x["codice"]):
         righe.append([p["codice"], s["doc"], s["pagina"], s["costo"],
                       s["finanziato"], s["da_finanziare"],
                       s["avanzamento"] if s["avanzamento"] is not None else "",
-                      "|".join(s.get("stato") or [])])
+                      "|".join(s.get("stato") or []), s.get("tabella") or "",
+                      s.get("classe") or "", CLASSI_N.get(s.get("classe") or "", "")])
 scrivi("serie-storica.csv",
        ["codice", "documento", "pagina", "costo_mln", "finanziato_mln",
-        "da_finanziare_mln", "avanzamento_mln", "stato_attuativo"], righe)
+        "da_finanziare_mln", "avanzamento_mln", "stato_attuativo",
+        "tabella", "classe", "classe_nome"], righe)
 
 # --- Tabella C: le opere entrate in esercizio ------------------------------
 righe = [[u["doc"], u["page"], u["riga"], u["cup"] or "", u["npp"] or "",

@@ -62,7 +62,7 @@ for r in D["tavola1"]:
 somma = collections.defaultdict(float)
 for p in D["progetti"]:
     for s in p["storico"]:
-        if s["doc"] in TABELLA_A and s["costo"]:
+        if s["doc"] in TABELLA_A and s["costo"] and s.get("tabella", "A") == "A":
             somma[s["doc"]] += s["costo"]
 ok = tot = 0
 for doc in DOCS:

@@ -219,11 +219,11 @@ J41H01000080008,A/B,0279B,Itinerario Napoli-Bari: Raddoppio e velocizzazione tra
 J41H01000080008,A/B,0279B,Itinerario Napoli-Bari: Raddoppio e velocizzazione tratta Frasso Telesino-Vitulano (Benevento) Raddoppio Frasso Telesino-Telese Raddoppio Telese-S.Lorenzo Maggiore-Vitulano,Direttrici di interesse nazionale,1091.48,cdp2022,64
 J41H01000080008,A/B,0279B,Itinerario Napoli-Bari: Raddoppio e velocizzazione tratta Frasso Telesino-Vitulano (Benevento) Raddoppio Frasso Telesino-Telese Raddoppio Telese-S.Lorenzo Maggiore-Vitulano,Direttrici di interesse nazionale,1106.24,agg2024,51
 J41H01000080008,A/B,0279B,Itinerario Napoli-Bari: Raddoppio e velocizzazione tratta Frasso Telesino-Vitulano (Benevento) Raddoppio Frasso Telesino-Telese Raddoppio Telese-S.Lorenzo Maggiore-Vitulano,Direttrici di interesse nazionale,1178.09,agg2025,61
-J77I04000000009,A/B,0281,Itinerario Napoli-Bari: raddoppio tratta Apice-Orsara,Direttrici di interesse nazionale,,cdp2017,110
-J77I04000000009,A/B,0281,Itinerario Napoli-Bari: raddoppio tratta Apice-Orsara,Direttrici di interesse nazionale,,agg2021,67
-J77I04000000009,A/B,0281,Itinerario Napoli-Bari: raddoppio tratta Apice-Orsara,Direttrici di interesse nazionale,,cdp2022,83
-J77I04000000009,A/B,0281,Itinerario Napoli-Bari: raddoppio tratta Apice-Orsara,Direttrici di interesse nazionale,,agg2024,69
-J77I04000000009,A/B,0281,Itinerario Napoli-Bari: raddoppio tratta Apice-Orsara,Direttrici di interesse nazionale,,agg2025,82
+J77I04000000009,A/B,0281,Itinerario Napoli-Bari: raddoppio tratta Apice-Orsara,Direttrici di interesse nazionale,2315.0,cdp2017,110
+J77I04000000009,A/B,0281,Itinerario Napoli-Bari: raddoppio tratta Apice-Orsara,Direttrici di interesse nazionale,2424.0,agg2021,67
+J77I04000000009,A/B,0281,Itinerario Napoli-Bari: raddoppio tratta Apice-Orsara,Direttrici di interesse nazionale,2424.0,cdp2022,83
+J77I04000000009,A/B,0281,Itinerario Napoli-Bari: raddoppio tratta Apice-Orsara,Direttrici di interesse nazionale,2459.55,agg2024,69
+J77I04000000009,A/B,0281,Itinerario Napoli-Bari: raddoppio tratta Apice-Orsara,Direttrici di interesse nazionale,2509.95,agg2025,82
 J61H03000190001,A/B,0282,Alta Velocità Salerno-Reggio Calabria: Variante Ogliastro-Sapri,Direttrici di interesse nazionale,3700.0,cdp2017,106
 J61H94000000011,A/B,0284,Itinerario Napoli-Bari: Interventi su linea Cancello-Napoli per integrazione con linea AV/AC Variante Napoli-Cancello,Direttrici di interesse nazionale,813.0,cdp2017,67
 J61H94000000011,A/B,0284,Itinerario Napoli-Bari: Interventi su linea Cancello-Napoli per integrazione con linea AV/AC Variante Napoli-Cancello,Direttrici di interesse nazionale,848.0,agg2021,42
@@ -330,11 +330,11 @@ J14F05000040001,A/B,0315,Velocizzazione Siracusa-Ragusa-Gela Velocizzazione Sira
 J14F05000040001,A/B,0315,Velocizzazione Siracusa-Ragusa-Gela Velocizzazione Siracusa-Ragusa-Gela PROG PROG,Valorizzazione reti regionali,200.0,cdp2022,78
 J14F05000040001,A/B,0315,Velocizzazione Siracusa-Ragusa-Gela Velocizzazione Siracusa-Ragusa-Gela PROG PROG,Valorizzazione reti regionali,200.0,agg2024,61
 J14F05000040001,A/B,0315,Velocizzazione Siracusa-Ragusa-Gela Velocizzazione Siracusa-Ragusa-Gela PROG PROG,Valorizzazione reti regionali,200.0,agg2025,74
-J41C07000000001,A/B,0325,Linea AV/AC Milano-Verona: tratta Treviglio-Brescia,Direttrici di interesse nazionale,,cdp2017,109
-J41C07000000001,A/B,0325,Linea AV/AC Milano-Verona: tratta Treviglio-Brescia,Direttrici di interesse nazionale,,agg2021,67
-J41C07000000001,A/B,0325,Linea AV/AC Milano-Verona: tratta Treviglio-Brescia,Direttrici di interesse nazionale,,cdp2022,82
-J41C07000000001,A/B,0325,Linea AV/AC Milano-Verona: tratta Treviglio-Brescia,Direttrici di interesse nazionale,,agg2024,68
-J41C07000000001,A/B,0325,Linea AV/AC Milano-Verona: tratta Treviglio-Brescia,Direttrici di interesse nazionale,,agg2025,82
+J41C07000000001,A/B,0325,Linea AV/AC Milano-Verona: tratta Treviglio-Brescia,Direttrici di interesse nazionale,2050.0,cdp2017,109
+J41C07000000001,A/B,0325,Linea AV/AC Milano-Verona: tratta Treviglio-Brescia,Direttrici di interesse nazionale,2050.0,agg2021,67
+J41C07000000001,A/B,0325,Linea AV/AC Milano-Verona: tratta Treviglio-Brescia,Direttrici di interesse nazionale,2050.0,cdp2022,82
+J41C07000000001,A/B,0325,Linea AV/AC Milano-Verona: tratta Treviglio-Brescia,Direttrici di interesse nazionale,2050.0,agg2024,68
+J41C07000000001,A/B,0325,Linea AV/AC Milano-Verona: tratta Treviglio-Brescia,Direttrici di interesse nazionale,1990.0,agg2025,82
 J21C08000000009,A/B,0331,Raddoppio linea Roma-Viterbo: tratta Cesano-Bracciano Raddoppio Cesano-Vigna di Valle PROG ITER Raddoppio Vigna di Valle-Bracciano PROG ITER,Città metropolitane,250.0,cdp2017,77
 J21C08000000009,A/B,0331,Raddoppio linea Roma-Viterbo: tratta Cesano-Bracciano Raddoppio Cesano-Vigna di Valle PROG ITER Raddoppio Vigna di Valle-Bracciano PROG ITER,Città metropolitane,361.0,agg2021,51
 J21C08000000009,A/B,0331,Raddoppio linea Roma-Viterbo: tratta Cesano-Bracciano Raddoppio Cesano-Vigna di Valle PROG ITER Raddoppio Vigna di Valle-Bracciano PROG ITER,Città metropolitane,361.0,cdp2022,69
@@ -373,35 +373,35 @@ J41C09000000005,A/B,0337B,Accesso al Brennero lotto 3b - Circonvallazione di Rov
 J41C09000000005,A/B,0337B,Accesso al Brennero lotto 3b - Circonvallazione di Rovereto Circonvallazione di Rovereto,Direttrici di interesse nazionale,2438.13,agg2025,79
 J41C10000030001,A/B,0339,"Nodo di Livorno: potenziamento dei collegamenti ferroviari tra porto di Livorno, rete ferroviaria e interporto di Guasticce","Porti e interporti, ultimo miglio",43.0,cdp2017,57
 J41C10000030001,A/B,0339,"Nodo di Livorno: potenziamento dei collegamenti ferroviari tra porto di Livorno, rete ferroviaria e interporto di Guasticce","Porti e interporti, ultimo miglio",43.0,agg2021,39
-F81H92000000008,A/B,0343,Tratta AV/AC Terzo valico dei Giovi,,,cdp2017,108
+F81H92000000008,A/B,0343,Tratta AV/AC Terzo valico dei Giovi,,6200.0,cdp2017,108
 J77I12000010008,A/B,0359,Raddoppio Campoleone-Aprilia Raddoppio Campoleone-Aprilia,Città metropolitane,60.0,cdp2017,53
 J77I12000010008,A/B,0359,Raddoppio Campoleone-Aprilia Raddoppio Campoleone-Aprilia,Città metropolitane,73.7,agg2021,37
 J77I12000010008,A/B,0359,Raddoppio Campoleone-Aprilia Raddoppio Campoleone-Aprilia,Città metropolitane,73.7,cdp2022,54
 J77I12000010008,A/B,0359,Raddoppio Campoleone-Aprilia Raddoppio Campoleone-Aprilia,Città metropolitane,98.29,agg2024,45
 J77I12000010008,A/B,0359,Raddoppio Campoleone-Aprilia Raddoppio Campoleone-Aprilia,Città metropolitane,98.29,agg2025,55
-F81H91000000008,A/B,0361,Linea AV/AC Milano - Verona: tratta Brescia - Verona,Direttrici di interesse nazionale,,cdp2017,109
-F81H91000000008,A/B,0361,Linea AV/AC Milano - Verona: tratta Brescia - Verona,Direttrici di interesse nazionale,,agg2021,67
-J14H20000440001,A/B,0361,Linea AV/AC Milano - Verona: tratta Brescia - Verona,Direttrici di interesse nazionale,,agg2021,67
-F81H91000000008,A/B,0361,Linea AV/AC Milano - Verona: tratta Brescia - Verona,Direttrici di interesse nazionale,,cdp2022,82
-J14H20000440001,A/B,0361,Linea AV/AC Milano - Verona: tratta Brescia - Verona,Direttrici di interesse nazionale,,cdp2022,82
-F81H91000000008,A/B,0361,Linea AV/AC Milano - Verona: tratta Brescia - Verona,Direttrici di interesse nazionale,,agg2024,68
-J14H20000440001,A/B,0361,Linea AV/AC Milano - Verona: tratta Brescia - Verona,Direttrici di interesse nazionale,,agg2024,68
-F81H91000000008,A/B,0361,Linea AV/AC Milano - Verona: tratta Brescia - Verona,Direttrici di interesse nazionale,,agg2025,82
-J14H20000440001,A/B,0361,Linea AV/AC Milano - Verona: tratta Brescia - Verona,Direttrici di interesse nazionale,,agg2025,82
-J41E91000000009,A/B,0362A,Linea AV/AC Verona-Padova 1° lotto funzionale: Tratta Verona-bivio Vicenza,Direttrici di interesse nazionale,,cdp2017,109
-J14D20000010001,A/B,0362A,Linea AV/AC Verona-Padova 1° lotto funzionale: Tratta Verona-bivio Vicenza,Direttrici di interesse nazionale,,agg2021,67
-J41E91000000009,A/B,0362A,Linea AV/AC Verona-Padova 1° lotto funzionale: Tratta Verona-bivio Vicenza,Direttrici di interesse nazionale,,agg2021,67
-J14D20000010001,A/B,0362A,Linea AV/AC Verona-Padova 1° lotto funzionale: Tratta Verona-bivio Vicenza,Direttrici di interesse nazionale,,cdp2022,82
-J41E91000000009,A/B,0362A,Linea AV/AC Verona-Padova 1° lotto funzionale: Tratta Verona-bivio Vicenza,Direttrici di interesse nazionale,,cdp2022,82
-J14D20000010001,A/B,0362A,Linea AV/AC Verona-Padova 1° lotto funzionale: Tratta Verona-bivio Vicenza,Direttrici di interesse nazionale,,agg2024,68
-J41E91000000009,A/B,0362A,Linea AV/AC Verona-Padova 1° lotto funzionale: Tratta Verona-bivio Vicenza,Direttrici di interesse nazionale,,agg2024,68
-J14D20000010001,A/B,0362A,Linea AV/AC Verona-Padova 1° lotto funzionale: Tratta Verona-bivio Vicenza,Direttrici di interesse nazionale,,agg2025,82
-J41E91000000009,A/B,0362A,Linea AV/AC Verona-Padova 1° lotto funzionale: Tratta Verona-bivio Vicenza,Direttrici di interesse nazionale,,agg2025,82
-J41E91000000009,A/B,0362B,Linea AV/AC Verona-Padova 2° lotto funzionale: Attraversamento di Vicenza,Direttrici di interesse nazionale,,cdp2017,109
-J41E91000000009,A/B,0362B,Linea AV/AC Verona-Padova 2° lotto funzionale: Attraversamento di Vicenza,Direttrici di interesse nazionale,,agg2021,67
-J41E91000000009,A/B,0362B,Linea AV/AC Verona-Padova 2° lotto funzionale: Attraversamento di Vicenza,Direttrici di interesse nazionale,,cdp2022,82
-J41E91000000009,A/B,0362B,Linea AV/AC Verona-Padova 2° lotto funzionale: Attraversamento di Vicenza,Direttrici di interesse nazionale,,agg2024,68
-J41E91000000009,A/B,0362B,Linea AV/AC Verona-Padova 2° lotto funzionale: Attraversamento di Vicenza,Direttrici di interesse nazionale,,agg2025,82
+F81H91000000008,A/B,0361,Linea AV/AC Milano - Verona: tratta Brescia - Verona,Direttrici di interesse nazionale,3430.07,cdp2017,109
+F81H91000000008,A/B,0361,Linea AV/AC Milano - Verona: tratta Brescia - Verona,Direttrici di interesse nazionale,3530.0,agg2021,67
+J14H20000440001,A/B,0361,Linea AV/AC Milano - Verona: tratta Brescia - Verona,Direttrici di interesse nazionale,3530.0,agg2021,67
+F81H91000000008,A/B,0361,Linea AV/AC Milano - Verona: tratta Brescia - Verona,Direttrici di interesse nazionale,3530.0,cdp2022,82
+J14H20000440001,A/B,0361,Linea AV/AC Milano - Verona: tratta Brescia - Verona,Direttrici di interesse nazionale,3530.0,cdp2022,82
+F81H91000000008,A/B,0361,Linea AV/AC Milano - Verona: tratta Brescia - Verona,Direttrici di interesse nazionale,3947.37,agg2024,68
+J14H20000440001,A/B,0361,Linea AV/AC Milano - Verona: tratta Brescia - Verona,Direttrici di interesse nazionale,3947.37,agg2024,68
+F81H91000000008,A/B,0361,Linea AV/AC Milano - Verona: tratta Brescia - Verona,Direttrici di interesse nazionale,4813.8,agg2025,82
+J14H20000440001,A/B,0361,Linea AV/AC Milano - Verona: tratta Brescia - Verona,Direttrici di interesse nazionale,4813.8,agg2025,82
+J41E91000000009,A/B,0362A,Linea AV/AC Verona-Padova 1° lotto funzionale: Tratta Verona-bivio Vicenza,Direttrici di interesse nazionale,3140.0,cdp2017,109
+J14D20000010001,A/B,0362A,Linea AV/AC Verona-Padova 1° lotto funzionale: Tratta Verona-bivio Vicenza,Direttrici di interesse nazionale,3139.96,agg2021,67
+J41E91000000009,A/B,0362A,Linea AV/AC Verona-Padova 1° lotto funzionale: Tratta Verona-bivio Vicenza,Direttrici di interesse nazionale,3139.96,agg2021,67
+J14D20000010001,A/B,0362A,Linea AV/AC Verona-Padova 1° lotto funzionale: Tratta Verona-bivio Vicenza,Direttrici di interesse nazionale,3139.96,cdp2022,82
+J41E91000000009,A/B,0362A,Linea AV/AC Verona-Padova 1° lotto funzionale: Tratta Verona-bivio Vicenza,Direttrici di interesse nazionale,3139.96,cdp2022,82
+J14D20000010001,A/B,0362A,Linea AV/AC Verona-Padova 1° lotto funzionale: Tratta Verona-bivio Vicenza,Direttrici di interesse nazionale,3810.92,agg2024,68
+J41E91000000009,A/B,0362A,Linea AV/AC Verona-Padova 1° lotto funzionale: Tratta Verona-bivio Vicenza,Direttrici di interesse nazionale,3810.92,agg2024,68
+J14D20000010001,A/B,0362A,Linea AV/AC Verona-Padova 1° lotto funzionale: Tratta Verona-bivio Vicenza,Direttrici di interesse nazionale,3857.86,agg2025,82
+J41E91000000009,A/B,0362A,Linea AV/AC Verona-Padova 1° lotto funzionale: Tratta Verona-bivio Vicenza,Direttrici di interesse nazionale,3857.86,agg2025,82
+J41E91000000009,A/B,0362B,Linea AV/AC Verona-Padova 2° lotto funzionale: Attraversamento di Vicenza,Direttrici di interesse nazionale,805.0,cdp2017,109
+J41E91000000009,A/B,0362B,Linea AV/AC Verona-Padova 2° lotto funzionale: Attraversamento di Vicenza,Direttrici di interesse nazionale,1075.0,agg2021,67
+J41E91000000009,A/B,0362B,Linea AV/AC Verona-Padova 2° lotto funzionale: Attraversamento di Vicenza,Direttrici di interesse nazionale,1650.0,cdp2022,82
+J41E91000000009,A/B,0362B,Linea AV/AC Verona-Padova 2° lotto funzionale: Attraversamento di Vicenza,Direttrici di interesse nazionale,2179.84,agg2024,68
+J41E91000000009,A/B,0362B,Linea AV/AC Verona-Padova 2° lotto funzionale: Attraversamento di Vicenza,Direttrici di interesse nazionale,2179.84,agg2025,82
 J34H16000620009,A/B,0365,"Potenziamento Venezia-Trieste Velocizzazione linea storica e varianti Opere civili, soppressione PL e adeguamento a modulo 750m SF° Variante Latisana SF° Variante Ronchi dei Legionari - bivio Aurisina SF°",,1800.0,cdp2017,83
 J34H16000620009,A/B,0365A,"Potenziamento Venezia-Trieste lotti prioritari Potenziamento tecnologico Venezia-Trieste, rimozione limitazione massa assiale D4 e altri interventi infrastrutturali su linea storica",Direttrici di interesse nazionale,246.0,agg2021,46
 J34H16000620009,A/B,0365A,"Potenziamento Venezia-Trieste lotti prioritari Potenziamento tecnologico Venezia-Trieste, rimozione limitazione massa assiale D4 e altri interventi infrastrutturali su linea storica",Direttrici di interesse nazionale,246.0,cdp2022,61
@@ -499,9 +499,9 @@ J54H17000130009,A/B,1940,"Nodo di Udine Revisione fascio Sacca e ACC Udine Centr
 J54H17000130009,A/B,1940,"Nodo di Udine Revisione fascio Sacca e ACC Udine Centrale su piano ferro attuale Nuovo PM Cargnacco, PRG di Udine Centrale, PRG Udine C.le, ITER PRG/ACC Udine Bivi (ex Udine Parco), raddoppio della linea di cintura tra PM VAT, bretella tra linea Gorizia e linea per Cervignano",Direttrici di interesse nazionale,203.0,cdp2022,72
 J54H17000130009,A/B,1940,"Nodo di Udine Revisione fascio Sacca e ACC Udine Centrale su piano ferro attuale Nuovo PM Cargnacco, PRG di Udine Centrale, PRG Udine C.le, ITER PRG/ACC Udine Bivi (ex Udine Parco), raddoppio della linea di cintura tra PM VAT, bretella tra linea Gorizia e linea per Cervignano",Direttrici di interesse nazionale,340.0,agg2024,59
 J54H17000130009,A/B,1940,"Nodo di Udine Revisione fascio Sacca e ACC Udine Centrale su piano ferro attuale Nuovo PM Cargnacco, PRG di Udine Centrale, PRG Udine C.le, ITER PRG/ACC Udine Bivi (ex Udine Parco), raddoppio della linea di cintura tra PM VAT, bretella tra linea Gorizia e linea per Cervignano",Direttrici di interesse nazionale,340.48,agg2025,71
-I41J05000020005,A/B,A004,Galleria di base del Brennero - quota Italia,Direttrici di interesse nazionale,,agg2021,68
-I41J05000020005,A/B,A004,Galleria di base del Brennero - quota Italia,Direttrici di interesse nazionale,,cdp2022,82
-I41J05000020005,A/B,A004,Galleria di base del Brennero - quota Italia,Direttrici di interesse nazionale,,agg2024,68
+I41J05000020005,A/B,A004,Galleria di base del Brennero - quota Italia,Direttrici di interesse nazionale,4191.74,agg2021,68
+I41J05000020005,A/B,A004,Galleria di base del Brennero - quota Italia,Direttrici di interesse nazionale,4397.44,cdp2022,82
+I41J05000020005,A/B,A004,Galleria di base del Brennero - quota Italia,Direttrici di interesse nazionale,5267.84,agg2024,68
 J31H02000100001,A/B,A1007,Piano riqualificazione grandi e medie stazioni,Città metropolitane,370.0,cdp2017,39
 J31H03000460001,A/B,A1007,Piano riqualificazione grandi e medie stazioni,Città metropolitane,370.0,cdp2017,39
 J91C04000000008,A/B,A5000_1,Nodo AV di Firenze Nodo AV di Firenze,Città metropolitane,1612.06,cdp2017,73
@@ -569,10 +569,10 @@ J14H16000530009,A/B,I131,Ripristino linea dei bivi di Venezia Mestre Ripristino 
 J14H16000530009,A/B,I131,Ripristino linea dei bivi di Venezia Mestre Ripristino linea dei bivi di Venezia Mestre PROG PROG,Direttrici di interesse nazionale,180.0,cdp2022,77
 J14H16000530009,A/B,I131,Ripristino linea dei bivi di Venezia Mestre Ripristino linea dei bivi di Venezia Mestre PROG PROG,Direttrici di interesse nazionale,180.0,agg2024,65
 J14H16000530009,A/B,I131,Ripristino linea dei bivi di Venezia Mestre Ripristino linea dei bivi di Venezia Mestre PROG PROG,Direttrici di interesse nazionale,180.0,agg2025,79
-J11J20000100008,A/B,I135,Linea AV/AC Verona-Padova 3° lotto funzionale: Tratta Vicenza-Padova,Direttrici di interesse nazionale,,agg2021,67
-J11J20000100008,A/B,I135,Linea AV/AC Verona-Padova 3° lotto funzionale: Tratta Vicenza-Padova,Direttrici di interesse nazionale,,cdp2022,82
-J11J20000100008,A/B,I135,Linea AV/AC Verona-Padova 3° lotto funzionale: Tratta Vicenza-Padova,Direttrici di interesse nazionale,,agg2024,68
-J11J20000100008,A/B,I135,Linea AV/AC Verona-Padova 3° lotto funzionale: Tratta Vicenza-Padova,Direttrici di interesse nazionale,,agg2025,83
+J11J20000100008,A/B,I135,Linea AV/AC Verona-Padova 3° lotto funzionale: Tratta Vicenza-Padova,Direttrici di interesse nazionale,1500.0,agg2021,67
+J11J20000100008,A/B,I135,Linea AV/AC Verona-Padova 3° lotto funzionale: Tratta Vicenza-Padova,Direttrici di interesse nazionale,1500.0,cdp2022,82
+J11J20000100008,A/B,I135,Linea AV/AC Verona-Padova 3° lotto funzionale: Tratta Vicenza-Padova,Direttrici di interesse nazionale,1500.0,agg2024,68
+J11J20000100008,A/B,I135,Linea AV/AC Verona-Padova 3° lotto funzionale: Tratta Vicenza-Padova,Direttrici di interesse nazionale,3000.0,agg2025,83
 J81D19000000009,A/B,I137,Collegamento ferroviario aeroporto di Bergamo Collegamento ferroviario aeroporto di Bergamo,"Aeroporti, accessibilità su ferro",170.0,agg2021,41
 J81D19000000009,A/B,I137,Collegamento ferroviario aeroporto di Bergamo Collegamento ferroviario aeroporto di Bergamo,"Aeroporti, accessibilità su ferro",170.0,cdp2022,58
 J81D19000000009,A/B,I137,Collegamento ferroviario aeroporto di Bergamo Collegamento ferroviario aeroporto di Bergamo,"Aeroporti, accessibilità su ferro",209.46,agg2024,48
