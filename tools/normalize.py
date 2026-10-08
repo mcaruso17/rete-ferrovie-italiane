@@ -4,6 +4,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from tables import to_float
 from schema import DOCS, TABELLA_A, ETICHETTE, STATO_ATTUATIVO, PROGRAMMI, CLASSI
 
+# posizioni nella riga della Tabella B: costo, avanzamento, finanziato (totale fase)
+TABELLA_B = {"cdp2017": (1, 0, 5), "agg2021": (0, 2, 6), "cdp2022": (0, 2, 6),
+             "agg2024": (0, 2, 6), "agg2025": (0, 2, 6)}
+
 RAW = sys.argv[1]
 EXTRA = sys.argv[2]
 OUT = sys.argv[3]
@@ -54,9 +58,10 @@ def main():
         for r in d["rows"]:
             if r["kind"] not in ("A", "B"):
                 continue
-            # la Tabella A ripete gli stessi interventi in due viste: si tiene
-            # solo quella per status attuativo, l'altra e' identica al centesimo
-            if r["kind"] == "A" and r.get("vista") == "classi":
+            # le Tabelle A e B ripetono gli stessi interventi in due viste: si
+            # tiene solo quella per status attuativo, l'altra e' identica al
+            # centesimo (nella B la vista per classi non ha nemmeno il costo)
+            if r["kind"] in ("A", "B") and r.get("vista") == "classi":
                 continue
             v = valori(r)
             rec = {"doc": doc_id, "pagina": r["page"], "tabella": r["kind"],
@@ -96,6 +101,16 @@ def main():
                 nA += 1
                 nOK += 1 if ok_fonti else 0
                 valid.append((doc_id, r["code"], ok_fonti, ok_costo))
+            elif r["kind"] == "B" and len(v) >= 7 and doc_id in TABELLA_B:
+                # Tabella B (lotti costruttivi): costo a vita intera, avanzamento
+                # e totale della fase finanziata; il resto sono fonti e fabbisogni,
+                # con colonne vuote che spostano le posizioni, quindi il da
+                # finanziare si ricava come costo meno finanziato
+                ic, ia, iff = TABELLA_B[doc_id]
+                rec["costo_totale"], rec["avanzamento"], rec["finanziato_totale"] = v[ic], v[ia], v[iff]
+                if rec["costo_totale"] is not None and rec["finanziato_totale"] is not None:
+                    rec["da_finanziare"] = round(rec["costo_totale"] - rec["finanziato_totale"], 2)
+                rec["vals_grezzi"] = v
             else:
                 rec["vals_grezzi"] = v
             progetti.setdefault(r["code"], []).append(rec)
@@ -181,7 +196,8 @@ def main():
                          "avanzamento": s.get("avanzamento"),
                          "stato": s.get("stato_attuativo") or [],
                          "cups": s.get("cups") or [],
-                         "fonti": s.get("fonti")}
+                         "fonti": s.get("fonti"),
+                         "tabella": s["tabella"], "classe": s.get("classe")}
                         for s in snaps],
         })
 
@@ -199,12 +215,19 @@ def main():
     aggregati = {}
     for doc_id in docs:
         snaps = [s for p in out for s in p["storico"] if s["doc"] == doc_id]
+        # gli importi aggregati sono quelli della Tabella A, come i totali del
+        # documento con cui la validazione li confronta; la Tabella B a parte
+        sa = [s for s in snaps if s["tabella"] == "A"]
+        sb = [s for s in snaps if s["tabella"] == "B"]
         aggregati[doc_id] = {
             "n_interventi": len(snaps),
-            "costo": round(sum(s["costo"] or 0 for s in snaps), 2),
-            "finanziato": round(sum(s["finanziato"] or 0 for s in snaps), 2),
-            "da_finanziare": round(sum(s["da_finanziare"] or 0 for s in snaps), 2),
-            "avanzamento": round(sum(s["avanzamento"] or 0 for s in snaps), 2),
+            "costo": round(sum(s["costo"] or 0 for s in sa), 2),
+            "finanziato": round(sum(s["finanziato"] or 0 for s in sa), 2),
+            "da_finanziare": round(sum(s["da_finanziare"] or 0 for s in sa), 2),
+            "avanzamento": round(sum(s["avanzamento"] or 0 for s in sa), 2),
+            "tabella_b": {"n": len(sb), "costo": round(sum(s["costo"] or 0 for s in sb), 2),
+                          "finanziato": round(sum(s["finanziato"] or 0 for s in sb), 2),
+                          "avanzamento": round(sum(s["avanzamento"] or 0 for s in sb), 2)},
         }
     res = {"documenti": docs, "progetti": out, "opere_ultimate": ultimate,
            "tavola2": tavola2, "tavola1": tavola1, "aggregati": aggregati,

@@ -36,6 +36,9 @@ for p in d["progetti"]:
         # servira' ancora e quando", e finora restava nel dataset
         "fab": {k: r2(v) for k, v in (p.get("fabbisogni") or {}).items()
                 if v},
+        # classe (a..e) e tabella contratto per contratto: un intervento cambia
+        # classe nel tempo (in progettazione, prioritario, in esecuzione)
+        "cd": {k: (st[k].get("classe") or ("B" if st[k].get("tabella") == "B" else None)) for k in st if k in DOCS},
         # pagina e stato attuativo stanno per documento, non per intervento:
         # la scheda mostrava la stessa pagina su tutte le righe della storia,
         # che e' proprio il numero che serve a ritrovare il dato nel PDF giusto

@@ -311,6 +311,25 @@ Pagina `#/costi` (modulo `CST`) e blocco "Perche' e' cambiato il costo" nella
 scheda (`deltaCosto`). Le altre appendici (delibere CIPESS per progetto, schede
 intervento, variazione risorse, PNRR e PNC, rimodulazioni...) sono da valutare.
 
+## Classi e Tabella B
+
+La Tabella A ordina gli interventi per classe: a programmi pluriennali, b in
+esecuzione, c prioritari, d in progettazione, e in programma (la e non c'e' piu'
+dal 2024). La classe e' per contratto: lo storico del dataset ha `classe` e
+`tabella` per edizione, l'app `cd: {doc: classe}` con "B" per la Tabella B. La
+Tabella B (investimenti per lotti costruttivi, 7 interventi) ora ha gli importi:
+`TABELLA_B` in normalize.py da' la posizione di costo, avanzamento e finanziato
+(2017 diverso dagli altri), il da finanziare e' costo meno finanziato perche' le
+colonne vuote spostano fonti e fabbisogni. Le Tabelle A e B stampano due viste
+(per status e per classi): si tiene solo quella per status, anche per la B (prima
+le righe B erano doppie e il conteggio interventi 2025 era 230 invece di 223).
+`aggregati` restano della sola Tabella A (confronto con i totali del documento),
+con `tabella_b` a parte; 2025: B 23.613,54 = Appendice 4. Pagina Interventi:
+sintesi per classe e matrice programma per classe (cifra a scelta, clic filtra
+l'elenco), colonna e filtro Classe, classe per contratto nella scheda. Nel CSS
+la pagina e' in quirks mode e i nomi di classe non distinguono maiuscole: il
+badge della Tabella B e' `cls-tb`, non `cls-B`.
+
 ## Confronto RFI (lista di CUP ricevuta)
 
 `documenti/rfi/lista-cup-bdap.csv`: solo CUP e stato BDAP della lista ricevuta.
