@@ -55,6 +55,15 @@ def main():
         d = json.load(open(praw))
         sch = TABELLA_A.get(doc_id)
         nA = nOK = 0
+        # nella Tabella B il sottoprogramma e' la direttrice, stampata una volta
+        # per gruppo: l'estrattore la ripete male sulle righe seguenti (vi
+        # finiscono i nomi dei lotti), quindi si tiene solo se e' una direttrice,
+        # da una delle due viste
+        dirB = {}
+        for r in d["rows"]:
+            sp = (r.get("sottoprogramma") or "").strip()
+            if r["kind"] == "B" and sp.startswith("Direttrice"):
+                dirB.setdefault(r["code"], sp)
         for r in d["rows"]:
             if r["kind"] not in ("A", "B"):
                 continue
@@ -76,6 +85,8 @@ def main():
                                              r.get("classe_nome")),
                    "sottoprogramma": (r.get("sottoprogramma") or "").strip()
                    or None}
+            if r["kind"] == "B":
+                rec["sottoprogramma"] = dirB.get(r["code"])
             (rec["programma_num"], rec["programma"],
              rec["programma_originale"]) = pulisci_programma(r.get("programma"))
             if sch and r["kind"] == "A" and len(v) == sch["ncols"]:
