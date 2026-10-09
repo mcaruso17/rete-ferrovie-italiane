@@ -391,6 +391,15 @@ CAT = [
      "che cosa dicono i documenti (stato, fonte e pagina, o le pagine dei PDF in "
      "cui il CUP e' comunque scritto) e l'esito del confronto.", DOC,
      "Lista di CUP ricevuta da RFI e CdP Investimenti e Servizi"),
+    ("spesa-investimenti-programmi-2019-2024.csv", "Spesa per programma, 2019-2024",
+     "Contabilizzazioni del Contratto Investimenti per programma: valore della "
+     "Sezione 1, speso fino al 2018, anno per anno dal 2019 al 2024, cumulato e "
+     "avanzamento, dalla Relazione al Parlamento al 31/12/2024 (p. 125).", DOC,
+     "Relazione al Parlamento sullo stato di attuazione dei CdP al 31/12/2024 (Senato, Doc. CXCIX-bis n. 4)"),
+    ("manutenzione-straordinaria-2022-2024.csv", "Manutenzione straordinaria, 2022-2024",
+     "Contratto Servizi 2022-2026: per annualita' e sottosistema, pianificato, "
+     "impegnato e contabilizzato al 31/12/2024 (p. 43 della Relazione al Parlamento).", DOC,
+     "Relazione al Parlamento sullo stato di attuazione dei CdP al 31/12/2024 (Senato, Doc. CXCIX-bis n. 4)"),
     ("rete-rfi.geojson", "Rete RFI",
      "Le tratte della rete RFI con codice di tratta e di linea, linea "
      "commerciale (il codice del registro con la lettera cambiata), rete "
