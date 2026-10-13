@@ -311,6 +311,20 @@ Pagina `#/costi` (modulo `CST`) e blocco "Perche' e' cambiato il costo" nella
 scheda (`deltaCosto`). Le altre appendici (delibere CIPESS per progetto, schede
 intervento, variazione risorse, PNRR e PNC, rimodulazioni...) sono da valutare.
 
+## Relazione al Parlamento (spesa anno per anno)
+
+`documenti/parlamento/relazione-parlamento-cdp-2024.pdf`: Relazione annuale del
+MIT al Parlamento sullo stato di attuazione al 31/12/2024 (Senato, Doc.
+CXCIX-bis n. 4, pubblica). `tools/relazione_parlamento.py` ne porta in
+`app["relazione_parlamento"]` tre tabelle: contabilizzazioni Investimenti per
+programma 2019-2024 (p. 125, un'immagine: valori trascritti nel codice, con i
+controlli sui totali; il totale della relazione comprende le opere ultimate),
+manutenzione straordinaria del CdP-S per annualita' e anno (p. 38) e per
+sottosistema e programma (pp. 42-43). Pagina "Il quadro": "La spesa anno per
+anno" (Investimenti) e "Quanto si spende in manutenzione straordinaria"
+(Servizi). Una relazione interna di RFI con contenuto simile NON va nel repo: la
+sua tabella PNRR con i codici ReGiS non e' pubblica.
+
 ## Classi e Tabella B
 
 La Tabella A ordina gli interventi per classe: a programmi pluriennali, b in

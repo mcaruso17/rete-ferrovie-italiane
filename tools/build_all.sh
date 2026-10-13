@@ -119,6 +119,8 @@ python3 variazioni_costo.py ../data/cdp-rfi-app.json ../data/cdp-rfi-app.json \
 [ -f ../data/cup-nel-testo.json ] || python3 cup_nel_testo.py ../data/cup-nel-testo.json
 python3 confronto_rfi.py ../data/cdp-rfi-app.json ../data/cdp-rfi-app.json \
   ../documenti/rfi/lista-cup-bdap.csv ../data/cup-nel-testo.json ../data
+# la spesa anno per anno dalla Relazione al Parlamento al 31/12/2024
+python3 relazione_parlamento.py ../data/cdp-rfi-app.json ../data/cdp-rfi-app.json ../data
 # i CSV dei comuni leggono l'app appena costruita, quindi vengono dopo
 python3 export_csv.py ../data/cdp-rfi-dataset.json ../data
 
