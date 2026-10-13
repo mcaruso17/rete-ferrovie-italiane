@@ -3,14 +3,14 @@
   {
    "file": "progetti.csv",
    "titolo": "Interventi, uno per riga",
-   "contenuto": "Tabella A e B dei CdP Investimenti: programma, classe, CUP, stato, costi all'ultimo contratto in cui l'intervento compare.",
+   "contenuto": "Tabella A e B dei CdP Investimenti: programma, classe, CUP, stato, costi all'ultimo contratto in cui l'intervento compare, con tabella, programma e classe tipologica dell'alberatura del portafoglio.",
    "natura": "dal documento",
    "fonte": "CdP Investimenti 2017-2026"
   },
   {
    "file": "serie-storica.csv",
    "titolo": "Interventi, contratto per contratto",
-   "contenuto": "Costo, finanziato, da finanziare, avanzamento e stato attuativo di ogni intervento in ciascun contratto, con la pagina del PDF. Lo stato manca dove il documento non lo indica, soprattutto per i programmi pluriennali e la Tabella B, che sono programmi e non opere singole.",
+   "contenuto": "Costo, finanziato, da finanziare, avanzamento e stato attuativo di ogni intervento in ciascun contratto, con la pagina del PDF. Lo stato manca dove il documento non lo indica, soprattutto per i programmi pluriennali e la Tabella B, che sono programmi e non opere singole. La classe segue il nome stampato: dal 2024 \"in programma\" ha la lettera d nel PDF, qui e (colonna lettera_nel_pdf_se_diversa).",
    "natura": "dal documento",
    "fonte": "CdP Investimenti 2017-2026"
   },
@@ -80,7 +80,7 @@
   {
    "file": "cup-registro.csv",
    "titolo": "Registro unico dei CUP",
-   "contenuto": "Una riga per CUP: in corso (Tabelle A e B dell'ultimo aggiornamento Investimenti e CUP dei programmi dell'Appendice 2 alla Relazione Informativa), concluso (dettaglio delle opere ultimate), non piu' nel contratto, o della parte Servizi (Allegati 4c e 12), con interventi, data di messa in esercizio, documento e pagina.",
+   "contenuto": "Una riga per CUP: in corso (Tabelle A e B dell'ultimo aggiornamento Investimenti e CUP dei programmi dell'Appendice 2 alla Relazione Informativa), concluso (dettaglio delle opere ultimate), non piu' nel contratto, o della parte Servizi (Allegati 4c e 12), con interventi, data di messa in esercizio, documento e pagina, e la posizione nell'alberatura (tabella, tipologia di programma, programma, classe tipologica, intervento; per le opere ultimate la voce della Tabella C).",
    "natura": "dal documento",
    "fonte": "CdP Investimenti 2017-2026 e CdP Servizi 2022-2026"
   },

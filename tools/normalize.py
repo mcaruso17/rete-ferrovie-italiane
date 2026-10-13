@@ -13,6 +13,19 @@ EXTRA = sys.argv[2]
 OUT = sys.argv[3]
 
 
+# la classe si riconosce dal nome stampato, non dalla lettera: dall'aggiornamento
+# 2024 la classe "in progettazione" non c'e' piu' e "Interventi in programma"
+# e' stampata con la lettera d invece che con la e. Si tiene la classe per nome
+# (e = in programma in tutti i contratti) e la lettera del PDF quando differisce
+CLASSE_DA_NOME = {v.lower(): k for k, v in CLASSI.items()}
+
+
+def classe_di(r):
+    lettera, nome = r.get("classe"), (r.get("classe_nome") or "").strip().lower()
+    cl = CLASSE_DA_NOME.get(nome, lettera)
+    return cl, (lettera if lettera and lettera != cl else None)
+
+
 def valori(r):
     """Valori della riga, integrando quelli scritti sulle righe di continuazione."""
     v = [to_float(x) for x in r["vals"]]
@@ -73,6 +86,7 @@ def main():
             if r["kind"] in ("A", "B") and r.get("vista") == "classi":
                 continue
             v = valori(r)
+            cl, cl_doc = classe_di(r)
             rec = {"doc": doc_id, "pagina": r["page"], "tabella": r["kind"],
                    "codice": r["code"], "cup": r.get("cup"),
                    "cups": r.get("cups") or [],
@@ -80,9 +94,8 @@ def main():
                    "classe_dpp": r.get("dpp"),
                    "paniere_pnrr": bool(r.get("paniere_pnrr")),
                    "stato_attuativo": list(dict.fromkeys(r.get("stato") or [])),
-                   "classe": r.get("classe"),
-                   "classe_nome": CLASSI.get(r.get("classe") or "",
-                                             r.get("classe_nome")),
+                   "classe": cl, "classe_doc": cl_doc,
+                   "classe_nome": CLASSI.get(cl or "", r.get("classe_nome")),
                    "sottoprogramma": (r.get("sottoprogramma") or "").strip()
                    or None}
             if r["kind"] == "B":
@@ -208,7 +221,8 @@ def main():
                          "stato": s.get("stato_attuativo") or [],
                          "cups": s.get("cups") or [],
                          "fonti": s.get("fonti"),
-                         "tabella": s["tabella"], "classe": s.get("classe")}
+                         "tabella": s["tabella"], "classe": s.get("classe"),
+                         **({"classe_doc": s["classe_doc"]} if s.get("classe_doc") else {})}
                         for s in snaps],
         })
 

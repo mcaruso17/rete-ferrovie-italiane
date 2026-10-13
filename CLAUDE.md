@@ -328,8 +328,12 @@ sua tabella PNRR con i codici ReGiS non e' pubblica.
 ## Classi e Tabella B
 
 La Tabella A ordina gli interventi per classe: a programmi pluriennali, b in
-esecuzione, c prioritari, d in progettazione, e in programma (la e non c'e' piu'
-dal 2024). La classe e' per contratto: lo storico del dataset ha `classe` e
+esecuzione, c prioritari, d in progettazione, e in programma. Dal 2024 la classe
+"in progettazione" non c'e' piu' e il PDF stampa "d - Interventi in programma":
+normalize.py riconosce la classe dal nome stampato, non dalla lettera, quindi
+quella classe resta e in tutti i contratti; la lettera del PDF, dove differisce,
+sta in `classe_doc` (dataset), `cdd` (app) e nella colonna
+`lettera_nel_pdf_se_diversa` di serie-storica.csv. La classe e' per contratto: lo storico del dataset ha `classe` e
 `tabella` per edizione, l'app `cd: {doc: classe}` con "B" per la Tabella B. La
 Tabella B (investimenti per lotti costruttivi, 7 interventi) ora ha gli importi:
 `TABELLA_B` in normalize.py da' la posizione di costo, avanzamento e finanziato
@@ -343,6 +347,28 @@ sintesi per classe e matrice programma per classe (cifra a scelta, clic filtra
 l'elenco), colonna e filtro Classe, classe per contratto nella scheda. Nel CSS
 la pagina e' in quirks mode e i nomi di classe non distinguono maiuscole: il
 badge della Tabella B e' `cls-tb`, non `cls-B`.
+
+## Alberatura del portafoglio
+
+La gerarchia con cui l'ufficio legge il portafoglio Investimenti, con i nomi del
+contratto 2025: tabella (A in corso e programmatici, B lotti costruttivi, C opere
+ultimate), tipologia di programma (le classi a..e della Tavola 1), programma
+(programmi prioritari ferrovie, citta' metropolitane, porti e interporti,
+aeroporti, interventi prioritari ferrovie), classe tipologica di destinazione
+(01..09 della Tavola 1bis, il nostro `pn`), intervento; per la Tabella C la voce
+(E.1..E.5, A5000_0; A00..A05 nel 2017). I nomi stanno in schema.py
+(`ALB_TABELLE`, `ALB_CLASSI_TIP`, `ALB_VOCI_C`) e nell'app in `alberatura`.
+registro_cup.py da' a ogni CUP `alb` ({t, cl, pn, c} o {t: "C", v}) dalla fonte
+che ne decide lo stato; i CUP dei soli Servizi non ne hanno. Le colonne
+`alberatura_*` sono in cup-registro.csv e confronto-rfi.csv. Nel sito: matrice
+della pagina Interventi raggruppata per programma, percorso intero nella scheda,
+colonna e filtro nel registro dei CUP, colonna nel Confronto RFI.
+
+Verificata contro un'alberatura interna (Excel ricevuto, non nel repository):
+programma e classe tipologica coincidono su tutti i 216 interventi di Tabella A;
+le differenze erano la d/e qui sopra (il file usa e, tranne 0271B con d), il
+codice 0242 scritto 242 e P246 (Venafro-Campobasso-Matrice, classe b, p. 52)
+assente dal file.
 
 ## Confronto RFI (lista di CUP ricevuta)
 

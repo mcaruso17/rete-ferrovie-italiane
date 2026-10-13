@@ -5,7 +5,7 @@ in un foglio di calcolo. Uso:  python3 export_csv.py ../data/cdp-rfi-dataset.jso
 """
 import sys, os, re, csv, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from schema import CLASSI as CLASSI_N
+from schema import CLASSI as CLASSI_N, ALB_CLASSI_TIP
 
 D = json.load(open(sys.argv[1]))
 OUT = sys.argv[2]
@@ -42,13 +42,16 @@ for p in sorted(D["progetti"], key=lambda x: x["codice"]):
         p["ultimo_doc"], ultimo["pagina"] if ultimo else "",
         p["costo_totale"], p["finanziato"], p["da_finanziare"],
         p["avanzamento"] if p.get("avanzamento") is not None else "",
+        p.get("tabella") or "", ALB_CLASSI_TIP.get(p["programma_num"] or "", ("", ""))[0],
+        ALB_CLASSI_TIP.get(p["programma_num"] or "", ("", ""))[1],
     ])
 scrivi("progetti.csv",
        ["codice", "descrizione", "programma_num", "programma", "sottoprogramma",
         "classe", "classe_nome", "cup", "cups", "classe_dpp", "paniere_pnrr",
         "stato_attuativo", "stato_finanziario", "ultimo_documento", "pagina",
         "costo_totale_mln", "finanziato_mln", "da_finanziare_mln",
-        "avanzamento_mln"], righe)
+        "avanzamento_mln",
+        "tabella", "programma_alberatura", "classe_tipologica"], righe)
 
 # --- la stessa cosa documento per documento --------------------------------
 ORD = {k: v["ordine"] for k, v in D["documenti"].items()}
@@ -59,11 +62,12 @@ for p in sorted(D["progetti"], key=lambda x: x["codice"]):
                       s["finanziato"], s["da_finanziare"],
                       s["avanzamento"] if s["avanzamento"] is not None else "",
                       "|".join(s.get("stato") or []), s.get("tabella") or "",
-                      s.get("classe") or "", CLASSI_N.get(s.get("classe") or "", "")])
+                      s.get("classe") or "", CLASSI_N.get(s.get("classe") or "", ""),
+                      s.get("classe_doc") or ""])
 scrivi("serie-storica.csv",
        ["codice", "documento", "pagina", "costo_mln", "finanziato_mln",
         "da_finanziare_mln", "avanzamento_mln", "stato_attuativo",
-        "tabella", "classe", "classe_nome"], righe)
+        "tabella", "classe", "classe_nome", "lettera_nel_pdf_se_diversa"], righe)
 
 # --- Tabella C: le opere entrate in esercizio ------------------------------
 righe = [[u["doc"], u["page"], u["riga"], u["cup"] or "", u["npp"] or "",
@@ -311,13 +315,16 @@ EST = "fonte esterna"
 CAT = [
     ("progetti.csv", "Interventi, uno per riga",
      "Tabella A e B dei CdP Investimenti: programma, classe, CUP, stato, "
-     "costi all'ultimo contratto in cui l'intervento compare.", DOC,
+     "costi all'ultimo contratto in cui l'intervento compare, con tabella, "
+     "programma e classe tipologica dell'alberatura del portafoglio.", DOC,
      "CdP Investimenti 2017-2026"),
     ("serie-storica.csv", "Interventi, contratto per contratto",
      "Costo, finanziato, da finanziare, avanzamento e stato attuativo di ogni "
      "intervento in ciascun contratto, con la pagina del PDF. Lo stato manca "
      "dove il documento non lo indica, soprattutto per i programmi pluriennali "
-     "e la Tabella B, che sono programmi e non opere singole.", DOC,
+     "e la Tabella B, che sono programmi e non opere singole. La classe "
+     "segue il nome stampato: dal 2024 \"in programma\" ha la lettera d nel "
+     "PDF, qui e (colonna lettera_nel_pdf_se_diversa).", DOC,
      "CdP Investimenti 2017-2026"),
     ("opere-ultimate.csv", "Opere entrate in esercizio",
      "Tabella C, dettaglio: descrizione, CUP, costo, data di messa in "
@@ -365,7 +372,9 @@ CAT = [
      "Investimenti e CUP dei programmi dell'Appendice 2 alla Relazione "
      "Informativa), concluso (dettaglio delle opere ultimate), non piu' nel "
      "contratto, o della parte Servizi (Allegati 4c e 12), con interventi, "
-     "data di messa in esercizio, documento e pagina.", DOC,
+     "data di messa in esercizio, documento e pagina, e la posizione "
+     "nell'alberatura (tabella, tipologia di programma, programma, classe "
+     "tipologica, intervento; per le opere ultimate la voce della Tabella C).", DOC,
      "CdP Investimenti 2017-2026 e CdP Servizi 2022-2026"),
     ("distribuzione-territoriale-agg2025.csv", "Distribuzione territoriale ufficiale, aggiornamento 2025",
      "Il riepilogo per regione dell'Appendice 7 alla Relazione Informativa: "
