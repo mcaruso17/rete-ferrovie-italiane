@@ -34,7 +34,35 @@ import csv
 import json
 import sys
 
+from schema import ALB_TABELLE, ALB_CLASSI_TIP, ALB_VOCI_C, CLASSI
+
 ORDINE = {}
+
+
+def alberatura(v):
+    """La posizione del CUP nell'alberatura del portafoglio, dalla fonte che ne
+    decide lo stato: intervento in corso (Tabelle A e B, poi Appendice 2),
+    opera ultimata (Tabella C, per voce), intervento di un contratto
+    precedente. I CUP dei soli Servizi non ne hanno una."""
+    y = (v["inv"] or [None])[0] or next((a for a in v["app"] if a.get("t")), None)
+    prec = False
+    if y is None and v["ult"]:
+        vc = v["ult"]["voce"]
+        return {"k": {"t": "C", "v": vc}, "tabella": "C - " + ALB_TABELLE["C"],
+                "tipologia": (vc + " - " + ALB_VOCI_C[vc]) if vc in ALB_VOCI_C else (vc or "")}
+    if y is None and v["prec"]:
+        y, prec = max(v["prec"], key=lambda z: ORDINE.get(z["doc"], 0)), True
+    if y is None or not y.get("t"):
+        return {}
+    t, cl, pn = y["t"], y.get("cl"), y.get("pn")
+    pr, ct = ALB_CLASSI_TIP.get(pn or "", ("", ""))
+    k = {"t": t, "cl": cl, "pn": pn, "c": y["c"]}
+    if prec:
+        k["doc"] = y["doc"]
+    return {"k": k, "tabella": t + " - " + ALB_TABELLE.get(t, ""),
+            "tipologia": (cl + " - " + CLASSI[cl]) if cl in CLASSI else ("Lotti costruttivi" if t == "B" else ""),
+            "programma": pr, "classe_tip": (pn + " - " + ct) if pn else "",
+            "intervento": y["c"] + (" (" + y["doc"] + ")" if prec else "")}
 
 
 def main():
@@ -48,6 +76,9 @@ def main():
     ultimo = max((k for k, d in D["documenti"].items() if (d.get("righe_tabella_a") or 0) > 0),
                  key=lambda k: ORDINE[k])
     R = {}
+    # classe, tabella e programma di ogni intervento nell'ultimo contratto
+    ULT = {p["codice"]: (s.get("classe"), s.get("tabella"), p.get("programma_num"))
+           for p in D["progetti"] for s in p["storico"] if s["doc"] == ultimo}
 
     def voce(cup):
         return R.setdefault(cup, {"cup": cup, "inv": [], "app": [], "ult": None, "prec": [], "srv": []})
@@ -55,7 +86,10 @@ def main():
     for p in D["progetti"]:
         for s in p["storico"]:
             for cup in s.get("cups") or []:
-                x = {"c": p["codice"], "n": p["descrizione"], "cl": p.get("classe"),
+                # tabella, classe e programma di quel contratto: l'alberatura
+                # del CUP si legge dalla fonte che ne decide lo stato
+                x = {"c": p["codice"], "n": p["descrizione"], "cl": s.get("classe"),
+                     "t": s.get("tabella"), "pn": p.get("programma_num"),
                      "costo": s.get("costo"), "doc": s["doc"], "p": s["pagina"]}
                 v = voce(cup)
                 if s["doc"] == ultimo:
@@ -68,7 +102,9 @@ def main():
             continue
         v = voce(u["cup"])
         if v["ult"] is None or ORDINE.get(u["doc"], 0) >= ORDINE.get(v["ult"]["doc"], 0):
-            v["ult"] = {"doc": u["doc"], "p": u["page"], "npp": u.get("npp"), "voce": u.get("riga"),
+            # nel 2022-2026 la riga senza voce e' la rete AV/AC Torino-Milano-Napoli
+            vc = u.get("riga") or ("A5000_0" if u["doc"] != "cdp2017" else None)
+            v["ult"] = {"doc": u["doc"], "p": u["page"], "npp": u.get("npp"), "voce": vc,
                         "n": u.get("descr"), "data": u.get("data_esercizio"), "costo": u.get("costo")}
     # l'Appendice 2: i CUP dei programmi, con il file per il rimando al PDF
     extra = []
@@ -82,8 +118,10 @@ def main():
         ORDINE[did] = ORDINE.get(AP["doc"], 0)
         for r in AP["righe"]:
             v = voce(r["cup"])
+            q = ULT.get(r["codice"])
             if not any(y["c"] == r["codice"] and y["n"] == r["descr"] for y in v["app"]):
-                v["app"].append({"c": r["codice"], "n": r["descr"], "tab": r["tab"], "doc": did, "p": r["p"]})
+                v["app"].append({"c": r["codice"], "n": r["descr"], "tab": r["tab"], "doc": did, "p": r["p"],
+                                 **({"cl": q[0], "t": q[1], "pn": q[2]} if q else {})})
     S = A.get("servizi") or {}
     for a in S.get("assegnazioni") or []:
         voce(a["cup"])["srv"].append({"all": "4c", "n": a.get("d"), "f": a.get("f"), "t": a.get("t"),
@@ -120,6 +158,7 @@ def main():
             f0 = max(v["prec"], key=lambda y: ORDINE.get(y["doc"], 0)); descr = f0["n"]
             doc, pag = f0["doc"], f0["p"]
             fonte = "Tabella A/B di un contratto precedente"
+        al = alberatura(v)
         righe.append([
             cup, stato, "+".join(parti), fonte, descr or "",
             "|".join(y["c"] for y in v["inv"]),
@@ -130,8 +169,8 @@ def main():
             (v["ult"]["voce"] or "") if v["ult"] else "", (v["ult"]["npp"] or "") if v["ult"] else "",
             "|".join(sorted({"Allegato " + y["all"] for y in v["srv"]})),
             round(sum(y["t"] or 0 for y in v["srv"]), 2) if v["srv"] else "",
-            doc, pag])
-        app.append({"cup": cup, "st": stato, "inv": v["inv"], "app": v["app"], "ult": v["ult"],
+            doc, pag] + [al.get(k, "") for k in ("tabella", "tipologia", "programma", "classe_tip", "intervento")])
+        app.append({"cup": cup, "st": stato, **({"alb": al["k"]} if al else {}), "inv": v["inv"], "app": v["app"], "ult": v["ult"],
                     "prec": v["prec"], "srv": v["srv"]})
 
     with open(dest_csv, "w", newline="", encoding="utf-8") as fh:
@@ -141,7 +180,8 @@ def main():
                     "interventi_contratti_precedenti",
                     "opere_ultimate_edizione", "data_messa_in_esercizio", "opere_ultimate_voce",
                     "opere_ultimate_npp", "servizi_allegati", "servizi_importo_mln",
-                    "documento", "pagina"])
+                    "documento", "pagina", "alberatura_tabella", "alberatura_tipologia_programma",
+                    "alberatura_programma", "alberatura_classe_tipologica", "alberatura_intervento"])
         w.writerows(righe)
     A["cup_registro"] = {"ultimo": ultimo, "righe": app, "documenti": extra}
     json.dump(A, open(uscita, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))

@@ -197,3 +197,34 @@ CLASSI = {
     "d": "Interventi in progettazione",
     "e": "Interventi in programma",
 }
+
+# l'alberatura del portafoglio Investimenti, con i nomi del contratto 2025
+# (Tavole 1 e 1bis, intestazioni delle Tabelle A, B e C): tabella, tipologia
+# di programma (le classi a..e della Tavola 1), programma, classe tipologica di
+# destinazione (01..09 della Tavola 1bis), intervento
+ALB_TABELLE = {
+    "A": "Portafoglio investimenti in corso e programmatici",
+    "B": "Investimenti realizzati per lotti costruttivi",
+    "C": "Opere ultimate",
+}
+# classe tipologica: programma e nome per esteso
+ALB_CLASSI_TIP = {
+    "01": ("Programmi prioritari ferrovie", "Sicurezza, adeguamento a nuovi standard e resilienza al climate change"),
+    "02": ("Programmi prioritari ferrovie", "Sviluppo tecnologico"),
+    "03": ("Programmi prioritari ferrovie", "Accessibilità stazioni"),
+    "04": ("Programmi prioritari ferrovie", "Valorizzazione turistica delle ferrovie minori"),
+    "05": ("Programmi prioritari ferrovie", "Valorizzazione delle reti regionali"),
+    "06": ("Programmi città metropolitane", "Programmi città metropolitane"),
+    "07": ("Programma porti e interporti", "Ultimo/penultimo miglio ferroviario e connessioni alla rete"),
+    "08": ("Programma aeroporti", "Accessibilità su ferro"),
+    "09": ("Interventi prioritari ferrovie", "Direttrici di interesse nazionale"),
+}
+# Tabella C: le voci delle opere ultimate (aggiornamento 2025, p. 129)
+ALB_VOCI_C = {
+    "E.1": "Manutenzione straordinaria ed obblighi di legge",
+    "E.2": "Sviluppo infrastrutturale e upgrading",
+    "E.3": "Impianti industriali e terminali viaggiatori e merci",
+    "E.4": "Studi di fattibilità e progettazioni",
+    "E.5": "Tecnologie per la sicurezza, la circolazione e l'efficientamento",
+    "A5000_0": "Sviluppo infrastrutturale rete AV/AC Torino-Milano-Napoli",
+}

@@ -1,5 +1,6 @@
 """Compone il file dati della piattaforma a partire dal dataset normalizzato."""
 import json, sys, re, collections
+from schema import ALB_TABELLE, ALB_CLASSI_TIP, ALB_VOCI_C
 
 src, out = sys.argv[1], sys.argv[2]
 d = json.load(open(src))
@@ -39,6 +40,10 @@ for p in d["progetti"]:
         # classe (a..e) e tabella contratto per contratto: un intervento cambia
         # classe nel tempo (in progettazione, prioritario, in esecuzione)
         "cd": {k: (st[k].get("classe") or ("B" if st[k].get("tabella") == "B" else None)) for k in st if k in DOCS},
+        # la lettera stampata nel PDF, dove differisce dalla classe (dal 2024
+        # "in programma" e' la d)
+        **({"cdd": {k: st[k]["classe_doc"] for k in st if k in DOCS and st[k].get("classe_doc")}}
+           if any(st[k].get("classe_doc") for k in st if k in DOCS) else {}),
         # pagina e stato attuativo stanno per documento, non per intervento:
         # la scheda mostrava la stessa pagina su tutte le righe della storia,
         # che e' proprio il numero che serve a ritrovare il dato nel PDF giusto
@@ -94,6 +99,9 @@ app = {
     "etichette": d["etichette"],
     "legenda_stato": d["stato_attuativo_legenda"],
     "classi": d.get("classi", {}),
+    # l'alberatura del portafoglio: tabelle, programmi e classi tipologiche
+    # per esteso, voci della Tabella C
+    "alberatura": {"tabelle": ALB_TABELLE, "classi_tip": ALB_CLASSI_TIP, "voci_c": ALB_VOCI_C},
     "validazione": d["validazione"],
     "progetti": progetti,
     "opere_ultimate": ult,

@@ -94,17 +94,22 @@ def main():
             descr = ((x["inv"] or x.get("app") or [{}])[0].get("n") or (x["ult"] or {}).get("n")
                      or ((x["srv"] or [{}])[0].get("n")) or ((x["prec"] or [{}])[0].get("n")) or "")
         out.append({"cup": cup, "es": es, "f": f, "st": st, "dove": dove, "ops": ops, "n": descr,
-                    "testo": (T.get(cup) or [])[:6]})
+                    "testo": (T.get(cup) or [])[:6], **({"alb": x["alb"]} if x and x.get("alb") else {})})
 
     with open(os.path.join(cartella, "confronto-rfi.csv"), "w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
         w.writerow(["cup", "esito", "nella_lista", "stato_bdap", "stato_nei_documenti", "dove_nei_documenti",
-                    "interventi", "descrizione", "pagine_nel_testo_dei_pdf"])
+                    "interventi", "descrizione", "pagine_nel_testo_dei_pdf",
+                    "alberatura_tabella", "alberatura_tipologia_o_voce", "alberatura_classe_tipologica"])
         nomi = {k: t for k, t, _d in ESITI}
         for r in out:
             w.writerow([r["cup"], nomi[r["es"]], bool(r["f"]), r["f"] or "", r["st"],
                         " | ".join("%s, %s p. %s" % tuple(d) for d in r["dove"]), "|".join(r["ops"]), r["n"],
-                        " | ".join("%s p. %s" % (os.path.basename(d), p) for d, p in r["testo"])])
+                        " | ".join("%s p. %s" % (os.path.basename(d), p) for d, p in r["testo"])] +
+                       [(r.get("alb") or {}).get("t", ""),
+                        (r.get("alb") or {}).get("cl") or (r.get("alb") or {}).get("v") or
+                        ("lotti costruttivi" if (r.get("alb") or {}).get("t") == "B" else ""),
+                        (r.get("alb") or {}).get("pn") or ""])
 
     A["confronto_rfi"] = {
         "n_file": len(F), "n_registro": len(REG), "comuni": len(set(F) & set(REG)),
