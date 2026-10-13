@@ -60,6 +60,11 @@ cup-da-cercare.csv
   natura: dal documento
   fonte: CdP Investimenti 2017-2026
 
+copertura-cup-agg2025.csv
+  Copertura CUP del portafoglio, aggiornamento 2025. Un intervento per riga delle Tabelle A e B: se il CUP e' scritto in tabella, solo nell'Appendice 2 (programmi pluriennali, CUP dei sottoprogetti senza importi), solo nei contratti precedenti o in nessun documento; classe, classe tipologica, costo, assegnate, da finanziare e speso.
+  natura: dal documento
+  fonte: CdP Investimenti 2022-2026, aggiornamento 2025
+
 cup-registro.csv
   Registro unico dei CUP. Una riga per CUP: in corso (Tabelle A e B dell'ultimo aggiornamento Investimenti e CUP dei programmi dell'Appendice 2 alla Relazione Informativa), concluso (dettaglio delle opere ultimate), non piu' nel contratto, o della parte Servizi (Allegati 4c e 12), con interventi, data di messa in esercizio, documento e pagina, e la posizione nell'alberatura (tabella, tipologia di programma, programma, classe tipologica, intervento; per le opere ultimate la voce della Tabella C).
   natura: dal documento

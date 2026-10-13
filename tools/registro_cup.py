@@ -32,11 +32,46 @@ Uso:
 """
 import csv
 import json
+import os
 import sys
 
 from schema import ALB_TABELLE, ALB_CLASSI_TIP, ALB_VOCI_C, CLASSI
 
 ORDINE = {}
+
+
+# quanto del portafoglio dell'ultimo aggiornamento sta sotto un CUP, per
+# intervento: CUP scritto in tabella (opera singola); CUP solo nell'Appendice 2
+# (i programmi pluriennali: i CUP sono dei sottoprogetti e non hanno importi,
+# quindi non si sa quanta parte del programma coprano); CUP scritto solo nei
+# contratti precedenti; nessun CUP in nessun documento
+COPERTURA = [
+    ("tabella", "CUP nella tabella", "opera singola, il CUP è scritto sotto l'intervento"),
+    ("app2", "CUP dei sottoprogetti (Appendice 2)", "programma pluriennale: CUP senza importi, copertura del programma non nota"),
+    ("prec", "CUP solo nei contratti precedenti", "non riportato nell'ultimo aggiornamento"),
+    ("no", "Nessun CUP", "in nessun documento del contratto"),
+]
+
+
+def copertura(D, ultimo, cod_app2):
+    out = []
+    for p in D["progetti"]:
+        s = next((s for s in p["storico"] if s["doc"] == ultimo), None)
+        if s is None:
+            continue
+        if s.get("cups"):
+            cat = "tabella"
+        elif p["codice"] in cod_app2:
+            cat = "app2"
+        elif p.get("cups_tutti"):
+            cat = "prec"
+        else:
+            cat = "no"
+        cl = "B" if s["tabella"] == "B" else s.get("classe")
+        r2 = lambda x: round(x or 0, 2)
+        out.append([p["codice"], cat, cl, p.get("programma_num"), r2(s.get("costo")), r2(s.get("finanziato")),
+                    r2(s.get("da_finanziare")), r2(s.get("avanzamento")), "|".join(s.get("cups") or [])])
+    return out
 
 
 def alberatura(v):
@@ -183,7 +218,16 @@ def main():
                     "documento", "pagina", "alberatura_tabella", "alberatura_tipologia_programma",
                     "alberatura_programma", "alberatura_classe_tipologica", "alberatura_intervento"])
         w.writerows(righe)
-    A["cup_registro"] = {"ultimo": ultimo, "righe": app, "documenti": extra}
+    cop = copertura(D, ultimo, {y["c"] for v in R.values() for y in v["app"]})
+    with open(os.path.join(os.path.dirname(dest_csv) or ".", "copertura-cup-%s.csv" % ultimo), "w", newline="", encoding="utf-8") as fh:
+        w = csv.writer(fh)
+        w.writerow(["codice", "copertura_cup", "tabella", "classe", "classe_tipologica", "costo_mln", "assegnate_mln",
+                    "da_finanziare_mln", "speso_mln", "cup_in_tabella"])
+        nomi = {k: t for k, t, _d in COPERTURA}
+        for r in cop:
+            w.writerow([r[0], nomi[r[1]], "B" if r[2] == "B" else "A", "" if r[2] == "B" else r[2] or "", r[3] or ""] + r[4:8] + [r[8]])
+    A["cup_registro"] = {"ultimo": ultimo, "righe": app, "documenti": extra,
+                         "copertura": {"cat": [list(x) for x in COPERTURA], "righe": [r[:8] for r in cop]}}
     json.dump(A, open(uscita, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
     from collections import Counter

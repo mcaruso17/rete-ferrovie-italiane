@@ -370,6 +370,17 @@ le differenze erano la d/e qui sopra (il file usa e, tranne 0271B con d), il
 codice 0242 scritto 242 e P246 (Venafro-Campobasso-Matrice, classe b, p. 52)
 assente dal file.
 
+## Copertura CUP del portafoglio
+
+registro_cup.py classifica ogni intervento delle Tabelle A e B dell'ultimo
+aggiornamento per come compare il suo CUP (`COPERTURA`): scritto in tabella
+(opere singole), solo nell'Appendice 2 (i programmi pluriennali: CUP dei
+sottoprogetti senza importi, quindi la quota coperta del programma non e'
+nota), solo nei contratti precedenti (A004 Brennero nel 2025), nessuno.
+Va in `cup_registro.copertura` e in copertura-cup-agg2025.csv; la pagina del
+registro ne mostra il riepilogo e le matrici per tipologia di programma e per
+classe tipologica, con la cifra a scelta.
+
 ## Confronto RFI (lista di CUP ricevuta)
 
 `documenti/rfi/lista-cup-bdap.csv`: solo CUP e stato BDAP della lista ricevuta.

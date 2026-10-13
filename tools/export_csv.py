@@ -367,6 +367,11 @@ CAT = [
     ("cup-da-cercare.csv", "CUP da interrogare",
      "Tutti i CUP presenti nei contratti, uno per contratto in cui compaiono "
      "con la pagina, pronti per un'interrogazione su OpenCUP.", DOC, "CdP Investimenti 2017-2026"),
+    ("copertura-cup-agg2025.csv", "Copertura CUP del portafoglio, aggiornamento 2025",
+     "Un intervento per riga delle Tabelle A e B: se il CUP e' scritto in tabella, "
+     "solo nell'Appendice 2 (programmi pluriennali, CUP dei sottoprogetti senza "
+     "importi), solo nei contratti precedenti o in nessun documento; classe, classe "
+     "tipologica, costo, assegnate, da finanziare e speso.", DOC, "CdP Investimenti 2022-2026, aggiornamento 2025"),
     ("cup-registro.csv", "Registro unico dei CUP",
      "Una riga per CUP: in corso (Tabelle A e B dell'ultimo aggiornamento "
      "Investimenti e CUP dei programmi dell'Appendice 2 alla Relazione "
