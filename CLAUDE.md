@@ -381,6 +381,24 @@ Va in `cup_registro.copertura` e in copertura-cup-agg2025.csv; la pagina del
 registro ne mostra il riepilogo e le matrici per tipologia di programma e per
 classe tipologica, con la cifra a scelta.
 
+## Assegnazioni per CUP
+
+`tools/assegnazioni_cup.py` (in build_all.sh, dopo registro_cup) scrive
+`data/assegnazioni-cup-agg2025.csv`, chiesto dal dirigente: una riga per CUP
+delle Tabelle A e B dell'ultimo aggiornamento (CUP della tabella e, per i
+programmi, dell'Appendice 2), con tipologia, classe tipologica, costo,
+riduzioni/rimodulazioni/incrementi, assegnate per fonte e fabbisogno per
+priorita'. Il contratto non divide gli importi per CUP: si ripetono su ogni
+CUP dell'intervento e si sommano sulle righe con `riga_intervento = 1`.
+Interventi senza CUP: una riga con CUP vuoto (P271, P265, P197, I085, A004).
+Per questo lo storico del dataset tiene ora anche fabbisogni e movimenti
+contratto per contratto, e la Tabella B dell'aggiornamento 2025, che stampa
+ogni colonna con l'ordine della A, ha fonti e fabbisogni: si leggono solo se
+la riga e' completa e tornano entrambe le identita' (0325 ha un fabbisogno di
+-60: assegnate 2.050 su un costo di 1.990, stampato cosi'). Le schede
+dell'Appendice 3 danno costo e risorse per CUP dei programmi, ma senza fonte:
+non ancora usate.
+
 ## Confronto RFI (lista di CUP ricevuta)
 
 `documenti/rfi/lista-cup-bdap.csv`: solo CUP e stato BDAP della lista ricevuta.

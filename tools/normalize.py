@@ -134,6 +134,21 @@ def main():
                 rec["costo_totale"], rec["avanzamento"], rec["finanziato_totale"] = v[ic], v[ia], v[iff]
                 if rec["costo_totale"] is not None and rec["finanziato_totale"] is not None:
                     rec["da_finanziare"] = round(rec["costo_totale"] - rec["finanziato_totale"], 2)
+                # dall'aggiornamento 2025 la riga B stampa ogni colonna (anche
+                # gli zeri) con lo stesso ordine della A: fonti e fabbisogni si
+                # leggono per posizione solo se la riga e' completa e tornano
+                # entrambe le identita', altrimenti uno zero mancante sposterebbe
+                # un importo nella colonna sbagliata
+                if sch and len(v) == sch["ncols"] and None not in v:
+                    m = {name: v[i] for i, name in sch["map"].items()}
+                    fonti = {k: m.get(k) for k in sch["fonti"]}
+                    fab = {k: m.get(k) for k in sch["fabbisogni"]}
+                    fin = m.get("finanziato_totale")
+                    if (fin == rec["finanziato_totale"] and m.get("costo_totale") == rec["costo_totale"]
+                            and abs(fin - sum(fonti.values())) < 0.1
+                            and abs(m["costo_totale"] - fin - sum(fab.values())) < 0.1):
+                        rec.update(m)
+                        rec["fonti"], rec["fabbisogni"] = fonti, fab
                 rec["vals_grezzi"] = v
             else:
                 rec["vals_grezzi"] = v
@@ -221,6 +236,13 @@ def main():
                          "stato": s.get("stato_attuativo") or [],
                          "cups": s.get("cups") or [],
                          "fonti": s.get("fonti"),
+                         # fabbisogni e movimenti dell'anno, contratto per
+                         # contratto: servono alla tabella delle assegnazioni
+                         # (assegnazioni_cup.py), che parte dall'ultimo
+                         "fabbisogni": s.get("fabbisogni"),
+                         **{k: s[k] for k in ("finanziato_precedente", "riduzioni",
+                                              "rimodulazioni", "riduzioni_rimodulazioni",
+                                              "incrementi") if s.get(k) is not None},
                          "tabella": s["tabella"], "classe": s.get("classe"),
                          **({"classe_doc": s["classe_doc"]} if s.get("classe_doc") else {})}
                         for s in snaps],

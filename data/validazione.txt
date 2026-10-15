@@ -1,8 +1,8 @@
 ============================================================================================
 1. IDENTITA' CONTABILI DI TABELLA A, riga per riga
 ============================================================================================
-OK risorse assegnate = somma delle fonti           1235/1235  100.0%  
-OK costo = assegnate + fabbisogni                  1235/1235  100.0%  
+OK risorse assegnate = somma delle fonti           1243/1243  100.0%  
+OK costo = assegnate + fabbisogni                  1243/1243  100.0%  
 
 ============================================================================================
 2. SOMMA DEGLI INTERVENTI contro i totali della Tavola 1
