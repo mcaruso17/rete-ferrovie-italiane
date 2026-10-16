@@ -399,6 +399,17 @@ la riga e' completa e tornano entrambe le identita' (0325 ha un fabbisogno di
 dell'Appendice 3 danno costo e risorse per CUP dei programmi, ma senza fonte:
 non ancora usate.
 
+`piattaforma/assegnazioni.html` (pubblicata come `assegnazioni.html`) e' una
+pagina a parte, semplice e solo chiara, pensata per chi deve rispondere alle
+domande della Ragioneria senza Excel: quattro risposte (CUP finanziati,
+assegnato per fonte, da assegnare per priorita', speso), cassa per anno dalla
+Tavola 2 (qui il MEF comprende l'FSC), esplora per categoria con barre, box
+plot e dispersione, ricerca per CUP e scheda dell'intervento, elenco. Font
+Titillium Web (quello dei siti della PA), nessun marchio RFI. I dati li scrive
+`tools/build_assegnazioni.py` fra i marcatori /*DATI*/ e /*FINE*/. La tipologia
+e' con la lettera del PDF 2025 (d - Interventi in programma), non quella
+normalizzata. Colori delle fonti dalla palette validata della skill dataviz.
+
 ## Confronto RFI (lista di CUP ricevuta)
 
 `documenti/rfi/lista-cup-bdap.csv`: solo CUP e stato BDAP della lista ricevuta.

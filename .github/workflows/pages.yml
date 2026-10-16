@@ -40,6 +40,8 @@ jobs:
           python3 tools/wrap_site.py piattaforma/index.html sito/index.html
           # vecchio indirizzo del cruscotto, ora dentro la piattaforma: rimanda li'
           cp piattaforma/cruscotto.html sito/cruscotto.html
+          # la pagina semplice delle assegnazioni per CUP: documento completo, si copia com'e'
+          cp piattaforma/assegnazioni.html sito/assegnazioni.html
           cp data/*.csv data/*.geojson data/cdp-rfi-dataset.json data/piano-commerciale-2026.json data/piano-commerciale-schede.json data/validazione.txt \
             data/validazione-servizi.txt data/catalogo.json data/LEGGIMI.txt sito/data/
           # i PDF di partenza, cosi' ogni numero resta verificabile alla fonte
