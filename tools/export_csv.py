@@ -377,9 +377,12 @@ CAT = [
      "nell'Appendice 2); gli interventi senza CUP hanno una riga con il CUP vuoto. "
      "Tipologia di programma, classe tipologica, costo, riduzioni, rimodulazioni, "
      "incrementi, risorse assegnate per fonte (MEF, FSC/PAC, MIT, PNRR, altro), "
-     "fabbisogno per priorita' e speso. Gli importi sono dell'intervento: il "
-     "contratto non li divide per CUP, quindi si ripetono su ogni CUP dello "
-     "stesso intervento e le somme vanno fatte sulle righe con riga_intervento = 1.",
+     "fabbisogno per priorita' e speso. Due serie di importi: *_intervento_mln, "
+     "quelli scritti nel contratto per l'intervento intero (ripetuti su ogni suo "
+     "CUP: si sommano sulle righe con riga_intervento = 1), e *_per_cup_mln, "
+     "l'importo dell'intervento diviso in parti uguali fra i suoi CUP, una "
+     "convenzione di questo file e non un dato del contratto. cup_multipli "
+     "segnala gli interventi con piu' CUP.",
      DOC, "CdP Investimenti 2022-2026, aggiornamento 2025, Tabelle A e B e Appendice 2"),
     ("cup-registro.csv", "Registro unico dei CUP",
      "Una riga per CUP: in corso (Tabelle A e B dell'ultimo aggiornamento "

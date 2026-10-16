@@ -137,6 +137,8 @@ tbody tr.cl:hover td{background:#f0f4fa}
 .cup-lista .cup{font-variant-numeric:tabular-nums;border:1px solid var(--line-2);border-radius:var(--r);padding:2px 8px;font-size:.88rem;background:#fff}
 .cup-lista .cup.sel{border-color:var(--rosso);background:var(--rosso-soft);font-weight:700}
 .vuoto{color:var(--ink-3);padding:14px}
+.multi{display:inline-block;font-size:.75rem;font-weight:700;padding:0 6px;border-radius:3px;background:#fff1d6;color:#7a4b00;border:1px solid #f0d48a;white-space:nowrap}
+.conv{font-style:italic;color:var(--ink-3);font-weight:400}
 
 footer{margin-top:40px;border-top:1px solid var(--line);padding-block:20px 40px;color:var(--ink-3);font-size:.88rem}
 @media (max-width:600px){
@@ -188,6 +190,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-block:20px 40px;
       <div class="ctl"><label for="f-ct">Classe tipologica</label><select id="f-ct"></select></div>
       <div class="ctl"><label for="f-fo">Fonte</label><select id="f-fo"></select></div>
       <div class="ctl"><label for="f-sf">Copertura</label><select id="f-sf"></select></div>
+      <div class="ctl"><label for="f-nc">CUP dell'intervento</label><select id="f-nc"><option value="">Tutti</option><option value="1">Uno solo</option><option value="m">Più di uno</option><option value="0">Nessuno</option></select></div>
       <div class="ctl" style="flex:1 1 200px"><label for="f-q">Parole nel titolo</label><input type="search" id="f-q" placeholder="Es. Napoli, ERTMS, stazioni"></div>
     </div>
   </div>
@@ -216,7 +219,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-block:20px 40px;
 </div></section>
 
 <section id="elenco"><div class="wrap">
-  <header><h2>Elenco degli interventi</h2><p>Gli interventi che rispettano i filtri della sezione Esplora. Clic su una riga per la scheda; clic su un'intestazione per ordinare.</p></header>
+  <header><h2>Elenco degli interventi</h2><p>Gli interventi che rispettano i filtri della sezione Esplora. Clic su una riga per la scheda; clic su un'intestazione per ordinare. Gli importi sono dell'intervento; il <span class="multi">numero</span> giallo segnala più CUP, e l'ultima colonna divide l'assegnato in parti uguali fra loro (in corsivo, perché è una convenzione).</p></header>
   <div class="scorri"><table id="e-tab"></table></div>
   <p style="margin-top:10px"><button class="btn-link" id="e-tutti" hidden></button></p>
   <p class="nota">Il file completo, una riga per CUP, è <a href="data/assegnazioni-cup-agg2025.csv" download>assegnazioni-cup-agg2025.csv</a>.</p>
@@ -395,7 +398,11 @@ function anni() {
 }
 
 // ---------- filtri ----------
-const F = {tp:"", ct:"", fo:"", sf:"", q:""};
+const F = {tp:"", ct:"", fo:"", sf:"", nc:"", q:""};
+// quota per CUP: l'importo dell'intervento diviso in parti uguali fra i suoi CUP.
+// E' una convenzione, non un dato del contratto, e la pagina lo dice ogni volta che la mostra
+const nC = (i) => Math.max(1, i.cups.length);
+const perCup = (v, i) => v == null ? null : v / nC(i);
 const RAGGR = {
   tp: {n:"Tipologia", f:i => i.tp || "Altro"},
   ct: {n:"Classe tipologica", f:i => i.ct || "Senza classe"},
@@ -406,6 +413,7 @@ function filtrati() {
   const q = F.q.trim().toLowerCase();
   return I.filter(i => (!F.tp || i.tp === F.tp) && (!F.ct || i.ct === F.ct)
     && (F.fo === "" || (i.f[+F.fo] || 0) > 0) && (!F.sf || copertura(i) === F.sf)
+    && (!F.nc || (F.nc === "m" ? i.cups.length > 1 : i.cups.length === +F.nc))
     && (!q || (i.c + " " + i.d).toLowerCase().includes(q)));
 }
 function preparaFiltri() {
@@ -415,16 +423,16 @@ function preparaFiltri() {
   $("#f-fo").innerHTML = `<option value="">Tutte</option>` + FONTI.map(f => `<option value="${f.k}">Con risorse ${esc(f.n)}</option>`).join("");
   $("#f-sf").innerHTML = `<option value="">Tutte</option>` + COPERTURA.map(c => `<option value="${c.k}">${c.n}</option>`).join("");
   const agg = () => { aggiornaEsplora(); elenco(); };
-  ["tp", "ct", "fo", "sf"].forEach(k => $("#f-" + k).onchange = e => { F[k] = e.target.value; agg(); });
+  ["tp", "ct", "fo", "sf", "nc"].forEach(k => $("#f-" + k).onchange = e => { F[k] = e.target.value; agg(); });
   let t; $("#f-q").oninput = e => { clearTimeout(t); t = setTimeout(() => { F.q = e.target.value; agg(); }, 200); };
-  $("#f-reset").onclick = () => { Object.keys(F).forEach(k => F[k] = ""); ["tp","ct","fo","sf","q"].forEach(k => $("#f-" + k).value = ""); agg(); };
+  $("#f-reset").onclick = () => { Object.keys(F).forEach(k => F[k] = ""); ["tp","ct","fo","sf","nc","q"].forEach(k => $("#f-" + k).value = ""); agg(); };
 }
 
 // ---------- esplora ----------
 const G = {tipo:"barre", per:"tp", mis:"soldi"};
 const MISURE = {
   barre: [["soldi","Soldi: assegnati per fonte e da assegnare"], ["ass","Assegnato"], ["fab","Da assegnare"], ["sp","Speso"], ["ncup","Numero di CUP"], ["nint","Numero di interventi"]],
-  box: [["costo","Costo per intervento"], ["ass","Assegnato per intervento"], ["fab","Da assegnare per intervento"], ["q","Quota finanziata (%)"]],
+  box: [["costo","Costo per intervento"], ["ass","Assegnato per intervento"], ["fab","Da assegnare per intervento"], ["assc","Assegnato per CUP (quota uguale)"], ["q","Quota finanziata (%)"]],
   disp: [["q","Costo e quota finanziata"], ["ass","Costo e assegnato"]],
 };
 function preparaEsplora() {
@@ -523,7 +531,7 @@ function barre(L) {
 function quantile(a, p) { const i = (a.length - 1) * p, lo = Math.floor(i), hi = Math.ceil(i); return a[lo] + (a[hi] - a[lo]) * (i - lo); }
 function box(L) {
   const misN = MISURE.box.find(x => x[0] === G.mis)[1];
-  const v = i => G.mis === "q" ? quota(i) : i[G.mis];
+  const v = i => G.mis === "q" ? quota(i) : G.mis === "assc" ? perCup(i.ass, i) : i[G.mis];
   const perc = G.mis === "q";
   // gli importi vanno da pochi milioni a decine di miliardi: scala logaritmica, gli zeri a parte
   const gs = gruppi(L).map(g => {
@@ -565,7 +573,7 @@ function box(L) {
   el.innerHTML = s;
   legaTip(el);
   el.querySelectorAll(".pt").forEach(p => p.onclick = () => apriScheda(p.dataset.c));
-  $("#g-nota").textContent = (perc ? "" : "Scala logaritmica: ogni tacca vale dieci volte la precedente. Gli interventi con valore zero non sono nel grafico (li indica il tooltip). ") + "La scatola contiene la metà centrale degli interventi; i baffi arrivano ai valori non anomali; i punti sono gli interventi anomali, cliccabili.";
+  $("#g-nota").textContent = (G.mis === "assc" ? "Assegnato per CUP: l'assegnato dell'intervento diviso in parti uguali fra i suoi CUP, una convenzione per confrontare; il contratto non divide i soldi per CUP. " : "") + (perc ? "" : "Scala logaritmica: ogni tacca vale dieci volte la precedente. Gli interventi con valore zero non sono nel grafico (li indica il tooltip). ") + "La scatola contiene la metà centrale degli interventi; i baffi arrivano ai valori non anomali; i punti sono gli interventi anomali, cliccabili.";
   $("#g-tab").innerHTML = `<thead><tr><th>${esc(RAGGR[G.per].n)}</th><th class="n">Interventi</th><th class="n">Minimo</th><th class="n">25° perc.</th><th class="n">Mediana</th><th class="n">75° perc.</th><th class="n">Massimo</th></tr></thead><tbody>${gs.map(g => { const fv = x => perc ? it1.format(x) + "%" : mln(x); return `<tr><td>${esc(g.k)}</td><td class="n">${g.vals.length}</td><td class="n">${fv(g.vals[0])}</td><td class="n">${fv(quantile(g.vals,.25))}</td><td class="n">${fv(quantile(g.vals,.5))}</td><td class="n">${fv(quantile(g.vals,.75))}</td><td class="n">${fv(g.vals[g.vals.length-1])}</td></tr>`; }).join("")}</tbody>`;
 }
 
@@ -617,7 +625,7 @@ function apriScheda(cod, cup) {
     <div><div class="percorso">${esc(i.t === "B" ? "Tabella B - lotti costruttivi" : "Tabella A")} › ${esc(i.tp)}${i.pr ? " › " + esc(i.pr) : ""}${i.ct ? " › " + esc(i.ct) : ""}</div>
       <h3 style="font-size:1.3rem;margin-top:4px"><span class="cod">${esc(i.c)}</span> ${esc(i.d)}</h3>
       <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap;align-items:center"><span class="pill" style="border-color:${cop.c}"><span style="color:${cop.c};font-weight:700">${cop.i}</span> ${cop.n}</span>${i.st ? `<span class="pill">Stato attuativo: ${esc(i.st.replace(/\|/g, ", "))}</span>` : ""}<span class="pill">${pdf(i.p, "Tabella a p. " + i.p + " del PDF")}</span></div></div>
-    ${nCup > 1 ? `<div class="avviso">Questo intervento ha <b>${nCup} CUP</b>. Il contratto non divide i soldi fra i CUP: gli importi qui sotto sono dell'intervento intero.</div>` : nCup === 0 ? `<div class="avviso">Questo intervento non ha CUP nel contratto.</div>` : ""}
+    ${nCup > 1 ? `<div class="avviso"><span class="multi">${nCup} CUP</span> Questo intervento ha più CUP. Il contratto scrive gli importi solo per l'intervento intero. Sotto trovi sia l'<b>importo per intervento</b> (quello scritto) sia l'<b>importo per CUP</b>, ottenuto dividendo in parti uguali fra i ${nCup} CUP: è una convenzione per confrontare, non un dato del contratto.</div>` : nCup === 0 ? `<div class="avviso">Questo intervento non ha CUP nel contratto.</div>` : ""}
     <div class="cifre">
       <div class="cifra"><div class="e">Costo totale</div><div class="v num">${breve(i.costo)}</div></div>
       <div class="cifra"><div class="e">Assegnato</div><div class="v num">${breve(i.ass)}</div></div>
@@ -628,6 +636,9 @@ function apriScheda(cod, cup) {
       <div class="legenda-riga">${parti.map(p => `<span><span class="sw" style="background:${p.c}"></span>${esc(p.n)}: <b class="num">${mln(p.v)}</b></span>`).join("")}${i.fab > 0 ? `<span><span class="sw fab"></span>Da assegnare: <b class="num">${mln(i.fab)}</b></span>` : ""}</div>
       <div class="barretta" style="height:22px">${parti.map(p => `<span style="width:${(100*p.v/tot).toFixed(2)}%;background:${p.c}" data-tip="${esc(rigaTip(p.c, p.n, mln(p.v)))}"></span>`).join("")}${i.fab > 0 ? `<span class="sw fab" style="width:${(100*i.fab/tot).toFixed(2)}%;height:100%;border-radius:0" data-tip="${esc(rigaTip("var(--fab-riga)", "Da assegnare", mln(i.fab)))}"></span>` : ""}</div>
     </div>
+    ${nCup > 1 ? `<div class="scorri"><table><thead><tr><th>Importi (mln €)</th><th class="n">Per intervento<br><span class="conv">scritto nel contratto</span></th><th class="n">Per CUP<br><span class="conv">÷ ${nCup}, convenzione</span></th></tr></thead><tbody>
+      ${[["Costo totale", i.costo], ["Assegnato", i.ass], ...FONTI.map(f => ["di cui " + f.n, i.f[f.k]]), ["Da assegnare", i.fab], ["Speso", i.sp]].map(([n, v]) => `<tr><td>${esc(n)}</td><td class="n">${mln(v)}</td><td class="n">${mln(perCup(v, i))}</td></tr>`).join("")}
+    </tbody></table></div>` : ""}
     <div class="scorri"><table><tbody>
       <tr><td>Finanziato nel contratto precedente</td><td class="n">${mln(i.prec)}</td></tr>
       <tr><td>Riduzioni nell'anno</td><td class="n">${mln(i.rid)}</td></tr>
@@ -677,8 +688,9 @@ const E = {ord:"costo", dir:-1, tutti:false};
 const COLE = [
   ["c","Codice"], ["d","Intervento"], ["tp","Tipologia"], ["ncup","CUP", 1], ["costo","Costo", 1], ["ass","Assegnato", 1],
   ["f0","MEF", 1], ["f2","MIT", 1], ["f3","PNRR", 1], ["fab","Da assegnare", 1], ["q","% finanziata", 1],
+  ["assc","Assegnato per CUP", 1],
 ];
-function valE(i, k) { return k === "ncup" ? i.cups.length : k === "q" ? quota(i) : k[0] === "f" && k.length === 2 ? i.f[+k[1]] : i[k]; }
+function valE(i, k) { return k === "ncup" ? i.cups.length : k === "q" ? quota(i) : k === "assc" ? perCup(i.ass, i) : k[0] === "f" && k.length === 2 ? i.f[+k[1]] : i[k]; }
 function elenco() {
   const L = filtrati().slice().sort((a, b) => {
     const x = valE(a, E.ord), y = valE(b, E.ord);
@@ -686,7 +698,7 @@ function elenco() {
   });
   const vis = E.tutti ? L : L.slice(0, 40);
   $("#e-tab").innerHTML = `<thead><tr>${COLE.map(([k, n, nm]) => `<th class="ord${nm ? " n" : ""}" data-k="${k}">${n}${E.ord === k ? (E.dir > 0 ? " ▲" : " ▼") : ""}</th>`).join("")}</tr></thead><tbody>
-    ${vis.map(i => `<tr class="cl" data-c="${esc(i.c)}"><td class="cod">${esc(i.c)}</td><td>${esc(i.d.length > 90 ? i.d.slice(0, 88) + "…" : i.d)}</td><td><span class="pill">${esc(i.tp.split(" - ")[0])}</span></td><td class="n">${i.cups.length}</td><td class="n">${mln(i.costo)}</td><td class="n">${mln(i.ass)}</td><td class="n">${mln(i.f[0])}</td><td class="n">${mln(i.f[2])}</td><td class="n">${mln(i.f[3])}</td><td class="n">${mln(i.fab)}</td><td class="n">${quota(i) == null ? "–" : it1.format(quota(i)) + "%"}</td></tr>`).join("") || `<tr><td colspan="${COLE.length}" class="vuoto">Nessun intervento con questi filtri.</td></tr>`}</tbody>`;
+    ${vis.map(i => `<tr class="cl" data-c="${esc(i.c)}"><td class="cod">${esc(i.c)}</td><td>${esc(i.d.length > 90 ? i.d.slice(0, 88) + "…" : i.d)}</td><td><span class="pill">${esc(i.tp.split(" - ")[0])}</span></td><td class="n">${i.cups.length > 1 ? `<span class="multi" title="Più CUP: importi dell'intervento intero">${i.cups.length}</span>` : i.cups.length}</td><td class="n">${mln(i.costo)}</td><td class="n">${mln(i.ass)}</td><td class="n">${mln(i.f[0])}</td><td class="n">${mln(i.f[2])}</td><td class="n">${mln(i.f[3])}</td><td class="n">${mln(i.fab)}</td><td class="n">${quota(i) == null ? "–" : it1.format(quota(i)) + "%"}</td><td class="n">${i.cups.length > 1 ? `<span class="conv">${mln(perCup(i.ass, i))}</span>` : mln(i.ass)}</td></tr>`).join("") || `<tr><td colspan="${COLE.length}" class="vuoto">Nessun intervento con questi filtri.</td></tr>`}</tbody>`;
   $("#e-tab").querySelectorAll("th.ord").forEach(th => th.onclick = () => { const k = th.dataset.k; if (E.ord === k) E.dir *= -1; else { E.ord = k; E.dir = (k === "c" || k === "d" || k === "tp") ? 1 : -1; } elenco(); });
   $("#e-tab").querySelectorAll("tr.cl").forEach(tr => tr.onclick = () => apriScheda(tr.dataset.c));
   const b = $("#e-tutti");
