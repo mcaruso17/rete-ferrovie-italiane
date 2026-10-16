@@ -26,7 +26,7 @@ CdP_Servizi_2022-2026_AI2_Agg2024.pdf  297 linee su 4 pagine,   16832.3 km ricos
    Linee all'interno dei Nodi                         949.6  stampato     949.6  +0.0 
    Linee con <= 40 treni/giorno                      8303.9  stampato    8303.9  -0.0 
    Linee con > 40 e < 100 treni/giorno               3749.6  stampato    3749.6  +0.0 
-   TOTALE complessivo                               16832.3  stampato   16832.3  -0.0 
+   TOTALE complessivo                               16832.3  stampato   16832.3  +0.0 
    ESITO: 6 confronti, 6 entro la tolleranza di arrotondamento
 CdP_Servizi_2022-2026_AI2_Agg2024.pdf        4a  0 righe  4b 31 righe  4c  39 CUP  PNRR-S  0
    totale fonti 2022-2026 10832.65, complessivo 15565.45 mln

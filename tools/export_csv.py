@@ -372,6 +372,15 @@ CAT = [
      "solo nell'Appendice 2 (programmi pluriennali, CUP dei sottoprogetti senza "
      "importi), solo nei contratti precedenti o in nessun documento; classe, classe "
      "tipologica, costo, assegnate, da finanziare e speso.", DOC, "CdP Investimenti 2022-2026, aggiornamento 2025"),
+    ("assegnazioni-cup-agg2025.csv", "Assegnazioni per CUP, aggiornamento 2025",
+     "Una riga per CUP delle Tabelle A e B (scritto in tabella o, per i programmi, "
+     "nell'Appendice 2); gli interventi senza CUP hanno una riga con il CUP vuoto. "
+     "Tipologia di programma, classe tipologica, costo, riduzioni, rimodulazioni, "
+     "incrementi, risorse assegnate per fonte (MEF, FSC/PAC, MIT, PNRR, altro), "
+     "fabbisogno per priorita' e speso. Gli importi sono dell'intervento: il "
+     "contratto non li divide per CUP, quindi si ripetono su ogni CUP dello "
+     "stesso intervento e le somme vanno fatte sulle righe con riga_intervento = 1.",
+     DOC, "CdP Investimenti 2022-2026, aggiornamento 2025, Tabelle A e B e Appendice 2"),
     ("cup-registro.csv", "Registro unico dei CUP",
      "Una riga per CUP: in corso (Tabelle A e B dell'ultimo aggiornamento "
      "Investimenti e CUP dei programmi dell'Appendice 2 alla Relazione "
