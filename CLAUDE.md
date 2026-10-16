@@ -388,8 +388,13 @@ classe tipologica, con la cifra a scelta.
 delle Tabelle A e B dell'ultimo aggiornamento (CUP della tabella e, per i
 programmi, dell'Appendice 2), con tipologia, classe tipologica, costo,
 riduzioni/rimodulazioni/incrementi, assegnate per fonte e fabbisogno per
-priorita'. Il contratto non divide gli importi per CUP: si ripetono su ogni
-CUP dell'intervento e si sommano sulle righe con `riga_intervento = 1`.
+priorita'. Il contratto non divide gli importi per CUP: le colonne
+`*_intervento_mln` sono quelle scritte, ripetute su ogni CUP dell'intervento e
+da sommare sulle righe con `riga_intervento = 1`; le `*_per_cup_mln` dividono
+l'intervento in parti uguali fra i suoi CUP (chiesto dall'utente: e' una
+convenzione, e la pagina e il LEGGIMI lo dicono ogni volta; nelle schede
+dell'Appendice 3 i CUP di uno stesso programma hanno importi molto diversi).
+`cup_multipli` segnala i 67 interventi con piu' CUP.
 Interventi senza CUP: una riga con CUP vuoto (P271, P265, P197, I085, A004).
 Per questo lo storico del dataset tiene ora anche fabbisogni e movimenti
 contratto per contratto, e la Tabella B dell'aggiornamento 2025, che stampa

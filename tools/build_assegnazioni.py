@@ -41,14 +41,14 @@ def main():
                 "tp": (r["lettera_nel_pdf"] + r["tipologia_programma"][1:]) if r["lettera_nel_pdf"] else r["tipologia_programma"],
                 "pr": r["programma"], "ct": r["classe_tipologica"],
                 "st": r["stato_attuativo"], "p": int(r["pagina_pdf"]),
-                "costo": num(r["costo_totale_mln"]), "prec": num(r["finanziato_precedente_mln"]),
-                "rid": num(r["riduzioni_mln"]), "rim": num(r["rimodulazioni_mln"]),
-                "inc": num(r["incrementi_mln"]), "ass": num(r["risorse_assegnate_mln"]),
-                "f": [num(r[k]) for k in ("mef_mln", "fsc_pac_mln", "mit_mln", "pnrr_mln", "altro_mln")],
-                "fab": num(r["fabbisogno_totale_mln"]),
-                "fp": [num(r[k]) for k in ("fabbisogno_priorita1_mln", "fabbisogno_priorita2_mln",
-                                           "fabbisogno_completamento_mln")],
-                "sp": num(r["speso_mln"]), "cups": [],
+                "costo": num(r["costo_totale_intervento_mln"]), "prec": num(r["finanziato_precedente_intervento_mln"]),
+                "rid": num(r["riduzioni_intervento_mln"]), "rim": num(r["rimodulazioni_intervento_mln"]),
+                "inc": num(r["incrementi_intervento_mln"]), "ass": num(r["risorse_assegnate_intervento_mln"]),
+                "f": [num(r[k]) for k in ("mef_intervento_mln", "fsc_pac_intervento_mln", "mit_intervento_mln", "pnrr_intervento_mln", "altro_intervento_mln")],
+                "fab": num(r["fabbisogno_totale_intervento_mln"]),
+                "fp": [num(r[k]) for k in ("fabbisogno_priorita1_intervento_mln", "fabbisogno_priorita2_intervento_mln",
+                                           "fabbisogno_completamento_intervento_mln")],
+                "sp": num(r["speso_intervento_mln"]), "cups": [],
             }
             per_cod[cod] = it
             interventi.append(it)

@@ -6,10 +6,16 @@ MIT, PNRR, altro) e fabbisogno per priorita', con tipologia di programma e
 classe tipologica dell'alberatura.
 
 L'unita' e' il CUP, ma il contratto non divide gli importi per CUP: li stampa
-per intervento. Un intervento con piu' CUP ha quindi una riga per CUP con gli
-importi dell'intervento ripetuti, e solo la prima ha riga_intervento = 1: le
-somme si fanno su quelle, altrimenti l'intervento conta tante volte quanti
-sono i suoi CUP. Un intervento senza CUP ha una riga sola con il CUP vuoto.
+per intervento. Ogni riga ha quindi due serie di importi:
+- *_intervento_mln: quelli scritti nel contratto, dell'intervento intero,
+  ripetuti su ogni suo CUP; si sommano solo sulle righe con riga_intervento = 1;
+- *_per_cup_mln: l'importo dell'intervento diviso in parti uguali fra i suoi
+  CUP. E' una convenzione di questo file, non un dato del contratto (le
+  schede dell'Appendice 3 mostrano CUP dello stesso programma con importi
+  molto diversi: in NA026 da 0,2 a 1.129 mln). Serve a sommare su tutte le
+  righe senza contare piu' volte un intervento.
+cup_multipli dice se l'intervento ha piu' di un CUP. Un intervento senza CUP
+ha una riga sola con il CUP vuoto e la quota uguale all'intervento.
 
 I CUP vengono da due posti: quelli scritti sotto l'intervento in tabella e,
 per i programmi pluriennali, quelli dell'Appendice 2 alla Relazione
@@ -29,13 +35,20 @@ COLONNE = [
     "documento", "pagina_pdf", "tabella", "tipologia_programma", "lettera_nel_pdf",
     "programma", "classe_tipologica", "codice_intervento", "descrizione_intervento",
     "cup", "origine_cup", "oggetto_cup", "pagina_appendice_2", "n_cup_intervento",
-    "riga_intervento", "stato_attuativo",
-    "costo_totale_mln", "finanziato_precedente_mln", "riduzioni_mln",
-    "rimodulazioni_mln", "incrementi_mln", "risorse_assegnate_mln",
-    "mef_mln", "fsc_pac_mln", "mit_mln", "pnrr_mln", "altro_mln",
-    "fabbisogno_totale_mln", "fabbisogno_priorita1_mln", "fabbisogno_priorita2_mln",
-    "fabbisogno_completamento_mln", "speso_mln", "controllo",
-]
+    "riga_intervento", "cup_multipli", "ripartizione_per_cup", "stato_attuativo",
+    "costo_totale_intervento_mln", "finanziato_precedente_intervento_mln", "riduzioni_intervento_mln",
+    "rimodulazioni_intervento_mln", "incrementi_intervento_mln", "risorse_assegnate_intervento_mln",
+    "mef_intervento_mln", "fsc_pac_intervento_mln", "mit_intervento_mln", "pnrr_intervento_mln",
+    "altro_intervento_mln", "fabbisogno_totale_intervento_mln", "fabbisogno_priorita1_intervento_mln",
+    "fabbisogno_priorita2_intervento_mln", "fabbisogno_completamento_intervento_mln",
+    "speso_intervento_mln",
+] + ["%s_per_cup_mln" % k for k in (
+    "costo_totale", "risorse_assegnate", "mef", "fsc_pac", "mit", "pnrr", "altro",
+    "fabbisogno_totale", "speso")] + ["controllo"]
+
+# gli importi che si dividono fra i CUP (i movimenti dell'anno restano solo per intervento)
+PER_CUP = ["costo_totale", "risorse_assegnate", "mef", "fsc_pac", "mit", "pnrr", "altro",
+           "fabbisogno_totale", "speso"]
 
 
 def r2(x):
@@ -102,22 +115,31 @@ def main():
             "codice_intervento": cod, "descrizione_intervento": p["descrizione"],
             "n_cup_intervento": len([c for c, *_ in cups if c]),
             "stato_attuativo": "|".join(s.get("stato") or []),
-            "costo_totale_mln": r2(s.get("costo")),
-            "finanziato_precedente_mln": r2(s.get("finanziato_precedente")),
-            "riduzioni_mln": r2(s.get("riduzioni")),
-            "rimodulazioni_mln": r2(s.get("rimodulazioni")),
-            "incrementi_mln": r2(s.get("incrementi")),
-            "risorse_assegnate_mln": r2(s.get("finanziato")),
-            "mef_mln": r2(fonti.get("f_mef")), "fsc_pac_mln": r2(fonti.get("f_fsc_pac")),
-            "mit_mln": r2(fonti.get("f_mit")), "pnrr_mln": r2(fonti.get("f_pnrr")),
-            "altro_mln": r2(fonti.get("f_altro")),
-            "fabbisogno_totale_mln": r2(s.get("da_finanziare")),
-            "fabbisogno_priorita1_mln": r2(fab.get("fab_priorita1")),
-            "fabbisogno_priorita2_mln": r2(fab.get("fab_priorita2")),
-            "fabbisogno_completamento_mln": r2(fab.get("fab_completamento")),
-            "speso_mln": r2(s.get("avanzamento")),
+            "costo_totale_intervento_mln": r2(s.get("costo")),
+            "finanziato_precedente_intervento_mln": r2(s.get("finanziato_precedente")),
+            "riduzioni_intervento_mln": r2(s.get("riduzioni")),
+            "rimodulazioni_intervento_mln": r2(s.get("rimodulazioni")),
+            "incrementi_intervento_mln": r2(s.get("incrementi")),
+            "risorse_assegnate_intervento_mln": r2(s.get("finanziato")),
+            "mef_intervento_mln": r2(fonti.get("f_mef")), "fsc_pac_intervento_mln": r2(fonti.get("f_fsc_pac")),
+            "mit_intervento_mln": r2(fonti.get("f_mit")), "pnrr_intervento_mln": r2(fonti.get("f_pnrr")),
+            "altro_intervento_mln": r2(fonti.get("f_altro")),
+            "fabbisogno_totale_intervento_mln": r2(s.get("da_finanziare")),
+            "fabbisogno_priorita1_intervento_mln": r2(fab.get("fab_priorita1")),
+            "fabbisogno_priorita2_intervento_mln": r2(fab.get("fab_priorita2")),
+            "fabbisogno_completamento_intervento_mln": r2(fab.get("fab_completamento")),
+            "speso_intervento_mln": r2(s.get("avanzamento")),
             "controllo": controllo(s),
         }
+        n = max(1, base["n_cup_intervento"])
+        base["cup_multipli"] = "si" if n > 1 else "no"
+        base["ripartizione_per_cup"] = (
+            "divisione in parti uguali fra %d CUP (convenzione, non nel contratto)" % n if n > 1
+            else "un solo CUP: coincide con l'intervento" if base["n_cup_intervento"] == 1
+            else "nessun CUP: importi dell'intervento")
+        for k in PER_CUP:
+            v = base[k + "_intervento_mln"]
+            base[k + "_per_cup_mln"] = "" if v == "" else round(v / n, 4)
         for i, (cup, orig, ogg, pag) in enumerate(cups):
             righe.append({**base, "cup": cup, "origine_cup": orig, "oggetto_cup": ogg,
                           "pagina_appendice_2": pag, "riga_intervento": 1 if i == 0 else 0})
@@ -144,6 +166,14 @@ def main():
           "somma fonti %.2f, fabbisogno %.2f (aggregati %.2f)" % (
               tot["costo"], agg["costo"], tot["fin"], agg["finanziato"], tot["fonti"],
               tot["fab"], agg["da_finanziare"]))
+    # le quote per CUP, sommate su tutte le righe, devono ridare il totale degli interventi
+    for k in PER_CUP:
+        a = sum(r[k + "_per_cup_mln"] or 0 for r in righe)
+        b = sum(r[k + "_intervento_mln"] or 0 for r in righe if r["riga_intervento"])
+        if abs(a - b) > 0.5:
+            sys.exit("quote per CUP di %s: %.2f contro %.2f degli interventi" % (k, a, b))
+    print("  quote per CUP: sommate su tutte le righe tornano con gli interventi; %d interventi con piu' CUP" %
+          sum(1 for r in righe if r["riga_intervento"] and r["cup_multipli"] == "si"))
     nko = sum(1 for r in righe if r["riga_intervento"] and r["controllo"] != "ok")
     print("  interventi con controllo non ok: %d" % nko)
 
