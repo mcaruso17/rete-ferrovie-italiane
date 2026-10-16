@@ -328,6 +328,7 @@ function risposte() {
       ${barra(COPERTURA.map(c => ({n:c.n, c:c.c, v:perCop[c.k].c})), cupTot)}
       <div class="legenda">${COPERTURA.map(c => `<div class="r"><span class="icona" style="color:${c.c}">${c.i}</span><span class="lab">${c.n}</span><span class="v">${it0.format(perCop[c.k].c)}</span></div>`).join("")}</div>
       <div class="sub">CUP contati secondo il loro intervento: su ${I.length} interventi, ${perCop.tutto.n} finanziati del tutto, ${perCop.parte.n} in parte, ${perCop.niente.n} senza risorse. ${senzaCup.length} interventi non hanno CUP nel contratto.</div>
+      <div class="sub"><b>Del tutto</b>: le risorse assegnate coprono l'intero costo, il fabbisogno è zero. <b>In parte</b>: ci sono risorse ma resta un fabbisogno. <b>Nessuna</b>: costo senza risorse assegnate. Secondo il contratto, non secondo la spesa effettiva.</div>
     </div>
     <div class="card">
       <div class="dom">Quanto è stato assegnato a RFI?</div>
