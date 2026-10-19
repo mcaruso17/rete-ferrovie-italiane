@@ -102,10 +102,15 @@ python3 extract_appendice_cup.py ../documenti/cdpi-agg2025/appendice_2_lista_cup
   ../data/appendice-cup-agg2025.json
 python3 registro_cup.py ../data/cdp-rfi-dataset.json ../data/cdp-rfi-app.json \
   ../data/cdp-rfi-app.json ../data/cup-registro.csv ../data/appendice-cup-agg2025.json
+# ogni CUP scritto nel testo di tutti i PDF, con pagina: lento, rifatto solo se
+# manca (cancellare il JSON dopo aver aggiunto PDF). Serve alle assegnazioni
+# (il CUP di A004 che la Tabella B 2025 non stampa) e al confronto con RFI
+[ -f ../data/cup-nel-testo.json ] || python3 cup_nel_testo.py ../data/cup-nel-testo.json
 # le assegnazioni dell'ultimo aggiornamento: un file per CUP (fino a tre
 # interventi per CUP, quota per CUP) e uno per intervento (gli importi scritti)
 python3 assegnazioni_cup.py ../data/cdp-rfi-dataset.json ../data/appendice-cup-agg2025.json \
-  ../data/assegnazioni-cup-agg2025.csv ../data/assegnazioni-interventi-agg2025.csv
+  ../data/assegnazioni-cup-agg2025.csv ../data/assegnazioni-interventi-agg2025.csv \
+  ../data/cup-nel-testo.json
 # e la pagina semplice che le esplora (piattaforma/assegnazioni.html), con la
 # cassa per anno della Tavola 2
 python3 build_assegnazioni.py ../data/assegnazioni-interventi-agg2025.csv \
@@ -121,10 +126,8 @@ python3 extract_appendice4.py ../documenti/cdpi-agg2025/appendice_4delta_costi.p
   ../documenti/cdpi-agg2025/appendice_4dossier_delta_costo.pdf agg2025 ../data/appendice4-agg2025.json
 python3 variazioni_costo.py ../data/cdp-rfi-app.json ../data/cdp-rfi-app.json \
   ../data/appendice4-agg2025.json ../data
-# il confronto con la lista di CUP ricevuta (solo CUP e stato BDAP):
-# il registro dei CUP piu' la ricerca di ogni CUP nel testo di tutti i PDF,
-# lenta, rifatta solo se manca (cancellare il JSON dopo aver aggiunto PDF)
-[ -f ../data/cup-nel-testo.json ] || python3 cup_nel_testo.py ../data/cup-nel-testo.json
+# il confronto con la lista di CUP ricevuta (solo CUP e stato BDAP): il
+# registro dei CUP piu' la ricerca di ogni CUP nel testo dei PDF (sopra)
 python3 confronto_rfi.py ../data/cdp-rfi-app.json ../data/cdp-rfi-app.json \
   ../documenti/rfi/lista-cup-bdap.csv ../data/cup-nel-testo.json ../data
 # la spesa anno per anno dalla Relazione al Parlamento al 31/12/2024

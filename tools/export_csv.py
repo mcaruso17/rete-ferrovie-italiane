@@ -374,7 +374,9 @@ CAT = [
      "tipologica, costo, assegnate, da finanziare e speso.", DOC, "CdP Investimenti 2022-2026, aggiornamento 2025"),
     ("assegnazioni-cup-agg2025.csv", "Assegnazioni per CUP, aggiornamento 2025",
      "Una riga per CUP delle Tabelle A e B (scritto in tabella o, per i programmi, "
-     "nell'Appendice 2); gli interventi senza CUP hanno una riga con il CUP vuoto. "
+     "nell'Appendice 2; per A004 Brennero, che la Tabella B 2025 non stampa, dagli "
+     "altri documenti dello stesso aggiornamento); gli interventi senza CUP hanno "
+     "una riga con il CUP vuoto. "
      "Un CUP puo' stare sotto piu' interventi (24, fino a tre: fasi dello stesso "
      "progetto, un'opera anche in un programma, due programmi): intervento_1..3 "
      "li elencano, con tipologia del primo, i loro importi (costo, assegnate per "

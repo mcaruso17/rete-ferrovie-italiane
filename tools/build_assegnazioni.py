@@ -57,7 +57,10 @@ def main():
         for k in (1, 2, 3):
             cod = r.get("intervento_%d" % k)
             if cod:
-                per_cod[cod]["cups"].append([r["cup"], "A" if r["origine_cup_intervento_%d" % k] == "Appendice 2" else "T",
+                o = r["origine_cup_intervento_%d" % k]
+                # D = CUP non stampato in tabella ma scritto negli altri documenti
+                # dell'aggiornamento (A004 Brennero, assegnazioni_cup.py)
+                per_cod[cod]["cups"].append([r["cup"], "A" if o == "Appendice 2" else "D" if o.startswith("Altri documenti") else "T",
                                              r["oggetto_cup"], r["tipo_condivisione"]])
     for it in interventi:
         it["cups"].sort(key=lambda c: (c[1], c[0]))
