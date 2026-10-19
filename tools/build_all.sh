@@ -102,14 +102,14 @@ python3 extract_appendice_cup.py ../documenti/cdpi-agg2025/appendice_2_lista_cup
   ../data/appendice-cup-agg2025.json
 python3 registro_cup.py ../data/cdp-rfi-dataset.json ../data/cdp-rfi-app.json \
   ../data/cdp-rfi-app.json ../data/cup-registro.csv ../data/appendice-cup-agg2025.json
-# le assegnazioni dell'ultimo aggiornamento, una riga per CUP: costo, fonti e
-# fabbisogno dell'intervento (il contratto non li divide per CUP)
+# le assegnazioni dell'ultimo aggiornamento: un file per CUP (fino a tre
+# interventi per CUP, quota per CUP) e uno per intervento (gli importi scritti)
 python3 assegnazioni_cup.py ../data/cdp-rfi-dataset.json ../data/appendice-cup-agg2025.json \
-  ../data/assegnazioni-cup-agg2025.csv
+  ../data/assegnazioni-cup-agg2025.csv ../data/assegnazioni-interventi-agg2025.csv
 # e la pagina semplice che le esplora (piattaforma/assegnazioni.html), con la
 # cassa per anno della Tavola 2
-python3 build_assegnazioni.py ../data/assegnazioni-cup-agg2025.csv ../data/cdp-rfi-dataset.json \
-  ../piattaforma/assegnazioni.html
+python3 build_assegnazioni.py ../data/assegnazioni-interventi-agg2025.csv \
+  ../data/assegnazioni-cup-agg2025.csv ../data/cdp-rfi-dataset.json ../piattaforma/assegnazioni.html
 # la distribuzione territoriale ufficiale (Appendice 7) accanto alla stima
 python3 extract_appendice7.py ../documenti/cdpi-agg2025/appendice_7_distribuzione_territoriale.pdf \
   agg2025 ../data/mappa-regioni.json ../data/appendice7-agg2025.json
