@@ -383,18 +383,25 @@ classe tipologica, con la cifra a scelta.
 
 ## Assegnazioni per CUP
 
-`tools/assegnazioni_cup.py` (in build_all.sh, dopo registro_cup) scrive
-`data/assegnazioni-cup-agg2025.csv`, chiesto dal dirigente: una riga per CUP
-delle Tabelle A e B dell'ultimo aggiornamento (CUP della tabella e, per i
-programmi, dell'Appendice 2), con tipologia, classe tipologica, costo,
-riduzioni/rimodulazioni/incrementi, assegnate per fonte e fabbisogno per
-priorita'. Il contratto non divide gli importi per CUP: le colonne
-`*_intervento_mln` sono quelle scritte, ripetute su ogni CUP dell'intervento e
-da sommare sulle righe con `riga_intervento = 1`; le `*_per_cup_mln` dividono
-l'intervento in parti uguali fra i suoi CUP (chiesto dall'utente: e' una
-convenzione, e la pagina e il LEGGIMI lo dicono ogni volta; nelle schede
-dell'Appendice 3 i CUP di uno stesso programma hanno importi molto diversi).
-`cup_multipli` segnala i 67 interventi con piu' CUP.
+`tools/assegnazioni_cup.py` (in build_all.sh, dopo registro_cup) scrive due
+file, chiesti dal dirigente. `data/assegnazioni-interventi-agg2025.csv`: una
+riga per intervento delle Tabelle A e B, con gli importi scritti (costo,
+movimenti dell'anno, assegnate per fonte, fabbisogno per priorita', speso) e
+la lista dei CUP. `data/assegnazioni-cup-agg2025.csv`: una riga per CUP
+(989, da tabella e Appendice 2) piu' una per ogni intervento senza CUP. Un
+CUP puo' stare sotto piu' interventi (24 nel 2025: 20 fasi dello stesso
+progetto, 0049A/B; 2 opere anche in un programma, P111/P194 e P249/P201; 2
+in due programmi, P221/P222): le colonne intervento_1..3 li elencano con i
+loro importi (`*_intervento_k_mln`, dell'intervento intero), e
+`tipo_condivisione` dice il caso. `*_per_cup_mln` e' la quota del CUP: per
+ogni suo intervento l'importo diviso per i suoi CUP, sommato sugli
+interventi (chiesto dall'utente: e' una convenzione, e pagina e LEGGIMI lo
+dicono; nelle schede dell'Appendice 3 i CUP di uno stesso programma hanno
+importi molto diversi). Lo script verifica che le quote, sommate su tutte le
+righe, ridiano i totali. Movimenti e priorita' stanno solo nel file degli
+interventi: per tre interventi il file dei CUP avrebbe passato le ottanta
+colonne. Prima del 19 ottobre 2026 il file dei CUP aveva una riga per
+abbinamento CUP-intervento (1.020) e la pagina contava 1.015 CUP invece di 989.
 Interventi senza CUP: una riga con CUP vuoto (P271, P265, P197, I085, A004).
 Per questo lo storico del dataset tiene ora anche fabbisogni e movimenti
 contratto per contratto, e la Tabella B dell'aggiornamento 2025, che stampa
