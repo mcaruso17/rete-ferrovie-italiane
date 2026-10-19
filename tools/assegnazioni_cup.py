@@ -20,11 +20,13 @@ CUP dello stesso programma con importi molto diversi: in NA026 da 0,2 a 1.129
 mln). Sommate su tutte le righe, le quote ridanno i totali degli interventi.
 
 I CUP vengono dalle tabelle e, per i programmi, dall'Appendice 2 alla
-Relazione Informativa (un CUP per oggetto, senza importi).
+Relazione Informativa (un CUP per oggetto, senza importi). In un caso il CUP
+viene da altri documenti dello stesso aggiornamento: CUP_FUORI_TABELLA.
 
 Uso:
   python3 assegnazioni_cup.py ../data/cdp-rfi-dataset.json ../data/appendice-cup-agg2025.json \
-          ../data/assegnazioni-cup-agg2025.csv ../data/assegnazioni-interventi-agg2025.csv
+          ../data/assegnazioni-cup-agg2025.csv ../data/assegnazioni-interventi-agg2025.csv \
+          ../data/cup-nel-testo.json
 """
 import csv
 import json
@@ -34,6 +36,16 @@ import sys
 from schema import ALB_CLASSI_TIP, ALB_TABELLE, CLASSI
 
 MAX_INT = 3
+ORIGINE_FUORI = "Altri documenti dell'aggiornamento (non stampato in tabella)"
+# CUP che la tabella dell'ultimo aggiornamento non stampa ma che gli altri
+# documenti dello stesso aggiornamento attribuiscono all'intervento. A004
+# (Galleria di base del Brennero): la Tabella B 2025 (pp. 82 e 127) salta la
+# riga del CUP, che c'era nelle Tabelle B 2021, 2022 e 2024; lo stesso CUP sta
+# nell'Appendice 1 (delibere CIPESS, p. 2, anche nel titolo della delibera
+# 37/2023), nell'Appendice 8 (p. 2) e nella Relazione informativa (pp. 14 e
+# 16). Si accetta solo se cup-nel-testo.json lo trova davvero in un documento
+# dell'aggiornamento e l'intervento non ha gia' CUP in tabella.
+CUP_FUORI_TABELLA = {"A004": "I41J05000020005"}
 # gli importi che seguono il CUP; i movimenti dell'anno e le priorita' del
 # fabbisogno restano nel file degli interventi, altrimenti per tre interventi
 # il file dei CUP passerebbe le ottanta colonne
@@ -93,6 +105,7 @@ def main():
     D = json.load(open(sys.argv[1]))
     app2 = json.load(open(sys.argv[2]))
     out_cup, out_int = sys.argv[3], sys.argv[4]
+    nel_testo = json.load(open(sys.argv[5]))
     ultimo = max(D["documenti"], key=lambda d: D["documenti"][d]["ordine"])
     if app2.get("doc") not in (None, ultimo):
         sys.exit("l'Appendice 2 e' di %s, l'ultimo aggiornamento e' %s" % (app2.get("doc"), ultimo))
@@ -112,6 +125,14 @@ def main():
             if a["cup"] not in visti:
                 visti.add(a["cup"])
                 cups.append((a["cup"], "Appendice 2", a.get("descr") or "", a.get("p") or ""))
+        if cod in CUP_FUORI_TABELLA and not cups:
+            c = CUP_FUORI_TABELLA[cod]
+            dove = [(f.split("/")[-1], pag) for f, pag in nel_testo.get(c, [])
+                    if f.startswith("documenti/cdpi-" + ultimo + "/")]
+            if not dove:
+                sys.exit("%s: il CUP %s non risulta in nessun documento di %s" % (cod, c, ultimo))
+            # nell'oggetto le pagine in cui compare, per poterlo verificare
+            cups.append((c, ORIGINE_FUORI, "; ".join("%s p. %s" % d for d in dove), ""))
         t, cl, pn = s["tabella"], s.get("classe"), p.get("programma_num")
         prog, ct = ALB_CLASSI_TIP.get(pn or "", ("", ""))
         fonti = s.get("fonti") or {}

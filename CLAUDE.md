@@ -402,7 +402,13 @@ righe, ridiano i totali. Movimenti e priorita' stanno solo nel file degli
 interventi: per tre interventi il file dei CUP avrebbe passato le ottanta
 colonne. Prima del 19 ottobre 2026 il file dei CUP aveva una riga per
 abbinamento CUP-intervento (1.020) e la pagina contava 1.015 CUP invece di 989.
-Interventi senza CUP: una riga con CUP vuoto (P271, P265, P197, I085, A004).
+Interventi senza CUP: una riga con CUP vuoto (P271, P265, P197, I085). A004
+(Brennero) ha il CUP I41J05000020005 anche se la Tabella B 2025 non lo stampa
+(pp. 82 e 127: manca la riga del CUP, che c'era nel 2021, 2022 e 2024): lo
+scrivono l'Appendice 1, l'Appendice 8 e la Relazione informativa dello stesso
+aggiornamento. Sta in `CUP_FUORI_TABELLA` con origine "Altri documenti
+dell'aggiornamento", e lo script lo accetta solo se cup-nel-testo.json lo
+trova in quei documenti (per questo cup_nel_testo.py ora gira prima).
 Per questo lo storico del dataset tiene ora anche fabbisogni e movimenti
 contratto per contratto, e la Tabella B dell'aggiornamento 2025, che stampa
 ogni colonna con l'ordine della A, ha fonti e fabbisogni: si leggono solo se
