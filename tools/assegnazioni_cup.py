@@ -23,10 +23,17 @@ I CUP vengono dalle tabelle e, per i programmi, dall'Appendice 2 alla
 Relazione Informativa (un CUP per oggetto, senza importi). In un caso il CUP
 viene da altri documenti dello stesso aggiornamento: CUP_FUORI_TABELLA.
 
+Stato attuativo e fase finanziata vengono da extract_stati.py, opera per
+opera (le righe sotto l'intervento). Nel file degli interventi: le sigle di
+tutte le opere, la piu' indietro e la piu' avanti, e uno stato di sintesi
+(quello comune a tutte le opere, "piu' stati" se differiscono, "non indicato"
+per i programmi, che non hanno opere). stati-opere-agg2025.csv ha una riga per
+opera. Ordine delle fasi: FAP, PROG, ITER, AN, RE, ES.
+
 Uso:
   python3 assegnazioni_cup.py ../data/cdp-rfi-dataset.json ../data/appendice-cup-agg2025.json \
           ../data/assegnazioni-cup-agg2025.csv ../data/assegnazioni-interventi-agg2025.csv \
-          ../data/cup-nel-testo.json
+          ../data/cup-nel-testo.json ../data/stati-opere-agg2025.json ../data/stati-opere-agg2025.csv
 """
 import csv
 import json
@@ -36,6 +43,9 @@ import sys
 from schema import ALB_CLASSI_TIP, ALB_TABELLE, CLASSI
 
 MAX_INT = 3
+FASI = ["FAP", "PROG", "ITER", "AN", "RE", "ES"]
+NOMI_FASI = {"FAP": "Valutazione di fattibilita' delle alternative progettuali", "PROG": "Progettazione",
+             "ITER": "Iter autorizzativo", "AN": "Attivita' negoziali", "RE": "Realizzazione", "ES": "Esercizio"}
 ORIGINE_FUORI = "Altri documenti dell'aggiornamento (non stampato in tabella)"
 # CUP che la tabella dell'ultimo aggiornamento non stampa ma che gli altri
 # documenti dello stesso aggiornamento attribuiscono all'intervento. A004
@@ -55,11 +65,19 @@ IMPORTI = ["costo_totale", "risorse_assegnate", "mef", "fsc_pac", "mit", "pnrr",
 COL_INT = [
     "documento", "codice_intervento", "descrizione_intervento", "pagina_pdf", "tabella",
     "tipologia_programma", "lettera_nel_pdf", "programma", "classe_tipologica",
-    "stato_attuativo", "n_cup", "cup", "cup_condivisi_con_altri_interventi",
+    "n_opere", "stato_sintesi", "stati_attuativi_opere", "stato_meno_avanzato", "stato_piu_avanzato",
+    "fasi_finanziate_opere", "n_cup", "cup", "cup_condivisi_con_altri_interventi",
     "costo_totale_mln", "finanziato_precedente_mln", "riduzioni_mln", "rimodulazioni_mln",
     "incrementi_mln", "risorse_assegnate_mln", "mef_mln", "fsc_pac_mln", "mit_mln",
     "pnrr_mln", "altro_mln", "fabbisogno_totale_mln", "fabbisogno_priorita1_mln",
     "fabbisogno_priorita2_mln", "fabbisogno_completamento_mln", "speso_mln", "controllo",
+]
+COL_OPERE = [
+    "documento", "codice_intervento", "descrizione_intervento", "tabella", "tipologia_programma",
+    "classe_tipologica", "descrizione_opera", "fase_finanziata", "fase_finanziata_nome",
+    "fase_finanziata_parziale", "project_review", "stato_attuativo", "stato_attuativo_nome",
+    "paniere_pnrr", "nuovo_inserimento", "pagina_pdf", "costo_totale_opera_mln",
+    "risorse_assegnate_opera_mln", "speso_opera_mln", "n_opere_intervento",
 ]
 COL_CUP = (
     ["documento", "cup", "oggetto_cup", "pagina_appendice_2", "n_interventi",
@@ -67,7 +85,8 @@ COL_CUP = (
      "programma", "classe_tipologica", "classificazione_uguale_fra_interventi"]
     + [c % k for k in range(1, MAX_INT + 1) for c in (
         "intervento_%d", "descrizione_intervento_%d", "origine_cup_intervento_%d",
-        "pagina_pdf_intervento_%d", "n_cup_intervento_%d")]
+        "pagina_pdf_intervento_%d", "n_cup_intervento_%d", "stato_sintesi_intervento_%d",
+        "stati_attuativi_intervento_%d")]
     + ["%s_intervento_%d_mln" % (n, k) for k in range(1, MAX_INT + 1) for n in IMPORTI]
     + ["ripartizione_per_cup"] + ["%s_per_cup_mln" % n for n in IMPORTI]
 )
@@ -96,6 +115,27 @@ def controllo(s):
     return "; ".join(note) or "ok"
 
 
+def ultimo_doc(D):
+    return max(D["documenti"], key=lambda d: D["documenti"][d]["ordine"])
+
+
+def sintesi_stati(opere):
+    """Le sigle delle opere di un intervento, in ordine di fase."""
+    st = sorted({o["stato_attuativo"] for o in opere if o["stato_attuativo"]}, key=FASI.index)
+    fa = sorted({o["fase_finanziata"] for o in opere if o["fase_finanziata"]}, key=FASI.index)
+    if not opere:
+        # i programmi (classe a) non hanno opere; tre interventi in esecuzione
+        # nemmeno (0119, 0263 e P111, che e' "per memoria")
+        sint = "non indicato"
+    elif len(st) == 1:
+        sint = st[0]
+    else:
+        sint = "piu' stati"
+    return {"n_opere": len(opere), "stato_sintesi": sint, "stati_attuativi_opere": "|".join(st),
+            "stato_meno_avanzato": st[0] if st else "", "stato_piu_avanzato": st[-1] if st else "",
+            "fasi_finanziate_opere": "|".join(fa)}
+
+
 def base_codice(c):
     # 0049A e 0049B, P238A e P238B: fasi o lotti dello stesso intervento
     return re.sub(r"[A-Z]$", "", c)
@@ -106,6 +146,10 @@ def main():
     app2 = json.load(open(sys.argv[2]))
     out_cup, out_int = sys.argv[3], sys.argv[4]
     nel_testo = json.load(open(sys.argv[5]))
+    stati = json.load(open(sys.argv[6]))
+    out_opere = sys.argv[7]
+    if stati["doc"] != ultimo_doc(D):
+        sys.exit("gli stati sono di %s, l'ultimo aggiornamento e' %s" % (stati["doc"], ultimo_doc(D)))
     ultimo = max(D["documenti"], key=lambda d: D["documenti"][d]["ordine"])
     if app2.get("doc") not in (None, ultimo):
         sys.exit("l'Appendice 2 e' di %s, l'ultimo aggiornamento e' %s" % (app2.get("doc"), ultimo))
@@ -143,12 +187,12 @@ def main():
             # "Interventi in programma" ha la lettera d (normalize.py la chiama e
             # per confrontare i contratti; qui si legge un contratto solo)
             tp = s["classe_doc"] + tp[1:]
-        interventi.append({
+        si = sintesi_stati(stati["interventi"].get(cod, {}).get("opere", []))
+        interventi.append({**si,
             "documento": ultimo, "codice_intervento": cod, "descrizione_intervento": p["descrizione"],
             "pagina_pdf": s["pagina"], "tabella": t + " - " + ALB_TABELLE.get(t, ""),
             "tipologia_programma": tp, "lettera_nel_pdf": s.get("classe_doc") or "",
             "programma": prog, "classe_tipologica": (pn + " - " + ct) if pn and ct else "",
-            "stato_attuativo": "|".join(s.get("stato") or []),
             "n_cup": len(cups), "_cups": cups,
             "costo_totale_mln": r2(s.get("costo")),
             "finanziato_precedente_mln": r2(s.get("finanziato_precedente")),
@@ -210,7 +254,9 @@ def main():
             r.update({"intervento_%d" % k: it["codice_intervento"],
                       "descrizione_intervento_%d" % k: it["descrizione_intervento"],
                       "origine_cup_intervento_%d" % k: orig, "pagina_pdf_intervento_%d" % k: it["pagina_pdf"],
-                      "n_cup_intervento_%d" % k: it["n_cup"]})
+                      "n_cup_intervento_%d" % k: it["n_cup"],
+                      "stato_sintesi_intervento_%d" % k: it["stato_sintesi"],
+                      "stati_attuativi_intervento_%d" % k: it["stati_attuativi_opere"]})
             for nome in IMPORTI:
                 v = it[nome + "_mln"]
                 r["%s_intervento_%d_mln" % (nome, k)] = v
@@ -233,6 +279,33 @@ def main():
         w = csv.DictWriter(f, fieldnames=COL_CUP)
         w.writeheader()
         w.writerows(righe)
+    opere = []
+    per_int = {it["codice_intervento"]: it for it in interventi}
+    for cod, v in stati["interventi"].items():
+        it = per_int[cod]
+        for o in v["opere"]:
+            imp = o["importi"]
+            opere.append({
+                "documento": ultimo, "codice_intervento": cod, "descrizione_intervento": it["descrizione_intervento"],
+                "tabella": it["tabella"], "tipologia_programma": it["tipologia_programma"],
+                "classe_tipologica": it["classe_tipologica"], "descrizione_opera": o["descrizione"],
+                "fase_finanziata": o["fase_finanziata"], "fase_finanziata_nome": NOMI_FASI.get(o["fase_finanziata"], ""),
+                "fase_finanziata_parziale": "si" if o["fase_parziale"] else "no",
+                "project_review": "si" if o["project_review"] else "no",
+                "stato_attuativo": o["stato_attuativo"], "stato_attuativo_nome": NOMI_FASI.get(o["stato_attuativo"], ""),
+                "paniere_pnrr": "si" if o["paniere_pnrr"] else "no",
+                "nuovo_inserimento": "si" if o["nuovo_inserimento"] else "no",
+                "pagina_pdf": o["pagina"],
+                # importi per opera: li stampa solo la Tabella B
+                "costo_totale_opera_mln": r2(imp.get("costo_totale")),
+                "risorse_assegnate_opera_mln": r2(imp.get("finanziato_totale")),
+                "speso_opera_mln": r2(imp.get("avanzamento")),
+                "n_opere_intervento": len(v["opere"]),
+            })
+    with open(out_opere, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=COL_OPERE)
+        w.writeheader()
+        w.writerows(opere)
     with open(out_int, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=COL_INT, extrasaction="ignore")
         w.writeheader()
@@ -256,6 +329,9 @@ def main():
         sum(1 for r in righe if not r["cup"])))
     print("  tipi di condivisione: " + ", ".join("%s %d" % (t, sum(1 for r in cond if r["tipo_condivisione"] == t))
                                                    for t in sorted({r["tipo_condivisione"] for r in cond})))
+    print("%s: %d opere; stato di sintesi degli interventi: %s" % (out_opere, len(opere), ", ".join(
+        "%s %d" % (k, sum(1 for it in interventi if it["stato_sintesi"] == k))
+        for k in FASI + ["piu' stati", "non indicato"])))
     print("%s: %d interventi; Tabella A costo %.2f, assegnate %.2f, fabbisogno %.2f, uguali agli aggregati; "
           "quote per CUP ok" % (out_int, len(interventi), tot["costo"], tot["fin"], tot["fab"]))
 

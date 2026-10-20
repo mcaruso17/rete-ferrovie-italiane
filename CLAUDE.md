@@ -417,12 +417,28 @@ la riga e' completa e tornano entrambe le identita' (0325 ha un fabbisogno di
 dell'Appendice 3 danno costo e risorse per CUP dei programmi, ma senza fonte:
 non ancora usate.
 
+Stato attuativo delle opere: `tools/extract_stati.py` rilegge con le coordinate
+le Tabelle A e B 2025 e scrive `data/stati-opere-agg2025.json`; da li'
+assegnazioni_cup.py fa `data/stati-opere-agg2025.csv` (una riga per opera) e le
+colonne di stato nei due file. Sotto ogni intervento le opere (lotti, fasi,
+tratte) hanno due sigle: **fase finanziata** (x 284-312, la prima) e **stato
+attuativo** (x 312-338); nuovo inserimento a x 238-282, paniere PNRR a x ~342.
+Sigle 2025: FAP, PROG, ITER, AN, RE, ES; (P) e (PR) sono in legenda ma su
+nessuna riga. 253 opere, 223 interventi; in Tabella A le opere non hanno
+importi (solo la B li da' per lotto), quindi il costo va in uno stato solo se
+tutte le opere dell'intervento sono nello stesso: 36 interventi restano "piu'
+stati", 59 "non indicato" (56 programmi, piu' 0119, 0263, P111). **Problema
+aperto:** extract.py e normalize.py sommano le sigle delle due colonne e non
+conoscono PROG e ITER, quindi lo stato 2025 della piattaforma principale e'
+sbagliato; la fonte giusta e' stati-opere-agg2025.json.
+
 `piattaforma/assegnazioni.html` (pubblicata come `assegnazioni.html`) e' una
 pagina a parte, semplice e solo chiara, pensata per chi deve rispondere alle
 domande della Ragioneria senza Excel: quattro risposte (CUP finanziati,
 assegnato per fonte, da assegnare per priorita', speso), cassa per anno dalla
 Tavola 2 (qui il MEF comprende l'FSC), esplora per categoria con barre, box
-plot e dispersione, ricerca per CUP e scheda dell'intervento, elenco. Font
+plot e dispersione, ricerca per CUP e scheda dell'intervento, elenco. "A che punto sono": conteggio
+per stato di interventi, opere, CUP e costo, matrice fase finanziata per stato. Font
 Titillium Web (quello dei siti della PA), nessun marchio RFI. I dati li scrive
 `tools/build_assegnazioni.py` fra i marcatori /*DATI*/ e /*FINE*/. La tipologia
 e' con la lettera del PDF 2025 (d - Interventi in programma), non quella

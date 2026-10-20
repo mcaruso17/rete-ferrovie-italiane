@@ -384,15 +384,32 @@ CAT = [
      "di condivisione. Le colonne *_per_cup_mln sono la quota del CUP: per ogni "
      "suo intervento l'importo diviso per il numero dei suoi CUP, sommato sugli "
      "interventi. E' una convenzione di questo file, non un dato del contratto; "
-     "sommata su tutte le righe ridà i totali.",
+     "sommata su tutte le righe ridà i totali. stato_sintesi_intervento_k e "
+     "stati_attuativi_intervento_k danno lo stato attuativo delle opere di ogni "
+     "intervento (vedi stati-opere-agg2025.csv).",
      DOC, "CdP Investimenti 2022-2026, aggiornamento 2025, Tabelle A e B e Appendice 2"),
     ("assegnazioni-interventi-agg2025.csv", "Assegnazioni per intervento, aggiornamento 2025",
      "Una riga per intervento delle Tabelle A e B, con gli importi come li scrive "
      "il contratto: costo, finanziato precedente, riduzioni, rimodulazioni, "
      "incrementi, assegnate per fonte, fabbisogno per priorita', speso, e la "
      "lista dei CUP (con quelli condivisi con altri interventi). Si collega al "
-     "file per CUP con il codice intervento.",
+     "file per CUP con il codice intervento. stato_sintesi e' la sigla comune a "
+     "tutte le opere dell'intervento, \"piu' stati\" se differiscono, \"non "
+     "indicato\" se il contratto non elenca opere (programmi pluriennali e "
+     "0119, 0263, P111); seguono gli stati e le fasi finanziate delle opere e lo "
+     "stato meno e piu' avanzato.",
      DOC, "CdP Investimenti 2022-2026, aggiornamento 2025, Tabelle A e B e Appendice 2"),
+    ("stati-opere-agg2025.csv", "Stato attuativo delle opere, aggiornamento 2025",
+     "Una riga per opera (lotto, fase o tratta elencata sotto un intervento delle "
+     "Tabelle A e B) con le due sigle del contratto: fase finanziata (fino a "
+     "quale fase arrivano le risorse) e stato attuativo (dove si trova oggi): "
+     "FAP fattibilita' delle alternative progettuali, PROG progettazione, ITER "
+     "iter autorizzativo, AN attivita' negoziali, RE realizzazione, ES "
+     "esercizio. Nel PDF la fase finanziata e' la prima delle due colonne. "
+     "Costo, assegnate e speso dell'opera ci sono solo dove il contratto li "
+     "stampa (Tabella B, per lotto); in Tabella A gli importi sono "
+     "dell'intervento intero.",
+     DOC, "CdP Investimenti 2022-2026, aggiornamento 2025, Tabelle A e B"),
     ("cup-registro.csv", "Registro unico dei CUP",
      "Una riga per CUP: in corso (Tabelle A e B dell'ultimo aggiornamento "
      "Investimenti e CUP dei programmi dell'Appendice 2 alla Relazione "

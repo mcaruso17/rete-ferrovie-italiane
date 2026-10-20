@@ -10,10 +10,13 @@ Gli importi sono per intervento (il contratto non li divide per CUP): qui si
 tiene un record per intervento con la lista dei suoi CUP. Un CUP puo' stare
 sotto piu' interventi (24 nel 2025): la pagina conta i CUP distinti.
 
+Le opere (stato attuativo e fase finanziata, una riga per lotto o fase) vengono
+da stati-opere-agg2025.csv.
+
 Uso:
   python3 build_assegnazioni.py ../data/assegnazioni-interventi-agg2025.csv \
-          ../data/assegnazioni-cup-agg2025.csv ../data/cdp-rfi-dataset.json \
-          ../piattaforma/assegnazioni.html
+          ../data/assegnazioni-cup-agg2025.csv ../data/stati-opere-agg2025.csv \
+          ../data/cdp-rfi-dataset.json ../piattaforma/assegnazioni.html
 """
 import csv
 import json
@@ -28,8 +31,9 @@ def num(x):
 def main():
     righe = list(csv.DictReader(open(sys.argv[1], encoding="utf-8")))
     cup = list(csv.DictReader(open(sys.argv[2], encoding="utf-8")))
-    D = json.load(open(sys.argv[3]))
-    pagina = sys.argv[4]
+    opere = list(csv.DictReader(open(sys.argv[3], encoding="utf-8")))
+    D = json.load(open(sys.argv[4]))
+    pagina = sys.argv[5]
 
     interventi, per_cod = [], {}
     for r in righe:
@@ -37,7 +41,7 @@ def main():
             "c": r["codice_intervento"], "d": r["descrizione_intervento"],
             "t": r["tabella"][:1], "tp": r["tipologia_programma"],
             "pr": r["programma"], "ct": r["classe_tipologica"],
-            "st": r["stato_attuativo"], "p": int(r["pagina_pdf"]),
+            "st": r["stati_attuativi_opere"], "p": int(r["pagina_pdf"]),
             "costo": num(r["costo_totale_mln"]), "prec": num(r["finanziato_precedente_mln"]),
             "rid": num(r["riduzioni_mln"]), "rim": num(r["rimodulazioni_mln"]),
             "inc": num(r["incrementi_mln"]), "ass": num(r["risorse_assegnate_mln"]),
@@ -45,7 +49,7 @@ def main():
             "fab": num(r["fabbisogno_totale_mln"]),
             "fp": [num(r[k]) for k in ("fabbisogno_priorita1_mln", "fabbisogno_priorita2_mln",
                                        "fabbisogno_completamento_mln")],
-            "sp": num(r["speso_mln"]), "cups": [],
+            "sp": num(r["speso_mln"]), "cups": [], "ss": r["stato_sintesi"], "op": [],
         }
         per_cod[it["c"]] = it
         interventi.append(it)
@@ -62,6 +66,10 @@ def main():
                 # dell'aggiornamento (A004 Brennero, assegnazioni_cup.py)
                 per_cod[cod]["cups"].append([r["cup"], "A" if o == "Appendice 2" else "D" if o.startswith("Altri documenti") else "T",
                                              r["oggetto_cup"], r["tipo_condivisione"]])
+    # opere: [descrizione, fase finanziata, stato attuativo, costo dell'opera o null]
+    for o in opere:
+        per_cod[o["codice_intervento"]]["op"].append(
+            [o["descrizione_opera"], o["fase_finanziata"], o["stato_attuativo"], num(o["costo_totale_opera_mln"])])
     for it in interventi:
         it["cups"].sort(key=lambda c: (c[1], c[0]))
         if len(it["cups"]) != int(next(r for r in righe if r["codice_intervento"] == it["c"])["n_cup"]):
