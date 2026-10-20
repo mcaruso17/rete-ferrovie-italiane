@@ -109,12 +109,17 @@ python3 registro_cup.py ../data/cdp-rfi-dataset.json ../data/cdp-rfi-app.json \
 # stato attuativo e fase finanziata di ogni opera (le righe sotto l'intervento)
 python3 extract_stati.py "../CdP_2022-2026_Investimenti_Agg_ 2025.pdf" raw/agg2025.json \
   ../data/stati-opere-agg2025.json
+# le schede intervento (Appendice 3): CUP, stato e date dell'iter opera per
+# opera, e i sottoprogetti dei programmi con costo e stato
+python3 extract_appendice3.py ../documenti/cdpi-agg2025/appendice_3_schede_intervento.pdf \
+  ../data/appendice3-agg2025.json
 # le assegnazioni dell'ultimo aggiornamento: un file per CUP (fino a tre
 # interventi per CUP, quota per CUP), uno per intervento (gli importi scritti)
 # e uno per opera (stato attuativo e fase finanziata)
 python3 assegnazioni_cup.py ../data/cdp-rfi-dataset.json ../data/appendice-cup-agg2025.json \
   ../data/assegnazioni-cup-agg2025.csv ../data/assegnazioni-interventi-agg2025.csv \
-  ../data/cup-nel-testo.json ../data/stati-opere-agg2025.json ../data/stati-opere-agg2025.csv
+  ../data/cup-nel-testo.json ../data/stati-opere-agg2025.json ../data/stati-opere-agg2025.csv \
+  ../data/appendice3-agg2025.json
 # e la pagina semplice che le esplora (piattaforma/assegnazioni.html), con la
 # cassa per anno della Tavola 2
 python3 build_assegnazioni.py ../data/assegnazioni-interventi-agg2025.csv \

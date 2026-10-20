@@ -30,15 +30,28 @@ tutte le opere, la piu' indietro e la piu' avanti, e uno stato di sintesi
 per i programmi, che non hanno opere). stati-opere-agg2025.csv ha una riga per
 opera. Ordine delle fasi: FAP, PROG, ITER, AN, RE, ES.
 
+Lo stato per CUP viene dall'Appendice 3 (schede intervento,
+extract_appendice3.py), l'unico documento che lega il CUP alla singola opera:
+le Tabelle A e B stampano i CUP sotto il codice dell'intervento senza dire a
+quale opera vanno (P101: un CUP, due opere in RE e ITER). Per i progetti la
+scheda da' opera, CUP, stato e date dell'iter; per i programmi sottoprogetto,
+CUP, costo, risorse, contabilizzato e stato. La fase finanziata resta un dato
+della Tabella A: arriva al CUP abbinando l'opera della scheda a quella della
+tabella per nome (o per posizione, se le due liste hanno la stessa lunghezza).
+Dove la scheda non ha il CUP, lo stato del CUP e' quello dell'intervento solo
+se tutte le sue opere sono nello stesso stato.
+
 Uso:
   python3 assegnazioni_cup.py ../data/cdp-rfi-dataset.json ../data/appendice-cup-agg2025.json \
           ../data/assegnazioni-cup-agg2025.csv ../data/assegnazioni-interventi-agg2025.csv \
-          ../data/cup-nel-testo.json ../data/stati-opere-agg2025.json ../data/stati-opere-agg2025.csv
+          ../data/cup-nel-testo.json ../data/stati-opere-agg2025.json ../data/stati-opere-agg2025.csv \
+          ../data/appendice3-agg2025.json
 """
 import csv
 import json
 import re
 import sys
+import unicodedata
 
 from schema import ALB_CLASSI_TIP, ALB_TABELLE, CLASSI
 
@@ -46,6 +59,15 @@ MAX_INT = 3
 FASI = ["FAP", "PROG", "ITER", "AN", "RE", "ES"]
 NOMI_FASI = {"FAP": "Valutazione di fattibilita' delle alternative progettuali", "PROG": "Progettazione",
              "ITER": "Iter autorizzativo", "AN": "Attivita' negoziali", "RE": "Realizzazione", "ES": "Esercizio"}
+# lo stato come lo scrive l'Appendice 3, ricondotto alle sigle delle Tabelle A
+# e B. I programmi usano tre voci sole; "In ultimazione" sono lavori in corso
+# di completamento, quindi RE (il testo originale resta nella colonna accanto)
+SIGLA_A3 = {"Valutazione di fattibilita'": "FAP", "Progettazione": "PROG", "Iter autorizzativo": "ITER",
+            "Attivita' negoziali": "AN", "Realizzazione": "RE", "In ultimazione": "RE", "Esercizio": "ES"}
+DATE_ITER = ["prog_preliminare_inizio", "prog_preliminare_fine", "prog_definitivo_inizio",
+             "prog_definitivo_fine", "prog_esecutivo_inizio", "prog_esecutivo_fine",
+             "attivita_negoziali_inizio", "attivita_negoziali_fine", "esecuzione_inizio",
+             "esecuzione_fine", "funzionalita"]
 ORIGINE_FUORI = "Altri documenti dell'aggiornamento (non stampato in tabella)"
 # CUP che la tabella dell'ultimo aggiornamento non stampa ma che gli altri
 # documenti dello stesso aggiornamento attribuiscono all'intervento. A004
@@ -76,13 +98,18 @@ COL_OPERE = [
     "documento", "codice_intervento", "descrizione_intervento", "tabella", "tipologia_programma",
     "classe_tipologica", "descrizione_opera", "fase_finanziata", "fase_finanziata_nome",
     "fase_finanziata_parziale", "project_review", "stato_attuativo", "stato_attuativo_nome",
-    "paniere_pnrr", "nuovo_inserimento", "pagina_pdf", "costo_totale_opera_mln",
+    "paniere_pnrr", "nuovo_inserimento", "pagina_pdf", "cup_opera_appendice3",
+    "stato_attuativo_appendice3", "pagina_appendice_3", "costo_totale_opera_mln",
     "risorse_assegnate_opera_mln", "speso_opera_mln", "n_opere_intervento",
 ]
 COL_CUP = (
     ["documento", "cup", "oggetto_cup", "pagina_appendice_2", "n_interventi",
      "cup_su_piu_interventi", "tipo_condivisione", "tabella", "tipologia_programma",
-     "programma", "classe_tipologica", "classificazione_uguale_fra_interventi"]
+     "programma", "classe_tipologica", "classificazione_uguale_fra_interventi",
+     "stato_attuativo_cup", "stato_attuativo_cup_testo", "fonte_stato_cup", "fase_finanziata_cup",
+     "opere_cup", "schede_appendice_3", "pagina_appendice_3", "costo_cup_appendice3_mln",
+     "risorse_cup_appendice3_mln", "contabilizzato_cup_appendice3_mln"]
+    + ["iter_" + d for d in DATE_ITER]
     + [c % k for k in range(1, MAX_INT + 1) for c in (
         "intervento_%d", "descrizione_intervento_%d", "origine_cup_intervento_%d",
         "pagina_pdf_intervento_%d", "n_cup_intervento_%d", "stato_sintesi_intervento_%d",
@@ -136,6 +163,41 @@ def sintesi_stati(opere):
             "fasi_finanziate_opere": "|".join(fa)}
 
 
+def norm(s):
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower()
+    return re.sub(r"[^a-z0-9]", "", s)
+
+
+def sigla_a3(testo):
+    t = unicodedata.normalize("NFKD", testo).encode("ascii", "ignore").decode()
+    return next((v for k, v in SIGLA_A3.items() if t.startswith(k.replace("'", ""))), "")
+
+
+def abbina_opere(schede, stati):
+    """Opera della scheda (Appendice 3) -> opera della Tabella A, per nome; se
+    il nome non basta e le due liste hanno la stessa lunghezza, per posizione.
+    Su 237 abbinamenti lo stato coincide in 234: le tre differenze (P248,
+    P251, 0298) vengono dalle date diverse dei due documenti."""
+    out = {}
+    for cod, s in schede.items():
+        tab = stati["interventi"].get(cod, {}).get("opere", [])
+        for i, o in enumerate(s["opere"]):
+            n = norm(o["opera"])
+            m = [t for t in tab if norm(t["descrizione"]) == n] or \
+                [t for t in tab if norm(t["descrizione"])[:25] == n[:25]]
+            if not m and len(tab) == len(s["opere"]):
+                m = [tab[i]]
+            if not m:
+                # la scheda NA026 raccoglie le opere dei sette interventi di
+                # Tabella B (0281, 0325, 0361, 0362A/B, A004, I135), che non
+                # hanno scheda propria: si cerca lo stesso nome fra tutte le opere
+                m = [t for v in stati["interventi"].values() for t in v["opere"] if norm(t["descrizione"]) == n]
+                m = m if len(m) == 1 else []
+            if m:
+                out[(cod, i)] = m[0]
+    return out
+
+
 def base_codice(c):
     # 0049A e 0049B, P238A e P238B: fasi o lotti dello stesso intervento
     return re.sub(r"[A-Z]$", "", c)
@@ -148,6 +210,24 @@ def main():
     nel_testo = json.load(open(sys.argv[5]))
     stati = json.load(open(sys.argv[6]))
     out_opere = sys.argv[7]
+    a3 = json.load(open(sys.argv[8]))
+    schede = a3["schede"]
+    abbinate = abbina_opere(schede, stati)
+    # dal CUP alle righe dell'Appendice 3 che lo citano (opere dei progetti e
+    # sottoprogetti dei programmi; i subtotali non hanno CUP)
+    a3_cup = {}
+    for cod, s in schede.items():
+        for i, o in enumerate(s["opere"]):
+            if o["cup"]:
+                tab = abbinate.get((cod, i))
+                a3_cup.setdefault(o["cup"], []).append(
+                    {"scheda": cod, "nome": o["opera"], "stato": o["stato"], "pagina": o["pagina"],
+                     "date": o["date"], "fase": tab["fase_finanziata"] if tab else ""})
+        for r in s["avanzamento"]:
+            if r["cup"]:
+                a3_cup.setdefault(r["cup"], []).append(
+                    {"scheda": cod, "nome": r["nome"], "stato": r["stato"], "pagina": r["pagina"],
+                     "costo": r["costo"], "risorse": r["risorse"], "contabilizzato": r["contabilizzato"]})
     if stati["doc"] != ultimo_doc(D):
         sys.exit("gli stati sono di %s, l'ultimo aggiornamento e' %s" % (stati["doc"], ultimo_doc(D)))
     ultimo = max(D["documenti"], key=lambda d: D["documenti"][d]["ordine"])
@@ -247,6 +327,37 @@ def main():
                 else "interventi diversi in tabella")
             r["classificazione_uguale_fra_interventi"] = "si" if len(
                 {(v[0]["tipologia_programma"], v[0]["classe_tipologica"]) for v in voci}) == 1 else "no"
+        a = a3_cup.get(cup, []) if cup else []
+        if a:
+            sig = sorted({sigla_a3(x["stato"]) for x in a if sigla_a3(x["stato"])}, key=FASI.index)
+            fasi = sorted({x["fase"] for x in a if x.get("fase")}, key=FASI.index)
+            r.update({"stato_attuativo_cup": sig[0] if len(sig) == 1 else "piu' stati" if sig else "",
+                      "stato_attuativo_cup_testo": " | ".join(dict.fromkeys(x["stato"] for x in a)),
+                      "fonte_stato_cup": "Appendice 3 (schede intervento)",
+                      "fase_finanziata_cup": fasi[0] if len(fasi) == 1 else "|".join(fasi),
+                      "opere_cup": " | ".join(dict.fromkeys(x["nome"] for x in a)),
+                      "schede_appendice_3": "|".join(dict.fromkeys(x["scheda"] for x in a)),
+                      "pagina_appendice_3": "|".join(dict.fromkeys(str(x["pagina"]) for x in a))})
+            if any("costo" in x for x in a):
+                for n in ("costo", "risorse", "contabilizzato"):
+                    r[n + "_cup_appendice3_mln"] = round(sum(x[n] for x in a if n in x), 2)
+            date = {tuple(sorted(x["date"].items())) for x in a if "date" in x}
+            if len(date) == 1:
+                # le date dell'iter solo se tutte le opere del CUP hanno le stesse
+                r.update({"iter_" + k: v for k, v in date.pop()})
+        elif cup and len(voci) == 1 and voci[0][0]["n_cup"] == 1 and voci[0][0]["n_opere"]:
+            # unico CUP dell'intervento: vale per tutte le sue opere (A004,
+            # Brennero, che nella scheda NA026 ha i lotti senza CUP)
+            it = voci[0][0]
+            r.update({"stato_attuativo_cup": it["stato_sintesi"],
+                      "stato_attuativo_cup_testo": it["stati_attuativi_opere"],
+                      "fase_finanziata_cup": it["fasi_finanziate_opere"],
+                      "fonte_stato_cup": "Tabella %s: unico CUP dell'intervento, stati delle sue opere"
+                                         % it["tabella"][:1]})
+        elif cup and len({v[0]["stato_sintesi"] for v in voci}) == 1 and voci[0][0]["stato_sintesi"] in FASI:
+            r.update({"stato_attuativo_cup": voci[0][0]["stato_sintesi"],
+                      "fonte_stato_cup": "Tabella %s: stato comune a tutte le opere dell'intervento"
+                                         % voci[0][0]["tabella"][:1]})
         quota = {n: 0.0 for n in IMPORTI}
         parti = []
         for k, (it, orig, _, _) in enumerate(voci, 1):
@@ -281,6 +392,11 @@ def main():
         w.writerows(righe)
     opere = []
     per_int = {it["codice_intervento"]: it for it in interventi}
+    a3_opera = {}
+    for (cod, i), tab in abbinate.items():
+        o = schede[cod]["opere"][i]
+        a3_opera[id(tab)] = {"cup_opera_appendice3": o["cup"], "stato_attuativo_appendice3": o["stato"],
+                             "pagina_appendice_3": o["pagina"]}
     for cod, v in stati["interventi"].items():
         it = per_int[cod]
         for o in v["opere"]:
@@ -295,7 +411,7 @@ def main():
                 "stato_attuativo": o["stato_attuativo"], "stato_attuativo_nome": NOMI_FASI.get(o["stato_attuativo"], ""),
                 "paniere_pnrr": "si" if o["paniere_pnrr"] else "no",
                 "nuovo_inserimento": "si" if o["nuovo_inserimento"] else "no",
-                "pagina_pdf": o["pagina"],
+                "pagina_pdf": o["pagina"], **a3_opera.get(id(o), {}),
                 # importi per opera: li stampa solo la Tabella B
                 "costo_totale_opera_mln": r2(imp.get("costo_totale")),
                 "risorse_assegnate_opera_mln": r2(imp.get("finanziato_totale")),
@@ -323,6 +439,21 @@ def main():
         b = sum(it[nome + "_mln"] or 0 for it in interventi)
         if abs(a - b) > 0.5:
             sys.exit("quote per CUP di %s: %.2f contro %.2f degli interventi" % (nome, a, b))
+    # i sottoprogetti di ogni programma sommano al costo dell'intervento
+    for cod, s in schede.items():
+        foglie = sum(x["costo"] for x in s["avanzamento"] if not x["subtotale"])
+        if s["avanzamento"] and abs(foglie - (per_int[cod]["costo_totale_mln"] or 0)) > 0.5:
+            sys.exit("Appendice 3, %s: sottoprogetti %.2f contro il costo %.2f della tabella"
+                     % (cod, foglie, per_int[cod]["costo_totale_mln"]))
+    con_cup = [r for r in righe if r["cup"]]
+    fuori = sorted(set(a3_cup) - {r["cup"] for r in con_cup})
+    print("  stato per CUP: %d dall'Appendice 3, %d dallo stato comune dell'intervento, %d senza; "
+          "CUP dell'Appendice 3 assenti da tabelle e Appendice 2: %s" % (
+              sum(1 for r in con_cup if r["fonte_stato_cup"].startswith("Appendice 3")),
+              sum(1 for r in con_cup if r["fonte_stato_cup"].startswith("Tabella")),
+              sum(1 for r in con_cup if not r["stato_attuativo_cup"]), ", ".join(fuori) or "nessuno"))
+    print("  stato attuativo dei CUP: " + ", ".join("%s %d" % (k, sum(1 for r in con_cup if r["stato_attuativo_cup"] == k))
+                                                   for k in FASI + ["piu' stati", ""]))
     cond = [r for r in righe if r["cup_su_piu_interventi"] == "si"]
     print("%s: %d righe, %d CUP distinti, %d su piu' interventi, %d interventi senza CUP" % (
         out_cup, len(righe), sum(1 for r in righe if r["cup"]), len(cond),

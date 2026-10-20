@@ -384,9 +384,17 @@ CAT = [
      "di condivisione. Le colonne *_per_cup_mln sono la quota del CUP: per ogni "
      "suo intervento l'importo diviso per il numero dei suoi CUP, sommato sugli "
      "interventi. E' una convenzione di questo file, non un dato del contratto; "
-     "sommata su tutte le righe ridà i totali. stato_sintesi_intervento_k e "
-     "stati_attuativi_intervento_k danno lo stato attuativo delle opere di ogni "
-     "intervento (vedi stati-opere-agg2025.csv).",
+     "sommata su tutte le righe ridà i totali. stato_attuativo_cup è lo stato "
+     "del CUP stesso, dalle schede intervento (Appendice 3), che scrivono il CUP "
+     "opera per opera (le Tabelle A e B no): sigla, testo originale, opere e "
+     "fonte; per i programmi \"In ultimazione\" vale RE, e costo, risorse e "
+     "contabilizzato del CUP sono quelli della scheda (dato del documento, non la "
+     "convenzione *_per_cup_mln). fase_finanziata_cup viene dalla Tabella A, "
+     "abbinando l'opera per nome; iter_* sono le date dell'iter procedurale "
+     "quando tutte le opere del CUP le hanno uguali. Dove la scheda non ha il CUP "
+     "vale lo stato dell'intervento, se ha un solo CUP o un solo stato. "
+     "stato_sintesi_intervento_k e stati_attuativi_intervento_k danno lo stato "
+     "delle opere di ogni intervento (vedi stati-opere-agg2025.csv).",
      DOC, "CdP Investimenti 2022-2026, aggiornamento 2025, Tabelle A e B e Appendice 2"),
     ("assegnazioni-interventi-agg2025.csv", "Assegnazioni per intervento, aggiornamento 2025",
      "Una riga per intervento delle Tabelle A e B, con gli importi come li scrive "
@@ -406,6 +414,8 @@ CAT = [
      "FAP fattibilita' delle alternative progettuali, PROG progettazione, ITER "
      "iter autorizzativo, AN attivita' negoziali, RE realizzazione, ES "
      "esercizio. Nel PDF la fase finanziata e' la prima delle due colonne. "
+     "cup_opera_appendice3 e stato_attuativo_appendice3 vengono dalla scheda "
+     "dell'intervento (Appendice 3) abbinata per nome. "
      "Costo, assegnate e speso dell'opera ci sono solo dove il contratto li "
      "stampa (Tabella B, per lotto); in Tabella A gli importi sono "
      "dell'intervento intero.",

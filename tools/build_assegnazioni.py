@@ -11,7 +11,7 @@ tiene un record per intervento con la lista dei suoi CUP. Un CUP puo' stare
 sotto piu' interventi (24 nel 2025): la pagina conta i CUP distinti.
 
 Le opere (stato attuativo e fase finanziata, una riga per lotto o fase) vengono
-da stati-opere-agg2025.csv.
+da stati-opere-agg2025.csv; lo stato di ogni CUP dal file dei CUP (Appendice 3).
 
 Uso:
   python3 build_assegnazioni.py ../data/assegnazioni-interventi-agg2025.csv \
@@ -64,8 +64,10 @@ def main():
                 o = r["origine_cup_intervento_%d" % k]
                 # D = CUP non stampato in tabella ma scritto negli altri documenti
                 # dell'aggiornamento (A004 Brennero, assegnazioni_cup.py)
+                # stato del CUP (Appendice 3, o dall'intervento), testo, opere, fonte
                 per_cod[cod]["cups"].append([r["cup"], "A" if o == "Appendice 2" else "D" if o.startswith("Altri documenti") else "T",
-                                             r["oggetto_cup"], r["tipo_condivisione"]])
+                                             r["oggetto_cup"], r["tipo_condivisione"], r["stato_attuativo_cup"],
+                                             r["stato_attuativo_cup_testo"], r["opere_cup"], r["fonte_stato_cup"]])
     # opere: [descrizione, fase finanziata, stato attuativo, costo dell'opera o null]
     for o in opere:
         per_cod[o["codice_intervento"]]["op"].append(

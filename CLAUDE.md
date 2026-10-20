@@ -432,6 +432,26 @@ aperto:** extract.py e normalize.py sommano le sigle delle due colonne e non
 conoscono PROG e ITER, quindi lo stato 2025 della piattaforma principale e'
 sbagliato; la fonte giusta e' stati-opere-agg2025.json.
 
+Stato per CUP: le Tabelle A e B stampano i CUP sotto il codice, senza dire a
+quale opera vanno (P101: un CUP, due opere in RE e ITER). Lo dice l'Appendice
+3 (schede intervento, `tools/extract_appendice3.py` ->
+`data/appendice3-agg2025.json`): 214 schede (le 7 di Tabella B stanno tutte
+nella scheda NA026), tabella "Stato attuativo / Iter procedurale" per i
+progetti (opera x < 190, CUP 190-232, stato 232-276, 11 date da 276; due date
+possono uscire attaccate, "10-20248-2018") e "Avanzamento programma" per i
+programmi (nome < 285, CUP 285-350, costo, risorse, %, contabilizzato, %,
+stato da 505; righe senza CUP ne' stato sono subtotali, che seguono le loro
+righe e non sono sempre il totale del programma). I nomi vanno a capo anche
+sopra la riga dei numeri: le righe di solo testo si attaccano alla riga piu'
+vicina in altezza. Controllo in assegnazioni_cup.py: in tutti i 55 programmi
+i sottoprogetti sommano al costo della Tabella A. Il file dei CUP ha cosi'
+`stato_attuativo_cup` per 967 CUP su 990 (953 dalla scheda, 14
+dall'intervento con un solo CUP o un solo stato), con fase finanziata
+abbinando l'opera della scheda a quella della tabella (stato uguale in 234
+casi su 237). 6 CUP stanno nelle schede ma non in tabelle e Appendice 2
+(B51J20000110002, J34J25000260001, J57D25000060001, J57D25000070001,
+J58E22000260001, J91G25000040001): non aggiunti al registro.
+
 `piattaforma/assegnazioni.html` (pubblicata come `assegnazioni.html`) e' una
 pagina a parte, semplice e solo chiara, pensata per chi deve rispondere alle
 domande della Ragioneria senza Excel: quattro risposte (CUP finanziati,
