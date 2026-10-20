@@ -425,6 +425,24 @@ CAT = [
      "0119, 0263, P111); seguono gli stati e le fasi finanziate delle opere e lo "
      "stato meno e piu' avanzato.",
      DOC, "CdP Investimenti 2022-2026, aggiornamento 2025, Tabelle A e B e Appendice 2"),
+    ("cup-completo.csv", "Tutti i CUP, un file solo",
+     "Una riga per CUP di tutte le fonti: registro dei CUP (Tabelle A, B e C dei "
+     "contratti Investimenti dal 2017, Appendice 2, contratti Servizi), CUP "
+     "scritti solo in un'appendice dell'aggiornamento 2025, CUP della lista "
+     "ricevuta da RFI (solo stato BDAP; fonte_riga dice quelli che non stanno in "
+     "nessun documento). Per i CUP in corso tutte le colonne del file delle "
+     "assegnazioni per CUP; per ogni intervento del CUP (_intervento_1..3) "
+     "anche movimenti, fabbisogno per priorita', stato delle opere, regioni, "
+     "variazioni di costo e di risorse per fonte, rimodulazioni e PNRR. Gli "
+     "importi _intervento_k sono dell'intervento intero e si ripetono su tutti i "
+     "suoi CUP: per sommare per CUP usare *_per_cup_mln o le colonne "
+     "dell'Appendice 3.",
+     DOC, "CdP Investimenti 2017-2026, CdP Servizi, appendici 2025, lista RFI"),
+    ("interventi-senza-cup-agg2025.csv", "Interventi senza CUP, aggiornamento 2025",
+     "Gli interventi delle Tabelle A e B a cui non si puo' associare un CUP: "
+     "nessun CUP in tabella, nell'Appendice 2 o negli altri documenti "
+     "dell'aggiornamento. Stesse colonne del file degli interventi.",
+     DOC, "CdP Investimenti 2022-2026, aggiornamento 2025"),
     ("cup-altri-agg2025.csv", "Altri CUP dei documenti dell'aggiornamento 2025",
      "I CUP scritti nel CdP-I aggiornamento 2025 o nelle sue appendici ma non "
      "nelle Tabelle A e B ne' nell'Appendice 2, quindi senza assegnazioni nel "

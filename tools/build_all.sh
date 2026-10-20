@@ -154,6 +154,10 @@ python3 variazioni_costo.py ../data/cdp-rfi-app.json ../data/cdp-rfi-app.json \
 # registro dei CUP piu' la ricerca di ogni CUP nel testo dei PDF (sopra)
 python3 confronto_rfi.py ../data/cdp-rfi-app.json ../data/cdp-rfi-app.json \
   ../documenti/rfi/lista-cup-bdap.csv ../data/cup-nel-testo.json ../data
+# un file solo, una riga per CUP di tutte le fonti, con il dettaglio di ogni
+# suo intervento; e gli interventi a cui non si puo' associare un CUP. Viene
+# dopo il confronto con la lista RFI, che ne da' lo stato BDAP
+python3 cup_completo.py ../data
 # la spesa anno per anno dalla Relazione al Parlamento al 31/12/2024
 python3 relazione_parlamento.py ../data/cdp-rfi-app.json ../data/cdp-rfi-app.json ../data
 # i CSV dei comuni leggono l'app appena costruita, quindi vengono dopo

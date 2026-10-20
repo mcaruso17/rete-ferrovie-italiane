@@ -484,6 +484,17 @@ tabelle 2025, e l'Appendice 3 a A2001B). Le Appendici 4 e 7 ora si estraggono
 prima delle assegnazioni. Senza CUP e quindi non usate: 10 (DocFAP, elenco di
 studi) e 11 (indicatori di sostenibilita', testo).
 
+`tools/cup_completo.py` (dopo confronto_rfi) mette tutto in un file solo,
+chiesto dall'utente: `data/cup-completo.csv`, una riga per CUP di tutte le
+fonti (registro dei CUP 2.172, CUP solo in un'appendice 8, CUP solo nella
+lista RFI 985: `fonte_riga` li distingue), con le colonne del registro
+(`registro_*`), dove e' citato in tutti i PDF, l'esito del confronto con la
+lista RFI, le colonne del file delle assegnazioni per CUP e, per ogni
+intervento (_intervento_k), il resto della riga del file degli interventi.
+Gli importi _intervento_k si ripetono su tutti i CUP dell'intervento: non si
+sommano. `data/interventi-senza-cup-agg2025.csv`: i 4 interventi 2025 senza
+alcun CUP (I085, P197, P265, P271).
+
 `piattaforma/assegnazioni.html` (pubblicata come `assegnazioni.html`) e' una
 pagina a parte, semplice e solo chiara, pensata per chi deve rispondere alle
 domande della Ragioneria senza Excel: quattro risposte (CUP finanziati,
