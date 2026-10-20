@@ -14,6 +14,12 @@ fanno (stampano i CUP sotto il codice, senza dire a quale opera vanno):
   nome x < 289, CUP 289-350, numeri, stato da 505. L'ultima riga e' il totale
   del programma, senza CUP ne' stato: chiude la tabella e serve da controllo.
 
+- "Piano della spesa" (tutte le schede): per opera costo, risorse,
+  fabbisogno, obbligazioni giuridicamente vincolanti (lavori e somme a
+  disposizione), impegni, pagamenti e la produzione al 2019, 2020...2024 e
+  oltre, come la stampa la scheda. Nome x < 225, quattordici numeri. La riga
+  senza nome e' il totale dell'intervento.
+
 Il nome dell'opera e lo stato vanno a capo sulle righe sotto. Due date
 contigue possono uscire attaccate dal PDF ("10-20248-2018"): si separano con
 l'espressione regolare e si contano in ordine, perche' le colonne sono 11.
@@ -35,6 +41,9 @@ RE_CUP = re.compile(r"^[A-Z]\d{2}[A-Z]\d{11}$")
 RE_DATA = re.compile(r"\d{1,2}-\d{4}|-")
 RE_NUM = re.compile(r"^-?\d{1,3}(\.\d{3})*,\d{2}$")
 RE_PERC = re.compile(r"^\d+%$")
+SPESA = ["costo", "risorse", "fabbisogno", "ogv_lavori", "ogv_somme_a_disposizione", "impegni",
+         "pagamenti", "produzione_al_2019", "produzione_2020", "produzione_2021", "produzione_2022",
+         "produzione_2023", "produzione_2024", "produzione_oltre"]
 DATE = ["prog_preliminare_inizio", "prog_preliminare_fine", "prog_definitivo_inizio",
         "prog_definitivo_fine", "prog_esecutivo_inizio", "prog_esecutivo_fine",
         "attivita_negoziali_inizio", "attivita_negoziali_fine", "esecuzione_inizio",
@@ -79,7 +88,7 @@ def main():
                 if not cur or cur["codice"] != m.group(2):
                     attacca(tab)
                     cur = schede.setdefault(m.group(2), {"codice": m.group(2), "tipo": m.group(1).lower(),
-                                                         "pagina": n, "opere": [], "avanzamento": []})
+                                                         "pagina": n, "opere": [], "avanzamento": [], "spesa": []})
                     modo, tab = None, []
                 continue
             # la prima riga di una pagina di seguito sta a y ~783, subito sotto
@@ -93,6 +102,10 @@ def main():
             if s.startswith("AVANZAMENTO PROGRAMMA"):
                 attacca(tab)
                 modo, tab = "programma", []
+                continue
+            if s.startswith("Costo Risorse Fabbis."):
+                attacca(tab)
+                modo, tab = "spesa", []
                 continue
             # una riga di solo testo e' un a capo solo se sta a ridosso della
             # tabella; le intestazioni in maiuscolo la chiudono
@@ -142,6 +155,20 @@ def main():
                 else:
                     attacca(tab)
                     modo, tab = None, []
+            elif modo == "spesa":
+                nums = [t for x, t, _ in w if x >= 225 and RE_NUM.match(t)]
+                if len(nums) == len(SPESA):
+                    r = {"nome": testo(w, 0, 225), "pagina": n, **dict(zip(SPESA, map(to_float, nums)))}
+                    if r["nome"]:
+                        cur["spesa"].append(r)
+                        tab.append(("riga", n, y, r))
+                    else:
+                        cur["spesa_totale"] = r
+                elif vicino and not titolo and not nums and all(x < 225 for x, _, _ in w):
+                    tab.append(("testo", n, y, {"nome": testo(w, 0, 225)}))
+                else:
+                    attacca(tab)
+                    modo, tab = None, []
     attacca(tab)
     # il controllo sulle somme lo fa assegnazioni_cup.py, che ha il costo
     # dell'intervento: l'ultima riga senza CUP ne' stato non e' sempre il totale
@@ -151,7 +178,14 @@ def main():
     n_op = sum(len(s["opere"]) for s in schede.values())
     n_av = sum(len(s["avanzamento"]) for s in schede.values())
     cups = {r["cup"] for s in schede.values() for r in s["opere"] + s["avanzamento"] if r["cup"]}
-    print("%s: %d schede, %d opere, %d righe di avanzamento programma, %d CUP distinti" % (out, len(schede), n_op, n_av, len(cups)))
+    # il piano della spesa: le opere sommano al totale dell'intervento
+    diversi = [c for c, s in schede.items() if s["spesa"] and "spesa_totale" in s and any(
+        abs(sum(r[k] for r in s["spesa"]) - s["spesa_totale"][k]) > 0.05 * len(s["spesa"]) for k in SPESA)]
+    print("%s: %d schede, %d opere, %d righe di avanzamento programma, %d CUP distinti; piano della spesa "
+          "in %d schede (%d righe), senza totale %d, opere che non sommano al totale: %s" % (
+              out, len(schede), n_op, n_av, len(cups), sum(1 for s in schede.values() if s["spesa"]),
+              sum(len(s["spesa"]) for s in schede.values()),
+              sum(1 for s in schede.values() if s["spesa"] and "spesa_totale" not in s), diversi or "nessuna"))
 
 
 if __name__ == "__main__":

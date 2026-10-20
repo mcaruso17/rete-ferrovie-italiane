@@ -394,19 +394,45 @@ CAT = [
      "quando tutte le opere del CUP le hanno uguali. Dove la scheda non ha il CUP "
      "vale lo stato dell'intervento, se ha un solo CUP o un solo stato. "
      "stato_sintesi_intervento_k e stati_attuativi_intervento_k danno lo stato "
-     "delle opere di ogni intervento (vedi stati-opere-agg2025.csv).",
+     "delle opere di ogni intervento (vedi stati-opere-agg2025.csv). Dalle altre "
+     "appendici alla Relazione Informativa, per CUP: i documenti "
+     "dell'aggiornamento in cui e' scritto, con le pagine; il piano della spesa "
+     "delle sue opere (Appendice 3: costo, risorse, fabbisogno, obbligazioni "
+     "giuridicamente vincolanti, impegni, pagamenti; solo progetti); PNRR e PNC "
+     "(Appendice 9: misura, codice locale di progetto, risorse in essere e "
+     "nuove, altri finanziamenti); delibere CIPESS (Appendice 1); opere della "
+     "legge obiettivo (Appendice 8: PNRR, commissariamento, stato di "
+     "attuazione, note); DL 43/2013 (Appendice 6). Per ogni suo intervento "
+     "(_intervento_k): regioni (Appendice 7), variazione del costo 2024-2025 "
+     "con la motivazione (Appendice 4), variazione delle risorse (Appendice 5), "
+     "rimodulazioni nette (Appendice 12); il dettaglio sta nel file degli "
+     "interventi.",
      DOC, "CdP Investimenti 2022-2026, aggiornamento 2025, Tabelle A e B e Appendice 2"),
     ("assegnazioni-interventi-agg2025.csv", "Assegnazioni per intervento, aggiornamento 2025",
      "Una riga per intervento delle Tabelle A e B, con gli importi come li scrive "
      "il contratto: costo, finanziato precedente, riduzioni, rimodulazioni, "
      "incrementi, assegnate per fonte, fabbisogno per priorita', speso, e la "
      "lista dei CUP (con quelli condivisi con altri interventi). Si collega al "
-     "file per CUP con il codice intervento. stato_sintesi e' la sigla comune a "
+     "file per CUP con il codice intervento. Dalle appendici: regioni "
+     "(Appendice 7), costo 2024 e sue variazioni per tipo con la motivazione "
+     "(Appendice 4), risorse 2024 e loro variazioni per tipo e per fonte "
+     "(Appendice 5: incrementi MEF, MIT, FSC/UE, PNRR, riduzioni, "
+     "rimodulazioni), rimodulazioni 2025 con tipologia (Appendice 12), PNRR e "
+     "PNC per riferimento CdP (Appendice 9). Costo e risorse del 2025 tornano "
+     "con la tabella per ogni intervento. stato_sintesi e' la sigla comune a "
      "tutte le opere dell'intervento, \"piu' stati\" se differiscono, \"non "
      "indicato\" se il contratto non elenca opere (programmi pluriennali e "
      "0119, 0263, P111); seguono gli stati e le fasi finanziate delle opere e lo "
      "stato meno e piu' avanzato.",
      DOC, "CdP Investimenti 2022-2026, aggiornamento 2025, Tabelle A e B e Appendice 2"),
+    ("cup-altri-agg2025.csv", "Altri CUP dei documenti dell'aggiornamento 2025",
+     "I CUP scritti nel CdP-I aggiornamento 2025 o nelle sue appendici ma non "
+     "nelle Tabelle A e B ne' nell'Appendice 2, quindi senza assegnazioni nel "
+     "contratto in corso: opere ultimate della Tabella C (la gran parte), CUP "
+     "del contratto Servizi citati nell'Appendice 9, CUP che stanno solo in "
+     "un'appendice (schede intervento, delibere CIPESS, DL 43/2013). Stato dal "
+     "registro dei CUP e le stesse colonne delle appendici del file per CUP.",
+     DOC, "CdP Investimenti 2022-2026, aggiornamento 2025, e appendici"),
     ("stati-opere-agg2025.csv", "Stato attuativo delle opere, aggiornamento 2025",
      "Una riga per opera (lotto, fase o tratta elencata sotto un intervento delle "
      "Tabelle A e B) con le due sigle del contratto: fase finanziata (fino a "

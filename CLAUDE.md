@@ -414,8 +414,8 @@ contratto per contratto, e la Tabella B dell'aggiornamento 2025, che stampa
 ogni colonna con l'ordine della A, ha fonti e fabbisogni: si leggono solo se
 la riga e' completa e tornano entrambe le identita' (0325 ha un fabbisogno di
 -60: assegnate 2.050 su un costo di 1.990, stampato cosi'). Le schede
-dell'Appendice 3 danno costo e risorse per CUP dei programmi, ma senza fonte:
-non ancora usate.
+dell'Appendice 3 danno costo e risorse per CUP dei programmi, ma senza fonte
+(ora nelle colonne *_cup_appendice3_mln).
 
 Stato attuativo delle opere: `tools/extract_stati.py` rilegge con le coordinate
 le Tabelle A e B 2025 e scrive `data/stati-opere-agg2025.json`; da li'
@@ -451,6 +451,38 @@ abbinando l'opera della scheda a quella della tabella (stato uguale in 234
 casi su 237). 6 CUP stanno nelle schede ma non in tabelle e Appendice 2
 (B51J20000110002, J34J25000260001, J57D25000060001, J57D25000070001,
 J58E22000260001, J91G25000040001): non aggiunti al registro.
+
+Le altre appendici entrano nei file delle assegnazioni con
+`tools/appendici_cup.py` (colonne per CUP e per intervento), ciascuna dal suo
+estrattore, che controlla le righe contro i totali stampati:
+- 1, delibere CIPESS (`extract_appendice1.py`): 112 delibere su 33 CUP. La
+  riga si riconosce dalla data (x ~203); titoli e righe CdP-I vanno a capo
+  sopra e sotto, attaccati alla data piu' vicina. Tipologia per colonna della X.
+- 3, piano della spesa (in `extract_appendice3.py`): per opera costo, risorse,
+  fabbisogno, OGV lavori e somme a disposizione, impegni, pagamenti, produzione.
+  Nelle righe delle opere la colonna "2024" della produzione non somma al totale
+  (207 schede su 212, il totale si'): la produzione resta nel JSON e non va nei
+  CSV. Al CUP si sommano le opere del CUP, solo se tutte hanno la riga (122).
+- 5, coperture per fonte (`extract_appendice5.py`): nome su una riga, 13
+  numeri sotto; "X" a x ~342 = nuovo inserimento. 223 interventi; risorse
+  2025 = assegnate della Tabella A per tutti.
+- 6, DL 43/2013 (`extract_appendice6.py`): 11 righe, due con due CUP.
+- 8, opere della legge obiettivo (`extract_appendice8.py`): 37 CUP. Le celle
+  di testo vanno a capo centrate: blocchi di righe contigue al CUP piu' vicino
+  al centro, ma se il blocco tocca la riga di un CUP si assegna riga per riga
+  (Spoleto-Terni e PM228 hanno celle a passo 3).
+- 9, PNRR e PNC (`extract_appendice9.py`): tre impaginazioni (M3C1, altre
+  missioni, PNC); colonne per ascissa, la CdP-S c'e' solo nei subtotali.
+- 12, rimodulazioni (`extract_appendice12.py`): la tipologia si legge dalla
+  riga "<tipologia> Totale", a volte sotto i numeri e spezzata su due righe.
+Il file dei CUP passa a 157 colonne; per intervento solo cinque colonne brevi
+(_intervento_k), il resto nel file degli interventi. `data/cup-altri-agg2025.csv`
+tiene i 892 CUP scritti nei documenti dell'aggiornamento ma fuori da Tabelle A,
+B e Appendice 2 (873 opere ultimate, 10 Servizi, 8 solo in un'appendice e
+J58E22000260001, che l'Appendice 2 da' al programma A2012, assente dalle
+tabelle 2025, e l'Appendice 3 a A2001B). Le Appendici 4 e 7 ora si estraggono
+prima delle assegnazioni. Senza CUP e quindi non usate: 10 (DocFAP, elenco di
+studi) e 11 (indicatori di sostenibilita', testo).
 
 `piattaforma/assegnazioni.html` (pubblicata come `assegnazioni.html`) e' una
 pagina a parte, semplice e solo chiara, pensata per chi deve rispondere alle

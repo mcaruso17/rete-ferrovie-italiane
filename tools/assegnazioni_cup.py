@@ -45,14 +45,25 @@ Uso:
   python3 assegnazioni_cup.py ../data/cdp-rfi-dataset.json ../data/appendice-cup-agg2025.json \
           ../data/assegnazioni-cup-agg2025.csv ../data/assegnazioni-interventi-agg2025.csv \
           ../data/cup-nel-testo.json ../data/stati-opere-agg2025.json ../data/stati-opere-agg2025.csv \
-          ../data/appendice3-agg2025.json
+          ../data/appendice3-agg2025.json ../data ../data/cup-altri-agg2025.csv
+
+Il nono argomento e' la cartella con le altre appendici estratte
+(appendiceN-agg2025.json): appendici_cup.py le riduce a colonne per CUP e per
+intervento. Il decimo e' il file dei CUP scritti nei documenti
+dell'aggiornamento ma fuori dalle Tabelle A e B e dall'Appendice 2 (quasi tutti
+opere ultimate della Tabella C, poi CUP dei Servizi nell'Appendice 9 e qualche
+CUP che c'e' solo in un'appendice): non hanno assegnazioni nel contratto in
+corso, e stanno a parte per non toccare il conteggio e le quote del file
+principale. Lo stato viene dal registro dei CUP (cup-registro.csv, accanto).
 """
 import csv
 import json
+import os
 import re
 import sys
 import unicodedata
 
+import appendici_cup
 from schema import ALB_CLASSI_TIP, ALB_TABELLE, CLASSI
 
 MAX_INT = 3
@@ -93,7 +104,7 @@ COL_INT = [
     "incrementi_mln", "risorse_assegnate_mln", "mef_mln", "fsc_pac_mln", "mit_mln",
     "pnrr_mln", "altro_mln", "fabbisogno_totale_mln", "fabbisogno_priorita1_mln",
     "fabbisogno_priorita2_mln", "fabbisogno_completamento_mln", "speso_mln", "controllo",
-]
+] + appendici_cup.COL_INT
 COL_OPERE = [
     "documento", "codice_intervento", "descrizione_intervento", "tabella", "tipologia_programma",
     "classe_tipologica", "descrizione_opera", "fase_finanziata", "fase_finanziata_nome",
@@ -116,6 +127,8 @@ COL_CUP = (
         "stati_attuativi_intervento_%d")]
     + ["%s_intervento_%d_mln" % (n, k) for k in range(1, MAX_INT + 1) for n in IMPORTI]
     + ["ripartizione_per_cup"] + ["%s_per_cup_mln" % n for n in IMPORTI]
+    + appendici_cup.COL_CUP
+    + ["%s_intervento_%d" % (c, k) for k in range(1, MAX_INT + 1) for c in appendici_cup.COL_INT_BREVI]
 )
 
 
@@ -211,6 +224,7 @@ def main():
     stati = json.load(open(sys.argv[6]))
     out_opere = sys.argv[7]
     a3 = json.load(open(sys.argv[8]))
+    app_int = appendici_cup.per_intervento(sys.argv[9])
     schede = a3["schede"]
     abbinate = abbina_opere(schede, stati)
     # dal CUP alle righe dell'Appendice 3 che lo citano (opere dei progetti e
@@ -292,6 +306,9 @@ def main():
             tot["fin"] += s.get("finanziato") or 0
             tot["fab"] += s.get("da_finanziare") or 0
 
+    for it in interventi:
+        it.update(app_int.get(it["codice_intervento"], {}))
+    app_cup = appendici_cup.per_cup(sys.argv[9], nel_testo, ultimo)
     # dal CUP agli interventi: le tabelle prima dell'Appendice 2, poi per codice
     per_cup = {}
     for it in interventi:
@@ -358,6 +375,10 @@ def main():
             r.update({"stato_attuativo_cup": voci[0][0]["stato_sintesi"],
                       "fonte_stato_cup": "Tabella %s: stato comune a tutte le opere dell'intervento"
                                          % voci[0][0]["tabella"][:1]})
+        r.update(app_cup.get(cup, {}) if cup else {})
+        for k, (it, _, _, _) in enumerate(voci, 1):
+            for c in appendici_cup.COL_INT_BREVI:
+                r["%s_intervento_%d" % (c, k)] = it.get(c, "")
         quota = {n: 0.0 for n in IMPORTI}
         parti = []
         for k, (it, orig, _, _) in enumerate(voci, 1):
@@ -439,6 +460,15 @@ def main():
         b = sum(it[nome + "_mln"] or 0 for it in interventi)
         if abs(a - b) > 0.5:
             sys.exit("quote per CUP di %s: %.2f contro %.2f degli interventi" % (nome, a, b))
+    # le appendici 4 e 5 tornano con la tabella: costo e risorse del 2025
+    for it in interventi:
+        c = it["codice_intervento"]
+        if it.get("costo_agg2024_mln") is not None and it["costo_totale_mln"] is not None and \
+                abs(it["costo_agg2024_mln"] + it["variazione_costo_2024_2025_mln"] - it["costo_totale_mln"]) > 0.05:
+            sys.exit("Appendice 4, %s: costo 2024 + variazioni diverso dal costo in tabella" % c)
+        if it.get("risorse_agg2024_mln") is not None and \
+                abs(it["risorse_agg2024_mln"] + it["variazione_risorse_2024_2025_mln"] - (it["risorse_assegnate_mln"] or 0)) > 0.05:
+            sys.exit("Appendice 5, %s: risorse 2024 + variazioni diverse dalle assegnate in tabella" % c)
     # i sottoprogetti di ogni programma sommano al costo dell'intervento
     for cod, s in schede.items():
         foglie = sum(x["costo"] for x in s["avanzamento"] if not x["subtotale"])
@@ -454,6 +484,46 @@ def main():
               sum(1 for r in con_cup if not r["stato_attuativo_cup"]), ", ".join(fuori) or "nessuno"))
     print("  stato attuativo dei CUP: " + ", ".join("%s %d" % (k, sum(1 for r in con_cup if r["stato_attuativo_cup"] == k))
                                                    for k in FASI + ["piu' stati", ""]))
+    # i CUP dei documenti dell'aggiornamento fuori dalle tabelle e dall'Appendice 2
+    out_altri = sys.argv[10]
+    reg = {r["cup"]: r for r in csv.DictReader(open(os.path.join(sys.argv[9], "cup-registro.csv"), encoding="utf-8"))}
+    in_file = {r["cup"] for r in con_cup}
+    a3_solo = {x["cup"]: (cod, x.get("opera") or x.get("nome"), x["stato"], x["pagina"])
+               for cod, s in a3["schede"].items() for x in s["opere"] + s["avanzamento"] if x["cup"]}
+    altri = []
+    for c, v in sorted(app_cup.items()):
+        if c in in_file or "citato_in_documenti_agg2025" not in v:
+            continue
+        g = reg.get(c, {})
+        r = {"documento": ultimo, "cup": c, "stato_registro": g.get("stato", "non nel registro dei CUP"),
+             "parte": g.get("parte", ""), "fonte_registro": g.get("fonte_principale", ""),
+             "descrizione": g.get("descrizione", ""), "opere_ultimate_voce": g.get("opere_ultimate_voce", ""),
+             "opere_ultimate_edizione": g.get("opere_ultimate_edizione", ""),
+             "data_messa_in_esercizio": g.get("data_messa_in_esercizio", ""),
+             "interventi_contratti_precedenti": g.get("interventi_contratti_precedenti", ""),
+             # J58E22000260001: l'Appendice 2 lo da' al programma A2012, che nelle
+             # Tabelle A e B 2025 non c'e'; l'Appendice 3 lo mette sotto A2001B
+             "programma_appendice_2": g.get("programmi_appendice_2", ""), **v}
+        if c in a3_solo:
+            cod, nome, st, pag = a3_solo[c]
+            r.update({"scheda_appendice_3": cod, "opera_appendice_3": nome, "stato_attuativo_appendice_3": st,
+                      "pagina_appendice_3": pag})
+            if not r["descrizione"]:
+                r["descrizione"] = nome
+        if not r["descrizione"]:
+            r["descrizione"] = v.get("pnrr_pnc_voce") or v.get("pis_descrizione") or v.get("dl43_intervento") or ""
+        altri.append(r)
+    col_altri = (["documento", "cup", "stato_registro", "parte", "fonte_registro", "descrizione",
+                  "opere_ultimate_voce", "opere_ultimate_edizione", "data_messa_in_esercizio",
+                  "interventi_contratti_precedenti", "programma_appendice_2", "scheda_appendice_3", "opera_appendice_3",
+                  "stato_attuativo_appendice_3", "pagina_appendice_3"] + appendici_cup.COL_CUP)
+    with open(out_altri, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=col_altri, extrasaction="ignore")
+        w.writeheader()
+        w.writerows(altri)
+    print("%s: %d CUP dei documenti dell'aggiornamento fuori da Tabelle A, B e Appendice 2 (%s)" % (
+        out_altri, len(altri), ", ".join("%s %d" % (s, sum(1 for r in altri if r["stato_registro"] == s))
+                                         for s in sorted({r["stato_registro"] for r in altri}))))
     cond = [r for r in righe if r["cup_su_piu_interventi"] == "si"]
     print("%s: %d righe, %d CUP distinti, %d su piu' interventi, %d interventi senza CUP" % (
         out_cup, len(righe), sum(1 for r in righe if r["cup"]), len(cond),
