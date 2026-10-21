@@ -147,8 +147,12 @@ def main():
             righe.append({**base, **s})
 
     # Tabella C: voce, opera ultimata (NPP come codice), CUP
+    voce_reg = {g["cup"]: g["opere_ultimate_voce"] for g in leggi(d, "cup-registro.csv")}
     for r in ultimate:
-        v = r["riga"]
+        # le righe della rete AV/AC a p. 143 non ripetono la voce A5000_0: la
+        # da' il registro dei CUP, o la descrizione per I019, che non ha CUP
+        v = r["riga"] or voce_reg.get(r["cup"], "") or \
+            ("A5000_0" if "AV/AC Torino-Milano-Napoli" in r["descrizione"] else "")
         righe.append({"tabella": "C", "denominazione_portafoglio": ALB_TABELLE.get("C", ""),
                       "tipologia_programma": "%s - %s" % (v, ALB_VOCI_C.get(v, "")) if ALB_VOCI_C.get(v) else v,
                       "macro_intervento": v, "intervento": r["npp"], "sub_intervento": r["descrizione"],
