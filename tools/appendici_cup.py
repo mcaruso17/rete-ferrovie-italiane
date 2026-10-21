@@ -210,7 +210,8 @@ def per_intervento(cartella):
             "costo_agg2024_mln": r["costo_prec"], "costo_ultimati_mln": r["ultimati"],
             "costo_riclassifiche_mln": r["riclassifiche"], "costo_variazioni_costo_perimetro_mln": r["variazioni_costo"],
             "costo_nuove_esigenze_mln": r["nuove_esigenze"], "costo_adeguamenti_tariffari_mln": r["adeguamenti_tariffari"],
-            "variazione_costo_2024_2025_mln": r["variazioni_totali"], "motivazione_variazione_costo": r.get("mot") or ""})
+            "variazione_costo_2024_2025_mln": r["variazioni_totali"], "motivazione_variazione_costo": r.get("mot") or "",
+            "_nome": r["n"]})
     a5 = carica(cartella, 5)
     for r in a5["righe"]:
         o = riga(r["codice"])

@@ -438,6 +438,18 @@ CAT = [
      "suoi CUP: per sommare per CUP usare *_per_cup_mln o le colonne "
      "dell'Appendice 3.",
      DOC, "CdP Investimenti 2017-2026, CdP Servizi, appendici 2025, lista RFI"),
+    ("alberatura-cup-agg2025.csv", "Alberatura del portafoglio fino al CUP, aggiornamento 2025",
+     "Una riga per sub-intervento: tabella e portafoglio (A, B, C), tipologia di "
+     "programma, programma (A01..A09), classe tipologica, macro-intervento (il "
+     "codice senza la lettera finale: A1004 per A1004A e A1004B), intervento (la "
+     "riga del CdP), sub-intervento (le opere, i lotti e le fasi senza codice "
+     "sotto l'intervento; per i programmi i sottoprogetti dell'Appendice 3 e gli "
+     "oggetti dell'Appendice 2; per la Tabella C le opere ultimate della voce) e "
+     "il CUP, con la fonte. Il CUP del sub-intervento c'e' quando un documento lo "
+     "dice; i CUP dell'intervento non attribuiti a un sub-intervento hanno una "
+     "riga col sub-intervento vuoto. Il macro-intervento non ha un nome nel "
+     "documento: si elencano quelli dei suoi interventi.",
+     DOC, "CdP Investimenti 2022-2026, aggiornamento 2025, Tabelle A, B e C, Appendici 2, 3 e 4"),
     ("interventi-senza-cup-agg2025.csv", "Interventi senza CUP, aggiornamento 2025",
      "Gli interventi delle Tabelle A e B a cui non si puo' associare un CUP: "
      "nessun CUP in tabella, nell'Appendice 2 o negli altri documenti "

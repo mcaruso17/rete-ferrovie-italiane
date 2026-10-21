@@ -158,6 +158,9 @@ python3 confronto_rfi.py ../data/cdp-rfi-app.json ../data/cdp-rfi-app.json \
 # suo intervento; e gli interventi a cui non si puo' associare un CUP. Viene
 # dopo il confronto con la lista RFI, che ne da' lo stato BDAP
 python3 cup_completo.py ../data
+# l'alberatura del portafoglio fino al CUP: tabella, tipologia, programma,
+# classe tipologica, macro-intervento, intervento, sub-intervento, CUP
+python3 alberatura_cup.py ../data
 # la spesa anno per anno dalla Relazione al Parlamento al 31/12/2024
 python3 relazione_parlamento.py ../data/cdp-rfi-app.json ../data/cdp-rfi-app.json ../data
 # i CSV dei comuni leggono l'app appena costruita, quindi vengono dopo

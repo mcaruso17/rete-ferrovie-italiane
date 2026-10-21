@@ -308,6 +308,12 @@ def main():
 
     for it in interventi:
         it.update(app_int.get(it["codice_intervento"], {}))
+        # il nome dell'intervento dall'Appendice 4: nel dataset la descrizione
+        # delle Tabelle A e B ha attaccate le opere stampate sotto (159 su 223,
+        # "Potenziamento linea Empoli-Siena Raddoppio Empoli-Granaiolo ... ITER")
+        nome = it.pop("_nome", "")
+        if nome:
+            it["descrizione_intervento"] = re.sub(r"\s+", " ", nome).strip()
     app_cup = appendici_cup.per_cup(sys.argv[9], nel_testo, ultimo)
     # dal CUP agli interventi: le tabelle prima dell'Appendice 2, poi per codice
     per_cup = {}

@@ -497,6 +497,28 @@ RFI: per gli 8 che stanno solo in un'appendice cup_completo.py scrive
 l'appendice (3 o 1), che registro_cup.py non legge. `data/interventi-senza-cup-agg2025.csv`: i 4 interventi 2025 senza
 alcun CUP (I085, P197, P265, P271).
 
+`tools/alberatura_cup.py` (dopo cup_completo) scrive `data/alberatura-cup-agg2025.csv`,
+chiesto dal dirigente: una riga per sub-intervento con tabella, tipologia,
+programma (A01..A09 dall'Appendice 4), classe tipologica, macro-intervento,
+intervento, sub-intervento e CUP. Definizioni concordate con l'utente:
+macro-intervento = codice senza la lettera finale (A1004 per A1004A/B, P055
+per P055_A; puo' attraversare tipologie: 0292A in b, 0292B e C in d), senza nome
+proprio nel documento (si elencano quelli dei suoi interventi, non se ne
+ricava uno dalla parte comune); intervento = riga del CdP; sub-intervento =
+righe senza codice (opere della Tabella A/B, o della scheda se la tabella non
+ne ha; per i programmi sottoprogetti dell'Appendice 3 e oggetti dell'Appendice
+2; per la Tabella C le opere ultimate, con la voce come macro e l'NPP come
+intervento). CUP del sub-intervento solo se un documento lo dice (o unico CUP
+dell'intervento); i CUP non attribuiti hanno una riga col sub vuoto (22), cosi'
+tutti i 990 ci sono. 2.096 righe, 185 macro-interventi.
+
+Nomi degli interventi: nel dataset la descrizione delle Tabelle A e B ha
+attaccate le opere stampate sotto (159 interventi su 223). Dal 21 ottobre 2026
+i file delle assegnazioni (e quindi cup-completo e la pagina) usano il nome
+dell'Appendice 4, che e' sempre l'inizio di quella descrizione. Il dataset e la
+piattaforma principale hanno ancora la descrizione lunga: da correggere in
+extract.py.
+
 `piattaforma/assegnazioni.html` (pubblicata come `assegnazioni.html`) e' una
 pagina a parte, semplice e solo chiara, pensata per chi deve rispondere alle
 domande della Ragioneria senza Excel: quattro risposte (CUP finanziati,
