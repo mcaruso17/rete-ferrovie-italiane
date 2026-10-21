@@ -104,6 +104,17 @@ def main():
                             else "solo in un'appendice dell'aggiornamento 2025" if x
                             else "solo nella lista RFI (BDAP), in nessun documento")}
         r.update({"registro_" + k: g.get(k, "") for k in col_reg})
+        if not g and x:
+            # il registro dei CUP nasce quando del 2025 si leggeva solo l'Appendice 2:
+            # i CUP che stanno solo in un'altra appendice prendono qui la loro
+            # fonte (5 nelle schede intervento, 3 nelle delibere CIPESS)
+            r["registro_fonte_principale"] = (
+                "Appendice 3 (schede intervento)" if x.get("scheda_appendice_3")
+                else "Appendice 1 (delibere CIPESS)" if x.get("cipess_n_delibere")
+                else "Appendice 9 (PNRR e PNC)" if x.get("pnrr_pnc_sezione")
+                else "Appendice 8 (legge obiettivo)" if x.get("pis_descrizione")
+                else "Appendice 6 (DL 43/2013)" if x.get("dl43_intervento") else "")
+            r["registro_descrizione"] = x.get("descrizione", "")
         dove = {}
         for doc, p in testo.get(c, []):
             dove.setdefault(nome_doc(doc) if "cdpi-" in doc or "Agg_ 2025" in doc else doc.replace(".pdf", ""), []).append(p)

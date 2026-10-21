@@ -492,7 +492,9 @@ lista RFI 985: `fonte_riga` li distingue), con le colonne del registro
 lista RFI, le colonne del file delle assegnazioni per CUP e, per ogni
 intervento (_intervento_k), il resto della riga del file degli interventi.
 Gli importi _intervento_k si ripetono su tutti i CUP dell'intervento: non si
-sommano. `data/interventi-senza-cup-agg2025.csv`: i 4 interventi 2025 senza
+sommano. `registro_fonte_principale` e' vuoto solo per i CUP della sola lista
+RFI: per gli 8 che stanno solo in un'appendice cup_completo.py scrive
+l'appendice (3 o 1), che registro_cup.py non legge. `data/interventi-senza-cup-agg2025.csv`: i 4 interventi 2025 senza
 alcun CUP (I085, P197, P265, P271).
 
 `piattaforma/assegnazioni.html` (pubblicata come `assegnazioni.html`) e' una
