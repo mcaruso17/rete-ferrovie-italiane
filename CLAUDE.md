@@ -510,7 +510,11 @@ ne ha; per i programmi sottoprogetti dell'Appendice 3 e oggetti dell'Appendice
 2; per la Tabella C le opere ultimate, con la voce come macro e l'NPP come
 intervento). CUP del sub-intervento solo se un documento lo dice (o unico CUP
 dell'intervento); i CUP non attribuiti hanno una riga col sub vuoto (22), cosi'
-tutti i 990 ci sono. 2.096 righe, 185 macro-interventi.
+tutti i 990 ci sono. 2.096 righe, 185 macro-interventi. Ogni riga porta anche gli importi
+dell'intervento (*_intervento_mln, per fonte e fabbisogno) e la loro somma per
+macro-intervento (*_macro_mln), ripetuti: prima_riga_intervento e
+prima_riga_macro dicono quale riga sommare. Lo script verifica che, cosi'
+sommati, ridiano i totali del file degli interventi (costo 294.155,4).
 
 Nomi degli interventi: nel dataset la descrizione delle Tabelle A e B ha
 attaccate le opere stampate sotto (159 interventi su 223). Dal 21 ottobre 2026

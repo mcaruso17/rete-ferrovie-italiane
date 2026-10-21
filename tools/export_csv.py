@@ -448,7 +448,13 @@ CAT = [
      "il CUP, con la fonte. Il CUP del sub-intervento c'e' quando un documento lo "
      "dice; i CUP dell'intervento non attribuiti a un sub-intervento hanno una "
      "riga col sub-intervento vuoto. Il macro-intervento non ha un nome nel "
-     "documento: si elencano quelli dei suoi interventi.",
+     "documento: si elencano quelli dei suoi interventi. Su ogni riga anche gli "
+     "importi dell'intervento come li scrive la tabella (*_intervento_mln: costo a "
+     "vita intera, movimenti, assegnate per fonte MEF, FSC/PAC, MIT, PNRR, altro, "
+     "fabbisogno per priorita', speso) e quelli del macro-intervento, somma dei "
+     "suoi interventi (*_macro_mln). Si ripetono su tutte le righe: per sommarli "
+     "si filtra prima_riga_intervento o prima_riga_macro = si. In Tabella C c'e' "
+     "solo il costo, somma delle righe dell'NPP e della voce.",
      DOC, "CdP Investimenti 2022-2026, aggiornamento 2025, Tabelle A, B e C, Appendici 2, 3 e 4"),
     ("interventi-senza-cup-agg2025.csv", "Interventi senza CUP, aggiornamento 2025",
      "Gli interventi delle Tabelle A e B a cui non si puo' associare un CUP: "

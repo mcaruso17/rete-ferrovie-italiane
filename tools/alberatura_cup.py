@@ -59,10 +59,28 @@ def nome_macro(interventi):
     return " | ".join(dict.fromkeys(i["descrizione_intervento"] for i in interventi))
 
 
-COLONNE = ["tabella", "denominazione_portafoglio", "tipologia_programma", "programma_codice", "programma",
-           "classe_tipologica", "macro_intervento", "macro_intervento_nome", "n_interventi_nel_macro",
-           "intervento", "intervento_descrizione", "sub_intervento", "cup", "fonte_sub_intervento",
-           "fonte_cup", "stato_attuativo", "fase_finanziata", "costo_sub_intervento_mln", "pagina"]
+# gli importi dell'intervento come li scrive la riga delle Tabelle A e B, ripetuti
+# su ogni sua riga di dettaglio; quelli del macro-intervento sono la somma dei
+# suoi interventi (il documento non stampa un totale per macro-intervento)
+IMPORTI = [("costo_vita_intera", "costo_totale_mln"), ("finanziato_precedente", "finanziato_precedente_mln"),
+           ("riduzioni", "riduzioni_mln"), ("rimodulazioni", "rimodulazioni_mln"), ("incrementi", "incrementi_mln"),
+           ("risorse_assegnate", "risorse_assegnate_mln"), ("mef", "mef_mln"), ("fsc_pac", "fsc_pac_mln"),
+           ("mit", "mit_mln"), ("pnrr", "pnrr_mln"), ("altro", "altro_mln"),
+           ("fabbisogno_totale", "fabbisogno_totale_mln"), ("fabbisogno_priorita1", "fabbisogno_priorita1_mln"),
+           ("fabbisogno_priorita2", "fabbisogno_priorita2_mln"),
+           ("fabbisogno_completamento", "fabbisogno_completamento_mln"), ("speso", "speso_mln")]
+COL_INT = ["%s_intervento_mln" % n for n, _ in IMPORTI]
+COL_MACRO = ["%s_macro_mln" % n for n, _ in IMPORTI]
+
+COLONNE = (["tabella", "denominazione_portafoglio", "tipologia_programma", "programma_codice", "programma",
+            "classe_tipologica", "macro_intervento", "macro_intervento_nome", "n_interventi_nel_macro",
+            "intervento", "intervento_descrizione", "sub_intervento", "cup", "fonte_sub_intervento",
+            "fonte_cup", "stato_attuativo", "fase_finanziata", "costo_sub_intervento_mln", "pagina",
+            "prima_riga_intervento", "prima_riga_macro"] + COL_INT + COL_MACRO)
+
+
+def num(x):
+    return float(x) if x not in ("", None) else None
 
 
 def main():
@@ -84,6 +102,13 @@ def main():
     for r in a2:
         a2_per.setdefault(r["codice"], []).append(r)
 
+    imp_int = {it["codice_intervento"]: {"%s_intervento_mln" % n: it[c] for n, c in IMPORTI} for it in interv}
+    imp_macro = {}
+    for m, l in per_macro.items():
+        imp_macro[m] = {}
+        for n, c in IMPORTI:
+            v = [num(i[c]) for i in l if num(i[c]) is not None]
+            imp_macro[m]["%s_macro_mln" % n] = round(sum(v), 2) if v else ""
     righe = []
     for it in interv:
         cod = it["codice_intervento"]
@@ -144,7 +169,7 @@ def main():
             sub.append({"sub_intervento": "", "cup": "", "fonte_sub_intervento": "",
                         "fonte_cup": "nessun CUP nei documenti"})
         for s in sub:
-            righe.append({**base, **s})
+            righe.append({**base, **imp_int[cod], **imp_macro[m], **s})
 
     # Tabella C: voce, opera ultimata (NPP come codice), CUP
     voce_reg = {g["cup"]: g["opere_ultimate_voce"] for g in leggi(d, "cup-registro.csv")}
@@ -160,6 +185,33 @@ def main():
                       "stato_attuativo": "ultimato il " + r["data_messa_in_esercizio"] if r["data_messa_in_esercizio"] else "ultimato",
                       "costo_sub_intervento_mln": r["costo_mln"], "pagina": "p. %s" % r["pagina"]})
 
+    # Tabella C: il documento da' solo il costo di ogni riga; all'NPP e alla voce
+    # va la somma delle sue righe, le fonti non ci sono
+    tot_npp, tot_voce = {}, {}
+    for r in righe:
+        if r["tabella"] == "C" and num(r["costo_sub_intervento_mln"]) is not None:
+            tot_npp[r["intervento"]] = tot_npp.get(r["intervento"], 0) + num(r["costo_sub_intervento_mln"])
+            tot_voce[r["macro_intervento"]] = tot_voce.get(r["macro_intervento"], 0) + num(r["costo_sub_intervento_mln"])
+    for r in righe:
+        if r["tabella"] == "C":
+            r["costo_vita_intera_intervento_mln"] = round(tot_npp.get(r["intervento"], 0), 2)
+            r["costo_vita_intera_macro_mln"] = round(tot_voce.get(r["macro_intervento"], 0), 2)
+    # per sommare senza contare due volte: la prima riga di ogni intervento e
+    # di ogni macro-intervento (per tabella, perche' in C i codici sono altri)
+    visti_i, visti_m = set(), set()
+    for r in righe:
+        ki, km = (r["tabella"] == "C", r["intervento"]), (r["tabella"] == "C", r["macro_intervento"])
+        r["prima_riga_intervento"] = "si" if ki not in visti_i else "no"
+        r["prima_riga_macro"] = "si" if km not in visti_m else "no"
+        visti_i.add(ki)
+        visti_m.add(km)
+    # gli importi, sommati sulle prime righe, tornano con il file degli interventi
+    for n, c in IMPORTI:
+        a = sum(num(r["%s_intervento_mln" % n]) or 0 for r in righe if r["tabella"] in "AB" and r["prima_riga_intervento"] == "si")
+        b = sum(num(r["%s_macro_mln" % n]) or 0 for r in righe if r["tabella"] in "AB" and r["prima_riga_macro"] == "si")
+        e = sum(num(it[c]) or 0 for it in interv)
+        if abs(a - e) > 0.5 or abs(b - e) > 0.5:
+            sys.exit("%s: interventi %.2f, macro %.2f, file degli interventi %.2f" % (n, a, b, e))
     # controlli
     in_corso = {r["cup"] for r in righe if r["tabella"] in "AB" and r["cup"]}
     attesi = {c for it in interv for c in it["cup"].split("|") if c}
