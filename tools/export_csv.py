@@ -454,7 +454,10 @@ CAT = [
      "fabbisogno per priorita', speso) e quelli del macro-intervento, somma dei "
      "suoi interventi (*_macro_mln). Si ripetono su tutte le righe: per sommarli "
      "si filtra prima_riga_intervento o prima_riga_macro = si. In Tabella C c'e' "
-     "solo il costo, somma delle righe dell'NPP e della voce.",
+     "solo il costo, somma delle righe dell'NPP e della voce. Costo, risorse e "
+     "speso del sub-intervento (*_sub_intervento_mln) sono quelli stampati per la "
+     "riga, senza fonti: Appendice 3 per programmi e opere di Tabella A (lo speso "
+     "solo per i programmi), riga del lotto per la Tabella B.",
      DOC, "CdP Investimenti 2022-2026, aggiornamento 2025, Tabelle A, B e C, Appendici 2, 3 e 4"),
     ("interventi-senza-cup-agg2025.csv", "Interventi senza CUP, aggiornamento 2025",
      "Gli interventi delle Tabelle A e B a cui non si puo' associare un CUP: "

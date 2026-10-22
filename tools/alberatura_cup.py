@@ -26,6 +26,13 @@ Livelli, una riga per sub-intervento:
    I CUP dell'intervento che nessun documento attribuisce a un sub-intervento
    stanno su una riga con il sub-intervento vuoto: cosi' ogni CUP c'e'.
 
+Importi del sub-intervento (costo, risorse, speso): quelli che il documento
+stampa per la riga, senza ripartizione per fonte, che nessun documento da'
+sotto l'intervento. Programmi: costo, risorse e contabilizzato
+dell'avanzamento programma (Appendice 3, p. 29 per A1015); opere di Tabella A:
+costo e risorse del piano della spesa; lotti di Tabella B: la riga del lotto.
+Controllo: le risorse dei sub-interventi sommano a quelle dell'intervento.
+
 Controllo: i CUP in corso dell'alberatura sono gli stessi del file delle
 assegnazioni (990), e ogni intervento delle Tabelle A e B c'e' almeno una
 volta (223).
@@ -76,7 +83,8 @@ COL_MACRO = ["%s_macro_mln" % n for n, _ in IMPORTI]
 COLONNE = (["tabella", "denominazione_portafoglio", "tipologia_programma", "programma_codice", "programma",
             "classe_tipologica", "macro_intervento", "macro_intervento_nome", "n_interventi_nel_macro",
             "intervento", "intervento_descrizione", "sub_intervento", "cup", "fonte_sub_intervento",
-            "fonte_cup", "stato_attuativo", "fase_finanziata", "costo_sub_intervento_mln", "pagina",
+            "fonte_cup", "stato_attuativo", "fase_finanziata", "costo_sub_intervento_mln",
+            "risorse_sub_intervento_mln", "speso_sub_intervento_mln", "pagina",
             "prima_riga_intervento", "prima_riga_macro"] + COL_INT + COL_MACRO)
 
 
@@ -131,7 +139,8 @@ def main():
                 if not x["subtotale"]:
                     sub.append({"sub_intervento": x["nome"], "cup": x["cup"], "fonte_sub_intervento": "Appendice 3",
                                 "fonte_cup": "Appendice 3" if x["cup"] else "", "stato_attuativo": x["stato"],
-                                "costo_sub_intervento_mln": x["costo"], "pagina": "App. 3 p. %d" % x["pagina"]})
+                                "costo_sub_intervento_mln": x["costo"], "risorse_sub_intervento_mln": x["risorse"],
+                                "speso_sub_intervento_mln": x["contabilizzato"], "pagina": "App. 3 p. %d" % x["pagina"]})
             visti = {s["cup"] for s in sub}
             for x in a2_per.get(cod, []):
                 if x["cup"] not in visti:
@@ -145,17 +154,22 @@ def main():
                 fc = "Appendice 3" if c else ""
                 if not c and len(cups) == 1:
                     c, fc = cups[0], "unico CUP dell'intervento"
-                # il costo dell'opera: la Tabella B lo stampa, per la A viene dal
-                # piano della spesa della scheda (Appendice 3)
-                costo = o["costo_totale_opera_mln"]
+                # costo e risorse dell'opera: la Tabella B li stampa per lotto, per
+                # la A vengono dal piano della spesa della scheda (Appendice 3).
+                # Lo speso dell'opera c'e' solo in Tabella B: il piano della spesa
+                # ha pagamenti e produzione, che sommati non danno lo speso della
+                # Tabella A (i pagamenti tornano in 31 interventi su 159)
+                costo, risorse, speso = (o["costo_totale_opera_mln"], o["risorse_assegnate_opera_mln"],
+                                         o["speso_opera_mln"])
                 if costo == "":
                     sc = a3.get(cod, {})
                     rs = riga_spesa(o["descrizione_opera"], sc.get("spesa", []), sc) if sc else None
-                    costo = rs["costo"] if rs else ""
+                    costo, risorse = (rs["costo"], rs["risorse"]) if rs else ("", "")
                 sub.append({"sub_intervento": o["descrizione_opera"], "cup": c,
                             "fonte_sub_intervento": "Tabella " + t, "fonte_cup": fc,
                             "stato_attuativo": o["stato_attuativo"], "fase_finanziata": o["fase_finanziata"],
-                            "costo_sub_intervento_mln": costo, "pagina": "p. %s" % o["pagina_pdf"]})
+                            "costo_sub_intervento_mln": costo, "risorse_sub_intervento_mln": risorse,
+                            "speso_sub_intervento_mln": speso, "pagina": "p. %s" % o["pagina_pdf"]})
             if not ops:
                 # la tabella non stampa opere (0119, 0263): quelle della scheda
                 for x in a3.get(cod, {}).get("opere", []):
@@ -220,6 +234,18 @@ def main():
         e = sum(num(it[c]) or 0 for it in interv)
         if abs(a - e) > 0.5 or abs(b - e) > 0.5:
             sys.exit("%s: interventi %.2f, macro %.2f, file degli interventi %.2f" % (n, a, b, e))
+    # le risorse dei sub-interventi, dove ci sono per tutti, ridanno quelle
+    # dell'intervento (Appendice 3: programmi e piano della spesa delle opere).
+    # Non tornano dove la Tabella A stampa meno opere della scheda: P129 (manca
+    # il Moving walkway, p. 58) e P234 (mancano nodo di Genova e Terzo valico, p. 63)
+    diversi, completi = [], 0
+    for it in interv:
+        rr = [r for r in righe if r["tabella"] in "AB" and r["intervento"] == it["codice_intervento"] and r["sub_intervento"]]
+        v = [num(r.get("risorse_sub_intervento_mln")) for r in rr]
+        if rr and None not in v:
+            completi += 1
+            if abs(sum(v) - num(it["risorse_assegnate_mln"])) > 0.05 * len(v):
+                diversi.append(it["codice_intervento"])
     # controlli
     in_corso = {r["cup"] for r in righe if r["tabella"] in "AB" and r["cup"]}
     attesi = {c for it in interv for c in it["cup"].split("|") if c}
@@ -241,6 +267,8 @@ def main():
               sum(1 for r in ab if r["cup"] and r["sub_intervento"]),
               sum(1 for r in ab if r["fonte_cup"].startswith("CUP dell'intervento")),
               sum(1 for r in ab if not r["cup"])))
+    print("  risorse dei sub-interventi: interventi con tutte le righe %d, che non sommano alle risorse "
+          "dell'intervento: %s" % (completi, ", ".join(diversi) or "nessuno"))
 
 
 if __name__ == "__main__":
