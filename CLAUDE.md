@@ -521,6 +521,13 @@ dell'intervento (*_intervento_mln, per fonte e fabbisogno) e la loro somma per
 macro-intervento (*_macro_mln), ripetuti: prima_riga_intervento e
 prima_riga_macro dicono quale riga sommare. Lo script verifica che, cosi'
 sommati, ridiano i totali del file degli interventi (costo 294.155,4).
+Per il sub-intervento ci sono costo, risorse e speso come li stampa la riga
+(`*_sub_intervento_mln`, senza fonti: nessun documento le ripartisce sotto
+l'intervento): programmi dall'avanzamento dell'Appendice 3 (contabilizzato =
+speso), opere di Tabella A dal piano della spesa (costo e risorse; pagamenti e
+produzione non danno lo speso della Tabella A), lotti di Tabella B dalla riga.
+Le risorse sommano a quelle dell'intervento in 206 casi su 208; P129 e P234
+no perche' la Tabella A stampa meno opere della scheda.
 
 Nomi degli interventi: nel dataset la descrizione delle Tabelle A e B ha
 attaccate le opere stampate sotto (159 interventi su 223). Dal 21 ottobre 2026
