@@ -39,6 +39,7 @@ import os
 import re
 import sys
 
+from appendici_cup import riga_spesa
 from assegnazioni_cup import norm
 from schema import ALB_TABELLE, ALB_VOCI_C
 
@@ -144,10 +145,17 @@ def main():
                 fc = "Appendice 3" if c else ""
                 if not c and len(cups) == 1:
                     c, fc = cups[0], "unico CUP dell'intervento"
+                # il costo dell'opera: la Tabella B lo stampa, per la A viene dal
+                # piano della spesa della scheda (Appendice 3)
+                costo = o["costo_totale_opera_mln"]
+                if costo == "":
+                    sc = a3.get(cod, {})
+                    rs = riga_spesa(o["descrizione_opera"], sc.get("spesa", []), sc) if sc else None
+                    costo = rs["costo"] if rs else ""
                 sub.append({"sub_intervento": o["descrizione_opera"], "cup": c,
                             "fonte_sub_intervento": "Tabella " + t, "fonte_cup": fc,
                             "stato_attuativo": o["stato_attuativo"], "fase_finanziata": o["fase_finanziata"],
-                            "costo_sub_intervento_mln": o["costo_totale_opera_mln"], "pagina": "p. %s" % o["pagina_pdf"]})
+                            "costo_sub_intervento_mln": costo, "pagina": "p. %s" % o["pagina_pdf"]})
             if not ops:
                 # la tabella non stampa opere (0119, 0263): quelle della scheda
                 for x in a3.get(cod, {}).get("opere", []):
