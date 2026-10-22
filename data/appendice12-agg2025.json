@@ -1,0 +1,897 @@
+{
+ "doc": "agg2025",
+ "fonte": "appendice_12_rimodulazioni.pdf",
+ "righe": [
+  {
+   "codice": "0297B",
+   "descrizione": "Nodo di Falconara completamento",
+   "pagina": 1,
+   "tipologia": "Clausole di flessibilità ex art. 1 commi 5 e 6",
+   "totale": -28.4,
+   "beneficiari": 0.0,
+   "cedenti": -28.4
+  },
+  {
+   "codice": "1674",
+   "descrizione": "Linea ferroviaria Potenza - Foggia - ammodernamento",
+   "pagina": 1,
+   "tipologia": "Clausole di flessibilità ex art. 1 commi 5 e 6",
+   "totale": -9.0,
+   "beneficiari": 0.0,
+   "cedenti": -9.0
+  },
+  {
+   "codice": "1940",
+   "descrizione": "Nodo di Udine",
+   "pagina": 1,
+   "tipologia": "Clausole di flessibilità ex art. 1 commi 5 e 6",
+   "totale": 51.0,
+   "beneficiari": 51.0,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "A2001B",
+   "descrizione": "Tecnologie per la circolazione",
+   "pagina": 1,
+   "tipologia": "Clausole di flessibilità ex art. 1 commi 5 e 6",
+   "totale": 240.55,
+   "beneficiari": 240.55,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "A2004A",
+   "descrizione": "Interventi tecnologici per il miglioramento della sicurezza della circolazione",
+   "pagina": 1,
+   "tipologia": "Clausole di flessibilità ex art. 1 commi 5 e 6",
+   "totale": 26.0,
+   "beneficiari": 26.0,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "A2004D",
+   "descrizione": "Sistemi per la diagnostica dell'infrastruttura",
+   "pagina": 1,
+   "tipologia": "Clausole di flessibilità ex art. 1 commi 5 e 6",
+   "totale": 24.0,
+   "beneficiari": 24.0,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "A2010",
+   "descrizione": "Sistemi Informativi",
+   "pagina": 1,
+   "tipologia": "Clausole di flessibilità ex art. 1 commi 5 e 6",
+   "totale": 44.5,
+   "beneficiari": 44.5,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "A2011",
+   "descrizione": "Programma nazionale ERTMS",
+   "pagina": 1,
+   "tipologia": "Clausole di flessibilità ex art. 1 commi 5 e 6",
+   "totale": 25.0,
+   "beneficiari": 25.0,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "P053",
+   "descrizione": "Upgrading infrastrutturale e tecnologico nodo di Roma",
+   "pagina": 1,
+   "tipologia": "Clausole di flessibilità ex art. 1 commi 5 e 6",
+   "totale": -75.0,
+   "beneficiari": 0.0,
+   "cedenti": -75.0
+  },
+  {
+   "codice": "P221",
+   "descrizione": "Adeguamento prestazionale e upgrading corridoio TEN-T Mare del Nord-Reno-Mediterraneo e linee afferenti",
+   "pagina": 1,
+   "tipologia": "Clausole di flessibilità ex art. 1 commi 5 e 6",
+   "totale": -7.65,
+   "beneficiari": 0.0,
+   "cedenti": -7.65
+  },
+  {
+   "codice": "P222",
+   "descrizione": "Adeguamento prestazionale e upgrading corridoio TEN-T Mediterraneo e linee afferenti",
+   "pagina": 1,
+   "tipologia": "Clausole di flessibilità ex art. 1 commi 5 e 6",
+   "totale": -31.0,
+   "beneficiari": 0.0,
+   "cedenti": -31.0
+  },
+  {
+   "codice": "P223",
+   "descrizione": "Adeguamento prestazionale e upgrading corridoio TEN-T Baltico-Adriatico e linee afferenti",
+   "pagina": 1,
+   "tipologia": "Clausole di flessibilità ex art. 1 commi 5 e 6",
+   "totale": -40.0,
+   "beneficiari": 0.0,
+   "cedenti": -40.0
+  },
+  {
+   "codice": "P224",
+   "descrizione": "Adeguamento prestazionale e upgrading corridoio TEN-T Scandinavia - Mediterraneo e linee afferenti",
+   "pagina": 1,
+   "tipologia": "Clausole di flessibilità ex art. 1 commi 5 e 6",
+   "totale": -87.0,
+   "beneficiari": 0.0,
+   "cedenti": -87.0
+  },
+  {
+   "codice": "P245",
+   "descrizione": "Adeguamento e velocizzazione linea ferroviaria jonica - tratta Sibari-Melito Porto Salvo e trasversale Lamezia Terme - Catanzaro Lido",
+   "pagina": 1,
+   "tipologia": "Clausole di flessibilità ex art. 1 commi 5 e 6",
+   "totale": -60.0,
+   "beneficiari": 0.0,
+   "cedenti": -60.0
+  },
+  {
+   "codice": "P248",
+   "descrizione": "Raddoppio Decimomannu-Villamassargia",
+   "pagina": 1,
+   "tipologia": "Clausole di flessibilità ex art. 1 commi 5 e 6",
+   "totale": -73.0,
+   "beneficiari": 0.0,
+   "cedenti": -73.0
+  },
+  {
+   "codice": "A2001B",
+   "descrizione": "Tecnologie per la circolazione - Upgrading/sviluppo parco mezzi di manutenzione",
+   "pagina": 1,
+   "tipologia": "Svincolo risorse oneri ex D.M. 44/T del 22 marzo 2000",
+   "totale": 110.61,
+   "beneficiari": 110.61,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "A2001B",
+   "descrizione": "Tecnologie per la circolazione - Oneri connessi all'arretratezza tecnologica della rete",
+   "pagina": 1,
+   "tipologia": "Svincolo risorse oneri ex D.M. 44/T del 22 marzo 2000",
+   "totale": -110.61,
+   "beneficiari": 0.0,
+   "cedenti": -110.61
+  },
+  {
+   "codice": "0036",
+   "descrizione": "Nodo di Palermo",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": -4.92,
+   "beneficiari": 51.08,
+   "cedenti": -56.0
+  },
+  {
+   "codice": "0241A",
+   "descrizione": "Cintura di Torino e connessione al collegamento Torino-Lione opere prioritarie",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": -18.16,
+   "beneficiari": 0.0,
+   "cedenti": -18.16
+  },
+  {
+   "codice": "0249",
+   "descrizione": "Linea Messina-Catania: raddoppio Giampilieri-Fiumefreddo",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": 18.7,
+   "beneficiari": 18.7,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "0270",
+   "descrizione": "Sistemazione nodo di Catania",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": -69.4,
+   "beneficiari": 0.0,
+   "cedenti": -69.4
+  },
+  {
+   "codice": "0275A",
+   "descrizione": "Nuovo collegamento Palermo-Catania 1^ macrofase",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": 6.63,
+   "beneficiari": 16.63,
+   "cedenti": -10.0
+  },
+  {
+   "codice": "0279A",
+   "descrizione": "Itinerario Napoli-Bari: Raddoppio e velocizzazione tratta Cancello-Frasso Telesino",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": -20.0,
+   "beneficiari": 0.0,
+   "cedenti": -20.0
+  },
+  {
+   "codice": "0284",
+   "descrizione": "Itinerario Napoli-Bari: Interventi su linea Cancello-Napoli per integrazione con linea AV/AC",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": -35.0,
+   "beneficiari": 0.0,
+   "cedenti": -35.0
+  },
+  {
+   "codice": "0292A",
+   "descrizione": "Accesso al Brennero lotto 1 - Fortezza-Ponte Gardena",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": -49.91,
+   "beneficiari": 0.0,
+   "cedenti": -49.91
+  },
+  {
+   "codice": "0292A",
+   "descrizione": "Accesso al Brennero lotto 1 - Fortezza-Ponte Gardena",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": -20.89,
+   "beneficiari": 0.0,
+   "cedenti": -20.89
+  },
+  {
+   "codice": "0336",
+   "descrizione": "Raddoppio Palermo-Messina tratta Fiumetorto-Castelbuono",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": 39.43,
+   "beneficiari": 39.43,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "1483",
+   "descrizione": "Nodo di interscambio di Pigneto",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": -14.97,
+   "beneficiari": 0.0,
+   "cedenti": -14.97
+  },
+  {
+   "codice": "A2001B",
+   "descrizione": "Tecnologie per la circolazione",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": 102.26,
+   "beneficiari": 102.26,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "A2011",
+   "descrizione": "Programma nazionale ERTMS",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": 35.0,
+   "beneficiari": 35.0,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "E.2",
+   "descrizione": "Sviluppo infrastrutturale e upgrading",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": -1.95,
+   "beneficiari": 4.24,
+   "cedenti": -6.19
+  },
+  {
+   "codice": "E.3",
+   "descrizione": "Impianti industriali e terminali viaggiatori e merci",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": -1.24,
+   "beneficiari": 0.0,
+   "cedenti": -1.24
+  },
+  {
+   "codice": "E.4",
+   "descrizione": "Studi di fattibilità e progettazioni",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": -1.04,
+   "beneficiari": 0.0,
+   "cedenti": -1.04
+  },
+  {
+   "codice": "I162",
+   "descrizione": "Ripristino linea Palermo-Trapani via Milo",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": -112.5,
+   "beneficiari": 12.3,
+   "cedenti": -124.8
+  },
+  {
+   "codice": "P055_A",
+   "descrizione": "Piano integrato Stazioni",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": 46.0,
+   "beneficiari": 46.0,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "P200",
+   "descrizione": "Upgrading infrastrutturale e tecnologico bacini centro",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": 23.81,
+   "beneficiari": 24.63,
+   "cedenti": -0.82
+  },
+  {
+   "codice": "P201",
+   "descrizione": "Upgrading infrastrutturale e tecnologico bacini sud e isole",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": -5.85,
+   "beneficiari": 0.0,
+   "cedenti": -5.85
+  },
+  {
+   "codice": "P215",
+   "descrizione": "Adeguamento linea storica Torino-Modane tratta Bussoleno-Avigliana",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": 18.16,
+   "beneficiari": 18.16,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "P224",
+   "descrizione": "Adeguamento prestazionale e upgrading corridoio TEN-T Scandinavia - Mediterraneo e linee afferenti",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": 30.0,
+   "beneficiari": 30.0,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "P249",
+   "descrizione": "Collegamento ferroviario aeroporto di Olbia",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": 5.85,
+   "beneficiari": 5.85,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "P270",
+   "descrizione": "Opere di collegamento al Ponte sullo stretto di Messina - sponda calabra e siciliana",
+   "pagina": 1,
+   "tipologia": "Riutilizzo risorse liberate da finanziamenti UE e A22 su fabbisogni prioritari",
+   "totale": 30.0,
+   "beneficiari": 30.0,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "I177",
+   "descrizione": "Completamento metropolitana di Salerno: tratta stadio Arechi-Pontecagnano Aeroporto",
+   "pagina": 1,
+   "tipologia": "Copertura definanziamento Metroplitana di Salerno",
+   "totale": 100.0,
+   "beneficiari": 100.0,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "NA026",
+   "descrizione": "Fondo Progettazioni, Collegio Consultivo Tecnico e salvaguardia interventi cofinanziati da UE e EE.LL.",
+   "pagina": 1,
+   "tipologia": "Copertura definanziamento Metroplitana di Salerno",
+   "totale": -100.0,
+   "beneficiari": 0.0,
+   "cedenti": -100.0
+  },
+  {
+   "codice": "0083",
+   "descrizione": "Infrastrutturazione area stazione Tiburtina e nodo di interscambio",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": 0.32,
+   "beneficiari": 0.32,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "0292A",
+   "descrizione": "Accesso al Brennero lotto 1 - Fortezza-Ponte Gardena",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": -48.0,
+   "beneficiari": 0.0,
+   "cedenti": -48.0
+  },
+  {
+   "codice": "A1006",
+   "descrizione": "Soppressione passaggi a livello",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": 5.0,
+   "beneficiari": 5.0,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "A1013B",
+   "descrizione": "Sismica",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": 0.0,
+   "beneficiari": 0.0,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "A2001B",
+   "descrizione": "Tecnologie per la circolazione",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": 17.0,
+   "beneficiari": 30.0,
+   "cedenti": -13.0
+  },
+  {
+   "codice": "A2004C",
+   "descrizione": "Sistemi per la protezione dei passaggi a livello",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": 45.0,
+   "beneficiari": 45.0,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "A2008",
+   "descrizione": "Sviluppo tecnologie innovative",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": 0.1,
+   "beneficiari": 0.1,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "A2010",
+   "descrizione": "Sistemi Informativi",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": 13.0,
+   "beneficiari": 13.0,
+   "cedenti": -0.0
+  },
+  {
+   "codice": "A2011",
+   "descrizione": "Programma nazionale ERTMS",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": 0.33,
+   "beneficiari": 0.33,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "E.0",
+   "descrizione": "Manutenzione Straordinaria cicli fino al 2011",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": -0.0,
+   "beneficiari": 3.06,
+   "cedenti": -3.06
+  },
+  {
+   "codice": "E.1",
+   "descrizione": "Sicurezza ed Obblighi di Legge",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": -0.15,
+   "beneficiari": 0.0,
+   "cedenti": -0.15
+  },
+  {
+   "codice": "E.2",
+   "descrizione": "Sviluppo infrastrutturale e upgrading",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": -2.1,
+   "beneficiari": 0.04,
+   "cedenti": -2.15
+  },
+  {
+   "codice": "E.3",
+   "descrizione": "Impianti industriali e terminali viaggiatori e merci",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": -1.3,
+   "beneficiari": 0.0,
+   "cedenti": -1.3
+  },
+  {
+   "codice": "E.4",
+   "descrizione": "Studi di fattibilità e progettazioni",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": -0.63,
+   "beneficiari": 0.0,
+   "cedenti": -0.63
+  },
+  {
+   "codice": "E.5",
+   "descrizione": "Tecnologie per la sicurezza, la circolazione e l'efficientamento",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": -1.4,
+   "beneficiari": 0.04,
+   "cedenti": -1.44
+  },
+  {
+   "codice": "NA026",
+   "descrizione": "Fondo Progettazioni, Collegio Consultivo Tecnico e salvaguardia interventi cofinanziati da UE e EE.LL.",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": 12.01,
+   "beneficiari": 22.99,
+   "cedenti": -10.98
+  },
+  {
+   "codice": "P060",
+   "descrizione": "Infrastrutturazione porti e terminali",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": -30.0,
+   "beneficiari": 0.0,
+   "cedenti": -30.0
+  },
+  {
+   "codice": "P076",
+   "descrizione": "Upgrading infrastrutturale e tecnologico nodo di Firenze",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": 10.68,
+   "beneficiari": 10.68,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "P080",
+   "descrizione": "Upgrading infrastrutturale e tecnologico nodo di Torino",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": -0.33,
+   "beneficiari": 0.0,
+   "cedenti": -0.33
+  },
+  {
+   "codice": "P123",
+   "descrizione": "Elettrificazione Ivrea-Aosta e adeguamento linea Chivasso - Aosta",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": -0.14,
+   "beneficiari": 0.0,
+   "cedenti": -0.14
+  },
+  {
+   "codice": "P129",
+   "descrizione": "Collegamento ferroviario aeroporto di Genova",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": 0.92,
+   "beneficiari": 0.92,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "P198",
+   "descrizione": "Upgrading infrastrutturale e tecnologico bacini nord ovest",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": -5.0,
+   "beneficiari": 0.0,
+   "cedenti": -5.0
+  },
+  {
+   "codice": "P201",
+   "descrizione": "Upgrading infrastrutturale e tecnologico bacini sud e isole",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": -15.0,
+   "beneficiari": 0.0,
+   "cedenti": -15.0
+  },
+  {
+   "codice": "P210A",
+   "descrizione": "Potenziamento della linea Terni – Rieti – L’Aquila-Sulmona",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": 0.32,
+   "beneficiari": 0.32,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "P221",
+   "descrizione": "Adeguamento prestazionale e upgrading corridoio TEN-T Mare del Nord-Reno-Mediterraneo e linee afferenti",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": 10.0,
+   "beneficiari": 10.0,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "P224",
+   "descrizione": "Adeguamento prestazionale e upgrading corridoio TEN-T Scandinavia - Mediterraneo e linee afferenti",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": 0.05,
+   "beneficiari": 0.05,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "P237",
+   "descrizione": "City Hub, linee metropolitane e nuove stazioni/fermate",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni per migliore gestione operativa",
+   "totale": -10.68,
+   "beneficiari": 0.0,
+   "cedenti": -10.68
+  },
+  {
+   "codice": "A1004A",
+   "descrizione": "Sicurezza in galleria",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni sicurezza ex art.1 co. 4",
+   "totale": -17.96,
+   "beneficiari": 0.0,
+   "cedenti": -17.96
+  },
+  {
+   "codice": "A1004F",
+   "descrizione": "Rilievi, progettazioni e interventi di adeguamento a STI Opere d'arte",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni sicurezza ex art.1 co. 4",
+   "totale": -12.93,
+   "beneficiari": 0.0,
+   "cedenti": -12.93
+  },
+  {
+   "codice": "A1013A",
+   "descrizione": "Idrogeologia",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni sicurezza ex art.1 co. 4",
+   "totale": 9.62,
+   "beneficiari": 9.62,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "A1013B",
+   "descrizione": "Sismica",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni sicurezza ex art.1 co. 4",
+   "totale": -17.74,
+   "beneficiari": 0.0,
+   "cedenti": -17.74
+  },
+  {
+   "codice": "A2001B",
+   "descrizione": "Tecnologie per la circolazione",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni sicurezza ex art.1 co. 4",
+   "totale": -48.0,
+   "beneficiari": 0.0,
+   "cedenti": -48.0
+  },
+  {
+   "codice": "A2004A",
+   "descrizione": "Interventi tecnologici per il miglioramento della sicurezza della circolazione",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni sicurezza ex art.1 co. 4",
+   "totale": 27.17,
+   "beneficiari": 27.17,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "A2004B",
+   "descrizione": "Sistemi di Rilevamento Termico Boccole e Controllo Squilibrio Carichi Verticali",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni sicurezza ex art.1 co. 4",
+   "totale": 8.0,
+   "beneficiari": 8.0,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "A2004C",
+   "descrizione": "Sistemi per la protezione dei passaggi a livello",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni sicurezza ex art.1 co. 4",
+   "totale": 56.98,
+   "beneficiari": 56.98,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "A2004D",
+   "descrizione": "Sistemi per la diagnostica dell'infrastruttura",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni sicurezza ex art.1 co. 4",
+   "totale": -4.48,
+   "beneficiari": 0.0,
+   "cedenti": -4.48
+  },
+  {
+   "codice": "A2004G",
+   "descrizione": "Interventi infrastrutturali e tecnologici per la sicurezza",
+   "pagina": 1,
+   "tipologia": "Rimodulazioni sicurezza ex art.1 co. 4",
+   "totale": -0.66,
+   "beneficiari": 0.0,
+   "cedenti": -0.66
+  },
+  {
+   "codice": "0279A",
+   "descrizione": "Itinerario Napoli-Bari: Raddoppio e velocizzazione tratta Cancello-Frasso Telesino",
+   "pagina": 1,
+   "tipologia": "Utilizzo fondi CCT",
+   "totale": 36.2,
+   "beneficiari": 36.2,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "0281",
+   "descrizione": "Itinerario Napoli-Bari: raddoppio tratta Apice-Orsara",
+   "pagina": 1,
+   "tipologia": "Utilizzo fondi CCT",
+   "totale": 4.35,
+   "beneficiari": 4.35,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "0284",
+   "descrizione": "Itinerario Napoli-Bari: Interventi su linea Cancello-Napoli per integrazione con linea AV/AC",
+   "pagina": 1,
+   "tipologia": "Utilizzo fondi CCT",
+   "totale": 48.89,
+   "beneficiari": 48.89,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "0298",
+   "descrizione": "Nuovo collegamento PM228 - Castelplanio con by-pass di Albacina",
+   "pagina": 1,
+   "tipologia": "Utilizzo fondi CCT",
+   "totale": 51.3,
+   "beneficiari": 51.3,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "0361",
+   "descrizione": "Linea AV/AC Milano - Verona: tratta Brescia - Verona",
+   "pagina": 1,
+   "tipologia": "Utilizzo fondi CCT",
+   "totale": 129.46,
+   "beneficiari": 129.46,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "0417",
+   "descrizione": "Porto di Taranto - collegamento ferroviario del complesso del porto di Taranto con la rete nazionale",
+   "pagina": 1,
+   "tipologia": "Utilizzo fondi CCT",
+   "totale": 0.99,
+   "beneficiari": 0.99,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "A1006",
+   "descrizione": "Soppressione passaggi a livello",
+   "pagina": 1,
+   "tipologia": "Utilizzo fondi CCT",
+   "totale": 6.14,
+   "beneficiari": 6.14,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "NA026",
+   "descrizione": "Fondo Progettazioni, Collegio Consultivo Tecnico e salvaguardia interventi cofinanziati da UE e EE.LL.",
+   "pagina": 1,
+   "tipologia": "Utilizzo fondi CCT",
+   "totale": -277.32,
+   "beneficiari": 0.0,
+   "cedenti": -277.32
+  },
+  {
+   "codice": "0270",
+   "descrizione": "Sistemazione nodo di Catania",
+   "pagina": 1,
+   "tipologia": "Utilizzo Fondo di Salvaguardia",
+   "totale": 0.0,
+   "beneficiari": 0.0,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "1483",
+   "descrizione": "Nodo di interscambio di Pigneto",
+   "pagina": 1,
+   "tipologia": "Utilizzo Fondo di Salvaguardia",
+   "totale": 0.09,
+   "beneficiari": 0.09,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "1940",
+   "descrizione": "Nodo di Udine",
+   "pagina": 1,
+   "tipologia": "Utilizzo Fondo di Salvaguardia",
+   "totale": 0.0,
+   "beneficiari": 0.0,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "A2011",
+   "descrizione": "Programma nazionale ERTMS",
+   "pagina": 1,
+   "tipologia": "Utilizzo Fondo di Salvaguardia",
+   "totale": 2.38,
+   "beneficiari": 2.38,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "NA026",
+   "descrizione": "Fondo Progettazioni, Collegio Consultivo Tecnico e salvaguardia interventi cofinanziati da UE e EE.LL.",
+   "pagina": 1,
+   "tipologia": "Utilizzo Fondo di Salvaguardia",
+   "totale": -97.05,
+   "beneficiari": 0.0,
+   "cedenti": -97.05
+  },
+  {
+   "codice": "P055_A",
+   "descrizione": "Piano integrato Stazioni",
+   "pagina": 1,
+   "tipologia": "Utilizzo Fondo di Salvaguardia",
+   "totale": 8.17,
+   "beneficiari": 8.17,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "P198",
+   "descrizione": "Upgrading infrastrutturale e tecnologico bacini nord ovest",
+   "pagina": 1,
+   "tipologia": "Utilizzo Fondo di Salvaguardia",
+   "totale": 0.0,
+   "beneficiari": 0.0,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "P217",
+   "descrizione": "Potenziamento linea veloce collegamento Porta Nuova -Porta Susa",
+   "pagina": 1,
+   "tipologia": "Utilizzo Fondo di Salvaguardia",
+   "totale": 0.0,
+   "beneficiari": 0.0,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "P237",
+   "descrizione": "City Hub, linee metropolitane e nuove stazioni/fermate",
+   "pagina": 1,
+   "tipologia": "Utilizzo Fondo di Salvaguardia",
+   "totale": 86.4,
+   "beneficiari": 86.4,
+   "cedenti": 0.0
+  },
+  {
+   "codice": "NA026",
+   "descrizione": "Fondo Progettazioni, Collegio Consultivo Tecnico e salvaguardia interventi cofinanziati da UE e EE.LL.",
+   "pagina": 1,
+   "tipologia": "Utilizzo Fondo Studi e Progettazioni",
+   "totale": -1.5,
+   "beneficiari": 0.0,
+   "cedenti": -1.5
+  },
+  {
+   "codice": "P129",
+   "descrizione": "Collegamento ferroviario aeroporto di Genova",
+   "pagina": 1,
+   "tipologia": "Utilizzo Fondo Studi e Progettazioni",
+   "totale": 1.5,
+   "beneficiari": 1.5,
+   "cedenti": 0.0
+  }
+ ]
+}

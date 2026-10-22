@@ -106,30 +106,61 @@ python3 registro_cup.py ../data/cdp-rfi-dataset.json ../data/cdp-rfi-app.json \
 # manca (cancellare il JSON dopo aver aggiunto PDF). Serve alle assegnazioni
 # (il CUP di A004 che la Tabella B 2025 non stampa) e al confronto con RFI
 [ -f ../data/cup-nel-testo.json ] || python3 cup_nel_testo.py ../data/cup-nel-testo.json
+# stato attuativo e fase finanziata di ogni opera (le righe sotto l'intervento)
+python3 extract_stati.py "../CdP_2022-2026_Investimenti_Agg_ 2025.pdf" raw/agg2025.json \
+  ../data/stati-opere-agg2025.json
+# le schede intervento (Appendice 3): CUP, stato e date dell'iter opera per
+# opera, e i sottoprogetti dei programmi con costo e stato
+python3 extract_appendice3.py ../documenti/cdpi-agg2025/appendice_3_schede_intervento.pdf \
+  ../data/appendice3-agg2025.json
+# le altre appendici dell'aggiornamento 2025 che parlano di CUP o di interventi:
+# delibere CIPESS (1), variazione risorse per fonte (5), DL 43/2013 (6), opere
+# della legge obiettivo (8), PNRR e PNC (9), rimodulazioni (12). Ognuna
+# controlla le sue righe contro i totali stampati
+A=../documenti/cdpi-agg2025
+python3 extract_appendice1.py $A/appendice_1_delibere_cipess_per_progetto.pdf ../data/appendice1-agg2025.json
+python3 extract_appendice5.py $A/appendice_5variazione_risorse.pdf ../data/appendice5-agg2025.json
+python3 extract_appendice6.py $A/appendice_6_agg_relazione_interventi_dl_43_2013.pdf ../data/appendice6-agg2025.json
+python3 extract_appendice8.py $A/appendice_8_quadro_riepilogativo_delle_opere_incluse_nel_pis.pdf \
+  ../data/appendice8-agg2025.json
+python3 extract_appendice9.py $A/appendice_9_elenco_opere_pnrr_e_pnc.pdf ../data/appendice9-agg2025.json
+python3 extract_appendice12.py $A/appendice_12_rimodulazioni.pdf ../data/appendice12-agg2025.json
+# le Appendici 4 e 7 servono gia' alla piattaforma: estratte qui prima, perche'
+# le assegnazioni le usano
+python3 extract_appendice7.py $A/appendice_7_distribuzione_territoriale.pdf \
+  agg2025 ../data/mappa-regioni.json ../data/appendice7-agg2025.json
+python3 extract_appendice4.py $A/appendice_4delta_costi.pdf \
+  $A/appendice_4dossier_delta_costo.pdf agg2025 ../data/appendice4-agg2025.json
 # le assegnazioni dell'ultimo aggiornamento: un file per CUP (fino a tre
-# interventi per CUP, quota per CUP) e uno per intervento (gli importi scritti)
+# interventi per CUP, quota per CUP), uno per intervento (gli importi scritti)
+# e uno per opera (stato attuativo e fase finanziata)
 python3 assegnazioni_cup.py ../data/cdp-rfi-dataset.json ../data/appendice-cup-agg2025.json \
   ../data/assegnazioni-cup-agg2025.csv ../data/assegnazioni-interventi-agg2025.csv \
-  ../data/cup-nel-testo.json
+  ../data/cup-nel-testo.json ../data/stati-opere-agg2025.json ../data/stati-opere-agg2025.csv \
+  ../data/appendice3-agg2025.json ../data ../data/cup-altri-agg2025.csv
 # e la pagina semplice che le esplora (piattaforma/assegnazioni.html), con la
 # cassa per anno della Tavola 2
 python3 build_assegnazioni.py ../data/assegnazioni-interventi-agg2025.csv \
-  ../data/assegnazioni-cup-agg2025.csv ../data/cdp-rfi-dataset.json ../piattaforma/assegnazioni.html
+  ../data/assegnazioni-cup-agg2025.csv ../data/stati-opere-agg2025.csv ../data/cdp-rfi-dataset.json \
+  ../piattaforma/assegnazioni.html
 # la distribuzione territoriale ufficiale (Appendice 7) accanto alla stima
-python3 extract_appendice7.py ../documenti/cdpi-agg2025/appendice_7_distribuzione_territoriale.pdf \
-  agg2025 ../data/mappa-regioni.json ../data/appendice7-agg2025.json
 python3 territorio_ufficiale.py ../data/cdp-rfi-app.json ../data/cdp-rfi-app.json \
   ../data/appendice7-agg2025.json ../data
 # le variazioni di costo rispetto all'aggiornamento precedente (Appendice 4)
 # e i dossier ex ante dei progetti con gli aumenti piu' rilevanti
-python3 extract_appendice4.py ../documenti/cdpi-agg2025/appendice_4delta_costi.pdf \
-  ../documenti/cdpi-agg2025/appendice_4dossier_delta_costo.pdf agg2025 ../data/appendice4-agg2025.json
 python3 variazioni_costo.py ../data/cdp-rfi-app.json ../data/cdp-rfi-app.json \
   ../data/appendice4-agg2025.json ../data
 # il confronto con la lista di CUP ricevuta (solo CUP e stato BDAP): il
 # registro dei CUP piu' la ricerca di ogni CUP nel testo dei PDF (sopra)
 python3 confronto_rfi.py ../data/cdp-rfi-app.json ../data/cdp-rfi-app.json \
   ../documenti/rfi/lista-cup-bdap.csv ../data/cup-nel-testo.json ../data
+# un file solo, una riga per CUP di tutte le fonti, con il dettaglio di ogni
+# suo intervento; e gli interventi a cui non si puo' associare un CUP. Viene
+# dopo il confronto con la lista RFI, che ne da' lo stato BDAP
+python3 cup_completo.py ../data
+# l'alberatura del portafoglio fino al CUP: tabella, tipologia, programma,
+# classe tipologica, macro-intervento, intervento, sub-intervento, CUP
+python3 alberatura_cup.py ../data
 # la spesa anno per anno dalla Relazione al Parlamento al 31/12/2024
 python3 relazione_parlamento.py ../data/cdp-rfi-app.json ../data/cdp-rfi-app.json ../data
 # i CSV dei comuni leggono l'app appena costruita, quindi vengono dopo

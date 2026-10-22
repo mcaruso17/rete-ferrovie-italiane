@@ -1,0 +1,182 @@
+{
+ "doc": "agg2025",
+ "fonte": "appendice_6_agg_relazione_interventi_dl_43_2013.pdf",
+ "righe": [
+  {
+   "cup": [
+    "F81H92000000008"
+   ],
+   "riga_cdp": "P234(*)",
+   "intervento": "Terzo valico dei Giovi (*)",
+   "pagina": 4,
+   "costo_totale": 10623.31,
+   "risorse": 9970.24,
+   "risorse_stato_dl43_2013": 802.0,
+   "risorse_altro": 9168.24,
+   "contabilizzato_al_2023": 4510.94,
+   "contabilizzazioni_2024": 1149.42,
+   "contabilizzazioni_2025_e_oltre": 4962.96
+  },
+  {
+   "cup": [
+    "J54B13001110001"
+   ],
+   "riga_cdp": "P054",
+   "intervento": "PRG Lambrate",
+   "pagina": 4,
+   "costo_totale": 130.87,
+   "risorse": 97.87,
+   "risorse_stato_dl43_2013": 95.0,
+   "risorse_altro": 2.87,
+   "contabilizzato_al_2023": 26.96,
+   "contabilizzazioni_2024": 9.84,
+   "contabilizzazioni_2025_e_oltre": 94.07
+  },
+  {
+   "cup": [
+    "J14B13000240001"
+   ],
+   "riga_cdp": "E.05",
+   "intervento": "Potenziamento tecnologico Venezia Mestre - Venezia S.Lucia (PRG Venezia SL e nuovo blocco distanziamento a 4 Venezia)",
+   "pagina": 4,
+   "costo_totale": 40.0,
+   "risorse": 40.0,
+   "risorse_stato_dl43_2013": 40.0,
+   "risorse_altro": 0.0,
+   "contabilizzato_al_2023": 39.35,
+   "contabilizzazioni_2024": 0.0,
+   "contabilizzazioni_2025_e_oltre": 0.65
+  },
+  {
+   "cup": [
+    "J57E13000260001"
+   ],
+   "riga_cdp": "P053",
+   "intervento": "PRG Roma Tiburtina Fase 5 Collegamento servizi FL2 (Roma-Tivoli) al piazzale centrale e altri interventi per il TPL",
+   "pagina": 4,
+   "costo_totale": 18.29,
+   "risorse": 18.29,
+   "risorse_stato_dl43_2013": 10.0,
+   "risorse_altro": 8.29,
+   "contabilizzato_al_2023": 18.14,
+   "contabilizzazioni_2024": 0.0,
+   "contabilizzazioni_2025_e_oltre": 0.15
+  },
+  {
+   "cup": [
+    "J97E13000270001"
+   ],
+   "riga_cdp": "E.02",
+   "intervento": "Velocizzazione Milano Venezia",
+   "pagina": 4,
+   "costo_totale": 5.0,
+   "risorse": 5.0,
+   "risorse_stato_dl43_2013": 5.0,
+   "risorse_altro": 0.0,
+   "contabilizzato_al_2023": 5.0,
+   "contabilizzazioni_2024": 0.0,
+   "contabilizzazioni_2025_e_oltre": 0.0
+  },
+  {
+   "cup": [
+    "J37E13000300001",
+    "J37E13000330001"
+   ],
+   "riga_cdp": "E.02",
+   "intervento": "Velocizzazione Venezia Trieste",
+   "pagina": 4,
+   "costo_totale": 29.93,
+   "risorse": 30.0,
+   "risorse_stato_dl43_2013": 30.0,
+   "risorse_altro": 0.0,
+   "contabilizzato_al_2023": 29.94,
+   "contabilizzazioni_2024": 0.0,
+   "contabilizzazioni_2025_e_oltre": 0.0
+  },
+  {
+   "cup": [
+    "J37I05000020001",
+    "J47I05000020001"
+   ],
+   "riga_cdp": "P221",
+   "intervento": "Adeguamento moduli valico Sempione a 750 m (linee Domodossola I fase)",
+   "pagina": 4,
+   "costo_totale": 36.1,
+   "risorse": 36.1,
+   "risorse_stato_dl43_2013": 35.0,
+   "risorse_altro": 1.1,
+   "contabilizzato_al_2023": 36.19,
+   "contabilizzazioni_2024": 0.19,
+   "contabilizzazioni_2025_e_oltre": -0.29
+  },
+  {
+   "cup": [
+    "J34H14000460001"
+   ],
+   "riga_cdp": "P053",
+   "intervento": "Sistemi di distanziamento per incremento capacità nodo di Roma FL4/6 tratta Termini-Casilina-Ciampino",
+   "pagina": 4,
+   "costo_totale": 27.0,
+   "risorse": 27.0,
+   "risorse_stato_dl43_2013": 13.0,
+   "risorse_altro": 14.0,
+   "contabilizzato_al_2023": 7.92,
+   "contabilizzazioni_2024": 0.03,
+   "contabilizzazioni_2025_e_oltre": 19.05
+  },
+  {
+   "cup": [
+    "J64C19000290009"
+   ],
+   "riga_cdp": "P224",
+   "intervento": "Upgrade tecnologico Verona - Brennero (tratta Peri-Egna)",
+   "pagina": 4,
+   "costo_totale": 140.43,
+   "risorse": 140.43,
+   "risorse_stato_dl43_2013": 45.0,
+   "risorse_altro": 95.43,
+   "contabilizzato_al_2023": 20.02,
+   "contabilizzazioni_2024": 7.81,
+   "contabilizzazioni_2025_e_oltre": 112.6
+  },
+  {
+   "cup": [
+    "C66J20000210001"
+   ],
+   "riga_cdp": "P199",
+   "intervento": "Riqualificazione stazione di Trento",
+   "pagina": 4,
+   "costo_totale": 31.54,
+   "risorse": 31.54,
+   "risorse_stato_dl43_2013": 23.0,
+   "risorse_altro": 8.54,
+   "contabilizzato_al_2023": 0.0,
+   "contabilizzazioni_2024": 5.12,
+   "contabilizzazioni_2025_e_oltre": 26.42
+  },
+  {
+   "cup": [
+    "J77B20000870002"
+   ],
+   "riga_cdp": "P199",
+   "intervento": "Riattivazione fermata di Calliano (2 fase) e altri interventi Provincia Autonoma di T",
+   "pagina": 4,
+   "costo_totale": 6.51,
+   "risorse": 6.51,
+   "risorse_stato_dl43_2013": 2.0,
+   "risorse_altro": 4.51,
+   "contabilizzato_al_2023": 1.95,
+   "contabilizzazioni_2024": 2.28,
+   "contabilizzazioni_2025_e_oltre": 2.28
+  }
+ ],
+ "totale": {
+  "costo_totale": 11088.98,
+  "risorse": 10402.98,
+  "risorse_stato_dl43_2013": 1100.0,
+  "risorse_altro": 9302.98,
+  "contabilizzato_al_2023": 4696.4,
+  "contabilizzazioni_2024": 1174.69,
+  "contabilizzazioni_2025_e_oltre": 5217.89
+ }
+}

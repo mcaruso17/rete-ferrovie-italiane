@@ -414,15 +414,128 @@ contratto per contratto, e la Tabella B dell'aggiornamento 2025, che stampa
 ogni colonna con l'ordine della A, ha fonti e fabbisogni: si leggono solo se
 la riga e' completa e tornano entrambe le identita' (0325 ha un fabbisogno di
 -60: assegnate 2.050 su un costo di 1.990, stampato cosi'). Le schede
-dell'Appendice 3 danno costo e risorse per CUP dei programmi, ma senza fonte:
-non ancora usate.
+dell'Appendice 3 danno costo e risorse per CUP dei programmi, ma senza fonte
+(ora nelle colonne *_cup_appendice3_mln).
+
+Stato attuativo delle opere: `tools/extract_stati.py` rilegge con le coordinate
+le Tabelle A e B 2025 e scrive `data/stati-opere-agg2025.json`; da li'
+assegnazioni_cup.py fa `data/stati-opere-agg2025.csv` (una riga per opera) e le
+colonne di stato nei due file. Sotto ogni intervento le opere (lotti, fasi,
+tratte) hanno due sigle: **fase finanziata** (x 284-312, la prima) e **stato
+attuativo** (x 312-338); nuovo inserimento a x 238-282, paniere PNRR a x ~342.
+Sigle 2025: FAP, PROG, ITER, AN, RE, ES; (P) e (PR) sono in legenda ma su
+nessuna riga. 253 opere, 223 interventi; in Tabella A le opere non hanno
+importi (solo la B li da' per lotto), quindi il costo va in uno stato solo se
+tutte le opere dell'intervento sono nello stesso: 36 interventi restano "piu'
+stati", 59 "non indicato" (56 programmi, piu' 0119, 0263, P111). **Problema
+aperto:** extract.py e normalize.py sommano le sigle delle due colonne e non
+conoscono PROG e ITER, quindi lo stato 2025 della piattaforma principale e'
+sbagliato; la fonte giusta e' stati-opere-agg2025.json.
+
+Stato per CUP: le Tabelle A e B stampano i CUP sotto il codice, senza dire a
+quale opera vanno (P101: un CUP, due opere in RE e ITER). Lo dice l'Appendice
+3 (schede intervento, `tools/extract_appendice3.py` ->
+`data/appendice3-agg2025.json`): 214 schede (le 7 di Tabella B stanno tutte
+nella scheda NA026), tabella "Stato attuativo / Iter procedurale" per i
+progetti (opera x < 190, CUP 190-232, stato 232-276, 11 date da 276; due date
+possono uscire attaccate, "10-20248-2018") e "Avanzamento programma" per i
+programmi (nome < 285, CUP 285-350, costo, risorse, %, contabilizzato, %,
+stato da 505; righe senza CUP ne' stato sono subtotali, che seguono le loro
+righe e non sono sempre il totale del programma). I nomi vanno a capo anche
+sopra la riga dei numeri: le righe di solo testo si attaccano alla riga piu'
+vicina in altezza. Controllo in assegnazioni_cup.py: in tutti i 55 programmi
+i sottoprogetti sommano al costo della Tabella A. Il file dei CUP ha cosi'
+`stato_attuativo_cup` per 967 CUP su 990 (953 dalla scheda, 14
+dall'intervento con un solo CUP o un solo stato), con fase finanziata
+abbinando l'opera della scheda a quella della tabella (stato uguale in 234
+casi su 237). 6 CUP stanno nelle schede ma non in tabelle e Appendice 2
+(B51J20000110002, J34J25000260001, J57D25000060001, J57D25000070001,
+J58E22000260001, J91G25000040001): non aggiunti al registro.
+
+Le altre appendici entrano nei file delle assegnazioni con
+`tools/appendici_cup.py` (colonne per CUP e per intervento), ciascuna dal suo
+estrattore, che controlla le righe contro i totali stampati:
+- 1, delibere CIPESS (`extract_appendice1.py`): 112 delibere su 33 CUP. La
+  riga si riconosce dalla data (x ~203); titoli e righe CdP-I vanno a capo
+  sopra e sotto, attaccati alla data piu' vicina. Tipologia per colonna della X.
+- 3, piano della spesa (in `extract_appendice3.py`): per opera costo, risorse,
+  fabbisogno, OGV lavori e somme a disposizione, impegni, pagamenti, produzione.
+  Nelle righe delle opere la colonna "2024" della produzione non somma al totale
+  (207 schede su 212, il totale si'): la produzione resta nel JSON e non va nei
+  CSV. Al CUP si sommano le opere del CUP, solo se tutte hanno la riga (148).
+  Le due tabelle della scheda tagliano i nomi lunghi in punti diversi
+  (P125): l'abbinamento accetta anche il nome di cui l'uno e' l'inizio
+  dell'altro (`riga_spesa`); due importi possono uscire attaccati
+  ("2.109,37503,72", P234). Cosi' ogni CUP dell'Appendice 3 ha un importo
+  (953 su 990); dei 37 assenti dalla scheda, 6 sono l'unico CUP del loro
+  intervento e 31 non hanno un importo proprio in nessun documento.
+- 5, coperture per fonte (`extract_appendice5.py`): nome su una riga, 13
+  numeri sotto; "X" a x ~342 = nuovo inserimento. 223 interventi; risorse
+  2025 = assegnate della Tabella A per tutti.
+- 6, DL 43/2013 (`extract_appendice6.py`): 11 righe, due con due CUP.
+- 8, opere della legge obiettivo (`extract_appendice8.py`): 37 CUP. Le celle
+  di testo vanno a capo centrate: blocchi di righe contigue al CUP piu' vicino
+  al centro, ma se il blocco tocca la riga di un CUP si assegna riga per riga
+  (Spoleto-Terni e PM228 hanno celle a passo 3).
+- 9, PNRR e PNC (`extract_appendice9.py`): tre impaginazioni (M3C1, altre
+  missioni, PNC); colonne per ascissa, la CdP-S c'e' solo nei subtotali.
+- 12, rimodulazioni (`extract_appendice12.py`): la tipologia si legge dalla
+  riga "<tipologia> Totale", a volte sotto i numeri e spezzata su due righe.
+Il file dei CUP passa a 157 colonne; per intervento solo cinque colonne brevi
+(_intervento_k), il resto nel file degli interventi. `data/cup-altri-agg2025.csv`
+tiene i 892 CUP scritti nei documenti dell'aggiornamento ma fuori da Tabelle A,
+B e Appendice 2 (873 opere ultimate, 10 Servizi, 8 solo in un'appendice e
+J58E22000260001, che l'Appendice 2 da' al programma A2012, assente dalle
+tabelle 2025, e l'Appendice 3 a A2001B). Le Appendici 4 e 7 ora si estraggono
+prima delle assegnazioni. Senza CUP e quindi non usate: 10 (DocFAP, elenco di
+studi) e 11 (indicatori di sostenibilita', testo).
+
+`tools/cup_completo.py` (dopo confronto_rfi) mette tutto in un file solo,
+chiesto dall'utente: `data/cup-completo.csv`, una riga per CUP di tutte le
+fonti (registro dei CUP 2.172, CUP solo in un'appendice 8, CUP solo nella
+lista RFI 985: `fonte_riga` li distingue), con le colonne del registro
+(`registro_*`), dove e' citato in tutti i PDF, l'esito del confronto con la
+lista RFI, le colonne del file delle assegnazioni per CUP e, per ogni
+intervento (_intervento_k), il resto della riga del file degli interventi.
+Gli importi _intervento_k si ripetono su tutti i CUP dell'intervento: non si
+sommano. `registro_fonte_principale` e' vuoto solo per i CUP della sola lista
+RFI: per gli 8 che stanno solo in un'appendice cup_completo.py scrive
+l'appendice (3 o 1), che registro_cup.py non legge. `data/interventi-senza-cup-agg2025.csv`: i 4 interventi 2025 senza
+alcun CUP (I085, P197, P265, P271).
+
+`tools/alberatura_cup.py` (dopo cup_completo) scrive `data/alberatura-cup-agg2025.csv`,
+chiesto dal dirigente: una riga per sub-intervento con tabella, tipologia,
+programma (A01..A09 dall'Appendice 4), classe tipologica, macro-intervento,
+intervento, sub-intervento e CUP. Definizioni concordate con l'utente:
+macro-intervento = codice senza la lettera finale (A1004 per A1004A/B, P055
+per P055_A; puo' attraversare tipologie: 0292A in b, 0292B e C in d), senza nome
+proprio nel documento (si elencano quelli dei suoi interventi, non se ne
+ricava uno dalla parte comune); intervento = riga del CdP; sub-intervento =
+righe senza codice (opere della Tabella A/B, o della scheda se la tabella non
+ne ha; per i programmi sottoprogetti dell'Appendice 3 e oggetti dell'Appendice
+2; per la Tabella C le opere ultimate, con la voce come macro e l'NPP come
+intervento). CUP del sub-intervento solo se un documento lo dice (o unico CUP
+dell'intervento); i CUP non attribuiti hanno una riga col sub vuoto (22), cosi'
+tutti i 990 ci sono. 2.096 righe, 185 macro-interventi. Ogni riga porta anche gli importi
+dell'intervento (*_intervento_mln, per fonte e fabbisogno) e la loro somma per
+macro-intervento (*_macro_mln), ripetuti: prima_riga_intervento e
+prima_riga_macro dicono quale riga sommare. Lo script verifica che, cosi'
+sommati, ridiano i totali del file degli interventi (costo 294.155,4).
+
+Nomi degli interventi: nel dataset la descrizione delle Tabelle A e B ha
+attaccate le opere stampate sotto (159 interventi su 223). Dal 21 ottobre 2026
+i file delle assegnazioni (e quindi cup-completo e la pagina) usano il nome
+dell'Appendice 4, che e' sempre l'inizio di quella descrizione. Il dataset e la
+piattaforma principale hanno ancora la descrizione lunga: da correggere in
+extract.py.
 
 `piattaforma/assegnazioni.html` (pubblicata come `assegnazioni.html`) e' una
 pagina a parte, semplice e solo chiara, pensata per chi deve rispondere alle
 domande della Ragioneria senza Excel: quattro risposte (CUP finanziati,
 assegnato per fonte, da assegnare per priorita', speso), cassa per anno dalla
 Tavola 2 (qui il MEF comprende l'FSC), esplora per categoria con barre, box
-plot e dispersione, ricerca per CUP e scheda dell'intervento, elenco. Font
+plot e dispersione, ricerca per CUP e scheda dell'intervento, elenco. "A che punto sono": conteggio
+per stato di interventi, opere, CUP e costo, matrice fase finanziata per stato. Font
 Titillium Web (quello dei siti della PA), nessun marchio RFI. I dati li scrive
 `tools/build_assegnazioni.py` fra i marcatori /*DATI*/ e /*FINE*/. La tipologia
 e' con la lettera del PDF 2025 (d - Interventi in programma), non quella
