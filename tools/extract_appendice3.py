@@ -41,6 +41,7 @@ RE_CUP = re.compile(r"^[A-Z]\d{2}[A-Z]\d{11}$")
 RE_DATA = re.compile(r"\d{1,2}-\d{4}|-")
 RE_NUM = re.compile(r"^-?\d{1,3}(\.\d{3})*,\d{2}$")
 RE_PERC = re.compile(r"^\d+%$")
+RE_NUM_PEZZI = re.compile(r"(-?\d{1,3}(\.\d{3})*,\d{2})+")
 SPESA = ["costo", "risorse", "fabbisogno", "ogv_lavori", "ogv_somme_a_disposizione", "impegni",
          "pagamenti", "produzione_al_2019", "produzione_2020", "produzione_2021", "produzione_2022",
          "produzione_2023", "produzione_2024", "produzione_oltre"]
@@ -156,8 +157,11 @@ def main():
                     attacca(tab)
                     modo, tab = None, []
             elif modo == "spesa":
-                nums = [t for x, t, _ in w if x >= 225 and RE_NUM.match(t)]
-                if len(nums) == len(SPESA):
+                # due importi contigui possono uscire attaccati ("2.109,37503,72",
+                # P234 Terzo valico): si separano come le date
+                nums = [m.group(0) for x, t, _ in w if x >= 225
+                        for m in re.finditer(r"-?\d{1,3}(?:\.\d{3})*,\d{2}", t)]
+                if len(nums) == len(SPESA) and not any(x >= 225 and not RE_NUM_PEZZI.fullmatch(t) for x, t, _ in w):
                     r = {"nome": testo(w, 0, 225), "pagina": n, **dict(zip(SPESA, map(to_float, nums)))}
                     if r["nome"]:
                         cur["spesa"].append(r)

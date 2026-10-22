@@ -1137,7 +1137,44 @@
      "subtotale": true
     }
    ],
-   "spesa": []
+   "spesa": [
+    {
+     "nome": "Sicurezza armamento (annualità fino al 2021) - interventi diffusi",
+     "pagina": 10,
+     "costo": 914.72,
+     "risorse": 914.72,
+     "fabbisogno": 0.0,
+     "ogv_lavori": 896.07,
+     "ogv_somme_a_disposizione": 18.64,
+     "impegni": 898.79,
+     "pagamenti": 867.09,
+     "produzione_al_2019": 282.6,
+     "produzione_2020": 197.82,
+     "produzione_2021": 281.53,
+     "produzione_2022": 69.53,
+     "produzione_2023": 22.69,
+     "produzione_2024": 155.45,
+     "produzione_oltre": 44.2
+    }
+   ],
+   "spesa_totale": {
+    "nome": "",
+    "pagina": 10,
+    "costo": 914.72,
+    "risorse": 914.72,
+    "fabbisogno": 0.0,
+    "ogv_lavori": 896.07,
+    "ogv_somme_a_disposizione": 18.64,
+    "impegni": 898.79,
+    "pagamenti": 867.09,
+    "produzione_al_2019": 282.6,
+    "produzione_2020": 197.82,
+    "produzione_2021": 281.53,
+    "produzione_2022": 69.53,
+    "produzione_2023": 22.69,
+    "produzione_2024": 16.34,
+    "produzione_oltre": 44.2
+   }
   },
   "A1004F": {
    "codice": "A1004F",
@@ -4597,7 +4634,25 @@
      "produzione_2024": 5.0,
      "produzione_oltre": 160.23
     }
-   ]
+   ],
+   "spesa_totale": {
+    "nome": "",
+    "pagina": 32,
+    "costo": 9055.39,
+    "risorse": 3689.28,
+    "fabbisogno": 5366.11,
+    "ogv_lavori": 2749.98,
+    "ogv_somme_a_disposizione": 6305.41,
+    "impegni": 2133.41,
+    "pagamenti": 1463.93,
+    "produzione_al_2019": 811.89,
+    "produzione_2020": 154.55,
+    "produzione_2021": 192.27,
+    "produzione_2022": 163.28,
+    "produzione_2023": 127.05,
+    "produzione_2024": 171.47,
+    "produzione_oltre": 7434.87
+   }
   },
   "A2004A": {
    "codice": "A2004A",
@@ -7535,7 +7590,25 @@
      "produzione_2024": 107.65,
      "produzione_oltre": 3962.93
     }
-   ]
+   ],
+   "spesa_totale": {
+    "nome": "",
+    "pagina": 64,
+    "costo": 6629.05,
+    "risorse": 2573.7,
+    "fabbisogno": 4055.36,
+    "ogv_lavori": 2053.79,
+    "ogv_somme_a_disposizione": 4575.26,
+    "impegni": 1922.63,
+    "pagamenti": 1543.86,
+    "produzione_al_2019": 837.63,
+    "produzione_2020": 118.09,
+    "produzione_2021": 123.03,
+    "produzione_2022": 90.76,
+    "produzione_2023": 145.38,
+    "produzione_2024": 220.77,
+    "produzione_oltre": 5093.38
+   }
   },
   "P237": {
    "codice": "P237",
@@ -21498,6 +21571,78 @@
      "produzione_2023": 134.75,
      "produzione_2024": 5.0,
      "produzione_oltre": 1123.4
+    },
+    {
+     "nome": "Terzo valico dei Giovi (Tratta)",
+     "pagina": 329,
+     "costo": 8489.15,
+     "risorse": 8080.21,
+     "fabbisogno": 408.94,
+     "ogv_lavori": 5468.05,
+     "ogv_somme_a_disposizione": 3021.11,
+     "impegni": 7402.21,
+     "pagamenti": 3558.56,
+     "produzione_al_2019": 2109.37,
+     "produzione_2020": 503.72,
+     "produzione_2021": 578.55,
+     "produzione_2022": 454.41,
+     "produzione_2023": 470.21,
+     "produzione_2024": 498.15,
+     "produzione_oltre": 3420.05
+    },
+    {
+     "nome": "Potenziamento infrastrutturale Voltri-Brignole",
+     "pagina": 329,
+     "costo": 494.23,
+     "risorse": 494.23,
+     "fabbisogno": 0.0,
+     "ogv_lavori": 315.87,
+     "ogv_somme_a_disposizione": 178.36,
+     "impegni": 446.11,
+     "pagamenti": 406.8,
+     "produzione_al_2019": 327.46,
+     "produzione_2020": 19.19,
+     "produzione_2021": 29.17,
+     "produzione_2022": 16.37,
+     "produzione_2023": 12.28,
+     "produzione_2024": 34.26,
+     "produzione_oltre": 75.85
+    },
+    {
+     "nome": "Porto di Genova: Nuovo terminal merci i Genova Campasso",
+     "pagina": 329,
+     "costo": 12.5,
+     "risorse": 12.5,
+     "fabbisogno": 0.0,
+     "ogv_lavori": 11.35,
+     "ogv_somme_a_disposizione": 1.15,
+     "impegni": 12.47,
+     "pagamenti": 12.25,
+     "produzione_al_2019": 6.05,
+     "produzione_2020": 0.09,
+     "produzione_2021": 3.03,
+     "produzione_2022": 3.21,
+     "produzione_2023": 0.09,
+     "produzione_2024": 9.87,
+     "produzione_oltre": 0.04
+    },
+    {
+     "nome": "Potenziamento terminale Rivalta Scrivia",
+     "pagina": 329,
+     "costo": 8.5,
+     "risorse": 8.5,
+     "fabbisogno": 0.0,
+     "ogv_lavori": 7.2,
+     "ogv_somme_a_disposizione": 1.3,
+     "impegni": 0.94,
+     "pagamenti": 0.94,
+     "produzione_al_2019": 0.94,
+     "produzione_2020": 0.0,
+     "produzione_2021": 0.0,
+     "produzione_2022": 0.0,
+     "produzione_2023": 0.0,
+     "produzione_2024": 5.0,
+     "produzione_oltre": 7.56
     }
    ]
   },
@@ -27845,7 +27990,44 @@
     }
    ],
    "avanzamento": [],
-   "spesa": []
+   "spesa": [
+    {
+     "nome": "AV Salerno-Reggio Calabria: Lotti di completamento (Collegamento linea a monte del Vesuvio – Battipaglia e tratte Paola - Lamezia, Lamezia - Gioia",
+     "pagina": 461,
+     "costo": 12865.0,
+     "risorse": 11.74,
+     "fabbisogno": 12853.26,
+     "ogv_lavori": 1.91,
+     "ogv_somme_a_disposizione": 12863.1,
+     "impegni": 11.74,
+     "pagamenti": 11.2,
+     "produzione_al_2019": 11.67,
+     "produzione_2020": 0.0,
+     "produzione_2021": 0.07,
+     "produzione_2022": 0.01,
+     "produzione_2023": 0.0,
+     "produzione_2024": 5.0,
+     "produzione_oltre": 12853.26
+    }
+   ],
+   "spesa_totale": {
+    "nome": "",
+    "pagina": 461,
+    "costo": 12865.0,
+    "risorse": 11.74,
+    "fabbisogno": 12853.26,
+    "ogv_lavori": 1.91,
+    "ogv_somme_a_disposizione": 12863.1,
+    "impegni": 11.74,
+    "pagamenti": 11.2,
+    "produzione_al_2019": 11.67,
+    "produzione_2020": 0.0,
+    "produzione_2021": 0.07,
+    "produzione_2022": 0.01,
+    "produzione_2023": 0.0,
+    "produzione_2024": 0.0,
+    "produzione_oltre": 12853.26
+   }
   },
   "P073": {
    "codice": "P073",
@@ -29130,6 +29312,60 @@
      "produzione_2023": 10.23,
      "produzione_2024": 26.57,
      "produzione_oltre": 63.64
+    },
+    {
+     "nome": "Tratta AV Brescia Est – Verona (1° e 2° lotto costruttivo)",
+     "pagina": 485,
+     "costo": 3142.54,
+     "risorse": 3142.54,
+     "fabbisogno": 0.0,
+     "ogv_lavori": 2935.3,
+     "ogv_somme_a_disposizione": 207.24,
+     "impegni": 2896.13,
+     "pagamenti": 1708.41,
+     "produzione_al_2019": 202.09,
+     "produzione_2020": 139.51,
+     "produzione_2021": 300.28,
+     "produzione_2022": 477.11,
+     "produzione_2023": 473.68,
+     "produzione_2024": 127.88,
+     "produzione_oltre": 922.42
+    },
+    {
+     "nome": "Nodo di Verona Ovest",
+     "pagina": 485,
+     "costo": 471.26,
+     "risorse": 441.26,
+     "fabbisogno": 30.0,
+     "ogv_lavori": 361.69,
+     "ogv_somme_a_disposizione": 109.56,
+     "impegni": 39.41,
+     "pagamenti": 15.43,
+     "produzione_al_2019": 0.0,
+     "produzione_2020": 0.0,
+     "produzione_2021": 3.75,
+     "produzione_2022": 3.11,
+     "produzione_2023": 1.44,
+     "produzione_2024": 5.0,
+     "produzione_oltre": 455.03
+    },
+    {
+     "nome": "Quadruplicamento in uscita da Brescia (tratta Brescia-Brescia Est)",
+     "pagina": 485,
+     "costo": 1200.0,
+     "risorse": 13.8,
+     "fabbisogno": 1186.2,
+     "ogv_lavori": 523.27,
+     "ogv_somme_a_disposizione": 676.73,
+     "impegni": 4.26,
+     "pagamenti": 1.85,
+     "produzione_al_2019": 0.78,
+     "produzione_2020": 0.27,
+     "produzione_2021": 0.14,
+     "produzione_2022": 0.0,
+     "produzione_2023": 0.89,
+     "produzione_2024": 5.78,
+     "produzione_oltre": 1197.25
     },
     {
      "nome": "Tratta AV Verona-Bivio Vicenza (1° e 2° lotto costruttivo)",

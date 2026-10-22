@@ -93,6 +93,25 @@ COL_INT = COL_INT_BREVI + [
 ]
 
 
+def riga_spesa(opera, spesa, scheda):
+    """La riga del piano della spesa di un'opera. Le due tabelle della scheda
+    tagliano i nomi lunghi in punti diversi (P125: "...Montebelluna-Feltre-" e
+    "...Montebelluna-Feltre-Belluno; 2b:"): si accetta il nome uguale, poi
+    quello di cui l'uno e' l'inizio dell'altro (almeno 30 caratteri, e un solo
+    candidato), poi l'unica riga della scheda se l'opera e' una sola."""
+    n = norm(opera)
+    for r in spesa:
+        if norm(r["nome"]) == n:
+            return r
+    c = [r for r in spesa if min(len(n), len(norm(r["nome"]))) >= 30
+         and (norm(r["nome"]).startswith(n) or n.startswith(norm(r["nome"])))]
+    if len(c) == 1:
+        return c[0]
+    if len(spesa) == 1 and len(scheda["opere"]) == 1:
+        return spesa[0]
+    return None
+
+
 def per_cup(cartella, nel_testo, ultimo):
     """{cup: {colonna: valore}} dalle appendici che scrivono il CUP."""
     out = {}
@@ -115,10 +134,10 @@ def per_cup(cartella, nel_testo, ultimo):
     a3 = carica(cartella, 3)["schede"]
     opere_cup = {}
     for cod, s in a3.items():
-        spesa = {norm(r["nome"]): r for r in s.get("spesa", [])}
+        spesa = s.get("spesa", [])
         for o in s["opere"]:
             if o["cup"]:
-                opere_cup.setdefault(o["cup"], []).append((cod, o["opera"], spesa.get(norm(o["opera"]))))
+                opere_cup.setdefault(o["cup"], []).append((cod, o["opera"], riga_spesa(o["opera"], spesa, s)))
     for c, l in opere_cup.items():
         if all(x[2] for x in l):
             r = riga(c)

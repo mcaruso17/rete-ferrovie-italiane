@@ -462,7 +462,13 @@ estrattore, che controlla le righe contro i totali stampati:
   fabbisogno, OGV lavori e somme a disposizione, impegni, pagamenti, produzione.
   Nelle righe delle opere la colonna "2024" della produzione non somma al totale
   (207 schede su 212, il totale si'): la produzione resta nel JSON e non va nei
-  CSV. Al CUP si sommano le opere del CUP, solo se tutte hanno la riga (122).
+  CSV. Al CUP si sommano le opere del CUP, solo se tutte hanno la riga (148).
+  Le due tabelle della scheda tagliano i nomi lunghi in punti diversi
+  (P125): l'abbinamento accetta anche il nome di cui l'uno e' l'inizio
+  dell'altro (`riga_spesa`); due importi possono uscire attaccati
+  ("2.109,37503,72", P234). Cosi' ogni CUP dell'Appendice 3 ha un importo
+  (953 su 990); dei 37 assenti dalla scheda, 6 sono l'unico CUP del loro
+  intervento e 31 non hanno un importo proprio in nessun documento.
 - 5, coperture per fonte (`extract_appendice5.py`): nome su una riga, 13
   numeri sotto; "X" a x ~342 = nuovo inserimento. 223 interventi; risorse
   2025 = assegnate della Tabella A per tutti.
