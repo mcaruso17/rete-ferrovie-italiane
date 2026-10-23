@@ -108,9 +108,23 @@
   {
    "file": "alberatura-cup-agg2025.csv",
    "titolo": "Alberatura del portafoglio fino al CUP, aggiornamento 2025",
-   "contenuto": "Una riga per sub-intervento: tabella e portafoglio (A, B, C), tipologia di programma, programma (A01..A09), classe tipologica, macro-intervento (il codice senza la lettera finale: A1004 per A1004A e A1004B), intervento (la riga del CdP), sub-intervento (le opere, i lotti e le fasi senza codice sotto l'intervento; per i programmi i sottoprogetti dell'Appendice 3 e gli oggetti dell'Appendice 2; per la Tabella C le opere ultimate della voce) e il CUP, con la fonte. Il CUP del sub-intervento c'e' quando un documento lo dice; i CUP dell'intervento non attribuiti a un sub-intervento hanno una riga col sub-intervento vuoto. Il macro-intervento non ha un nome nel documento: si elencano quelli dei suoi interventi. Su ogni riga anche gli importi dell'intervento come li scrive la tabella (*_intervento_mln: costo a vita intera, movimenti, assegnate per fonte MEF, FSC/PAC, MIT, PNRR, altro, fabbisogno per priorita', speso) e quelli del macro-intervento, somma dei suoi interventi (*_macro_mln). Si ripetono su tutte le righe: per sommarli si filtra prima_riga_intervento o prima_riga_macro = si. In Tabella C c'e' solo il costo, somma delle righe dell'NPP e della voce.",
+   "contenuto": "Una riga per sub-intervento: tabella e portafoglio (A, B, C), tipologia di programma, programma (A01..A09), classe tipologica, macro-intervento (il codice senza la lettera finale: A1004 per A1004A e A1004B), intervento (la riga del CdP), sub-intervento (le opere, i lotti e le fasi senza codice sotto l'intervento; per i programmi i sottoprogetti dell'Appendice 3 e gli oggetti dell'Appendice 2; per la Tabella C le opere ultimate della voce) e il CUP, con la fonte. Il CUP del sub-intervento c'e' quando un documento lo dice; i CUP dell'intervento non attribuiti a un sub-intervento hanno una riga col sub-intervento vuoto. Il macro-intervento non ha un nome nel documento: si elencano quelli dei suoi interventi. Su ogni riga anche gli importi dell'intervento come li scrive la tabella (*_intervento_mln: costo a vita intera, movimenti, assegnate per fonte MEF, FSC/PAC, MIT, PNRR, altro, fabbisogno per priorita', speso) e quelli del macro-intervento, somma dei suoi interventi (*_macro_mln). Si ripetono su tutte le righe: per sommarli si filtra prima_riga_intervento o prima_riga_macro = si. In Tabella C c'e' solo il costo, somma delle righe dell'NPP e della voce. Costo, risorse e speso del sub-intervento (*_sub_intervento_mln) sono quelli stampati per la riga, senza fonti: Appendice 3 per programmi e opere di Tabella A (lo speso solo per i programmi), riga del lotto per la Tabella B.",
    "natura": "dal documento",
    "fonte": "CdP Investimenti 2022-2026, aggiornamento 2025, Tabelle A, B e C, Appendici 2, 3 e 4"
+  },
+  {
+   "file": "base-interventi-agg2025.csv",
+   "titolo": "Risorse per intervento, aggiornamento 2025",
+   "contenuto": "Una riga per intervento delle Tabelle A e B, poche colonne: classificazione, numero di CUP, costo a vita intera, assegnate al precedente aggiornamento e movimenti 2025 (incrementi, riduzioni, rimodulazioni) che sommati danno le assegnate, assegnate per fonte (MEF, FSC/PAC, MIT, PNRR, altro), fabbisogno e speso, come li stampa la tabella. I totali per tipologia tornano con la tabella di sintesi del contratto.",
+   "natura": "dal documento",
+   "fonte": "CdP Investimenti 2022-2026, aggiornamento 2025, Tabelle A e B"
+  },
+  {
+   "file": "base-cup-agg2025.csv",
+   "titolo": "Risorse per CUP, aggiornamento 2025",
+   "contenuto": "Una riga per CUP, con l'intervento (o gli interventi) a cui appartiene. perimetro dice dove e' scritto: Tabelle A e B (173), Appendice 2 (816), altri documenti (il Brennero), solo Appendice 3 (6). Gli importi vengono da una sola fonte, in fonte_importi: l'intervento, se il CUP e' il suo unico (con le fonti MEF, MIT...); l'Appendice 3 per i sottoprogetti dei programmi e per le opere dei progetti (costo e risorse, senza fonti); per 31 CUP nessun documento scrive un importo. Nessuna quota calcolata.",
+   "natura": "dal documento",
+   "fonte": "CdP Investimenti 2022-2026, aggiornamento 2025, Tabelle A e B, Appendici 2 e 3"
   },
   {
    "file": "interventi-senza-cup-agg2025.csv",

@@ -459,6 +459,23 @@ CAT = [
      "riga, senza fonti: Appendice 3 per programmi e opere di Tabella A (lo speso "
      "solo per i programmi), riga del lotto per la Tabella B.",
      DOC, "CdP Investimenti 2022-2026, aggiornamento 2025, Tabelle A, B e C, Appendici 2, 3 e 4"),
+    ("base-interventi-agg2025.csv", "Risorse per intervento, aggiornamento 2025",
+     "Una riga per intervento delle Tabelle A e B, poche colonne: classificazione, "
+     "numero di CUP, costo a vita intera, assegnate al precedente aggiornamento e "
+     "movimenti 2025 (incrementi, riduzioni, rimodulazioni) che sommati danno le "
+     "assegnate, assegnate per fonte (MEF, FSC/PAC, MIT, PNRR, altro), fabbisogno "
+     "e speso, come li stampa la tabella. I totali per tipologia tornano con la "
+     "tabella di sintesi del contratto.",
+     DOC, "CdP Investimenti 2022-2026, aggiornamento 2025, Tabelle A e B"),
+    ("base-cup-agg2025.csv", "Risorse per CUP, aggiornamento 2025",
+     "Una riga per CUP, con l'intervento (o gli interventi) a cui appartiene. "
+     "perimetro dice dove e' scritto: Tabelle A e B (173), Appendice 2 (816), "
+     "altri documenti (il Brennero), solo Appendice 3 (6). Gli importi vengono da "
+     "una sola fonte, in fonte_importi: l'intervento, se il CUP e' il suo unico "
+     "(con le fonti MEF, MIT...); l'Appendice 3 per i sottoprogetti dei programmi "
+     "e per le opere dei progetti (costo e risorse, senza fonti); per 31 CUP "
+     "nessun documento scrive un importo. Nessuna quota calcolata.",
+     DOC, "CdP Investimenti 2022-2026, aggiornamento 2025, Tabelle A e B, Appendici 2 e 3"),
     ("interventi-senza-cup-agg2025.csv", "Interventi senza CUP, aggiornamento 2025",
      "Gli interventi delle Tabelle A e B a cui non si puo' associare un CUP: "
      "nessun CUP in tabella, nell'Appendice 2 o negli altri documenti "

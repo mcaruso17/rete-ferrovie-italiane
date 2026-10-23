@@ -529,6 +529,20 @@ produzione non danno lo speso della Tabella A), lotti di Tabella B dalla riga.
 Le risorse sommano a quelle dell'intervento in 206 casi su 208; P129 e P234
 no perche' la Tabella A stampa meno opere della scheda.
 
+`tools/dataset_base.py` (dopo alberatura_cup) scrive i due file semplici
+chiesti dal dirigente per la domanda "quanto e' assegnato e da quale fonte":
+`data/base-interventi-agg2025.csv` (223 righe: classificazione, costo,
+assegnate precedenti + incrementi, riduzioni, rimodulazioni 2025 = assegnate =
+somma delle fonti, fabbisogno, speso; controlla le identita' e la tabella di
+sintesi) e `data/base-cup-agg2025.csv` (996 righe, `perimetro` = Tabelle A e B
+173, Appendice 2 816, altri documenti 1, solo Appendice 3 6). Un solo insieme
+di importi per CUP, con `fonte_importi`: intervento con un solo CUP (111, con
+le fonti), Appendice 3 avanzamento programma (803), piano della spesa delle
+opere (51), nessuno (31). Nessuna quota calcolata. Si parte con poche colonne
+e si aggiunge su richiesta. Le Appendici 2 e 3 hanno lo stesso status
+(appendici alla Relazione informativa, non tabelle contrattuali): per questo i
+perimetri restano tre e dichiarati, invece di sceglierne uno.
+
 Nomi degli interventi: nel dataset la descrizione delle Tabelle A e B ha
 attaccate le opere stampate sotto (159 interventi su 223). Dal 21 ottobre 2026
 i file delle assegnazioni (e quindi cup-completo e la pagina) usano il nome
