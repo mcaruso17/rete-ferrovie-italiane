@@ -164,6 +164,9 @@ python3 alberatura_cup.py ../data
 # i due file semplici sulle risorse: uno per intervento, uno per CUP, solo
 # importi stampati, con la fonte di ogni importo del CUP
 python3 dataset_base.py ../data
+# la mappa dei progetti dichiarati da RFI (Piano Commerciale), con le schede
+# costruite dai due file appena scritti
+python3 build_mappa_rfi.py ../data ../piattaforma/mappa-rfi.html
 # la spesa anno per anno dalla Relazione al Parlamento al 31/12/2024
 python3 relazione_parlamento.py ../data/cdp-rfi-app.json ../data/cdp-rfi-app.json ../data
 # i CSV dei comuni leggono l'app appena costruita, quindi vengono dopo

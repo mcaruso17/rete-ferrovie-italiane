@@ -543,6 +543,16 @@ e si aggiunge su richiesta. Le Appendici 2 e 3 hanno lo stesso status
 (appendici alla Relazione informativa, non tabelle contrattuali): per questo i
 perimetri restano tre e dichiarati, invece di sceglierne uno.
 
+`piattaforma/mappa-rfi.html` (pubblicata come `mappa-rfi.html`, dati scritti da
+`tools/build_mappa_rfi.py` fra /*DATI*/ e /*FINE*/) e' la mappa dei soli legami
+dichiarati: tratte e localita' del Piano Commerciale 2026 con un codice del
+portafoglio 2025 nel campo "Riferimento CdP-I" (270 elementi, 125 interventi
+su 223, 79% delle assegnate, 499 CUP). Sfondo: regioni e rete RFI di oggi.
+Al clic la scheda dell'intervento da base-interventi e base-cup. Nessun
+aggancio dedotto: quelli stanno nella piattaforma principale. Stessa grafica
+di assegnazioni.html. I punti hanno raggio costante in pixel (ricalcolato a
+ogni zoom), le linee `vector-effect: non-scaling-stroke`.
+
 Nomi degli interventi: nel dataset la descrizione delle Tabelle A e B ha
 attaccate le opere stampate sotto (159 interventi su 223). Dal 21 ottobre 2026
 i file delle assegnazioni (e quindi cup-completo e la pagina) usano il nome
