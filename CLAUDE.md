@@ -553,6 +553,15 @@ aggancio dedotto: quelli stanno nella piattaforma principale. Stessa grafica
 di assegnazioni.html. I punti hanno raggio costante in pixel (ricalcolato a
 ogni zoom), le linee `vector-effect: non-scaling-stroke`.
 
+`piattaforma/documenti.html` (pubblicata come `documenti.html`, scritta per
+intero da `tools/documentazione.py`) elenca i 17 PDF dell'aggiornamento 2025
+(contratto, decreto, registrazione, Relazione informativa, appendici) con due
+righe di descrizione scritte a mano nel codice, pagine, CUP citati (da
+cup-nel-testo.json, divisi fra portafoglio in corso, opere ultimate, solo
+schede, altri) e interventi citati (codice scritto nel testo, cache in
+data/documenti-agg2025.json) con le tipologie. "Citato" non vuol dire che il
+documento dia importi.
+
 Nomi degli interventi: nel dataset la descrizione delle Tabelle A e B ha
 attaccate le opere stampate sotto (159 interventi su 223). Dal 21 ottobre 2026
 i file delle assegnazioni (e quindi cup-completo e la pagina) usano il nome

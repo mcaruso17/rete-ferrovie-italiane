@@ -44,6 +44,8 @@ jobs:
           cp piattaforma/assegnazioni.html sito/assegnazioni.html
           # la mappa dei soli progetti dichiarati da RFI: documento completo, si copia com'e'
           cp piattaforma/mappa-rfi.html sito/mappa-rfi.html
+          # la scheda dei documenti dell'aggiornamento 2025, generata da documentazione.py
+          cp piattaforma/documenti.html sito/documenti.html
           cp data/*.csv data/*.geojson data/cdp-rfi-dataset.json data/piano-commerciale-2026.json data/piano-commerciale-schede.json data/validazione.txt \
             data/validazione-servizi.txt data/catalogo.json data/LEGGIMI.txt sito/data/
           # i PDF di partenza, cosi' ogni numero resta verificabile alla fonte

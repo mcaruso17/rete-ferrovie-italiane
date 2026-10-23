@@ -167,6 +167,9 @@ python3 dataset_base.py ../data
 # la mappa dei progetti dichiarati da RFI (Piano Commerciale), con le schede
 # costruite dai due file appena scritti
 python3 build_mappa_rfi.py ../data ../piattaforma/mappa-rfi.html
+# la scheda dei documenti dell'aggiornamento 2025 (la lettura dei PDF resta in
+# data/documenti-agg2025.json: si rifa' solo se il file manca)
+python3 documentazione.py ../data ../piattaforma/documenti.html
 # la spesa anno per anno dalla Relazione al Parlamento al 31/12/2024
 python3 relazione_parlamento.py ../data/cdp-rfi-app.json ../data/cdp-rfi-app.json ../data
 # i CSV dei comuni leggono l'app appena costruita, quindi vengono dopo
